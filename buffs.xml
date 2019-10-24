@@ -4465,6 +4465,20 @@ icon="ui_game_symbol_pack_mule"
 		<duration value="4"/>
 	</buff>
 
+	<buff name="jz_MiningSkillTigger" hidden="true" remove_on_death="false" >
+		<stack_type value="replace"/>
+		<duration value="0"/>
+			<effect_group>
+			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
+			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
+			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<passive_effect name="PerkLevel" tags="jz_MiningSkill" operation="base_add" value="@jz_MiningSkillLv" />
+			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
+		</effect_group>
+	</buff>
+
 </buffs>
 
 

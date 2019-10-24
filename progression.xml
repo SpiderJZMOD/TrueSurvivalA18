@@ -30,50 +30,50 @@
 			<requirement name="CVarCompare" cvar="jz_JunkTurretXP" operation="Equals" value="0"/>
 			
 				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SkillLvMult" operation="set" value="1.015"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AxeSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AxeSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ChainsawSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ChainsawSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AugerSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AugerSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_UnarmedSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_UnarmedSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BluntSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BluntSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SledgeSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SledgeSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BladeSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BladeSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ArcherySkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ArcherySkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SpearSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SpearSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PistolSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PistolSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_44MagSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_44MagSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SMG5SkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SMG5SkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BlunderbussSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BlunderbussSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_DBShotgunSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_DBShotgunSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PShotgunSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PShotgunSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_HuntingRifleSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_HuntingRifleSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MarksmanSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MarksmanSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AK47SkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AK47SkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_M60SkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_M60SkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillNextLvTotal" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillLvAdd" operation="set" value="500"/>
-				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillNextLvTotal" operation="set" value="500"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AxeSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AxeSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ChainsawSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ChainsawSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AugerSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AugerSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_UnarmedSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_UnarmedSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BluntSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BluntSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SledgeSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SledgeSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BladeSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BladeSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ArcherySkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ArcherySkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SpearSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SpearSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PistolSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PistolSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_44MagSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_44MagSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SMG5SkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SMG5SkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BlunderbussSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BlunderbussSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_DBShotgunSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_DBShotgunSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PShotgunSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PShotgunSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_HuntingRifleSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_HuntingRifleSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MarksmanSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MarksmanSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AK47SkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AK47SkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_M60SkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_M60SkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillNextLvTotal" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillLvAdd" operation="set" value="3"/>
+				<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillNextLvTotal" operation="set" value="3"/>
 			</effect_group>
 		</attribute>
 	<attribute name="jz_CraftingSkills" name_key="jz_CraftingSkills_name" desc_key="jz_CraftingSkillsDesc" icon="ui_game_symbol_stealth"/>
@@ -108,14 +108,14 @@
 	<!--MiningSkill-->
 	<perk name="jz_MiningSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Mining Skill" desc_key="Gain experience by breaking blocks with Pickaxes and Shovels to improve your use of them by 3% faster swing speed per Lv, 3% less stamina per use per Lv and 2% bonus dismemberment per Lv." icon="ui_game_symbol_mining">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_MiningSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_MiningSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.3" level="1,100"/>
 				<passive_effect name="StaminaLoss" operation="perc_add" value="0,-0.3" level="1,100"/>
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.2" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_MiningSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_MiningSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_MiningSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="jz_MiningXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
@@ -124,27 +124,20 @@
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_MiningSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_MiningSkillNextLvTotal" operation="add" value="@jz_MiningSkillLvAdd"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_MiningSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Mining Skill level increased"/>
-		</effect_group>
-		<effect_group>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MiningXP" operation="add" value="@jz_MiningSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MiningSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MiningSkillNextLvTotal" operation="add" value="@jz_MiningSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MiningSkillLv" operation="add" value="1"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="Mining Skill level increased"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" target="self" buff="jz_MiningSkillTigger"/>
 		</effect_group>
 	</perk>
 	<!--AxeSkill-->
 	<perk name="jz_AxeSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Axe Skill" desc_key="Gain experience by breaking blocks with Axes to improve your use of them by 3% faster swing speed per Lv, 3% less stamina per use per Lv and 2% bonus dismemberment per Lv." icon="ui_game_symbol_stealth">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_AxeSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AxeSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.3" level="1,100"/>
 				<passive_effect name="StaminaLoss" operation="perc_add" value="0,-0.3" level="1,100"/>
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.2" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_AxeSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_AxeSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AxeSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="jz_AxeXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
@@ -166,14 +159,14 @@
 	<!--ChainsawSkill-->
 	<perk name="jz_ChainsawSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Chainsaw Skill" desc_key="Gain experience by breaking blocks with Chainsaw to improve your use of them by 3% faster swing speed per Lv, 3% less stamina per use per Lv and 2% bonus dismemberment per Lv." icon="ui_game_symbol_stealth">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_ChainsawSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ChainsawSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.3" level="1,100"/>
 				<passive_effect name="StaminaLoss" operation="perc_add" value="0,-0.3" level="1,100"/>
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.2" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_ChainsawSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ChainsawSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ChainsawSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="jz_ChainsawXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
@@ -195,14 +188,14 @@
 	<!--AugerSkill-->
 	<perk name="jz_AugerSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Auger Skill" desc_key="Gain experience by breaking blocks with Augers to improve your use of them by 3% faster swing speed per Lv, 3% less stamina per use per Lv and 2% bonus dismemberment per Lv." icon="ui_game_symbol_stealth">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_AugerSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AugerSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.3" level="1,100"/>
 				<passive_effect name="StaminaLoss" operation="perc_add" value="0,-0.3" level="1,100"/>
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.2" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_AugerSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_AugerSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AugerSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="jz_AugerXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
@@ -224,7 +217,7 @@
 	<!--UnarmedSkill-->
 	<perk name="jz_UnarmedSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Brawling Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while being unarmed or using Brass Knuckles to improve your use of them by 3% more damage per Lv, 3% faster swing speed per Lv, 3% less stamina use per swing per Lv and 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_boxer">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_UnarmedSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_UnarmedSkillTag"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value="0,0.3" level="1,100"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.30" level="1,100"/>
 				<passive_effect name="StaminaLoss" operation="perc_add" value="0,-0.3" level="1,100"/>
@@ -232,7 +225,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_UnarmedSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_UnarmedSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_UnarmedSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_UnarmedXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_UnarmedXP" operation="add" value="1"/>
 		</effect_group>
@@ -255,14 +248,14 @@
 	<!--BluntSkill-->
 	<perk name="jz_BluntSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Blunt Weapon Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while wielding Blunt Weapons to improve your use of them by 3% faster swing speed per Lv, 3% less stamina use per swing per level and 3 % bonus dismemberment chance per Lv." icon="ui_game_symbol_melee">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_BluntSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_BluntSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.30" level="1,100"/>
 				<passive_effect name="StaminaLoss" operation="perc_add" value="0,-0.3" level="1,100"/>
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.30" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_BluntSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_BluntSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_BluntSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_BluntXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_BluntXP" operation="add" value="1"/>
 		</effect_group>
@@ -285,14 +278,14 @@
 	<!--SledgeSkill-->
 	<perk name="jz_SledgeSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Sledge Weapon Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while wielding Sledge Hammer to improve your use of them by 3% faster swing speed per Lv, 3% less stamina use per swing per level and 3 % bonus dismemberment chance per Lv." icon="ui_game_symbol_melee">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_SledgeSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SledgeSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.30" level="1,100"/>
 				<passive_effect name="StaminaLoss" operation="perc_add" value="0,-0.3" level="1,100"/>
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.30" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_SledgeSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SledgeSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SledgeSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_SledgeXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SledgeXP" operation="add" value="1"/>
 		</effect_group>
@@ -315,14 +308,14 @@
 	<!--BladeSkill-->
 	<perk name="jz_BladeSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Bladed Weapon Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while wielding Blunt Weapons to improve your use of them by 3% faster swing speed per Lv, 3% less stamina use per swing per level and 3 % bonus dismemberment chance per Lv." icon="ui_game_symbol_deep_cuts">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_BladeSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_BladeSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.30" level="1,100"/>
 				<passive_effect name="StaminaLoss" operation="perc_add" value="0,-0.3" level="1,100"/>
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.30" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_BladeSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_BladeSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_BladeSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_BladeXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_BladeXP" operation="add" value="1"/>
 		</effect_group>
@@ -345,7 +338,7 @@
 	<!--ArcherySkill-->
 	<perk name="jz_ArcherySkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Archery Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using a Bow or Crossbow to improve your use of them by 3% faster reload speed per Lv, 2% farther range per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_archery">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_ArcherySkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ArcherySkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="MaxRange" operation="perc_add" value="0,0.20" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
@@ -354,7 +347,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_ArcherySkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ArcherySkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ArcherySkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_ArcheryXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_ArcheryXP" operation="add" value="1"/>	
 		</effect_group>
@@ -377,7 +370,7 @@
 	<!--SpearSkill-->
 	<perk name="jz_SpearSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Spear Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using a Spear to improve your use of them by 3% faster reload speed per Lv, 2% farther range per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_archery">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_SpearSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SpearSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="MaxRange" operation="perc_add" value="0,0.20" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
@@ -386,7 +379,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_SpearSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SpearSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SpearSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_SpearXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SpearXP" operation="add" value="1"/>	
 		</effect_group>
@@ -409,7 +402,7 @@
 	<!--PistolSkill-->
 	<perk name="jz_PistolSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Pistol Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Handguns to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_gunslinger">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_PistolSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -417,7 +410,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_PistolSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_PistolSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_PistolXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_PistolXP" operation="add" value="1"/>
 		</effect_group>
@@ -440,7 +433,7 @@
 	<!--44MagSkill-->
 	<perk name="jz_44MagSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="44Mag Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Shotguns to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_shotgun">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_44MagSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -448,7 +441,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_44MagSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_44MagSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_44MagXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_44MagXP" operation="add" value="1"/>
 		</effect_group>
@@ -471,7 +464,7 @@
 	<!--SMG5Skill-->
 	<perk name="jz_SMG5Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="SMG5 Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Shotguns to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_shotgun">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_SMG5Skilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SMG5SkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -479,7 +472,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_SMG5SkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SMG5Skilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SMG5SkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_SMG5XP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SMG5XP" operation="add" value="1"/>
 		</effect_group>
@@ -502,7 +495,7 @@
 	<!--BlunderbussSkill-->
 	<perk name="jz_BlunderbussSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Rifle Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -510,7 +503,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_BlunderbussSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_BlunderbussXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_BlunderbussXP" operation="add" value="1"/>
 		</effect_group>
@@ -533,7 +526,7 @@
 	<!--DBShotgunSkill-->
 	<perk name="jz_DBShotgunSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="DBShotgun Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using DBShotgun to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -541,7 +534,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_DBShotgunSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_DBShotgunbussXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_DBShotgunbussXP" operation="add" value="1"/>
 		</effect_group>
@@ -564,7 +557,7 @@
 	<!--PShotgunSkill-->
 	<perk name="jz_PShotgunSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="PShotgun Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_PShotgunSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_PShotgunSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -572,7 +565,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_PShotgunSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_PShotgunSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_PShotgunSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_PShotgunXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_PShotgunXP" operation="add" value="1"/>
 		</effect_group>
@@ -595,7 +588,7 @@
 	<!--HuntingRifleSkill-->
 	<perk name="jz_HuntingRifleSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="HuntingRifle Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -603,7 +596,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_HuntingRifleSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_HuntingRifleXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_HuntingRifleXP" operation="add" value="1"/>
 		</effect_group>
@@ -626,7 +619,7 @@
 	<!--MarksmanSkill-->
 	<perk name="jz_MarksmanSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Marksman Rifle Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_MarksmanSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_MarksmanSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -634,7 +627,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_MarksmanSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_MarksmanSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_MarksmanSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_MarksmanXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_MarksmanXP" operation="add" value="1"/>
 		</effect_group>
@@ -657,7 +650,7 @@
 	<!--AK47Skill-->
 	<perk name="jz_AK47Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="AK47 Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_AK47Skilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AK47SkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -665,7 +658,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_AK47SkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_AK47Skilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AK47SkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_AK47XP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_AK47XP" operation="add" value="1"/>
 		</effect_group>
@@ -688,7 +681,7 @@
 	<!--M60Skill-->
 	<perk name="jz_M60Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="M60 Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_M60Skilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_M60SkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -696,7 +689,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_M60SkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_M60Skilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_M60SkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_M60XP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_M60XP" operation="add" value="1"/>
 		</effect_group>
@@ -719,7 +712,7 @@
 	<!--ExposivesSkill-->
 	<perk name="jz_ExposivesSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="Exposives Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -727,7 +720,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_ExposivesSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_ExposivesXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_ExposivesXP" operation="add" value="1"/>
 		</effect_group>
@@ -750,7 +743,7 @@
 	<!--JunkTurretSkill-->
 	<perk name="jz_JunkTurretSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="2" name_key="JunkTurret Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_JunkTurretSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_JunkTurretSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
 				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
@@ -758,7 +751,7 @@
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_JunkTurretSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_JunkTurretSkilltag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_JunkTurretSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_JunkTurretXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_JunkTurretXP" operation="add" value="1"/>
 		</effect_group>
@@ -1607,22 +1600,22 @@
 			<effect_description level="5" desc_key="jz_RocketLauncherCraftingRank5Desc" long_desc_key="jz_RocketLauncherCraftingRank5LongDesc"/>
 		</effect_group>
 	</perk>
-	<!-- SimpleBowCrafting-->
-	<perk name="jz_SimpleBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stoneaxe Crafting" desc_key="jz_SimpleBowCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="jz_SimpleBowCraftingReq"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="jz_SimpleBowCraftingReq"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="jz_SimpleBowCraftingReq"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="jz_SimpleBowCraftingReq"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="jz_SimpleBowCraftingReq"/></level_requirements>
+	<!-- PrimitiveBowCrafting-->
+	<perk name="jz_PrimitiveBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stoneaxe Crafting" desc_key="jz_PrimitiveBowCraftingDesc" icon="ui_game_symbol_mining">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="jz_PrimitiveBowCraftingReq"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="jz_PrimitiveBowCraftingReq"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="jz_PrimitiveBowCraftingReq"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="jz_PrimitiveBowCraftingReq"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="jz_PrimitiveBowCraftingReq"/></level_requirements>
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SimpleBowCraftingTag"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_PrimitiveBowCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_SimpleBowCraftingRank1Desc" long_desc_key="jz_SimpleBowCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_SimpleBowCraftingRank2Desc" long_desc_key="jz_SimpleBowCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_SimpleBowCraftingRank3Desc" long_desc_key="jz_SimpleBowCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_SimpleBowCraftingRank4Desc" long_desc_key="jz_SimpleBowCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_SimpleBowCraftingRank5Desc" long_desc_key="jz_SimpleBowCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_PrimitiveBowCraftingRank1Desc" long_desc_key="jz_PrimitiveBowCraftingRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_PrimitiveBowCraftingRank2Desc" long_desc_key="jz_PrimitiveBowCraftingRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_PrimitiveBowCraftingRank3Desc" long_desc_key="jz_PrimitiveBowCraftingRank3LongDesc"/>
+			<effect_description level="4" desc_key="jz_PrimitiveBowCraftingRank4Desc" long_desc_key="jz_PrimitiveBowCraftingRank4LongDesc"/>
+			<effect_description level="5" desc_key="jz_PrimitiveBowCraftingRank5Desc" long_desc_key="jz_PrimitiveBowCraftingRank5LongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- WoddenBowCrafting-->
