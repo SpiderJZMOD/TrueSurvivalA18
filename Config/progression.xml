@@ -1582,144 +1582,166 @@
 	<!-- Fire Fighter -->
 	<perk name="jz_FireFighter" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fire Fighter" desc_key="jz_FireFighterDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
+			<requirement name="HoldingItemHasTags" tags="jz_FireFighterTag"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".2"/>
 		</effect_group>
 		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FireFighterTag"/>
+			<passive_effect name="StaminaMax" operation="perc_add" value=".5"/>
+			
 			<effect_description level="1" desc_key="jz_FireFighterRank1Desc" long_desc_key="jz_FireFighter1LongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Police Officer -->
 	<perk name="jz_PoliceOfficer" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Police Officer" desc_key="jz_PoliceOfficerDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
+			<requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value=".1"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
 		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value=".1"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_PoliceOfficerTag"/>
+		
 			<effect_description level="1" desc_key="jz_PoliceOfficerRank1Desc" long_desc_key="jz_PoliceOfficerLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Park Ranger -->
 	<perk name="jz_ParkRanger" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Park Ranger" desc_key="jz_ParkRangerDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ParkRangerTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_PrimitativeCraftingTag"/>
+			
 			<effect_description level="1" desc_key="jz_ParkRangerRank1Desc" long_desc_key="jz_ParkRangerLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Bouncer -->
 	<perk name="jz_Bouncer" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Bouncer" desc_key="jz_BouncerDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
+			<requirement name="HoldingItemHasTags" tags="jz_BouncerTag"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.1" />
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.1" tags="secondary"/>
+		</effect_group>	
 		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_BouncerTag"/>
+		
 			<effect_description level="1" desc_key="jz_BouncerRank1Desc" long_desc_key="jz_BouncerLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Chef -->
 	<perk name="jz_Chef" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Chef" desc_key="jz_ChefDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ChefTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ChefTag"/>
 			<effect_description level="1" desc_key="jz_ChefRank1Desc" long_desc_key="jz_ChefLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Burglar -->
 	<perk name="jz_Burglar" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Burglar" desc_key="jz_BurglarDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" level="0,1" value="0,-.1"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" level="0,1" value="0,.1"/>
 		</effect_group>
 		<effect_group>
+			<passive_effect name="ScavengingTime" operation="perc_subtract" level="1" value=".25"/>
+			<passive_effect name="TreasureRadius" operation="base_subtract" level="1" value="6"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_BurglarTag"/>
 			<effect_description level="1" desc_key="jz_BurglarRank1Desc" long_desc_key="jz_BurglarLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Carpenter -->
 	<perk name="jz_Carpenter" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Carpenter" desc_key="jz_CarpenterDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_CarpenterTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_WorkBenchTag,jz_TablesawTag"/>
 			<effect_description level="1" desc_key="jz_CarpenterRank1Desc" long_desc_key="jz_CarpenterLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Mason -->
 	<perk name="jz_Mason" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mason" desc_key="jz_MasonDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MasonTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MasonTag"/>
 			<effect_description level="1" desc_key="jz_MasonRank1Desc" long_desc_key="jz_MasonLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Soldier -->
 	<perk name="jz_Soldier" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Soldier" desc_key="jz_SoldierDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AK47CraftingTag"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value=".1"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
 		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="jz_M60CraftingTag"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value=".1"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_SoldierTag"/>
 			<effect_description level="1" desc_key="jz_SoldierRank1Desc" long_desc_key="jz_SoldierLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Fitness Instructor -->
 	<perk name="jz_FitnessInstructor" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fitness Instructor" desc_key="jz_FitnessInstructorDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+			<passive_effect name="WalkSpeed" operation="perc_add" value=".1"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="0.05" tags="running"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="jz_FitnessInstructorTag"/>
 			<effect_description level="1" desc_key="jz_FitnessInstructorRank1Desc" long_desc_key="jz_FitnessInstructorLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Electrician -->
 	<perk name="jz_Electrician" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Electrician" desc_key="jz_ElectricianDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ElectricianTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ElectricianTag"/>
 			<effect_description level="1" desc_key="jz_ElectricianRank1Desc" long_desc_key="jz_ElectricianLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Metal Worker -->
 	<perk name="jz_MetalWorker" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Metal Worker" desc_key="jz_MetalWorkerDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MetalWorkerTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MetalWorkerTag"/>
 			<effect_description level="1" desc_key="jz_MetalWorkerRank1Desc" long_desc_key="jz_MetalWorkerLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Mechanic -->
 	<perk name="jz_Mechanic" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mechanic" desc_key="jz_MechanicDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MechanicTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MechanicTag"/>
 			<effect_description level="1" desc_key="jz_MechanicRank1Desc" long_desc_key="jz_MechanicLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Doctor -->
 	<perk name="jz_Doctor" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Doctor" desc_key="jz_DoctorDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_DoctorTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_DoctorTag"/>
 			<effect_description level="1" desc_key="jz_DoctorRank1Desc" long_desc_key="jz_DoctorLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Farmer -->
 	<perk name="jz_Farmer" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Farmer" desc_key="jz_FarmerDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+	<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FarmerTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_FarmerTag"/>
 			<effect_description level="1" desc_key="jz_FarmerRank1Desc" long_desc_key="jz_FarmerLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Chemist -->
 	<perk name="jz_Chemist" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Chemist" desc_key="jz_ChemistDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ChemistTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ChemistTag"/>
 			<effect_description level="1" desc_key="jz_ChemistRank1Desc" long_desc_key="jz_ChemistLongDesc"/>
 		</effect_group>
 	</perk>
@@ -1853,7 +1875,7 @@
 	<!-- ******************************************************************  Negative Traits  ******************************************************************************** -->
 	<perk name="jz_TraitSlowDriver" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sunday Driver" desc_key="jz_TraitSlowDriverDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_SlowDriverTraitRefundTag"/>
 		</effect_group>
 		<!--5% slower driver -->
 		<effect_group>
@@ -1862,7 +1884,7 @@
 	</perk>
 	<perk name="jz_TraitSleepy" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sleepy" desc_key="jz_TraitSleepyDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_TraitRefundSleepy"/>
 		</effect_group>
 		<!--20% slower tiered recovery -->
 		<effect_group>
@@ -1871,7 +1893,7 @@
 	</perk>
 	<perk name="jz_TraitClumsy" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Clumsy" desc_key="jz_TraitClumsyDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ClumsyTraitRefundTag"/>
 		</effect_group>
 		<!--10% more noise moving -->
 		<effect_group>
@@ -1880,7 +1902,7 @@
 	</perk>
 	<perk name="jz_TraitAllThumbs" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="All Thumbs" desc_key="jz_TraitAllThumbsDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_AllThumbsTraitRefundTag"/>
 		</effect_group>
 		<!--10% slower crafting 10% slower lock-picking -->
 		<effect_group>
@@ -1889,7 +1911,7 @@
 	</perk>
 	<perk name="jz_TraitWeakStomach" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Weak Stomach" desc_key="jz_TraitWeakStomachDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_WeakStomachTraitRefundTag"/>
 		</effect_group>
 		<!--15% more chance for food illnesses -->
 		<effect_group>
@@ -1898,7 +1920,7 @@
 	</perk>
 	<perk name="jz_TraitAgoraphobic" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Agoraphobic" desc_key="jz_TraitAgoraphobicDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_AgoraphobicTraitRefundTag"/>
 		</effect_group>
 		<!--10% slower Aim, 10% more stam on melee swing when outside -->
 		<effect_group>
@@ -1907,7 +1929,7 @@
 	</perk>
 	<perk name="jz_TraitClaustrophobicTraits" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Claustrophobic" desc_key="jz_TraitClaustrophobicDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ClaustrophobicTraitRefundTag"/>
 		</effect_group>
 		<!--10% slower Aim, 10% more stam on melee swing when indoors -->
 		<effect_group>
@@ -1916,7 +1938,7 @@
 	</perk>
 	<perk name="jz_TraitBadLeg" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Bad Leg" desc_key="jz_TraitBadLegDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_BadLegTraitRefundTag"/>
 		</effect_group>
 		<!--Bad Leg Buff -->
 		<effect_group>
@@ -1925,7 +1947,7 @@
 	</perk>
 	<perk name="jz_TraitAsthmatic" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Asthmatic" desc_key="jz_TraitAsthmaticDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_AsthmaticTraitRefundTag"/>
 		</effect_group>
 		<!--20% slower Stam Regan -->
 		<effect_group>
@@ -1934,7 +1956,7 @@
 	</perk>
 	<perk name="jz_TraitOutOfShape" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Out of Shape" desc_key="jz_TraitOutOfShapeDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_OutOfShapeTraitRefundTag"/>
 		</effect_group>
 		<!--5% more encumbrance effect, 5% more stam per swing, 5% slower stam regain -->
 		<effect_group>
@@ -1943,7 +1965,7 @@
 	</perk>
 	<perk name="jz_TraitSmoker" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Smoker" desc_key="jz_TraitSmokerDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_SmokerTraitRefundTag"/>
 		</effect_group>
 		<!--Smoking Adiction, 20% slower stam regan while running, 10% slower top speed -->
 		<effect_group>
@@ -1952,7 +1974,7 @@
 	</perk>
 	<perk name="jz_TraitHemophobic" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Hemophobic" desc_key="jz_TraitHemophobicDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_HemophobicTraitRefundTag"/>
 		</effect_group>
 		<!--20% less healing from first aid -->
 		<effect_group>
@@ -1961,7 +1983,7 @@
 	</perk>
 	<perk name="jz_TraitThinSkinned" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Thin Skinned" desc_key="jz_TraitThinSkinnedDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ThinSkinnedTraitRefundTag"/>
 		</effect_group>
 		<!--10% more chance to get scratches and bites -->
 		<effect_group>
@@ -1970,7 +1992,7 @@
 	</perk>
 	<perk name="jz_TraitWeak" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Weak" desc_key="jz_TraitWeakDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_WeakTraitRefundTag"/>
 		</effect_group>
 		<!--10% more encumbrance speed, 10% more stam per swing, 10% slower stam regain when encumbered -->
 		<effect_group>
@@ -2882,26 +2904,74 @@
 			<!-- effect is in modGunSoundSuppressorSilencer -->
 		</effect_group>
 	</perk>
-    <perk name="perkAnimalTracker" parent="jz_PositiveTraits" max_level="5" name_key="perkAnimalTrackerName" desc_key="perkAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="jz_StoneaxeCrafting" operation="GTE" value="0" desc_key="reqPerceptionLevel01"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="jz_StoneaxeCrafting" operation="GTE" value="1" desc_key="reqPerceptionLevel03"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="jz_StoneaxeCrafting" operation="GTE" value="2" desc_key="reqPerceptionLevel05"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="jz_StoneaxeCrafting" operation="GTE" value="3" desc_key="reqPerceptionLevel07"/></level_requirements>
-		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="jz_StoneaxeCrafting" operation="GTE" value="4" desc_key="reqPerceptionLevel10"/></level_requirements>
+		
+	<!--Snakes, Rabist, Chickens Tracker-->
+    <perk name="jz_SmallAnimalTracker" parent="jz_PositiveTraits" max_level="1" base_skill_point_cost="1" name_key="jz_SmallAnimalTrackerName" desc_key="jz_SmallAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
 		<effect_group>
-			<passive_effect name="TrackDistance" operation="base_set" level="0,1,5" value="0,100,100"/>
-			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
+			<passive_effect name="TrackDistance" operation="base_set" level="0,1" value="0,100"/>
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="jz_BuffSmallAnimalTracker">
 				<requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="GT" value="0"/>
+				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="GT" value="0"/>
 			</triggered_effect>
-
-			<effect_description level="1" desc_key="perkAnimalTrackerRank1Desc" long_desc_key="perkAnimalTrackerRank1LongDesc"/>
-			<effect_description level="2" desc_key="perkAnimalTrackerRank2Desc" long_desc_key="perkAnimalTrackerRank2LongDesc"/>
-			<effect_description level="3" desc_key="perkAnimalTrackerRank3Desc" long_desc_key="perkAnimalTrackerRank3LongDesc"/>
-			<effect_description level="4" desc_key="perkAnimalTrackerRank4Desc" long_desc_key="perkAnimalTrackerRank4LongDesc"/>
-			<effect_description level="5" desc_key="perkAnimalTrackerRank5Desc" long_desc_key="perkAnimalTrackerRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_SmallAnimalTrackerDesc" long_desc_key="jz_SmallAnimalTrackerRank1LongDesc"/>
 		</effect_group>
 	</perk>
+	<!--Stag Tracker-->
+	<perk name="jz_StagAnimalTracker" parent="jz_PositiveTraits" max_level="1" base_skill_point_cost="1" name_key="jz_StagAnimalTrackerName" desc_key="jz_StagAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
+		<effect_group>
+			<passive_effect name="TrackDistance" operation="base_set" level="0,1" value="0,100"/>
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffStagAnimalTracker">
+				<requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
+				<requirement name="ProgressionLevel" progression_name="jz_StagAnimalTracker" operation="GT" value="0"/>
+			</triggered_effect>
+			<effect_description level="1" desc_key="jz_StagAnimalTrackerDesc" long_desc_key="jz_StagAnimalTrackerRank1LongDesc"/>
+		</effect_group>
+	</perk>
+	<!--Boar Tracker-->
+	<perk name="jz_BaorAnimalTracker" parent="jz_PositiveTraits" max_level="1" base_skill_point_cost="1" name_key="jz_BaorAnimalTrackerName" desc_key="jz_BaorAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
+		<effect_group>
+			<passive_effect name="TrackDistance" operation="base_set" level="0,1" value="0,100"/>
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffBaorAnimalTracker">
+				<requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
+				<requirement name="ProgressionLevel" progression_name="jz_BaorAnimalTracker" operation="GT" value="0"/>
+			</triggered_effect>
+			<effect_description level="1" desc_key="jz_BaorAnimalTrackerDesc" long_desc_key="jz_BaorAnimalTrackerRank1LongDesc"/>
+		</effect_group>
+	</perk>
+	<!--Wolf, Coyote Tracker-->
+	<perk name="jz_DogAnimalTracker" parent="jz_PositiveTraits" max_level="1" base_skill_point_cost="1" name_key="jz_DogAnimalTrackerName" desc_key="jz_DogAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
+		<effect_group>
+			<passive_effect name="TrackDistance" operation="base_set" level="0,1" value="0,100"/>
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffDogAnimalTracker">
+				<requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
+				<requirement name="ProgressionLevel" progression_name="jz_DogAnimalTracker" operation="GT" value="0"/>
+			</triggered_effect>
+			<effect_description level="1" desc_key="jz_DogAnimalTrackerDesc" long_desc_key="jz_DogAnimalTrackerRank1LongDesc"/>
+		</effect_group>
+	</perk>
+	<!--Lion Tracker-->
+	<perk name="jz_LionAnimalTracker" parent="jz_PositiveTraits" max_level="1" base_skill_point_cost="1" name_key="jz_LionAnimalTrackerName" desc_key="jz_LionAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
+		<effect_group>
+			<passive_effect name="TrackDistance" operation="base_set" level="0,1" value="0,100"/>
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffLionAnimalTracker">
+				<requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
+				<requirement name="ProgressionLevel" progression_name="jz_LionAnimalTracker" operation="GT" value="0"/>
+			</triggered_effect>
+			<effect_description level="1" desc_key="jz_LionAnimalTrackerDesc" long_desc_key="jz_LionAnimalTrackerRank1LongDesc"/>
+		</effect_group>
+	</perk>
+	<!--Bear Tracker-->
+	<perk name="jz_BearAnimalTracker" parent="jz_PositiveTraits" max_level="1" base_skill_point_cost="1" name_key="jz_BearAnimalTrackerName" desc_key="jz_BearAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
+		<effect_group>
+			<passive_effect name="TrackDistance" operation="base_set" level="0,1" value="0,100"/>
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffBearAnimalTracker">
+				<requirement name="NotHasBuff" buff="buffAnimalTrackerAcquired"/>
+				<requirement name="ProgressionLevel" progression_name="jz_BearAnimalTracker" operation="GT" value="0"/>
+			</triggered_effect>
+			<effect_description level="1" desc_key="jz_BearAnimalTrackerDesc" long_desc_key="jz_BearAnimalTrackerRank1LongDesc"/>
+		</effect_group>
+	</perk>
+	
 	<perk name="perkCharismaticNature" max_level="4" parent="jz_PositiveTraits" name_key="perkCharismaticNatureName" desc_key="perkCharismaticNatureDesc" icon="ui_game_symbol_talk">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="jz_StoneaxeCrafting" operation="GTE" value="0" desc_key="reqIntellectLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="jz_StoneaxeCrafting" operation="GTE" value="1" desc_key="reqIntellectLevel03"/></level_requirements>

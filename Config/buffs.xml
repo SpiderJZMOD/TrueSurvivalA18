@@ -948,14 +948,6 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		<display_value value=".AnimalTrackerDelay"/>
 		<display_value_format value="time"/>
 
-<!--
-
-
-<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="chicken,deer,boar">
-				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
-			</passive_effect>
--->
-
 		<effect_group name="Startup">
 			<!-- set the time delay for animal tracking -->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="4">
@@ -4773,7 +4765,269 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 
+<buff name="jz_BuffSmallAnimalTracker" name_key="jz_buffSmallAnimalTrackerName" description_key="jz_buffSmallAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
+		<duration value="0"/>
+		<update_rate value=".5"/>
+		<display_value value=".AnimalTrackerDelay"/>
+		<display_value_format value="time"/>
+
+		<effect_group name="Startup">
+			<!-- set the time delay for animal tracking -->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="4">
+				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="LT" value="2"/></triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="add" value="-.5"/>
+		</effect_group>
+
+		<effect_group name="check conditions for a successful track">
+			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="Equals" value="1"/>
+				<requirement name="HasTrackedEntity" tags="perkAT1"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group>
+			<!-- tracking successful, activate next buff -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_buffSmallAnimalTrackerAcquired">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffSmallAnimalTracker">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
+			</triggered_effect>
+
+			<!-- abort -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffSmallAnimalTracker">
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="Tracking not successful, shutdown">
+			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffAnimalTrackerNoneTooltip"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffSmallAnimalTracker"/>
+		</effect_group>
+	</buff>
+
+	<buff name="jz_buffSmallAnimalTrackerAcquired" name_key="buffAnimalTrackerAcquiredName" description_key="buffAnimalTrackerAcquiredDesc" icon="ui_game_symbol_animal_tracker" icon_color="0,255,0">
+		<duration value="0"/>
+		<display_value value=".AnimalTrackerLoseTimer"/>
+		<display_value_format value="time"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAnimalTracker"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20">
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group name="check conditions for no trackable animals">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="Equals" value="1"/>
+				<requirement name="HasTrackedEntity" tags="perkAT1" />
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="Track animals">
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT1">
+				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="Equals" value="1"/></passive_effect>
+		</effect_group>	
+
+		<effect_group name="Tracking time ran out or no targets">
+			<requirements compare_type="or">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerLoseTimer" operation="LTE" value="0"/>
+				<requirement name="CVarCompare" cvar=".AnimalTrackerTerminate" operation="Equals" value="1"/>
+			</requirements>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffPerkAnimalTrackerLostTooltip"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_buffSmallAnimalTrackerAcquired"/>
+		</effect_group>
+	</buff>
+
+	<buff name="jz_BuffScratch" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<duration value="0"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
+				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffWoundSystem" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="3"/>
+		<duration value="0"/>
+		
+		<effect_group name="Scratch Count Fader and Buff Remover">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffWoundSystem">
+					<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="0"/></triggered_effect>
+		</effect_group>
+	
+		<effect_group name="Bruised Stage Activation">
+			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="GTE" value="6"/>
+			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="10"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffBruised">
+					<requirement name="NotHasBuff" buff="jz_BuffBruised"/></triggered_effect>
+		</effect_group>
+	
+		<effect_group name="Small Wound Stage Activation">
+			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="GTE" value="11"/>
+			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="15"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffSmallWound">
+					<requirement name="NotHasBuff" buff="jz_BuffSmallWound"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffThrobbingPain">
+					<requirement name="NotHasBuff" buff="jz_BuffThrobbingPain"/></triggered_effect>
+		</effect_group>
+	
+		<effect_group name="Wound Stage Activation">
+			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="GTE" value="16"/>
+			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffWound">
+					<requirement name="NotHasBuff" buff="jz_BuffWound"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLegSprained">
+					<requirement name="NotHasBuff" buff="buffLegSprained"/></triggered_effect>
+		</effect_group>
+	
+		<effect_group name="Severe Wound Stage Activation">
+			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="GTE" value="21"/>
+			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="25"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffSevereWound">
+					<requirement name="NotHasBuff" buff="jz_BuffSevereWound"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffGash">
+					<requirement name="NotHasBuff" buff="jz_BuffGash"/></triggered_effect>
+		</effect_group>
+	
+		<effect_group name="Deadly Wound Stage Activation">
+			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="GTE" value="26"/>
+			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="30"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffDeadlyWound">
+					<requirement name="NotHasBuff" buff="jz_BuffDeadlyWound"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLegBroken">
+					<requirement name="NotHasBuff" buff="buffLegBroken"/></triggered_effect>
+		</effect_group>
+	</buff>
+	
+	
+	<buff name="jz_BuffBruised" remove_on_death="false" name_key="jz_BuffBruisedName" description_key="jz_BuffBruisedDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+	</buff>
+	
+	<buff name="jz_BuffSmallWound" remove_on_death="false" name_key="jz_BuffSmallWoundName" description_key="jz_BuffSmallWoundDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<duration value="0"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
+				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffThrobbingPain" remove_on_death="false" name_key="jz_BuffThrobbingPainName" description_key="jz_BuffThrobbingPainDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<duration value="0"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
+				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffWound" remove_on_death="false" name_key="jz_BuffWoundName" description_key="jz_BuffWoundDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<duration value="0"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
+				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffSevereWound" remove_on_death="false" name_key="jz_BuffSevereWoundName" description_key="jz_BuffSevereWoundDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<duration value="0"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
+				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffGash" remove_on_death="false" name_key="jz_BuffGashName" description_key="jz_BuffGashDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<duration value="0"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
+				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffDeadlyWound" remove_on_death="false" name_key="jz_BuffDeadlyWoundName" description_key="jz_BuffDeadlyWoundDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<duration value="0"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
+				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+		</effect_group>
+	</buff>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </buffs>
+
 
 
 
