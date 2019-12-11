@@ -69,9 +69,14 @@
 		<action type="TrackQuest" />
 
 		<objective type="BlockPlace" id="jz_CharacterChoiceComputer" value="1" phase="1" />
-		<reward type="SkillPoints" value="10" />
+		
+		<reward type="Item" id="jz_ProfessionChoice" value="5" />
+		<reward type="Item" id="drinkJarBoiledWater" value="1" />
+		<reward type="Item" id="jz_TatteredShirt" value="1" />
+		<reward type="Item" id="jz_TatteredPants" value="1" />
+		<reward type="Item" id="jz_TatteredShoes" value="1" />
+		<reward type="Item" id="keystoneBlock" value="1" />
 		<reward type="Exp" value="100" />
-		<reward type="Quest" id="quest_BasicSurvival2" />
 		<reward type="Quest" id="jzquest_SlowDriverRefund" />
 		<reward type="Quest" id="jzquest_SleepyRefund" />
 		<reward type="Quest" id="jzquest_ClumsyRefund" />
@@ -137,166 +142,7 @@
 		<reward type="Quest" id="jzquest_CompoundCrossbowCraftingLv1" />
 		<reward type="Quest" id="jzquest_JunkTurretCraftingLv1" />
 		</quest>
-	<!-- Basic Survival 2 - Craft a Stone Axe /> -->
-	<quest id="quest_BasicSurvival2">
-		<property name="group_name_key" value="quest_BasicSurvival" />
-		<property name="name_key" value="quest_BasicSurvival2" />
-		<property name="subtitle" value="Craft a Stone Axe" />
-		<property name="subtitle_key" value="quest_BasicSurvival2_subtitle" />
-		<property name="description_key" value="quest_BasicSurvival2_description" />
-		<property name="icon" value="ui_game_symbol_hammer" />
-		<property name="category_key" value="quest" />
-		<property name="offer_key" value="quest_BasicSurvival_offer" />
-		<property name="shareable" value="false" />
-
-		<objective type="FetchKeep" id="resourceYuccaFibers" value="2" phase="1" />
-		<objective type="FetchKeep" id="resourceWood" value="2" phase="1" />
-		<objective type="FetchKeep" id="resourceRockSmall" value="2" phase="1" />
-
-		<objective type="Craft">
-			<property name="phase" value="2" />
-			<property name="item" value="meleeToolStoneAxe" />
-			<property name="count" value="1" />
-		</objective>
-
-		<reward type="Exp" value="100" />
-		<reward type="Quest" id="quest_BasicSurvival3" />
-	</quest>
-	<!-- Basic Survival 3 - Craft Plant Fiber Clothing /> -->
-	<quest id="quest_BasicSurvival3">
-		<property name="group_name_key" value="quest_BasicSurvival" />
-		<property name="name_key" value="quest_BasicSurvival3" />
-		<property name="subtitle_key" value="quest_BasicSurvival3_subtitle" />
-		<property name="description_key" value="quest_BasicSurvival3_description" />
-		<property name="icon" value="ui_game_symbol_tailoring" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="veryeasy" />
-		<property name="shareable" value="false" />
-
-		<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1" />
-		<objective type="Craft" id="apparelPlantFiberPants" value="1" phase="2" />
-		<objective type="Craft" id="apparelPlantFiberShirt" value="1" phase="2" />
-		<reward type="Exp" value="100" />
-		<reward type="Quest" id="quest_BasicSurvival4" />
-	</quest>
-	<!-- Basic Survival 4 - Wear Plant Fiber Clothing /> -->
-	<quest id="quest_BasicSurvival4">
-		<property name="group_name_key" value="quest_BasicSurvival" />
-		<property name="name_key" value="quest_BasicSurvival4" />
-		<property name="subtitle_key" value="quest_BasicSurvival4_subtitle" />
-		<property name="description_key" value="quest_BasicSurvival4_description" />
-		<property name="icon" value="ui_game_symbol_shirt" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="veryeasy" />
-		<property name="shareable" value="false" />
-
-		<objective type="Wear" id="apparelPlantFiberPants" />
-		<objective type="Wear" id="apparelPlantFiberShirt" />
-
-		<reward type="Exp" value="100" />
-		<reward type="Quest" id="quest_BasicSurvival5" />
-	</quest>
-	<!-- Basic Survival 5 - Craft a Wooden Club /> -->
-	<quest id="quest_BasicSurvival5">
-		<property name="group_name_key" value="quest_BasicSurvival" />
-		<property name="name_key" value="quest_BasicSurvival5" />
-		<property name="subtitle_key" value="quest_BasicSurvival5_subtitle" />
-		<property name="description_key" value="quest_BasicSurvival5_description" />
-		<property name="icon" value="ui_game_symbol_club" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="veryeasy" />
-		<property name="shareable" value="false" />
-
-		<objective type="FetchKeep" id="resourceWood" value="5" phase="1" />
-		<objective type="Craft" id="meleeClubWood" value="1" phase="2" />
-
-		<reward type="Exp" value="100" />
-		<reward type="Quest" id="quest_BasicSurvival6" />
-	</quest>
-	<!-- Basic Survival 6 - Craft Bow & Arrows /> -->
-	<quest id="quest_BasicSurvival6">
-		<property name="group_name_key" value="quest_BasicSurvival" />
-		<property name="name_key" value="quest_BasicSurvival6" />
-		<property name="subtitle_key" value="quest_BasicSurvival6_subtitle" />
-		<property name="description_key" value="quest_BasicSurvival6_description" />
-		<property name="icon" value="ui_game_symbol_archery" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="veryeasy" />
-		<property name="shareable" value="false" />
-
-		<objective type="FetchKeep" id="resourceWood" value="10" phase="1" />
-		<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1" />
-		<objective type="FetchKeep" id="resourceFeather" value="1" phase="1"/>
-		<objective type="FetchKeep" id="resourceRockSmall" value="1" phase="1" />
-		<objective type="Craft" id="gunBowPrimitive" value="1" phase="2" />
-		<objective type="Craft" id="ammoArrowStone" value="1" phase="2" />
-
-		<reward type="Exp" value="100" />
-		<reward type="Quest" id="quest_BasicSurvival7" />
-	</quest>
-	<!-- Basic Survival 7 - Start a Base /> -->
-	<quest id="quest_BasicSurvival7">
-		<property name="group_name_key" value="quest_BasicSurvival" />
-		<property name="name_key" value="quest_BasicSurvival7" />
-		<property name="subtitle_key" value="quest_BasicSurvival7_subtitle" />
-		<property name="description_key" value="quest_BasicSurvival7_description" />
-		<property name="icon" value="ui_game_symbol_map_house" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="veryeasy" />
-		<property name="shareable" value="false" />
-
-		<objective type="FetchKeep" id="resourceWood" value="6" phase="1" />
-		<objective type="Craft" id="woodFrameBlockVariantHelper" value="1" phase="2" />
-		<objective type="BlockPlace" id="woodFrameBlock" value="1" phase="2" />
-		<objective type="BlockUpgrade" id="woodFrameBlock" value="1" phase="2" />
-
-		<reward type="Exp" value="100" />
-		<reward type="Quest" id="quest_BasicSurvival8" />
-	</quest>
-	<!-- Basic Survival 8 - Build a Campfire /> -->
-	<quest id="quest_BasicSurvival8">
-		<property name="group_name_key" value="quest_BasicSurvival" />
-		<property name="name_key" value="quest_BasicSurvival8" />
-		<property name="subtitle_key" value="quest_BasicSurvival8_subtitle" />
-		<property name="description_key" value="quest_BasicSurvival8_description" />
-		<property name="icon" value="ui_game_symbol_campfire" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="veryeasy" />
-		<property name="shareable" value="false" />
-
-		<objective type="FetchKeep" id="resourceRockSmall" value="5" phase="1" />
-		<objective type="Craft" id="campfire" value="1" phase="2" />
-		<objective type="BlockPlace" id="campfire" value="1" phase="2" />
-
-
-		<reward type="Quest" id="quest_whiteRiverCitizen1">
-			<property name="chainquest" value="false" />
-		</reward>
-		<reward type="SkillPoints" value="4" chainreward="true" />
-		<!-- <reward type="ShowTip" value="whiteRiverCitizen" stage="aftercomplete" /> -->
-	</quest>
-	<!-- White River Citizen 1 - Journey to Settlement -->
-	<quest id="quest_whiteRiverCitizen1">
-		<property name="group_name_key" value="quest_WhiteRiverCitizen" />
-		<property name="name_key" value="quest_WhiteRiverCitizen1" />
-		<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitle" />
-		<property name="description_key" value="quest_WhiteRiverCitizen1_description" />
-		<property name="icon" value="ui_game_symbol_map_trader" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="medium" />
-		<property name="shareable" value="false" />
-
-		<action type="ShowTip" value="quest_WhiteRiverCitizen1_description">
-			<property name="delay" value="3" />
-		</action>
-		<objective type="Goto" id="trader" value="5" phase="1" />
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="2" />
-		</objective>
-
-		<reward type="Exp" value="1000" />
-	</quest>
+	
 <!--  ****************************************************************************TRUE SURVIVAL********************************************** -->
 <!-- JZMOD CRAFTING SKILLS -->
 <quest id="jzquest_SlowDriverRefund">
@@ -7786,5 +7632,6 @@
 			<!-- <reward type="Quest" id="quest_tier6complete" /> -->
 		<!-- </quest_tier_reward> -->
 	</quest_tier_rewards>
+
 
 </quests>

@@ -51,9 +51,9 @@
 	<property name="TrackerIcon" value="ui_game_symbol_run"/>
 	<property name="IsEnemyEntity" value="false"/>
 	<property name="DropInventoryBlock" value="cntBackpackDropped"/> <!-- deprecated. It's an entity now "Backpack" -->
-	<property name="ItemsOnEnterGame.GameModeSurvival" value="jz_CharacterChoiceComputer,jz_ProfessionChoice,jz_ProfessionChoice,jz_ProfessionChoice,jz_ProfessionChoice,jz_ProfessionChoice"/>
-	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="jz_CharacterChoiceComputer,jz_ProfessionChoice,jz_ProfessionChoice,jz_ProfessionChoice,jz_ProfessionChoice,jz_ProfessionChoice"/>
-	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="jz_CharacterChoiceComputer,jz_ProfessionChoice,jz_ProfessionChoice,jz_ProfessionChoice,jz_ProfessionChoice,jz_ProfessionChoice"/>
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="jz_CharacterChoiceComputer"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="jz_CharacterChoiceComputer"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="jz_CharacterChoiceComputer"/>
 	<property name="ExperienceGain" value="130"/>
 	<property name="LegsExplosionDamageMultiplier" value=".41"/> <!-- Player gets 20% damage reduction (where from?) and this takes it to 33% total -->
 	<property name="ArmsExplosionDamageMultiplier" value=".41"/>
@@ -66,8 +66,8 @@
 	<!-- IMPORTANT NOTE: In entityclasses.xml, effect_groups DO extend if you extend an entity to another.
 		Pay attention so that you do not stack several base_add or perc_add. -->
 	<effect_group>
-		<passive_effect name="HealthMax" operation="base_set" value="100"/>
-		<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+		<passive_effect name="HealthMax" operation="base_set" value="@jz_WellnessLv"/>
+		<passive_effect name="StaminaMax" operation="base_set" value="@jz_WellnessLv"/>
 		<passive_effect name="WaterMax" operation="base_set" value="100"/>
 
 		<passive_effect name="HealthChangeOT" operation="base_set" value="0.017"/> <!-- heal 1 point of (red) health / minute -->
@@ -210,6 +210,35 @@
 
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffStatusCheck01,buffStatusCheck02"/>
 		<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffStatusCheck01,buffStatusCheck02,buffPerkAbilityUpdate,buffNearDeathTraumaTrigger"/>
+		<!-- JZMOD ACTION SKILLS-->
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_MiningSkillLv" tags="jz_MiningSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_AxeSkillLv" tags="jz_AxeSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_ChainsawSkillLv" tags="jz_ChainsawSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_AugerSkillLv" tags="jz_AugerSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_UnarmedSkillLv" tags="jz_UnarmedSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_BluntSkillLv" tags="jz_BluntSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_SledgeSkillLv" tags="jz_SledgeSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_BladeSkillLv" tags="jz_BladeSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_ArcherySkillLv" tags="jz_ArcherySkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_SpearSkillLv" tags="jz_SpearSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_PistolSkillLv" tags="jz_PistolSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_44MagSkillLv" tags="jz_44MagSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_SMG5SkillLv" tags="jz_SMG5Skill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_BlunderbussSkillLv" tags="jz_BlunderbussSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_DBShotgunSkillLv" tags="jz_DBShotgunSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_PShotgunSkillLv" tags="jz_PShotgunSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_HuntingRifleSkillLv" tags="jz_HuntingRifleSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_MarksmanSkillLv" tags="jz_MarksmanSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_AK47SkillLv" tags="jz_AK47Skill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_M60SkillLv" tags="jz_M60Skill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_ExposivesSkillLv" tags="jz_ExposivesSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_JunkTurretSkillLv" tags="jz_JunkTurretSkill"/>
+		<!-- JZMOD BUILDING SKILLS-->
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_WoodBuildingSkillLv" tags="jz_WoodBuildingSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_StoneBuildingSkillLv" tags="jz_StoneBuildingSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_IronBuildingSkillLv" tags="jz_IronBuildingSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_ConcreteBuildingSkillLv" tags="jz_ConcreteBuildingSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_SteelBuildingSkillLv" tags="jz_SteelBuildingSkill"/>
 	</effect_group>
 </entity_class>
 
@@ -3862,6 +3891,75 @@ Kinda sorta works but is buggy and we don't have time for that.
 </entity_classes>
 
 <!--
+<entity_class name="animalSpider" extends="animalTemplateHostile">
+<property name="Tags" value="entity,animal,hostile"/>
+<property name="EntityType" value="Animal"/>
+<property name="Class" value="EntityEnemyAnimal"/>
+<property name="AvatarController" value="MecanimSDX, Mods" />
+<property name="RootMotion" value="false" />
+<property name="HasRagdoll" value="false" />
+<property name="Mesh" value="#Spider.unity3d?Tarantula.prefab"/>
+<property name="AttackIndexes" value="2" />
+<property name="SpecialAttackIndexes" value="0" />
+<property name="PainIndexes" value="0" />
+<property name="DeathIndexes" value="0" />
+<property name="RunIndexes" value="0" />
+<property name="WalkIndexes" value="0" />
+<property name="IdleIndexes" value="0" />
+<property name="Parent" value="Enemies"/>
+<property name="Mass" value="30"/>
+<property name="Weight" value="70"/>
+<property name="Faction" value="undead"/>
+<property name="SizeScale" value="1"/>
+
+<property name="AITask-1" value="BreakBlock"/>
+<property name="AITask-2" value="Territorial"/>
+<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityNPC,15"/>
+<property name="AITask-4" value="ApproachSpot"/>
+<property name="AITask-5" value="Look"/>
+<property name="AITask-6" value="Wander"/>
+<property name="AITask-7" value=""/>
+<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityPlayer"/>
+<property name="AITarget-2" value="BlockingTargetTask"/>
+<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
+<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,12,0,EntityNPC,0,0"/>
+<property name="AITarget-5" value=""/>
+
+<property name="WalkType" value="7"/>
+<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+
+<property name="MaxTurnSpeed" value="100"/>
+<property name="MoveSpeed" value="0.3"/>
+<property name="MoveSpeedAggro" value="1.2,1.2"/>
+<property name="MoveSpeedPanic" value="1.2"/>
+
+<property name="HandItem" value="DFmeleeHandAnimalSpider"/>
+<property name="AttackTimeoutDay" value="1.5"/>
+<property name="AttackTimeoutNight" value="1.1"/>
+
+<property name="MaxHealth" value="100"/>
+<property name="ExperienceGain" value="250"/>
+<property name="DeadBodyHitPoints" value="150"/>
+<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="3"/>
+
+<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/> 
+<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="5"/>
+<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+<drop event="Harvest" name="resourceAnimalFat" count="3" tag="butcherHarvest"/>
+<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
+<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+
+<effect_group name="Base Effects">
+<passive_effect name="HealthMax" operation="base_set" value="100"/>
+<passive_effect name="HealthMax" operation="perc_add" value="0"/> 
+</effect_group>
+</entity_class>
 XP buckets for balancing:
 see XML.txt, "XP buckets for balancing"
 -->

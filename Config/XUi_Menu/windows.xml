@@ -171,7 +171,7 @@
 							<combobox depth="108" pos="155,0" width="300" height="32" name="WorldSize" type="ComboBoxList&lt;System.String&gt;" values="4096,8192" value_wrap="false" />
 						</rect>
 						<rect>
-							<simplebutton name="generate" pos="189,0" width="232" height="32" font_size="26" text="Generate World" caption_key="btnGenerateWorld"/>
+							<simplebutton name="generate" pos="189,0" width="232" height="32" font_size="26" text="Generate World" text_key="xuiGenerateWorld" caption_key="xuiGenerateWorld"/>
 						</rect>
 					</grid>
 				</rect>
@@ -579,7 +579,7 @@
 						<gameoption name="GameDifficulty" title="goDifficulty" value_wrap="false" value_type="int" values="" display_names="goDifficulty1,goDifficulty2,goDifficulty3,goDifficulty4,goDifficulty5,goDifficulty6" value_localization_prefix="" />
 						<gameoption name="DayNightLength" title="goDayLength" value_wrap="false" value_type="int" values="10, 20, 30, 40, 50, 60, 90, 120" display_names="" value_localization_prefix="goMinute" />
 						<gameoption name="DayLightLength" title="goDayLightLength" value_wrap="false" value_type="int" values="12, 14, 16, 18" display_names="" value_localization_prefix="goDayLightLengthValue" />
-						<gameoption name="BloodMoonFrequency" title="goBloodMoonFrequency" value_wrap="false" value_type="int" values="0, 1, 3, 7, 14, 30" display_names="goDisabled" value_localization_prefix="goDay" />
+						<gameoption name="BloodMoonFrequency" title="goBloodMoonFrequency" value_wrap="false" value_type="int" values="0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 20, 30" display_names="goDisabled" value_localization_prefix="goDay" />
 						<gameoption name="BloodMoonRange" title="goBloodMoonRange" value_wrap="false" value_type="int" values="0, 1, 2, 3, 4, 7, 10, 14, 20" display_names="" value_localization_prefix="goDay" />
 						<gameoption name="BloodMoonWarning" title="goBloodMoonWarning" value_wrap="false" value_type="int" values="-1, 8, 18" display_names="goDisabled,goMorning,goEvening" value_localization_prefix="" />
 						<gameoption name="ZombieMove" title="goZombieMove" value_wrap="false" value_type="int" values="" display_names="goZMWalk,goZMJog,goZMRun,goZMSprint,goZMNightmare" value_localization_prefix="" />
@@ -599,13 +599,13 @@
 					<grid pos="6,-40" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical" >
 						<!--<gameoption name="BlockDurabilityModifier" title="goBlockDurability" value_wrap="false" value_type="int" values="25, 50, 100, 200" display_names="" value_localization_prefix="goBlockDurabilityValue" />-->
 						<gameoption name="BlockDamagePlayer" title="goBlockDamagePlayer" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
-						<gameoption name="BlockDamageAI" title="goBlockDamageAI" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
-						<gameoption name="BlockDamageAIBM" title="goBlockDamageAIBM" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
-						<gameoption name="LootAbundance" title="goLootAbundance" value_wrap="false" value_type="int" values="25, 50, 75, 100, 150, 200" display_names="" value_localization_prefix="goLootAbundanceValue" />
+						<gameoption name="BlockDamageAI" title="goBlockDamageAI" value_wrap="false" value_type="int" values="25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
+						<gameoption name="BlockDamageAIBM" title="goBlockDamageAIBM" value_wrap="false" value_type="int" values="25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
+						<gameoption name="LootAbundance" title="goLootAbundance" value_wrap="false" value_type="int" values="25, 33, 50, 67, 75, 100, 150, 200" display_names="" value_localization_prefix="goLootAbundanceValue" />
 						<gameoption name="LootRespawnDays" title="goLootRespawnDays" value_wrap="false" value_type="int" values="-1, 5, 10, 15, 20, 30, 40, 50" display_names="goDisabled" value_localization_prefix="goLootRespawnDaysValue" />
 						<gameoption name="DropOnDeath" title="goDropOnDeath" value_wrap="false" value_type="int" values="" display_names="goNone,goAll,goToolbelt,goBackpack,goDeleteAll" value_localization_prefix="" />
 						<gameoption name="DropOnQuit" title="goDropOnQuit" value_wrap="false" value_type="int" values="" display_names="goNone,goAll,goToolbelt,goBackpack" value_localization_prefix="" />
-						<gameoption name="BloodMoonEnemyCount" title="goBloodMoonEnemyCount" value_wrap="false" value_type="int" values="4, 8, 12, 16, 24, 32, 64" display_names="" value_localization_prefix="goEnemie" />
+						<gameoption name="BloodMoonEnemyCount" title="goBloodMoonEnemyCount" value_wrap="false" value_type="int" values="4, 6, 8, 10, 12, 16, 24, 32, 64" display_names="" value_localization_prefix="goEnemie" />
 						<gameoption name="EnemySpawnMode" title="goEnemySpawn" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" />
 						<gameoption name="AirDropFrequency" title="goAirDropFrequency" value_wrap="false" value_type="int" values="0, 24, 72, 168" display_names="goDisabled" value_localization_prefix="goAirDropValue" />
 						<gameoption name="BuildCreate" title="goBuildCreate" value_wrap="false" value_type="bool" values="" display_names="" value_localization_prefix="" />
@@ -796,13 +796,13 @@
 					<rect tab_key="xuiGameSettingsAdvanced">
 						<grid pos="8,-40" rows="13" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical" >
 							<browsergameoptioncombined name="BlockDamagePlayer" title="goBlockDamagePlayer" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
-							<browsergameoptioncombined name="BlockDamageAI" title="goBlockDamageAI" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
-							<browsergameoptioncombined name="BlockDamageAIBM" title="goBlockDamageAIBM" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
-							<browsergameoptioncombined name="LootAbundance" title="goLootAbundance" value_wrap="false" values="25, 50, 75, 100, 150, 200" display_names="" value_localization_prefix="goLootAbundanceValue" />
+							<browsergameoptioncombined name="BlockDamageAI" title="goBlockDamageAI" value_wrap="false" value_type="int" values="25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
+							<browsergameoptioncombined name="BlockDamageAIBM" title="goBlockDamageAIBM" value_wrap="false" value_type="int" values="25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
+							<browsergameoptioncombined name="LootAbundance" title="goLootAbundance" value_wrap="false" values="25, 33, 50, 67, 75, 100, 150, 200" display_names="" value_localization_prefix="goLootAbundanceValue" />
 							<browsergameoptioncombined name="LootRespawnDays" title="goLootRespawnDays" value_wrap="false" values="-1, 5, 10, 15, 20, 30, 40, 50" display_names="goDisabled" value_localization_prefix="goLootRespawnDaysValue" />
 							<browsergameoptioncombined name="DropOnDeath" title="goDropOnDeath" value_wrap="false" values="" display_names="goNone,goAll,goToolbelt,goBackpack,goDeleteAll" value_localization_prefix="" allow_custom="false" />
 							<browsergameoptioncombined name="DropOnQuit" title="goDropOnQuit" value_wrap="false" values="" display_names="goNone,goAll,goToolbelt,goBackpack" value_localization_prefix="" allow_custom="false" />
-							<browsergameoptioncombined name="BloodMoonEnemyCount" title="goBloodMoonEnemyCount" value_wrap="false" values="4, 8, 12, 16, 24, 32, 64" display_names="" value_localization_prefix="goEnemie" />
+							<browsergameoptioncombined name="BloodMoonEnemyCount" title="goBloodMoonEnemyCount" value_wrap="false" values="4, 6, 8, 10, 12, 16, 24, 32, 64" display_names="" value_localization_prefix="goEnemie" />
 							<browsergameoptioncombined name="EnemySpawnMode" title="goEnemySpawn" value_wrap="false" values="" display_names="" value_localization_prefix="" allow_custom="false" />
 							<browsergameoptioncombined name="AirDropFrequency" title="goAirDropFrequency" value_wrap="false" values="0, 24, 72, 168" display_names="goDisabled" value_localization_prefix="goAirDropValue" />
 							<browsergameoptioncombined name="BuildCreate" title="goBuildCreate" value_wrap="false" values="" display_names="" value_localization_prefix="" allow_custom="false" />
@@ -905,8 +905,8 @@
 					<rect tab_key="xuiGameSettingsAdvanced">
 						<grid pos="8,-40" rows="15" cell_width="525" cell_height="45" repeat_content="false" arrangement="vertical" >
 							<browsergameoptioninfo name="BlockDamagePlayer" title="goBlockDamagePlayer" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
-							<browsergameoptioninfo name="BlockDamageAI" title="goBlockDamageAI" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
-							<browsergameoptioninfo name="BlockDamageAIBM" title="goBlockDamageAIBM" value_wrap="false" value_type="int" values="25, 50, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
+							<browsergameoptioninfo name="BlockDamageAI" title="goBlockDamageAI" value_wrap="false" value_type="int" values="25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
+							<browsergameoptioninfo name="BlockDamageAIBM" title="goBlockDamageAIBM" value_wrap="false" value_type="int" values="25, 33, 50, 67, 75, 100, 125, 150, 175, 200, 300" display_names="" value_localization_prefix="goBlockDamageValue" />
 							<browsergameoptioninfo name="LootAbundance" title="goLootAbundance" value_localization_prefix="goLootAbundanceValue" />
 							<browsergameoptioninfo name="LootRespawnDays" title="goLootRespawnDays" display_names="-1=goDisabled" value_localization_prefix="goLootRespawnDaysValue" />
 							<browsergameoptioninfo name="DropOnDeath" title="goDropOnDeath" display_names="goNone,goAll,goToolbelt,goBackpack,goDeleteAll" value_localization_prefix="" />
@@ -1074,12 +1074,14 @@
 				</rect>
 				
 				<rect tab_key="xuiOptionsVideoQuality">
-					<videooption pos="8,-40" name="QualityPreset" type="ComboBoxList&lt;System.String&gt;" values="Low,Medium,High,Ultra,Custom" value_wrap="false" />
+					<videooption pos="8,-40" name="QualityPreset" type="ComboBoxList&lt;System.String&gt;" values="Lowest,Low,Medium,High,Ultra,Custom" value_wrap="false" />
 
 					<grid pos="8,-110" rows="11" cell_width="600" cell_height="42" repeat_content="false" arrangement="vertical" >
 						<videooption name="AntiAliasing" type="ComboBoxBool" />
 
 						<videooption name="TextureQuality" type="ComboBoxList&lt;System.String&gt;" values="Full,Half,Quarter,Eighth" value_wrap="false" reverse_list="true" />
+						
+						<videooption name="TextureFilter" type="ComboBoxList&lt;System.String&gt;" values="Low,Medium,High,Ultra,Ultra+" value_wrap="false" />
 
 						<videooption name="UMATextureQuality" type="ComboBoxList&lt;System.String&gt;" values="High,Middle,Low,Lowest" value_wrap="false" reverse_list="true" />
 
@@ -1098,9 +1100,8 @@
 						<videooption name="LODDistance" type="ComboBoxFloat" value_increment="0.05" value_wrap="false" format_string="0%" />
 
 						<!--videooption name="FieldOfView" type="ComboBoxInt" value_increment="2" value_wrap="false" /-->
-						<rect />
 
-						<videooption name="TreeQuality" type="ComboBoxList&lt;System.String&gt;" values="Low,Middle,High,Ultra" value_wrap="false" />
+						<videooption name="TreeQuality" type="ComboBoxList&lt;System.String&gt;" values="Lowest,Low,Middle,High,Ultra" value_wrap="false" />
 
 						<videooption name="GrassDistance" type="ComboBoxList&lt;System.String&gt;" values="Near,Normal,Far" value_wrap="false" />
 
@@ -1170,9 +1171,9 @@
 
         <rect />
 
-        <audiooption name="DynamicMusicEnabled" type="ComboBoxBool" />
+        <audiooption name="DynamicMusicEnabled" type="ComboBoxBool" visible="{notinlinux}" />
 
-        <audiooption name="DynamicMusicDailyTimeAllotted" type="ComboBoxFloat" value_increment="0.1" value_wrap="false" format_string="0%" />
+        <audiooption name="DynamicMusicDailyTimeAllotted" type="ComboBoxFloat" value_increment="0.1" value_wrap="false" format_string="0%" visible="{notinlinux}" />
 
         <rect />
 

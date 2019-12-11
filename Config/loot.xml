@@ -222,6 +222,7 @@ New items:
 		<loot level="4" prob="0.5"/>
 		<loot level="5" prob="0.1"/>
 		<loot level="6" prob="0.0"/>
+		<loot level="7" prob="0.0"/>
 		<loot level="11" prob="2.0"/>
 		<loot level="12" prob="1.0"/>
 		<loot level="13" prob="0.5"/>
@@ -237,6 +238,7 @@ New items:
 		<loot level="4" prob="2.0"/>
 		<loot level="5" prob="1.0"/>
 		<loot level="6" prob="0.5"/>
+		<loot level="7" prob="0.5"/>
 		<loot level="11" prob="1.0"/>
 		<loot level="12" prob="2.0"/>
 		<loot level="13" prob="2.0"/>
@@ -252,6 +254,7 @@ New items:
 		<loot level="4" prob="1.0"/>
 		<loot level="5" prob="2.0"/>
 		<loot level="6" prob="2.0"/>
+		<loot level="7" prob="2.0"/>
 		<loot level="11" prob="0.0"/>
 		<loot level="12" prob="0.0"/>
 		<loot level="13" prob="0.1"/>
@@ -804,46 +807,6 @@ The overall plan for loot distribution:
 </lootqualitytemplates>
 
 <lootqualitytemplates>
-	<lootqualitytemplate name="questTierRigidTemplate">
-		<qualitytemplate level="1" default_quality="1">
-			<loot quality="1" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="2" default_quality="2">
-			<loot quality="2" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="3" default_quality="3">
-			<loot quality="3" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="4" default_quality="4">
-			<loot quality="4" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="5" default_quality="5">
-			<loot quality="5" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="6" default_quality="6">
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-
-		<qualitytemplate level="11" default_quality="1">
-			<loot quality="1" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="12" default_quality="2">
-			<loot quality="2" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="13" default_quality="3">
-			<loot quality="3" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="14" default_quality="4">
-			<loot quality="4" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="15" default_quality="5">
-			<loot quality="5" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="16" default_quality="6">
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-	</lootqualitytemplate>
-
 	<lootqualitytemplate name="questTierFlexibleTemplate">
 		<qualitytemplate level="1" default_quality="1">
 			<loot quality="1" prob="1"/>
@@ -862,6 +825,9 @@ The overall plan for loot distribution:
 		</qualitytemplate>
 		<qualitytemplate level="6" default_quality="6">
 			<loot quality="5,6" prob="1"/>
+		</qualitytemplate>
+		<qualitytemplate level="7" default_quality="6">
+			<loot quality="6" prob="1"/>
 		</qualitytemplate>
 
 		<qualitytemplate level="11" default_quality="1">
@@ -960,7 +926,6 @@ The overall plan for loot distribution:
 <lootgroup name="groupApparelHats">
 	<item name="apparelCowboyHat" mods="dye" mod_chance="0.00"/>
 	<item name="apparelSkullCap" mods="dye" mod_chance="0.00"/>
-	<!--<item name="armorSantaHat" mods="dye" mod_chance="0.00"/>-->
 	<item name="apparelPressboyCap" mods="dye" mod_chance="0.00"/>
 	<item name="armorClothHat"/>
 	<item name="armorFootballHelmet"/>
@@ -1116,14 +1081,8 @@ The overall plan for loot distribution:
 	<item name="resourceTrophy2"/>
 </lootgroup>
 
-<lootgroup name="groupAmmoRegularGunslinger">
-	<item name="ammo9mmBulletBall" loot_prob_template="T2" count="10,40"/>	<!-- 32 -->
-	<item name="ammo9mmBulletBall" loot_prob_template="T3" count="10,40"/>	<!-- 32 -->
-	<item name="ammo44MagnumBulletBall" loot_prob_template="T3" count="4,19"/>	<!-- 65 -->
-</lootgroup>
-
 <lootgroup name="groupAmmoRegular">
-	<item group="groupAmmoRegularGunslinger"/>
+	<item name="ammo9mmBulletBall" count="10,40"/>	<!-- 32 -->
 	<item name="ammoShotgunShell" count="3,12"/>							<!-- 96 -->
 	<item name="ammo762mmBulletBall" count="6,25"/>						<!-- 50 -->
 	<item name="ammoArrowIron" prob="0.1" count="6,24"/>					<!-- 28 -->
@@ -1694,15 +1653,15 @@ The overall plan for loot distribution:
 	<item group="groupModAllT3" loot_prob_template="T3"/>
 </lootgroup>
 
-<lootgroup name="herbalRecipes">
-	<item name="drugHerbalAntibioticsSchematic"/>
-</lootgroup>
-
 <lootgroup name="grills">
 	<item name="toolCookingGrill" prob=".5"/>
 	<item name="foodRottingFlesh" count="1,2" prob="1"/>
 	<item name="resourceBone" count="5,15" prob=".5"/>
 	<item name="meleeToolKnifeIron" prob=".1"/>
+</lootgroup>
+
+<lootgroup name="herbalRecipes">
+	<item name="drugHerbalAntibioticsSchematic"/>
 </lootgroup>
 
 <lootgroup name="perkBooks">
@@ -1875,7 +1834,6 @@ The overall plan for loot distribution:
 	<item name="modFuelTankSmallSchematic"/>
 	<item name="modFuelTankLargeSchematic"/>
 	<item name="medicalFirstAidBandageSchematic"/>
-	<item name="medicalBloodDrawKitSchematic"/>
 	<item name="resourceMilitaryFiberSchematic"/>
 	<item name="modGunMeleeTheHunterSchematic"/>
 	<!--<item name="modGunMeleeBlessedMetalSchematic"/>-->
@@ -2009,10 +1967,7 @@ The overall plan for loot distribution:
 	<item name="foodMeatStewSchematic"/>
 	<item name="foodSteakAndPotatoSchematic"/>
 	<item name="foodVegetableStewSchematic"/>
-	<item name="foodShamChowderSchematic"/>
 	<item name="foodHoboStewSchematic"/>
-	<item name="foodFishTacosSchematic"/>
-	<item name="foodChiliDogSchematic"/>
 	<item name="plantedAloe1Schematic"/>
 	<item name="plantedBlueberry1Schematic"/>
 	<item name="plantedChrysanthemum1Schematic"/>
@@ -2032,7 +1987,6 @@ The overall plan for loot distribution:
 	<item name="drinkJarGrandpasAwesomeSauce"/>
 	<item name="drinkJarGrandpasLearningElixir"/>
 	<item name="drinkJarGrandpasMoonshine"/>
-	<item name="foodShamChowder"/>
 	<item name="foodHoboStew"/>
 	<item name="drinkJarBlackStrapCoffee"/>
 	<item name="drinkCanMegaCrush"/>
@@ -2263,7 +2217,7 @@ The overall plan for loot distribution:
 	<item name="resourceBrokenGlass" count="10,20"/>
 	<item name="resourceRockSmall" count="10,20"/>
 	<item name="resourceClayLump" count="10,20"/>
-	<item name="resourceIronFragment" count="10,20" prob="2"/>
+	<item name="resourceScrapIron" count="50,100" prob="2"/>
 	<item name="resourceMetalPipe" count="10,20"/>
 	<item name="resourceForgedIron" count="10,20" prob="2"/>
 	<item name="resourceForgedSteel" count="5,20"/>
@@ -2337,13 +2291,11 @@ The overall plan for loot distribution:
 	<item name="resourceCandyTin"/>
 	<item name="drinkJarEmpty"/>
 	<item name="drinkCanEmpty"/>
-	<item name="drugPainkillers"/>
 	<item name="resourcePaper" count="1,6" prob="0.7"/>
 	<item name="oldCash" count="1,6" prob="0.3"/>
 	<item name="resourceCloth" count="1,4"/>
 	<item group="trophyGroup"/>
 	<item name="resourceCandleStick"/>
-	<item name="glassBlockVariantHelper"/>
 	<item name="resourceGunPowder" count="1,3"/>
 	<item name="resourceDoorKnob"/>
 	<item name="resourceOil" count="2,6"/>
@@ -2353,7 +2305,6 @@ The overall plan for loot distribution:
 	<item name="resourceWood" count="1,4"/>
 	<item name="resourceGlue"/>
 	<item name="resourceNail" count="1,10"/>
-	<item name="casinoCoin" count="1,5"/>
 	<item name="resourceBulletCasing" count="1,10"/>
 	<item name="resourceFeather" count="1,5"/>
 	<item name="resourceDuctTape" count="1,3"/>
@@ -2488,8 +2439,6 @@ The overall plan for loot distribution:
 	<item name="medicalFirstAidKit"/>
 	<item name="toolBeaker"/>
 	<item name="drugAntibiotics"/>
-	<item name="medicalBloodDrawKit"/>
-	<!--<item name="firstAidKitSchematic"/>-->
 	<item name="drugSteroids"/>
 	<item name="drugRecog"/>
 	<item name="drugFortBites"/>
@@ -2500,7 +2449,7 @@ The overall plan for loot distribution:
 	<item name="medicalFirstAidBandage"/>
 	<item name="medicalBandage"/>
 	<item name="drugSteroids"/>
-	<item name="medicalBloodBag"/>
+	<item name="medicalBloodBag" count="2,4"/>
 	<item name="drugVitamins"/>
 	<item name="drinkJarGrainAlcohol"/>
 	<item name="medicalSplint"/>
@@ -2663,8 +2612,6 @@ The overall plan for loot distribution:
 	<item name="resourceOilShale" count="10,30"/>
 	<item name="drugPainkillers" count="1,2"/>
 	<item name="drugAntibiotics" prob="0.5"/>
-	<item name="medicalBloodDrawKit" prob="0.35"/>
-	<!--<item name="firstAidKitSchematic" prob="0.15"/>-->
 	<item name="toolBeaker" prob="0.35"/>
 	<item name="resourceAcid" count="1,2" prob="0.7"/>
 </lootgroup>
@@ -2995,21 +2942,34 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 </lootgroup>
 
 <lootgroup name="groupQuestAmmo">
-	<item name="ammoShotgunShell" count="9,21" prob="1.0"/>
-	<item name="ammo9mmBulletBall" count="27,63" prob="1.0"/>
-	<item name="ammo762mmBulletBall" count="16,39" prob="1.0"/>
-	<item name="ammo44MagnumBulletBall" count="13,30" loot_prob_template="GradeCLoot"/>
-	<item name="ammoArrowFlaming" count="14,33" prob="1.0"/>
-	<item name="ammoCrossbowBoltFlaming" count="14,33" prob="1.0"/>
-	<item name="ammoArrowExploding" count="4,11" loot_prob_template="GradeCLoot"/>
-	<item name="ammoCrossbowBoltExploding" count="3,8" loot_prob_template="GradeCLoot"/>
-	<item name="thrownAmmoPipeBomb" count="5,8" prob="1.0"/>
-	<item name="thrownDynamite" count="3,5" prob="0.8"/>
-	<item name="thrownAmmoMolotovCocktail" count="5,8" prob="1.0"/>
-	<item name="thrownGrenade" count="5,8" prob=".3"/>
-	<item name="thrownTimedCharge" count="4,6" loot_prob_template="GradeCLoot"/>
-	<item name="ammoShotgunSlug" count="10,25" loot_prob_template="GradeCLoot"/>
-	<item name="ammoRocketFrag" count="2,3" loot_prob_template="GradeCLoot"/>
+	<item name="ammo9mmBulletBall" count="300" loot_prob_template="GradeALoot"/>
+	<item name="ammo9mmBulletHP" count="300" loot_prob_template="GradeBLoot"/>
+	<item name="ammo9mmBulletAP" count="300" loot_prob_template="GradeCLoot"/>
+
+	<item name="ammo44MagnumBulletBall" count="150" loot_prob_template="GradeALoot"/>
+	<item name="ammo44MagnumBulletHP" count="150" loot_prob_template="GradeBLoot"/>
+	<item name="ammo44MagnumBulletAP" count="150" loot_prob_template="GradeCLoot"/>
+
+	<item name="ammoShotgunShell" count="150" loot_prob_template="GradeALoot"/>
+	<item name="ammoShotgunSlug" count="150" loot_prob_template="GradeCLoot"/>
+
+	<item name="ammo762mmBulletBall" count="150" loot_prob_template="GradeALoot"/>
+	<item name="ammo762mmBulletHP" count="150" loot_prob_template="GradeBLoot"/>
+	<item name="ammo762mmBulletAP" count="150" loot_prob_template="GradeCLoot"/>
+
+	<item name="ammoArrowFlaming" count="150" loot_prob_template="GradeBLoot"/>
+	<item name="ammoCrossbowBoltFlaming" count="150" loot_prob_template="GradeBLoot"/>
+	<item name="ammoArrowExploding" count="75" loot_prob_template="GradeCLoot"/>
+	<item name="ammoCrossbowBoltExploding" count="75" loot_prob_template="GradeCLoot"/>
+
+	<item name="ammoRocketFrag" count="20" loot_prob_template="GradeCLoot"/>
+
+	<item name="thrownAmmoPipeBomb" count="20" loot_prob_template="GradeALoot"/>
+	<item name="thrownDynamite" count="10" loot_prob_template="GradeBLoot"/>
+	<item name="thrownAmmoMolotovCocktail" count="20" loot_prob_template="GradeALoot"/>
+	<item name="thrownGrenade" count="25"  loot_prob_template="GradeBLoot"/>
+	<item name="thrownGrenadeContact" count="25" loot_prob_template="GradeCLoot"/>
+	<item name="thrownTimedCharge" count="10" loot_prob_template="GradeCLoot"/>
 </lootgroup>
 
 <lootgroup name="groupQuestArmor" loot_quality_template="questTierFlexibleTemplate">
@@ -3022,15 +2982,14 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <lootgroup name="groupQuestMedical">
 	<item name="drugVitamins" count="2,4" loot_prob_template="GradeALoot"/>
-	<item name="medicalFirstAidBandage" count="8,15" loot_prob_template="GradeALoot"/>
-	<item name="medicalFirstAidKit" count="5,10" prob="1.0"/>
-	<item name="medicalPlasterCast" count="5,10" prob="1.0"/>
-	<item name="drugAntibiotics" count="2,4" prob="1.0"/>
+	<item name="medicalFirstAidBandage" count="4,5" loot_prob_template="GradeALoot"/>
+	<item name="medicalFirstAidKit" count="2,3" prob="1.0"/>
+	<item name="drugAntibiotics" count="1,3" prob="1.0"/>
 	<item name="drugHerbalAntibiotics" count="2,4" loot_prob_template="GradeALoot"/>
-	<item name="drugSteroids" count="2,4" loot_prob_template="GradeCLoot"/>
+	<item name="drugSteroids" count="3,5" loot_prob_template="GradeCLoot"/>
 	<item name="drugRecog" count="2,4" loot_prob_template="GradeCLoot"/>
 	<item name="drugFortBites" count="2,4" loot_prob_template="GradeCLoot"/>
-	<item name="drugPainkillers" count="6,10" loot_prob_template="GradeCLoot"/>
+	<item name="drugPainkillers" count="4,5" loot_prob_template="GradeCLoot"/>
 	<item name="toolBeaker" loot_prob_template="GradeBLoot"/>
 </lootgroup>
 
@@ -3105,6 +3064,677 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item name="resourceFeather" count="1"/>
 </lootgroup>
 
+<lootgroup name="rottenFood">
+	<item name="foodRottingFlesh" prob="16.6" />
+	<item name="foodShamSandwich" prob="16.6" />
+	<item name="foodMoldyBread" prob="16.6" />
+	<item name="jz_MoldyFruit" prob="16.6" />
+	<item name="jz_MoldyVeggies" prob="16.6" />
+	<item name="jz_FoodDeadRat" prob="16.6" />
+</lootgroup>
+
+<lootgroup name="tatteredClothes" >
+	<item name="jz_TatteredShirt" quality="1,100" />
+	<item name="jz_TatteredShoes" quality="1,100" />
+	<item name="jz_TatteredPants" quality="1,100" />
+</lootgroup>
+	
+<!--  New Junk Item groups -->
+<lootgroup name="paperJunk" >
+	<item name="jz_PaperBook" prob="14.28" />
+	<item name="jz_PaperPlayingCards" prob="14.28" />
+	<item name="jz_PaperNews" prob="14.28" />
+	<item name="jz_PaperToilet"  prob="14.28" />
+	<item name="jz_PaperGoggles" prob="14.28" />
+	<item name="jz_PaperMatches" prob="14.28" />
+    <item name="oldCash" prob="14.28" />
+</lootgroup>
+
+<lootgroup name="leadJunk" >
+	<item name="jz_LeadSoldier" prob="20.0" />
+	<item name="jz_LeadMusketBalls" count="1,6" prob="20.0" />
+	<item name="jz_LeadSolder" prob="20.0" />
+	<item name="resourceTrophy2" prob="20.0" />
+	<item name="resourceFishingWeight" prob="20.0" />
+</lootgroup>
+
+<lootgroup name="glassJunk" >
+   	<item name="jz_GlassPerfume" prob="16.66" />
+	<item name="jz_GlassCompact"  prob="16.66" />
+	<item name="jz_GlassFrame"  prob="16.66" />
+	<item name="jz_GlassEye"  prob="16.66" />
+	<item name="jz_GlassBong"  prob="16.66" />
+    <item name="jz_LightBulb"  prob="16.66" />
+</lootgroup>
+
+<lootgroup name="electronicJunk" >
+	<item name="jz_Electronic3ds"  prob="16.67" />
+	<item name="jz_ElectronicCellPhone"  prob="16.67" />
+	<item name="jz_ElectronicClockRadio"  prob="16.67" />
+	<item name="jz_ElectronicBrokenIPad"  prob="16.67" />
+	<item name="jz_ElectronicBrokenIPod"  prob="16.67" />
+	<item name="jz_ElectronicBrokenLapTop"  prob="16.67" />
+</lootgroup>
+
+<lootgroup name="ironJunk" >
+	<item name="jz_IronSoldier" prob="7.69" />
+	<item name="jz_IronPaperClips" count="1,6" prob="7.69" />
+	<item name="jz_IronWeight" prob="7.69" />
+	<item name="jz_IronHinge" prob="7.69" />
+    <item name="resourceTrophy3" prob="7.69" />
+	<item name="jz_IronHairSpray" prob="7.69" />
+	<item name="jz_IronScissors" prob="7.69" />
+    <item name="apparelFacialPiercings" prob="7.69" />
+    <item name="drinkCanEmpty" prob="7.69" />
+    <item name="resourceHubcap" prob="7.69" />
+    <item name="resourceCandyTin" prob="7.69" />
+</lootgroup>
+
+<lootgroup name="brassJunk" >
+	<item name="jz_BrassHinge" prob="16.66" />
+	<item name="jz_BrassMonkey" prob="16.66" />
+	<item name="jz_BrassCowBell" prob="16.66" />
+	<item name="resourceTrophy1" prob="16.66" />
+    <item name="resourceCandleStick" prob="16.66" />
+    <item name="resourceDoorKnob" prob="16.66" />
+</lootgroup>
+
+<lootgroup name="stoneJunk" >
+	<item name="jz_StonePlate" prob="20" />
+	<item name="jz_StonePaperWeight" prob="20" />
+	<item name="jz_StoneStatue" prob="20" />
+	<item name="jz_StoneCrackedAshTray" prob="20" />
+    <item name="cinderBlocks01" prob="20" />
+</lootgroup>
+
+<lootgroup name="woodJunk" >
+	<item name="jz_WoodSoldier" prob="25" />
+	<item name="jz_WoodWhistle" prob="25" />
+	<item name="jz_WoodSpoon" prob="25" />
+	<item name="jz_WoodYoyo" prob="25" />
+</lootgroup>
+
+<lootgroup name="clothJunk" >
+	<item name="jz_ClothTeddyBear" prob="16.66" />
+	<item name="jz_ClothRags" count="1,3" prob="16.66" />
+	<item name="jz_ClothRug" prob="16.66" />
+    <item name="jz_ClothOldBlanket" prob="16.66" />
+	<item name="jz_ClothOldShoe" prob="16.66" />
+	<item name="jz_ClothChewedDogCollar" prob="16.66" />
+</lootgroup>
+
+<lootgroup name="plasticJunk" >
+	<item name="jz_PlasticCds" prob="10" />
+	<item name="jz_PlasticSoldier" prob="10" />
+	<item name="jz_PlasticLegos" prob="10" />
+	<item name="jz_PlasticKite" prob="10" />
+	<item name="jz_PlasticFrisbee" prob="10" />
+	<item name="jz_PlasticHairBrush" prob="10" />
+	<item name="jz_PlasticCondom" prob="10" />
+	<item name="jz_PlasticToothBrush" prob="10" />
+	<item name="jz_PlasticLighter" prob="10" />
+	<item name="jz_PlasticShoppingBag" prob="10" />
+</lootgroup>
+
+<lootgroup name="electricJunk" >
+	<item name="jz_ElectricShaver" prob="25" />
+	<item name="jz_ElectricToyMotor" prob="25" />
+	<item name="jz_ElectricToaster" prob="20" />
+	<item name="jz_ElectricBlackVibrator" prob="10" />
+	<item name="jz_ElectricBlender" prob="20" />
+</lootgroup>
+
+<lootgroup name="mechanicalJunk" >
+	<item name="jz_MechanicalKeyPad" prob="33.3" />
+	<item name="jz_MechanicalOldWatch" prob="33.3" />
+	<item name="jz_MechanicalTypeWriter" prob="33.3" />
+</lootgroup>
+
+<lootgroup name="rubberJunk" >
+	<item name="jz_RubberDoll" prob="20.0" />
+	<item name="jz_RubberDuck" prob="20.0" />
+	<item name="jz_RubberChicken" prob="20.0" />
+	<item name="jz_RubberBands"  prob="20.0" />
+	<item name="jz_RubberOldRainBoot" prob="20.0" />
+</lootgroup>
+
+<lootgroup name="steelJunk" >
+	<item name="jz_SteelHinge" prob="14.28" />
+	<item name="jz_SteelSpoon" prob="14.28" />
+	<item name="jz_SteelBracelet" prob="14.28" />
+	<item name="jz_SteelDogBowl" prob="14.28" />
+	<item name="jz_SteelButterKnife" prob="14.28" />
+	<item name="jz_SteelFork" prob="14.28" />
+</lootgroup>	
+
+<lootgroup name="itemJunk" >
+	<item group="paperJunk" prob="7.14" />
+	<item group="steelJunk" prob="7.14" />
+	<item group="rubberJunk" prob="7.14" />
+    <item group="mechanicalJunk" prob="7.14" />
+    <item group="electricJunk" prob="7.14" />
+    <item group="clothJunk" prob="7.14" />
+    <item group="plasticJunk" prob="7.14" />
+    <item group="woodJunk" prob="7.14" />
+    <item group="stoneJunk" prob="7.14" />
+    <item group="brassJunk" prob="7.14" />
+    <item group="ironJunk" prob="7.14" />
+    <item group="electronicJunk" prob="7.14" />
+    <item group="glassJunk" prob="7.14" />
+    <item group="leadJunk" prob="7.14" />
+</lootgroup>
+	
+<lootgroup name="junkPersonal" >
+	<item name="resourceCandyTin" prob="1.81" />
+	<item name="drugPainkillers" prob="1" />
+	<item name="jz_FoodCanUnlabeled" prob="1" />
+	<item name="resourceGunPowder" count="1,3" prob="1" />
+	<item name="resourceFishingWeight" count="1,3" prob="1.81" />
+	<item name="resourceGlue" count="1,3" prob="1.81" />
+	<item name="resourceNail" count="1,6" prob="1.81" />
+	<item name="jz_OldRevolver" prob="1" />
+	<item name="jz_NutAndBolt" count="1,6" prob="1.81" />
+	<item name="resourceBulletCasing" count="1,10" prob="1.81" />
+	<item name="resourceFeather" count="1,3" prob="1.81" />
+	<item group="rottenFood"  prob="1.81" />
+	<item group="tatteredClothes" prob="1.81" />
+    <item group="paperJunk" prob="1.81" />
+	<item name="jz_SewingNeedle" prob="1.81" />
+	<item name="jz_InkPen" prob="1.81" />
+	<item name="apparelCigarette" count="1,3" prob="1.81" />
+	<item name="apparelCigar"  prob="1.81" />
+    <item name="jz_Joint"  prob="1.81" />
+	<item name="jz_GlassPerfume" prob="1.81" />
+	<item name="jz_GlassCompact"  prob="1.81" />
+	<item name="jz_GlassEye"  prob="1.81" />
+	<item name="jz_GlassBong"  prob="1.81" />
+    <item name="jz_Electronic3ds"  prob="1.81" />
+	<item name="jz_ElectronicCellPhone"  prob="1.81" />
+	<item name="jz_ElectronicBrokenIPod"  prob="1.81" />
+	<item name="jz_IronSoldier" prob="1.81" />
+	<item name="jz_IronPaperClips" count="1,6" prob="1.81" />
+	<item name="jz_IronScissors" prob="1.81" />
+    <item name="apparelFacialPiercings" prob="1.81" />
+    <item name="drinkCanEmpty" prob="1.81" />
+    <item name="jz_WoodSoldier" prob="1.81" />
+	<item name="jz_WoodWhistle" prob="1.81" />
+	<item name="jz_WoodYoyo" prob="1.81" />
+    <item name="jz_ClothTeddyBear" prob="1.81" />
+	<item name="jz_ClothRags" prob="1.81" />
+	<item name="jz_ClothOldShoe" prob="1.81" />
+  	<item name="jz_PlasticSoldier" prob="1.81" />
+	<item name="jz_PlasticLegos" prob="1.81" />
+	<item name="jz_PlasticHairBrush" prob="1.81" />
+	<item name="jz_PlasticCondom" prob="1.81" />
+	<item name="jz_PlasticToothBrush" prob="1.81" />
+	<item name="jz_PlasticLighter" prob="1.81" />
+	<item name="jz_PlasticShoppingBag" prob="1.81" />
+    <item name="jz_ElectricBlackVibrator" prob="1.81" />
+    <item name="jz_MechanicalOldWatch" prob="1.81" />
+    <item name="jz_RubberDoll" prob="1.81" />
+	<item name="jz_RubberDuck" prob="1.81" />
+	<item name="jz_RubberChicken" prob="1.81" />
+	<item name="jz_RubberBands" prob="1.81" />
+	<item name="jz_SteelSpoon" prob="1.81" />
+	<item name="jz_SteelBracelet" prob="1.81" />
+	<item name="jz_SteelButterKnife" prob="1.81" />
+	<item name="jz_SteelFork" prob="1.81" />
+</lootgroup>
+<!--BOOK LOOT -->
+<lootgroup name="T1CookingBooks" >
+	<item name="drinkJarGoldenRodTeaSchematic"/>
+	<item name="drinkJarRedTeaSchematic"/>
+	<item name="drinkYuccaJuiceSchematic"/>
+	<item name="jz_SchematicFruiJuice"/>
+	<item name="jz_SchematicKabobs"/>
+	<item name="jz_SchematicMeatPies"/>
+	<item name="jz_SchematicGlazedMeats"/>
+	<item name="jz_SchematicBaconAndEggs"/>
+	<item name="jz_SchematicFriedEggOmelet"/>
+	<item name="jz_SchematicBread"/>
+	<item name="foodHoboStewSchematic"/>
+</lootgroup>
+
+<lootgroup name="T2CookingBooks" >
+	<item name="drinkJarBeerSchematic"/>
+	<item name="drinkYuccaJuiceSmoothieSchematic"/>
+	<item name="jz_SchematicMead"/>
+	<item name="jz_SchematicGoodMeals"/>
+	<item name="foodCornBreadSchematic"/>
+	<item name="jz_SchematicPumkinBread"/>
+	<item name="foodMeatStewSchematic"/>
+	<item name="foodVegetableStewSchematic"/>
+</lootgroup>
+
+<lootgroup name="T3CookingBooks" >
+	<item name="drinkYuccaJuiceSmoothieSchematic"/>
+	<item name="jz_SchematicGrainAlcohol"/>
+	<item name="jz_SchematicWellnessJuice"/>
+	<item name="jz_SchematicHealthyMeals"/>
+	<item name="foodBlueberryPieSchematic"/>
+	<item name="jz_SchematicPumkinPie"/>
+	<item name="jz_SchematicApplePie"/>
+	<item name="jz_SchematicCarrotCake"/>
+	<item name="jz_SchematicPumpkinCheesecake"/>
+	<item name="jz_SchematicBrainShnitzel"/>
+	<item name="jz_SchematicVenisonAndPotato"/>
+</lootgroup>
+
+<lootgroup name="T1WeaponBooks" >
+	<item name="jz_SchematicCraftedRevolver"/>
+	<item name="jz_SchematicCraftedRifle"/>
+	<item name="jz_BlunderbussSchematic"/>
+</lootgroup>
+
+<lootgroup name="T2WeaponBooks" >
+	<item name="gunBowWoodenSchematic"/>
+	<item name="gunCrossbowIronSchematic"/>
+	<item name="meleeToolKnifeIronSchematic"/>
+	<item name="meleeThrownSpearIronSchematic"/>
+	<item name="meleeKnucklesIronSchematic"/>
+	<item name="gunPistolSchematic"/>
+	<item name="gunDoubleBarrelShotgunSchematic"/>
+	<item name="gunHuntingRifleSchematic"/>
+	<item name="thrownAmmoPipeBombSchematic"/>
+	<item name="jz_MolotovCocktailSchematic"/>
+	<item name="meleeStunBatonSchematic"/>
+</lootgroup>
+
+<lootgroup name="T3WeaponBooks" >
+	<item name="gunBowCompoundSchematic"/>
+	<item name="gunCrossbowCompoundSchematic"/>
+	<item name="gun44MagnumSchematic"/>
+	<item name="gunPumpShotgunSchematic"/>
+	<item name="gunSMG5Schematic"/>
+	<item name="gunMR10Schematic"/>
+	<item name="gunAK47Schematic"/>
+	<item name="gunRocketLauncherSchematic"/>
+	<item name="gunJunkTurretSchematic"/>
+	<item name="thrownDynamiteSchematic"/>
+	<item name="thrownGrenadeSchematic"/>
+	<item name="thrownGrenadeContactSchematic"/>
+	<item name="meleeToolKnifeMacheteSchematic"/>
+	<item name="meleeKnucklesSteelSchematic"/>
+	<item name="meleeThrownSpearSteelSchematic"/>
+</lootgroup>
+
+<lootgroup name="T1FarmingBooks" >
+	<item name="plantedBlueberry1Schematic"/>
+	<item name="plantedCorn1Schematic"/>
+	<item name="plantedCotton1Schematic"/>
+	<item name="plantedPotato1Schematic"/>
+	<item name="plantedPumpkin1Schematic"/>
+</lootgroup>
+
+<lootgroup name="T2FarmingBooks" >
+	<item name="plantedChrysanthemum1Schematic"/>
+	<item name="plantedGoldenrod1Schematic"/>
+	<item name="plantedMushroom1Schematic"/>
+	<item name="plantedYucca1Schematic"/>
+</lootgroup>
+
+<lootgroup name="T3FarmingBooks" >
+	<item name="plantedAloe1Schematic"/>
+	<item name="plantedCoffee1Schematic"/>
+	<item name="plantedHop1Schematic"/>
+</lootgroup>
+
+<lootgroup name="T1CraftingXPBooks" >
+	<item name="jz_StoneaxeCraftingForDummies" prob="5" />
+	<item name="jz_StoneShovelCraftingForDummies" prob="5" />
+	<item name="jz_ClawHammerCraftingForDummies" prob="5" />
+	<item name="jz_ClothArmorCraftingForDummies" prob="5" />
+	<item name="jz_LeatherArmorCraftingForDummies" prob="5" />
+	<item name="jz_BoneKnifeCraftingForDummies" prob="5" />
+	<item name="jz_WoodenClubCraftingForDummies" prob="5" />
+	<item name="jz_BaseballBatCraftingDummies" prob="5" />
+	<item name="jz_IronClubCraftingForDummies" prob="5" />
+	<item name="jz_StoneSledgeCraftingForDummies" prob="5" />
+	<item name="jz_KnuckleWrapCraftingForDummies" prob="5" />
+	<item name="jz_BlunderbussCraftingForDummies" prob="5" />
+	<item name="jz_PrimitiveBowCraftingForDummies" prob="5" />
+</lootgroup>
+
+<lootgroup name="T2CraftingXPBooks" >
+	<item name="jz_IronFireaxeCraftingForDummies" prob="3.12" />
+	<item name="jz_IronPickaxeCraftingForDummies" prob="3.12" />
+	<item name="jz_leatherworkingForDummies" prob="3.12" />
+	<item name="jz_IronShovelCraftingForDummies" prob="3.12" />
+	<item name="jz_WrenchCraftingForDummies" prob="3.12" />
+	<item name="jz_ScrapArmorCraftingForDummies" prob="3.12" />
+	<item name="jz_IronArmorCraftingForDummies" prob="3.12" />
+	<item name="jz_HuntingKnifeCraftingForDummies" prob="3.12" />
+	<item name="jz_StoneSpearCraftingForDummies" prob="3.12" />
+	<item name="jz_IronSpearCraftingForDummies" prob="3.12" />
+	<item name="jz_IronSledgeCraftingForDummies" prob="3.12" />
+	<item name="jz_BrassKnucklesCraftingForDummies" prob="3.12" />
+	<item name="jz_PistolCraftingForDummies" prob="3.12" />
+	<item name="jz_HuntingKnifeCraftingForDummies" prob="3.12" />
+	<item name="jz_DBShotgunCraftingForDummies" prob="3.12" />
+	<item name="jz_HuntingRifleCraftingForDummies" prob="3.12" />
+	<item name="jz_WoodenBowCraftingForDummies" prob="3.12" />
+	<item name="jz_IronCrossbowCraftingForDummies" prob="3.12" />
+</lootgroup>
+
+<lootgroup name="T3CraftingXPBooks" >
+	<item name="jz_SteelFireaxeCraftingForDummies" prob="3.44" />
+	<item name="jz_SteelPickaxeCraftingForDummies" prob="3.44" />
+	<item name="jz_SteelShovelCraftingForDummies" prob="3.44" />
+	<item name="jz_ChainsawCraftingForDummies" prob="3.44" />
+	<item name="jz_AugerCraftingForDummies" prob="3.44" />
+	<item name="jz_SolarCellCraftingForDummies" prob="3.44" />
+	<item name="jz_CarBatteryCraftingForDummies" prob="3.44" />
+	<item name="jz_SteelArmorCraftingForDummies" prob="3.44" />
+	<item name="jz_MacheteCraftingForDummies" prob="3.44" />
+	<item name="jz_StunBatonCraftingForDummies" prob="3.44" />
+	<item name="jz_SteelSpearCraftingForDummies" prob="3.44" />
+	<item name="jz_SteelSledgeCraftingForDummies" prob="3.44" />
+	<item name="jz_SMG5CraftingForDummies" prob="3.44" />
+	<item name="jz_PumpShotgunCraftingForDummies" prob="3.44" />
+	<item name="jz_MarksmanCraftingForDummies" prob="3.44" />
+	<item name="jz_AK47CraftingForDummies" prob="3.44" />
+	<item name="jz_M60CraftingForDummies" prob="3.44" />
+	<item name="jz_RocketLauncherCraftingForDummies" prob="3.44" />
+	<item name="jz_CompoundBowCraftingForDummies" prob="3.44" />
+	<item name="jz_CompoundCrossbowCraftingForDummies" prob="3.44" />
+	<item name="jz_JunkTurretCraftingForDummies" prob="3.44" />
+</lootgroup>
+
+<lootgroup name="T1ModBook" >
+	<item name="modGunScopeSmallSchematic"/>
+	<item name="modArmorHelmetLightSchematic"/>
+	<item name="modArmorInsulatedLinerSchematic"/>
+	<item name="modArmorCoolingMeshSchematic"/>
+	<item name="modArmorImprovedFittingsSchematic"/>
+	<item name="modArmorStoragePocketSchematic"/>
+	<item name="modMeleeTemperedBladeSchematic"/>
+	<item name="modMeleeSerratedBladeSchematic"/>
+	<item name="modMeleeClubBarbedWireSchematic"/>
+	<item name="modMeleeClubMetalSpikesSchematic"/>
+	<item name="modMeleeClubBurningShaftSchematic"/>
+	<item name="modMeleeWeightedHeadSchematic"/>
+	<item name="modMeleeStructuralBraceSchematic"/>
+	<item name="modMeleeErgonomicGripSchematic"/>
+	<item name="modMeleeFortifyingGripSchematic"/>
+	<item name="modMeleeGraveDiggerSchematic"/>
+	<item name="modMeleeWoodSplitterSchematic"/>
+	<item name="modGunBowArrowRestSchematic"/>
+	<item name="modGunBowPolymerStringSchematic"/>
+</lootgroup>
+
+<lootgroup name="T2ModBook" >
+	<item name="modArmorBandolierSchematic"/>
+	<item name="modArmorPlatingBasicSchematic"/>
+	<item name="modArmorDoubleStoragePocketSchematic"/>
+	<item name="modArmorMuffledConnectorsSchematic"/>
+	<item name="modGunBarrelExtenderSchematic"/>
+	<item name="modGunMuzzleBrakeSchematic"/>
+	<item name="modGunFlashlightSchematic"/>
+	<item name="modGunScopeMediumSchematic"/>
+	<item name="modGunReflexSightSchematic"/>
+	<item name="modGunTriggerGroupSemiSchematic"/>
+	<item name="modGunBipodSchematic"/>
+	<item name="modGunForegripSchematic"/>
+	<item name="modGunRetractingStockSchematic"/>
+	<item name="modGunDuckbillSchematic"/>
+	<item name="modGunChokeSchematic"/>
+	<item name="modGunMagazineExtenderSchematic"/>
+	<item name="modShotgunSawedOffBarrelSchematic"/>
+	<item name="modGunCrippleEmSchematic"/>
+	<item name="modFuelTankSmallSchematic"/>
+	<item name="modFuelTankLargeSchematic"/>
+	<item name="modGunMeleeTheHunterSchematic"/>
+</lootgroup>
+
+<lootgroup name="T3ModBook" >
+	<item name="modGunRodAndSpringSchematic"/>
+	<item name="modGunScopeLargeSchematic"/>
+	<item name="modGunLaserSightSchematic"/>
+	<item name="modGunTriggerGroupBurst3Schematic"/>
+	<item name="modGunSoundSuppressorSilencerSchematic"/>
+	<item name="modGunTriggerGroupAutomaticSchematic"/>
+	<item name="modGunMeleeRadRemoverSchematic"/>
+	<item name="modArmorPlatingReinforcedSchematic"/>
+	<item name="modArmorTripleStoragePocketSchematic"/>
+	<item name="modArmorAdvancedMuffledConnectorsSchematic"/>
+	<item name="modArmorWaterPurifierSchematic"/>
+	<item name="modArmorCustomizedFittingsSchematic"/>
+	<item name="modMeleeBunkerBusterSchematic"/>
+	<item name="modMeleeIronBreakerSchematic"/>
+	<item name="modArmorImpactBracingSchematic"/>
+</lootgroup>
+
+<lootgroup name="schematicsElectrical">
+	<item name="generatorbankSchematic"/>
+	<item name="pressureplateSchematic"/>
+	<item name="poweredDoorsSchematic"/>
+	<item name="bladeTrapSchematic"/>
+	<item name="dartTrapSchematic"/>
+	<item name="shotgunTurretSchematic"/>
+	<item name="autoTurretSchematic"/>
+	<item name="electricfencepostSchematic"/>
+	<item name="motionsensorSchematic"/>
+	<item name="speakerSchematic"/>
+	<item name="spotlightPlayerSchematic"/>
+	<item name="switchSchematic"/>
+	<item name="batterybankSchematic"/>
+	<item name="electrictimerrelaySchematic"/>
+</lootgroup>
+
+<lootgroup name="T1Schematics" >
+	<item name="armorLeatherSetSchematic"/>
+	<item name="toolBellowsSchematic"/>
+	<item name="toolForgeCrucibleSchematic"/>
+	<item name="toolAnvilSchematic"/>
+	<item name="workbenchSchematic"/>
+	<item name="forgeSchematic"/>
+	<item name="tableSawSchematic"/>
+	<item name="vehicleBicycleChassisSchematic"/>
+	<item name="vehicleBicycleHandlebarsSchematic"/>
+	<item name="modArmorAdvancedMuffledConnectorsSchematic"/>
+	<item name="modArmorWaterPurifierSchematic"/>
+	<item name="modArmorCustomizedFittingsSchematic"/>
+	<item name="modMeleeBunkerBusterSchematic"/>
+	<item name="modMeleeIronBreakerSchematic"/>
+	<item name="modArmorImpactBracingSchematic"/>
+</lootgroup>
+
+<lootgroup name="T2Schematics" >
+	<item name="meleeToolSledgehammerIronSchematic"/>
+	<item name="jz_SchematicIronPickeaxe"/>
+	<item name="jz_SchematicIronFireeaxe"/>
+	<item name="jz_SchematicIronShovel"/>
+	<item name="jz_SchematicClawHammer"/>
+	<item name="meleeToolWrenchSchematic"/>
+	<item name="armorIronSetSchematic"/>
+	<item name="medicalFirstAidBandageSchematic"/>
+	<item name="medicalPlasterCastSchematic"/>
+	<item name="cementMixerSchematic"/>
+	<item name="chemistryStationSchematic"/>
+	<item name="vehicleMinibikeChassisSchematic"/>
+	<item name="vehicleMinibikeHandlebarsSchematic"/>
+	<item name="vehicleMotorcycleChassisSchematic"/>
+	<item name="vehicleMotorcycleHandlebarsSchematic"/>
+	<item name="cementMixerSchematic"/>
+	<item name="chemistryStationSchematic"/>
+	<item name="vehicleMinibikeChassisSchematic"/>
+	<item name="vehicleMinibikeHandlebarsSchematic"/>
+</lootgroup>
+
+<lootgroup name="T3Schematics" >
+	<item name="meleeToolSledgehammerSteelSchematic"/>
+	<item name="meleeToolKnifeMacheteSchematic"/>
+	<item name="jz_SchematicSteelPickeaxe"/>
+	<item name="jz_SchematicSteelFireeaxe"/>
+	<item name="jz_SchematicSteelShovel"/>
+	<item name="meleeToolAugerSchematic"/>
+	<item name="meleeToolChainsawSchematic"/>
+	<item name="armorMilitarySetSchematic"/>
+	<item name="resourceMilitaryFiberSchematic"/>
+	<item name="armorSteelSetSchematic"/>
+	<item name="gunToolNailgunSchematic"/>
+	<item name="medicalBloodDrawKitSchematic"/>
+	<item name="vehicle4x4TruckChassisSchematic"/>
+	<item name="vehicle4x4TruckAccessoriesSchematic"/>
+	<item name="vehicleGyroCopterChassisSchematic"/>
+	<item name="vehicleGyroCopterAccessoriesSchematic"/>
+	<item name="ammoGasCanSchematic"/>
+	<item name="resourceOilSchematic"/>
+	<item name="drugHerbalAntibioticsSchematic"/>
+</lootgroup>
+
+<lootgroup name="PerkBook" >
+	<item name="bookRangersArrowRecovery"/>
+	<item name="bookRangersCripplingShot"/>
+	<item name="bookRangersKnockdown"/>
+	<item name="bookRangersFlamingArrows"/>
+	<item name="bookRangersAPAmmo"/>
+	<item name="bookRangersExplodingBolts"/>
+	<item name="bookRangersForestGuide"/>
+	<item name="bookArtOfMiningLuckyStrike"/>
+	<item name="bookArtOfMiningDiamondTools"/>
+	<item name="bookArtOfMiningCoffee"/>
+	<item name="bookArtOfMiningBlackStrap"/>
+	<item name="bookArtOfMiningPallets"/>
+	<item name="bookArtOfMiningAvalanche"/>
+	<item name="bookArtOfMiningLantern"/>
+	<item name="bookAutoWeaponsDamage"/>
+	<item name="bookAutoWeaponsRagdoll"/>
+	<item name="bookAutoWeaponsMaintenance"/>
+	<item name="bookAutoWeaponsRecoil"/>
+	<item name="bookAutoWeaponsDrumMag"/>
+	<item name="bookAutoWeaponsUncontrolledBurst"/>
+	<item name="bookAutoWeaponsMachineGuns"/>
+	<item name="bookBatterUpBaseballBats"/>
+	<item name="bookBatterUpBigHits"/>
+	<item name="bookBatterUpGear"/>
+	<item name="bookBatterUpKnockdown"/>
+	<item name="bookBatterUpSlowPitch"/>
+	<item name="bookBatterUpMaintenance"/>
+	<item name="bookBatterUpConditioning"/>
+	<item name="bookEnforcerAPAmmo"/>
+	<item name="bookEnforcerApparel"/>
+	<item name="bookEnforcerCriminalPursuit"/>
+	<item name="bookEnforcerHPAmmo"/>
+	<item name="bookEnforcerDamage"/>
+	<item name="bookEnforcerIntimidation"/>
+	<item name="bookEnforcerPunks"/>
+	<item name="bookFiremansAlmanacSpeed"/>
+	<item name="bookFiremansAlmanacAxes"/>
+	<item name="bookFiremansAlmanacEquipment"/>
+	<item name="bookFiremansAlmanacPrevention"/>
+	<item name="bookFiremansAlmanacHarvest"/>
+	<item name="bookFiremansAlmanacHeat"/>
+	<item name="bookFiremansAlmanacMolotov"/>
+	<item name="bookGreatHeistAdrenalineFall"/>
+	<item name="bookGreatHeistTimedCharge"/>
+	<item name="bookGreatHeistClaimed"/>
+	<item name="bookGreatHeistGems"/>
+	<item name="bookGreatHeistMotionDetection"/>
+	<item name="bookGreatHeistSafes"/>
+	<item name="bookGreatHeistSprintSneak"/>
+	<item name="bookHuntingJournalBears"/>
+	<item name="bookHuntingJournalCoyotes"/>
+	<item name="bookHuntingJournalDeer"/>
+	<item name="bookHuntingJournalMountainLions"/>
+	<item name="bookHuntingJournalVultures"/>
+	<item name="bookHuntingJournalWolves"/>
+	<item name="bookHuntingJournalSelfDefense"/>
+	<item name="bookLuckyLooterAmmunition"/>
+	<item name="bookLuckyLooterBooks"/>
+	<item name="bookLuckyLooterBrass"/>
+	<item name="bookLuckyLooterDukes"/>
+	<item name="bookLuckyLooterFood"/>
+	<item name="bookLuckyLooterLead"/>
+	<item name="bookLuckyLooterMedical"/>
+	<item name="bookNeedleAndThreadDesertWear"/>
+	<item name="bookNeedleAndThreadDusters"/>
+	<item name="bookNeedleAndThreadFootwear"/>
+	<item name="bookNeedleAndThreadLegwear"/>
+	<item name="bookNeedleAndThreadPockets"/>
+	<item name="bookNeedleAndThreadPufferCoats"/>
+	<item name="bookNeedleAndThreadWinterWear"/>
+	<item name="bookNightStalkerArchery"/>
+	<item name="bookNightStalkerBlades"/>
+	<item name="bookNightStalkerSilentNight"/>
+	<item name="bookNightStalkerSlumberParty"/>
+	<item name="bookNightStalkerStealthDamage"/>
+	<item name="bookNightStalkerThiefAdrenaline"/>
+	<item name="bookNightStalkerTwilightThief"/>
+	<item name="bookPistolPeteAPAmmo"/>
+	<item name="bookPistolPeteDamage"/>
+	<item name="bookPistolPeteHPAmmo"/>
+	<item name="bookPistolPeteMaintenance"/>
+	<item name="bookPistolPeteSteadyHand"/>
+	<item name="bookPistolPeteSwissKnees"/>
+	<item name="bookPistolPeteTakeAim"/>
+	<item name="bookShotgunMessiahBreachingSlugs"/>
+	<item name="bookShotgunMessiahDamage"/>
+	<item name="bookShotgunMessiahLimbShot"/>
+	<item name="bookShotgunMessiahMaintenance"/>
+	<item name="bookShotgunMessiahMagazine"/>
+	<item name="bookShotgunMessiahPartyStarter"/>
+	<item name="bookShotgunMessiahSlugs"/>
+	<item name="bookSniperAPAmmo"/>
+	<item name="bookSniperControlledBreathing"/>
+	<item name="bookSniperCripplingShot"/>
+	<item name="bookSniperDamage"/>
+	<item name="bookSniperHeadShot"/>
+	<item name="bookSniperGhost"/>
+	<item name="bookSniperHPAmmo"/>
+	<item name="bookUrbanCombatAdrenalineRush"/>
+	<item name="bookUrbanCombatControlledBreathing"/>
+	<item name="bookUrbanCombatRoomClearing"/>
+	<item name="bookUrbanCombatJumping"/>
+	<item name="bookUrbanCombatLandMines"/>
+	<item name="bookUrbanCombatLanding"/>
+	<item name="bookUrbanCombatSneaking"/>
+	<item name="bookWasteTreasuresAcid"/>
+	<item name="bookWasteTreasuresCloth"/>
+	<item name="bookWasteTreasuresCoffins"/>
+	<item name="bookWasteTreasuresDoors"/>
+	<item name="bookWasteTreasuresHoney"/>
+	<item name="bookWasteTreasuresSinks"/>
+	<item name="bookWasteTreasuresWater"/>
+</lootgroup>
+
+<lootgroup name="T1BookList" >
+	<item group="T1CookingBooks"  prob="1.81" />
+	<item group="T1WeaponBooks"  prob="1.81" />
+	<item group="T1FarmingBooks"  prob="1.81" />
+	<item group="T1CraftingXPBooks"  prob="1.81" />
+	<item group="T1ModBook"  prob="1.81" />
+	<item group="T1Schematics"  prob="1.81" />
+	<item group="PerkBook"  prob="1.81" />
+</lootgroup>
+
+<lootgroup name="T2BookList" >
+	<item group="T2CookingBooks"  prob="1.81" />
+	<item group="T2WeaponBooks"  prob="1.81" />
+	<item group="T2FarmingBooks"  prob="1.81" />
+	<item group="T2CraftingXPBooks"  prob="1.81" />
+	<item group="T2ModBook"  prob="1.81" />
+	<item group="T2Schematics"  prob="1.81" />
+	<item group="schematicsElectrical"  prob="1.81" />
+	<item group="PerkBook"  prob="1.81" />
+</lootgroup>
+
+<lootgroup name="T3BookList" >
+	<item group="T3CookingBooks"  prob="1.81" />
+	<item group="T3WeaponBooks"  prob="1.81" />
+	<item group="T3FarmingBooks"  prob="1.81" />
+	<item group="T3CraftingXPBooks"  prob="1.81" />
+	<item group="T3ModBook"  prob="1.81" />
+	<item group="T3Schematics"  prob="1.81" />
+	<item group="schematicsElectrical"  prob="1.81" />
+	<item group="PerkBook"  prob="1.81" />
+</lootgroup>
+
+<lootgroup name="skillBookChance" >
+	<item group="T1BookList" prob="75" />
+	<item group="T2BookList" prob="22" />
+	<item group="T3BookList" prob="3" />
+</lootgroup>
 <!--
 	<item group="groupModAllT3" loot_prob_template="GradeCLoot"/>
 
@@ -3112,7 +3742,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 The simplest way to set up the 11-16 variants (for a start) would be that in such a call
 any iron tools or T1 mods have a 0 probability.
 
-questTierRigidTemplate
+
 questTierFlexibleTemplate
 
 	<item group="groupQuestAmmo" prob="1.0"/>
@@ -3192,6 +3822,9 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item name="drinkJarEmpty" count="1,2"/>
 	<item name="drinkCanEmpty" count="1,2"/>
 	<item name="resourceCoal" count="4,12" prob="0.5"/>
+	<item name="jz_FryingPan" prob="7" />
+	<item group="rottenFood"  prob="10" />
+	<item name="jz_Charcoal" prob="15" />
 </lootcontainer>
 
 <!-- cntNightstandClosed and dressers, wooden desk: pistol, ammo, magazines, books -->
@@ -3199,12 +3832,14 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="groupApparelClothes" prob="30"/>
 	<item group="trophyGroup"/>
 	<item group="groupAmmoRegular"/>
-	<item group="books"/>
+	<item group="T1BookList"/>
 	<item group="medicine"/>
 	<item name="meleeToolFlashlight02"/>
 	<item name="apparelCigar" prob=".6"/>
-	<item name="oldCash" count="1,20" prob="0.6"/>
 	<item name="resourceSewingKit"/>
+	<item group="junkPersonal" prob="20" />
+	<item name="sewingNeedle"  prob="7" />
+	<item name="skillBookChance"  prob="7" />
 </lootcontainer>
 
 <!-- medicine cabinets -->
@@ -3223,7 +3858,6 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item name="resourceScrapLead" count="1,10"/>
 	<item name="resourceAcid" count="1,2" />
 	<item name="resourcePotassiumNitratePowder" count="2,6" />
-	<item group="groupAmmoRegular"/>
 	<item group="farmingCookingRecipes"/>
 </lootcontainer>
 
@@ -3817,17 +4451,17 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- cntCollapsedForge -->
 <lootcontainer id="91" count="1" size="7,4" sound_open="forge_open" sound_close="forge_close" loot_quality_template="qualBaseTemplate">
-	<item group="forgeLoot" prob=".75"/>
+	<item group="forgeLoot"/>
 	<item name="forgeSchematic" prob=".25"/>
 </lootcontainer>
 
 <!-- cntCollapsedWorkbench -->
 <lootcontainer id="92" count="1" size="7,4" sound_open="open_workbench" sound_close="close_workbench" loot_quality_template="qualBaseTemplate">
-	<item group="workbenchLoot" prob=".5"/>
-	<item group="tools" prob=".1"/>
-	<item group="rareTools" prob="0.5"/>
-	<item group="vehicleParts" prob=".1"/>
-	<item name="workbenchSchematic" prob=".25"/>
+	<item group="workbenchLoot"/>
+	<item group="tools" prob=".2"/>
+	<item group="rareTools"/>
+	<item group="vehicleParts" prob=".2"/>
+	<item name="workbenchSchematic" prob=".6"/>
 </lootcontainer>
 
 <!-- cntCollapsedCementMixer -->
@@ -3840,7 +4474,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootcontainer id="94" count="1" size="7,4" sound_open="chem_station_open" sound_close="chem_station_close" loot_quality_template="qualBaseTemplate">
 	<item group="labEquipment" prob="37.5"/>
 	<item group="chemistryStationLoot" prob="37.5"/>
-	<item name="chemistryStationSchematic" prob="25"/>
+	<item name="chemistryStationSchematic" prob="18.7"/>
 </lootcontainer>
 
 <!-- cntLootCrateHero, Hero / Hidden Stash Cardboard Loot-->
@@ -3998,7 +4632,7 @@ treasureTemplate
 </lootcontainer>
 
 <!-- cntSodaFountain -->
-<lootcontainer id="119" count="0,1" size="6,1" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
+<lootcontainer id="119" count="1,2" size="6,1" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
 	<!--
 	<item name="drinkCanMegaCrush" prob="0.045"/>
 	<item name="drinkJarBeer" count="1,2"/>
@@ -4008,7 +4642,7 @@ treasureTemplate
 	<item name="drinkJarRedTea" count="1,2"/>
 	<item name="drinkJarYuccaJuice" count="1,2"/>
 	-->
-	<item name="drinkCanMegaCrush" count="1,2" prob="0.1"/>
+	<item name="drinkCanMegaCrush" count="1,2"/>
 	<item name="drinkJarYuccaJuice" count="1,2"/>
 </lootcontainer>
 
@@ -4047,8 +4681,6 @@ treasureTemplate
 	<item name="meleeToolPaintTool" prob="0.3"/>
 	<item name="meleeToolWireTool"/>
 	<item group="toolParts" prob="2"/>
-	<item name="armorMilitarySetParts" count="1,4" prob="0.5"/>
-	<item name="armorSteelSetParts" count="1,4" prob="0.5"/>
 </lootcontainer>
 
 <!-- the max cap for lootcontainer id is 1023 -->

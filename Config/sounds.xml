@@ -549,49 +549,59 @@
 
 	<!-- Melee -->
 
-  <SoundDataNode name="batwood_swinglight"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+  <SoundDataNode name="club_swinglight"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
+	<AudioClip ClipName="Sounds/Weapons/Melee/Clubs/club_swinglight1"/>
+  <AudioClip ClipName="Sounds/Weapons/Melee/Clubs/club_swinglight2"/>
+	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+  <SoundDataNode name="club_swingheavy"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
+	<AudioClip ClipName="Sounds/Weapons/Melee/Clubs/club_swingheavy1"/>
+  <AudioClip ClipName="Sounds/Weapons/Melee/Clubs/club_swingheavy2"/>
+	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+  <SoundDataNode name="batwood_swinglight"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="Sounds/Weapons/Melee/Bat_Wood/batwood_swinglight1"/>
   <AudioClip ClipName="Sounds/Weapons/Melee/Bat_Wood/batwood_swinglight2"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-  <SoundDataNode name="batwood_swingheavy"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+  <SoundDataNode name="batwood_swingheavy"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="Sounds/Weapons/Melee/Bat_Wood/batwood_swingheavy1"/>
   <AudioClip ClipName="Sounds/Weapons/Melee/Bat_Wood/batwood_swingheavy2"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-  <SoundDataNode name="machete_swinglight"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+  <SoundDataNode name="machete_swinglight"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="Sounds/Weapons/Melee/Machete/machete_swinglight1"/>
   <AudioClip ClipName="Sounds/Weapons/Melee/Machete/machete_swinglight2"/>
   <AudioClip ClipName="Sounds/Weapons/Melee/Machete/machete_swinglight3"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-  <SoundDataNode name="machete_swingheavy"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+  <SoundDataNode name="machete_swingheavy"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="Sounds/Weapons/Melee/Machete/machete_swingheavy1"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-    <SoundDataNode name="sledge_swinglight"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+    <SoundDataNode name="sledge_swinglight"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="Sounds/Weapons/Melee/Sledge/sledge_swinglight"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-  <SoundDataNode name="sledge_swingheavy"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+  <SoundDataNode name="sledge_swingheavy"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="Sounds/Weapons/Melee/Sledge/sledge_swingheavy"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-  <SoundDataNode name="spear_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+  <SoundDataNode name="spear_fire"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="Sounds/Weapons/Melee/Spear/spear_fire1"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-  <SoundDataNode name="spear_throw"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+  <SoundDataNode name="spear_throw"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="Sounds/Weapons/Melee/Spear/spear_throw1"/>
   <AudioClip ClipName="Sounds/Weapons/Melee/Spear/spear_throw2"/>
   <AudioClip ClipName="Sounds/Weapons/Melee/Spear/spear_throw3"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-  <SoundDataNode name="stunbaton_swinglight"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+  <SoundDataNode name="stunbaton_swinglight"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="Sounds/Weapons/Melee/StunBaton/stunbaton_swinglight1"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
-  <SoundDataNode name="stunbaton_swingheavy"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+  <SoundDataNode name="stunbaton_swingheavy"> <AudioSource name="Sounds/AudioSource_Melee"/> <NetworkAudioSource name="Sounds/AudioSource_Melee"/>
 	<AudioClip ClipName="Sounds/Weapons/Melee/StunBaton/stunbaton_swingheavy1"/>
 	<LocalCrouchVolumeScale value="0.25"/> <CrouchNoiseScale value="0.05"/> <NoiseScale value=".1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
@@ -659,12 +669,12 @@
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="Auger_Idle">
-	<Noise ID="3" noise="30" time="2" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="3" noise="30" time="2" muffled_when_crouched="0.65"/>
 	<AudioClip ClipName="Sounds/Weapons/Motorized/Auger/auger_idle" AudioSourceName="Sounds/Weapons/Motorized/Auger/AugerAudioSourceLoop"/>
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="Auger_Fire_Start"> <AudioSource name="Sounds/Weapons/Motorized/Auger/AugerAudioSource"/>
-	<Noise ID="4" noise="60" time="2" heat_map_strength="0.2" heat_map_time="90"/>
+	<Noise ID="4" noise="60" time="2" heat_map_strength="1.0" heat_map_time="90"/>
 	<Sequence/>
 	<AudioClip ClipName="Sounds/Weapons/Motorized/Auger/Auger_Fire_Start"/>
 	<AudioClip ClipName="Sounds/Weapons/Motorized/Auger/auger_fire_lp" Loop="true"/>
@@ -688,12 +698,12 @@
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="chainsaw_idle">
-	<Noise ID="3" noise="30" time="2" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="3" noise="30" time="2" muffled_when_crouched="0.65"/>
 	<AudioClip ClipName="Sounds/Weapons/Motorized/Chainsaw/chainsaw_idle" AudioSourceName="Sounds/Weapons/Motorized/Auger/AugerAudioSourceLoop"/>
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="2"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="chainsaw_fire_start"> <AudioSource name="Sounds/Weapons/Motorized/Auger/AugerAudioSource"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-	<Noise ID="4" noise="60" time="2" heat_map_strength="0.2" heat_map_time="90"/>
+	<Noise ID="4" noise="60" time="2" heat_map_strength="1.0" heat_map_time="90"/>
 	<Sequence/>
 	<AudioClip ClipName="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_start"/>
 	<AudioClip ClipName="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_lp" Loop="true"/>
@@ -701,7 +711,7 @@
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="chainsaw_fire_rev"> <AudioSource name="Sounds/Weapons/Motorized/Auger/AugerAudioSource"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-	<Noise ID="4" noise="60" time="2" heat_map_strength="0.2" heat_map_time="90"/>
+	<Noise ID="4" noise="60" time="2"/>
 	<AudioClip ClipName="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_rev1"/>
 	<AudioClip ClipName="Sounds/Weapons/Motorized/Chainsaw/chainsaw_fire_rev2"/>
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
@@ -1115,7 +1125,7 @@
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 
 <SoundDataNode name="pump_shotgun_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-	<Noise ID="0" noise="27" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
+	<Noise ID="0" noise="38" time="2" muffled_when_crouched="0.8" heat_map_strength="0.8" heat_map_time="180"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/pumpshotgun/pump_shotgun_s_fire1"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/pumpshotgun/pump_shotgun_s_fire2"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/pumpshotgun/pump_shotgun_s_fire3"/>
@@ -1222,7 +1232,7 @@
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 
 <SoundDataNode name="hunting_rifle_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-	<Noise ID="0" noise="36" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+	<Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.6" heat_map_time="180"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_s_fire1"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_s_fire2"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_s_fire3"/>
@@ -1234,7 +1244,7 @@
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 
 <SoundDataNode name="hunting_rifle_reload_part_02"> <AudioSource name="Sounds/AudioSource_Reloads"/>
-	<Noise ID="2" noise="12" time="3" muffled_when_crouched="0.5"/>
+	<Noise ID="2" noise="3" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_reload_part_02"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 
@@ -1243,7 +1253,7 @@
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 
 <SoundDataNode name="hunting_rifle_reload_part_04"> <AudioSource name="Sounds/AudioSource_Reloads"/>
-	<Noise ID="2" noise="12" time="3" muffled_when_crouched="0.5"/>
+	<Noise ID="2" noise="3" time="3" muffled_when_crouched="0.5"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_reload_part_04"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 
@@ -1260,7 +1270,7 @@
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 
 <SoundDataNode name="sniperrifle_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-	<Noise ID="0" noise="36" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+	<Noise ID="0" noise="34" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/sniperrifle/sniperrifle_s_fire1"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/sniperrifle/sniperrifle_s_fire2"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/sniperrifle/sniperrifle_s_fire3"/>
@@ -1302,7 +1312,7 @@
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
 
 <SoundDataNode name="ak47_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-	<Noise ID="0" noise="36" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+	<Noise ID="0" noise="43" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_s_fire1"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_s_fire2"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_s_fire3"/>
@@ -1343,7 +1353,7 @@
 	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
 
 <SoundDataNode name="m60_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-	<Noise ID="0" noise="18" time="2" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="180"/>
+	<Noise ID="0" noise="47" time="2" muffled_when_crouched="0.8" heat_map_strength="0.7" heat_map_time="180"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/M60/m60_s_fire1"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/M60/m60_s_fire2"/>
 	<AudioClip ClipName="Sounds/Weapons/Ranged/M60/m60_s_fire3"/>
@@ -2460,7 +2470,7 @@
 
 
 <SoundDataNode name="avalanche"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="4" noise="60" time="2" heat_map_strength="0.2" heat_map_time="90"/>
+	<Noise ID="4" noise="60" time="2" heat_map_strength="0.5" heat_map_time="90"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/avalanche1"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
@@ -2525,7 +2535,7 @@
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="glassdestroy"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="1.5" heat_map_time="90"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/glassdestroy1"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/glassdestroy2"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/glassdestroy3"/>
@@ -2534,28 +2544,28 @@
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="glassdestroy1"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="2.1" heat_map_time="90"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/glassdestroy1"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="glassdestroy2"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="2.1" heat_map_time="90"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/glassdestroy2"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="glassdestroy3"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="2.1" heat_map_time="90"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/glassdestroy3"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="metaldestroy"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="1.42" heat_map_time="90"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/metaldestroy1"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/metaldestroy2"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/metaldestroy3"/>
@@ -2564,21 +2574,21 @@
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="metaldestroy1"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="1.42" heat_map_time="90"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/metaldestroy1"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="metaldestroy2"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="1.42" heat_map_time="90"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/metaldestroy2"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="metaldestroy3"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="1.42" heat_map_time="90"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/metaldestroy3"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
@@ -2654,28 +2664,28 @@
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="stonedestroy1"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.6" heat_map_time="60"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/stonedestroy1"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="stonedestroy2"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.6" heat_map_time="60"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/stonedestroy2"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="stonedestroy3"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.6" heat_map_time="60"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/stonedestroy3"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="wooddestroy"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.6" heat_map_time="60"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/wooddestroy1"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/wooddestroy2"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/wooddestroy3"/>
@@ -2684,21 +2694,21 @@
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="wooddestroy1"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.6" heat_map_time="60"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/wooddestroy1"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="wooddestroy2"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.6" heat_map_time="60"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/wooddestroy2"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="wooddestroy3"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.6" heat_map_time="60"/>
 	<AudioClip ClipName="Sounds/DestroyBlock/wooddestroy3"/>
   <LowestPitch name="0.9"/>
   <HighestPitch name="1.0"/>
@@ -2744,7 +2754,7 @@
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="bullethitmetal"> <AudioSource name="Sounds/AudioSource_Impact"/>
-	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="0" noise="20" time="3" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60"/>
 	<AudioClip ClipName="Sounds/ImpactSurface/bullethitmetal1"/>
 	<AudioClip ClipName="Sounds/ImpactSurface/bullethitmetal2"/>
 	<AudioClip ClipName="Sounds/ImpactSurface/bullethitmetal3"/>
@@ -4742,7 +4752,7 @@
 	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
 
 <SoundDataNode name="trunkbreak"> <AudioSource name="Sounds/AudioSource_Impact_Large"/>
-	<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+	<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="1.0" heat_map_time="90"/>
 	<AudioClip ClipName="Sounds/Foliage/trunkbreak1"/>
 	<AudioClip ClipName="Sounds/Foliage/trunkbreak2"/>
 	<AudioClip ClipName="Sounds/Foliage/trunkbreak3"/>

@@ -29,6 +29,7 @@
 			<requirement name="CVarCompare" cvar="jz_ExposivesXP" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="jz_JunkTurretXP" operation="Equals" value="0"/>
 			
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_WellnessLv" operation="set" value="20"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SkillLvMult" operation="set" value="1.015"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillLvAdd" operation="set" value="3"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillNextLvTotal" operation="set" value="3"/>
@@ -74,27 +75,32 @@
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillNextLvTotal" operation="set" value="3"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillLvAdd" operation="set" value="3"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillNextLvTotal" operation="set" value="3"/>
-			<effect_description level="1"  desc_key="attPerceptionRank01Desc" long_desc_key="attPerceptionRank01LongDesc"/>
+			<effect_description level="1"  desc_key="jz_ActionSkillDesc" long_desc_key="jz_ActionSkillLongDesc"/>
 		</effect_group>
 	</attribute>
 	<attribute name="jz_CraftingSkills" name_key="jz_CraftingSkillsName" desc_key="jz_CraftingSkillsDesc" icon="ui_game_symbol_stealth">
 		<effect_group>
-			<effect_description level="1"  desc_key="attPerceptionRank01Desc" long_desc_key="attPerceptionRank01LongDesc"/>
+			<effect_description level="1"  desc_key="jz_CraftingSkillsDesc" long_desc_key="jz_CraftingSkillsLongDesc"/>
 		</effect_group>
 		</attribute>
 	<attribute name="jz_Professions" name_key="jz_ProfessionsName" desc_key="jz_ProfessionsDesc" icon="ui_game_symbol_stealth">
 		<effect_group>
-			<effect_description level="1" desc_key="jz_ActionSkillRank1Desc" long_desc_key="jz_ActionSkillRank1LongDesc"/>
+			<effect_description level="1" desc_key="jz_ProfessionsDesc" long_desc_key="jz_ProfessionsLongDesc"/>
 		</effect_group>
 		</attribute>
 	<attribute name="jz_PositiveTraits" name_key="jz_TraitsName" desc_key="jz_TraitsDesc" icon="ui_game_symbol_stealth">
 		<effect_group>
-			<effect_description level="1" desc_key="jz_ActionSkillRank1Desc" long_desc_key="jz_ActionSkillRank1LongDesc"/>
+			<effect_description level="1" desc_key="jz_PositiveTraitsDesc" long_desc_key="jz_PositiveTraitsLongDesc"/>
 		</effect_group>
 		</attribute>
 	<attribute name="jz_NegativeTraits" name_key="jz_NegativeTraitsName" desc_key="jz_NegativeTraitsDesc" icon="ui_game_symbol_stealth" >
 		<effect_group>
-			<effect_description level="1" desc_key="jz_ActionSkillRank1Desc" long_desc_key="jz_ActionSkillRank1LongDesc"/>
+			<effect_description level="1" desc_key="jz_NegativeTraitsDesc" long_desc_key="jz_NegativeTraitsLongDesc"/>
+		</effect_group>
+		</attribute>
+	<attribute name="jz_Other" name_key="jz_OtherName" desc_key="jz_OtherDesc" icon="ui_game_symbol_stealth" >
+		<effect_group>
+			<effect_description level="1" desc_key="jz_OtherDesc" long_desc_key="jz_OtherLongDesc"/>
 		</effect_group>
 		</attribute>
 	<attribute name="attBooks" name_key="attBooks" desc_key="attBooks" icon="ui_game_symbol_book" />
@@ -138,10 +144,20 @@
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_MiningSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_MiningXP" operation="GTE" value="@jz_MiningSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_MiningSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_MiningSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_MiningSkillNextLvTotal" operation="add" value="@jz_MiningSkillLvAdd"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_MiningSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" target="self" buff="jz_MiningSkillTigger"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up Mining!"/>
+		</effect_group>
+		<effect_group> 
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MiningXP" operation="add" value="@jz_MiningSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MiningSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MiningSkillNextLvTotal" operation="add" value="@jz_MiningSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MiningSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up Mining!"/>
 		</effect_group>
 	</perk>
 	<!--AxeSkill-->
@@ -160,10 +176,20 @@
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_AxeSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_AxeXP" operation="GTE" value="@jz_AxeSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AxeSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_AxeSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_AxeSkillNextLvTotal" operation="add" value="@jz_AxeSkillLvAdd"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_AxeSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" target="self" buff="jz_AxeSkilTigger"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Axe skill!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AxeXP" operation="add" value="@jz_AxeSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AxeSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AxeSkillNextLvTotal" operation="add" value="@jz_AxeSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AxeSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Axe skill!"/>
 		</effect_group>
 	</perk>
 	<!--ChainsawSkill-->
@@ -182,10 +208,20 @@
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_ChainsawSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_ChainsawXP" operation="GTE" value="@jz_ChainsawSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ChainsawSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_ChainsawSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_ChainsawSkillNextLvTotal" operation="add" value="@jz_ChainsawSkillLvAdd"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_ChainsawSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" target="self" buff="jz_ChainsawSkillTigger"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Chainsaw skill!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ChainsawXP" operation="add" value="@jz_ChainsawSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ChainsawSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ChainsawSkillNextLvTotal" operation="add" value="@jz_ChainsawSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ChainsawSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Chainsaw skill!"/>
 		</effect_group>
 	</perk>
 	<!--AugerSkill-->
@@ -204,10 +240,20 @@
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_AugerSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_AugerXP" operation="GTE" value="@jz_AugerSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AugerSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_AugerSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_AugerSkillNextLvTotal" operation="add" value="@jz_AugerSkillLvAdd"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_AugerSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" target="self" buff="jz_AugerSkillTigger"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Auger skill!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AugerXP" operation="add" value="@jz_AugerSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AugerSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AugerSkillNextLvTotal" operation="add" value="@jz_AugerSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AugerSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Auger skill!"/>
 		</effect_group>
 	</perk>
 	<!--UnarmedSkill-->
@@ -223,15 +269,26 @@
 			<requirement name="CVarCompare" cvar="jz_UnarmedSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_UnarmedSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_UnarmedXP" operation="add" value="5"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_UnarmedXP" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_UnarmedXP" operation="add" value="1">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_UnarmedSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_UnarmedXP" operation="GTE" value="@jz_UnarmedSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_UnarmedSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_UnarmedSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_UnarmedSkillNextLvTotal" operation="add" value="@jz_UnarmedSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_UnarmedSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_UnarmedSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your Boxing skill!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_UnarmedXP" operation="add" value="@jz_UnarmedSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_UnarmedSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_UnarmedSkillNextLvTotal" operation="add" value="@jz_UnarmedSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_UnarmedSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Boxing skill!"/>
 		</effect_group>
 	</perk>
 	<!--BluntSkill-->
@@ -246,15 +303,26 @@
 			<requirement name="CVarCompare" cvar="jz_BluntSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_BluntSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_BluntXP" operation="add" value="5"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_BluntXP" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_BluntXP" operation="add" value="1">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_BluntSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_BluntXP" operation="GTE" value="@jz_BluntSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_BluntSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_BluntSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_BluntSkillNextLvTotal" operation="add" value="@jz_BluntSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_BluntSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_BluntSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="Blunt Skill level increased"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BluntXP" operation="add" value="@jz_BluntSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BluntSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BluntSkillNextLvTotal" operation="add" value="@jz_BluntSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BluntSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="Blunt Skill level increased"/>
 		</effect_group>
 	</perk>
 	<!--SledgeSkill-->
@@ -269,15 +337,26 @@
 			<requirement name="CVarCompare" cvar="jz_SledgeSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_SledgeSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_SledgeXP" operation="add" value="5"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SledgeXP" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SledgeXP" operation="add" value="1">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_SledgeSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_SledgeXP" operation="GTE" value="@jz_SledgeSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SledgeSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SledgeSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SledgeSkillNextLvTotal" operation="add" value="@jz_SledgeSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SledgeSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_SledgeSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your Sledge skill!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SledgeXP" operation="add" value="@jz_SledgeSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SledgeSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SledgeSkillNextLvTotal" operation="add" value="@jz_SledgeSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SledgeSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Sledge skill!"/>
 		</effect_group>
 	</perk>
 	<!--BladeSkill-->
@@ -292,363 +371,523 @@
 			<requirement name="CVarCompare" cvar="jz_BladeSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_BladeSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_BladeXP" operation="add" value="5"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_BladeXP" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_BladeXP" operation="add" value="1">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_BladeSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_BladeXP" operation="GTE" value="@jz_BladeSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_BladeSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_BladeSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_BladeSkillNextLvTotal" operation="add" value="@jz_BladeSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_BladeSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_BladeSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Blades!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BladeXP" operation="add" value="@jz_BladeSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BladeSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BladeSkillNextLvTotal" operation="add" value="@jz_BladeSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BladeSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Blades!"/>
 		</effect_group>
 	</perk>
 	<!--ArcherySkill-->
 	<perk name="jz_ArcherySkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Archery Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using a Bow or Crossbow to improve your use of them by 3% faster reload speed per Lv, 2% farther range per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_archery">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_ArcherySkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="MaxRange" operation="perc_add" value="0,0.20" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="MaxRange" operation="perc_add" value="0,0.20" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_ArcherySkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_ArcherySkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_ArcheryXP" operation="add" value="5"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_ArcheryXP" operation="add" value="1"/>	
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_ArcheryXP" operation="add" value="1">	
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_ArcherySkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_ArcheryXP" operation="GTE" value="@jz_ArcherySkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ArcherySkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_ArcherySkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_ArcherySkillNextLvTotal" operation="add" value="@jz_ArcherySkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_ArcherySkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_ArcherySkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Blades!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BladeXP" operation="add" value="@jz_BladeSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BladeSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BladeSkillNextLvTotal" operation="add" value="@jz_BladeSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BladeSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Blades!"/>
 		</effect_group>
 	</perk>
 	<!--SpearSkill-->
 	<perk name="jz_SpearSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Spear Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using a Spear to improve your use of them by 3% faster reload speed per Lv, 2% farther range per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_archery">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_SpearSkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="MaxRange" operation="perc_add" value="0,0.20" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="MaxRange" operation="perc_add" value="0,0.20" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_SpearSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_SpearSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_SpearXP" operation="add" value="5"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SpearXP" operation="add" value="1"/>	
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SpearXP" operation="add" value="1">	
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_SpearSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_SpearXP" operation="GTE" value="@jz_SpearSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SpearSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SpearSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SpearSkillNextLvTotal" operation="add" value="@jz_SpearSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SpearSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_SpearSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Spears!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SpearXP" operation="add" value="@jz_SpearSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SpearSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SpearSkillNextLvTotal" operation="add" value="@jz_SpearSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SpearSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Spears!"/>
 		</effect_group>
 	</perk>
 	<!--PistolSkill-->
 	<perk name="jz_PistolSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Pistol Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Handguns to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_gunslinger">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_PistolSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_PistolXP" operation="add" value="5"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_PistolXP" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_PistolXP" operation="add" value="1">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_PistolSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_PistolXP" operation="GTE" value="@jz_PistolSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_PistolSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_PistolSkillNextLvTotal" operation="add" value="@jz_PistolSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_PistolSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_PistolSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Pistols!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_PistolXP" operation="add" value="@jz_PistolSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_PistolSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_PistolSkillNextLvTotal" operation="add" value="@jz_PistolSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_PistolSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Pistols!"/>
 		</effect_group>
 	</perk>
 	<!--44MagSkill-->
 	<perk name="jz_44MagSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="44Mag Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Shotguns to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_shotgun">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_44MagSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_44MagXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_44MagXP" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_44MagXP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_44MagSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_44MagXP" operation="GTE" value="@jz_44MagSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_44MagSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_44MagSkillNextLvTotal" operation="add" value="@jz_44MagSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_44MagSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_44MagSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Magnums!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_44MagXP" operation="add" value="@jz_44MagSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_44MagSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_44MagSkillNextLvTotal" operation="add" value="@jz_44MagSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_44MagSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Magnums!"/>
 		</effect_group>
 	</perk>
 	<!--SMG5Skill-->
 	<perk name="jz_SMG5Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="SMG5 Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Shotguns to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_shotgun">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_SMG5SkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_SMG5SkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_SMG5SkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_SMG5XP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SMG5XP" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SMG5XP" operation="add" value="1">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_SMG5SkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_SMG5XP" operation="GTE" value="@jz_SMG5SkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SMG5SkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SMG5SkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SMG5SkillNextLvTotal" operation="add" value="@jz_SMG5SkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SMG5SkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_SMG5SkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with SMGs!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SMG5XP" operation="add" value="@jz_SMG5SkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SMG5SkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SMG5SkillNextLvTotal" operation="add" value="@jz_SMG5SkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SMG5SkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with SMGs!"/>
 		</effect_group>
 	</perk>
 	<!--BlunderbussSkill-->
 	<perk name="jz_BlunderbussSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Rifle Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_BlunderbussSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_BlunderbussXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_BlunderbussXP" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_BlunderbussXP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_BlunderbussSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_BlunderbussXP" operation="GTE" value="@jz_BlunderbussSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_BlunderbussSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_BlunderbussSkillNextLvTotal" operation="add" value="@jz_BlunderbussSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_BlunderbussSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_BlunderbussSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a Blunderbuss!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BlunderbussXP" operation="add" value="@jz_BlunderbussSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BlunderbussSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BlunderbussSkillNextLvTotal" operation="add" value="@jz_BlunderbussSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_BlunderbussSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a Blunderbuss!"/>
 		</effect_group>
 	</perk>
 	<!--DBShotgunSkill-->
 	<perk name="jz_DBShotgunSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="DBShotgun Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using DBShotgun to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_DBShotgunSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_DBShotgunbussXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_DBShotgunbussXP" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_DBShotgunbussXP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_DBShotgunSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_DBShotgunXP" operation="GTE" value="@jz_DBShotgunSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_DBShotgunSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_DBShotgunSkillNextLvTotal" operation="add" value="@jz_DBShotgunSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_DBShotgunSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_DBShotgunSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a Double Barrel Shotgun!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_DBShotgunbussXP" operation="add" value="@jz_DBShotgunSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_DBShotgunSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_DBShotgunSkillNextLvTotal" operation="add" value="@jz_DBShotgunSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_DBShotgunSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a Double Barrel Shotgun!"/>
 		</effect_group>
 	</perk>
 	<!--PShotgunSkill-->
 	<perk name="jz_PShotgunSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="PShotgun Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_PShotgunSkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_PShotgunSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_PShotgunSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_PShotgunXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_PShotgunXP" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_PShotgunXP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_PShotgunSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_PShotgunXP" operation="GTE" value="@jz_PShotgunSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_PShotgunSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_PShotgunSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_PShotgunSkillNextLvTotal" operation="add" value="@jz_PShotgunSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_PShotgunSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_PShotgunSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a Pump Shotgun!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_PShotgunXP" operation="add" value="@jz_PShotgunSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_PShotgunSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_PShotgunSkillNextLvTotal" operation="add" value="@jz_PShotgunSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_PShotgunSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a Pump Shotgun!"/>
 		</effect_group>
 	</perk>
 	<!--HuntingRifleSkill-->
 	<perk name="jz_HuntingRifleSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="HuntingRifle Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_HuntingRifleSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_HuntingRifleXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_HuntingRifleXP" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_HuntingRifleXP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_HuntingRifleSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_HuntingRifleXP" operation="GTE" value="@jz_HuntingRifleSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_HuntingRifleSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_HuntingRifleSkillNextLvTotal" operation="add" value="@jz_HuntingRifleSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_HuntingRifleSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_HuntingRifleSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a Hunting Rifle!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_HuntingRifleXP" operation="add" value="@jz_HuntingRifleSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_HuntingRifleSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_HuntingRifleSkillNextLvTotal" operation="add" value="@jz_HuntingRifleSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_HuntingRifleSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a Hunting Rifle!"/>
 		</effect_group>
 	</perk>
 	<!--MarksmanSkill-->
 	<perk name="jz_MarksmanSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Marksman Rifle Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_MarksmanSkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_MarksmanSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_MarksmanSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_MarksmanXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_MarksmanXP" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_MarksmanXP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_MarksmanSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_MarksmanXP" operation="GTE" value="@jz_MarksmanSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_MarksmanSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_MarksmanSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_MarksmanSkillNextLvTotal" operation="add" value="@jz_MarksmanSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_MarksmanSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_MarksmanSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a Sniper Rifle!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MarksmanXP" operation="add" value="@jz_MarksmanSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MarksmanSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MarksmanSkillNextLvTotal" operation="add" value="@jz_MarksmanSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_MarksmanSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a Sniper Rifle!"/>
 		</effect_group>
 	</perk>
 	<!--AK47Skill-->
 	<perk name="jz_AK47Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="AK47 Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_AK47SkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_AK47SkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_AK47SkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_AK47XP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_AK47XP" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_AK47XP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_AK47SkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_AK47XP" operation="GTE" value="@jz_AK47SkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AK47SkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_AK47SkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_AK47SkillNextLvTotal" operation="add" value="@jz_AK47SkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_AK47SkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_AK47SkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a AK47!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AK47XP" operation="add" value="@jz_AK47SkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AK47SkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AK47SkillNextLvTotal" operation="add" value="@jz_AK47SkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_AK47SkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a AK47!"/>
 		</effect_group>
 	</perk>
 	<!--M60Skill-->
 	<perk name="jz_M60Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="M60 Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_M60SkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_M60SkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_M60SkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_M60XP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_M60XP" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_M60XP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_M60SkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_M60XP" operation="GTE" value="@jz_M60SkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_M60SkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_M60SkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_M60SkillNextLvTotal" operation="add" value="@jz_M60SkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_M60SkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_M60SkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a  M60!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_M60XP" operation="add" value="@jz_M60SkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_M60SkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_M60SkillNextLvTotal" operation="add" value="@jz_M60SkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_M60SkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a M60!"/>
 		</effect_group>
 	</perk>
 	<!--ExposivesSkill-->
 	<perk name="jz_ExposivesSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Exposives Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_ExposivesSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_ExposivesXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_ExposivesXP" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_ExposivesXP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_ExposivesSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_ExposivesXP" operation="GTE" value="@jz_ExposivesSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_ExposivesSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_ExposivesSkillNextLvTotal" operation="add" value="@jz_ExposivesSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_ExposivesSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_ExposivesSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Boom Boom!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ExposivesXP" operation="add" value="@jz_ExposivesSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ExposivesSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ExposivesSkillNextLvTotal" operation="add" value="@jz_ExposivesSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ExposivesSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Boom Boom!"/>
 		</effect_group>
 	</perk>
 	<!--JunkTurretSkill-->
 	<perk name="jz_JunkTurretSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="JunkTurret Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_JunkTurretSkillTag"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,10"/>
-				<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="0,-.3" level="1,10"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,10" />
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" value="0,0.3" level="1,100"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="0,-.3" level="1,100"/>
+				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_JunkTurretSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_JunkTurretSkillTag"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_JunkTurretXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_JunkTurretXP" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_JunkTurretXP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_JunkTurretSkillLv" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="jz_JunkTurretXP" operation="GTE" value="@jz_JunkTurretSkillNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_JunkTurretSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_JunkTurretSkillNextLvTotal" operation="add" value="@jz_JunkTurretSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_JunkTurretSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="jz_JunkTurretSkillTigger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Boom Boom!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ExposivesXP" operation="add" value="@jz_ExposivesSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ExposivesSkillLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ExposivesSkillNextLvTotal" operation="add" value="@jz_ExposivesSkillLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ExposivesSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Boom Boom!"/>
 		</effect_group>
 	</perk>
 	<!-- ******************************************************************  CRAFTING SKILLS  ******************************************************************************** -->
 	<!-- StoneaxeCrafting-->
 	<perk name="jz_StoneaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stoneaxe Crafting" desc_key="jz_StoneaxeCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_StoneaxeCraftingTag"/>
 		</effect_group>
@@ -662,11 +901,6 @@
 	</perk>
 	<!-- StoneShovelCrafting-->
 	<perk name="jz_StoneShovelCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stone Shovel Crafting" desc_key="jz_StoneShovelCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_StoneShovelCraftingTag"/>
 		</effect_group>
@@ -680,11 +914,6 @@
 	</perk>
 	<!-- IronFireaxeCrafting-->
 	<perk name="jz_IronFireaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Fireaxe Crafting" desc_key="jz_IronFireaxeCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronFireaxeCraftingTag"/>
 		</effect_group>
@@ -698,11 +927,6 @@
 	</perk>
 	<!-- SteelFireaxeCrafting-->
 	<perk name="jz_SteelFireaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Fireaxe Crafting" desc_key="jz_SteelFireaxeCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelFireaxeCraftingTag"/>
 		</effect_group>
@@ -716,11 +940,6 @@
 	</perk>
 	<!-- IronPickaxeCrafting-->
 	<perk name="jz_IronPickaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Pickaxe Crafting" desc_key="jz_IronPickaxeCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronPickaxeCraftingTag"/>
 		</effect_group>
@@ -734,11 +953,6 @@
 	</perk>
 	<!-- SteelPickaxeCrafting-->
 	<perk name="jz_SteelPickaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Pickaxe Crafting" desc_key="jz_SteelPickaxeCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelPickaxeCraftingTag"/>
 		</effect_group>
@@ -752,11 +966,6 @@
 	</perk>
 	<!-- IronShovelCrafting-->
 	<perk name="jz_IronShovelCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Shovel Crafting" desc_key="jz_IronShovelCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronShovelCraftingTag"/>
 		</effect_group>
@@ -770,11 +979,6 @@
 	</perk>
 	<!-- SteelShovelCrafting-->
 	<perk name="jz_SteelShovelCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Shovel Crafting" desc_key="jz_SteelShovelCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelShovelCraftingTag"/>
 		</effect_group>
@@ -788,11 +992,6 @@
 	</perk>
 	<!-- ChainsawCrafting-->
 	<perk name="jz_ChainsawCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Chainsaw Crafting" desc_key="jz_ChainsawCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ChainsawCraftingTag"/>
 		</effect_group>
@@ -806,11 +1005,6 @@
 	</perk>
 	<!-- AugerCrafting-->
 	<perk name="jz_AugerCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Auger Crafting" desc_key="jz_AugerCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_AugerCraftingTag"/>
 		</effect_group>
@@ -824,11 +1018,6 @@
 	</perk>
 	<!-- WrenchCrafting-->
 	<perk name="jz_WrenchCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Wrench Crafting" desc_key="jz_WrenchCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_WrenchCraftingTag"/>
 		</effect_group>
@@ -842,11 +1031,6 @@
 	</perk>
 	<!-- ClawHammerCrafting-->
 	<perk name="jz_ClawHammerCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Claw Hammer Crafting" desc_key="jz_ClawHammerCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClawHammerCraftingTag"/>
 		</effect_group>
@@ -860,11 +1044,6 @@
 	</perk>
 	<!-- SolarCellCrafting-->
 	<perk name="jz_SolarCellCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Solar Cell Crafting" desc_key="jz_SolarCellCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SolarCellCraftingTag"/>
 		</effect_group>
@@ -878,11 +1057,6 @@
 	</perk>
 	<!-- CarBatteryCrafting-->
 	<perk name="jz_CarBatteryCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Car Battery Crafting" desc_key="jz_CarBatteryCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_CarBatteryCraftingTag"/>
 		</effect_group>
@@ -896,13 +1070,9 @@
 	</perk>
 	<!-- ClothArmorCrafting-->
 	<perk name="jz_ClothArmorCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Cloth Armor Crafting" desc_key="jz_ClothArmorCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClothArmorCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ClothArmorCraftingTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_ClothArmorCraftingRank1Desc" long_desc_key="jz_ClothArmorCraftingRank1LongDesc"/>
@@ -914,13 +1084,10 @@
 	</perk>
 	<!-- LeatherArmorCrafting-->
 	<perk name="jz_LeatherArmorCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Leather Armor Crafting" desc_key="jz_LeatherArmorCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_LeatherArmorCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_LeatherArmorCraftingTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_LeatherArmorCraftingRank1Desc" long_desc_key="jz_LeatherArmorCraftingRank1LongDesc"/>
@@ -932,13 +1099,10 @@
 	</perk>
 	<!-- ScrapArmorCrafting-->
 	<perk name="jz_ScrapArmorCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Scrap Iron Armor Crafting" desc_key="jz_ScrapArmorCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ScrapArmorCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ScrapArmorCraftingTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_ScrapArmorCraftingRank1Desc" long_desc_key="jz_ScrapArmorCraftingRank1LongDesc"/>
@@ -950,13 +1114,10 @@
 	</perk>
 	<!-- IronArmorCrafting-->
 	<perk name="jz_IronArmorCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Armor Crafting" desc_key="jz_IronArmorCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronArmorCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_IronArmorCraftingTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_IronArmorCraftingRank1Desc" long_desc_key="jz_IronArmorCraftingRank1LongDesc"/>
@@ -968,13 +1129,10 @@
 	</perk>
 	<!-- SteelArmorCrafting-->
 	<perk name="jz_SteelArmorCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Armor Crafting" desc_key="jz_SteelArmorCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelArmorCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_SteelArmorCraftingTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_SteelArmorCraftingRank1Desc" long_desc_key="jz_SteelArmorCraftingRank1LongDesc"/>
@@ -986,11 +1144,6 @@
 	</perk>
 	<!-- BoneKnifeCrafting-->
 	<perk name="jz_BoneKnifeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Bone Knife Crafting" desc_key="jz_BoneKnifeCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_BoneKnifeCraftingTag"/>
 		</effect_group>
@@ -1004,11 +1157,6 @@
 	</perk>
 	<!-- HuntingKnifeCrafting-->
 	<perk name="jz_HuntingKnifeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Hunting Knife Crafting" desc_key="jz_HuntingKnifeCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_HuntingKnifeCraftingTag"/>
 		</effect_group>
@@ -1022,11 +1170,6 @@
 	</perk>
 	<!-- MacheteCrafting-->
 	<perk name="jz_MacheteCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Machete Crafting" desc_key="jz_MacheteCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_MacheteCraftingTag"/>
 		</effect_group>
@@ -1040,11 +1183,6 @@
 	</perk>
 	<!-- WoodenClubCrafting-->
 	<perk name="jz_WoodenClubCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Wooden Club Crafting" desc_key="jz_WoodenClubCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_WoodenClubCraftingTag"/>
 		</effect_group>
@@ -1058,11 +1196,6 @@
 	</perk>
 	<!-- BaseballBatCrafting-->
 	<perk name="jz_BaseballBatCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Baseball Bat Crafting" desc_key="jz_BaseballBatCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_BaseballBatCraftingTag"/>
 		</effect_group>
@@ -1076,11 +1209,6 @@
 	</perk>
 	<!-- IronClubCrafting-->
 	<perk name="jz_IronClubCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Club Crafting" desc_key="jz_IronClubCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronClubCraftingTag"/>
 		</effect_group>
@@ -1094,11 +1222,6 @@
 	</perk>
     <!-- StunBatonCrafting-->
 	<perk name="jz_StunBatonCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stun Baton Crafting" desc_key="jz_StunBatonCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_StunBatonCraftingTag"/>
 		</effect_group>
@@ -1112,11 +1235,6 @@
 	</perk>
 	<!-- StoneSpearCrafting-->
 	<perk name="jz_StoneSpearCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stone Spear Crafting" desc_key="jz_StoneSpearCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_StoneSpearCraftingTag"/>
 		</effect_group>
@@ -1130,11 +1248,6 @@
 	</perk>
 	<!-- IronSpearCrafting-->
 	<perk name="jz_IronSpearCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Spear Crafting" desc_key="jz_IronSpearCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronSpearCraftingTag"/>
 		</effect_group>
@@ -1148,11 +1261,6 @@
 	</perk>
 	<!-- SteelSpearCrafting-->
 	<perk name="jz_SteelSpearCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Spear Crafting" desc_key="jz_SteelSpearCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelSpearCraftingTag"/>
 		</effect_group>
@@ -1166,11 +1274,6 @@
 	</perk>
 	<!-- StoneSledgeeCrafting-->
 	<perk name="jz_StoneSledgeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stone Sledge Crafting" desc_key="jz_StoneSledgeCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_StoneSledgeCraftingTag"/>
 		</effect_group>
@@ -1184,11 +1287,6 @@
 	</perk>
 	<!-- IronSledgeCrafting-->
 	<perk name="jz_IronSledgeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Sledge Crafting" desc_key="jz_IronSledgeCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronSledgeCraftingTag"/>
 		</effect_group>
@@ -1202,11 +1300,6 @@
 	</perk>
 	<!-- SteelSledgeCrafting-->
 	<perk name="jz_SteelSledgeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Sledge Crafting" desc_key="jz_SteelSledgeCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelSledgeCraftingTag"/>
 		</effect_group>
@@ -1220,11 +1313,6 @@
 	</perk>
 	<!-- KnuckleWrapCrafting-->
 	<perk name="jz_KnuckleWrapCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Knuckle Wrap Crafting" desc_key="jz_KnuckleWrapCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_KnuckleWrapCraftingTag"/>
 		</effect_group>
@@ -1238,11 +1326,6 @@
 	</perk>
 	<!-- BrassKnucklesCrafting-->
 	<perk name="jz_BrassKnucklesCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Brass Knuckles Crafting" desc_key="jz_BrassKnucklesCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_BrassKnucklesCraftingTag"/>
 		</effect_group>
@@ -1256,11 +1339,6 @@
 	</perk>
 	<!-- SteelKnucklesCrafting-->
 	<perk name="jz_SteelKnucklesCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Knuckles Crafting" desc_key="jz_SteelKnucklesCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelKnucklesCraftingTag"/>
 		</effect_group>
@@ -1274,11 +1352,6 @@
 	</perk>
 	<!-- PistolCrafting-->
 	<perk name="jz_PistolCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Pistol Crafting" desc_key="jz_PistolCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_PistolCraftingTag"/>
 		</effect_group>
@@ -1292,11 +1365,6 @@
 	</perk>
 	<!-- 44MagCrafting-->
 	<perk name="jz_44MagCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="44 Magnum Crafting" desc_key="jz_44MagCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_44MagCraftingTag"/>
 		</effect_group>
@@ -1310,11 +1378,6 @@
 	</perk>
 	<!-- SMG5Crafting-->
 	<perk name="jz_SMG5Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="SMG5 Crafting" desc_key="jz_SMG5CraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SMG5CraftingTag"/>
 		</effect_group>
@@ -1328,11 +1391,6 @@
 	</perk>
 	<!-- BlunderbussCrafting-->
 	<perk name="jz_BlunderbussCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Blunderbuss Crafting" desc_key="jz_BlunderbussCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_BlunderbussCraftingTag"/>
 		</effect_group>
@@ -1346,12 +1404,7 @@
 	</perk>
 	<!-- DBShotgunCrafting-->
 	<perk name="jz_DBShotgunCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Double Barrel Shotgun Crafting" desc_key="jz_DBShotgunCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
-		<effect_group>
+			<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_DBShotgunCraftingTag"/>
 		</effect_group>
 		<effect_group>
@@ -1364,11 +1417,6 @@
 	</perk>
 	<!-- PumpShotgunCrafting-->
 	<perk name="jz_PumpShotgunCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Pump Shotgun Crafting" desc_key="jz_PumpShotgunCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_PumpShotgunCraftingTag"/>
 		</effect_group>
@@ -1382,11 +1430,6 @@
 	</perk>
 	<!-- HuntingRifleCrafting-->
 	<perk name="jz_HuntingRifleCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Hunting Rifle Crafting" desc_key="jz_HuntingRifleCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_HuntingRifleCraftingTag"/>
 		</effect_group>
@@ -1400,11 +1443,7 @@
 	</perk>
 	<!-- MarksmanCrafting-->
 	<perk name="jz_MarksmanCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Marksman Crafting" desc_key="jz_MarksmanCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_MarksmanCraftingTag"/>
 		</effect_group>
@@ -1418,11 +1457,7 @@
 	</perk>
 	<!-- AK47Crafting-->
 	<perk name="jz_AK47Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="AK47 Crafting" desc_key="jz_AK47CraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_AK47CraftingTag"/>
 		</effect_group>
@@ -1436,11 +1471,7 @@
 	</perk>
 	<!-- M60StoneaxeCrafting-->
 	<perk name="jz_M60Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="M60 Crafting" desc_key="jz_M60CraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_M60CraftingTag"/>
 		</effect_group>
@@ -1454,11 +1485,7 @@
 	</perk>
 	<!-- RocketLauncherCrafting-->
 	<perk name="jz_RocketLauncherCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Rocket Launcher Crafting" desc_key="jz_RocketLauncherCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_RocketLauncherCraftingTag"/>
 		</effect_group>
@@ -1472,11 +1499,7 @@
 	</perk>
 	<!-- PrimitiveBowCrafting-->
 	<perk name="jz_PrimitiveBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Primitive Bow Crafting" desc_key="jz_PrimitiveBowCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_PrimitiveBowCraftingTag"/>
 		</effect_group>
@@ -1490,11 +1513,7 @@
 	</perk>
 	<!-- WoddenBowCrafting-->
 	<perk name="jz_WoodenBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Wodden Bow Crafting" desc_key="jz_WoodenBowCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_WoodenBowCraftingTag"/>
 		</effect_group>
@@ -1508,11 +1527,7 @@
 	</perk>
 	<!-- CompoundBowCrafting-->
 	<perk name="jz_CompoundBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Compound Bow Crafting" desc_key="jz_CompoundBowCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_CompoundBowCraftingTag"/>
 		</effect_group>
@@ -1526,11 +1541,7 @@
 	</perk>
 	<!-- IronCrossbowCrafting-->
 	<perk name="jz_IronCrossbowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="IronCrossbow Crafting" desc_key="jz_IronCrossbowCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronCrossbowCraftingTag"/>
 		</effect_group>
@@ -1544,11 +1555,7 @@
 	</perk>
 	<!-- CompoundCrossbowCrafting-->
 	<perk name="jz_CompoundCrossbowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Compound Crossbow Crafting" desc_key="jz_CompoundCrossbowCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_CompoundCrossbowCraftingTag"/>
 		</effect_group>
@@ -1562,11 +1569,7 @@
 	</perk>
 	<!-- JunkTurretCrafting-->
 	<perk name="jz_JunkTurretCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Junk Turret Crafting" desc_key="jz_JunkTurretCraftingDesc" icon="ui_game_symbol_mining">
-		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="2" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="3" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="4" desc_key="reqGenericPoints01"/></level_requirements>
-		<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="5" desc_key="reqGenericPoints02"/></level_requirements>
+		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_JunkTurretCraftingTag"/>
 		</effect_group>
@@ -1586,8 +1589,8 @@
 				<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".2"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FireFighterTag"/>
-			<passive_effect name="StaminaMax" operation="perc_add" value=".5"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalBandage,medicalFirstAidBandage"/>
+			<passive_effect name="StaminaMax" operation="perc_add" level="1" value=".5"/>
 			
 			<effect_description level="1" desc_key="jz_FireFighterRank1Desc" long_desc_key="jz_FireFighter1LongDesc"/>
 		</effect_group>
@@ -1605,7 +1608,7 @@
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_PoliceOfficerTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunPistol,jz_GunOil,meleeStunBaton,jz_WeaponRepairKit"/>
 		
 			<effect_description level="1" desc_key="jz_PoliceOfficerRank1Desc" long_desc_key="jz_PoliceOfficerLongDesc"/>
 		</effect_group>
@@ -1613,7 +1616,7 @@
 	<!-- Park Ranger -->
 	<perk name="jz_ParkRanger" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Park Ranger" desc_key="jz_ParkRangerDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ParkRangerTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugHerbalAntibiotics"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_PrimitativeCraftingTag"/>
 			
 			<effect_description level="1" desc_key="jz_ParkRangerRank1Desc" long_desc_key="jz_ParkRangerLongDesc"/>
@@ -1627,7 +1630,7 @@
 				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.1" tags="secondary"/>
 		</effect_group>	
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_BouncerTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeKnucklesLeather,meleeKnucklesLeather"/>
 		
 			<effect_description level="1" desc_key="jz_BouncerRank1Desc" long_desc_key="jz_BouncerLongDesc"/>
 		</effect_group>
@@ -1644,13 +1647,13 @@
 	<perk name="jz_Burglar" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Burglar" desc_key="jz_BurglarDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" level="0,1" value="0,-.1"/>
-				<passive_effect name="CrouchSpeed" operation="perc_add" level="0,1" value="0,.1"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" level="1" value="-.1"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
 		<effect_group>
 			<passive_effect name="ScavengingTime" operation="perc_subtract" level="1" value=".25"/>
 			<passive_effect name="TreasureRadius" operation="base_subtract" level="1" value="6"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_BurglarTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceLockPick"/>
 			<effect_description level="1" desc_key="jz_BurglarRank1Desc" long_desc_key="jz_BurglarLongDesc"/>
 		</effect_group>
 	</perk>
@@ -1673,17 +1676,17 @@
 	<!-- Soldier -->
 	<perk name="jz_Soldier" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Soldier" desc_key="jz_SoldierDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_AK47CraftingTag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_AK47SkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value=".1"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="HoldingItemHasTags" tags="jz_M60CraftingTag"/>
+			<requirement name="HoldingItemHasTags" tags="jz_M60SkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value=".1"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_SoldierTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FoodGrubs,jz_WeaponRepairKit,gunBlunderbuss,ammoBlunderbuss,gunAK47,thrownAmmoPipeBomb"/>
 			<effect_description level="1" desc_key="jz_SoldierRank1Desc" long_desc_key="jz_SoldierLongDesc"/>
 		</effect_group>
 	</perk>
@@ -1713,7 +1716,7 @@
 			<effect_description level="1" desc_key="jz_MetalWorkerRank1Desc" long_desc_key="jz_MetalWorkerLongDesc"/>
 		</effect_group>
 	</perk>
-	<!-- Mechanic -->
+	<!-- Mechanic --> 
 	<perk name="jz_Mechanic" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mechanic" desc_key="jz_MechanicDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MechanicTag"/>
@@ -1747,11 +1750,10 @@
 	</perk>
 	<!-- ******************************************************************  Positive Traits  ******************************************************************************** -->
 	<perk name="jz_TraitFastDriver" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Lead Foot" desc_key="jz_TraitFastDriverDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--5% faster driver -->
 		<effect_group>
+			<passive_effect name="VehicleVelocityMaxPer" operation="perc_set" level="1" value="1.1"/>
+			<passive_effect name="VehicleVelocityMaxTurboPer" operation="perc_set" level="1" value="1.1"/>
 			<effect_description level="1" desc_key="jz_TraitFastDriverDesc" long_desc_key="jz_TraitFastDriverLongDesc"/>
 		</effect_group>
 	</perk>
@@ -1765,55 +1767,57 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitGraceful" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Graceful" desc_key="jz_TraitGracefulDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--10% less noise moving -->
 		<effect_group>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" level="1" value="-.1"/>
 			<effect_description level="1" desc_key="jz_TraitGracefulDesc" long_desc_key="jz_TraitGracefulLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitDexterous" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Dexterous" desc_key="jz_TraitDexterousDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--10% faster crafting 10% faster lock-picking -->
 		<effect_group>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.1" />
+			<passive_effect name="LockPickTime" operation="perc_add" level="1" value="-0.1"/>
 			<effect_description level="1" desc_key="jz_TraitDexterousDesc" long_desc_key="jz_TraitDexterousLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitIronGut" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Gut" desc_key="jz_TraitIronGutDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--15% less chance for food illnesses -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitIronGutDesc" long_desc_key="jz_TraitIronGutLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitOutdoorsman" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Outdoorsman" desc_key="jz_TraitOutdoorsmanDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--10% less effects from weather -->
 		<effect_group>
+			<passive_effect name="HypothermalResist" operation="base_add" level="1" value="10"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" level="1" value="10"/>
+		
 			<effect_description level="1" desc_key="jz_TraitOutdoorsmanDesc" long_desc_key="jz_TraitOutdoorsmanLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitFit" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fit" desc_key="jz_TraitFitDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--5% less encumbrance effect, 5% less stam per swing, 5% faster stam regain -->
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-0.05"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-0.05" tags="secondary"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_OutOfShapeTraitRefundTag"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="0.05">
+				<requirement name="HasBuff" buff="buffEncumberedInv"/></passive_effect>
+		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitFitDesc" long_desc_key="jz_TraitFitLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitThickSkinned" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Thick Skinned" desc_key="jz_TraitThickSkinnedDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--10% less chance to get scratches and bites -->
+		<effect_group>
+			<passive_effect name="BuffResistance" operation="base_add" level="1" value=".1" tags="jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		</effect_group>
+		
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitThickSkinnedDesc" long_desc_key="jz_TraitThickSkinnedLongDesc"/>
 		</effect_group>
@@ -1828,9 +1832,6 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitMedic" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Medic" desc_key="jz_TraitMedicDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--20% More healing from first aid -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitMedicDesc" long_desc_key="jz_TraitMedicLongDesc"/>
@@ -1864,10 +1865,16 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitStout" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Stout" desc_key="jz_TraitStoutDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--10% less encumbrance speed, 10% less stam per swing, 10% faster stam regain when encumbered -->
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-0.1"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-0.1" tags="secondary"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value=".1">
+				<requirement name="HasBuff" buff="buffEncumberedInv"/></passive_effect>
+		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitStoutDesc" long_desc_key="jz_TraitStoutLongDesc"/>
 		</effect_group>
@@ -1883,55 +1890,91 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitSleepy" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sleepy" desc_key="jz_TraitSleepyDesc" icon="ui_game_symbol_mining">
+		<!--20% slower tiered recovery -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_TraitRefundSleepy"/>
 		</effect_group>
-		<!--20% slower tiered recovery -->
+		
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitSleepyDesc" long_desc_key="jz_TraitSleepyLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitClumsy" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Clumsy" desc_key="jz_TraitClumsyDesc" icon="ui_game_symbol_mining">
+		<!--10% more noise moving -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ClumsyTraitRefundTag"/>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" level="1" value=".1" />
 		</effect_group>
-		<!--10% more noise moving -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitClumsyDesc" long_desc_key="jz_TraitClumsyLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitAllThumbs" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="All Thumbs" desc_key="jz_TraitAllThumbsDesc" icon="ui_game_symbol_mining">
+		<!--10% slower crafting 10% slower lock-picking -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_AllThumbsTraitRefundTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="0.1" />
+			<passive_effect name="LockPickTime" operation="perc_add" level="1" value="0.1" />
 		</effect_group>
-		<!--10% slower crafting 10% slower lock-picking -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitAllThumbsDesc" long_desc_key="jz_TraitAllThumbsLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitWeakStomach" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Weak Stomach" desc_key="jz_TraitWeakStomachDesc" icon="ui_game_symbol_mining">
+		<!--15% more chance for food illnesses -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_WeakStomachTraitRefundTag"/>
 		</effect_group>
-		<!--15% more chance for food illnesses -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitWeakStomachDesc" long_desc_key="jz_TraitWeakStomachLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitAgoraphobic" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Agoraphobic" desc_key="jz_TraitAgoraphobicDesc" icon="ui_game_symbol_mining">
+		<!--10% slower Aim, Reloading, 10% more stam on melee swing when outside -->
+		<effect_group>
+			<requirement name="!IsIndoors" />
+			<requirement name="HoldingItemHasTags" tags="melee"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="0.1"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="0.1" tags="secondary"/>
+		</effect_group>
+		<effect_group>		
+			<requirement name="!IsIndoors" />
+			<requirement name="HoldingItemHasTags" tags="holdBreathAiming"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value="-0.1"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="perc_add" level="1" value="-.1"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="perc_add" level="1" value="-.1"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" level="1" value="-.1"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" level="1" value="-.1"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="1" value="-.1"/>
+		</effect_group>
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_AgoraphobicTraitRefundTag"/>
 		</effect_group>
-		<!--10% slower Aim, 10% more stam on melee swing when outside -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitAgoraphobicDesc" long_desc_key="jz_TraitAgoraphobicLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitClaustrophobicTraits" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Claustrophobic" desc_key="jz_TraitClaustrophobicDesc" icon="ui_game_symbol_mining">
+		<!--10% slower Aim, Reloading, 10% more stam on melee swing when indoors -->
+		<effect_group>
+			<requirement name="IsIndoors" />
+			<requirement name="HoldingItemHasTags" tags="melee"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="0.1"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="0.1" tags="secondary"/>
+		</effect_group>
+		<effect_group>		
+			<requirement name="IsIndoors" />
+			<requirement name="HoldingItemHasTags" tags="holdBreathAiming"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value="-0.1"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="perc_add" level="1" value="-.1"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="perc_add" level="1" value="-.1"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" level="1" value="-.1"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" level="1" value="-.1"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="1" value="-.1"/>
+		</effect_group>
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ClaustrophobicTraitRefundTag"/>
 		</effect_group>
-		<!--10% slower Aim, 10% more stam on melee swing when indoors -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitClaustrophobicDesc" long_desc_key="jz_TraitClaustrophobicLongDesc"/>
 		</effect_group>
@@ -1946,59 +1989,263 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitAsthmatic" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Asthmatic" desc_key="jz_TraitAsthmaticDesc" icon="ui_game_symbol_mining">
+		<!--20% slower Stam Regan -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_AsthmaticTraitRefundTag"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_subtract" level="1" value=".2"/>
 		</effect_group>
-		<!--20% slower Stam Regan -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitAsthmaticDesc" long_desc_key="jz_TraitAsthmaticLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitOutOfShape" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Out of Shape" desc_key="jz_TraitOutOfShapeDesc" icon="ui_game_symbol_mining">
+		<!--5% more encumbrance effect, 5% more stam per swing, 5% slower stam regain -->
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="0.05"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="0.05" tags="secondary"/>
+		</effect_group>
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_OutOfShapeTraitRefundTag"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="-.05">
+				<requirement name="HasBuff" buff="buffEncumberedInv"/></passive_effect>
 		</effect_group>
-		<!--5% more encumbrance effect, 5% more stam per swing, 5% slower stam regain -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitOutOfShapeDesc" long_desc_key="jz_TraitOutOfShapeLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitSmoker" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Smoker" desc_key="jz_TraitSmokerDesc" icon="ui_game_symbol_mining">
+		<!--Smoking Adiction, 20% slower stam regan while running, 10% slower top speed -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_SmokerTraitRefundTag"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="-0.2" tags="running"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" level="1" value="0.1"/>
 		</effect_group>
-		<!--Smoking Adiction, 20% slower stam regan while running, 10% slower top speed -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitSmokerDesc" long_desc_key="jz_TraitSmokerLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitHemophobic" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Hemophobic" desc_key="jz_TraitHemophobicDesc" icon="ui_game_symbol_mining">
+		<!--20% less healing from first aid -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_HemophobicTraitRefundTag"/>
 		</effect_group>
-		<!--20% less healing from first aid -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitHemophobicDesc" long_desc_key="jz_TraitHemophobicLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitThinSkinned" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Thin Skinned" desc_key="jz_TraitThinSkinnedDesc" icon="ui_game_symbol_mining">
+		<!--10% more chance to get scratches and bites -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ThinSkinnedTraitRefundTag"/>
+			<passive_effect name="BuffResistance" operation="base_subtract" level="1" value=".1" tags="jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
 		</effect_group>
-		<!--10% more chance to get scratches and bites -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitThinSkinnedDesc" long_desc_key="jz_TraitThinSkinnedLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitWeak" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Weak" desc_key="jz_TraitWeakDesc" icon="ui_game_symbol_mining">
+		<!--10% more encumbrance speed, 10% more stam per swing, 10% slower stam regain when encumbered -->
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="melee"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="0.1"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="0.1" tags="secondary"/>
+		</effect_group>
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_WeakTraitRefundTag"/>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="-.1">
+				<requirement name="HasBuff" buff="buffEncumberedInv"/></passive_effect>
 		</effect_group>
-		<!--10% more encumbrance speed, 10% more stam per swing, 10% slower stam regain when encumbered -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitWeakDesc" long_desc_key="jz_TraitWeakLongDesc"/>
 		</effect_group>
 	</perk>
+	<!-- ******************************************************************  JZMOD BUILDING SKILLS  ******************************************************************************** -->
+
+	<!-- Wood Frame Building-->
+	<perk name="jz_WoodBuildingSkill" parent="jz_Other" min_level="1" max_level="3" base_skill_point_cost="0" name_key="Wood Building" desc_key="jz_WoodBuildingSkillDesc" icon="ui_game_symbol_mining">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,1,1" tags="meleeToolClawHammer"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,0,1" tags="jz_Plank"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_WoodBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="jz_WoodBuildingXP" operation="add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_WoodBuildingSkillLv" operation="LT" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_WoodBuildingXP" operation="GTE" value="3"/>
+			<requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_WoodBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up Mining!"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_WoodBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_WoodBuildingXP" operation="GTE" value="6"/>
+			<requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_WoodBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up Mining!"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_WoodBuildingSkillRank1Desc" long_desc_key="jz_WoodBuildingSkillRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_WoodBuildingSkillRank2Desc" long_desc_key="jz_WoodBuildingSkillRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_WoodBuildingSkillRank3Desc" long_desc_key="jz_WoodBuildingSkillRank3LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- Flagstone/Brick Frame Building-->
+	<perk name="jz_StoneBuildingSkill" parent="jz_Other" min_level="1" max_level="4" base_skill_point_cost="0" name_key="Stone Building" desc_key="jz_StoneBuildingSkillDesc" icon="ui_game_symbol_mining">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3,4" value="0,1,1,1" tags="jz_MasonHammer"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3,4" value="0,0,1,1" tags="resourceCobblestones"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3,4" value="0,0,0,1" tags="jz_Bricks"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="LT" value="5"/>
+			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="jz_StoneBuildingXP" operation="add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="Equals" value="1"/>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingXP" operation="GTE" value="3"/>
+			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_StoneBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone building Skill!"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="Equals" value="2"/>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingXP" operation="GTE" value="6"/>
+			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_StoneBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone building Skill!"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="Equals" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingXP" operation="GTE" value="9"/>
+			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_StoneBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone building Skill!"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_StoneBuildingSkillRank1Desc" long_desc_key="jz_StoneBuildingSkillRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_StoneBuildingSkillRank2Desc" long_desc_key="jz_StoneBuildingSkillRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_StoneBuildingSkillRank3Desc" long_desc_key="jz_StoneBuildingSkillRank3LongDesc"/>
+			<effect_description level="3" desc_key="jz_StoneBuildingSkillRank4Desc" long_desc_key="jz_StoneBuildingSkillRank4LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- Iron Frame Building-->
+	<perk name="jz_IronBuildingSkill" parent="jz_Other" min_level="1" max_level="3" base_skill_point_cost="0" name_key="Iron Building" desc_key="jz_IronBuildingSkillDesc" icon="ui_game_symbol_mining">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,1,1" tags="meleeToolWrench"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,0,1" tags="jz_IronSheetMetal"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_IronBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="jz_IronBuildingXP" operation="add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_IronBuildingSkillLv" operation="LT" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_IronBuildingXP" operation="GTE" value="3"/>
+			<requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_IronBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Iron building Skill!"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_IronBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_IronBuildingXP" operation="GTE" value="6"/>
+			<requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_IronBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Iron building Skill!"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_IronBuildingSkillRank1Desc" long_desc_key="jz_IronBuildingSkillRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_IronBuildingSkillRank2Desc" long_desc_key="jz_IronBuildingSkillRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_IronBuildingSkillRank3Desc" long_desc_key="jz_IronBuildingSkillRank3LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- Concrete Frame Building-->
+	<perk name="jz_ConcreteBuildingSkill" parent="jz_Other" min_level="1" max_level="3" base_skill_point_cost="0" name_key="Concrete Building" desc_key="jz_ConcreteBuildingSkillDesc" icon="ui_game_symbol_mining">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,1,1" tags="jz_ConcreteSledge"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,0,1" tags="resourceConcreteMix"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="jz_ConcreteBuildingXP" operation="add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingSkillLv" operation="LT" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingXP" operation="GTE" value="3"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_ConcreteBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Concrete building Skill!"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingXP" operation="GTE" value="6"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_ConcreteBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Concrete building Skill!"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_ConcreteBuildingSkillRank1Desc" long_desc_key="jz_ConcreteBuildingSkillRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_ConcreteBuildingSkillRank2Desc" long_desc_key="jz_ConcreteBuildingSkillRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_ConcreteBuildingSkillRank3Desc" long_desc_key="jz_ConcreteBuildingSkillRank3LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- Steel Frame Building-->
+	<perk name="jz_SteelBuildingSkill" parent="jz_Other" min_level="1" max_level="3" base_skill_point_cost="0" name_key="Steel Building" desc_key="jz_SteelBuildingSkillDesc" icon="ui_game_symbol_mining">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,1,1" tags="jz_WelderTool"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,0,1" tags="jz_SteelSheetMetal"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_SteelBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="jz_SteelBuildingXP" operation="add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_SteelBuildingSkillLv" operation="LT" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_SteelBuildingXP" operation="GTE" value="3"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_SteelBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Steel Building Skill!"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_SteelBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_SteelBuildingXP" operation="GTE" value="6"/>
+			<requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_SteelBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Steel Building Skill!"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_SteelBuildingSkillRank1Desc" long_desc_key="jz_SteelBuildingSkillRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_SteelBuildingSkillRank2Desc" long_desc_key="jz_SteelBuildingSkillRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_SteelBuildingSkillRank3Desc" long_desc_key="jz_SteelBuildingSkillRank3LongDesc"/>
+		</effect_group>
+	</perk>
+
+
+
+
+
+
+
+
+
 	<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 	<!-- The Fireman Almanac (Books) -->
 	<perk name="perkFiremansAlmanacHeat" parent="skillFiremansAlmanac" max_level="1" base_skill_point_cost="0" desc_key="perkFiremansAlmanacHeatDesc" long_desc_key="perkFiremansAlmanacHeatLongDesc">

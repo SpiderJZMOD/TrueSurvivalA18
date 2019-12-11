@@ -12,10 +12,9 @@
 
 		<item_display_info display_type="rangedShotgun" display_group="groupRanged">
 			<display_entry name="EntityDamage" title_key="statEntityDamageShotgun"/>
+			<display_entry name="RoundRayCount" title_key="statRoundRayCount"/>
 			<display_entry name="MagazineSize" title_key="statMagazineSize"/>
 			<display_entry name="RoundsPerMinute" title_key="statRoundsPerMinute"/>
-			<display_entry name="RoundRayCount" title_key="statRoundRayCount"/>
-			<!--RoundRayCount-->
 			<display_entry name="DamageFalloffRange" title_key="statDamageFalloffRange"/>
 			<display_entry name="DegradationMax" title_key="statDegradationMax"/>
 		</item_display_info>
@@ -126,17 +125,17 @@
 		</item_display_info>
 		<item_display_info display_type="ammoShotgun" display_group="groupAmmo">
 			<display_entry name="EntityDamage" title_key="statEntityDamageShotgun"/>
+			<display_entry name="RoundRayCount" title_key="statRoundRayCount"/>
 			<display_entry name="dTargetArmor" title_key="statTargetArmor" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
 			<display_entry name="BlockDamage" title_key="statBlockDamage"/>
 			<display_entry name="DamageFalloffRange" title_key="statDamageFalloffRange"/>
-			<display_entry name="RoundRayCount" title_key="statRoundRayCount"/>
 		</item_display_info>
 		<item_display_info display_type="ammoShotgunBreaching" display_group="groupAmmo">
 			<display_entry name="EntityDamage" title_key="statEntityDamageShotgun"/>
+			<display_entry name="RoundRayCount" title_key="statRoundRayCount"/>
 			<display_entry name="BlockDamage" title_key="statBlockDamage"/>
 			<display_entry name="dDamageDoor" title_key="statBlockDamageDoor" display_leading_plus="true"/>
 			<display_entry name="DamageFalloffRange" title_key="statDamageFalloffRange"/>
-			<display_entry name="RoundRayCount" title_key="statRoundRayCount"/>
 		</item_display_info>
 		<item_display_info display_type="ammoLauncher" display_group="groupAmmo">
 			<display_entry name="dExDamageEntity" title_key="statEntityDamageExplosion"/>
@@ -619,7 +618,7 @@
 			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
 			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
 			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="FertileLevel" title_key="FertileLevel"/>
+			<display_entry name="FertileLevel" title_key="statFertileLevel"/>
 		</item_display_info>
 
 		<item_display_info display_type="blockTerrainHardened" display_group="groupBlocks">

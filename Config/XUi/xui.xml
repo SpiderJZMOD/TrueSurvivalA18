@@ -56,6 +56,7 @@
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
+			<window name="windowToolsChemistryStation"/>
 			<window name="windowFuel" />
 			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
@@ -331,12 +332,121 @@
 			<window name="serverinfowindow" />
 		</window_group>
 -->
-	<window_group name="workstation_jz_CharacterChoiceComputer" controller="XUiC_WorkstationWindowGroup">
+		<window_group name="workstation_cntVendingMachine" controller="XUiC_WorkstationWindowGroup">
+            <window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+            <window name="windowOutput" />
+           	<window name="windowNonPagingHeader" />
+		</window_group>
+        <window_group name="workstation_cntVendingMachineTrader" controller="XUiC_WorkstationWindowGroup">
+            <window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+            <window name="windowOutput" />
+           	<window name="windowNonPagingHeader" />
+		</window_group>
+		
+		 <!--JZMOD ADDED-->
+		<window_group name="workstation_jz_CharacterChoiceComputer" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
 			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
+		<window_group name="workstation_jz_BulletPress" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_jz_OilRefinery" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+            <window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_jz_SteelForge" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+            <window name="windowToolsForge" />
+			<window name="windowFuel" />
+			<window name="windowBlastInput" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_jz_DryingRack" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_wallTorchLightPlayer" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowFuel" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_burningBarrelPlayer" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="windowFuel" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_jz_ResearchDesk" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_jz_ArmorTable" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="windowToolsArmorTable" />
+			<window name="lowerwindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_jz_MortarAndPestle" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_jz_PrepTable" controller="XUiC_WorkstationWindowGroup">
+            <window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+            <window name="windowToolsPrepTable" />
+			<window name="windowFuel" />
+			<window name="windowPrepTableInput" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_jz_StoneMill" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="lowerwindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_jz_MethaneProducer" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			<window name="lowerwindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+      
 	</ruleset>
 </xui>

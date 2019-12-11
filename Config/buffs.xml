@@ -79,7 +79,7 @@ List of hacks to be removed:
 			<passive_effect name="WaterChangeOT" operation="perc_set" value="0"/>
 			<passive_effect name="StaminaChangeOT" operation="perc_add" value="1000"/>
 			<passive_effect name="HealthMaxModifierOT" operation="base_add" value="100"/>
-			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="100"/>
+			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="100"/> <!--Tiredness-->
 			<passive_effect name="CarryCapacity" operation="base_set" value="45"/>
 			<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
 			<passive_effect name="PhysicalDamageResist" operation="base_add" value="200"/>
@@ -139,7 +139,7 @@ List of hacks to be removed:
 		<duration value="5"/>
 		<effect_group>
 			<passive_effect name="WaterChangeOT" operation="base_subtract" value="10"/>
-			<passive_effect name="StaminaMaxModifierOT" operation="base_subtract" value="10"/>
+			<passive_effect name="StaminaMaxModifierOT" operation="base_subtract" value="10"/><!--Tiredness-->
 
 		</effect_group>
 	</buff>
@@ -182,10 +182,7 @@ List of hacks to be removed:
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$journalB147" operation="set" value="1"/>
 		</effect_group>
 
-
-
 		<effect_group>
-				
 			<triggered_effect trigger="onSelfBuffStart" action="AddJournalEntry" journal="survivalTip"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddJournalEntry" journal="infectionTip"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddJournalEntry" journal="foodPoisoningTip"/>
@@ -199,11 +196,11 @@ List of hacks to be removed:
 			<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffStatusCheck01,buffStatusCheck02,buffPerkAbilityUpdate,buffNearDeathTraumaTrigger"/>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusHungry01">
-				<requirement name="StatComparePercModMaxToMax" stat="Stamina" operation="LTE" value="0.5"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LTE" value="25"/>
 				<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusHungry02">
-				<requirement name="StatComparePercModMaxToMax" stat="Stamina" operation="LTE" value="0.3"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LTE" value="10"/>
 			</triggered_effect>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusThirsty01">
@@ -291,7 +288,7 @@ List of hacks to be removed:
 
 			<!-- set max bleeding stacks that a player can apply -->
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="1">
-				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="Equals" value="1"/></triggered_effect>
+				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="1"/></triggered_effect>
 			
 
 			<!-- Encumbrance from inventory slots
@@ -320,27 +317,18 @@ List of hacks to be removed:
 			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffDrawBow01">
 				<requirement name="HoldingItemHasTags" tags="bowDrawPenalty"/>
 			</triggered_effect>
-
-			<!-- Counting burst length -->
+		<!-- Counting burst length -->
 			<!--
 			<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="buffBurstCounter">
-
-
-	onSelfPrimaryActionStart			works
-	onSelfPrimaryActionRayHit		works
-	onSelfPrimaryActionEnd
-	onSelfPrimaryActionUpdate		fires constantly
-	onSelfPrimaryActionAttackFinished  n/a?
-
-
-
+			onSelfPrimaryActionStart			works
+			onSelfPrimaryActionRayHit		works
+			onSelfPrimaryActionEnd
+			onSelfPrimaryActionUpdate		fires constantly
+			onSelfPrimaryActionAttackFinished  n/a?
 			<triggered_effect trigger="onSelfPrimaryActionUpdate" action="AddBuff" buff="buffBurstCounter">
 				<requirement name="HoldingItemHasTags" tags="perkAutoWeaponsDamage"/>
 			</triggered_effect>
 			-->
-
-
-
 			<!-- Initialise perk abilities; buff only works onStack so fire it 2x -->
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
@@ -367,19 +355,6 @@ List of hacks to be removed:
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLevelUpTracking">
 				<requirement name="PlayerLevel" operation="GT" value="@$LastPlayerLevel"/>
 			</triggered_effect>
-
-			<!-- Player HP / stamina per level -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$PlayerLevelBonus" operation="set" value="@$LastPlayerLevel"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$PlayerLevelBonus" operation="add" value="-1">
-				<requirement name="PlayerLevel" operation="LT" value="2"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$PlayerLevelBonus" operation="set" value="100">
-				<requirement name="PlayerLevel" operation="GT" value="100"/>
-			</triggered_effect>
-
-			<passive_effect name="HealthMax" operation="base_add" value="@$PlayerLevelBonus"/>
-			<passive_effect name="StaminaMax" operation="base_add" value="@$PlayerLevelBonus"/>
-			<passive_effect name="WaterMax" operation="base_add" value="@$PlayerLevelBonus"/>
 		</effect_group>
 
 		<effect_group name="Power Attack Grunt">
@@ -406,7 +381,6 @@ List of hacks to be removed:
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="80"/>
 			</triggered_effect>
 		</effect_group>
-
 		<effect_group name="Pain Sound">
 			<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" sound="player#painlg">
 				<requirement name="StatComparePercCurrentToMax" operation="LTE" value="0.5"/>
@@ -414,6 +388,220 @@ List of hacks to be removed:
 			<triggered_effect trigger="onOtherDamagedSelf" action="PlaySound" sound="player#painsm">
 				<requirement name="StatComparePercCurrentToMax" operation="GT" value="0.5"/>
 			</triggered_effect>
+		</effect_group>
+		<!-- JZMOD FOOD STAT NOTIFICATION -->
+		<effect_group name="Stuffed Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GTE" value="101"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffFoodStuffed"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>					
+		</effect_group>
+		<effect_group name="100% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="100"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>		 	
+		</effect_group>
+		<effect_group name="90% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="90"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
+		</effect_group>
+		<effect_group name="80% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="80"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
+		</effect_group>
+		<effect_group name="70% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="70"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
+		</effect_group>
+		<effect_group name="60% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="60"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
+		</effect_group>
+		<effect_group name="50% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="50"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
+		</effect_group>
+		<effect_group name="40% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="40"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
+		</effect_group>
+		<effect_group name="30% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="30"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
+		</effect_group>
+		<effect_group name="20% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="20"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
+		</effect_group>
+		<effect_group name="10% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="10"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
+		</effect_group>
+		<effect_group name="5% Full Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="5"/>
+			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
+		</effect_group>
+		<effect_group name="Starving Buff Notification">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffFoodStarving"/>			
+		</effect_group>
+		<!-- JZMOD NUTRITION LEVELING AND NOTIFICATION -->
+		<effect_group name="Malnourished Activation">
+			<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="Equals" value="0"/>
+			<requirement name="NotHasBuff" buff="jz_BuffMalnourishedTimer"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffMalnourishedTimer"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBalancedDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBalancedDietTag"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffHealthyDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffGoodDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffGoodDietTag"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Malnourished Activation:"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>
+		</effect_group>
+		<effect_group name="Nutrition Level 0 Decrease">
+			<requirements compare_type="or">
+				<requirement name="CVarCompare" cvar="jz_PlayerVeggieVitamin" operation="LT" value="1"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerFruitVitamin" operation="LT" value="1"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="LT" value="1"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="LT" value="1"/>
+			</requirements>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffMalnourishedTimer">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBalancedDiet">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBalancedDietTag">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffHealthyDiet">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffGoodDiet">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffGoodDietTag">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 0 Decrease:">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="0">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
+		</effect_group>
+		<effect_group name="Nutrition Level 1 Decrease">
+			<requirements compare_type="or">
+				<requirement name="CVarCompare" cvar="jz_PlayerVeggieVitamin" operation="LT" value="2"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerFruitVitamin" operation="LT" value="2"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="LT" value="2"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="LT" value="2"/>
+			</requirements>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffGoodDiet">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBalancedDiet">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBalancedDietTag">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffHealthyDiet">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffMalnourishedTimer">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 1 Decrease:">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="1">	
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
+		</effect_group>
+		<effect_group name="Nutrition Level 2 Decrease">
+			<requirements compare_type="or">
+				<requirement name="CVarCompare" cvar="jz_PlayerVeggieVitamin" operation="LT" value="3"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerFruitVitamin" operation="LT" value="3"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="LT" value="3"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="LT" value="3"/>
+			</requirements>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffBalancedDiet">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffGoodDiet">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffHealthyDiet">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffMalnourishedTimer">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 2 Decrease:">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition">
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="2">	
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>
+		</effect_group>
+		<effect_group name="Nutrition Level 1 Increase">
+			<requirement name="CVarCompare" cvar="jz_PlayerVeggieVitamin" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerFruitVitamin" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="LT" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="1"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffGoodDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffGoodDietTag"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBalancedDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBalancedDietTag"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffHealthyDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffMalnourishedTimer"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 1 Increase:"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>
+		</effect_group>
+		<effect_group name="Nutrition Level 2 Increase">
+			<requirement name="CVarCompare" cvar="jz_PlayerVeggieVitamin" operation="GTE" value="2"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerFruitVitamin" operation="GTE" value="2"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="GTE" value="2"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="GTE" value="2"/>
+			<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="LT" value="2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="2"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffBalancedDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffBalancedDietTag"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffGoodDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffHealthyDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffMalnourishedTimer"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 2 Increase:"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>
+		</effect_group>
+		<effect_group name="Nutrition Level 3 Increase">
+			<requirement name="CVarCompare" cvar="jz_PlayerVeggieVitamin" operation="GTE" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerFruitVitamin" operation="GTE" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="GTE" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="GTE" value="3"/>
+			<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="LT" value="3"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="3"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffHealthyDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBalancedDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffGoodDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffMalnourishedTimer"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 3 Increase:"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>
+		</effect_group>
+		<!-- JZMOD MALNOURISHED ACTIVATION & NOTIFICATION-->
+		<effect_group name="Bad Diet Activation">
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="LTE" value="5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffBadDiet"/>			
+		</effect_group>
+		<effect_group name="Vitamin Deficiency Activation">
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="GTE" value="6"/>
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="LTE" value="10"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffVitaminDeficiency"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBadDiet"/>			
+		</effect_group>
+		<effect_group name="Malnourished Activation">
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="GTE" value="11"/>
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="LTE" value="15"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffMalnourished"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBadDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffVitaminDeficiency"/>				
 		</effect_group>
 	</buff>
 	<buff name="buffStatusCheck02" hidden="true" remove_on_death="false">
@@ -582,39 +770,28 @@ List of hacks to be removed:
 		<effect_group>
 			
 			<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar=".DeadEyeKillCounter" operation="set" value="0"/>
-
-		
-
 			<!-- perkIntrinsicImmunity update; will likely have to overhaul diseases but... not now -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$illnessChance" operation="set" value="20">
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="Equals" value="1"/> </triggered_effect>
-			
-
 			<!-- perkSlowMetabolism : food poisoning / dysentery resistence -->
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="0">
-				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="Equals" value="1"/></triggered_effect>
-			
-
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value=".85">
+				<requirement name="ProgressionLevel" progression_name="jz_TraitIronGut" operation="Equals" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="1.15">
+				<requirement name="ProgressionLevel" progression_name="jz_TraitWeakStomach" operation="Equals" value="1"/></triggered_effect>
 			<!-- perkSlowMetabolism : breath hold duration update -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="set" value="-12"/>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="multiply" value="@$MetabolismResist"/>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="add" value="30"/>
-
 			<!-- perkSlowMetabolism : buff duration update -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".1"/>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="multiply" value="@$MetabolismResist"/>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="1" operation="divide" value="@$MetabolismDuration"/>
-
 			<!-- perkPhysician update -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="healthPerkIncrease" operation="set" value="2">
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="Equals" value="1"/></triggered_effect>
-			
-
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="medicPerkIncrease" operation="set" value="1">
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="Equals" value="1"/></triggered_effect>
-			
-
 			<!-- perkParkour update -->
 			<!-- 1m = .01414 -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$parkourBonus" operation="set" value="0">
@@ -623,7 +800,7 @@ List of hacks to be removed:
 		</effect_group>
 	</buff>
 
-	<buff name="buffCrouching" hidden="true">
+	<buff name="buffCrouching" hidden="true"> 
 		<stack_type value="ignore"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfStand" action="RemoveBuff" buff="buffCrouching"/>
@@ -694,12 +871,17 @@ List of hacks to be removed:
 
 			<!-- Taking care of food/water not being maxed with all the game start / initial chunk generation -->
 			<passive_effect name="WaterChangeOT" operation="base_add" value="2,2" duration="0,8"/>
-			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="2,2" duration="0,8"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="99"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="99"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmount" operation="add" value="48"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmount" operation="add" value="48"/>
+			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="2,2" duration="0,8"/><!--Tiredness-->
+		
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value="5"/><!--VeggieVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value="5"/><!--FruitVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value="5"/><!--GrainVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value="5"/><!--ProteinVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="50"/><!--Food-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodAmountAdd" operation="add" value="99"/><!--Tiredness-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="99"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodAmount" operation="add" value="48"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="waterAmount" operation="add" value="48"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
 		</effect_group>
 		
@@ -1184,15 +1366,9 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 			</triggered_effect>
 
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$bleedAmount" operation="set" value="@bleedCounter"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$bleedAmount" operation="divide" value="2">
-				<requirement name="CVarCompare" cvar="CharismaticNature" operation="GTE" value="3"/>
-			</triggered_effect>
-
+			
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$bleedAmount" operation="set" value="@bleedCounter"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$bleedAmount" operation="divide" value="2">
-				<requirement name="CVarCompare" cvar="CharismaticNature" operation="GTE" value="3"/>
-			</triggered_effect>
-
+			
 			<passive_effect name="HealthMaxModifierOT" operation="base_subtract" value="@$bleedAmount"/>
 			<passive_effect name="HealthChangeOT" operation="base_subtract" value="@$bleedAmount"/>
 
@@ -2211,8 +2387,6 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-
-
 	<buff name="buffBurningWeapon" name_key="buffBurningWeaponName" icon="ui_game_symbol_fire" icon_color="0,255,0" hidden="true">
 		<stack_type value="replace"/>
 		<duration value="10"/>
@@ -2421,7 +2595,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 			<passive_effect name="HealthChangeOT" operation="base_add" value="1">
 				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LTE" value="@$NearDeathRegen"/>
 			</passive_effect>
-			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="1">
+			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="1"><!--Tiredness-->
 				<requirement name="StatComparePercModMaxToMax" stat="Stamina" operation="LTE" value="@$NearDeathRegen"/>
 			</passive_effect>
 			<passive_effect name="WaterChangeOT" operation="base_add" value="1">
@@ -2753,7 +2927,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 
 			<passive_effect name="HealthMaxModifierOT" operation="base_subtract" value=".05"/>
 			<passive_effect name="HealthChangeOT" operation="base_subtract" value=".01"/>
-			<passive_effect name="StaminaMaxModifierOT" operation="base_subtract" value=".1"/>
+			<passive_effect name="StaminaMaxModifierOT" operation="base_subtract" value=".1"/><!--Tiredness-->
 
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffIllPneumonia01">
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$illnessChance"/>
@@ -2761,65 +2935,66 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 
 		</effect_group>
 	</buff>
-
-	<buff name="buffInfectionCatch" name_key="buff Infection Catch"  hidden="true">
+	<!-- JZMOD GRAB CHANCE SCALES OFF CURRENT STAMINA -->
+	<buff name="buffInfectionCatch" name_key="buff Grab Chance"  hidden="true">
 		<damage_type value="Infection"/>
 		<stack_type value="ignore"/>
 		<duration value=".1"/>
 
-		<effect_group name="a chance to nope out of infection that is based on health">
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="12.6">
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="GT" value=".95"/>
+		<effect_group name="a chance to nope out of Grab that is based on Stamina">
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="7">
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="GT" value=".90"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="17.2">
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LTE" value=".95"/>
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="GT" value=".90"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="15">
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="LTE" value=".90"/>
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="GT" value=".80"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="26.4">
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LTE" value=".90"/>
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="GT" value=".85"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="20">
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="LTE" value=".80"/>
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="GT" value=".70"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="35.6">
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LTE" value=".85"/>
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="GT" value=".80"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="25">
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="LTE" value=".70"/>
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="GT" value=".60"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="44.8">
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LTE" value=".80"/>
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="GT" value=".70"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="30">
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="LTE" value=".60"/>
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="GT" value=".50"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="63.2">
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LTE" value=".70"/>
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="GT" value=".60"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="35">
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="LTE" value=".50"/>
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="GT" value=".40"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="81.6">
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LTE" value=".60"/>
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="GT" value=".50"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="40">
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="LTE" value=".40"/>
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="GT" value=".30"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="100">
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LTE" value=".50"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="45">
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="LTE" value=".30"/>
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="GT" value=".20"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="50">
+				<requirement name="StatComparePercCurrentToMax" stat="Stamina" operation="LTE" value=".20"/>
 			</triggered_effect>
 		</effect_group>
 
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InfectionNope" operation="add" value="@jzCvarGrabMore">
+				<requirement name="CVarCompare" cvar="jzCvarGrabMore" operation="GT" value="0"/> </triggered_effect>
+		</effect_group>
+		
 		<effect_group>
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LT" value="@.InfectionNope"/>
-			<requirement name="NotHasBuff" buff="buffInfectionMain"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="infectionCounter" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInfectionMain"/>
-		</effect_group>
-
-		<effect_group name="zombie hit increases infection severity">
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="infectionCounter" operation="add" value="@infectionZombieHit">
-				<requirement name="CVarCompare" cvar="infectionCounter" operation="GT" value="0"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="1,50" operation="LT" value="@.InfectionNope"/>
-			</triggered_effect>
+			<requirement name="NotHasBuff" buff="buffInjuryStunned01"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryStunned01"/>
 		</effect_group>
 
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="infectionZombieHit" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar=".InfectionNope" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarGrabMore" operation="set" value="0"/>
 		</effect_group>
 	</buff>
-
+		
 	<buff name="buffInfectionMain" name_key="buff Infection Main" hidden="true" icon="ui_game_symbol_infection">
 		<damage_type value="Infection"/>
 		<stack_type value="ignore"/>
@@ -3191,8 +3366,6 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-
-<!-- ****************** Healing Item Buffs: Medical, Food, Drink ****************** -->
 	<buff name="buffProcessConsumables" hidden="true">
 		<stack_type value="ignore"/>
 		<duration value=".05"/>
@@ -3207,119 +3380,542 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 			<requirement name="NotHasBuff" buff="buffIllFoodPoisoning01"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDoingHealingWrong"/><!-- display "Dude, you are doing it wrong!" message -->
 		</effect_group>
-
 		<effect_group>
 			<requirement name="NotHasBuff" buff="buffIllFoodPoisoning01"/>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHealHealth">
-					<requirement name="CVarCompare" cvar="medicalHealthAmount" operation="GT" value="0"/></triggered_effect>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHealHealth">
-					<requirement name="CVarCompare" cvar="foodHealthAmount" operation="GT" value="0"/></triggered_effect>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHealHealthMax">
-					<requirement name="CVarCompare" cvar="maxHealthAmount" operation="GT" value="0"/></triggered_effect>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffHealStaminaMax">
-					<requirement name="CVarCompare" cvar="$foodAmountAdd" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffHealHealth">
+					<requirement name="CVarCompare" target="self" cvar="foodHealthAmount" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffHealHealth">
+					<requirement name="CVarCompare" target="self" cvar="medicalHealthAmount" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffDecreaseHealth">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerHealthDrain" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffDecreaseWater">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerWaterDrain" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffFullnessFader">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerFoodStat" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffIncreaseFood">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerFoodAdd" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffDecreaseFood">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerFoodDrain" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffIncreseStamina">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerStaminaAdd" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffDecreseStamina">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerStaminaDrain" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffIncreaseMaxHealth">
+					<requirement name="CVarCompare" target="self" cvar="maxHealthAmount" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffDecreaseMaxHealth">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerHealthMaxDrain" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffHealStaminaMax">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerAwakeAdd" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffDecreaseAwake">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerAwakeDrain" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffVitaminFader">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerProteinVitamin" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffVitaminFader">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerGrainVitamin" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffVitaminFader">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerFruitVitamin" operation="GT" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffVitaminFader">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerVeggieVitamin" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
-
 		<effect_group>
 			<requirement name="NotHasBuff" buff="buffIllFoodPoisoning01"/>
 			<requirement name="CVarCompare" cvar="$waterAmountAdd" operation="GT" value="0"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterStaminaRegenAmount" operation="add" value="@$waterAmountAdd"/>
 				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd2" operation="add" value="@$waterAmountAdd"/>
-
 				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffHealWaterMax"/>
 				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffWaterStaminaRegen"/>
 				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$waterAmountAdd" operation="set" value="0"/>
-
-			<!-- <triggered_effect trigger="onSelfBuffRemove" action="LogMessage" message="water buff triggered"/> -->
 		</effect_group>
 	</buff>
-
+	<!-- FOOD STAT -->
+	<buff name="jz_BuffFullnessCheck" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+	</buff>
+		
+	<buff name="jz_BuffFullnessFader" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="10"/>
+		<duration value="0"/>
+		<effect_group name="Food Stat Fader">
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="-1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Food Level =, @jz_PlayerFoodStat"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerFoodStat"/>
+		</effect_group>
+	</buff>
+	
 	<buff name="buffHealHealth" name_key="buffHealHealthName" description_key="buffHealHealthDesc" icon="ui_game_symbol_add">
 		<stack_type value="ignore"/>
 		<update_rate value="1"/>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="foodHealthAmount" operation="GTE" value="0"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value=".5"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value=".5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value=".5">
+					<requirement name="ProgressionLevel" progression_name="jz_TraitMedic" operation="Equals" value="0"/> 
+					<requirement name="ProgressionLevel" progression_name="jz_TraitHemophobic" operation="Equals" value="0"/> </triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value=".5">
+					<requirement name="ProgressionLevel" progression_name="jz_TraitMedic" operation="Equals" value="1"/> 
+					<requirement name="ProgressionLevel" progression_name="jz_TraitHemophobic" operation="Equals" value="1"/> </triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value=".4">
+					<requirement name="ProgressionLevel" progression_name="jz_TraitMedic" operation="Equals" value="1"/> 
+					<requirement name="ProgressionLevel" progression_name="jz_TraitHemophobic" operation="Equals" value="0"/> </triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="subtract" value=".6">
+					<requirement name="ProgressionLevel" progression_name="jz_TraitMedic" operation="Equals" value="0"/> 
+					<requirement name="ProgressionLevel" progression_name="jz_TraitHemophobic" operation="Equals" value="1"/> </triggered_effect>
 		</effect_group>
-
 		<effect_group>
 			<requirement name="CVarCompare" cvar="medicalHealthAmount" operation="GT" value="0"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="2"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalHealthAmount" operation="subtract" value="2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalHealthAmount" operation="subtract" value="2">
+					<requirement name="ProgressionLevel" progression_name="jz_TraitMedic" operation="Equals" value="0"/> 
+					<requirement name="ProgressionLevel" progression_name="jz_TraitHemophobic" operation="Equals" value="0"/> </triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalHealthAmount" operation="subtract" value="2">
+					<requirement name="ProgressionLevel" progression_name="jz_TraitMedic" operation="Equals" value="1"/> 
+					<requirement name="ProgressionLevel" progression_name="jz_TraitHemophobic" operation="Equals" value="1"/> </triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalHealthAmount" operation="subtract" value="1.6">
+					<requirement name="ProgressionLevel" progression_name="jz_TraitMedic" operation="Equals" value="1"/> 
+					<requirement name="ProgressionLevel" progression_name="jz_TraitHemophobic" operation="Equals" value="0"/> </triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="medicalHealthAmount" operation="subtract" value="2.4">
+					<requirement name="ProgressionLevel" progression_name="jz_TraitMedic" operation="Equals" value="0"/> 
+					<requirement name="ProgressionLevel" progression_name="jz_TraitHemophobic" operation="Equals" value="1"/> </triggered_effect>
 		</effect_group>
-
+	
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealHealth">
 				<requirement name="CVarCompare" cvar="medicalHealthAmount" operation="LTE" value="0"/>
-				<requirement name="CVarCompare" cvar="foodHealthAmount" operation="LTE" value="-.5"/>
+				<requirement name="CVarCompare" cvar="foodHealthAmount" operation="LTE" value="0"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="healthIncrease" operation="set" value="2"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="foodHealthAmount" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="medicalHealthAmount" operation="set" value="0"/>
 		</effect_group>
 	</buff>
-
-	<buff name="buffHealHealthMax" name_key="buffHealHealthMaxName" description_key="buffHealHealthMaxDesc" icon="ui_game_symbol_medical">
+	
+	<buff name="jz_BuffDecreaseHealth" hidden="true">
 		<stack_type value="ignore"/>
 		<update_rate value="1"/>
+		<duration value="0"/>
 		<effect_group>
-			<passive_effect name="HealthMaxModifierOT" operation="base_add" value="@maxHealthIncrease"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="maxHealthAmount" operation="subtract" value="1"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealHealthMax">
-				<requirement name="CVarCompare" cvar="maxHealthAmount" operation="LTE" value="0"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="maxHealthIncrease" operation="set" value="1"/>
+			<requirement name="CVarCompare" target="self" cvar="jz_PlayerHealthDrain" operation="GTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="Health" operation="subtract" value=".5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="subtract" value=".5"/>
+		</effect_group>
 
-			<!--
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="maxHealthIncrease"/>
-			-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffDecreaseHealth">
+				<requirement name="CVarCompare" target="self" cvar="jz_PlayerHealthDrain" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffDecreaseWater" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+		<requirement name="StatCompare" target="self" stat="water" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="water" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerWaterDrain" operation="subtract" value="1"/>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffDecreaseWater">
+				<requirement name="CVarCompare" target="self" cvar="jz_PlayerWaterDrain" operation="LTE" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="set" value="0"/>
 		</effect_group>
 	</buff>
 
-	<!-- digesting food -->
-	<!-- $foodAmountAdd is not displayed to the player and is the amount of Max Stamina that consuming food items stacks up.
-		$foodAmount  is ADDED to the food stat for display purposes. The internal food stat number range is still = Max Stamina. -->
+	<buff name="jz_BuffIncreaseFood" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+			<requirement name="CVarCompare" target="self" cvar="FoodGainSuspend" operation="Equals" value="0"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffPlayerFoodNotificationOC">
+				<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotification"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerFoodStat" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerFoodAdd" operation="add" value="-1"/>
+					
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="FoodGainSuspend" operation="set" value="1">
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GTE" value="120"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="FoodGainSuspend" operation="set" value="0">
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LTE" value="124"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffPlayerFoodNotificationOC">
+				<requirement name="CVarCompare" target="self" cvar="jz_PlayerFoodAdd" operation="LTE" value="0"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffIncreaseFood">
+				<requirement name="CVarCompare" target="self" cvar="jz_PlayerFoodAdd" operation="LTE" value="0"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="set" value="120">
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GT" value="120"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffDecreaseFood" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+			<requirement name="CVarCompare" target="self" cvar="jz_PlayerFoodStat" operation="GT" value="0"/> 
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffPlayerFoodNotificationOC">
+				<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotification"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerFoodStat" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerFoodDrain" operation="subtract" value="1"/>
+		
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffPlayerFoodNotificationOC">
+				<requirement name="CVarCompare" target="self" cvar="jz_PlayerFoodDrain" operation="LTE" value="0"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffDecreaseFood">
+				<requirement name="CVarCompare" target="self" cvar="jz_PlayerFoodDrain" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="jz_PlayerFoodDrain" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+
+	<buff name="jz_BuffIncreseStamina" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerStaminaAdd" operation="subtract" value="1"/>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffIncreseStamina">
+				<requirement name="CVarCompare" target="self" cvar="jz_PlayerStaminaAdd" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="jz_PlayerStaminaAdd" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffDecreseStamina" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerStaminaDrain" operation="subtract" value="1"/>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffDecreseStamina">
+				<requirement name="CVarCompare" target="self" cvar="jz_PlayerStaminaDrain" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="set" value="0"/>
+		</effect_group>
+	</buff>	
+	
+	<buff name="jz_BuffIncreaseMaxHealth" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="jz_WellnessLv" operation="LT" value="200"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="subtract" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="subtract" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffIncreaseMaxHealth">
+					<requirement name="CVarCompare" target="self" cvar="maxHealthAmount" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="maxHealthAmount" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" target="self" cvar="jz_WellnessLv" operation="GTE" value="200"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="jz_BuffIncreaseMaxHealth">
+					<requirement name="CVarCompare" target="self" cvar="maxHealthAmount" operation="LTE" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffIncreaseMaxHealth">
+					<requirement name="CVarCompare" target="self" cvar="maxHealthAmount" operation="LTE" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="maxHealthAmount" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffDecreaseMaxHealth" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+				<requirement name="CVarCompare" target="self" cvar="jz_WellnessLv" operation="GT" value="20"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_PlayerHealthMaxDrain" operation="subtract" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="jz_BuffDecreaseMaxHealth">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerHealthMaxDrain" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerHealthMaxDrain" operation="subtract" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffDecreaseMaxHealth">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerHealthMaxDrain" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" target="self" cvar="jz_WellnessLv" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_PlayerHealthMaxDrain" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="self" buff="jz_BuffDecreaseMaxHealth">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerHealthMaxDrain" operation="LTE" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerHealthMaxDrain" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="jz_BuffDecreaseMaxHealth">
+					<requirement name="CVarCompare" target="self" cvar="jz_PlayerHealthMaxDrain" operation="LTE" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+
 	<buff name="buffHealStaminaMax" name_key="buffHealStaminaMaxName" icon="ui_game_symbol_hunger" icon_color="0,200,0" hidden="true">
 		<stack_type value="ignore"/>
-		<update_rate value=".1"/>
-		<effect_group name="heal Stamina Max from $foodAmount reserve">
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group >
 			<requirement name="!IsStatAtMax" stat="maxstamina"/>
-			<requirement name="CVarCompare" cvar="$foodAmount" operation="GTE" value=".1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value=".1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$foodAmount" operation="subtract" value=".1"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerAwakeAdd" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="subtract" value="1"/>
 		</effect_group>
-
-		<effect_group name="converting $foodAmountAdd into $foodAmount">
-			<requirement name="CVarCompare" cvar="$foodAmountAdd" operation="GTE" value=".1"/>
-			<requirement name="CVarCompare" cvar="$foodAmount" operation="LT" value="50"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$foodAmount" operation="add" value=".1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$foodAmountAdd" operation="subtract" value=".1"/>
-		</effect_group>
-
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealStaminaMax">
-				<requirement name="CVarCompare" cvar="$foodAmount" operation="LT" value=".1"/>
-				<requirement name="CVarCompare" cvar="$foodAmountAdd" operation="LT" value=".1"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$foodAmount" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$foodAmountAdd" operation="set" value="0"/>
-		</effect_group>
-
-		<effect_group name="how much you can overeat">
-			<requirement name="CVarCompare" cvar="$foodAmount" operation="GTE" value="50"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$foodAmount" operation="set" value="50"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$foodAmountAdd" operation="set" value="0"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerAwakeAdd" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="set" value="0"/>
 		</effect_group>
 	</buff>
 
+	<buff name="jz_BuffDecreaseAwake" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+			<requirement name="CVarCompare" target="self" cvar="AwakeLossSuspend" operation="Equals" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_PlayerAwakeDrain" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerAwakeDrain" operation="subtract" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AwakeLossSuspend" operation="set" value="1">
+				<requirement name="StatComparePercModMaxToMax" stat="stamina" operation="LTE" value=".2"/></triggered_effect>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffDecreaseAwake">
+				<requirement name="CVarCompare" cvar="jz_PlayerAwakeDrain" operation="LTE" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="AwakeLossSuspend" operation="set" value="0">
+				<requirement name="StatComparePercModMaxToMax" stat="stamina" operation="GT" value=".2"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="jz_PlayerAwakeDrain" operation="set" value="0">
+				<requirement name="CVarCompare" cvar="jz_PlayerAwakeDrain" operation="LTE" value="0"/></triggered_effect>
+		</effect_group>
+	</buff>
+
+<!-- JZMOD FOOD SYSTEM -->
+	<buff name="jz_BuffVitaminFader" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="6"/>
+		<duration value="0"/>
+		<effect_group name="Protein Vitamin Fader ">
+			<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="GTE" value="0.1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value="-0.1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Protein Vitamin Level, console message"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerProteinVitamin"/>
+		</effect_group>
+		<effect_group name="Grain Vitamin Fader ">
+			<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="GTE" value="0.1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value="-0.1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Grain Vitamin Level, console message"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerGrainVitamin"/>
+		</effect_group>
+		<effect_group name="Fruit Vitamin Fader ">
+			<requirement name="CVarCompare" cvar="jz_PlayerFruitVitamin" operation="GTE" value="0.1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value="-0.1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Fruit Vitamin Level, console message"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerFruitVitamin"/>
+		</effect_group>
+		<effect_group name="Veggie Vitamin Fader ">
+			<requirement name="CVarCompare" cvar="jz_PlayerVeggieVitamin" operation="GTE" value="0.1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value="-0.1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Veggie Vitamin Level, console message"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerVeggieVitamin"/>
+		</effect_group>
+		<effect_group name="Fader Remover">
+			<requirement name="CVarCompare" cvar="jz_PlayerVeggieVitamin" operation="LT" value="0.1"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="LT" value="0.1"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerFruitVitamin" operation="LT" value="0.1"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="LT" value="0.1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffVitaminFader"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffGoodDiet" remove_on_death="false" name_key="jz_BuffGoodDietName" description_key="jz_BuffGoodDietDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+	</buff>
+	
+	<buff name="jz_BuffGoodDietTag" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+	</buff>
+	
+	<buff name="jz_BuffBalancedDiet" remove_on_death="false" name_key="jz_BuffBalancedDietName" description_key="jz_BuffBalancedDietDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="3"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="1"/>
+		</effect_group>	
+	</buff>
+	
+	<buff name="jz_BuffBalancedDietTag" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+	</buff>
+	
+	<buff name="jz_BuffHealthyDiet" remove_on_death="false" name_key="jz_BuffHealthyDietName" description_key="jz_BuffHealthyDietDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="3"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="1"/>
+		</effect_group>	
+		<effect_group>
+			<passive_effect name="Mobility" operation="perc_add" value="0.2"/>
+		</effect_group>		
+	</buff>
+	
+	<buff name="jz_BuffMalnourishedTimer" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="30"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarMalnourishedTicker" operation="add" value="1"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarMalnourishedTicker" operation="add" value="1"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffMalnourishedSystem"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="jz_BuffMalnourishedSystem"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="jzCvarMalnourishedTicker" operation="set" value="0"/>			
+		</effect_group>	
+	</buff>
+	
+	<buff name="jz_BuffMalnourishedSystem" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group name="Bad Diet Activation">
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="LTE" value="5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffBadDiet"/>			
+		</effect_group>
+		<effect_group name="Vitamin Deficiency Activation">
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="GTE" value="6"/>
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="LTE" value="10"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffVitaminDeficiency"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBadDiet"/>			
+		</effect_group>
+		<effect_group name="Malnourished Activation">
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="GTE" value="11"/>
+			<requirement name="CVarCompare" cvar="jzCvarMalnourishedTicker" operation="LTE" value="15"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffMalnourished"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBadDiet"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffVitaminDeficiency"/>				
+		</effect_group>
+	</buff>
+
+	<buff name="jz_BuffBadDiet" remove_on_death="false" name_key="jz_BuffBadDietName" description_key="jz_BuffBadDietDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="3"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffBadDietFoodDrain"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="jz_BuffBadDietFoodDrain"/>
+		</effect_group>	
+	</buff>
+	
+	<buff name="jz_BuffBadDietFoodDrain" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="60"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>
+		</effect_group>		
+	</buff>
+	
+	<buff name="jz_BuffVitaminDeficiency" remove_on_death="false" name_key="jz_BuffVitaminDeficiencyName" description_key="jz_BuffVitaminDeficiencyDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffVitaminDeficiencyFoodDrain"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="jz_BuffVitaminDeficiencyFoodDrain"/>
+		</effect_group>	
+				<effect_group>
+			<passive_effect name="Mobility" operation="perc_subtract" value="0.05"/>
+		</effect_group>		
+	</buff>
+	
+	<buff name="jz_BuffVitaminDeficiencyFoodDrain" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="30"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>
+		</effect_group>		
+	</buff>
+	
+	<buff name="jz_BuffMalnourished" remove_on_death="false" name_key="jz_BuffMalnourishedName" description_key="jz_BuffMalnourishedDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffVitaminDeficiencyFoodDrain"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="jz_BuffVitaminDeficiencyFoodDrain"/>
+		</effect_group>	
+		<effect_group>
+			<passive_effect name="Mobility" operation="perc_subtract" value="0.1"/>
+		</effect_group>		
+	</buff>
+	
+	<buff name="jz_BuffMalnourishedFoodDrain" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="20"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>
+		</effect_group>		
+	</buff>
+	
 	<buff name="buffPuking01" name_key="buffPuking01Name" icon="ui_game_symbol_hunger" icon_color="255,0,0" hidden="true">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="4"/>
 		<update_rate value="2"/>
 		<effect_group>
-			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="-12.5"/>
+			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="-12.5"/><!--Tiredness-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="water" operation="subtract" value="50"/>
 			<passive_effect name="WalkSpeed" operation="perc_add" duration="0,4" value="-.9,-.7"/>
 			<passive_effect name="RunSpeed" operation="perc_add" duration="0,4" value="-.9,-.7"/>
@@ -3349,8 +3945,6 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		<stack_type value="ignore"/>
 		<duration value="300"/>
 	</buff>
-
-
 	<!-- digesting water -->
 	<buff name="buffHealWaterMax" name_key="buffHealWaterMaxName" description_key="buffHealWaterMaxDesc" icon="ui_game_symbol_water" hidden="true">
 		<stack_type value="ignore"/>
@@ -3445,56 +4039,6 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-
-<!--legacy drunk code
-	<buff name="buffDrunk01" name_key="buffDrunk01Name" description_key="buffDrunk01Desc" tooltip_key="buffDrunk01Tooltip" icon="ui_game_symbol_beer">
-		<stack_type value="duration"/>
-		<duration value="60"/>
-		<update_rate value="30"/>
-		<effect_group>
-			<passive_effect name="EntityDamage" operation="perc_add" value="@$DrunkMelee" tags="melee"/>
-			<passive_effect name="StaminaChangeOT" operation="base_add" value="@$DrunkStam"/>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDrunk02">
-				<requirement name="CVarCompare" cvar="beers" operation="GT" value="3"/>
-			</triggered_effect>
-
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" effect_name="Drunk"/>
-			<triggered_effect trigger="onSelfBuffFinish" action="ModifyScreenEffect" intensity="0" effect_name="Drunk"/>
-		</effect_group>
-	</buff>
-
-	<buff name="buffDrunk01Extended" icon="ui_game_symbol_beer">
-		<duration value="1"/>
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDrunk01"/>
-		</effect_group>
-	</buff>
-
-	<buff name="buffDrunk02" name_key="buffDrunk02Name" description_key="buffDrunk02Desc" tooltip_key="buffDrunk02Tooltip" icon="ui_game_symbol_beer">
-		<stack_type value="duration"/>
-		<duration value="120"/>
-		<effect_group>
-			<passive_effect name="EntityDamage" operation="perc_add" value="@$DrunkMelee" tags="melee"/>
-			<passive_effect name="StaminaChangeOT" operation="base_add" value="@$DrunkStam"/>
-			<passive_effect name="HealthLoss" operation="perc_subtract" value="@$DrunkRes"/>
-			<passive_effect name="HealthChangeOT" operation="base_add" value="@$DrunkHeal"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" effect_name="Drunk"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" effect_name="Drunk"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDrunk01"/>
-			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="beers" operation="subtract" value="2"/>
-
-			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffDrunk01">
-				<requirement name="CVarCompare" cvar="beers" operation="LT" value="3"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffDrunk02">
-				<requirement name="CVarCompare" cvar="beers" operation="GTE" value="3"/>
-			</triggered_effect>
-		</effect_group>
-	</buff>-->
-
 	<buff name="buffEncumberedInv" name_key="buffEncumberedInvName" description_key="buffEncumberedInvDesc" tooltip_key="buffEncumberedInvTooltip" icon="ui_game_symbol_pack_mule">
 		<stack_type value="ignore"/>
 		<damage_type value="stun"/>
@@ -3506,6 +4050,15 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$encumbranceEffect" operation="set" value="@_encumberedslots"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$encumbranceEffect" operation="multiply" value="0.026"/> <!--0.026% X 27 = 0.70-->
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$encumbranceEffect" operation="multiply" value="1.05">
+				<requirement name="ProgressionLevel" progression_name="jz_TraitOutOfShape" operation="Equals" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$encumbranceEffect" operation="multiply" value="1.1">
+				<requirement name="ProgressionLevel" progression_name="jz_TraitWeak" operation="Equals" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$encumbranceEffect" operation="multiply" value=".95">
+				<requirement name="ProgressionLevel" progression_name="jz_TraitFit" operation="Equals" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$encumbranceEffect" operation="multiply" value=".9">
+				<requirement name="ProgressionLevel" progression_name="jz_TraitStout" operation="Equals" value="1"/></triggered_effect>
 			<passive_effect name="Mobility" operation="perc_subtract" value="@$encumbranceEffect"/>
 			<!--<passive_effect name="JumpStrength" operation="perc_subtract" value="@$encumbranceEffect"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="_encumbrance"/>
@@ -4457,314 +5010,6 @@ icon="ui_game_symbol_pack_mule"
 		<duration value="4"/>
 	</buff>
 
-	<buff name="jz_MiningSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_MiningSkill" operation="base_add" value="@jz_MiningSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_AxeSkilTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_AxeSkill" operation="base_add" value="@jz_AxeSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_ChainsawSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_ChainsawSkill" operation="base_add" value="@jz_ChainsawSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_AugerSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_AugerSkill" operation="base_add" value="@jz_AugerSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_UnarmedSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_UnarmedSkill" operation="base_add" value="@jz_UnarmedSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_BluntSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_BluntSkill" operation="base_add" value="@jz_BluntSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_SledgeSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_SledgeSkill" operation="base_add" value="@jz_SledgeSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_BladeSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_BladeSkill" operation="base_add" value="@jz_BladeSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_ArcherySkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_ArcherySkill" operation="base_add" value="@jz_ArcherySkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_SpearSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_SpearSkill" operation="base_add" value="@jz_SpearSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_PistolSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_PistolSkill" operation="base_add" value="@jz_PistolSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_44MagSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_44MagSkill" operation="base_add" value="@jz_44MagSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_SMG5SkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_SMG5Skill" operation="base_add" value="@jz_SMG5SkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_BlunderbussSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_BlunderbussSkill" operation="base_add" value="@jz_BlunderbussSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_DBShotgunSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_DBShotgunSkill" operation="base_add" value="@jz_DBShotgunSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_PShotgunSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_PShotgunSkill" operation="base_add" value="@jz_PShotgunSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_HuntingRifleSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_HuntingRifleSkill" operation="base_add" value="@jz_HuntingRifleSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_MarksmanSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_MarksmanSkill" operation="base_add" value="@jz_MarksmanSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_AK47SkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_AK47Skill" operation="base_add" value="@jz_AK47SkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_M60SkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_M60Skill" operation="base_add" value="@jz_M60SkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_ExposivesSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_ExposivesSkill" operation="base_add" value="@jz_ExposivesSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_JunkTurretSkillTigger" hidden="true" remove_on_death="false" >
-		<stack_type value="replace"/>
-		<duration value="0"/>
-			<effect_group>
-			<triggered_effect trigger="onSelfBuffStack" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" target="self" message="You have leveled up Mining!" />
-			<triggered_effect trigger="onSelfBuffStack" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<passive_effect name="PerkLevel" tags="jz_JunkTurretSkill" operation="base_add" value="@jz_JunkTurretSkillLv" />
-			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningXP"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="tsMiningLoops"/>-->
-		</effect_group>
-	</buff>
-
 <buff name="jz_BuffSmallAnimalTracker" name_key="jz_buffSmallAnimalTrackerName" description_key="jz_buffSmallAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
 		<duration value="0"/>
 		<update_rate value=".5"/>
@@ -4772,7 +5017,7 @@ icon="ui_game_symbol_pack_mule"
 		<display_value_format value="time"/>
 
 		<effect_group name="Startup">
-			<!-- set the time delay for animal tracking -->
+			
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="4">
 				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="LT" value="2"/></triggered_effect>
 			
@@ -4790,7 +5035,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 
 		<effect_group>
-			<!-- tracking successful, activate next buff -->
+			
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_buffSmallAnimalTrackerAcquired">
 				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
 			</triggered_effect>
@@ -4798,7 +5043,7 @@ icon="ui_game_symbol_pack_mule"
 				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
 			</triggered_effect>
 
-			<!-- abort -->
+			
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffSmallAnimalTracker">
 				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="0"/>
 			</triggered_effect>
@@ -4851,184 +5096,646 @@ icon="ui_game_symbol_pack_mule"
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_buffSmallAnimalTrackerAcquired"/>
 		</effect_group>
 	</buff>
-
+<!-- JZMOD WOUND SYSTEM -->
 	<buff name="jz_BuffScratch" hidden="true" remove_on_death="false">
 		<stack_type value="ignore"/>
-		<update_rate value="2"/>
-		<duration value="0"/>
-		
+		<duration value="1"/>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="player#painsm" play_in_head="false"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
-				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem"/>
+			<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffScratchFader">
+				<requirement name="NotHasBuff" buff="jz_BuffScratchFader"/></triggered_effect>-->
+			
+			<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="jzCvarScratchCount"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="CVarLogValue" cvar="jzCvarScratchCount"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffScratchFader" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="10"/>
+		<duration value="0"/>
+		<effect_group name="Scratch Count Fader and Buff Remover">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarScratchCount"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffWoundSystem">
+				<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffScratchFader">
+				<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="0"/></triggered_effect>
 		</effect_group>
 	</buff>
 	
 	<buff name="jz_BuffWoundSystem" hidden="true" remove_on_death="false">
 		<stack_type value="ignore"/>
-		<update_rate value="3"/>
+		<update_rate value="1"/>
 		<duration value="0"/>
-		
-		<effect_group name="Scratch Count Fader and Buff Remover">
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="-1"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffWoundSystem">
-					<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="0"/></triggered_effect>
-		</effect_group>
-	
 		<effect_group name="Bruised Stage Activation">
 			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="GTE" value="6"/>
 			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="10"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffBruised">
-					<requirement name="NotHasBuff" buff="jz_BuffBruised"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffBruised"/>			
 		</effect_group>
-	
 		<effect_group name="Small Wound Stage Activation">
 			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="GTE" value="11"/>
 			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="15"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffSmallWound">
-					<requirement name="NotHasBuff" buff="jz_BuffSmallWound"/></triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffThrobbingPain">
-					<requirement name="NotHasBuff" buff="jz_BuffThrobbingPain"/></triggered_effect>
+					<requirement name="NotHasBuff" buff="jz_BuffDowngradingWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffThrobbingPain"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingOne"/>
+					<requirement name="NotHasBuff" buff="jz_BuffDirtyBandageOne"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingTwo"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffSmallWound">
+					<requirement name="NotHasBuff" buff="jz_BuffSmallWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingOne"/>
+					<requirement name="NotHasBuff" buff="jz_BuffDirtyBandageOne"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingTwo"/></triggered_effect>
 		</effect_group>
-	
 		<effect_group name="Wound Stage Activation">
 			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="GTE" value="16"/>
 			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="20"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffWound">
-					<requirement name="NotHasBuff" buff="jz_BuffWound"/></triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLegSprained">
-					<requirement name="NotHasBuff" buff="buffLegSprained"/></triggered_effect>
+					<requirement name="NotHasBuff" buff="jz_BuffDowngradingWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffWound"/>
+					<requirement name="NotHasBuff" buff="buffLegSprained"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingThree"/>
+					<requirement name="NotHasBuff" buff="jz_BuffDirtyBandageTwo"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingFour"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffWound">
+					<requirement name="NotHasBuff" buff="jz_BuffWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingThree"/>
+					<requirement name="NotHasBuff" buff="jz_BuffDirtyBandageTwo"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingFour"/></triggered_effect>
 		</effect_group>
-	
 		<effect_group name="Severe Wound Stage Activation">
 			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="GTE" value="21"/>
 			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="25"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffSevereWound">
-					<requirement name="NotHasBuff" buff="jz_BuffSevereWound"/></triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffGash">
-					<requirement name="NotHasBuff" buff="jz_BuffGash"/></triggered_effect>
+					<requirement name="NotHasBuff" buff="jz_BuffDowngradingWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffSevereWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffGash"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingFive"/>
+					<requirement name="NotHasBuff" buff="jz_BuffDirtyBandageThree"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingSix"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffSevereWound">
+					<requirement name="NotHasBuff" buff="jz_BuffSevereWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingFive"/>
+					<requirement name="NotHasBuff" buff="jz_BuffDirtyBandageThree"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingSix"/></triggered_effect>
 		</effect_group>
-	
-		<effect_group name="Deadly Wound Stage Activation">
+		<effect_group name="Infected Wound Stage Activation">
 			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="GTE" value="26"/>
-			<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="30"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffDeadlyWound">
-					<requirement name="NotHasBuff" buff="jz_BuffDeadlyWound"/></triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLegBroken">
-					<requirement name="NotHasBuff" buff="buffLegBroken"/></triggered_effect>
+					<requirement name="NotHasBuff" buff="jz_BuffDowngradingWound"/>
+					<requirement name="NotHasBuff" buff="buffLegBroken"/>
+					<requirement name="NotHasBuff" buff="jz_BuffInfectedWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingSeven"/>
+					<requirement name="NotHasBuff" buff="jz_BuffDirtyBandageFour"/>
+					<requirement name="NotHasBuff" buff="jz_BuffDirtyInfectedWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingEight"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffInfectedWound">
+					<requirement name="NotHasBuff" buff="jz_BuffInfectedWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingSeven"/>
+					<requirement name="NotHasBuff" buff="jz_BuffDirtyBandageFour"/>
+					<requirement name="NotHasBuff" buff="jz_BuffDirtyInfectedWound"/>
+					<requirement name="NotHasBuff" buff="jz_BuffTendingEight"/></triggered_effect>
 		</effect_group>
 	</buff>
 	
+	<buff name="jz_BuffDowngradingWound" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="4"/>
+	</buff>
 	
 	<buff name="jz_BuffBruised" remove_on_death="false" name_key="jz_BuffBruisedName" description_key="jz_BuffBruisedDesc" icon="ui_game_symbol_animal_tracker" >
 		<stack_type value="ignore"/>
+		<update_rate value="4"/>
 		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
+		</effect_group>		
 	</buff>
 	
 	<buff name="jz_BuffSmallWound" remove_on_death="false" name_key="jz_BuffSmallWoundName" description_key="jz_BuffSmallWoundDesc" icon="ui_game_symbol_animal_tracker" >
 		<stack_type value="ignore"/>
-		<update_rate value="2"/>
+		<update_rate value="15"/>
 		<duration value="0"/>
-		
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
-				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-12"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="add" value="-0.5"/>
+		
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-12"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="health" operation="add" value="-0.5"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffBruised"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
+		</effect_group>	
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.07"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.07"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.07"/>
+		</effect_group>		
+	</buff>
+	
+	<buff name="jz_BuffTendingOne" remove_on_death="false" name_key="jz_BuffTendingOneName" description_key="jz_BuffTendingOneDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--1800-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDirtyBandageOne"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffDirtyBandageOne" remove_on_death="false" name_key="jz_BuffDirtyBandageOneName" description_key="jz_BuffDirtyBandageOneDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--900-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="16"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffScratchFader"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffTendingTwo" remove_on_death="false" name_key="jz_BuffTendingTwoName" description_key="jz_BuffTendingTwoDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--1800-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="6"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffScratchFader"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDowngradingWound"/>
 		</effect_group>
 	</buff>
 	
 	<buff name="jz_BuffThrobbingPain" remove_on_death="false" name_key="jz_BuffThrobbingPainName" description_key="jz_BuffThrobbingPainDesc" icon="ui_game_symbol_animal_tracker" >
 		<stack_type value="ignore"/>
-		<update_rate value="2"/>
-		<duration value="0"/>
-		
+		<update_rate value="5"/>
+		<duration value="10"/>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
-				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffThrobbingPainScreen"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemBuff" buff="jz_BuffThrobbingPainScreen"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemBuff" buff="jz_BuffThrobbingPainScreenRestart"/>
+		</effect_group>
+		<effect_group>		
+			<passive_effect name="HypothermalResist" operation="base_add" value="-10"/>
+		</effect_group>
+	</buff>
+	<buff name="jz_BuffThrobbingPainScreenRestart" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffThrobbingPainScreen"/>
+		</effect_group>
+	</buff>
+	<buff name="jz_BuffThrobbingPainScreen" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<duration value="3"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.5" fade="1" effect_name="Blur"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffThrobbingPainScreenRestart"/>
 		</effect_group>
 	</buff>
 	
 	<buff name="jz_BuffWound" remove_on_death="false" name_key="jz_BuffWoundName" description_key="jz_BuffWoundDesc" icon="ui_game_symbol_animal_tracker" >
 		<stack_type value="ignore"/>
-		<update_rate value="2"/>
+		<update_rate value="25"/>
 		<duration value="0"/>
 		
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
-				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-25"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="add" value="-1"/>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-25"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="health" operation="add" value="-1"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWound"/>
+		</effect_group>	
+		<effect_group>
+			<passive_effect name="Mobility" operation="perc_subtract" value="0.09"/>
+		</effect_group>		
+	</buff>
+	
+	<buff name="jz_BuffTendingThree" remove_on_death="false" name_key="jz_BuffTendingThreeName" description_key="jz_BuffTendingThreeDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--1800-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDirtyBandageTwo"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffDirtyBandageTwo" remove_on_death="false" name_key="jz_BuffDirtyBandageTwoName" description_key="jz_BuffDirtyBandageTwoDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--900-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffScratchFader"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="21"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffTendingFour" remove_on_death="false" name_key="jz_BuffTendingFourName" description_key="jz_BuffTendingFourDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--1800-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffScratchFader"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDowngradingWound"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="11"/>
 		</effect_group>
 	</buff>
 	
 	<buff name="jz_BuffSevereWound" remove_on_death="false" name_key="jz_BuffSevereWoundName" description_key="jz_BuffSevereWoundDesc" icon="ui_game_symbol_animal_tracker" >
 		<stack_type value="ignore"/>
-		<update_rate value="2"/>
+		<update_rate value="10"/>
 		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-12"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="add" value="-0.5"/>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-12"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="health" operation="add" value="-0.5"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDeadlyWound"/>
+		</effect_group>	
+		<effect_group>
+			<passive_effect name="Mobility" operation="perc_subtract" value="0.09"/>
+		</effect_group>		
+	</buff>
+	
+	<buff name="jz_BuffTendingFive" remove_on_death="false" name_key="jz_BuffTendingFiveName" description_key="jz_BuffTendingFiveDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--1800-->
 		
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
-				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDirtyBandageThree"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffDirtyBandageThree" remove_on_death="false" name_key="jz_BuffDirtyBandageThreeName" description_key="jz_BuffDirtyBandageThreeDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--900-->
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffScratchFader"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="26"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffTendingSix" remove_on_death="false" name_key="jz_BuffTendingSixName" description_key="jz_BuffTendingSixDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--1800-->
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffScratchFader"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDowngradingWound"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="16"/>
 		</effect_group>
 	</buff>
 	
 	<buff name="jz_BuffGash" remove_on_death="false" name_key="jz_BuffGashName" description_key="jz_BuffGashDesc" icon="ui_game_symbol_animal_tracker" >
 		<stack_type value="ignore"/>
-		<update_rate value="2"/>
+		<update_rate value="15"/>
 		<duration value="0"/>
 		
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
-				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-5"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="add" value="-1"/>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-5"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="health" operation="add" value="-1"/>
+		</effect_group>
+		<effect_group>		
+			<passive_effect name="HypothermalResist" operation="base_add" value="-25"/>
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffDeadlyWound" remove_on_death="false" name_key="jz_BuffDeadlyWoundName" description_key="jz_BuffDeadlyWoundDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffInfectedWound" remove_on_death="false" name_key="jz_BuffInfectedWoundName" description_key="jz_BuffInfectedWoundDesc" icon="ui_game_symbol_animal_tracker" >
+	<stack_type value="ignore"/>
+		<update_rate value="10"/>
+		<duration value="0"/>
+		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-15"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="add" value="-1"/>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-15"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="health" operation="add" value="-1"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWound"/>				
+		</effect_group>	
+		<effect_group>
+			<passive_effect name="Mobility" operation="perc_subtract" value="0.09"/>
+		</effect_group>		
+	</buff>
+	
+	<buff name="jz_BuffTendingSeven" remove_on_death="false" name_key="jz_BuffTendingSevenName" description_key="jz_BuffTendingSevenDesc" icon="ui_game_symbol_animal_tracker" >
 		<stack_type value="ignore"/>
-		<update_rate value="2"/>
-		<duration value="0"/>
+		<duration value="30"/><!--1800-->
 		
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" target="self" sound="levelupplayer" play_in_head="false"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem">
-				<requirement name="NotHasBuff" buff="jz_BuffWoundSystem"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDirtyBandageFour"/>
 		</effect_group>
 	</buff>
 	
+	<buff name="jz_BuffDirtyBandageFour" remove_on_death="false" name_key="jz_BuffDirtyBandageFourName" description_key="jz_BuffDirtyBandageFourDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--900-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDirtyInfectedWound"/>
+		</effect_group>
+	</buff>
 	
+	<buff name="jz_BuffDirtyInfectedWound" remove_on_death="false" name_key="jz_BuffDirtyInfectedWoundName" description_key="jz_BuffDirtyInfectedWoundDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-30"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="add" value="-20"/>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-30"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="health" operation="add" value="-20"/>
+		
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="jz_BuffTendingSeven"/>
+		</effect_group>	
+	</buff>
 	
+	<buff name="jz_BuffTendingEight" remove_on_death="false" name_key="jz_BuffTendingEightName" description_key="jz_BuffTendingEightDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/><!--1800-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffScratchFader"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDowngradingWound"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="21"/>
+		</effect_group>
+	</buff>
+	<!-- JZMOD BURN WOUND -->
+	<buff name="jz_BuffBurnWound" remove_on_death="false" name_key="jz_BuffBurnWoundName" description_key="jz_BuffBurnWoundDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="30"/>
+		<duration value="7200"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-24"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="add" value="-1"/>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-24"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="health" operation="add" value="-1"/>
+		
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDidntHealBurn"/>
+		</effect_group>	
+	</buff>
+	<buff name="jz_BuffDidntHealBurn" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="21"/>			
+		</effect_group>	
+	</buff>
+	<buff name="jz_BuffTendingBurnWound" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="30"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="11"/>			
+		</effect_group>	
+	</buff>
+	<!-- JZMOD BITE WOUND -->
+	<buff name="jz_BuffZombieBiteTrigger" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value=".1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffZombieBite">		
+				<requirement name="HasBuff" buff="buffInjuryStunned01"/> </triggered_effect>
+		</effect_group>	
+	</buff>
+		
+	<buff name="jz_BuffZombieBite" remove_on_death="false" name_key="jz_BuffZombieBiteName" description_key="jz_BuffZombieBiteDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="30"/>
+		<duration value="3600"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-6"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-6"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="health" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="26"/>		
+		</effect_group>	
+		<effect_group>		
+			<passive_effect name="HypothermalResist" operation="base_add" value="-10"/>
+		</effect_group>
+	</buff>
 	
+	<buff name="jz_BuffTendingBiteWound" remove_on_death="false" name_key="jz_BuffTendingBiteWoundName" description_key="jz_BuffTendingBiteWoundDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<duration value="30"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="16"/>			
+		</effect_group>	
+	</buff>
 	
+	<buff name="jz_BuffSleepingOnNiceBed" remove_on_death="true" name_key="jz_BuffSleepingOnNiceBedName" description_key="jz_BuffSleepingOnNiceBedDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="replace"/>
+		<update_rate value=".2"/>
+		<duration value="3"/>
+		<effect_group>
+			<requirement name="!IsStatAtMax" stat="maxstamina"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value=".1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value=".1"/>
+		</effect_group>	
+	</buff>
+	<!-- JZMOD SNAKE BITE -->
+	<buff name="jz_BuffSnakeBite" remove_on_death="false" name_key="jz_BuffSnakeBiteName" description_key="jz_BuffSnakeBiteDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="3600"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffSnakeStun" />
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffSnakeLimp" />
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-2"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffSnakeBiteLvTwo" />
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffThrobbingPain" />			
+		</effect_group>	
+		<effect_group>		
+			<passive_effect name="Mobility" operation="perc_subtract" value="0.05"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="-5"/>
+		</effect_group>
+	</buff>
 	
+	<buff name="jz_BuffSnakeBiteLvTwo" remove_on_death="false" name_key="jz_BuffSnakeBiteName" description_key="jz_BuffSnakeBiteDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="3600"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-3"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffSnakeBiteLvThree" />
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffGash" />			
+		</effect_group>	
+		<effect_group>		
+			<passive_effect name="Mobility" operation="perc_subtract" value="0.15"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="-15"/>
+		</effect_group>
+	</buff>
 	
+	<buff name="jz_BuffSnakeBiteLvThree" remove_on_death="false" name_key="jz_BuffSnakeBiteName" description_key="jz_BuffSnakeBiteDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="3600"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-5"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-5"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="26"/>		
+		</effect_group>	
+		<effect_group>		
+			<passive_effect name="Mobility" operation="perc_subtract" value="0.5"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="-25"/>
+		</effect_group>
+	</buff>
 	
+	<buff name="jz_BuffSnakeStun" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group>		
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-20"/>
+		</effect_group>
+	</buff>
 	
+	<buff name="jz_BuffSnakeLimp" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="300"/>
+		<effect_group>		
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffSnakeLimpPt1"/>	
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="jz_BuffSnakeLimpPt1"/>	
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="jz_BuffSnakeLimpPt2"/>	
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="jz_BuffSnakeLimpPt1"/>	
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="jz_BuffSnakeLimpPt2"/>	
+		</effect_group>
+	</buff>
 	
+	<buff name="jz_BuffSnakeLimpPt1" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group>		
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffSnakeLimpPt2"/>	
+		</effect_group>
+	</buff>
 	
+	<buff name="jz_BuffSnakeLimpPt2" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+		<effect_group>		
+			<passive_effect name="Mobility" operation="perc_subtract" value="0.5"/>
+		</effect_group>
+		<effect_group>		
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffSnakeLimpPt1"/>	
+		</effect_group>
+	</buff>
 	
+	<!-- JZMOD ZOMBIE ACID SPIT -->
+	<buff name="jz_BuffAcidSpit" remove_on_death="false" name_key="jz_BuffAcidSpitName" description_key="jz_BuffAcidSpitDesc" icon="ui_game_symbol_animal_tracker" >
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="30"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="player#painlg"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-5"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-5"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="health" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>	
+	</buff>
+	<!-- JZMOD FOOD STAT ICONS -->
+	<buff name="jz_BuffFoodStuffed" remove_on_death="false" name_key="jz_BuffFoodStuffedName" description_key="jz_BuffFoodStuffedDesc" icon="ui_game_symbol_hunger" >
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodFive"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodTen"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodStarving"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodThirty"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodFourty"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodFifty"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodSixty"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodSeventy"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodEighty"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodNinety"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodFull"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodTwenty"/>	
+		</effect_group>
+	</buff>
+	<buff name="jz_BuffPlayerFoodNotification" remove_on_death="false" name_key="Fullness" description_key="jz_BuffFoodFullDesc" icon="ui_game_symbol_hunger" >
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
+	</buff>
 	
+	<buff name="jz_BuffPlayerFoodNotificationOC" remove_on_death="false" name_key="Fullness" description_key="jz_BuffFoodFullDesc" icon="ui_game_symbol_hunger" >
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
+	</buff>
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	<buff name="jz_BuffFoodStarving" remove_on_death="false" name_key="jz_BuffFoodStarvingName" description_key="jz_BuffFoodStarvingDesc" icon="ui_game_symbol_hunger" >
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodFive"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodTen"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodTwenty"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodThirty"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodFourty"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodFifty"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodSixty"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodSeventy"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodEighty"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodNinety"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodFull"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodStuffed"/>	
+		</effect_group>
+	</buff>
 </buffs>
-
-
 
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -5245,7 +5952,7 @@ REQUIREMENTS / CONDITIONS:             list of requirements list
 
 		IsDay
 		IsNight
-		InBiome biome="<biome id>"      			<requirement name="InBiome" biome="9"/>
+		InBiome biome="<biome id>"      			<requirement name="IsIndoors" biome="9"/>
 		PerksUnlocked skill_name="<skill name>"
 		PlayerItemCount item_name="<item name>"		An expensive function that should be used sparingly.
 		<requirement name="TimeOfDay" operation="GTE" value="1230"/>

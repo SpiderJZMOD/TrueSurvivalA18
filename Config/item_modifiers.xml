@@ -116,36 +116,6 @@ Example of using the seed (creation time) on a weapon to activate an effect
 			<property name="BarrelScale" value="1,1,1"/>
 		</item_property_overrides>
 
-		<item_property_overrides name="gunPumpShotgun">
-			<property name="Sound_start" value="pump_shotgun_s_fire"/>
-			<property name="BarrelOffset" value="0,-0.0322,0.4516"/>
-			<property name="BarrelScale" value="1.1,1.1,1.5"/>
-		</item_property_overrides>
-
-		<item_property_overrides name="gunDoubleBarrelShotgun">
-			<property name="Sound_start" value="pump_shotgun_s_fire"/>
-		</item_property_overrides>
-
-		<item_property_overrides name="gunAK47">
-			<property name="Sound_start" value="ak47_s_fire"/>
-			<property name="Sound_end" value="silencefiller"/>
-			<property name="BarrelOffset" value="-0.001,-0.0197,0.3197"/>
-			<property name="BarrelScale" value="1,1,1"/>
-		</item_property_overrides>
-
-		<!--	USING SNIPER RIFLE SILENCER INSTEAD OF THE MP5 ONE
-		<item_property_overrides name="gun44Magnum">
-			<property name="BarrelOffset" value="0,0.0477,-0.1593"/>
-			<property name="BarrelScale" value="1,1,1"/>
-			<property name="BarrelCameraOffset" value="0,0,0"/>
-		</item_property_overrides>
-		-->
-
-		<item_property_overrides name="gun44Magnum">
-			<property name="BarrelOffset" value="0,0.0418,-0.0207"/>
-			<property name="BarrelScale" value="0.8,0.8,1.5"/>
-		</item_property_overrides>
-
 		<item_property_overrides name="gunSMG5">
 			<property name="Sound_start" value="mp5_s_fire"/>
 			<property name="Sound_end" value="silencefiller"/>
@@ -153,15 +123,43 @@ Example of using the seed (creation time) on a weapon to activate an effect
 			<property name="BarrelScale" value="1,1,1"/>
 		</item_property_overrides>
 
-		<item_property_overrides name="gunMR10">
-			<property name="BarrelOffset" value="0,-0.02,0.2182"/>
-			<property name="BarrelScale" value="0.88,0.88,0.88"/>
-			<property name="Sound_start" value="sniperrifle_s_fire"/>
+		<!--<item_property_overrides name="gun44Magnum">
+			<property name="BarrelOffset" value="0,0.0418,-0.0207"/>
+			<property name="BarrelScale" value="0.8,0.8,1.5"/>
+		</item_property_overrides>
+		USING SNIPER RIFLE SILENCER INSTEAD OF THE MP5 ONE
+		<item_property_overrides name="gun44Magnum">
+			<property name="BarrelOffset" value="0,0.0477,-0.1593"/>
+			<property name="BarrelScale" value="1,1,1"/>
+			<property name="BarrelCameraOffset" value="0,0,0"/>
+		</item_property_overrides>-->
+
+		<item_property_overrides name="gunDoubleBarrelShotgun">
+			<property name="Sound_start" value="pump_shotgun_s_fire"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunPumpShotgun">
+			<property name="Sound_start" value="pump_shotgun_s_fire"/>
+			<property name="BarrelOffset" value="0,-0.0322,0.4516"/>
+			<property name="BarrelScale" value="1.1,1.1,1.5"/>
 		</item_property_overrides>
 
 		<item_property_overrides name="gunHuntingRifle">
 			<property name="Sound_start" value="hunting_rifle_s_fire"/>
 			<property name="BarrelOffset" value="0,-0.009,0.551"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMR10">
+			<property name="Sound_start" value="sniperrifle_s_fire"/>
+			<property name="BarrelOffset" value="0,-0.02,0.2182"/>
+			<property name="BarrelScale" value="0.88,0.88,0.88"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunAK47">
+			<property name="Sound_start" value="ak47_s_fire"/>
+			<property name="Sound_end" value="silencefiller"/>
+			<property name="BarrelOffset" value="-0.001,-0.0197,0.3197"/>
 			<property name="BarrelScale" value="1,1,1"/>
 		</item_property_overrides>
 
@@ -172,19 +170,15 @@ Example of using the seed (creation time) on a weapon to activate an effect
 		</item_property_overrides>
 
 		<effect_group tiered="false">
-			<passive_effect name="EntityDamage" operation="perc_add" value=".1">
-				<requirement name="ProgressionLevel" progression_name="perkUrbanCombatComplete" operation="Equals" value="1"/>
-			</passive_effect>
-
 			<passive_effect name="EntityDamage" operation="perc_add" value="-.15">
-				<requirement name="RandomRoll" seed_type="Item" min_max="1,100" operation="LTE" value="80"/>
+				<requirement name="ProgressionLevel" progression_name="perkUrbanCombatComplete" operation="LT" value="1"/>
 			</passive_effect>
-			<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.25">
+			<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2"/>
+			<passive_effect name="MaxRange" operation="perc_add" value="-.25"/>
+
+			<!--<passive_effect name="MaxRange" operation="perc_add" value="-.25">
 				<requirement name="RandomRoll" seed_type="Item" min_max="1,100" operation="LTE" value="80"/>
-			</passive_effect>
-			<passive_effect name="MaxRange" operation="perc_add" value="-.25">
-				<requirement name="RandomRoll" seed_type="Item" min_max="1,100" operation="LTE" value="80"/>
-			</passive_effect>
+			</passive_effect>-->
 
 			<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="#Other/Items?Mods/Barrels/SilencerPrefab.prefab" parent_transform="Attachments/Barrel">
 				<requirement name="!HoldingItemHasTags" tags="doubleBarrel"/>
@@ -788,7 +782,7 @@ Example of using the seed (creation time) on a weapon to activate an effect
 		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 		<effect_group tiered="false">
-			<passive_effect name="MagazineSize" operation="base_add" value="2,4.65"/>
+			<passive_effect name="MagazineSize" operation="base_add" value="2.3,4.65"/>
 		</effect_group>
 		<property name="PickupJournalEntry" value="augmentGunsTip"/>
 	</item_modifier>
