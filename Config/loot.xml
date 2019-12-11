@@ -39,7 +39,7 @@ New items:
 		<loot level="301,999999" prob="1"/>
 	</lootprobtemplate>
 
-	<lootprobtemplate name="probTemplate1.0">
+	<lootprobtemplate name="badFoodTemplate">
 		<loot level="1,8" prob="0.1"/>
 		<loot level="9,16" prob="0.11"/>
 		<loot level="17,25" prob="0.12"/>
@@ -83,136 +83,48 @@ New items:
 		<loot level="973,999999" prob="1"/>
 	</lootprobtemplate>
 
-	<lootprobtemplate name="probTemplate0.75">
-		<loot level="1,8" prob="0.076"/>
-		<loot level="9,16" prob="0.081"/>
-		<loot level="17,25" prob="0.086"/>
-		<loot level="26,34" prob="0.093"/>
-		<loot level="35,44" prob="0.099"/>
-		<loot level="45,54" prob="0.105"/>
-		<loot level="55,65" prob="0.112"/>
-		<loot level="66,76" prob="0.12"/>
-		<loot level="77,88" prob="0.127"/>
-		<loot level="89,101" prob="0.135"/>
-		<loot level="102,114" prob="0.144"/>
-		<loot level="115,128" prob="0.153"/>
-		<loot level="129,142" prob="0.162"/>
-		<loot level="143,157" prob="0.172"/>
-		<loot level="158,173" prob="0.182"/>
-		<loot level="174,190" prob="0.192"/>
-		<loot level="191,208" prob="0.204"/>
-		<loot level="209,226" prob="0.216"/>
-		<loot level="227,245" prob="0.228"/>
-		<loot level="246,266" prob="0.241"/>
-		<loot level="267,287" prob="0.255"/>
-		<loot level="288,309" prob="0.269"/>
-		<loot level="310,333" prob="0.284"/>
-		<loot level="334,358" prob="0.3"/>
-		<loot level="359,384" prob="0.317"/>
-		<loot level="385,411" prob="0.335"/>
-		<loot level="412,440" prob="0.353"/>
-		<loot level="441,470" prob="0.373"/>
-		<loot level="471,501" prob="0.393"/>
-		<loot level="502,534" prob="0.414"/>
-		<loot level="535,569" prob="0.436"/>
-		<loot level="570,606" prob="0.46"/>
-		<loot level="607,644" prob="0.485"/>
-		<loot level="645,684" prob="0.51"/>
-		<loot level="685,727" prob="0.537"/>
-		<loot level="728,771" prob="0.566"/>
-		<loot level="772,818" prob="0.596"/>
-		<loot level="819,867" prob="0.628"/>
-		<loot level="868,918" prob="0.661"/>
-		<loot level="919,972" prob="0.695"/>
-		<loot level="973,999999" prob="0.75"/>
-	</lootprobtemplate>
-
-	<lootprobtemplate name="probTemplate0.5">
-		<loot level="1,8" prob="0.05"/>
-		<loot level="9,16" prob="0.054"/>
-		<loot level="17,25" prob="0.058"/>
-		<loot level="26,34" prob="0.062"/>
-		<loot level="35,44" prob="0.066"/>
-		<loot level="45,54" prob="0.07"/>
-		<loot level="55,65" prob="0.075"/>
-		<loot level="66,76" prob="0.08"/>
-		<loot level="77,88" prob="0.085"/>
-		<loot level="89,101" prob="0.09"/>
-		<loot level="102,114" prob="0.096"/>
-		<loot level="115,128" prob="0.102"/>
-		<loot level="129,142" prob="0.108"/>
-		<loot level="143,157" prob="0.114"/>
-		<loot level="158,173" prob="0.121"/>
-		<loot level="174,190" prob="0.128"/>
-		<loot level="191,208" prob="0.136"/>
-		<loot level="209,226" prob="0.144"/>
-		<loot level="227,245" prob="0.152"/>
-		<loot level="246,266" prob="0.161"/>
-		<loot level="267,287" prob="0.17"/>
-		<loot level="288,309" prob="0.18"/>
-		<loot level="310,333" prob="0.19"/>
-		<loot level="334,358" prob="0.2"/>
-		<loot level="359,384" prob="0.212"/>
-		<loot level="385,411" prob="0.223"/>
-		<loot level="412,440" prob="0.235"/>
-		<loot level="441,470" prob="0.248"/>
-		<loot level="471,501" prob="0.262"/>
-		<loot level="502,534" prob="0.276"/>
-		<loot level="535,569" prob="0.291"/>
-		<loot level="570,606" prob="0.307"/>
-		<loot level="607,644" prob="0.323"/>
-		<loot level="645,684" prob="0.34"/>
-		<loot level="685,727" prob="0.358"/>
-		<loot level="728,771" prob="0.378"/>
-		<loot level="772,818" prob="0.397"/>
-		<loot level="819,867" prob="0.419"/>
-		<loot level="868,918" prob="0.441"/>
-		<loot level="919,972" prob="0.464"/>
-		<loot level="973,999999" prob="0.5"/>
-	</lootprobtemplate>
-
-	<lootprobtemplate name="probTemplate0.5to1.0">
-		<loot level="1,8" prob="0.501"/>
-		<loot level="9,16" prob="0.505"/>
-		<loot level="17,25" prob="0.509"/>
-		<loot level="26,34" prob="0.513"/>
-		<loot level="35,44" prob="0.518"/>
-		<loot level="45,54" prob="0.523"/>
-		<loot level="55,65" prob="0.528"/>
-		<loot level="66,76" prob="0.533"/>
-		<loot level="77,88" prob="0.539"/>
-		<loot level="89,101" prob="0.545"/>
-		<loot level="102,114" prob="0.551"/>
-		<loot level="115,128" prob="0.558"/>
-		<loot level="129,142" prob="0.565"/>
-		<loot level="143,157" prob="0.572"/>
-		<loot level="158,173" prob="0.579"/>
-		<loot level="174,190" prob="0.587"/>
-		<loot level="191,208" prob="0.596"/>
-		<loot level="209,226" prob="0.605"/>
-		<loot level="227,245" prob="0.614"/>
-		<loot level="246,266" prob="0.623"/>
-		<loot level="267,287" prob="0.634"/>
-		<loot level="288,309" prob="0.644"/>
-		<loot level="310,333" prob="0.655"/>
-		<loot level="334,358" prob="0.667"/>
-		<loot level="359,384" prob="0.68"/>
-		<loot level="385,411" prob="0.693"/>
-		<loot level="412,440" prob="0.706"/>
-		<loot level="441,470" prob="0.721"/>
-		<loot level="471,501" prob="0.736"/>
-		<loot level="502,534" prob="0.751"/>
-		<loot level="535,569" prob="0.768"/>
-		<loot level="570,606" prob="0.785"/>
-		<loot level="607,644" prob="0.804"/>
-		<loot level="645,684" prob="0.823"/>
-		<loot level="685,727" prob="0.843"/>
-		<loot level="728,771" prob="0.864"/>
-		<loot level="772,818" prob="0.886"/>
-		<loot level="819,867" prob="0.91"/>
-		<loot level="868,918" prob="0.934"/>
-		<loot level="919,972" prob="0.96"/>
-		<loot level="973,999999" prob="1"/>
+	<lootprobtemplate name="goodFoodTemplate">
+		<loot level="1,8" prob="1"/>
+		<loot level="9,16" prob="0.93"/>
+		<loot level="17,25" prob="0.88"/>
+		<loot level="26,34" prob="0.84"/>
+		<loot level="35,44" prob="0.79"/>
+		<loot level="45,54" prob="0.76"/>
+		<loot level="55,65" prob="0.72"/>
+		<loot level="66,76" prob="0.68"/>
+		<loot level="77,88" prob="0.65"/>
+		<loot level="89,101" prob="0.61"/>
+		<loot level="102,114" prob="0.58"/>
+		<loot level="115,128" prob="0.55"/>
+		<loot level="129,142" prob="0.52"/>
+		<loot level="143,157" prob="0.47"/>
+		<loot level="158,173" prob="0.45"/>
+		<loot level="174,190" prob="0.42"/>
+		<loot level="191,208" prob="0.4"/>
+		<loot level="209,226" prob="0.38"/>
+		<loot level="227,245" prob="0.36"/>
+		<loot level="246,266" prob="0.34"/>
+		<loot level="267,287" prob="0.32"/>
+		<loot level="288,309" prob="0.3"/>
+		<loot level="310,333" prob="0.29"/>
+		<loot level="334,358" prob="0.27"/>
+		<loot level="359,384" prob="0.26"/>
+		<loot level="385,411" prob="0.24"/>
+		<loot level="412,440" prob="0.23"/>
+		<loot level="441,470" prob="0.22"/>
+		<loot level="471,501" prob="0.2"/>
+		<loot level="502,534" prob="0.19"/>
+		<loot level="535,569" prob="0.18"/>
+		<loot level="570,606" prob="0.17"/>
+		<loot level="607,644" prob="0.16"/>
+		<loot level="645,684" prob="0.15"/>
+		<loot level="685,727" prob="0.14"/>
+		<loot level="728,771" prob="0.13"/>
+		<loot level="772,818" prob="0.12"/>
+		<loot level="819,867" prob="0.11"/>
+		<loot level="868,918" prob="0.10"/>
+		<loot level="919,972" prob="0.05"/>
+		<loot level="973,999999" prob="0.01"/>
 	</lootprobtemplate>
 
 	<lootprobtemplate name="GradeALoot">
@@ -263,113 +175,6 @@ New items:
 		<loot level="16" prob="2.0"/>
 	</lootprobtemplate>
 
-	<lootprobtemplate name="T1">
-		<loot level="0,9" prob="0.8"/>
-		<loot level="10,19" prob="0.73"/>
-		<loot level="20,29" prob="0.66"/>
-		<loot level="30,39" prob="0.59"/>
-		<loot level="40,49" prob="0.52"/>
-		<loot level="50,59" prob="0.45"/>
-		<loot level="60,69" prob="0.38"/>
-		<loot level="70,79" prob="0.31"/>
-		<loot level="80,89" prob="0.24"/>
-		<loot level="90,99" prob="0.17"/>
-		<loot level="100,999999" prob="0.1"/>
-	</lootprobtemplate>
-
-	<lootprobtemplate name="T2">
-		<loot level="0,9" prob="0.12"/>
-		<loot level="10,19" prob="0.149"/>
-		<loot level="20,29" prob="0.178"/>
-		<loot level="30,39" prob="0.207"/>
-		<loot level="40,49" prob="0.236"/>
-		<loot level="50,59" prob="0.265"/>
-		<loot level="60,69" prob="0.294"/>
-		<loot level="70,79" prob="0.323"/>
-		<loot level="80,89" prob="0.352"/>
-		<loot level="90,99" prob="0.381"/>
-		<loot level="100,109" prob="0.41"/>
-		<loot level="110,119" prob="0.439"/>
-		<loot level="120,129" prob="0.468"/>
-		<loot level="130,139" prob="0.497"/>
-		<loot level="140,149" prob="0.526"/>
-		<loot level="150,159" prob="0.555"/>
-		<loot level="160,169" prob="0.584"/>
-		<loot level="170,179" prob="0.613"/>
-		<loot level="180,189" prob="0.642"/>
-		<loot level="190,199" prob="0.671"/>
-		<loot level="200,999999" prob="0.7"/>
-	</lootprobtemplate>
-
-	<lootprobtemplate name="T3">
-		<loot level="0,49" prob="0"/>
-		<loot level="50,59" prob="0.006"/>
-		<loot level="60,69" prob="0.007"/>
-		<loot level="70,79" prob="0.008"/>
-		<loot level="80,89" prob="0.009"/>
-		<loot level="90,99" prob="0.01"/>
-		<loot level="100,109" prob="0.038"/>
-		<loot level="110,119" prob="0.066"/>
-		<loot level="120,129" prob="0.094"/>
-		<loot level="130,139" prob="0.122"/>
-		<loot level="140,149" prob="0.15"/>
-		<loot level="150,159" prob="0.179"/>
-		<loot level="160,169" prob="0.207"/>
-		<loot level="170,179" prob="0.235"/>
-		<loot level="180,189" prob="0.263"/>
-		<loot level="190,199" prob="0.291"/>
-		<loot level="200,209" prob="0.319"/>
-		<loot level="210,219" prob="0.347"/>
-		<loot level="220,229" prob="0.375"/>
-		<loot level="230,239" prob="0.403"/>
-		<loot level="240,249" prob="0.431"/>
-		<loot level="250,259" prob="0.46"/>
-		<loot level="260,269" prob="0.488"/>
-		<loot level="270,279" prob="0.516"/>
-		<loot level="280,289" prob="0.544"/>
-		<loot level="290,299" prob="0.572"/>
-		<loot level="300,999999" prob="0.6"/>
-	</lootprobtemplate>
-
-	<lootprobtemplate name="T4">
-		<loot level="0,9" prob="0"/>
-		<loot level="10,19" prob="0.001"/>
-		<loot level="20,29" prob="0.002"/>
-		<loot level="30,39" prob="0.002"/>
-		<loot level="40,49" prob="0.003"/>
-		<loot level="50,59" prob="0.004"/>
-		<loot level="60,69" prob="0.005"/>
-		<loot level="70,79" prob="0.006"/>
-		<loot level="80,89" prob="0.006"/>
-		<loot level="90,99" prob="0.007"/>
-		<loot level="100,109" prob="0.008"/>
-		<loot level="110,119" prob="0.009"/>
-		<loot level="120,129" prob="0.01"/>
-		<loot level="130,139" prob="0.021"/>
-		<loot level="140,149" prob="0.043"/>
-		<loot level="150,159" prob="0.064"/>
-		<loot level="160,169" prob="0.086"/>
-		<loot level="170,179" prob="0.108"/>
-		<loot level="180,189" prob="0.13"/>
-		<loot level="190,199" prob="0.152"/>
-		<loot level="200,209" prob="0.173"/>
-		<loot level="210,219" prob="0.195"/>
-		<loot level="220,229" prob="0.217"/>
-		<loot level="230,239" prob="0.239"/>
-		<loot level="240,249" prob="0.26"/>
-		<loot level="250,259" prob="0.282"/>
-		<loot level="260,269" prob="0.304"/>
-		<loot level="270,279" prob="0.326"/>
-		<loot level="280,289" prob="0.348"/>
-		<loot level="290,299" prob="0.369"/>
-		<loot level="300,309" prob="0.391"/>
-		<loot level="310,319" prob="0.413"/>
-		<loot level="320,329" prob="0.435"/>
-		<loot level="330,339" prob="0.456"/>
-		<loot level="340,349" prob="0.478"/>
-		<loot level="350,999999" prob="0.5"/>
-	</lootprobtemplate>
-
 </lootprobtemplates>
 
 
@@ -398,410 +203,13 @@ The overall plan for loot distribution:
 <lootqualitytemplates>
 	<lootqualitytemplate name="qualBaseTemplate">
 	<!-- QL4 starts at 50, QL5 at 80, QL6 at 110 -->
-		<qualitytemplate level="0,9" default_quality="1">
-			<loot quality="1" prob="0.764"/>
-			<loot quality="2" prob="0.765"/>
-			<loot quality="3" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="10,19" default_quality="1">
-			<loot quality="1" prob="0.742"/>
-			<loot quality="2" prob="0.7"/>
-			<loot quality="3" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="20,29" default_quality="1">
-			<loot quality="1" prob="0.72"/>
-			<loot quality="2" prob="0.644"/>
-			<loot quality="3" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="30,39" default_quality="1">
-			<loot quality="1" prob="0.697"/>
-			<loot quality="2" prob="0.596"/>
-			<loot quality="3" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="40,49" default_quality="1">
-			<loot quality="1" prob="0.674"/>
-			<loot quality="2" prob="0.554"/>
-			<loot quality="3" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="50,59" default_quality="1">
-			<loot quality="1" prob="0.651"/>
-			<loot quality="2" prob="0.517"/>
-			<loot quality="3" prob="0.404"/>
-			<loot quality="4" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="60,69" default_quality="1">
-			<loot quality="1" prob="0.628"/>
-			<loot quality="2" prob="0.484"/>
-			<loot quality="3" prob="0.388"/>
-			<loot quality="4" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="70,79" default_quality="1">
-			<loot quality="1" prob="0.604"/>
-			<loot quality="2" prob="0.455"/>
-			<loot quality="3" prob="0.376"/>
-			<loot quality="4" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="80,89" default_quality="1">
-			<loot quality="1" prob="0.579"/>
-			<loot quality="2" prob="0.429"/>
-			<loot quality="3" prob="0.366"/>
-			<loot quality="4" prob="0.46"/>
-			<loot quality="5" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="90,99" default_quality="1">
-			<loot quality="1" prob="0.555"/>
-			<loot quality="2" prob="0.405"/>
-			<loot quality="3" prob="0.357"/>
-			<loot quality="4" prob="0.457"/>
-			<loot quality="5" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="100,109" default_quality="1">
-			<loot quality="1" prob="0.53"/>
-			<loot quality="2" prob="0.383"/>
-			<loot quality="3" prob="0.35"/>
-			<loot quality="4" prob="0.454"/>
-			<loot quality="5" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="110,119" default_quality="1">
-			<loot quality="1" prob="0.504"/>
-			<loot quality="2" prob="0.363"/>
-			<loot quality="3" prob="0.344"/>
-			<loot quality="4" prob="0.452"/>
-			<loot quality="5" prob="0.644"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="120,129" default_quality="1">
-			<loot quality="1" prob="0.479"/>
-			<loot quality="2" prob="0.345"/>
-			<loot quality="3" prob="0.339"/>
-			<loot quality="4" prob="0.451"/>
-			<loot quality="5" prob="0.644"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="130,139" default_quality="1">
-			<loot quality="1" prob="0.453"/>
-			<loot quality="2" prob="0.329"/>
-			<loot quality="3" prob="0.334"/>
-			<loot quality="4" prob="0.449"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="140,149" default_quality="1">
-			<loot quality="1" prob="0.426"/>
-			<loot quality="2" prob="0.313"/>
-			<loot quality="3" prob="0.33"/>
-			<loot quality="4" prob="0.448"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="150,159" default_quality="1">
-			<loot quality="1" prob="0.399"/>
-			<loot quality="2" prob="0.299"/>
-			<loot quality="3" prob="0.327"/>
-			<loot quality="4" prob="0.447"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="160,169" default_quality="1">
-			<loot quality="1" prob="0.372"/>
-			<loot quality="2" prob="0.286"/>
-			<loot quality="3" prob="0.324"/>
-			<loot quality="4" prob="0.446"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="170,179" default_quality="1">
-			<loot quality="1" prob="0.344"/>
-			<loot quality="2" prob="0.274"/>
-			<loot quality="3" prob="0.321"/>
-			<loot quality="4" prob="0.445"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="180,189" default_quality="1">
-			<loot quality="1" prob="0.316"/>
-			<loot quality="2" prob="0.262"/>
-			<loot quality="3" prob="0.318"/>
-			<loot quality="4" prob="0.444"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="190,199" default_quality="1">
-			<loot quality="1" prob="0.287"/>
-			<loot quality="2" prob="0.252"/>
-			<loot quality="3" prob="0.316"/>
-			<loot quality="4" prob="0.443"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="200,209" default_quality="1">
-			<loot quality="1" prob="0.258"/>
-			<loot quality="2" prob="0.242"/>
-			<loot quality="3" prob="0.314"/>
-			<loot quality="4" prob="0.443"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="210,219" default_quality="1">
-			<loot quality="1" prob="0.228"/>
-			<loot quality="2" prob="0.232"/>
-			<loot quality="3" prob="0.312"/>
-			<loot quality="4" prob="0.442"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="220,229" default_quality="1">
-			<loot quality="1" prob="0.198"/>
-			<loot quality="2" prob="0.224"/>
-			<loot quality="3" prob="0.31"/>
-			<loot quality="4" prob="0.441"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="230,239" default_quality="1">
-			<loot quality="1" prob="0.167"/>
-			<loot quality="2" prob="0.215"/>
-			<loot quality="3" prob="0.308"/>
-			<loot quality="4" prob="0.441"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="240,249" default_quality="1">
-			<loot quality="1" prob="0.136"/>
-			<loot quality="2" prob="0.207"/>
-			<loot quality="3" prob="0.307"/>
-			<loot quality="4" prob="0.44"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="250,999999" default_quality="1">
-			<loot quality="1" prob="0.104"/>
-			<loot quality="2" prob="0.2"/>
-			<loot quality="3" prob="0.306"/>
-			<loot quality="4" prob="0.44"/>
-			<loot quality="5" prob="0.643"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-	</lootqualitytemplate>
-</lootqualitytemplates>
-
-<lootqualitytemplates>
-	<lootqualitytemplate name="qualPlus1Template">
-	<!-- QL4 starts at 0, QL5 at 50, QL6 at 80 -->
-		<qualitytemplate level="0,9" default_quality="1">
-			<loot quality="1" prob="0.459"/>
-			<loot quality="2" prob="0.559"/>
-			<loot quality="3" prob="0.769"/>
-			<loot quality="4" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="10,19" default_quality="1">
-			<loot quality="1" prob="0.444"/>
-			<loot quality="2" prob="0.533"/>
-			<loot quality="3" prob="0.706"/>
-			<loot quality="4" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="20,29" default_quality="1">
-			<loot quality="1" prob="0.43"/>
-			<loot quality="2" prob="0.507"/>
-			<loot quality="3" prob="0.653"/>
-			<loot quality="4" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="30,39" default_quality="1">
-			<loot quality="1" prob="0.415"/>
-			<loot quality="2" prob="0.483"/>
-			<loot quality="3" prob="0.606"/>
-			<loot quality="4" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="40,49" default_quality="1">
-			<loot quality="1" prob="0.401"/>
-			<loot quality="2" prob="0.46"/>
-			<loot quality="3" prob="0.566"/>
-			<loot quality="4" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="50,59" default_quality="1">
-			<loot quality="1" prob="0.386"/>
-			<loot quality="2" prob="0.438"/>
-			<loot quality="3" prob="0.53"/>
-			<loot quality="4" prob="0.454"/>
-			<loot quality="5" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="60,69" default_quality="1">
-			<loot quality="1" prob="0.371"/>
-			<loot quality="2" prob="0.416"/>
-			<loot quality="3" prob="0.498"/>
-			<loot quality="4" prob="0.441"/>
-			<loot quality="5" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="70,79" default_quality="1">
-			<loot quality="1" prob="0.356"/>
-			<loot quality="2" prob="0.396"/>
-			<loot quality="3" prob="0.47"/>
-			<loot quality="4" prob="0.431"/>
-			<loot quality="5" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="80,89" default_quality="1">
-			<loot quality="1" prob="0.342"/>
-			<loot quality="2" prob="0.376"/>
-			<loot quality="3" prob="0.444"/>
-			<loot quality="4" prob="0.422"/>
-			<loot quality="5" prob="0.61"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="90,99" default_quality="1">
-			<loot quality="1" prob="0.326"/>
-			<loot quality="2" prob="0.357"/>
-			<loot quality="3" prob="0.421"/>
-			<loot quality="4" prob="0.416"/>
-			<loot quality="5" prob="0.608"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="100,109" default_quality="1">
-			<loot quality="1" prob="0.311"/>
-			<loot quality="2" prob="0.339"/>
-			<loot quality="3" prob="0.4"/>
-			<loot quality="4" prob="0.41"/>
-			<loot quality="5" prob="0.606"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="110,119" default_quality="1">
-			<loot quality="1" prob="0.296"/>
-			<loot quality="2" prob="0.321"/>
-			<loot quality="3" prob="0.381"/>
-			<loot quality="4" prob="0.405"/>
-			<loot quality="5" prob="0.604"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="120,129" default_quality="1">
-			<loot quality="1" prob="0.28"/>
-			<loot quality="2" prob="0.304"/>
-			<loot quality="3" prob="0.363"/>
-			<loot quality="4" prob="0.4"/>
-			<loot quality="5" prob="0.603"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="130,139" default_quality="1">
-			<loot quality="1" prob="0.265"/>
-			<loot quality="2" prob="0.288"/>
-			<loot quality="3" prob="0.347"/>
-			<loot quality="4" prob="0.397"/>
-			<loot quality="5" prob="0.602"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="140,149" default_quality="1">
-			<loot quality="1" prob="0.249"/>
-			<loot quality="2" prob="0.272"/>
-			<loot quality="3" prob="0.332"/>
-			<loot quality="4" prob="0.393"/>
-			<loot quality="5" prob="0.601"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="150,159" default_quality="1">
-			<loot quality="1" prob="0.234"/>
-			<loot quality="2" prob="0.257"/>
-			<loot quality="3" prob="0.319"/>
-			<loot quality="4" prob="0.391"/>
-			<loot quality="5" prob="0.6"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="160,169" default_quality="1">
-			<loot quality="1" prob="0.218"/>
-			<loot quality="2" prob="0.242"/>
-			<loot quality="3" prob="0.306"/>
-			<loot quality="4" prob="0.388"/>
-			<loot quality="5" prob="0.599"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="170,179" default_quality="1">
-			<loot quality="1" prob="0.202"/>
-			<loot quality="2" prob="0.228"/>
-			<loot quality="3" prob="0.294"/>
-			<loot quality="4" prob="0.386"/>
-			<loot quality="5" prob="0.599"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="180,189" default_quality="1">
-			<loot quality="1" prob="0.186"/>
-			<loot quality="2" prob="0.214"/>
-			<loot quality="3" prob="0.283"/>
-			<loot quality="4" prob="0.384"/>
-			<loot quality="5" prob="0.598"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="190,199" default_quality="1">
-			<loot quality="1" prob="0.17"/>
-			<loot quality="2" prob="0.201"/>
-			<loot quality="3" prob="0.273"/>
-			<loot quality="4" prob="0.382"/>
-			<loot quality="5" prob="0.597"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="200,209" default_quality="1">
-			<loot quality="1" prob="0.153"/>
-			<loot quality="2" prob="0.188"/>
-			<loot quality="3" prob="0.263"/>
-			<loot quality="4" prob="0.38"/>
-			<loot quality="5" prob="0.597"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="210,219" default_quality="1">
-			<loot quality="1" prob="0.137"/>
-			<loot quality="2" prob="0.175"/>
-			<loot quality="3" prob="0.254"/>
-			<loot quality="4" prob="0.378"/>
-			<loot quality="5" prob="0.596"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="220,229" default_quality="1">
-			<loot quality="1" prob="0.12"/>
-			<loot quality="2" prob="0.163"/>
-			<loot quality="3" prob="0.245"/>
-			<loot quality="4" prob="0.377"/>
-			<loot quality="5" prob="0.596"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="230,239" default_quality="1">
-			<loot quality="1" prob="0.104"/>
-			<loot quality="2" prob="0.152"/>
-			<loot quality="3" prob="0.237"/>
-			<loot quality="4" prob="0.375"/>
-			<loot quality="5" prob="0.596"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="240,249" default_quality="1">
-			<loot quality="1" prob="0.087"/>
-			<loot quality="2" prob="0.14"/>
-			<loot quality="3" prob="0.229"/>
-			<loot quality="4" prob="0.374"/>
-			<loot quality="5" prob="0.595"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-		<qualitytemplate level="250,999999" default_quality="1">
-			<loot quality="1" prob="0.07"/>
-			<loot quality="2" prob="0.129"/>
-			<loot quality="3" prob="0.222"/>
-			<loot quality="4" prob="0.373"/>
-			<loot quality="5" prob="0.595"/>
-			<loot quality="6" prob="1"/>
-		</qualitytemplate>
-	</lootqualitytemplate>
-</lootqualitytemplates>
-
-<lootqualitytemplates>
-	<lootqualitytemplate name="qualQ1Template">
-		<qualitytemplate level="1,999999" default_quality="1">
-			<loot quality="1" prob="1"/>
-		</qualitytemplate>
-	</lootqualitytemplate>
-</lootqualitytemplates>
-
-<lootqualitytemplates>
-	<lootqualitytemplate name="qualPrimitiveItemsTemplate">
-		<qualitytemplate level="1,999999" default_quality="2">
-			<loot quality="2" prob="0.6"/>
-			<loot quality="3" prob="0.56"/>
-			<loot quality="4" prob="0.57"/>
-			<loot quality="5" prob="0.67"/>
-			<loot quality="6" prob="1"/>
+		<qualitytemplate level="0,999999" default_quality="1">
+			<loot quality="1" prob="0.85"/>
+			<loot quality="2" prob="0.10"/>
+			<loot quality="3" prob="0.05"/>
+            <loot quality="4" prob="0.008"/>
+			<loot quality="5" prob="0.004"/>
+			<loot quality="6" prob="0.001"/>
 		</qualitytemplate>
 	</lootqualitytemplate>
 </lootqualitytemplates>
@@ -927,7 +335,6 @@ The overall plan for loot distribution:
 	<item name="apparelCowboyHat" mods="dye" mod_chance="0.00"/>
 	<item name="apparelSkullCap" mods="dye" mod_chance="0.00"/>
 	<item name="apparelPressboyCap" mods="dye" mod_chance="0.00"/>
-	<item name="armorClothHat"/>
 	<item name="armorFootballHelmet"/>
 	<item name="apparelBallCap" mods="dye" mod_chance="0.00"/>
 	<item name="modArmorCowboyHat" prob="0.2"/>
@@ -978,89 +385,6 @@ The overall plan for loot distribution:
 	<item name="resourceSewingKit"/>
 </lootgroup>
 
-<lootgroup name="groupArmorT1_Light">
-	<item name="armorClothPants"/>
-	<item name="armorClothJacket"/>
-	<item name="armorClothBoots"/>
-	<item name="armorClothGloves"/>
-	<item name="armorClothHat"/>
-</lootgroup>
-
-<lootgroup name="groupArmorT2_Light">
-	<item name="armorLeatherBoots"/>
-	<item name="armorLeatherPants"/>
-	<item name="armorLeatherChest"/>
-	<item name="armorLeatherGloves"/>
-	<item name="armorLeatherHood"/>
-</lootgroup>
-
-<lootgroup name="groupArmorT3_Light">
-	<item name="armorMilitaryGloves"/>
-	<item name="armorMilitaryHelmet" mods="modArmorHelmetLight" mod_chance=".2"/>
-	<item name="armorMilitaryBoots"/>
-	<item name="armorMilitaryLegs"/>
-	<item name="armorMilitaryVest"/>
-	<item name="armorMilitarySetParts" count="1,6"/>
-</lootgroup>
-
-<lootgroup name="groupArmor_Light">
-	<!-- <item group="groupArmorT1_Light" loot_prob_template="T1"/> -->
-	<item group="groupArmorT2_Light" loot_prob_template="T2"/>
-	<item group="groupArmorT3_Light" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupArmor_LightTPlus">
-	<!-- <item group="groupArmorT1_Light" loot_prob_template="T1"/> -->
-	<item group="groupArmorT2_Light" loot_prob_template="T2"/>
-	<item group="groupArmorT3_Light" loot_prob_template="T3"/>
-	<item group="groupArmorT3_Light" loot_prob_template="T3"/>
-</lootgroup>
-
-<lootgroup name="groupArmorT1_Heavy">
-	<item name="armorScrapHelmet"/>
-	<item name="armorScrapChest"/>
-	<item name="armorScrapGloves"/>
-	<item name="armorScrapLegs"/>
-	<item name="armorScrapBoots"/>
-</lootgroup>
-
-<lootgroup name="groupArmorT2_Heavy">
-	<item name="armorIronGloves"/>
-	<item name="armorIronHelmet"/>
-	<item name="armorIronBoots"/>
-	<item name="armorIronLegs"/>
-	<item name="armorIronChest"/>
-</lootgroup>
-
-<lootgroup name="groupArmorT3_Heavy">
-	<item name="armorSteelBoots"/>
-	<item name="armorSteelLegs"/>
-	<item name="armorSteelChest"/>
-	<item name="armorSteelGloves"/>
-	<item name="armorSwatHelmet" mods="modArmorHelmetLight" mod_chance=".2"/>
-	<item name="armorSteelSetParts" count="1,6"/>
-</lootgroup>
-
-<lootgroup name="groupArmor_Heavy">
-	<!-- <item group="groupArmorT1_Heavy" loot_prob_template="T1"/> -->
-	<item group="groupArmorT2_Heavy" loot_prob_template="T2"/>
-	<item group="groupArmorT3_Heavy" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupArmor_HeavyTPlus">
-	<!-- <item group="groupArmorT1_Heavy" loot_prob_template="T1"/> -->
-	<item group="groupArmorT2_Heavy" loot_prob_template="T2"/>
-	<item group="groupArmorT3_Heavy" loot_prob_template="T3"/>
-	<item group="groupArmorT3_Heavy" loot_prob_template="T3"/>
-</lootgroup>
-
-<lootgroup name="groupArmorScaled">
-	<item group="groupArmor_Light"/>
-	<item group="groupArmor_Heavy"/>
-</lootgroup>
-<lootgroup name="groupArmorScaledTPlus">
-	<item group="groupArmor_LightTPlus"/>
-	<item group="groupArmor_HeavyTPlus"/>
-</lootgroup>
-
 <lootgroup name="groupApparelHazmat">
 	<item name="apparelHazmatBoots"/>
 	<item name="apparelHazmatPants"/>
@@ -1072,51 +396,44 @@ The overall plan for loot distribution:
 
 <lootgroup name="groupAllArmor/Cloth">
 	<item group="groupApparelClothes"/>
-	<item group="groupArmorScaled" prob="0.18"/>
 	<item name="armorMiningHelmet" mods="modArmorHelmetLight" mod_chance="1" prob="0.015"/>
 </lootgroup>
 
 <lootgroup name="trophyGroup">
 	<item name="resourceTrophy1"/>
 	<item name="resourceTrophy2"/>
+    <item name="resourceTrophy3"/>
 </lootgroup>
 
 <lootgroup name="groupAmmoRegular">
-	<item name="ammo9mmBulletBall" count="10,40"/>	<!-- 32 -->
-	<item name="ammoShotgunShell" count="3,12"/>							<!-- 96 -->
-	<item name="ammo762mmBulletBall" count="6,25"/>						<!-- 50 -->
-	<item name="ammoArrowIron" prob="0.1" count="6,24"/>					<!-- 28 -->
-	<item name="ammoCrossbowBoltIron" prob="0.1" count="4,16"/>				<!-- 38 -->
+	<item name="ammo9mmBulletBall" count="10,40"/>	
+	<item name="ammoShotgunShell" count="3,12"/>							
+	<item name="ammo762mmBulletBall" count="6,25"/>						
+	<item name="ammoArrowIron" prob="0.1" count="6,24"/>					
+	<item name="ammoCrossbowBoltIron" prob="0.1" count="4,16"/>				
 </lootgroup>
 
 <lootgroup name="groupAmmoAdvancedGunslinger">
-	<item name="ammo9mmBulletAP" loot_prob_template="T2" count="10,40"/>		<!-- 32 -->
-	<item name="ammo9mmBulletHP" loot_prob_template="T2" count="7,30"/>		<!-- 41.6 -->
-	<item name="ammo9mmBulletAP" loot_prob_template="T3" count="10,40"/>		<!-- 32 -->
-	<item name="ammo9mmBulletHP" loot_prob_template="T3" count="7,30"/>		<!-- 41.6 -->
-	<item name="ammo44MagnumBulletAP" loot_prob_template="T3" count="4,19"/>	<!-- 65 -->
-	<item name="ammo44MagnumBulletHP" loot_prob_template="T3" count="3,14"/>	<!-- 84.5 -->
+	<item name="ammo9mmBulletAP" count="10,40"/>		
+	<item name="ammo9mmBulletHP" count="7,30"/>		
+	<item name="ammo44MagnumBulletAP" count="4,19"/>	
+	<item name="ammo44MagnumBulletHP" count="3,14"/>	
 </lootgroup>
 
 <lootgroup name="groupAmmoAdvanced">
 	<item group="groupAmmoAdvancedGunslinger" prob="2"/>
-
-	<item name="ammo762mmBulletAP" count="6,25"/>				<!-- 50 -->
-	<item name="ammo762mmBulletHP" count="4,19"/>				<!-- 65 -->
-	<item name="ammoShotgunSlug" count="4,16"/>					<!-- 80 -->
-	<item name="ammoShotgunBreachingSlug" count="4,16"/>			<!-- 80 -->
-
-	<item name="ammoArrowSteelAP" prob=".15" count="5,20"/>		<!-- 31 -->
-
-	<item name="ammoArrowFlaming" count="3,8"/>					<!-- 25+ -->
-	<item name="ammoCrossbowBoltFlaming" count="3,8"/>			<!-- 38 -->
-
-	<item name="ammoCrossbowBoltSteelAP" prob=".15" count="3,14"/>	<!-- 45 -->
-	<item name="ammoArrowExploding" count="4"/>					<!-- 180 -->
-	<item name="ammoCrossbowBoltExploding" count="3"/>			<!-- 250 -->
-
-	<item name="ammoRocketHE" count="1"/>						<!-- 420 -->
-	<item name="ammoRocketFrag" count="1"/>						<!-- 650 -->
+	<item name="ammo762mmBulletAP" count="6,25"/>				
+	<item name="ammo762mmBulletHP" count="4,19"/>				
+	<item name="ammoShotgunSlug" count="4,16"/>					
+	<item name="ammoShotgunBreachingSlug" count="4,16"/>			
+	<item name="ammoArrowSteelAP" prob=".15" count="5,20"/>		
+	<item name="ammoArrowFlaming" count="3,8"/>					
+	<item name="ammoCrossbowBoltFlaming" count="3,8"/>			
+	<item name="ammoCrossbowBoltSteelAP" prob=".15" count="3,14"/>	
+	<item name="ammoArrowExploding" count="4"/>					
+	<item name="ammoCrossbowBoltExploding" count="3"/>		
+	<item name="ammoRocketHE" count="1"/>						
+	<item name="ammoRocketFrag" count="1"/>						
 </lootgroup>
 
 <lootgroup name="groupAmmoRocket">
@@ -1131,384 +448,49 @@ The overall plan for loot distribution:
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-
-<!-- Attribute: Perception -->
-<lootgroup name="groupWeaponsT2_DeadEye" count="all">
-	<item name="gunHuntingRifle"/>
-	<item name="ammo762mmBulletBall" count="6,25"/>
-</lootgroup>
-
-<lootgroup name="groupWeaponsT3_DeadEye" count="all">
-	<item name="gunMR10"/>
-	<item name="ammo762mmBulletBall" count="6,25"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_DeadEye">
-	<!-- <item group="groupWeaponsT1_DeadEye" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_DeadEye" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_DeadEye" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_DeadEyeTPlus">
-	<!-- <item group="groupWeaponsT1_DeadEye" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_DeadEye" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_DeadEye" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_DeadEye" loot_prob_template="T3"/>
-</lootgroup>
-
-
-<lootgroup name="groupWeaponsT2_Demolitionist">
+<lootgroup name="T1Weapons">
 	<item name="thrownAmmoMolotovCocktail" count="1,3"/>
-	<item name="thrownAmmoPipeBomb" count="1,4"/>
-	<item name="thrownDynamite" count="1,3"/>
-	<item name="thrownGrenade" count="1,3"/>
+    <item name="meleeThrownSpearStone"/>
+    <item name="gunBlunderbuss"/>
+    <item name="meleeClubBaseballBat"/>
+    <item name="meleeToolSledgehammerStone"/>
+    <item name="meleeKnucklesLeather"/>
 </lootgroup>
 
-<lootgroup name="groupWeaponsT3_Demolitionist01" count="all">
-	<item name="gunRocketLauncher"/>
-	<item group="groupAmmoRocket"/>
+<lootgroup name="T2Weapons">
+    <item name="gunHuntingRifle"/>
+    <item name="thrownAmmoPipeBomb" count="1,4"/>
+    <item name="meleeThrownSpearIron"/>
+    <item name="gunDoubleBarrelShotgun"/>
+    <item name="meleeToolSledgehammerIron"/>
+    <item name="meleeKnucklesIron"/>
+    <item name="gunBowWooden"/>
+    <item name="gunCrossbowIron"/>
+    <item name="gunPistol"/>
+    <item name="meleeToolKnifeIron"/>
 </lootgroup>
-<lootgroup name="groupWeaponsT3_Demolitionist">
-	<item group="groupWeaponsT3_Demolitionist01" prob="0.4"/>
-	<item group="groupAmmoRocket" prob="0.6"  count="1,2"/>
+
+<lootgroup name="T3Weapons">
+    <item name="gunMR10"/>
+    <item name="thrownDynamite" count="1,3"/>
+	<item name="thrownGrenade" count="1,3"/>
+	<item name="gunRocketLauncher"/>
 	<item name="thrownGrenadeContact" count="1,3"/>
 	<item name="thrownTimedCharge" count="1,3"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_Demolitionist">
-	<!-- <item group="groupWeaponsT1_Demolitionist" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Demolitionist" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Demolitionist" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_DemolitionistTPlus">
-	<!-- <item group="groupWeaponsT1_Demolitionist" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Demolitionist" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Demolitionist" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_Demolitionist" loot_prob_template="T3"/>
-</lootgroup>
-
-<lootgroup name="groupWeaponsT1_JavelinMaster">
-	<item name="meleeThrownSpearStone"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT2_JavelinMaster">
-	<item name="meleeThrownSpearIron"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT3_JavelinMaster">
-	<item name="meleeThrownSpearSteel"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_JavelinMaster">
-	<!-- <item group="groupWeaponsT1_JavelinMaster" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_JavelinMaster" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_JavelinMaster" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_JavelinMasterTPlus">
-	<!-- <item group="groupWeaponsT1_JavelinMaster" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_JavelinMaster" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_JavelinMaster" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_JavelinMaster" loot_prob_template="T3"/>
-</lootgroup>
-
-
-<!-- Attribute: Strength -->
-
-<lootgroup name="groupWeaponsT1_Boomstick" count="all">
-	<item name="gunBlunderbuss"/>
-	<item name="ammoBlunderbuss" count="6,15"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT2_Boomstick" count="all">
-	<item name="gunDoubleBarrelShotgun"/>
-	<item name="ammoShotgunShell" count="3,12"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT3_Boomstick" count="all">
-	<item name="gunPumpShotgun"/>
-	<item name="ammoShotgunShell" count="3,12"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_Boomstick">
-	<!-- <item group="groupWeaponsT1_Boomstick" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Boomstick" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Boomstick" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_BoomstickTPlus">
-	<!-- <item group="groupWeaponsT1_Boomstick" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Boomstick" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Boomstick" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_Boomstick" loot_prob_template="T3"/>
-</lootgroup>
-
-
-<lootgroup name="groupWeaponsT1_PummelPete">
-	<item name="meleeClubWood"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT2_PummelPete">
-	<item name="meleeClubIron"/>
-	<!-- <item name="meleeClubCandy" prob="0.3"/> -->
-</lootgroup>
-<lootgroup name="groupWeaponsT3_PummelPete">
-	<item name="meleeClubBaseballBat"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_PummelPete">
-	<!-- <item group="groupWeaponsT1_PummelPete" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_PummelPete" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_PummelPete" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_PummelPeteTPlus">
-	<!-- <item group="groupWeaponsT1_PummelPete" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_PummelPete" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_PummelPete" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_PummelPete" loot_prob_template="T3"/>
-</lootgroup>
-
-
-<lootgroup name="groupWeaponsT1_SkullCrusher">
-	<item name="meleeToolSledgehammerStone"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT2_SkullCrusher">
-	<item name="meleeToolSledgehammerIron"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT3_SkullCrusher">
-	<item name="meleeToolSledgehammerSteel"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_SkullCrusher">
-	<!-- <item group="groupWeaponsT1_SkullCrusher" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_SkullCrusher" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_SkullCrusher" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_SkullCrusherTPlus">
-	<!-- <item group="groupWeaponsT1_SkullCrusher" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_SkullCrusher" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_SkullCrusher" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_SkullCrusher" loot_prob_template="T3"/>
-</lootgroup>
-
-
-<!-- Attribute: Fortitude -->
-
-<lootgroup name="groupWeaponsT1_Brawler">
-	<item name="meleeKnucklesLeather"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT2_Brawler">
-	<item name="meleeKnucklesIron"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT3_Brawler">
-	<item name="meleeKnucklesSteel"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_Brawler">
-	<!-- <item group="groupWeaponsT1_Brawler" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Brawler" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Brawler" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_BrawlerTPlus">
-	<!-- <item group="groupWeaponsT1_Brawler" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Brawler" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Brawler" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_Brawler" loot_prob_template="T3"/>
-</lootgroup>
-
-<lootgroup name="groupWeaponsT2_Machinegunner" count="all">
+    <item name="meleeThrownSpearSteel"/>
+    <item name="gunPumpShotgun"/>
+   	<item name="meleeToolSledgehammerSteel"/>
+    <item name="meleeKnucklesSteel"/>
     <item name="gunAK47"/>
-    <item name="ammo762mmBulletBall" count="6,25"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT3_Machinegunner" count="all">
     <item name="gunM60"/>
-    <item name="ammo762mmBulletBall" count="6,25"/>
+    <item name="gunBowCompound"/>
+    <item name="gunCrossbowCompound"/>
+   	<item name="gun44Magnum"/>
+    <item name="gunSMG5"/>
+    <item name="meleeToolKnifeMachete"/>
+   	<item name="meleeStunBaton"/>
+    <item name="gunJunkTurret"/>
 </lootgroup>
-
-<lootgroup name="groupWeapons_Machinegunner">
-	<!-- <item group="groupWeaponsT1_Machinegunner" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Machinegunner" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Machinegunner" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_MachinegunnerTPlus">
-	<!-- <item group="groupWeaponsT1_Machinegunner" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Machinegunner" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Machinegunner" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_Machinegunner" loot_prob_template="T3"/>
-</lootgroup>
-
-
-<!-- Attribute: Agility -->
-<lootgroup name="groupWeaponsT1_Archery">
-	<item name="gunBowPrimitive"/>
-	<item name="ammoArrowStone" count="3,6"/>
-</lootgroup>
-
-<lootgroup name="groupWeaponsT2_Archery01" count="all">
-	<item name="gunBowWooden"/>
-	<item name="ammoArrowIron" count="6,24"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT2_Archery02" count="all">
-	<item name="gunCrossbowIron"/>
-	<item name="ammoCrossbowBoltIron" count="4,16"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT2_Archery">
-	<item group="groupWeaponsT2_Archery01"/>
-	<item group="groupWeaponsT2_Archery02"/>
-</lootgroup>
-
-<lootgroup name="groupWeaponsT3_Archery01" count="all">
-	<item name="gunBowCompound"/>
-	<item name="ammoArrowIron" count="6,24"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT3_Archery02" count="all">
-	<item name="gunCrossbowCompound"/>
-	<item name="ammoCrossbowBoltIron" count="4,16"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT3_Archery">
-	<item group="groupWeaponsT3_Archery01"/>
-	<item group="groupWeaponsT3_Archery02"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_Archery">
-	<!-- <item group="groupWeaponsT1_Archery" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Archery" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Archery" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_ArcheryTPlus">
-	<!-- <item group="groupWeaponsT1_Archery" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Archery" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Archery" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_Archery" loot_prob_template="T3"/>
-</lootgroup>
-
-
-<lootgroup name="groupWeaponsT2_Gunslinger" count="all">
-	<item name="gunPistol"/>
-	<item name="ammo9mmBulletBall" count="10,40"/>
-</lootgroup>
-
-<lootgroup name="groupWeaponsT3_Gunslinger01" count="all">
-	<item name="gun44Magnum"/>
-	<item name="ammo44MagnumBulletBall" count="4,19"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT3_Gunslinger02" count="all">
-	<item name="gunSMG5"/>
-	<item name="ammo9mmBulletBall" count="10,40"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT3_Gunslinger">
-	<item group="groupWeaponsT3_Gunslinger01"/>
-	<item group="groupWeaponsT3_Gunslinger02"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_Gunslinger">
-	<!-- <item group="groupWeaponsT1_Gunslinger" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Gunslinger" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Gunslinger" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_GunslingerTPlus">
-	<!-- <item group="groupWeaponsT1_Gunslinger" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_Gunslinger" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_Gunslinger" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_Gunslinger" loot_prob_template="T3"/>
-</lootgroup>
-
-<lootgroup name="groupWeaponsT1_DeepCuts">
-	<item name="meleeToolKnifeBone"/>
-</lootgroup>
-<lootgroup name="groupWeaponsT2_DeepCuts">
-	<item name="meleeToolKnifeIron"/>
-	<!-- <item name="meleeToolKnifeCandy" prob=".3"/> -->
-</lootgroup>
-<lootgroup name="groupWeaponsT3_DeepCuts">
-	<item name="meleeToolKnifeMachete"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_DeepCuts">
-	<!-- <item group="groupWeaponsT1_DeepCuts" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_DeepCuts" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_DeepCuts" loot_prob_template="T3"/>
-</lootgroup>
-<lootgroup name="groupWeapons_DeepCutsTPlus">
-	<!-- <item group="groupWeaponsT1_DeepCuts" loot_prob_template="T1"/> -->
-	<item group="groupWeaponsT2_DeepCuts" loot_prob_template="T2"/>
-	<item group="groupWeaponsT3_DeepCuts" loot_prob_template="T3"/>
-	<item group="groupWeaponsT3_DeepCuts" loot_prob_template="T3"/>
-</lootgroup>
-
-<!-- Attribute: Intellect -->
-<lootgroup name="groupWeaponsT2_Electrocutioner">
-	<item name="meleeStunBaton"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_Electrocutioner">
-	<item group="groupWeaponsT2_Electrocutioner" loot_prob_template="T2"/>
-</lootgroup>
-<lootgroup name="groupWeapons_ElectrocutionerTPlus">
-	<item group="groupWeaponsT2_Electrocutioner" loot_prob_template="T2"/>
-</lootgroup>
-
-<lootgroup name="groupWeaponsT2_TurretsSyndrome">
-	<item name="gunJunkTurret"/>
-</lootgroup>
-
-<lootgroup name="groupWeapons_TurretsSyndrome">
-	<item group="groupWeaponsT2_TurretsSyndrome" loot_prob_template="T2"/>
-</lootgroup>
-<lootgroup name="groupWeapons_TurretsSyndromeTPlus">
-	<item group="groupWeaponsT2_TurretsSyndrome" loot_prob_template="T2"/>
-</lootgroup>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<lootgroup name="groupWeaponsT1_All">
-	<item group="groupWeaponsT1_Archery"/>
-	<item group="groupWeaponsT1_Boomstick"/>
-	<item group="groupWeaponsT1_Brawler"/>
-	<item group="groupWeaponsT1_DeepCuts"/>
-	<item group="groupWeaponsT1_JavelinMaster"/>
-	<item group="groupWeaponsT1_PummelPete"/>
-	<item group="groupWeaponsT1_SkullCrusher"/>
-</lootgroup>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<lootgroup name="groupWeaponsMeleeScaled">
-	<item group="groupWeapons_JavelinMaster"/>
-	<item group="groupWeapons_PummelPete"/>
-	<item group="groupWeapons_SkullCrusher"/>
-	<item group="groupWeapons_Brawler"/>
-	<item group="groupWeapons_DeepCuts"/>
-	<item group="groupWeapons_Electrocutioner"/>
-</lootgroup>
-<lootgroup name="groupWeaponsMeleeScaledTPlus">
-	<item group="groupWeapons_JavelinMasterTPlus"/>
-	<item group="groupWeapons_PummelPeteTPlus"/>
-	<item group="groupWeapons_SkullCrusherTPlus"/>
-	<item group="groupWeapons_BrawlerTPlus"/>
-	<item group="groupWeapons_DeepCutsTPlus"/>
-	<item group="groupWeapons_ElectrocutionerTPlus"/>
-</lootgroup>
-
-<lootgroup name="groupWeaponsRangedScaled">
-	<item group="groupWeapons_DeadEye"/>
-	<item group="groupWeapons_Demolitionist"/>
-	<item group="groupWeapons_Boomstick"/>
-	<item group="groupWeapons_Machinegunner"/>
-	<item group="groupWeapons_Archery"/>
-	<item group="groupWeapons_Gunslinger"/>
-	<item group="groupWeapons_TurretsSyndrome"/>
-</lootgroup>
-<lootgroup name="groupWeaponsRangedScaledTPlus">
-	<item group="groupWeapons_DeadEyeTPlus"/>
-	<item group="groupWeapons_DemolitionistTPlus"/>
-	<item group="groupWeapons_BoomstickTPlus"/>
-	<item group="groupWeapons_MachinegunnerTPlus"/>
-	<item group="groupWeapons_ArcheryTPlus"/>
-	<item group="groupWeapons_GunslingerTPlus"/>
-	<item group="groupWeapons_TurretsSyndromeTPlus"/>
-</lootgroup>
-
-<lootgroup name="groupWeaponsScaled">
-	<item group="groupWeaponsMeleeScaled"/>
-	<item group="groupWeaponsRangedScaled"/>
-</lootgroup>
-<lootgroup name="groupWeaponsScaledTPlus">
-	<item group="groupWeaponsMeleeScaledTPlus"/>
-	<item group="groupWeaponsRangedScaledTPlus"/>
-</lootgroup>
-
 
 <lootgroup name="dyes">
 	<!-- <item name="modDyeWhite"/> -->
@@ -1616,8 +598,6 @@ The overall plan for loot distribution:
 	<item name="modArmorMuffledConnectors"/>
 	<item name="modArmorDoubleStoragePocket"/>
 	<item name="modArmorCustomizedFittings"/>
-	<!--<item name="modRadiationReady"/>-->
-	<!--<item name="modYoureFired"/>-->
 </lootgroup>
 
 <lootgroup name="modArmorT3">
@@ -1646,11 +626,8 @@ The overall plan for loot distribution:
 
 <lootgroup name="groupModAllScaled">
 	<item group="groupModAllT1" prob=".2"/>
-	<item group="groupModAllT1" loot_prob_template="T1"/>
 	<item group="groupModAllT2" prob=".2"/>
-	<item group="groupModAllT2" loot_prob_template="T2"/>
 	<item group="groupModAllT3" prob=".2"/>
-	<item group="groupModAllT3" loot_prob_template="T3"/>
 </lootgroup>
 
 <lootgroup name="grills">
@@ -1664,395 +641,10 @@ The overall plan for loot distribution:
 	<item name="drugHerbalAntibioticsSchematic"/>
 </lootgroup>
 
-<lootgroup name="perkBooks">
-	<item name="bookRangersArrowRecovery"/>
-	<item name="bookRangersCripplingShot"/>
-	<item name="bookRangersKnockdown"/>
-	<item name="bookRangersFlamingArrows"/>
-	<item name="bookRangersAPAmmo"/>
-	<item name="bookRangersExplodingBolts"/>
-	<item name="bookRangersForestGuide"/>
-	<item name="bookArtOfMiningLuckyStrike"/>
-	<item name="bookArtOfMiningDiamondTools"/>
-	<item name="bookArtOfMiningCoffee"/>
-	<item name="bookArtOfMiningBlackStrap"/>
-	<item name="bookArtOfMiningPallets"/>
-	<item name="bookArtOfMiningAvalanche"/>
-	<item name="bookArtOfMiningLantern"/>
-	<item name="bookAutoWeaponsDamage"/>
-	<item name="bookAutoWeaponsRagdoll"/>
-	<item name="bookAutoWeaponsMaintenance"/>
-	<item name="bookAutoWeaponsRecoil"/>
-	<item name="bookAutoWeaponsDrumMag"/>
-	<item name="bookAutoWeaponsUncontrolledBurst"/>
-	<item name="bookAutoWeaponsMachineGuns"/>
-	<item name="bookBatterUpBaseballBats"/>
-	<item name="bookBatterUpBigHits"/>
-	<item name="bookBatterUpGear"/>
-	<item name="bookBatterUpKnockdown"/>
-	<item name="bookBatterUpSlowPitch"/>
-	<item name="bookBatterUpMaintenance"/>
-	<item name="bookBatterUpConditioning"/>
-	<item name="bookEnforcerAPAmmo"/>
-	<item name="bookEnforcerApparel"/>
-	<item name="bookEnforcerCriminalPursuit"/>
-	<item name="bookEnforcerHPAmmo"/>
-	<item name="bookEnforcerDamage"/>
-	<item name="bookEnforcerIntimidation"/>
-	<item name="bookEnforcerPunks"/>
-	<item name="bookFiremansAlmanacSpeed"/>
-	<item name="bookFiremansAlmanacAxes"/>
-	<item name="bookFiremansAlmanacEquipment"/>
-	<item name="bookFiremansAlmanacPrevention"/>
-	<item name="bookFiremansAlmanacHarvest"/>
-	<item name="bookFiremansAlmanacHeat"/>
-	<item name="bookFiremansAlmanacMolotov"/>
-	<item name="bookGreatHeistAdrenalineFall"/>
-	<item name="bookGreatHeistTimedCharge"/>
-	<item name="bookGreatHeistClaimed"/>
-	<item name="bookGreatHeistGems"/>
-	<item name="bookGreatHeistMotionDetection"/>
-	<item name="bookGreatHeistSafes"/>
-	<item name="bookGreatHeistSprintSneak"/>
-	<item name="bookHuntingJournalBears"/>
-	<item name="bookHuntingJournalCoyotes"/>
-	<item name="bookHuntingJournalDeer"/>
-	<item name="bookHuntingJournalMountainLions"/>
-	<item name="bookHuntingJournalVultures"/>
-	<item name="bookHuntingJournalWolves"/>
-	<item name="bookHuntingJournalSelfDefense"/>
-	<item name="bookLuckyLooterAmmunition"/>
-	<item name="bookLuckyLooterBooks"/>
-	<item name="bookLuckyLooterBrass"/>
-	<item name="bookLuckyLooterDukes"/>
-	<item name="bookLuckyLooterFood"/>
-	<item name="bookLuckyLooterLead"/>
-	<item name="bookLuckyLooterMedical"/>
-	<item name="bookNeedleAndThreadDesertWear"/>
-	<item name="bookNeedleAndThreadDusters"/>
-	<item name="bookNeedleAndThreadFootwear"/>
-	<item name="bookNeedleAndThreadLegwear"/>
-	<item name="bookNeedleAndThreadPockets"/>
-	<item name="bookNeedleAndThreadPufferCoats"/>
-	<item name="bookNeedleAndThreadWinterWear"/>
-	<item name="bookNightStalkerArchery"/>
-	<item name="bookNightStalkerBlades"/>
-	<item name="bookNightStalkerSilentNight"/>
-	<item name="bookNightStalkerSlumberParty"/>
-	<item name="bookNightStalkerStealthDamage"/>
-	<item name="bookNightStalkerThiefAdrenaline"/>
-	<item name="bookNightStalkerTwilightThief"/>
-	<item name="bookPistolPeteAPAmmo"/>
-	<item name="bookPistolPeteDamage"/>
-	<item name="bookPistolPeteHPAmmo"/>
-	<item name="bookPistolPeteMaintenance"/>
-	<item name="bookPistolPeteSteadyHand"/>
-	<item name="bookPistolPeteSwissKnees"/>
-	<item name="bookPistolPeteTakeAim"/>
-	<item name="bookShotgunMessiahBreachingSlugs"/>
-	<item name="bookShotgunMessiahDamage"/>
-	<item name="bookShotgunMessiahLimbShot"/>
-	<item name="bookShotgunMessiahMaintenance"/>
-	<item name="bookShotgunMessiahMagazine"/>
-	<item name="bookShotgunMessiahPartyStarter"/>
-	<item name="bookShotgunMessiahSlugs"/>
-	<item name="bookSniperAPAmmo"/>
-	<item name="bookSniperControlledBreathing"/>
-	<item name="bookSniperCripplingShot"/>
-	<item name="bookSniperDamage"/>
-	<item name="bookSniperHeadShot"/>
-	<item name="bookSniperGhost"/>
-	<item name="bookSniperHPAmmo"/>
-	<item name="bookUrbanCombatAdrenalineRush"/>
-	<item name="bookUrbanCombatControlledBreathing"/>
-	<item name="bookUrbanCombatRoomClearing"/>
-	<item name="bookUrbanCombatJumping"/>
-	<item name="bookUrbanCombatLandMines"/>
-	<item name="bookUrbanCombatLanding"/>
-	<item name="bookUrbanCombatSneaking"/>
-	<item name="bookWasteTreasuresAcid"/>
-	<item name="bookWasteTreasuresCloth"/>
-	<item name="bookWasteTreasuresCoffins"/>
-	<item name="bookWasteTreasuresDoors"/>
-	<item name="bookWasteTreasuresHoney"/>
-	<item name="bookWasteTreasuresSinks"/>
-	<item name="bookWasteTreasuresWater"/>
-	<!--
-	<item name="bookArcticSurvivalCold"/>
-	<item name="bookArcticSurvivalForage"/>
-	<item name="bookArcticSurvivalIce"/>
-	<item name="bookArcticSurvivalSnowShoes"/>
-	<item name="bookArcticSurvivalSnowZombies"/>
-	<item name="bookArcticSurvivalStews"/>
-	<item name="bookBearHunterBearoids"/>
-	<item name="bookBearHunterClaws"/>
-	<item name="bookBearHunterDamage"/>
-	<item name="bookBearHunterDefense"/>
-	<item name="bookBearHunterFurCoat"/>
-	<item name="bookBearHunterHarvest"/>
-	-->
-</lootgroup>
-
-<lootgroup name="schematicsModsCommon">
-	<item name="modArmorHelmetLightSchematic"/>
-	<item name="modArmorBandolierSchematic"/>
-	<item name="modArmorInsulatedLinerSchematic"/>
-	<item name="modArmorCoolingMeshSchematic"/>
-	<item name="modArmorPlatingBasicSchematic"/>
-	<item name="modArmorImprovedFittingsSchematic"/>
-	<item name="modArmorStoragePocketSchematic"/>
-	<item name="modArmorDoubleStoragePocketSchematic"/>
-	<item name="modArmorMuffledConnectorsSchematic"/>
-	<item name="modGunBarrelExtenderSchematic"/>
-	<item name="modGunMuzzleBrakeSchematic"/>
-	<item name="modGunFlashlightSchematic"/>
-	<item name="modGunScopeSmallSchematic"/>
-	<item name="modGunScopeMediumSchematic"/>
-	<item name="modGunReflexSightSchematic"/>
-	<item name="modGunTriggerGroupSemiSchematic"/>
-	<item name="modGunBipodSchematic"/>
-	<item name="modGunForegripSchematic"/>
-	<item name="modGunRetractingStockSchematic"/>
-	<item name="modGunDuckbillSchematic"/>
-	<item name="modGunChokeSchematic"/>
-	<item name="modGunMagazineExtenderSchematic"/>
-	<item name="modShotgunSawedOffBarrelSchematic"/>
-	<item name="modGunCrippleEmSchematic"/>
-	<item name="modGunBowArrowRestSchematic"/>
-	<item name="modGunBowPolymerStringSchematic"/>
-	<item name="modMeleeTemperedBladeSchematic"/>
-	<item name="modMeleeSerratedBladeSchematic"/>
-	<item name="modMeleeWeightedHeadSchematic"/>
-	<item name="modMeleeStructuralBraceSchematic"/>
-	<item name="modMeleeErgonomicGripSchematic"/>
-	<item name="modMeleeFortifyingGripSchematic"/>
-	<item name="modMeleeClubBarbedWireSchematic"/>
-	<item name="modMeleeClubMetalSpikesSchematic"/>
-	<item name="modMeleeClubBurningShaftSchematic"/>
-	<item name="modMeleeGraveDiggerSchematic"/>
-	<item name="modMeleeWoodSplitterSchematic"/>
-	<item name="modFuelTankSmallSchematic"/>
-	<item name="modFuelTankLargeSchematic"/>
-	<item name="medicalFirstAidBandageSchematic"/>
-	<item name="resourceMilitaryFiberSchematic"/>
-	<item name="modGunMeleeTheHunterSchematic"/>
-	<!--<item name="modGunMeleeBlessedMetalSchematic"/>-->
-</lootgroup>
-
-<lootgroup name="schematicsModsRare">
-	<item name="modGunRodAndSpringSchematic"/>
-	<item name="modGunScopeLargeSchematic"/>
-	<item name="modGunLaserSightSchematic"/>
-	<item name="modGunTriggerGroupBurst3Schematic"/>
-	<item name="modGunSoundSuppressorSilencerSchematic"/>
-	<item name="modGunTriggerGroupAutomaticSchematic"/>
-	<item name="modGunMeleeRadRemoverSchematic"/>
-	<item name="modArmorPlatingReinforcedSchematic"/>
-	<item name="modArmorTripleStoragePocketSchematic"/>
-	<item name="modArmorAdvancedMuffledConnectorsSchematic"/>
-	<item name="modArmorWaterPurifierSchematic"/>
-	<item name="modArmorCustomizedFittingsSchematic"/>
-	<item name="modMeleeBunkerBusterSchematic"/>
-	<item name="modMeleeIronBreakerSchematic"/>
-	<item name="modArmorImpactBracingSchematic"/>
-	<item name="medicalFirstAidKitSchematic"/>
-	<item name="medicalPlasterCastSchematic"/>
-	<item name="drugAntibioticsSchematic"/>
-	<item name="drugHerbalAntibioticsSchematic"/>
-</lootgroup>
-
-<lootgroup name="schematicsToolsCommon">
-	<item name="forgeSchematic"/>
-	<item name="meleeToolIronSetSchematic"/>
-	<item name="meleeToolWrenchSchematic"/>
-	<item name="meleeToolKnifeIronSchematic"/>
-	<item name="meleeToolSledgehammerIronSchematic"/>
-	<item name="ammoGasCanSchematic"/>
-	<item name="resourceOilSchematic"/>
-	<!--<item name="meleeToolHoeIronSchematic"/>-->
-</lootgroup>
-
-<lootgroup name="schematicsToolsRare">
-	<item name="gunToolNailgunSchematic"/>
-	<item name="meleeToolSteelSetSchematic"/>
-	<item name="meleeToolSledgehammerSteelSchematic"/>
-	<item name="meleeToolAugerSchematic"/>
-	<item name="meleeToolChainsawSchematic"/>
-	<item name="toolBellowsSchematic"/>
-	<item name="toolForgeCrucibleSchematic"/>
-	<item name="toolAnvilSchematic"/>
-	<item name="tableSawSchematic"/>
-	<item name="cementMixerSchematic"/>
-	<item name="workbenchSchematic"/>
-	<item name="chemistryStationSchematic"/>
-</lootgroup>
-
-<lootgroup name="schematicsWeaponsCommon">
-	<item name="gunPistolSchematic"/>
-	<item name="gunDoubleBarrelShotgunSchematic"/>
-	<item name="gunHuntingRifleSchematic"/>
-	<item name="gunAK47Schematic"/>
-	<item name="gunBowWoodenSchematic"/>
-	<item name="gunCrossbowIronSchematic"/>
-	<item name="gunJunkTurretSchematic"/>
-	<item name="thrownAmmoPipeBombSchematic"/>
-	<item name="thrownGrenadeSchematic"/>
-	<item name="meleeToolKnifeIronSchematic"/>
-	<item name="meleeClubIronSchematic"/>
-	<item name="meleeStunBatonSchematic"/>
-	<item name="meleeThrownSpearIronSchematic"/>
-	<item name="meleeKnucklesIronSchematic"/>
-</lootgroup>
-
-<lootgroup name="schematicsWeaponsRare">
-	<item name="gunBowCompoundSchematic"/>
-	<item name="gunCrossbowCompoundSchematic"/>
-	<item name="gun44MagnumSchematic"/>
-	<item name="gunPumpShotgunSchematic"/>
-	<item name="gunSMG5Schematic"/>
-	<item name="gunMR10Schematic"/>
-	<item name="gunRocketLauncherSchematic"/>
-	<item name="thrownDynamiteSchematic"/>
-	<item name="thrownGrenadeContactSchematic"/>
-	<item name="meleeKnucklesSteelSchematic"/>
-	<item name="thrownGrenadeContactSchematic"/>
-	<item name="thrownGrenadeSchematic"/>
-	<item name="thrownDynamiteSchematic"/>
-	<item name="meleeToolKnifeMacheteSchematic"/>
-	<item name="meleeThrownSpearSteelSchematic"/>
-</lootgroup>
-
-<lootgroup name="schematicsArmorCommon">
-	<item name="armorLeatherSetSchematic"/>
-	<item name="armorIronSetSchematic"/>
-</lootgroup>
-
-<lootgroup name="schematicsArmorRare">
-	<item name="armorMilitarySetSchematic"/>
-	<item name="armorSteelSetSchematic"/>
-</lootgroup>
-
-<lootgroup name="schematicsVehiclesCommon">
-	<item name="vehicleBicycleChassisSchematic"/>
-	<item name="vehicleBicycleHandlebarsSchematic"/>
-	<item name="vehicleMinibikeChassisSchematic"/>
-	<item name="vehicleMinibikeHandlebarsSchematic"/>
-</lootgroup>
-
-<lootgroup name="schematicsVehiclesRare">
-	<item name="vehicleMotorcycleChassisSchematic"/>
-	<item name="vehicleMotorcycleHandlebarsSchematic"/>
-	<item name="vehicle4x4TruckChassisSchematic"/>
-	<item name="vehicle4x4TruckAccessoriesSchematic"/>
-	<item name="vehicleGyroCopterChassisSchematic"/>
-	<item name="vehicleGyroCopterAccessoriesSchematic"/>
-</lootgroup>
-
-<lootgroup name="farmingCookingRecipes">
-	<item name="drinkJarCoffeeSchematic"/>
-	<item name="drinkJarGoldenRodTeaSchematic"/>
-	<item name="drinkJarRedTeaSchematic"/>
-	<item name="drinkYuccaJuiceSmoothieSchematic"/>
-	<item name="drinkJarBeerSchematic"/>
-	<item name="drinkJarGrandpasAwesomeSauceSchematic"/>
-	<item name="drinkJarGrandpasLearningElixirSchematic"/>
-	<item name="drinkJarGrandpasMoonshineSchematic"/>
-	<item name="foodBaconAndEggsSchematic"/>
-	<item name="foodBakedPotatoSchematic"/>
-	<item name="foodBlueberryPieSchematic"/>
-	<item name="foodBoiledMeatSchematic"/>
-	<item name="foodCornBreadSchematic"/>
-	<item name="foodCornOnTheCobSchematic"/>
-	<item name="foodGrilledMeatSchematic"/>
-	<item name="foodMeatStewSchematic"/>
-	<item name="foodSteakAndPotatoSchematic"/>
-	<item name="foodVegetableStewSchematic"/>
-	<item name="foodHoboStewSchematic"/>
-	<item name="plantedAloe1Schematic"/>
-	<item name="plantedBlueberry1Schematic"/>
-	<item name="plantedChrysanthemum1Schematic"/>
-	<item name="plantedCoffee1Schematic"/>
-	<item name="plantedCorn1Schematic"/>
-	<item name="plantedCotton1Schematic"/>
-	<item name="plantedGoldenrod1Schematic"/>
-	<item name="plantedGraceCorn1Schematic"/>
-	<item name="plantedHop1Schematic"/>
-	<item name="plantedMushroom1Schematic"/>
-	<item name="plantedPotato1Schematic"/>
-	<item name="plantedYucca1Schematic"/>
-	<item name="plantedPumpkin1Schematic"/>
-</lootgroup>
-
 <lootgroup name="rareFoodDrink">
-	<item name="drinkJarGrandpasAwesomeSauce"/>
-	<item name="drinkJarGrandpasLearningElixir"/>
-	<item name="drinkJarGrandpasMoonshine"/>
 	<item name="foodHoboStew"/>
 	<item name="drinkJarBlackStrapCoffee"/>
 	<item name="drinkCanMegaCrush"/>
-</lootgroup>
-
-<lootgroup name="schematicsElectrical">
-	<item name="pressureplateSchematic"/>
-	<item name="poweredDoorsSchematic"/>
-	<item name="bladeTrapSchematic"/>
-	<item name="dartTrapSchematic"/>
-	<item name="shotgunTurretSchematic"/>
-	<item name="autoTurretSchematic"/>
-	<item name="electricfencepostSchematic"/>
-	<item name="motionsensorSchematic"/>
-	<item name="speakerSchematic"/>
-	<item name="spotlightPlayerSchematic"/>
-	<item name="switchSchematic"/>
-	<item name="batterybankSchematic"/>
-	<item name="electrictimerrelaySchematic"/>
-</lootgroup>
-
-
-	<!-- List of book / schematics groups:
-
-	<item group="perkBooks"/>               112
-	<item group="schematicsModsCommon"/>     42
-	<item group="schematicsModsRare"/>       19
-	<item group="schematicsToolsCommon"/>     7
-	<item group="schematicsToolsRare"/>      12
-	<item group="schematicsWeaponsCommon"/>  14
-	<item group="schematicsWeaponsRare"/>    15
-	<item group="schematicsArmorCommon"/>     2
-	<item group="schematicsArmorRare"/>       2
-	<item group="schematicsVehiclesCommon"/>  4
-	<item group="schematicsVehiclesRare"/>    6
-	<item group="farmingCookingRecipes"/>    35
-	<item group="groupQuestChallenge"/>	 20
-	-->
-
-<lootgroup name="commonBooks">
-	<item group="perkBooks" prob="112"/>
-	<item group="schematicsModsCommon" prob="42"/>
-	<item group="schematicsToolsCommon" prob="7"/>
-	<item group="schematicsWeaponsCommon" prob="14"/>
-	<item group="schematicsArmorCommon" prob="2"/>
-	<item group="schematicsVehiclesCommon" prob="4"/>
-	<item group="schematicsElectrical" prob="13"/>
-</lootgroup>
-
-<lootgroup name="rareBooks">
-	<item group="schematicsModsRare" prob="19"/>
-	<item group="schematicsToolsRare" prob="12"/>
-	<item group="schematicsWeaponsRare" prob="15"/>
-	<item group="schematicsArmorRare" prob="2"/>
-	<item group="schematicsVehiclesRare" prob="6"/>
-	<item group="groupQuestChallenge" prob="20"/>
-</lootgroup>
-
-<lootgroup name="booksNoFiller">
-	<item group="commonBooks" prob="0.33"/>
-	<item group="rareBooks" loot_prob_template="probTemplate1.0"/> <!-- .2 => 1.0 -->
-</lootgroup>
-
-<lootgroup name="books">
-	<item group="booksNoFiller"/>
-	<item name="resourcePaper" count="10,25" prob="0.3"/>
 </lootgroup>
 
 <lootgroup name="electricalDevices">
@@ -2531,8 +1123,6 @@ The overall plan for loot distribution:
 	<item group="cupboard" prob="0.7"/>
 	<item group="groupWeaponsT1_All" prob="0.1"/>
 	<item group="groupApparelClothes" prob="0.12"/>
-	<item group="groupArmorT1_Light" prob="0.07"/>
-	<item group="groupArmorT1_Heavy" prob="0.07"/>
 	<item name="meleeToolFlashlight02" prob="0.08"/>
 	<item group="survivalMedical" prob="0.1"/>
 </lootgroup>
@@ -3754,6 +2344,23 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="T2BookList" prob="22" />
 	<item group="T3BookList" prob="3" />
 </lootgroup>
+
+<lootgroup name="MREs">
+    <item name="jz_FoodMRESmall" count="1,2" prob="50.0" />
+    <item name="jz_FoodMREMedium" count="1,2" prob="35.0" />
+    <item name="jz_FoodMRELarge" count="1,2" prob="15.0" />
+</lootgroup>
+    
+<lootgroup name="dryfood">
+	<item group="cannedfood" count="1,2" prob="20" />
+	<item name="jz_FoodCereal" count="1,2" prob="11" />
+    <item name="jz_FoodChips" count="1,2" prob="11" />
+    <item name="jz_FoodOatMeal" count="1,2" prob="11" />
+    <item group="MREs"  prob="7" />
+	<item name="jz_FoodFruitCake"  prob="6" />
+	<item name="jz_FoodBread" count="1,2" prob="8" />
+	<item name="jz_FoodFlour" count="1,2" prob="10" />
+</lootgroup>
 <!--
 	<item group="groupModAllT3" loot_prob_template="GradeCLoot"/>
 
@@ -3895,7 +2502,6 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
     <item name="bucketEmpty" prob="5" />
 	<item group="cupboard" count="1,2" prob="5" />
 	<item group="tools" count="0,2" prob="1" />
-
 	<item name="jz_Screwdriver"  quality="50,300" prob="8" />
 	<item name="meleeToolClawHammer"  quality="50,300" prob="8" />
 	<item group="dryfood" loot_prob_template="goodFoodTemplate" />
