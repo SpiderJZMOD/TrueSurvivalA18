@@ -2094,6 +2094,7 @@ The overall plan for loot distribution:
 	<item name="foodCanPears"/>
 	<item name="foodHoney"/>
 	<item name="foodCornMeal"/>
+	<item name="jz_FoodCanUnlabeled"/>
 </lootgroup>
 
 <lootgroup name="seeds">
@@ -2141,7 +2142,7 @@ The overall plan for loot distribution:
 <lootgroup name="drinks">
 	<item name="drinkCanMegaCrush" prob="0.045"/>
 	<item name="drinkJarBeer" count="1,2"/>
-	<item name="drinkJarBoiledWater" count="1,2"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="1,2"/>
 	<item name="drinkJarCoffee" count="1,2"/>
 	<item name="drinkJarGoldenRodTea" count="1,2"/>
 	<item name="drinkJarRedTea" count="1,2"/>
@@ -2152,11 +2153,19 @@ The overall plan for loot distribution:
 	<item name="drinkCanEmpty"/>
 	<item group="cannedfood" prob="0.5"/>
 	<item group="seeds" prob="0.05"/>
-	<item name="drinkJarBoiledWater" prob="0.5"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="1,24" prob="0.5"/>
 	<item name="drinkJarEmpty" count="1,4"/>
 	<item name="resourceElectricParts" count="1,2" prob="0.05"/>
 	<item name="resourcePotassiumNitratePowder" count="2,6" prob="0.15"/>
 	<item group="dyes" prob="0.1"/>
+	<item name="jz_SteakKnife" prob="10" />
+	<item name="jz_SteelButterKnife" prob="9" />
+	<item name="jz_WoodSpoon" prob="9" />
+	<item name="jz_SteelFork" prob="9" />
+	<item name="jz_SteelSpoon" prob="9" />
+	<item name="resourcePaint" count="5,20" prob="3" />
+    <item group="itemJunk" prob="16" />
+    <item name="jz_Charcoal" count="1,4" prob="2" />
 </lootgroup>
 
 <lootgroup name="rareOres"> <!-- 907 average -->
@@ -2382,12 +2391,11 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="tools">
-	<item name="meleeToolStoneAxe" prob="0.5"/>
 	<item name="meleeToolPickaxeIron"/>
 	<item name="meleeToolShovelIron"/>
 	<item name="meleeToolFireaxeIron"/>
 	<item name="meleeToolSledgehammerIron"/>
-	<!--<item name="meleeToolHoeIron"/>-->
+	<item name="meleeToolHoeIron"/>
 	<item name="meleeToolClawHammer"/>
 	<item name="meleeToolWrench"/>
 	<item name="resourceRepairKit" count="1,4"/>
@@ -2398,6 +2406,17 @@ The overall plan for loot distribution:
 	<item name="meleeToolWireTool"/>
 	<item group="rareTools"/>
 	<item group="toolParts"/>
+
+	<item name="bucketEmpty" prob="5" />
+	<item name="jz_HandSaw" prob="4" />
+	<item name="jz_ScavengedParts" count="1,4" prob="5" />
+	<item name="jz_MasonHammer" quality="150,300" prob="5" />
+    <item name="jz_Screwdriver" quality="150,300" prob="7" />
+	<item name="jz_WeaponRepairKit" count="1,2" prob="4" />
+	<item group="resources" prob="7" />
+	<item name="sharpeningStone" count="1,6" prob="5" />
+	<item group="molds" prob="5" />
+	<item group="heads" prob="5" />
 </lootgroup>
 
 <lootgroup name="workingStiffs">
@@ -2486,7 +2505,7 @@ The overall plan for loot distribution:
 
 <lootgroup name="beverages">
 	<item name="drinkJarEmpty" prob="2.5"/>
-	<item name="drinkJarBoiledWater"/>
+	<item name="jz_DrinkCleanOuncesOfWater"/>
 	<item name="drinkJarBeer"/>
 	<item name="drinkCanMegaCrush" prob="0.045"/>
 </lootgroup>
@@ -2531,7 +2550,7 @@ The overall plan for loot distribution:
 	<item group="cannedfood"/>
 	<item group="rottenFood"/>
 	<item group="junk"/>
-	<item name="drinkJarBoiledWater" count="1,3"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="1,3"/>
 	<item group="groupApparelClothes"/>
 	<item name="apparelFacialPiercings" prob="0.1"/>
 	<item name="resourceLockPick" count="2,8"/>
@@ -3008,7 +3027,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 </lootgroup>
 
 <lootgroup name="groupBuriedStashChest" count="all">
-	<item name="drinkJarBoiledWater" count="2,4"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="2,4"/>
 	<item group="cannedfood" count="2,4"/>
 	<item group="farmingCookingRecipes" count="1"/>
 	<item group="rareFoodDrink" count="1"/>
@@ -3845,6 +3864,17 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <!-- medicine cabinets -->
 <lootcontainer id="7" count="1,2" size="6,2" sound_open="UseActions/open_medicine_cabinet" sound_close="UseActions/close_medicine_cabinet" loot_quality_template="qualBaseTemplate">
 	<item group="medicine"/>
+	<item name="jz_GlassCompact" prob="6.81" />
+	<item name="jz_IronHairSpray" prob="6.81" />
+	<item name="jz_IronScissors" prob="6.81" />
+    <item name="apparelFacialPiercings" prob="6.81" />
+	<item name="jz_PlasticHairBrush" prob="6.81" />
+	<item name="jz_PlasticCondom" prob="6.81" />
+	<item name="jz_PlasticToothBrush" prob="6.81" />
+	<item name="jz_PlasticLighter" prob="6.81" />
+	<item name="jz_ElectricShaver" prob="6.81" />
+	<item name="jz_ElectricBlackVibrator" prob="4.81" />
+	<item name="jz_SteelBracelet" prob="6.81" />
 </lootcontainer>
 
 <!-- kitchen sink, cupboards (lower), cleaning chemicals, plates, silverware, pots and pans -->
@@ -3858,7 +3888,18 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item name="resourceScrapLead" count="1,10"/>
 	<item name="resourceAcid" count="1,2" />
 	<item name="resourcePotassiumNitratePowder" count="2,6" />
-	<item group="farmingCookingRecipes"/>
+	<item group="T1FarmingBooks"/>
+	<item group="T2FarmingBooks"/>
+	<item name="jz_FryingPan" prob="5" />
+	<item name="toolCookingGrill" prob="5" />
+    <item name="bucketEmpty" prob="5" />
+	<item group="cupboard" count="1,2" prob="5" />
+	<item group="tools" count="0,2" prob="1" />
+
+	<item name="jz_Screwdriver"  quality="50,300" prob="8" />
+	<item name="meleeToolClawHammer"  quality="50,300" prob="8" />
+	<item group="dryfood" loot_prob_template="goodFoodTemplate" />
+	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
 </lootcontainer>
 
 <!-- backpack, place where people stash things, -->
@@ -3940,7 +3981,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="rottenFood" prob="1"/>
 	<item name="resourceScrapPolymers" count="1,2" prob="1"/>
 	<item name="drinkJarEmpty" prob="1"/>
-	<item name="drinkJarBoiledWater"/>
+	<item name="jz_DrinkCleanOuncesOfWater"/>
 </lootcontainer>
 
 <!-- garage stuff, tools, etc -->
@@ -4007,7 +4048,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- suitcase / luggage -->
 <lootcontainer id="36" count="0,2" size="6,2" sound_open="UseActions/open_suitcase" sound_close="UseActions/close_suitcase" loot_quality_template="qualBaseTemplate">
-	<item name="drinkJarBoiledWater" count="1,2" prob="0.15"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="1,2" prob="0.15"/>
 	<item group="cannedfood" prob="0.5"/>
 	<item group="junk"/>
 	<item name="meleeToolFlashlight02" prob="0.1"/>
@@ -4102,7 +4143,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <!-- frozen or refridgerated food, spoiled food (Helper) -->
 <lootcontainer id="47" count="1,2" size="6,4" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualBaseTemplate">
 	<item group="coldfood" prob="0.7"/>
-	<item name="drinkJarBoiledWater" count="1,2" prob="0.5"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="1,2" prob="0.5"/>
 	<item name="drinkJarEmpty" count="1,2"/>
 	<item name="drinkCanEmpty" count="1,2"/>
 </lootcontainer>
@@ -4111,7 +4152,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootcontainer id="48" count="0,2" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" loot_quality_template="qualBaseTemplate">
 	<item group="books" prob="0.1"/>
 	<item group="cannedfood"/>
-	<item name="drinkJarBoiledWater"/>
+	<item name="jz_DrinkCleanOuncesOfWater"/>
 	<item group="medicine"/>
 	<item name="resourcePaper" count="2,8" prob="0.5"/>
 	<item name="oldCash" count="5,60" prob="1.5"/>
@@ -4266,7 +4307,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootcontainer id="70" count="1,3" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualBaseTemplate">
 	<item group="cannedfood" count="1,2" prob="13"/>
 	<item name="drinkJarBeer" count="1,3" prob="5"/>
-	<item name="drinkJarBoiledWater" count="1,4" prob="10"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="1,4" prob="10"/>
 	<item group="books" prob="6"/>
 	<item group="brassResource" prob="6"/>
 	<item name="resourceForgedIron" count="2,10" prob="3"/>
@@ -4294,7 +4335,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootcontainer id="71" count="2,3" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">
 	<item group="cannedfood" count="1,2" prob="3.7"/>
 	<item name="drinkJarBeer" count="1,3" prob="2"/>
-	<item name="drinkJarBoiledWater" count="2,5" prob="2.5"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="2,5" prob="2.5"/>
 	<item group="books" prob="2.5"/>
 	<item group="brassResource" prob="2.5"/>
 	<item name="resourceForgedIron" count="1,8" prob="1.25"/>
@@ -4636,7 +4677,7 @@ treasureTemplate
 	<!--
 	<item name="drinkCanMegaCrush" prob="0.045"/>
 	<item name="drinkJarBeer" count="1,2"/>
-	<item name="drinkJarBoiledWater" count="1,2"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="1,2"/>
 	<item name="drinkJarCoffee" count="1,2"/>
 	<item name="drinkJarGoldenRodTea" count="1,2"/>
 	<item name="drinkJarRedTea" count="1,2"/>
