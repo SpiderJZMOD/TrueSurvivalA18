@@ -4353,7 +4353,7 @@ Mesh files no longer used:
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
 		<!-- <property name="Range" value="40"/> -->
-		<property name="Magazine_items" value="ammoJunkTurret"/>
+		<property name="Magazine_items" value="ammoBlunderbuss"/>
 		<property name="Reload_time" value="3.9"/>
 		<property name="Sound_start" value="junkturret_fire"/>
 		<property name="Sound_repeat" value=""/>
@@ -13388,7 +13388,7 @@ perkNightStalkerSilentNight
 	<property name="CraftingIngredientTime" value=".5"/>
 </item>
 
-<!-- <item name="dirtFragment">
+ <item name="dirtFragment">
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -13399,7 +13399,7 @@ perkNightStalkerSilentNight
 	<property name="EconomicBundleSize" value="5000"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="Group" value="Resources"/>
-</item> -->
+</item>
 
 <item name="resourceCobblestones">
 	<property name="HoldType" value="45"/>
@@ -13521,7 +13521,7 @@ perkNightStalkerSilentNight
 	<property name="RepairAmount" value="400"/> -->
 </item>
 
-<item name="resourceElectronicParts"> <!-- scrap material -->
+<item name="resourceTechParts"> <!-- scrap material -->
 	<property name="CreativeMode" value="None"/>
 	<property name="HoldType" value="45"/>
 	<property name="Tags" value="junk"/>
@@ -19931,7 +19931,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 </item>
 
-<item name="jz_FoodWellnessJuice">
+<item name="jz_DrinkWellnessJuice">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="Meshfile" value="Items/Food/coffeePrefab" />
 	<property name="CustomIcon" value="ui_game_symbol_wellnessJuice" />
@@ -19954,7 +19954,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 </item>
 
-<item name="jz_FoodFruitJuice">
+<item name="jz_DrinkFruitJuice">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="Meshfile" value="Items/Food/coffeePrefab" />
 	<property name="CustomIcon" value="ui_game_symbol_carrotJuice" />
@@ -19978,7 +19978,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 </item>
 
-<item name="jz_FoodVeggieJuice">
+<item name="jz_DrinkVeggieJuice">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="Meshfile" value="Items/Food/coffeePrefab" />
 	<property name="CustomIcon" value="ui_game_symbol_carrotJuice" />
@@ -20108,7 +20108,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 </item>
 
-<item name="jz_FoodMead">
+<item name="jz_DrinkMead">
 	<property name="Extends" value="drinkJarBeer" />
 	<property name="CustomIcon" value="ui_game_symbol_mead" />
 	<property name="CustomIconTint" value="af8d05" />
@@ -21337,7 +21337,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="Group" value="Science" />
 </item>
 
-<item name="jz_MoldScrapWrench">
+<item name="jz_MoldWrench">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
 	<property name="HoldType" value="45" />
@@ -21982,7 +21982,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="2" />
 </item>
 
-<item name="jz_Electronic3ds">
+<item name="jz_Tech3ds">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_electronic3ds" />
 	<property name="DescriptionKey" value="electronic3dsDesc" />
@@ -21990,7 +21990,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="2" />
 </item>
 
-<item name="jz_ElectronicCellPhone">
+<item name="jz_TechCellPhone">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_electronicCellPhone" />
 	<property name="DescriptionKey" value="electronicCellPhoneDesc" />
@@ -21998,7 +21998,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="2" />
 </item>
 
-<item name="jz_ElectronicClockRadio">
+<item name="jz_TechClockRadio">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_electronicClockRadio" />
 	<property name="DescriptionKey" value="electronicClockRadioDesc" />
@@ -22238,21 +22238,21 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="10" />
 </item>
 
-<item name="jz_ElectronicBrokenIPod">
+<item name="jz_TechBrokenIPod">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MelectronicParts" />
 	<property name="CustomIcon" value="ui_game_symbol_electronicBrokenIPod" />
 	<property name="Weight" value="1" />
 </item>
 
-<item name="jz_ElectronicBrokenIPad">
+<item name="jz_TechBrokenIPad">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MelectronicParts" />
 	<property name="CustomIcon" value="ui_game_symbol_electronicBrokenIpad" />
 	<property name="Weight" value="4" />
 </item>
 
-<item name="jz_ElectronicBrokenLapTop">
+<item name="jz_TechBrokenLapTop">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MelectronicParts" />
 	<property name="CustomIcon" value="ui_game_symbol_electronicBrokenLapTop" />
@@ -22714,7 +22714,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<property name="Delay" value="1"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="player_drinking"/>
-		<property name="Create_item" value="drinkJarEmpty"/>
 	</property>
 	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
 	<effect_group tiered="false">

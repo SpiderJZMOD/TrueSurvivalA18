@@ -394,6 +394,15 @@ The overall plan for loot distribution:
 	<item name="resourceMilitaryFiber" count="1,5" prob="2"/>
 </lootgroup>
 
+<lootgroup name="militaryArmor">
+	<item name="armorMilitaryBoots"/>
+	<item name="armorMilitaryGloves"/>
+	<item name="armorMilitaryHelmet"/>
+	<item name="armorMilitaryLegs"/>
+	<item name="armorMilitaryVest"/>
+	<item name="resourceMilitaryFiber" count="1,5" prob="16.66" />
+</lootgroup>
+	
 <lootgroup name="groupAllArmor/Cloth">
 	<item group="groupApparelClothes"/>
 	<item name="armorMiningHelmet" mods="modArmorHelmetLight" mod_chance="1" prob="0.015"/>
@@ -403,6 +412,22 @@ The overall plan for loot distribution:
 	<item name="resourceTrophy1"/>
 	<item name="resourceTrophy2"/>
     <item name="resourceTrophy3"/>
+</lootgroup>
+
+<lootgroup name="groupArrowGroup">
+	<item name="ammoArrowStone" count="10,40"/>	
+	<item name="ammoArrowIron" count="3,12"/>							
+	<item name="ammoArrowSteelAP" count="6,25"/>						
+	<item name="ammoArrowFlaming" prob="0.1" count="6,24"/>					
+	<item name="ammoArrowExploding" prob="0.1" count="4,16"/>				
+</lootgroup>
+
+<lootgroup name="groupCrossBoltGroup">
+	<item name="ammoCrossbowBoltStone" count="10,40"/>	
+	<item name="ammoCrossbowBoltIron" count="3,12"/>							
+	<item name="ammoCrossbowBoltSteelAP" count="6,25"/>						
+	<item name="ammoCrossbowBoltFlaming" prob="0.1" count="6,24"/>					
+	<item name="ammoCrossbowBoltExploding" prob="0.1" count="4,16"/>				
 </lootgroup>
 
 <lootgroup name="groupAmmoRegular">
@@ -596,11 +621,30 @@ The overall plan for loot distribution:
 	<item name="jz_PartsRocketLauncherParts" quality="50,350" prob="16.66" />       
 </lootgroup>
 
+<lootgroup name="weaponsArcheryParts">
+	<item group="WoodenBowParts" prob="30" />
+	<item group="CrossbowParts" prob="30" />
+	<item group="CompoundBowParts" prob="30" />
+	<item group="CompoundCrossbowParts" prob="30" />
+	<item group="CrossbowParts" prob="30" />
+	<item group="CompoundBowParts" prob="30" />
+</lootgroup>
+
+<lootgroup name="weaponsCommonParts">
+	<item group="pistolWeaponParts" prob="30" />
+	<item group="pumpShotgunWeaponParts" prob="30" />
+	<item group="weaponsHuntingRifleParts" prob="30" />
+	<item name="jz_PartsRevolverParts" quality="50,350" prob="20" />
+    <item name="jz_PartsRevolverCylinder" quality="50,350" prob="20" />
+</lootgroup>
+	
 <lootgroup name="weaponsMilitaryParts">
 	<item group="weaponsMagnumParts" prob="18" />
-	<item group="subMachineWeaponParts" prob="18" />
-	<item group="assaultWeaponParts" prob="18" />
+	<item group="SMG5WeaponParts" prob="18" />
+	<item group="ARWeaponParts" prob="18" />
+	<item group="AK47WeaponParts" prob="18" />
 	<item group="sniperRifleWeaponParts" prob="18" />
+	<item group="M60WeaponParts" prob="18" />
 	<item group="rocketLauncherWeaponParts" prob="16" />
 </lootgroup> 
 
@@ -646,6 +690,14 @@ The overall plan for loot distribution:
 	<item name="jz_PartsAugerBit" prob="20" />
 	<item name="jz_PartsAugerHousing" prob="20" />
 	<item name="partsHandlebars" prob="20" />
+</lootgroup>
+
+<lootgroup name="Explosives">
+	<item name="thrownAmmoPipeBomb" count="1,4"/>
+	<item name="thrownDynamite" count="1,3"/>
+	<item name="thrownGrenade" count="1,3"/>
+	<item name="thrownGrenadeContact" count="1,3"/>
+	<item name="thrownTimedCharge" count="1,3"/>
 </lootgroup>
 
 <lootgroup name="T1WeaponParts">
@@ -815,13 +867,17 @@ The overall plan for loot distribution:
 
 <lootgroup name="grills">
 	<item name="toolCookingGrill" prob=".5"/>
-	<item name="foodRottingFlesh" count="1,2" prob="1"/>
 	<item name="resourceBone" count="5,15" prob=".5"/>
 	<item name="meleeToolKnifeIron" prob=".1"/>
-</lootgroup>
-
-<lootgroup name="herbalRecipes">
-	<item name="drugHerbalAntibioticsSchematic"/>
+	<item name="jz_Charcoal" prob=".5"/>
+	<item name="jz_FryingPan" count="1,2" prob="1"/>
+	<item name="jz_SteelSpoon" prob="14.28" />
+	<item name="jz_SteelFork" prob="14.28" />
+	<item name="jz_PlasticLighter" prob="10" />
+	<item name="jz_StonePlate" prob="20" />
+	<item name="jz_PaperMatches" prob="14.28" />
+	<item name="jz_PaperNews" prob="14.28" />
+	<item name="jz_SteakKnife" prob="14.28" />
 </lootgroup>
 
 <lootgroup name="rareFoodDrink">
@@ -831,8 +887,6 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="electricalDevices">
-	<item name="resourceElectricParts" count="5,10" prob="1"/>
-	<item name="resourceElectricParts" count="3,10" prob="0.5"/>
 	<item name="generatorbank" prob="1"/>
 	<item name="batterybank" prob="0.7"/>
 	<item name="pressureplate" count="1,5" prob="1.0"/>
@@ -843,6 +897,11 @@ The overall plan for loot distribution:
 	<item name="speaker" count="1,2" prob="1.0"/>
 	<item name="switch" count="3,9" prob="1.0"/>
 	<item group="schematicsElectrical" count="1" prob="1.0"/>
+	<item name="jz_ElectricShaver" prob="25" />
+	<item name="jz_ElectricToyMotor" prob="25" />
+	<item name="jz_ElectricToaster" prob="20" />
+	<item name="jz_ElectricBlender" prob="20" />
+	<item name="jz_TechClockRadio"  prob="3" />
 </lootgroup>
 
 <lootgroup name="rottenFood">
@@ -891,12 +950,6 @@ The overall plan for loot distribution:
 	<item name="treePlantedWinterPine1m" prob="0.3"/>
 </lootgroup>
 
-<lootgroup name="airdropfood">
-	<item name="foodCanBeef"/>
-	<item name="foodCanChicken"/>
-	<item name="foodCanLamb"/>
-</lootgroup>
-
 <lootgroup name="coldfood">
 	<item name="foodEgg" count="1,2"/>
 	<item name="foodBlueberryPie"/>
@@ -915,6 +968,10 @@ The overall plan for loot distribution:
 	<item name="resourceCropCottonPlant"/>
 	<item name="resourceCropCoffeeBeans"/>
 	<item name="resourceCropGoldenrodPlant"/>
+	<item name="jz_FoodStrawberry" count="1,2" prob="11.11" />
+	<item name="jz_FoodCarrot" count="1,2" prob="11.11" />
+	<item name="jz_FoodApple" count="1,2" prob="11.11" />
+	<item name="jz_FoodTomato" count="1,2" prob="11.11" />
 </lootgroup>
 
 <lootgroup name="drinks">
@@ -997,6 +1054,9 @@ The overall plan for loot distribution:
 	<item name="resourceRepairKit"/>
 </lootgroup>
 
+<lootgroup name="workbenchSchematics" count="1,2">
+</lootgroup>
+
 <lootgroup name="forgeLoot" count="1,2">
 	<item name="resourceScrapIron" count="20,60" prob="2"/>
 	<item name="resourceScrapBrass" count="10,30"/>
@@ -1009,13 +1069,19 @@ The overall plan for loot distribution:
 	<item name="resourceForgedIron" count="10,20" prob="2"/>
 	<item name="resourceForgedSteel" count="5,20"/>
 	<item name="toolAnvil"/>
-	<item name="toolBellows" loot_prob_template="probTemplate0.75"/>
-	<item name="toolForgeCrucible" loot_prob_template="probTemplate0.75"/>
+	<item name="toolBellows" />
+	<item name="toolForgeCrucible" />
 	<item name="resourceNail" count="20,60"/>
 	<item name="resourceArrowHeadIron" count="10,30"/>
 	<item name="resourceArrowHeadSteelAP" count="10,20"/>
 	<item name="resourceWood" count="20,80" prob="2"/>
 	<item name="resourceCoal" count="10,20"/>
+	<item name="sharpeningStone" count="1,6" prob="3" />
+	<item group="molds" prob="34" />
+	<item group="heads" prob="34" />
+</lootgroup>
+
+<lootgroup name="forgeSchematics" count="1,2">
 </lootgroup>
 
 <lootgroup name="cementMixerLoot" count="1,2">
@@ -1028,6 +1094,9 @@ The overall plan for loot distribution:
 	<item name="resourceCobblestones" count="40,120"/>
 </lootgroup>
 
+<lootgroup name="cementMixerSchematics" count="1,2">
+</lootgroup>
+
 <lootgroup name="chemistryStationLoot" count="1,2">
 	<item name="resourceWood" count="10,40" prob="2"/>
 	<item name="resourceGunPowder" count="20,50"/>
@@ -1035,6 +1104,9 @@ The overall plan for loot distribution:
 	<item name="resourceCropCottonPlant" count="5,12"/>
 	<item name="resourceCropGoldenrodPlant" count="5,12"/>
 	<item name="foodCornMeal" count="5,20"/>
+</lootgroup>
+
+<lootgroup name="chemistrySchematics" count="1">
 </lootgroup>
 
 <lootgroup name="decorativeBlocks">
@@ -1102,12 +1174,12 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="electronicJunk" >
-	<item name="jz_Electronic3ds"  prob="16.67" />
-	<item name="jz_ElectronicCellPhone"  prob="16.67" />
-	<item name="jz_ElectronicClockRadio"  prob="16.67" />
-	<item name="jz_ElectronicBrokenIPad"  prob="16.67" />
-	<item name="jz_ElectronicBrokenIPod"  prob="16.67" />
-	<item name="jz_ElectronicBrokenLapTop"  prob="16.67" />
+	<item name="jz_Tech3ds"  prob="16.67" />
+	<item name="jz_TechCellPhone"  prob="16.67" />
+	<item name="jz_TechClockRadio"  prob="16.67" />
+	<item name="jz_TechBrokenIPad"  prob="16.67" />
+	<item name="jz_TechBrokenIPod"  prob="16.67" />
+	<item name="jz_TechBrokenLapTop"  prob="16.67" />
 </lootgroup>
 
 <lootgroup name="ironJunk" >
@@ -1242,9 +1314,9 @@ The overall plan for loot distribution:
 	<item name="jz_GlassCompact"  prob="1.81" />
 	<item name="jz_GlassEye"  prob="1.81" />
 	<item name="jz_GlassBong"  prob="1.81" />
-    <item name="jz_Electronic3ds"  prob="1.81" />
-	<item name="jz_ElectronicCellPhone"  prob="1.81" />
-	<item name="jz_ElectronicBrokenIPod"  prob="1.81" />
+    <item name="jz_Tech3ds"  prob="1.81" />
+	<item name="jz_TechCellPhone"  prob="1.81" />
+	<item name="jz_TechBrokenIPod"  prob="1.81" />
 	<item name="jz_IronSoldier" prob="1.81" />
 	<item name="jz_IronPaperClips" count="1,6" prob="1.81" />
 	<item name="jz_IronScissors" prob="1.81" />
@@ -1371,6 +1443,12 @@ The overall plan for loot distribution:
 	<item name="plantedAloe1Schematic"/>
 	<item name="plantedCoffee1Schematic"/>
 	<item name="plantedHop1Schematic"/>
+</lootgroup>
+
+<lootgroup name="FarmingBookChance" >
+	<item group="T1FarmingBooks" prob="33" />
+	<item group="T2FarmingBooks" prob="30" />
+	<item group="T3FarmingBooks" prob="20" />
 </lootgroup>
 
 <lootgroup name="T1CraftingXPBooks" >
@@ -1513,6 +1591,21 @@ The overall plan for loot distribution:
 	<item name="switchSchematic"/>
 	<item name="batterybankSchematic"/>
 	<item name="electrictimerrelaySchematic"/>
+</lootgroup>
+
+<lootgroup name="schematicsVehicle" >
+	<item name="vehicleBicycleChassisSchematic"/>
+	<item name="vehicleBicycleHandlebarsSchematic"/>
+	<item name="vehicleBicycleChassisSchematic"/>
+	<item name="vehicleBicycleHandlebarsSchematic"/>
+	<item name="vehicleMinibikeChassisSchematic"/>
+	<item name="vehicleMinibikeHandlebarsSchematic"/>
+	<item name="vehicleMotorcycleChassisSchematic"/>
+	<item name="vehicleMotorcycleHandlebarsSchematic"/>
+	<item name="vehicle4x4TruckChassisSchematic"/>
+	<item name="vehicle4x4TruckAccessoriesSchematic"/>
+	<item name="vehicleGyroCopterChassisSchematic"/>
+	<item name="vehicleGyroCopterAccessoriesSchematic"/>
 </lootgroup>
 
 <lootgroup name="T1Schematics" >
@@ -1797,6 +1890,7 @@ The overall plan for loot distribution:
 
 <lootgroup name="garbage">
 	<item group="junk"/>
+	<item group="automotive" prob="15" />
 </lootgroup>
 
 <lootgroup name="metalpipe_scrap">
@@ -1809,22 +1903,74 @@ The overall plan for loot distribution:
 	<item group="metalpipe_scrap"/>
 </lootgroup>
 
-<lootgroup name="toolParts">
-	<item name="meleeToolAllSteelParts" count="1,4"/>
-	<item name="meleeToolChainsawParts" count="1,4"/>
-	<item name="meleeToolSledgehammerSteelParts" count="1,4"/>
+<lootgroup name="resources" >
+	<item name="resourceCobblestones" count="5,50" prob="11.11" />
+	<item name="jz_Bricks" count="5,50" prob="11.11" />
+	<item name="jz_Plank" count="5,50" prob="11.11" />
+	<item name="resourceNail" count="5,50" prob="11.11" />
+	<item name="resourceCement" count="5,50" prob="11.11" />
+	<item name="resourceConcreteMix" count="5,50" prob="11.11" />
+	<item name="jz_IronSheetMetal" count="5,50" prob="11.11" />
+	<item name="jz_NutAndBolt" count="5,50" prob="11.11" />
+	<item name="jz_SteelSheetMetal" count="5,50" prob="11.11" />
+</lootgroup>
+	
+<lootgroup name="VariantFrameBlocks" >
+	<item name="awningBlockVariantHelper" count="5,50" prob="11.11" />
+	<item name="pouredConcreteBlockVariantHelper" count="5,50" prob="11.11" />
+	<item name="rebarFrameBlockVariantHelper" count="5,50" prob="11.11" />
+	<item name="scrapIronFrameBlockVariantHelper" count="5,50" prob="11.11" />
+	<item name="woodFrameBlockVariantHelper" count="5,50" prob="11.11" />
+	<item name="flagstoneBlockVariantHelper" count="5,50" prob="11.11" />
+	<item name="brickBlockVariantHelper" count="5,50" prob="11.11" />
+	<item name="jz_SteelBlockVariantHelper" count="5,50" prob="11.11" />
+</lootgroup>
+	
+<lootgroup name="molds" >
+	<item name="jz_MoldAxeHead"  prob="7.69" />
+	<item name="jz_MoldPickAxeHead"  prob="7.69" />
+	<item name="jz_MoldShovelHead"  prob="7.69" />
+	<item name="jz_MoldSmallKnifeBlade"  prob="7.69" />
+	<item name="jz_MoldLargeKnifeBlade"  prob="7.69" />
+	<item name="jz_MoldHammerHead"  prob="7.69" />
+	<item name="jz_MoldWrench"  prob="7.69" />
+	<item name="jz_MoldScrewdriverHead"  prob="7.69" />
+	<item name="jz_MoldSledgeHead"  prob="7.69" />
+	<item name="jz_MoldCrowbar"  prob="7.69" />
+	<item name="jz_MoldBrassKnuckles"  prob="7.69" />
+	<item name="jz_MoldSmallEngineBlock"  prob="7.69" />
+	<item name="jz_MoldLargeEngineBlock"  prob="7.69" />
+</lootgroup>
+
+<lootgroup name="heads" >
+	<item name="jz_IronFireaxeHead"  prob="11.11" />
+	<item name="jz_IronPickaxeHead"  prob="11.11" />
+	<item name="jz_IronShovelHead"  prob="11.11" />
+	<item name="jz_SmallKnifeBlade"  prob="11.11" />
+	<item name="jz_LargeKnifeBlade"  prob="11.11" />
+	<item name="jz_HammerHead"  prob="11.11" />
+	<item name="jz_SledgeHead"  prob="11.11" />
+	<item name="jz_SteelFireaxeHead"  prob="11.11" />
+	<item name="jz_SteelPickaxeHead"  prob="11.11" />
+	<item name="jz_SteelShovelHead"  prob="11.11" />
 </lootgroup>
 
 <lootgroup name="rareTools">
 	<item name="meleeToolChainsaw"/>
 	<item name="meleeToolAuger" prob="0.35"/>
-	<item name="smallEngine"/>
 	<item name="meleeToolPickaxeSteel"/>
 	<item name="meleeToolFireaxeSteel"/>
 	<item name="meleeToolShovelSteel"/>
 	<item name="meleeToolSledgehammerSteel"/>
 	<item name="toolBellows"/>
-	<item name="gunToolNailgun" loot_prob_template="probTemplate1.0"/>
+	<item name="gunToolNailgun" />
+	<item group="motorToolParts" prob="9" />
+	<item group="engineParts" prob="7" />
+	<item name="jz_WelderTool" quality="150,300" prob="10" />
+	<item name="wireTool" quality="150,300" prob="10" />
+	<item name="jz_MasonHammer" quality="150,300" prob="10" />
+	<item name="jz_Screwdriver" quality="150,300" prob="11" />
+	<item name="toolAndDieSet" prob="8" />
 </lootgroup>
 
 <lootgroup name="tools">
@@ -1836,14 +1982,11 @@ The overall plan for loot distribution:
 	<item name="meleeToolClawHammer"/>
 	<item name="meleeToolWrench"/>
 	<item name="resourceRepairKit" count="1,4"/>
-	<item name="gunToolNailgun" loot_prob_template="probTemplate0.5"/>
 	<item name="resourceForgedIron" count="1,4" prob="0.41"/>
 	<item name="resourceForgedSteel" count="1,4" prob="0.22"/>
 	<item name="meleeToolPaintTool" prob="0.3"/>
 	<item name="meleeToolWireTool"/>
 	<item group="rareTools"/>
-	<item group="toolParts"/>
-
 	<item name="bucketEmpty" prob="5" />
 	<item name="jz_HandSaw" prob="4" />
 	<item name="jz_ScavengedParts" count="1,4" prob="5" />
@@ -1857,38 +2000,31 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="workingStiffs">
-	<item name="meleeToolPickaxeIron"/>
-	<item name="meleeToolShovelIron"/>
-	<item name="meleeToolFireaxeIron"/>
-	<!--<item name="meleeToolHoeIron"/>-->
-	<item name="meleeToolClawHammer"/>
-	<item name="meleeToolWrench" prob="0.8"/>
 	<item name="resourceRepairKit" count="1,4"/>
-	<item name="woodFrameBlockVariantHelper" count="10,30"/>
-	<item name="rebarFrameBlockVariantHelper" count="10,20"/>
 	<item name="resourceNail" count="10,40"/>
-	<item name="resourceWood" count="50,250"/>
+	<item name="jz_Plank" count="50,250"/>
 	<item name="ironDoor1_v1"/>
 	<item name="meleeToolSledgehammerIron"/>
-	<item name="gunToolNailgun" loot_prob_template="probTemplate1.0"/>
-	<!-- <item name="toolCalipers" prob="0.67"/> -->
 	<item name="toolAnvil"/>
-	<item name="toolBellows" loot_prob_template="probTemplate0.75"/>
-	<item name="toolForgeCrucible" loot_prob_template="probTemplate0.75"/>
+	<item name="toolBellows" />
+	<item name="toolForgeCrucible" />
 	<item group="rareTools"/>
 	<item group="automotive" prob="2"/>
-	<item name="resourceForgedIron" count="1,4" prob="0.31"/> <!-- together 3% per crate -->
+	<item name="resourceForgedIron" count="1,4" prob="0.31"/> 
 	<item name="resourceForgedSteel" count="1,4" prob="0.24"/>
 	<item group="electricalDevices" prob="1"/>
-	<item name="resourceMechanicalParts" count="4,10" prob="1"/>
-	<item name="resourceScrapPolymers" count="1,8" prob="0.4"/>
+	<item group="mechanicalJunk" prob="0.2"/>
 	<item group="dyes" prob="0.2"/>
-	<item name="meleeToolPaintTool" prob="0.4"/>
-	<item name="meleeToolWireTool"/>
 	<item name="resourceLockPick" count="1,4"/>
-	<item group="toolParts"/>
-	<item name="armorMilitarySetParts" count="1,4"/>
-	<item name="armorSteelSetParts" count="1,4"/>
+	<item group="resources" prob="6" />
+	<item group="VariantFrameBlocks" prob="6" />
+	<item name="resourcePaint" count="5,20" prob="3" />
+	<item group="tools" prob="6" />
+	<item name="bikeNABox" prob="2" />
+	<item name="meleeToolAugerSchematic"/>
+	<item name="meleeToolChainsawSchematic"/>
+	<item name="jz_AirCompressor" prob="3" />
+    <item name="resourceDoorKnob" prob="3" />
 </lootgroup>
 
 <lootgroup name="rareMedicine">
@@ -1921,7 +2057,6 @@ The overall plan for loot distribution:
 	<item name="resourceArrowHeadSteelAP"/>
 	<item name="toolCookingGrill"/>
 	<item name="toolCookingPot"/>
-	<item name="resourceLeather"/>
 	<item name="medicalFirstAidKit"/>
 	<item name="bedroll"/>
 	<item group="groupApparelShirtLong"/>
@@ -1941,10 +2076,17 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="beverages">
-	<item name="drinkJarEmpty" prob="2.5"/>
 	<item name="jz_DrinkCleanOuncesOfWater"/>
 	<item name="drinkJarBeer"/>
 	<item name="drinkCanMegaCrush" prob="0.045"/>
+	<item name="jz_DrinkMead" prob="6" />
+	<item name="jz_DrinkFruitJuice" prob="9" />
+	<item name="jz_DrinkVeggieJuice" prob="9" />
+	<item name="drinkJarGoldenRodTea" prob="9" />
+	<item name="drinkJarCoffee" prob="8" />
+	<item name="drinkJarBlackStrapCoffee" prob="8" />
+	<item name="drinkJarRedTea" prob="9" />
+    <item name="jz_DrinkWellnessJuice" prob="2" />
 </lootgroup>
 
 <lootgroup name="automotive+tools+junk">
@@ -1982,6 +2124,194 @@ The overall plan for loot distribution:
 	<item name="toolBeaker" prob="0.4"/>
 </lootgroup>
 
+<lootgroup name="professionPageChance" >
+	<item name="professionPage"  prob="50" />
+	<item group="empty" prob="50" />
+</lootgroup>
+	
+<lootgroup name="airdropfood" count="all">
+	<item group="cupboard" count="1,3" />
+	<item group="cannedfood" count="1,3" />
+	<item group="beverages" count="1,3" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropMedicine" count="all">
+	<item name="drugPainkillers" count="1,3"/>
+	<item name="medicalFirstAidKit" count="1,2"/>
+	<item name="drugAntibiotics" count="1,2"/>
+	<item name="toolBeaker" prob="0.4"/>
+	<item name="jz_MedicalAntivirialMeds" count="1,3" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropGuns" count="all">
+	<item group="weaponsMilitaryParts" count="1,3" />
+	<item group="weaponsCommonParts" count="1,3" />
+	<item group="groupAmmoAdvanced" count="1,3" />
+	<item name="jz_GunOil" count="5,10" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropSoldier" count="all">
+	<item name="resourceMilitaryFiber" count="1,2" />
+	<item group="groupAmmoAdvanced" count="1,2" />
+	<item group="militaryArmor" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item name="308mmBullet" count="10" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropBouncer" count="all">
+	<item name="firstAidKit" count="1,2" />
+	<item name="drugPainkillers" />
+	<item name="jz_MedicalStimulant" count="1,2" />
+	<item name="foodCanBeef" />
+	<item name="drinkJarBeer" count="5" />
+	<item name="308mmBullet" count="15" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropChemist" count="all">
+	<item name="jz_MixedChemicals" count="3,6" />
+	<item name="jz_MedicalPurificationTablets" count="1,2" />
+	<item name="toolBeaker" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" count="1,3" />
+	<item name="jz_MedicalStimulant" count="3,6" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropCarpenter" count="all">
+	<item name="jz_HandSaw" />
+	<item name="meleeToolClawHammer" />
+	<item name="jz_Plank" count="100,300" />
+	<item name="resourceGlue" count="3,5" />
+	<item name="resourceNail" count="20,60" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropCop" count="all">
+	<item name="meleeStunBaton" />
+	<item name="ammo9mmBulletHP" count="15" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item name="ammo9mmBulletAP" count="20" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropDoctor" count="all">
+	<item name="jz_MedicalAntiVenom" />
+	<item name="antivirialMeds" />
+	<item name="jz_MedicalAntivirialMeds" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" count="3,6" />
+	<item name="jz_MedicalSutureKit" count="1,3" />
+	<item name="jz_MedicalStimulant" count="6,6" />
+</lootgroup>
+
+<lootgroup name="airdropMason" count="all">
+	<item name="jz_MasonHammer" />
+	<item name="jz_Bricks" count="10,20" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+    <item group="professionPageChance" />
+</lootgroup>
+
+<lootgroup name="airdropChef" count="all">
+	<item group="farmCrops" count="3" />
+	<item name="toolCookingGrill" />
+	<item name="jz_FryingPan" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropFitness" count="all">
+	<item name="drugVitamins" count="3" />
+	<item name="drinkCanMegaCrush" count="3" />
+	<item name="apparelRunningShoesRegular" />
+	<item group="cannedfood" count="5" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropFireman" count="all">
+	<item name="meleeToolFireaxeIron" />
+	<item group="groupApparelHazmat" count="2" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropConstruction" count="all">
+	<item name="meleeToolWrench" />
+	<item name="scrapIronFrameBlockVariantHelper" count="10,20" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropElectrician" count="all">
+	<item name="resourceElectricParts" count="3,5" />
+	<item name="jz_LightBulb" count="2,3" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropMetal" count="all">
+	<item name="resourceConcreteMix" count="50,150" />
+	<item name="jz_NutAndBolt" count="10,20" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropBurglar" count="all">
+	<item name="apparelCigarette" count="3,5" />
+	<item name="jz_MedicalStimulant" count="2,3" />
+	<item name="foodCanBeef" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" count="2,5" />
+	<item name="resourceLockPick" count="50" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropPark" count="all">
+	<item name="drugHerbalAntibiotics" />
+	<item name="jz_MedicalPurificationTablets" count="5" />
+	<item name="drugPainkillers" />
+	<item name="foodCanBeef" count="5" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item name="308mmBullet" count="19" />
+	<item group="professionPageChance"  />
+</lootgroup>
+
+<lootgroup name="airdropMechanic" count="all">
+	<item name="jz_Screwdriver" />
+	<item name="chainsaw" />
+	<item name="foodCanBeef" count="5" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
+	<item name="drugPainkillers" />
+	<item group="professionPageChance"  />
+</lootgroup>
+	
 <lootgroup name="banditsGeneral">
 	<item group="groupArmorT2_Heavy" prob="3"/>
 	<item group="medicine"/>
@@ -2034,7 +2364,7 @@ The overall plan for loot distribution:
 	<item name="vehicle4x4TruckChassis"/>
 	<item name="vehicle4x4TruckAccessories"/>
 	<item name="vehicleWheels"/>
-	<item name="smallEngine"/>
+	<item name="jz_LargeEngine"/>
 	<item name="carBattery"/>
 </lootgroup>
 
@@ -2042,23 +2372,19 @@ The overall plan for loot distribution:
 	<item name="vehicleGyroCopterChassis"/>
 	<item name="vehicleGyroCopterAccessories"/>
 	<item name="vehicleWheels"/>
-	<item name="smallEngine"/>
+	<item name="jz_LargeEngine"/>
 	<item name="carBattery"/>
 </lootgroup>
 
 <lootgroup name="vehicleParts">
 	<item group="bicycleParts" prob="1"/>
 	<item group="minibikeParts" prob=".8"/>
-	<item group="motorcycleParts" loot_prob_template="probTemplate1.0"/>
-	<item group="4x4Parts" loot_prob_template="probTemplate0.75"/>
-	<item group="gyroCopterParts" loot_prob_template="probTemplate0.5"/>
+	<item group="motorcycleParts" />
+	<item group="4x4Parts" />
+	<item group="gyroCopterParts" />
 </lootgroup>
 
 <lootgroup name="labEquipment">
-	<item group="books"/>
-	<item group="rareBooks" prob="0.4"/>
-	<item group="perkBooks" prob="0.2"/>
-	<item name="resourceScrapPolymers" count="1,7"/>
 	<item name="drinkJarEmpty" count="1,20" prob="2"/>
 	<item name="drinkJarGrainAlcohol" count="5,10"/>
 	<item name="drugVitamins" count="1,2"/>
@@ -2071,43 +2397,6 @@ The overall plan for loot distribution:
 	<item name="drugAntibiotics" prob="0.5"/>
 	<item name="toolBeaker" prob="0.35"/>
 	<item name="resourceAcid" count="1,2" prob="0.7"/>
-</lootgroup>
-
-<lootgroup name="brewerySafeFiller" count="1,2">
-	<item group="books"/>
-	<item name="resourcePaper" count="5,20"/>
-	<item name="apparelCigar" prob="1"/>
-</lootgroup>
-
-<lootgroup name="brewerySafe" count="all">
-	<item group="brewerySafeFiller" count="1,2"/>
-</lootgroup>
-
-<lootgroup name="shamwaySafeFiller" count="1,2">
-	<item name="foodCanSham" count="1,3"/>
-	<item group="books"/>
-	<item name="resourcePaper" count="5,20"/>
-	<item name="apparelCigar" prob="1"/>
-</lootgroup>
-
-<lootgroup name="shamwaySafe" count="all">
-	<item name="foodCanShamSchematic"/>
-	<item group="shamwaySafeFiller" count="1,2"/>
-</lootgroup>
-
-<lootgroup name="weaponParts">
-	<item name="gunAk47Parts" count="1,4"/>
-	<item name="gunPistolParts" count="1,4"/>
-	<item name="gunBowWoodenParts" count="1,4"/>
-	<item name="gunHuntingRifleParts" count="1,4"/>
-	<item name="gunDoubleBarrelShotgunParts" count="1,4"/>
-	<item name="gunRocketLauncherParts" count="1,4"/>
-	<item name="gunJunkTurretParts" count="1,4"/>
-	<item name="meleeStunBatonParts" count="1,4"/>
-	<item name="meleeToolKnifeMacheteParts" count="1,4"/>
-	<item name="meleeThrownSpearSteelParts" count="1,4"/>
-	<item name="meleeClubBaseballBatParts" count="1,4"/>
-	<item name="meleeToolSledgehammerSteelParts" count="1,4"/>
 </lootgroup>
 
 <lootgroup name="prefabQuestLoot" count="all">
@@ -2453,7 +2742,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootgroup name="groupQuestSchematics">
 	<item name="drugHerbalAntibioticsSchematic" loot_prob_template="GradeBLoot"/>
 	<item name="foodCanShamSchematic" prob="1.0"/>
-	<item group="perkBooks" prob="20"/>
+	<item group="perkBook" prob="20"/>
 	<item group="books" prob="20"/>
 	<item group="rareBooks" prob="10"/>
 </lootgroup>
@@ -2467,7 +2756,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootgroup name="groupBuriedStashChest" count="all">
 	<item name="jz_DrinkCleanOuncesOfWater" count="2,4"/>
 	<item group="cannedfood" count="2,4"/>
-	<item group="farmingCookingRecipes" count="1"/>
+	<item group="FarmingBookChance" count="1"/>
 	<item group="rareFoodDrink" count="1"/>
 </lootgroup>
 
@@ -2475,31 +2764,24 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="schematicsModsCommon" prob=".8"/>
 	<item group="schematicsModsRare" prob=".2"/>
 	<item group="groupModAllScaled" prob="1"/>
-	<item group="groupWeaponsScaled" prob="2"/>
-	<item group="groupArmorScaled" prob="1"/>
 </lootgroup>
 
 <lootgroup name="groupHeroChestLoot">
 	<item group="groupAmmoRegular" prob=".1" count="2,3"/>
-	<item group="groupWeaponsScaledTPlus" prob="0.4"/>
-	<item group="groupArmorScaledTPlus" prob="0.4"/>
+	<item group="T3WeaponParts" prob="0.4"/>
 	<item group="groupModAllScaled" prob=".2"/>
 	<item group="rareOres" count="2,5" prob="0.05"/>
 	<item group="rareBooks" count="1,2" prob="0.015"/>
-	<item group="perkBooks" count="1,2" prob="0.015"/>
+	<item group="perkBook" count="1,2" prob="0.015"/>
 </lootgroup>
 
 <lootgroup name="groupAmmoPileLoot">
 	<item group="groupAmmoRegular" prob=".7"/>
 	<!--<item group="groupAmmoAdvanced" prob=".5"/>-->
-	<item group="groupWeaponsScaled" prob=".1"/>
-	<item group="groupModAllScaled" prob=".15"/>
 </lootgroup>
 
 <lootgroup name="groupWeaponsBagLoot">
 	<item group="groupAmmoRegular" prob=".2"/>
-	<item group="groupWeaponsScaled" prob=".7"/>
-	<item group="groupModAllScaled" prob=".15"/>
 </lootgroup>
 
 <lootgroup name="groupBirdNest" count="1,2">
@@ -2542,6 +2824,38 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item name="jz_FoodFruitCake"  prob="6" />
 	<item name="jz_FoodBread" count="1,2" prob="8" />
 	<item name="jz_FoodFlour" count="1,2" prob="10" />
+</lootgroup>
+
+<lootgroup name="survivalStash" >
+	<item name="meleeToolFlashlight02" prob="9" />
+	<item name="meleeToolKnifeIron" prob="7" />
+	<item name="meleeToolKnifeMachete" prob="5" />
+	<item name="toolCookingPot" prob="9" />
+	<item name="jz_FryingPan" />
+	<item name="toolCookingGrill" prob="9" />
+	<item name="jz_Tallow" count="1,2" prob="8" />
+	<item name="resourceLeather" count="1,2" prob="8" />
+	<item name="medicalAloeCream" count="1,2" prob="7" />
+	<item name="bedroll" prob="11" />
+	<item name="apparelSkiGoggles" prob="10" />
+	<item name="apparelNightvisionGoggles" prob="2" />
+	<item group="beverages" prob="13" />
+	<item group="treasureMaps" prob="3" />
+</lootgroup>
+
+<lootgroup name="coffinGroup" >
+	<item group="groupApparelClothes" count="1,2" prob="30" />
+	<item name="resourceBone" count="1,2" prob="15" />
+	<item group="junkPersonal" prob="20" />
+	<item group="rareOres" count="5,10" prob="5" />
+	<item name="jz_BoneMeal" count="2,5" prob="12.5" />
+	<item group="treasureMaps"  prob="5" />
+</lootgroup>
+	
+<lootgroup name="deadBody" >
+	<item name="foodRottingFlesh" count="1,3" prob="50" />
+	<item name="goreBlock1Prefab" prob="25" />
+	<item name="goreBlock1BonesPrefab" prob="25" />
 </lootgroup>
 <!--
 	<item group="groupModAllT3" loot_prob_template="GradeCLoot"/>
@@ -2624,7 +2938,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <!-- stove/oven, cooking pots and pans rotten food -->
 <lootcontainer id="5" count="1,2" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate">
 	<item name="toolCookingPot" count="1,2" prob="1.5"/>
-	<item group="farmingCookingRecipes"/>
+	<item group="FarmingBookChance"/>
 	<item name="toolCookingGrill"/>
 	<item name="resourceScrapIron" count="1,15" prob="1.5"/>
 	<item name="drinkJarEmpty" count="1,2"/>
@@ -2639,7 +2953,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootcontainer id="6" count="1,2" size="6,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate">
 	<item group="groupApparelClothes" prob="30"/>
 	<item group="trophyGroup"/>
-	<item group="groupAmmoRegular"/>
+	<item group="groupAmmoSmall"/>
 	<item group="T1BookList"/>
 	<item group="medicine"/>
 	<item name="meleeToolFlashlight02"/>
@@ -2708,15 +3022,23 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="weaponsSmallMelee"/>
 	<item name="oldCash" count="10,300" prob="0.05"/>
 	<item group="rareOres" prob="0.03"/>
-	<item group="T1BookList" prob="0.03"/>
+	<item group="T2BookList" prob="0.03"/>
 	<item group="skillBookChance" prob="0.03"/>
+	<item name="jz_TechCellPhone"  prob="16.67" />
+	<item name="jz_TechBrokenIPad"  prob="16.67" />
+	<item name="jz_TechBrokenIPod"  prob="16.67" />
+	<item name="jz_TechBrokenLapTop"  prob="16.67" />
+    <item name="jz_GlassFrame"  prob="2" />
+	<item name="jz_PlasticCds" prob="2" />
+	<item name="jz_MechanicalOldWatch" prob="2" />
+	<item name="jz_SteelBracelet" prob="2" />
 </lootcontainer>
 
 <!-- POI storage box that looks like the player-built one -->
 <lootcontainer id="12" count="0,2" size="6,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
 	<item group="junk"/>
 	<item group="groupAmmoRegular"/>
-	<item group="books" prob="0.1"/>
+	<item group="T1BookList" prob="0.03"/>
 	<item group="dyes" prob="0.08"/>
 	<item name="meleeToolPaintTool" prob="0.04"/>
 </lootcontainer>
@@ -2724,15 +3046,20 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <!-- laundry basket (Helper) -->
 <lootcontainer id="13" count="1,2" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
 	<item group="groupApparelClothes" prob="0.8"/>
-	<item name="resourceCloth" count="1,5" prob="0.2"/>
+	<item name="clothJunk" count="1,5" prob="0.2"/>
 	<item name="oldCash" count="1,7" prob="0.1"/>
 	<item name="resourceSewingKit"/>
+	<item name="jz_SewingNeedle"/>
 </lootcontainer>
 
 <!-- misc metal container mailbox-->
 <lootcontainer id="14" count="0,2" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate">
-	<item group="books" prob="0.2"/>
-	<item name="resourcePaper" prob="0.8" count="1,10"/>
+	<item group="T1BookList" prob="0.2"/>
+	<item group="skillBookChance" prob="0.2"/>
+	<item name="jz_PaperBook" prob="14.28" />
+	<item name="jz_PaperNews" prob="14.28" />
+	<item name="jz_PaperMatches" prob="14.28" />
+	<item name="Explosives" prob="14.28" />
 </lootcontainer>
 
 <!-- misc storage, cardboard boxes-->
@@ -2742,6 +3069,10 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="books" prob="0.1"/>
 	<item group="dyes" prob="0.08"/>
 	<item name="meleeToolPaintTool" prob="0.05"/>
+	<item name="resourcePaint" count="10,20" prob="8" />
+	<item group="tools" prob="10" />
+    <item group="workingStiffs" prob="10" />
+    <item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- metal garbage can-->
@@ -2751,32 +3082,55 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- canned or dry food cupboard door open sound-->
 <lootcontainer id="17" count="1,2" size="6,3" sound_open="UseActions/open_cupboard" sound_close="UseActions/close_cupboard" loot_quality_template="qualBaseTemplate">
-	<item group="cupboard"/>
+	<item group="cupboard" prob="2.0" />
+	<item group="dryfood" loot_prob_template="goodFoodTemplate" />
+	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
 </lootcontainer>
 
 <!-- washing machine, clothes in good condition -->
 <lootcontainer id="18" count="0,2" size="6,4" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
 	<item group="groupApparelClothes" prob="0.4"/>
-	<item name="resourceCloth" count="1,5" prob="0.4"/>
+	<item group="clothJunk" prob="0.4"/>
+	<item name="jz_SteelBracelet" prob="14.28" />
+	<item name="jz_MechanicalOldWatch" prob="33.3" />
+	<item name="oldCash" prob="14.28" />
+	<item name="jz_Tech3ds"  prob="16.67" />
+	<item name="jz_TechBrokenIPod"  prob="16.67" />
+	<item name="jz_TechCellPhone"  prob="16.67" />
+	<item name="jz_BrassMonkey" prob="16.66" />
+	<item name="jz_PlasticCondom" prob="10" />
+	<item name="jz_PlasticToothBrush" prob="10" />
+	<item name="jz_PlasticLighter" prob="10" />
 </lootcontainer>
 
 <!-- cars-->
 <lootcontainer id="19" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
-	<item group="automotive+tools+junk" count="1,3"/>
+	<item group="automotive+tools+junk" prob="5" />
+	<item group="sportingGoods" prob="3" />
+    <item group="dryfood" loot_prob_template="goodFoodTemplate" />
+	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
 </lootcontainer>
 
 <!-- frozen or refridgerated food, spoiled food -->
 <lootcontainer id="20" count="1,2" size="6,4" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualBaseTemplate">
-	<item group="coldfood" prob="0.7"/>
-	<item group="beverages" count="1,2" prob="0.3"/>
+	<item group="coldfood" loot_prob_template="goodFoodTemplate" />
+	<item group="farmCrops" loot_prob_template="goodFoodTemplate" />
+	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
+	<item group="beverages" count="1,2" loot_prob_template="goodFoodTemplate" />
+	<item name="emptyJar" count="1,2" loot_prob_template="badFoodTemplate" />
+	<item name="canEmpty" count="1,2" prob="1.5" />
 </lootcontainer>
 
 <!-- microwave oven loot -->
 <lootcontainer id="21" count="1,2" size="6,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
 	<item group="rottenFood" prob="1"/>
-	<item name="resourceScrapPolymers" count="1,2" prob="1"/>
 	<item name="drinkJarEmpty" prob="1"/>
 	<item name="jz_DrinkCleanOuncesOfWater"/>
+	<item name="drinkJarGoldenRodTea" prob="9" />
+	<item name="drinkJarCoffee" prob="8" />
+	<item name="drinkJarBlackStrapCoffee" prob="8" />
+	<item name="drinkJarRedTea" prob="9" />
+	<item name="jz_StonePlate" prob="20" />
 </lootcontainer>
 
 <!-- garage stuff, tools, etc -->
@@ -2787,6 +3141,15 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item name="meleeToolPaintTool" prob="0.005"/>
 	<item group="electricalDevices" prob="0.01"/>
 	<item group="groupAmmoRegular"/>
+	<item group="junk" prob="25" />
+	<item group="tools" prob="4" />
+	<item group="vehicleParts" prob="5" />
+	<item name="bikeNABox" prob="5" />
+	<item name="canCatfood" prob="5" />
+	<item name="canDogfood" prob="5" />
+    <item name="jz_Charcoal" prob="5" />
+	<item name="jz_FireWood" prob="5" />
+	<item name="resourcePaint" count="10,50" prob="5" />
 </lootcontainer>
 
 <!-- 23 see below !!! -->
@@ -2796,16 +3159,18 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="groupApparelClothes" prob="40"/>
 	<item group="trophyGroup"/>
 	<item group="groupAmmoRegular"/>
-	<item group="books"/>
+	<item group="T1BookList"/>
 	<item name="resourceGlue" />
 	<item group="medicine"/>
 	<item name="meleeToolFlashlight02"/>
 	<item name="apparelCigar" prob=".3"/>
+	<item name="apparelCigarette" prob=".3"/>
 </lootcontainer>
 
 <!-- birds nest-->
 <lootcontainer id="25" count="1" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
 	<item group="groupBirdNestMain"/>
+    <item name="jz_FoodGrubs" count="1,2" prob="3" />
 </lootcontainer>
 
 <!-- lootcontainer 23 Supply Crate Melee weapons -->
@@ -2820,25 +3185,41 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- Supply Crate General, the normal airdrop -->
 <lootcontainer id="34" count="4" size="8,4" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
-	<item group="cannedfood" count="3,5" prob="0.2"/>
-	<item group="groupWeaponsScaled" prob="0.2"/>
-	<item group="groupAmmoRegular" count="2" prob="0.2"/>
-	<item group="rareBooks" prob="0.2"/>
-	<item group="airdropMedicine" count="1,4" prob="0.2"/>
-	<item group="groupArmorScaled" prob="0.2"/>
+	<item group="airdropMedicine" prob="5.26" />
+	<item group="airdropfood" prob="5.26" />
+	<item group="airdropGuns" prob="5.26" />
+	<item group="airdropSoldier" prob="5.26" />
+	<item group="airdropDoctor" prob="5.26" />
+	<item group="airdropBouncer" prob="5.26" />
+	<item group="airdropChemist" prob="5.26" />
+	<item group="airdropCarpenter" prob="5.26" />
+	<item group="airdropCop" prob="5.26" />
+	<item group="airdropMason" prob="5.26" />
+	<item group="airdropChef" prob="5.26" />
+	<item group="airdropFitness" prob="5.26" />
+	<item group="airdropFireman" prob="5.26" />
+	<item group="airdropConstruction" prob="5.26" />
+	<item group="airdropElectrician" prob="5.26" />
+	<item group="airdropMetal" prob="5.26" />
+	<item group="airdropBurglar" prob="5.26" />
+	<item group="airdropPark" prob="5.26" />
+	<item group="airdropMechanic" prob="5.26" />
 </lootcontainer>
 
 <!-- tree hollowed stump, place where people stash things, -->
 <lootcontainer id="35" count="0,2" size="6,2" sound_open="UseActions/open_stump" sound_close="UseActions/close_stump" loot_quality_template="qualBaseTemplate">
-	<item name="resourceScrapPolymers" count="1,6" prob="2"/>
 	<item name="drinkJarEmpty" count="1,2" prob="2"/>
 	<item name="drinkCanEmpty" count="1,2" prob="5"/>
 	<item group="rottenFood" prob="1"/>
-	<item group="groupWeaponsRangedScaled" prob="1.3"/>
 	<item group="sportingGoods" count="1,2" prob="5"/>
-	<item name="foodHoney"/>
-	<item group="cannedfood"/>
-	<item group="medicine"/>
+	<item name="jz_PlasticShoppingBag" prob="6" />
+	<item name="jz_PaperNews" prob="6" />
+	<item name="jz_ClothChewedDogCollar" prob="6" />
+	<item name="jz_HoneyComb" prob="5" />
+	<item name="foodEgg" prob="0.25"/>
+	<item name="resourceFeather" count="1,5" prob="0.75"/>
+	<item name="foodCropMushrooms" count="1,4" prob="7" />
+    <item name="jz_FoodGrubs" count="1,2" prob="7" />
 </lootcontainer>
 
 <!-- suitcase / luggage -->
@@ -2848,40 +3229,70 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="junk"/>
 	<item name="meleeToolFlashlight02" prob="0.1"/>
 	<item group="medicine" prob="0.1"/>
-	<item group="groupWeaponsScaled" prob="0.06"/>
-	<item group="groupAmmoRegular"/>
-	<item group="groupArmorScaled" prob="0.1"/>
+	<item group="groupAmmoSmall"/>
 	<item group="groupApparelClothes" prob="2"/>
 	<item name="resourceSewingKit" prob="0.2"/>
+	<item group="T1BookList" prob="5" />
+    <item group="weaponsSmallMelee" prob="9" />
+    <item group="skillBookChance"  prob="1" />
 </lootcontainer>
 
 <!-- Bath tub filled with... don't ask. -->
 <lootcontainer id="37" count="1,2" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
 	<item name="foodRottingFlesh" prob="5"/>
 	<item name="resourceBone" count="10,25" prob="2"/>
-	<item name="resourceCloth" count="1,3"/>
-	<item name="resourceGlue"/>
 	<item name="resourceBulletCasing"/>
 	<item group="junk"/>
 </lootcontainer>
 
 <!-- Shamway Manager's Safe -->
 <lootcontainer id="38" size="6,2" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="qualPlus1Template">
-	<item group="shamwaySafe"/>
+	<item group="T1CookingBooks"/>
+	<item group="T2CookingBooks"/>
+	<item group="T3CookingBooks"/>
+	<item group="pistolWeaponParts"/>
+	<item name="ammo9mmBulletAP"/>
+	<item name="jz_RubberBands"  prob="20.0" />
+	<item name="jz_MechanicalOldWatch" prob="33.3" />
+	<item name="jz_ElectricShaver" prob="25" />
+	<item name="jz_PlasticCds" prob="10" />
+	<item name="jz_StonePaperWeight" prob="20" />
+	<item name="jz_IronPaperClips" count="1,6" prob="7.69" />
+	<item name="jz_TechBrokenLapTop"  prob="16.67" />
+	<item name="jz_TechBrokenIPad"  prob="16.67" />
+	<item name="oldCash" prob="14.28" />
+	<item name="jz_PaperBook" prob="14.28" />
 </lootcontainer>
 
 <!-- Brew Master's Safe -->
 <lootcontainer id="39" size="6,2" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="qualPlus1Template">
-	<item group="brewerySafe"/>
+	<item name="drinkJarBeerSchematic"/>
+	<item name="jz_SchematicMead"/>
+	<item name="jz_SchematicGrainAlcohol"/>
+	<item group="pistolWeaponParts"/>
+	<item name="ammo9mmBulletAP"/>
+	<item name="jz_RubberBands"  prob="20.0" />
+	<item name="jz_MechanicalOldWatch" prob="33.3" />
+	<item name="jz_ElectricShaver" prob="25" />
+	<item name="jz_PlasticCds" prob="10" />
+	<item name="jz_StonePaperWeight" prob="20" />
+	<item name="jz_IronPaperClips" count="1,6" prob="7.69" />
+	<item name="jz_TechBrokenLapTop"  prob="16.67" />
+	<item name="jz_TechBrokenIPad"  prob="16.67" />
+	<item name="oldCash" prob="14.28" />
+	<item name="jz_PaperBook" prob="14.28" />
 </lootcontainer>
 
 <!-- military munitions ammo box -->
 <lootcontainer id="40" count="2,3" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" open_time="8" loot_quality_template="qualBaseTemplate">
-	<item group="groupAmmoRegular" prob=".7" count="2"/>
-	<item group="groupWeaponsScaled" prob=".3"/>
-	<item group="groupModAllScaled" prob=".15"/>
-	<!-- <item group="groupAmmoAdvanced"/> -->
-	<item group="groupArmorT3_Light" prob="0.2"/>
+	<item group="weaponsMilitaryParts" count="1,2" prob="20" />
+	<item group="T3WeaponBooks" prob="10" />
+	<item group="groupAmmoAdvanced" prob="10" />
+	<item group="T3BookList" prob="13" />
+	<item group="militaryArmor" prob="5" />
+	<item group="groupAmmoSmall" count="1,3" prob="10" />
+	<item name="professionPage" count="1" prob="10" />
+    <item group="skillBookChance"  prob="1" />
 </lootcontainer>
 
 <!-- cntLootChestHero, small, fancy chest -->
@@ -2891,40 +3302,64 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- gun safe -->
 <lootcontainer id="42" count="2,6" size="8,8" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="qualPlus1Template">
-	<item group="groupSafeLoot"/>
+	<item group="groupAmmoAdvanced" count="1,3" prob="15" />
+	<item group="T2BookList" prob="15" />
+	<item group="groupArrowGroup" count="1,3" prob="15" />
+	<item group="groupCrossBoltGroup" prob="15" />
+	<item group="weaponsCommonParts" count="1,2" prob="20" />
+	<item group="weaponsMagnumParts" count="1,2" prob="9" />
+	<item name="oldCash" count="5,10" prob="5" />
+    <item name="professionPage" prob="5" />
+    <item group="skillBookChance"  prob="1" />
+	<item name="jz_MechanicalOldWatch" prob="33.3" />
+	<item name="jz_PlasticCds" prob="10" />
+	<item name="jz_IronPaperClips" count="1,6" prob="7.69" />
+	<item name="jz_PaperBook" prob="14.28" />
 </lootcontainer>
 
 <!-- lockers -->
 <lootcontainer id="43" count="1,2" size="6,2" sound_open="UseActions/open_locker" sound_close="UseActions/close_locker" loot_quality_template="qualBaseTemplate">
 	<item group="groupApparelClothes" prob="20"/>
 	<item group="groupApparelHats" prob="5"/>
-	<item group="groupArmorScaled" prob="2"/>
 	<item group="groupAmmoRegular" prob="0.02"/>
-	<item group="books" count="1,2"/>
+	<item group="T1BookList" count="1,2"/>
 	<item name="resourcePaper" count="1,2" prob="0.7"/>
 	<item name="oldCash" count="1,40" prob="0.3"/>
 	<item group="medicine" prob="0.05"/>
 	<item group="trophyGroup"/>
 	<item name="resourceGunPowder" count="1,5"/>
+	<item group="groupApparelHazmat" prob="1" />
+	<item group="junk" prob="25" />
+	<item group="skillBookChance"  prob="1" />
 </lootcontainer>
 
 <!-- file cabinet -->
 <lootcontainer id="44" count="1,2" size="6,2" sound_open="UseActions/open_file_cabinet" sound_close="UseActions/close_file_cabinet" loot_quality_template="qualBaseTemplate">
 	<item group="groupAmmoRegular" prob="0.05"/>
 	<item group="books"/>
-	<item group="farmingCookingRecipes"/>
+	<item group="FarmingBookChance"/>
 	<item name="resourcePaper" count="5,10"/>
-	<item name="resourcePaper" count="5,10" prob="0.86"/>
 	<item name="oldCash" count="1,40" prob="0.3"/>
 	<item name="drugPainkillers" prob="0.05"/>
 	<item group="trophyGroup"/>
+	<item name="jz_PaperBook" prob="5" />
+    <item name="jz_GlassBong" prob="5" />
+	<item name="jz_TechBrokenIPad" prob="5" />
+	<item name="jz_TechBrokenIPod" prob="5" />
+	<item name="jz_TechBrokenLapTop" prob="5" />
+    <item name="jz_ElectricShaver" prob="5" />
+	<item name="jz_MechanicalTypeWriter" prob="5" />
+	<item name="jz_RubberBands" prob="5" />
+	<item group="T1BookList" prob="4" />
+    <item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- cooler loot -->
 <lootcontainer id="45" count="1,2" size="6,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
-	<item group="cupboard"/>
-	<item group="coldfood"/>
-	<item group="beverages"/>
+	<item group="cupboard" prob="2" />
+	<item group="coldfood" loot_prob_template="goodFoodTemplate" />
+	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
+	<item group="beverages" prob="0.5" />
 </lootcontainer>
 
 <!-- trash compactor, trash deluxe! -->
@@ -2932,6 +3367,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="junk" prob="10"/>
 	<item group="groupApparelClothes"/>
 	<item group="cannedfood"/>
+	<item group="rottenFood" prob="10" />
 	<item group="beverages"/>
 </lootcontainer>
 
@@ -2949,31 +3385,53 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="cannedfood"/>
 	<item name="jz_DrinkCleanOuncesOfWater"/>
 	<item group="medicine"/>
-	<item name="resourcePaper" count="2,8" prob="0.5"/>
 	<item name="oldCash" count="5,60" prob="1.5"/>
 	<item group="groupAmmoRegular"/>
+	<item name="jz_MedicalStimulant" prob="7" />
+	<item group="weaponsSmallGunsParts" prob="5" />
+    <item group="junkPersonal" prob="26" />
+	<item name="meleeToolFlashlight02" prob="5" />
+    <item group="T1BookList" count="1,2" prob="7" />
+    <item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- bookcase -->
 <lootcontainer id="49" count="1,2" size="6,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate">
-	<item name="resourcePaper" count="2,8" prob="0.1"/>
-	<item group="books" prob="0.9"/>
+	<item group="T1BookList" prob="10" />
+    <item name="jz_PaperBook" prob="8" />
+	<item name="jz_PaperNews" prob="8" />
+	<item name="jz_GlassFrame" prob="8" />
+	<item name="jz_TechClockRadio" prob="8" />
+	<item name="jz_StonePaperWeight" prob="8" />
+	<item name="jz_StoneStatue" prob="8" />
+	<item name="jz_MechanicalTypeWriter" prob="8" />
+    <item group="PerkBook" count="1,2" prob="8" />
+    <item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- shotgun Messiah -->
 <lootcontainer id="50" count="1,3" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
 	<item group="groupAmmoRegular" prob=".3"/>
-	<item group="groupWeaponsScaled" prob=".4"/>
 	<item group="groupModAllScaled" prob=".1"/>
-	<item group="weaponParts" count="1,5" prob=".15"/>
-	<item group="groupArmorScaled" prob="0.2"/>
-	<item name="resourceRepairKit" count="2,3" prob="0.1"/>
+	<item group="groupAmmoAdvanced" count="2,4" prob="8" />
+	<item group="weaponsMilitaryParts" prob="6" />
+	<item group="sportingGoods" prob="10" />
+	<item group="T1WeaponBooks" prob="6" />
+	<item group="T2WeaponBooks" prob="6" />
+	<item group="T3WeaponBooks" prob="6" />
+	<item name="jz_WeaponRepairKit" count="1,3" prob="10" />
+	<item group="weaponsCommonParts" prob="8" />
+	<item group="weaponsArcheryParts" prob="8" />
+	<item name="jz_GunOil" count="3,5" prob="7" />
+    <item group="skillBookChance" prob="1" />
+	<item group="groupArrowGroup" count="1,3" prob="15" />
+	<item group="groupCrossBoltGroup" prob="15" />
 </lootcontainer>
 
 <!-- pop n pills -->
 <lootcontainer id="51" count="1,3" size="6,4" sound_open="UseActions/open_pill_case" sound_close="UseActions/close_pill_case" loot_quality_template="qualBaseTemplate">
 	<item group="medicine"/>
-	<item name="resourceScrapPolymers" count="1,2" prob="0.15"/>
+	<item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- beer cooler -->
@@ -2984,34 +3442,42 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <!-- working stiffs -->
 <lootcontainer id="53" count="1,3" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
 	<item group="workingStiffs"/>
+	<item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- shopping cart-->
 <lootcontainer id="54" count="1,2" size="6,2" sound_open="UseActions/open_shopping_cart" sound_close="UseActions/close_shopping_cart" loot_quality_template="qualBaseTemplate">
 	<item group="cupboard"/>
 	<item group="beverages"/>
-	<item name="resourceScrapPolymers" count="1,2" prob="0.15"/>
+	<item group="junk" prob="1" />
+	<item group="coldfood" loot_prob_template="goodFoodTemplate" />
+	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
 </lootcontainer>
 
 <!-- cash register-->
 <lootcontainer id="55" count="1,5" size="6,1" sound_open="UseActions/open_cash_register" sound_close="UseActions/close_cash_register" loot_quality_template="qualBaseTemplate">
-	<item name="resourcePaper" count="1,3" prob="0.031"/>
 	<item name="oldCash" count="5,60" prob="0.1"/>
-	<item name="casinoCoin" count="1,60"/>
+	<item name="jz_InkPen" count="5,60" prob="0.1"/>
+	<item name="jz_RubberBands"  prob="20.0" />
+	<item name="jz_IronPaperClips" count="1,6" prob="7.69" />
 </lootcontainer>
 
 <!-- Apache Artifact Chest -->
 <lootcontainer id="56" size="6,3" sound_open="UseActions/open_apache_artifact_chest" sound_close="UseActions/close_apache_artifact_chest" loot_quality_template="qualBaseTemplate">
 	<item name="meleeToolStoneAxeTazas"/>
-	<item name="casinoCoin" count="10,500"/>
 	<item name="oldCash" count="12,450" prob="0.5"/>
+	<item group="skillBookChance" prob="1" />
+	<item group="groupArrowGroup" count="1,3" prob="15" />
+	<item group="groupCrossBoltGroup" prob="15" />
+	<item group="weaponsArcheryParts" prob="8" />
+	<item group="weaponsSmallMelee" prob="11"/>      
 </lootcontainer>
 
 <!-- cntCharcoalGrillClosed -->
 <lootcontainer id="57" count="1,2" size="6,2" sound_open="UseActions/open_file_cabinet" sound_close="UseActions/close_file_cabinet" loot_quality_template="qualBaseTemplate">
 	<item group="grills"/>
-	<item name="resourceCoal" count="4,15" prob="1"/>
-	<item name="foodCharredMeat" count="1,2" prob="1"/>
+	<item group="foodCharredMeat" loot_prob_template="goodFoodTemplate" />
+	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
 </lootcontainer>
 
 <!-- miners chest
@@ -3029,27 +3495,46 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootcontainer id="59" count="1,3" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
 	<item name="foodShamSandwich" count="1,3"/>
 	<item name="foodCanSham" count="1,2"/>
-	<item group="coldfood"/>
 	<item group="beverages" count="1,2"/>
 	<item name="foodHoney" prob="0.1"/>
 	<item name="resourcePaper" count="5,10" prob="0.4"/>
 	<item name="resourceScrapPolymers" count="1,8" prob="0.5"/>
+	<item group="coldfood" loot_prob_template="goodFoodTemplate" />
+	<item group="dryfood" loot_prob_template="goodFoodTemplate" />
+	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
+	<item group="cupboard" count="1,2" prob="1" />
+	<item group="seeds" count="1,5" prob="1" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="24,128" prob="0.8" />
 </lootcontainer>
 
 <!-- Bookstore bookcase -->
 <lootcontainer id="60" count="1,2" size="6,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate">
-	<item group="books"/>
+	<item name="jz_PaperBook" prob="8" />
+	<item name="jz_PaperNews" prob="8" />
+	<item name="jz_GlassFrame" prob="8" />
+	<item name="jz_TechClockRadio" prob="8" />
+	<item name="jz_StonePaperWeight" prob="8" />
+	<item name="jz_StoneStatue" prob="8" />
+	<item name="jz_MechanicalTypeWriter" prob="8" />
+    <item group="PerkBook" count="1,2" prob="8" />
+    <item group="skillBookChance" prob="1" />
+	<item group="T1BookList" prob="10" />
+	<item group="T2BookList" count="1,2" prob="8" />
 </lootcontainer>
 
 <!-- Treasure chest -->
 <lootcontainer id="61" count="2,5" size="8,9" destroy_on_close="true" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualPlus1Template">
-	<item group="groupWeaponsScaledTPlus"/>
-	<item group="groupArmorScaledTPlus" prob="0.7"/>
-	<item group="treasureAmmo"/>
-	<item name="casinoCoin" count="3000,8000"/>
-	<item group="rareOres" count="5,11"/>
-	<item name="oldCash" count="50,250" prob="0.5"/>
 	<item group="groupModAllScaled" prob=".8"/>
+	<item group="groupAmmoRegular" prob=".3"/>
+	<item group="survivalStash"  prob="15" />
+	<item group="rareOres" count="5,10" prob="5" />
+    <item group="weaponsCommonParts" prob="10" />
+	<item group="rareTools"  prob="8" />
+	<item group="rareMedicine" quality="350,500"  prob="5" />
+	<item group="treasureAmmo" prob="5"/>
+	<item name="oldCash" count="50,250" prob="3" />
+    <item name="professionPage" prob="10" />
+	<item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- Dummy loot entry for NPC traders -->
@@ -3058,9 +3543,21 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- mountain man loot -->
 <lootcontainer id="63" size="8,4" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualBaseTemplate">
-	<item group="herbalRecipes"/>
+	<item name="drugHerbalAntibioticsSchematic" prob="30" />
 	<item name="drugHerbalAntibiotics" count="1,2" prob="0.5"/>
-	<item group="rareOres" prob="0.05"/>
+	<item group="junkPersonal" prob="10" />
+    <item name="jz_OldAxe" prob="30" />
+	<item group="groupModAllScaled" prob=".8"/>
+	<item group="groupAmmoRegular" prob=".3"/>
+	<item group="survivalStash"  prob="15" />
+	<item group="rareOres" count="5,10" prob="5" />
+    <item group="weaponsCommonParts" prob="10" />
+	<item group="rareTools"  prob="8" />
+	<item group="rareMedicine" quality="350,500"  prob="5" />
+	<item group="treasureAmmo" prob="5"/>
+	<item name="oldCash" count="50,250" prob="3" />
+    <item name="professionPage" prob="10" />
+	<item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- gas pump loot -->
@@ -3069,28 +3566,46 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 </lootcontainer>
 
 <lootcontainer id="65" count="0,2" size="6,1" sound_open="UseActions/open_toilet" sound_close="UseActions/close_toilet" loot_quality_template="qualQ1Template">
-	<item name="gunPistol" prob="0.025"/>
-	<item name="meleeToolKnifeIron" prob="0.025"/>
-	<item name="drinkJarRiverWater" count="1,3"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="5,128"/>
+	<item name="jz_PaperToilet"  prob="15" />
+    <item name="jz_PaperNews" prob="4" />
+    <item name="oldCash" prob="4" />
+	<item name="jz_LeadSoldier" prob="1" />
+	<item name="jz_TechCellPhone"  prob="3" />
+	<item name="jz_TechBrokenIPod"  prob="2" />
+	<item name="jz_IronSoldier" prob="1" />
+	<item name="jz_WoodSoldier" prob="1" />
+	<item name="jz_WoodWhistle" prob="2" />
+	<item name="jz_ClothRags" count="1,3" prob="4" />
+	<item name="jz_PlasticCondom" prob="3" />
+	<item name="jz_RubberDoll" prob="2" />
+	<item name="jz_RubberDuck" prob="2" />
+	<item name="jz_RubberChicken" prob="1" />
+    <item name="thrownAmmoPipeBomb" prob="1" />
+	<item name="jz_FoodDeadRat" prob="10.0"/>
 </lootcontainer>
 
 <lootcontainer id="66" count="0,2" size="8,4" sound_open="UseActions/open_dumpster" sound_close="UseActions/close_dumpster" loot_quality_template="qualBaseTemplate">
-	<item group="junk"/>
+	<item group="garbage" prob="65" />
+	<item group="rottenFood" prob="10" />
 </lootcontainer>
 
 <!-- cntMorticianDrawer -->
 <lootcontainer id="67" count="1,2" size="6,4" sound_open="UseActions/open_dumpster" sound_close="UseActions/close_dumpster" loot_quality_template="qualBaseTemplate">
 	<item name="foodRottingFlesh" count="1,2" prob="2"/>
 	<item name="resourceBone" count="10,25" prob="1"/>
-	<item group="junk"/>
-	<item group="books" prob="0.1"/>
-	<item name="resourceGoldNugget" prob="0.05"/>
+	<item group="coffinGroup" prob="10" />
+	<item group="deadBody" prob="11" />
+	<item name="jz_FoodDeadRat" prob="10.0"/>
+    <item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- cntFurnaceDrawer -->
 <lootcontainer id="68" count="0,1" size="6,4" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualBaseTemplate">
 	<item name="resourceCoal" count="2,12" prob="1"/>
 	<item name="resourceBone" count="5,15" prob="0.2"/>
+	<item name="jz_BoneMeal" count="1,2" prob="10" />
+    <item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- cntGreenDrawer -->
@@ -3115,7 +3630,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="warmClothes" prob=".2"/>
 	<item group="groupAmmoRegular" count="1,2" prob="13"/>
 	<item group="groupWeaponsScaled" prob="10"/>
-	<item name="apparelNightvisionGoggles" loot_prob_template="probTemplate1.0"/>
+	<item name="apparelNightvisionGoggles" />
 	<item name="casinoCoin" count="200,410" prob="6"/>
 	<item name="oldCash" count="150,500" prob="6"/>
 	<item name="drugHerbalAntibiotics" count="1,2" prob="1.3"/>
@@ -3146,7 +3661,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="warmClothes" prob=".75"/>
 	<item group="groupAmmoRegular" count="1,2" prob="5"/>
 	<item group="groupWeaponsScaled" prob="14"/>
-	<item name="apparelNightvisionGoggles" loot_prob_template="probTemplate0.75"/>
+	<item name="apparelNightvisionGoggles" />
 	<item name="casinoCoin" count="10,110" prob="2.5"/>
 	<item name="oldCash" count="150,800" prob="2.5"/>
 	<item name="drugHerbalAntibiotics" count="1,3" prob="0.5"/>
@@ -3156,7 +3671,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="groupTreasureMaps" prob="0.25"/>
 	<item group="groupQuestChallenge" prob="0.25"/>
 	<item group="groupModAllScaled" prob="1"/>
-	<item group="vehicleParts" loot_prob_template="probTemplate0.5"/>
+	<item group="vehicleParts" />
 </lootcontainer>
 
 <!-- cntFetchQuestSatchel  -->
@@ -3173,7 +3688,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="groupApparelHazmat" prob="1.25"/>
 	<item group="groupAmmoRegular" count="2,3" prob="5"/>
 	<item group="groupWeaponsScaled" prob="14"/>
-	<item name="apparelNightvisionGoggles" loot_prob_template="probTemplate1.0"/>
+	<item name="apparelNightvisionGoggles" />
 	<item name="oldCash" count="500,900" prob="2.5"/>
 	<item group="rareMedicine" count="1,2" prob="0.75"/>
 	<item name="drugVitamins" count="2,3" prob="1.75"/>
@@ -3181,7 +3696,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="groupTreasureMaps" prob="0.25"/>
 	<item group="groupQuestChallenge" prob="0.25"/>
 	<item group="groupModAllScaled" prob="1"/>
-	<item group="vehicleParts" loot_prob_template="probTemplate1.0"/>
+	<item group="vehicleParts" />
 </lootcontainer>
 
 <!-- EntityLootContainerBandit -->
@@ -3197,6 +3712,8 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <!-- cntGasGrillClosed -->
 <lootcontainer id="75" count="1,2" size="6,2" sound_open="UseActions/open_file_cabinet" sound_close="UseActions/close_file_cabinet" loot_quality_template="qualBaseTemplate">
 	<item group="grills"/>
+	<item group="foodCharredMeat" loot_prob_template="goodFoodTemplate" />
+	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
 </lootcontainer>
 
 <!-- vehicleBicycle storage, vehicle storage max is 90 slots, width has worked up to 16+ -->
@@ -3230,8 +3747,14 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <!-- army truck-->
 <lootcontainer id="83" count="1,4" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
 	<item group="cannedfood" prob="0.8"/>
-	<item group="groupWeaponsScaled" prob="0.1"/>
-	<item group="groupArmorScaled" prob="0.1"/>
+	<item group="weaponsMilitaryParts" count="1,2" prob="20" />
+	<item group="T3WeaponBooks" prob="10" />
+	<item group="groupAmmoAdvanced" prob="10" />
+	<item group="T3BookList" prob="13" />
+	<item group="militaryArmor" prob="5" />
+	<item group="groupAmmoSmall" count="1,3" prob="10" />
+	<item name="professionPage" count="1" prob="10" />
+    <item group="skillBookChance"  prob="1" />
 </lootcontainer>
 
 <!--  83-87 free -->
@@ -3245,50 +3768,51 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <!-- construction supplies shipping crate -->
 <lootcontainer id="88" count="1,2" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
 	<item group="junk" prob="3"/>
-	<item name="resourcePaper" count="2,4"/>
-	<item name="resourceScrapPolymers" count="1,10"/>
 	<item name="resourceDuctTape" count="1,5"/>
 	<item name="resourceForgedSteel" count="3,15" prob="0.8"/>
 	<item name="resourceForgedIron" count="5,20"/>
-	<item name="resourceScrapIron" count="30,70"/>
-	<item name="woodFrameBlockVariantHelper" count="10,30"/>
-	<item name="rebarFrameBlockVariantHelper" count="10,20"/>
 	<item name="resourceNail" count="50,200"/>
-	<item name="resourceWood" count="50,300"/>
 	<item name="resourceGlue" count="1,2"/>
-	<item name="meleeToolPaintTool"/>
-	<item name="meleeToolWireTool" prob="0.4"/>
-	<item name="meleeToolClawHammer"/>
-	<item name="meleeToolWrench"/>
-	<item name="meleeToolPickaxeSteel" prob="0.4"/>
-	<item name="meleeToolFireaxeSteel" prob="0.4"/>
-	<item name="meleeToolShovelSteel" prob="0.4"/>
-	<item name="meleeToolSledgehammerSteel" prob="0.4"/>
-	<item name="gunToolNailgun" prob="0.4"/>
 	<item group="electricalDevices" prob="2"/>
+	<item group="tools" prob="2"/>
+	<item group="rareTools" prob="2"/>
+    <item group="resources" prob="10" />
+	<item group="VariantFrameBlocks" count="1,5" prob="3" />
+	<item group="workingStiffs" prob="10" />
+	<item group="decorativeBlocks" prob="10" />
 </lootcontainer>
 
 <!-- bookstore shipping crate -->
 <lootcontainer id="89" count="1,3" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
-	<item name="resourcePaper" count="2,8" prob="0.2"/>
-	<item group="books"/>
-	<item name="resourceScrapPolymers" count="1,4" prob="0.15"/>
+	<item name="jz_PaperBook" prob="6" />
+	<item name="jz_PaperNews" prob="6" />
+	<item name="jz_GlassFrame" prob="5" />
+	<item name="jz_TechClockRadio" prob="5" />
+	<item name="jz_StonePaperWeight" prob="6" />
+	<item name="jz_StoneStatue" prob="6" />
+	<item group="T1BookList" prob="10" />
+	<item group="T2BookList" prob="5" />
+	<item group="skillBookChance" prob="1" />
+    <item group="perkBook" prob="25" />
 </lootcontainer>
 
 <!-- car parts shipping crate -->
 <lootcontainer id="90" count="1,2" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
-	<item name="resourceRepairKit" count="10,25" prob=".3"/>
+	<item name="jz_ScavengedParts" count="10,25" prob=".3"/>
 	<item group="vehicleParts" prob=".4"/>
-	<item group="tools" prob=".5"/>
-	<item group="rareTools" prob="0.1"/>
-	<item group="schematicsToolsCommon" prob=".5"/>
-	<item group="schematicsToolsRare" prob=".1"/>
+	<item group="schematicsVehicle" prob=".1"/>
+	<item name="resourceLeather" count="1,6" prob="4" />
+ 	<item name="resourceDuctTape" count="1,5" prob="5" />
+	<item name="resourceForgedSteel" count="3,15" prob="0.8"/>
+	<item name="resourceForgedIron" count="5,20"/>
+	<item group="automotive" count="1,2" prob="6" />
+	<item name="toolAndDieSet" prob="2" />
 </lootcontainer>
 
 <!-- cntCollapsedForge -->
 <lootcontainer id="91" count="1" size="7,4" sound_open="forge_open" sound_close="forge_close" loot_quality_template="qualBaseTemplate">
 	<item group="forgeLoot"/>
-	<item name="forgeSchematic" prob=".25"/>
+	<item group="forgeSchematics"/>
 </lootcontainer>
 
 <!-- cntCollapsedWorkbench -->
@@ -3315,18 +3839,22 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- cntLootCrateHero, Hero / Hidden Stash Cardboard Loot-->
 <lootcontainer id="95" count="1,2" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualPlus1Template">
-	<item group="groupAmmoRegular" prob=".3" count="2,3"/>
-	<item group="groupWeaponsScaled" prob="0.3"/>
-	<item group="groupArmorScaled" prob="0.4"/>
+	<item group="groupAmmoRegular" prob=".3"/>
 	<item group="groupModAllScaled" prob=".1"/>
-	<item group="commonBooks" count="1,2" prob="0.1"/>
-	<item group="rareBooks" count="1,2" prob="0.1"/>
+	<item group="groupAmmoAdvanced" count="2,4" prob="8" />
+	<item group="groupArrowGroup" count="1,3" prob="15" />
+	<item group="groupCrossBoltGroup" prob="15" />
+	<item group="weaponsArcheryParts" prob="8" />
+	<item group="militaryArmor" count="1,2" prob="15" />
+    <item name="professionPage" prob="5" />
+	<item group="skillBookChance" prob="5" />
 </lootcontainer>
 
 <!-- cntLootCrateLabEquipment Lab equipment and medical items -->
 <lootcontainer id="96" count="1,2" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
 	<item group="labEquipment" prob="16"/>
-	<item name="resourcePaper" count="5,15"/>
+	<item group="medicine" prob="37" />
+    <item group="skillBookChance" prob="1" />
 </lootcontainer>
 
 <!-- cntCollapsedBatterybank -->
@@ -3343,7 +3871,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- cntWaterCoolerFull -->
 <lootcontainer id="99" count="0,1" size="6,2" sound_open="UseActions/open_cooler" sound_close="UseActions/close_cooler" loot_quality_template="qualBaseTemplate">
-	<item name="drinkJarPureMineralWater" count="1,4"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="1,4"/>
 </lootcontainer>
 
 <!-- "bag" container that gets dropped when a zombie gore block is destroyed but still contained loot
@@ -3352,12 +3880,21 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- cntWeaponsBagSmall -->
 <lootcontainer id="100" count="2,3" size="6,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" loot_quality_template="qualBaseTemplate">
-	<item group="groupWeaponsBagLoot"/>
+	<item group="weaponsSmallMelee"/>
+	<item group="weaponsSmallGunsParts"/>
+	<item group="skillBookChance"/>
+	<item group="T1WeaponBooks"/>
 </lootcontainer>
 
 <!-- cntWeaponsBagLarge -->
 <lootcontainer id="101" count="3,4" size="6,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" loot_quality_template="qualBaseTemplate">
-	<item group="groupWeaponsBagLoot"/>
+	<item group="weaponsAllMelee"/>
+	<item group="Explosives"/>
+	<item group="weaponsArcheryParts"/>
+	<item group="weaponsCommonParts"/>
+	<item group="weaponsMilitaryParts"/>
+	<item group="skillBookChance"/>
+	<item group="T2WeaponBooks"/>
 </lootcontainer>
 
 <!-- cntBuriedStashChest -->
@@ -3516,7 +4053,7 @@ treasureTemplate
 	<item name="resourceForgedSteel" count="1,4" prob="0.2"/>
 	<item name="meleeToolPaintTool" prob="0.3"/>
 	<item name="meleeToolWireTool"/>
-	<item group="toolParts" prob="2"/>
+
 </lootcontainer>
 
 <!-- the max cap for lootcontainer id is 1023 -->
