@@ -385,16 +385,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceOilShale" count="1"/>
 </recipe>
 
-<!--
-<recipe name="ammoGasCan" count="600" craft_exp_gain="0" craft_time="5" always_unlocked="true">
-	<ingredient name="oilBarrel" count="1"/>
-</recipe>
-
-<recipe name="oilBarrel" count="1" craft_exp_gain="0" craft_time="5" always_unlocked="true">
-	<ingredient name="ammoGasCan" count="600"/>
-</recipe>
--->
-
 <recipe name="ammoRocketFrag" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="1" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceBuckshot" count="25"/>
 	<ingredient name="resourceGunPowder" count="15"/>
@@ -521,14 +511,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCloth" count="5" />
 </recipe>
 
-<recipe name="armorMilitaryBoots" count="1" craft_area="workbench" tags="perkLightArmor">
-	<ingredient name="armorMilitarySetParts" count="4"/>
-	<ingredient name="resourceMilitaryFiber" count="1"/>
-	<ingredient name="resourceScrapPolymers" count="2"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-	<ingredient name="resourceSewingKit" count="2"/>
-</recipe>
-
 <recipe name="armorMilitaryStealthBoots" count="1" craft_area="workbench" tags="perkLightArmor">
 	<ingredient name="armorMilitarySetParts" count="4"/>
 	<ingredient name="resourceMilitaryFiber" count="1"/>
@@ -537,46 +519,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="armorMilitaryGloves" count="1" craft_area="workbench" tags="perkLightArmor">
-	<ingredient name="armorMilitarySetParts" count="4"/>
-	<ingredient name="resourceMilitaryFiber" count="1"/>
-	<ingredient name="resourceScrapPolymers" count="2"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-	<ingredient name="resourceSewingKit" count="2"/>
-</recipe>
-
-<recipe name="armorMilitaryHelmet" count="1" craft_area="workbench" tags="perkLightArmor">
-	<ingredient name="armorMilitarySetParts" count="4"/>
-	<ingredient name="resourceMilitaryFiber" count="1"/>
-	<ingredient name="resourceScrapPolymers" count="2"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-	<ingredient name="resourceSewingKit" count="2"/>
-</recipe>
-
-<recipe name="armorMilitaryLegs" count="1" craft_area="workbench" tags="perkLightArmor">
-	<ingredient name="armorMilitarySetParts" count="4"/>
-	<ingredient name="resourceMilitaryFiber" count="1"/>
-	<ingredient name="resourceScrapPolymers" count="2"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-	<ingredient name="resourceSewingKit" count="2"/>
-</recipe>
-
-<recipe name="armorMilitaryVest" count="1" craft_area="workbench" tags="perkLightArmor">
-	<ingredient name="armorMilitarySetParts" count="4"/>
-	<ingredient name="resourceMilitaryFiber" count="1"/>
-	<ingredient name="resourceScrapPolymers" count="2"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-	<ingredient name="resourceSewingKit" count="2"/>
-</recipe>
-
-<recipe name="armorFirefightersHelmet" count="1" craft_area="workbench" tags="perkHeavyArmor">
-	<ingredient name="resourceForgedIron" count="15"/>
-	<ingredient name="resourceLeather" count="5"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-	<ingredient name="resourceSewingKit" count="1"/>
-</recipe>
-
-<recipe name="armorScrapBoots" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
+<recipe name="armorScrapBoots" count="1" craft_area="workbench" craft_tool="" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
 	<ingredient name="resourceScrapIron" count="100"/>
 	<ingredient name="resourceLeather" count="2"/>
 	<ingredient name="jz_FiberRope" count="6" />
@@ -1260,7 +1203,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="smallEngine" count="1"/>
 </recipe>
 
-<recipe name="meleeToolChainsaw" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="30" craft_exp_gain="20"tags="learnable,jz_ChainsawCraftingTag">
+<recipe name="meleeToolChainsaw" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="30" craft_exp_gain="20" tags="learnable,jz_ChainsawCraftingTag">
 	<ingredient name="jz_PartsChainsawBlade" count="1"/>
 	<ingredient name="jz_PartsChainsawHousing" count="1"/>
 	<ingredient name="jz_BasicGunParts" count="3"/>
@@ -1268,31 +1211,27 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="meleeToolClawHammer" count="1" tags="jz_ClawHammerCraftingTag">
-	<ingredient name="resourceForgedIron" count="12"/>
-	<ingredient name="resourceWood" count="6"/>
-	<ingredient name="resourceLeather" count="2"/>
-	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="jz_HammerHead" count="1"/>
+	<ingredient name="resourceGlue" count="1"/>
+	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
-<recipe name="meleeToolFireaxeIron" count="1" tags="learnable,jz_IronFireaxeCraftingTag,jz_FireFighterTag">
-	<ingredient name="resourceForgedIron" count="20"/>
-	<ingredient name="resourceWood" count="10"/>
-	<ingredient name="resourceLeather" count="2"/>
-	<ingredient name="resourceDuctTape" count="2"/>
+<recipe name="meleeToolFireaxeIron" count="1" tags="learnable,jz_IronFireaxeCraftingTag">
+	<ingredient name="jz_IronFireaxeHead" count="1"/>
+	<ingredient name="resourceGlue" count="1"/>
+	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
-<recipe name="meleeToolFireaxeSteel" count="1" craft_area="workbench" tags="jz_SteelFireaxeCraftingTag">
-	<ingredient name="meleeToolAllSteelParts" count="5"/>
-	<ingredient name="resourceForgedSteel" count="10"/>
-	<ingredient name="resourceWood" count="10"/>
-	<ingredient name="resourceLeather" count="3"/>
-	<ingredient name="resourceDuctTape" count="3"/>
+<recipe name="meleeToolFireaxeSteel" count="1" tags="learnable,jz_SteelFireaxeCraftingTag">
+	<ingredient name="jz_SteelFireaxeHead" count="1"/>
+	<ingredient name="resourceGlue" count="1"/>
+	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
-<recipe name="meleeThrownSpearStone" count="1" tags="jz_StoneSpearCraftingTag,jz_PrimitativeCraftingTag">
+<recipe name="meleeThrownSpearStone" count="1" tags="learnable,jz_StoneSpearCraftingTag">
 	<ingredient name="resourceRockSmall" count="5"/>
-	<ingredient name="resourceYuccaFibers" count="3"/>
-	<ingredient name="resourceWood" count="3"/>
+	<ingredient name="jz_FiberRope" count="2"/>
+	<ingredient name="jz_Stick" count="10"/>
 </recipe>
 
 <recipe name="meleeThrownSpearIron" count="1" tags="jz_IronSpearCraftingTag">
@@ -1310,80 +1249,52 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceDuctTape" count="3"/>
 </recipe>
 
-<recipe name="meleeToolFlashlight02" count="1" craft_area="workbench" >
-	<ingredient name="resourceForgedIron" count="1"/>
-	<ingredient name="resourceElectricParts" count="10"/>
-	<ingredient name="resourceDuctTape" count="4"/>
-	<ingredient name="resourceScrapPolymers" count="4"/>
-</recipe>
-<!--
-<recipe name="meleeToolHoeIron" count="1" tags="perkLivingOffTheLand">
-	<ingredient name="resourceForgedIron" count="16"/>
-	<ingredient name="resourceWood" count="10"/>
+<recipe name="meleeToolKnifeIron" count="1" craft_area="toolAnvil" craft_tool="meleeToolClawHammer" craft_time="30" craft_exp_gain="20" tags="learnable,jz_HuntingKnifeCraftingTag">
+	<ingredient name="jz_SmallKnifeBlade" count="1"/>
+	<ingredient name="jz_Stick" count="3"/>
 	<ingredient name="resourceLeather" count="2"/>
-	<ingredient name="resourceDuctTape" count="2"/>
-</recipe>-->
-
-<recipe name="meleeToolKnifeIron" count="1" tags="jz_HuntingKnifeCraftingTag">
-	<ingredient name="resourceForgedIron" count="8"/>
-	<ingredient name="resourceWood" count="4"/>
-	<ingredient name="resourceLeather" count="2"/>
-	<ingredient name="resourceDuctTape" count="2"/>
 </recipe>
 
-<recipe name="meleeToolKnifeMachete" count="1" craft_area="workbench" craft_time="60" tags="jz_MacheteCraftingTag">
-	<ingredient name="meleeToolKnifeMacheteParts" count="5"/>
-	<ingredient name="resourceForgedSteel" count="10"/>
-	<ingredient name="resourceWood" count="10"/>
-	<ingredient name="resourceLeather" count="3"/>
-	<ingredient name="resourceDuctTape" count="3"/>
+<recipe name="meleeToolKnifeMachete" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" craft_time="30" craft_exp_gain="20" tags="learnable,jz_MacheteCraftingTag">
+	<ingredient name="jz_LargeKnifeBlade" count="1"/>
+	<ingredient name="jz_MeltedRubber" count="2"/>
+	<ingredient name="jz_Stick" count="3"/>
 </recipe>
 
-<recipe name="meleeToolPaintTool" count="1">
-	<ingredient name="resourceWood" count="2"/>
-	<ingredient name="resourceLeather" count="1"/>
+<recipe name="meleeToolPickaxeIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronPickaxeCraftingTag">
+	<ingredient name="jz_IronPickaxeHead" count="1"/>
+	<ingredient name="jz_Stick" count="5"/>
+	<ingredient name="resourceGlue" count="1"/>
 </recipe>
 
-<recipe name="meleeToolPickaxeIron" count="1" tags="jz_IronPickaxeCraftingTag">
-	<ingredient name="resourceForgedIron" count="20"/>
-	<ingredient name="resourceWood" count="10"/>
-	<ingredient name="resourceLeather" count="2"/>
-	<ingredient name="resourceDuctTape" count="2"/>
+<recipe name="meleeToolPickaxeSteel" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_SteelPickaxeCraftingTag">
+	<ingredient name="jz_SteelPickaxeHead" count="5"/>
+	<ingredient name="jz_Stick" count="5"/>
+	<ingredient name="resourceGlue" count="1"/>
 </recipe>
 
-<recipe name="meleeToolPickaxeSteel" count="1" craft_area="workbench" tags="jz_SteelPickaxeCraftingTag">
-	<ingredient name="meleeToolAllSteelParts" count="5"/>
-	<ingredient name="resourceForgedSteel" count="10"/>
-	<ingredient name="resourceWood" count="10"/>
-	<ingredient name="resourceLeather" count="3"/>
-	<ingredient name="resourceDuctTape" count="3"/>
+<recipe name="meleeToolShovelIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronShovelCraftingTag">
+	<ingredient name="jz_IronShovelHead" count="16"/>
+	<ingredient name="jz_Stick" count="5"/>
+	<ingredient name="resourceGlue" count="1"/>
 </recipe>
 
-<recipe name="meleeToolShovelIron" count="1" tags="jz_IronShovelCraftingTag">
-	<ingredient name="resourceForgedIron" count="16"/>
-	<ingredient name="resourceWood" count="10"/>
-	<ingredient name="resourceLeather" count="2"/>
-	<ingredient name="resourceDuctTape" count="2"/>
+<recipe name="meleeToolShovelSteel" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_SteelShovelCraftingTag">
+    <ingredient name="jz_SteelShovelHead" count="16"/>
+	<ingredient name="jz_Stick" count="5"/>
+	<ingredient name="resourceGlue" count="1"/>
 </recipe>
 
-<recipe name="meleeToolShovelSteel" count="1" craft_area="workbench" tags="jz_SteelShovelCraftingTag">
-	<ingredient name="meleeToolAllSteelParts" count="5"/>
-	<ingredient name="resourceForgedSteel" count="10"/>
-	<ingredient name="resourceWood" count="10"/>
-	<ingredient name="resourceLeather" count="3"/>
-	<ingredient name="resourceDuctTape" count="3"/>
+<recipe name="meleeToolShovelStone" count="1" craft_time="30" craft_exp_gain="20" tags="jz_StoneShovelCraftingTag">
+	<ingredient name="resourceRockSmall" count="6"/>
+	<ingredient name="jz_FiberRope" count="2"/>
+	<ingredient name="jz_WoodBranch" count="2"/>
 </recipe>
 
-<recipe name="meleeToolShovelStone" count="1" tags="jz_StoneShovelCraftingTag,jz_PrimitativeCraftingTag">
-	<ingredient name="resourceRockSmall" count="5"/>
-	<ingredient name="resourceYuccaFibers" count="3"/>
-	<ingredient name="resourceWood" count="3"/>
-</recipe>
-
-<recipe name="meleeToolSledgehammerStone" count="1" tags="jz_StoneSledgeCraftingTag,jz_PrimitativeCraftingTag">
+<recipe name="meleeToolSledgehammerStone" count="1" tags="learnable,jz_StoneSledgeCraftingTag">
 	<ingredient name="resourceRockSmall" count="10"/>
-	<ingredient name="resourceYuccaFibers" count="10"/>
-	<ingredient name="resourceWood" count="10"/>
+	<ingredient name="jz_FiberRope" count="5"/>
+	<ingredient name="jz_Stick" count="10"/>
 </recipe>
 
 <recipe name="meleeToolSledgehammerIron" count="1" tags="jz_IronSledgeCraftingTag">
@@ -1401,35 +1312,35 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceDuctTape" count="3"/>
 </recipe>
 
-<recipe name="meleeToolStoneAxe" count="1" tags="jz_StoneaxeCraftingTag,jz_PrimitativeCraftingTag">
-	<ingredient name="resourceRockSmall" count="2"/>
-	<ingredient name="resourceYuccaFibers" count="2"/>
-	<ingredient name="resourceWood" count="2"/>
+<recipe name="meleeToolStoneAxe" count="1" craft_time="30" craft_exp_gain="20" tags="jz_StoneaxeCraftingTag">
+	<ingredient name="resourceRockSmall" count="5"/>
+	<ingredient name="jz_FiberRope" count="2"/>
+	<ingredient name="jz_WoodBranch" count="3"/>
 </recipe>
 
-<recipe name="meleeStunBaton" count="1" craft_area="workbench" tags="learnable,jz_StunBatonCraftingTag">
-	<ingredient name="meleeStunBatonParts" count="4"/>
-	<ingredient name="resourceForgedIron" count="5"/>
-	<ingredient name="resourceLeather" count="2"/>
-	<ingredient name="resourceDuctTape" count="2"/>
-	<ingredient name="resourceElectricParts" count="2"/>
+<recipe name="meleeStunBaton" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="30" craft_exp_gain="20" tags="learnable,jz_StunBatonCraftingTag">
+	<ingredient name="meleeClubBaseballBat" count="1"/>
+	<ingredient name="jz_ScrapWire" count="1"/>
+	<ingredient name="jz_MeltedRubber" count="3"/>
+	<ingredient name="carBattery" count="1"/>
+	<ingredient name="resourceElectricParts" count="10"/>
 </recipe>
 
-<recipe name="meleeToolTorch" count="1">
-	<ingredient name="resourceAnimalFat" count="1"/>
+<recipe name="meleeToolTorch" count="1" craft_time="30" craft_exp_gain="20">
+	<ingredient name="resourceTallow" count="1"/>
 	<ingredient name="resourceCloth" count="1"/>
-	<ingredient name="resourceWood" count="1"/>
+	<ingredient name="jz_WoodBranch" count="5"/>
 </recipe>
 
-<recipe name="meleeToolWireTool" count="1" craft_area="workbench" >
-	<ingredient name="resourceForgedSteel" count="9"/>
-	<ingredient name="resourceMechanicalParts" count="3"/>
+<recipe name="meleeToolTorch" count="1" craft_time="30" craft_exp_gain="20">
+	<ingredient name="resourceCoal" count="5"/>
+	<ingredient name="resourceCloth" count="1"/>
+	<ingredient name="jz_WoodBranch" count="5"/>
 </recipe>
 
-<recipe name="meleeToolWrench" count="1" tags="jz_WrenchCraftingTag">
-	<ingredient name="resourceForgedIron" count="12"/>
-	<ingredient name="resourceMechanicalParts" count="4"/>
-	<ingredient name="resourceDuctTape" count="2"/>
+<recipe name="meleeToolWrench" count="1" material_based="true" craft_area="forge" craft_tool="jz_MoldWrench" material_based="true" craft_time="10" craft_exp_gain="5" tags="learnable,jz_WrenchCraftingTag">
+	<ingredient name="unit_iron" count="50"/>
+	<ingredient name="unit_clay" count="5"/>
 </recipe>
 
 <recipe name="meleeKnucklesLeather" count="1" tags="jz_KnuckleWrapCraftingTag">
@@ -3511,7 +3422,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceClayLump" count="25" />
 </recipe>
 
-<recipe name="jz_MoldScrapWrench" count="1" craft_area="campfire" craft_tool="toolCookingGrill"  >
+<recipe name="jz_MoldWrench" count="1" craft_area="campfire" craft_tool="toolCookingGrill"  >
 	<ingredient name="meleeToolWrench" count="1" />
 	<ingredient name="resourceClayLump" count="20" />
 </recipe>
