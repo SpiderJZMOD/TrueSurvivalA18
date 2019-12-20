@@ -401,34 +401,34 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceRocketCasing" count="1"/>
 </recipe>
 
-<recipe name="armorClothBoots" count="1" craft_area="workbench" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ClothArmorCraftingTag">
+<recipe name="armorClothBoots" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ClothArmorCraftingTag">
 	<ingredient name="resourceCloth" count="10"/>
 	<ingredient name="jz_FiberRope" count="6" />
 	<ingredient name="resourceGlue" count="2" />
 	<ingredient name="resourceCropCottonPlant" count="10" />
 </recipe>
 
-<recipe name="armorClothGloves" count="1" craft_area="workbench" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ClothArmorCraftingTag">
+<recipe name="armorClothGloves" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ClothArmorCraftingTag">
 	<ingredient name="resourceCloth" count="10"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="resourcePaper" count="10" />
 	<ingredient name="jz_FiberRope" count="4" />
 </recipe>
 
-<recipe name="armorClothHat" count="1" craft_area="workbench" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ClothArmorCraftingTag">
+<recipe name="armorClothHat" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ClothArmorCraftingTag">
 	<ingredient name="resourceCloth" count="6"/>
 	<ingredient name="jz_FiberRope" count="4" />
 	<ingredient name="resourceGlue" count="1" />
 	<ingredient name="resourceCropCottonPlant" count="6" />
 </recipe>
 
-<recipe name="armorClothJacket" count="1" craft_area="workbench" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ClothArmorCraftingTag">
+<recipe name="armorClothJacket" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ClothArmorCraftingTag">
 	<ingredient name="resourceCloth" count="20"/>
 	<ingredient name="jz_FiberRope" count="10" />
 	<ingredient name="resourceCropCottonPlant" count="20" />
 </recipe>
 
-<recipe name="armorClothPants" count="1" craft_area="workbench" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ClothArmorCraftingTag">
+<recipe name="armorClothPants" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ClothArmorCraftingTag">
 	<ingredient name="resourceCloth" count="15"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="resourcePaper" count="10" />
@@ -436,7 +436,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceGlue" count="2" />
 </recipe>
 
-<recipe name="armorIronBoots" count="1" craft_area="workbench" craft_tool="toolAnvil" craft_time="4" craft_exp_gain="25" tags="learnable,jz_IronArmorCraftingTag">
+<recipe name="armorIronBoots" count="1" craft_area="jz_ArmorTable" craft_tool="toolAnvil" craft_time="4" craft_exp_gain="25" tags="learnable,jz_IronArmorCraftingTag">
 	<ingredient name="resourceForgedIron" count="20"/>
 	<ingredient name="resourceLeather" count="3"/>
 	<ingredient name="jz_FiberRope" count="6" />
@@ -444,21 +444,21 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_MeltedRubber" count="2" />
 </recipe>
 
-<recipe name="armorIronChest" count="1" craft_area="workbench" craft_tool="toolAnvil" craft_time="4" craft_exp_gain="25" tags="learnable,jz_IronArmorCraftingTag">
+<recipe name="armorIronChest" count="1" craft_area="jz_ArmorTable" craft_tool="toolAnvil" craft_time="4" craft_exp_gain="25" tags="learnable,jz_IronArmorCraftingTag">
 	<ingredient name="resourceForgedIron" count="30"/>
 	<ingredient name="resourceLeather" count="5"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="jz_FiberRope" count="1"/>
 </recipe>
 
-<recipe name="armorIronGloves" count="1" craft_area="workbench" craft_tool="toolAnvil" craft_time="4" craft_exp_gain="25" tags="learnable,jz_IronArmorCraftingTag">
+<recipe name="armorIronGloves" count="1" craft_area="jz_ArmorTable" craft_tool="toolAnvil" craft_time="4" craft_exp_gain="25" tags="learnable,jz_IronArmorCraftingTag">
 	<ingredient name="resourceForgedIron" count="20"/>
 	<ingredient name="resourceLeather" count="3"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="jz_FiberRope" count="4"/>
 </recipe>
 
-<recipe name="armorIronHelmet" count="1" craft_area="workbench" craft_tool="toolAnvil" craft_time="4" craft_exp_gain="25" tags="learnable,jz_IronArmorCraftingTag">
+<recipe name="armorIronHelmet" count="1" craft_area="jz_ArmorTable" craft_tool="toolAnvil" craft_time="4" craft_exp_gain="25" tags="learnable,jz_IronArmorCraftingTag">
 	<ingredient name="resourceForgedIron" count="20"/>
 	<ingredient name="resourceLeather" count="3"/>
 	<ingredient name="jz_FiberRope" count="3"/>
@@ -466,7 +466,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCropCottonPlant" count="6" />
 </recipe>
 
-<recipe name="armorIronLegs" count="1" craft_area="workbench" craft_tool="toolAnvil" craft_time="4" craft_exp_gain="25" tags="learnable,jz_IronArmorCraftingTag">
+<recipe name="armorIronLegs" count="1" craft_area="jz_ArmorTable" craft_tool="toolAnvil" craft_time="4" craft_exp_gain="25" tags="learnable,jz_IronArmorCraftingTag">
 	<ingredient name="resourceForgedIron" count="30"/>
 	<ingredient name="resourceLeather" count="5"/>
 	<ingredient name="resourceDuctTape" count="1"/>
@@ -474,7 +474,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceGlue" count="2" />
 </recipe>
 
-<recipe name="armorLeatherBoots" count="1" craft_area="workbench" craft_tool="jz_LeatherNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_LeatherArmorCraftingTag">
+<recipe name="armorLeatherBoots" count="1" craft_area="jz_ArmorTable" craft_tool="jz_LeatherNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_LeatherArmorCraftingTag">
 	<ingredient name="resourceLeather" count="8"/>
 	<ingredient name="jz_FiberRope" count="6" />
 	<ingredient name="resourceCropCottonPlant" count="10" />
@@ -482,28 +482,28 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_MeltedRubber" count="2" />
 </recipe>
 
-<recipe name="armorLeatherChest" count="1" craft_area="workbench" craft_tool="jz_LeatherNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_LeatherArmorCraftingTag">
+<recipe name="armorLeatherChest" count="1" craft_area="jz_ArmorTable" craft_tool="jz_LeatherNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_LeatherArmorCraftingTag">
 	<ingredient name="resourceLeather" count="20"/>
 	<ingredient name="resourceCropCottonPlant" count="10" />
 	<ingredient name="jz_FiberRope" count="10" />
 	<ingredient name="resourceCloth" count="5" />
 </recipe>
 
-<recipe name="armorLeatherGloves" count="1" craft_area="workbench" craft_tool="jz_LeatherNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_LeatherArmorCraftingTag">
+<recipe name="armorLeatherGloves" count="1" craft_area="jz_ArmorTable" craft_tool="jz_LeatherNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_LeatherArmorCraftingTag">
 	<ingredient name="resourceLeather" count="6"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="resourceCropCottonPlant" count="2" />
 	<ingredient name="jz_FiberRope" count="4" />
 </recipe>
 
-<recipe name="armorLeatherHood" count="1" craft_area="workbench" craft_tool="jz_LeatherNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_LeatherArmorCraftingTag">
+<recipe name="armorLeatherHood" count="1" craft_area="jz_ArmorTable" craft_tool="jz_LeatherNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_LeatherArmorCraftingTag">
 	<ingredient name="resourceLeather" count="5"/>
 	<ingredient name="jz_FiberRope" count="3" />
 	<ingredient name="resourceGlue" count="1" />
 	<ingredient name="resourceCropCottonPlant" count="6" />
 </recipe>
 
-<recipe name="armorLeatherPants" count="1" craft_area="workbench" craft_tool="jz_LeatherNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_LeatherArmorCraftingTag">
+<recipe name="armorLeatherPants" count="1" craft_area="jz_ArmorTable" craft_tool="jz_LeatherNeedle" craft_time="4" craft_exp_gain="25" tags="learnable,jz_LeatherArmorCraftingTag">
 	<ingredient name="resourceLeather" count="10"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="jz_FiberRope" count="6" />
@@ -511,7 +511,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCloth" count="5" />
 </recipe>
 
-<recipe name="armorMilitaryStealthBoots" count="1" craft_area="workbench" tags="perkLightArmor">
+<recipe name="armorMilitaryStealthBoots" count="1" craft_area="jz_ArmorTable" tags="perkLightArmor">
 	<ingredient name="armorMilitarySetParts" count="4"/>
 	<ingredient name="resourceMilitaryFiber" count="1"/>
 	<ingredient name="resourceLeather" count="5"/>
@@ -519,7 +519,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="armorScrapBoots" count="1" craft_area="workbench" craft_tool="" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
+<recipe name="armorScrapBoots" count="1" craft_area="jz_ArmorTable" craft_tool="" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
 	<ingredient name="resourceScrapIron" count="100"/>
 	<ingredient name="resourceLeather" count="2"/>
 	<ingredient name="jz_FiberRope" count="6" />
@@ -527,21 +527,21 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_MeltedRubber" count="2" />
 </recipe>
 
-<recipe name="armorScrapChest" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
+<recipe name="armorScrapChest" count="1" craft_area="jz_ArmorTable" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
 	<ingredient name="resourceScrapIron" count="150"/>
 	<ingredient name="resourceLeather" count="5"/>
 	<ingredient name="resourceDuctTape" count="3"/>
 	<ingredient name="jz_FiberRope" count="10" />
 </recipe>
 
-<recipe name="armorScrapGloves" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
+<recipe name="armorScrapGloves" count="1" craft_area="jz_ArmorTable" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
 	<ingredient name="resourceScrapIron" count="100"/>
 	<ingredient name="resourceLeather" count="2"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="jz_FiberRope" count="4" />
 </recipe>
 
-<recipe name="armorScrapHelmet" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
+<recipe name="armorScrapHelmet" count="1" craft_area="jz_ArmorTable" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
 	<ingredient name="resourceScrapIron" count="100"/>
 	<ingredient name="resourceLeather" count="2"/>
 	<ingredient name="jz_FiberRope" count="3"/>
@@ -549,7 +549,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCropCottonPlant" count="6" />
 </recipe>
 
-<recipe name="armorScrapLegs" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
+<recipe name="armorScrapLegs" count="1" craft_area="jz_ArmorTable" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="25" tags="learnable,jz_ScrapArmorCraftingTag">
 	<ingredient name="resourceScrapIron" count="150"/>
 	<ingredient name="resourceLeather" count="10"/>
 	<ingredient name="resourceDuctTape" count="1"/>
@@ -557,7 +557,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceGlue" count="2" />	
 </recipe>
 
-<recipe name="armorSteelBoots" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
+<recipe name="armorSteelBoots" count="1" craft_area="jz_ArmorTable" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
 	<ingredient name="armorSteelSetParts" count="4"/>
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceLeather" count="2"/>
@@ -565,7 +565,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="armorSteelChest" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
+<recipe name="armorSteelChest" count="1" craft_area="jz_ArmorTable" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
 	<ingredient name="armorSteelSetParts" count="4"/>
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceLeather" count="2"/>
@@ -573,7 +573,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="armorSteelGloves" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
+<recipe name="armorSteelGloves" count="1" craft_area="jz_ArmorTable" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
 	<ingredient name="armorSteelSetParts" count="4"/>
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceLeather" count="2"/>
@@ -581,7 +581,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="armorSteelHelmet" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
+<recipe name="armorSteelHelmet" count="1" craft_area="jz_ArmorTable" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
 	<ingredient name="armorSteelSetParts" count="4"/>
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceLeather" count="2"/>
@@ -589,7 +589,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="armorSteelLegs" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
+<recipe name="armorSteelLegs" count="1" craft_area="jz_ArmorTable" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
 	<ingredient name="armorSteelSetParts" count="4"/>
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceLeather" count="2"/>
@@ -605,11 +605,11 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceScrapPolymers" count="5"/>
 </recipe>
 
-<recipe name="awningBlockVariantHelper" count="1" craft_area="workbench" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable">
+<recipe name="awningBlockVariantHelper" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable">
 	<ingredient name="resourceCloth" count="10"/>
 </recipe>
 
-<recipe name="apparelBandana" count="1" craft_area="workbench" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable">
+<recipe name="apparelBandana" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable">
 	<ingredient name="resourceCloth" count="1"/>
 </recipe>
 
@@ -944,7 +944,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceElectricParts" count="30"/>
 </recipe>
 
-<recipe name="generatorbank" count="1" craft_area="workbench" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="4" craft_exp_gain="25" tags="learnable">
+<recipe name="generatorbank" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="4" craft_exp_gain="25" tags="learnable">
 	<ingredient name="resourceForgedIron" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceElectricParts" count="14"/>
@@ -1088,12 +1088,12 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceYuccaFibers" count="10"/>
 </recipe>
 
-<recipe name="ironBars" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" material_based="true" craft_time="10" craft_exp_gain="5" tags="learnable">
+<recipe name="ironBars" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="10" craft_exp_gain="5" tags="learnable">
 	<ingredient name="unit_iron" count="100"/>
 	<ingredient name="unit_clay" count="20"/>
 </recipe>
 
-<recipe name="ironBarsCentered" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" material_based="true" craft_time="10" craft_exp_gain="5" tags="learnable">
+<recipe name="ironBarsCentered" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="10" craft_exp_gain="5" tags="learnable">
 	<ingredient name="unit_iron" count="100"/>
 	<ingredient name="unit_clay" count="20"/>
 </recipe>
@@ -1196,7 +1196,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_FiberRope" count="5"/>
 </recipe>
 
-<recipe name="meleeToolAuger" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="30" craft_exp_gain="20"tags="learnable,jz_AugerCraftingTag">
+<recipe name="meleeToolAuger" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="30" craft_exp_gain="20" tags="learnable,jz_AugerCraftingTag">
 	<ingredient name="jz_PartsAugerBit" count="1"/>
 	<ingredient name="jz_PartsAugerHousing" count="1"/>
 	<ingredient name="partsHandlebars" count="1"/>
@@ -1210,38 +1210,38 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="smallEngine" count="1"/>
 </recipe>
 
-<recipe name="meleeToolClawHammer" count="1" tags="jz_ClawHammerCraftingTag">
+<recipe name="meleeToolClawHammer" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_ClawHammerCraftingTag">
 	<ingredient name="jz_HammerHead" count="1"/>
 	<ingredient name="resourceGlue" count="1"/>
 	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
-<recipe name="meleeToolFireaxeIron" count="1" tags="learnable,jz_IronFireaxeCraftingTag">
+<recipe name="meleeToolFireaxeIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronFireaxeCraftingTag">
 	<ingredient name="jz_IronFireaxeHead" count="1"/>
 	<ingredient name="resourceGlue" count="1"/>
 	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
-<recipe name="meleeToolFireaxeSteel" count="1" tags="learnable,jz_SteelFireaxeCraftingTag">
+<recipe name="meleeToolFireaxeSteel" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_SteelFireaxeCraftingTag">
 	<ingredient name="jz_SteelFireaxeHead" count="1"/>
 	<ingredient name="resourceGlue" count="1"/>
 	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
-<recipe name="meleeThrownSpearStone" count="1" tags="learnable,jz_StoneSpearCraftingTag">
+<recipe name="meleeThrownSpearStone" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_StoneSpearCraftingTag">
 	<ingredient name="resourceRockSmall" count="5"/>
 	<ingredient name="jz_FiberRope" count="2"/>
 	<ingredient name="jz_Stick" count="10"/>
 </recipe>
 
-<recipe name="meleeThrownSpearIron" count="1" tags="jz_IronSpearCraftingTag">
+<recipe name="meleeThrownSpearIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronSpearCraftingTag">
 	<ingredient name="resourceForgedIron" count="16"/>
 	<ingredient name="resourceWood" count="10"/>
 	<ingredient name="resourceLeather" count="2"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 </recipe>
 
-<recipe name="meleeThrownSpearSteel" count="1" craft_area="workbench" tags="jz_SteelSpearCraftingTag">
+<recipe name="meleeThrownSpearSteel" count="1" craft_area="workbench" craft_time="30" craft_exp_gain="20" tags="jz_SteelSpearCraftingTag">
 	<ingredient name="meleeThrownSpearSteelParts" count="5"/>
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceWood" count="10"/>
@@ -1276,13 +1276,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="meleeToolShovelIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronShovelCraftingTag">
 	<ingredient name="jz_IronShovelHead" count="16"/>
 	<ingredient name="jz_Stick" count="5"/>
-	<ingredient name="resourceGlue" count="1"/>
+	<ingredient name="resourceNail" count="1"/>
 </recipe>
 
 <recipe name="meleeToolShovelSteel" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_SteelShovelCraftingTag">
     <ingredient name="jz_SteelShovelHead" count="16"/>
 	<ingredient name="jz_Stick" count="5"/>
-	<ingredient name="resourceGlue" count="1"/>
+	<ingredient name="resourceNail" count="1"/>
 </recipe>
 
 <recipe name="meleeToolShovelStone" count="1" craft_time="30" craft_exp_gain="20" tags="jz_StoneShovelCraftingTag">
@@ -1291,20 +1291,20 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_WoodBranch" count="2"/>
 </recipe>
 
-<recipe name="meleeToolSledgehammerStone" count="1" tags="learnable,jz_StoneSledgeCraftingTag">
+<recipe name="meleeToolSledgehammerStone" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_StoneSledgeCraftingTag">
 	<ingredient name="resourceRockSmall" count="10"/>
 	<ingredient name="jz_FiberRope" count="5"/>
 	<ingredient name="jz_Stick" count="10"/>
 </recipe>
 
-<recipe name="meleeToolSledgehammerIron" count="1" tags="jz_IronSledgeCraftingTag">
+<recipe name="meleeToolSledgehammerIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronSledgeCraftingTag">
 	<ingredient name="resourceForgedIron" count="30"/>
 	<ingredient name="resourceWood" count="10"/>
 	<ingredient name="resourceLeather" count="2"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 </recipe>
 
-<recipe name="meleeToolSledgehammerSteel" count="1" craft_area="workbench" tags="jz_SteelSledgeCraftingTag">
+<recipe name="meleeToolSledgehammerSteel" count="1" craft_area="workbench" craft_time="30" craft_exp_gain="20" tags="jz_SteelSledgeCraftingTag">
 	<ingredient name="meleeToolSledgehammerSteelParts" count="5"/>
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceWood" count="10"/>
@@ -1338,78 +1338,53 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_WoodBranch" count="5"/>
 </recipe>
 
-<recipe name="meleeToolWrench" count="1" material_based="true" craft_area="forge" craft_tool="jz_MoldWrench" material_based="true" craft_time="10" craft_exp_gain="5" tags="learnable,jz_WrenchCraftingTag">
+<recipe name="meleeToolWrench" count="1" material_based="true" craft_area="forge" craft_tool="jz_MoldWrench" craft_time="10" craft_exp_gain="5" tags="learnable,jz_WrenchCraftingTag">
 	<ingredient name="unit_iron" count="50"/>
 	<ingredient name="unit_clay" count="5"/>
 </recipe>
 
-<recipe name="meleeKnucklesLeather" count="1" tags="jz_KnuckleWrapCraftingTag">
+<recipe name="meleeKnucklesLeather" count="1" craft_time="30" craft_exp_gain="20" tags="jz_KnuckleWrapCraftingTag">
 	<ingredient name="resourceScrapIron" count="6"/>
 	<ingredient name="resourceLeather" count="2"/>
 </recipe>
 
-<recipe name="meleeKnucklesIron" count="1" tags="jz_BrassKnucklesCraftingTag">
-	<ingredient name="resourceForgedIron" count="12"/>
-	<ingredient name="resourceMechanicalParts" count="4"/>
-	<ingredient name="resourceLeather" count="2"/>
-	<ingredient name="resourceDuctTape" count="2"/>
+<recipe name="meleeKnucklesIron" count="1" material_based="true" craft_area="forge" craft_tool="jz_MoldBrassKnucles" craft_time="30" craft_exp_gain="20" tags="learnable,jz_BrassKnucklesCraftingTag">
+	<ingredient name="unit_brass" count="50"/>
+	<ingredient name="unit_clay" count="5"/>
 </recipe>
 
-<recipe name="meleeKnucklesSteel" count="1" craft_area="workbench" tags="jz_SteelKnucklesCraftingTag">
+<recipe name="meleeKnucklesSteel" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="30" craft_exp_gain="20" tags="learnable,jz_SteelKnucklesCraftingTag">
 	<ingredient name="meleeKnucklesSteelParts" count="5"/>
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceLeather" count="3"/>
 	<ingredient name="resourceDuctTape" count="3"/>
 </recipe>
 
-<recipe name="metalReinforcedWoodDrawBridge" count="1" craft_area="workbench" >
+<recipe name="metalReinforcedWoodDrawBridge" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="30" craft_exp_gain="20" tags="learnable">
 	<ingredient name="resourceForgedIron" count="100"/>
-	<ingredient name="resourceWood" count="1000"/>
+	<ingredient name="jz_Plank" count="1000"/>
 	<ingredient name="resourceSpring" count="20"/>
 	<ingredient name="resourceMechanicalParts" count="30"/>
 </recipe>
 
-<recipe name="metalSignLetterNumberBlockVariantHelper" count="1" material_based="true" craft_area="forge" >
+<recipe name="metalSignLetterNumberBlockVariantHelper" count="1" material_based="true" craft_area="forge" craft_time="1" craft_exp_gain="0" >
 	<ingredient name="unit_iron" count="15"/>
 	<ingredient name="unit_clay" count="3"/>
 </recipe>
 
-<recipe name="metalTrussingIBeamBlockVariantHelper" count="1" material_based="true" craft_area="forge" >
-	<ingredient name="unit_iron" count="40"/>
-	<ingredient name="unit_clay" count="5"/>
+<recipe name="metalTrussingIBeamBlockVariantHelper" count="1" material_based="true" craft_area="forge" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="5" tags="learnable" >
+	<ingredient name="unit_iron" count="100"/>
+	<ingredient name="unit_clay" count="20"/>
 </recipe>
 
-<recipe name="mineCandyTin" count="1" craft_area="workbench" > <!-- trap size 1 -->
+<recipe name="mineCookingPot" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceScrapIron" count="10"/>
-	<ingredient name="resourceGunPowder" count="8"/>
-	<ingredient name="resourceCandyTin" count="1"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-</recipe>
-
-<recipe name="mineHubcap" count="1" craft_area="workbench" > <!-- trap size 2 -->
-	<ingredient name="resourceScrapIron" count="15"/>
-	<ingredient name="resourceGunPowder" count="13"/>
-	<ingredient name="resourceHubcap" count="1"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-	<ingredient name="resourceSpring" count="1"/>
-</recipe>
-
-<recipe name="mineAirFilter" count="1" craft_area="workbench" > <!-- trap size 3 -->
-	<ingredient name="resourceScrapIron" count="25"/>
 	<ingredient name="resourceGunPowder" count="20"/>
-	<ingredient name="resourceAirFilter" count="1"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-	<ingredient name="resourceSpring" count="1"/>
-</recipe>
-
-<recipe name="mineCookingPot" count="1" craft_area="workbench" > <!-- trap size 1.1 -->
-	<ingredient name="resourceScrapIron" count="10"/>
-	<ingredient name="resourceGunPowder" count="10"/>
 	<ingredient name="toolCookingPot" count="1"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 </recipe>
 
-<recipe name="modArmorAdvancedMuffledConnectors" count="1" craft_area="workbench" >
+<recipe name="modArmorAdvancedMuffledConnectors" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="60"/>
@@ -1417,7 +1392,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorBandolier" count="1" craft_area="workbench" >
+<recipe name="modArmorBandolier" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="15"/>
 	<ingredient name="resourceGlue" count="3"/>
 	<ingredient name="resourceScrapPolymers" count="2"/>
@@ -1425,7 +1400,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorCoolingMesh" count="1" craft_area="workbench" >
+<recipe name="modArmorCoolingMesh" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceGlue" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="2"/>
@@ -1433,7 +1408,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorCustomizedFittings" count="1" craft_area="workbench" >
+<recipe name="modArmorCustomizedFittings" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="8"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="20"/>
@@ -1441,7 +1416,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorDoubleStoragePocket" count="1" craft_area="workbench" >
+<recipe name="modArmorDoubleStoragePocket" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="8"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="15"/>
@@ -1449,7 +1424,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="modArmorHelmetLight" count="1" craft_area="workbench" >
+<recipe name="modArmorHelmetLight" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="2"/>
@@ -1457,21 +1432,21 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modFuelTankSmall" count="1" craft_area="workbench" >
+<recipe name="modFuelTankSmall" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="2"/>
 	<ingredient name="ammoGasCan" count="10"/>
 </recipe>
 
-<recipe name="modFuelTankLarge" count="1" craft_area="workbench" >
+<recipe name="modFuelTankLarge" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="2"/>
 	<ingredient name="ammoGasCan" count="10"/>
 </recipe>
 
-<recipe name="modArmorImpactBracing" count="1" craft_area="workbench" >
+<recipe name="modArmorImpactBracing" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceSpring" count="20"/>
@@ -1479,7 +1454,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorImprovedFittings" count="1" craft_area="workbench" >
+<recipe name="modArmorImprovedFittings" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="4"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="resourceScrapPolymers" count="10"/>
@@ -1487,14 +1462,14 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorInsulatedLiner" count="1" craft_area="workbench" >
+<recipe name="modArmorInsulatedLiner" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="10"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="2"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorMuffledConnectors" count="1" craft_area="workbench" >
+<recipe name="modArmorMuffledConnectors" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="4"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="resourceScrapPolymers" count="30"/>
@@ -1502,7 +1477,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorPlatingBasic" count="1" craft_area="workbench" >
+<recipe name="modArmorPlatingBasic" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceScrapPolymers" count="10"/>
 	<ingredient name="resourceOil" count="2"/>
 	<ingredient name="resourceDuctTape" count="2"/>
@@ -1510,7 +1485,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorPlatingReinforced" count="1" craft_area="workbench" >
+<recipe name="modArmorPlatingReinforced" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceScrapIron" count="10"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="2"/>
@@ -1518,7 +1493,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorStoragePocket" count="1" craft_area="workbench" >
+<recipe name="modArmorStoragePocket" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="6"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="resourceScrapPolymers" count="10"/>
@@ -1526,7 +1501,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modArmorTripleStoragePocket" count="1" craft_area="workbench" >
+<recipe name="modArmorTripleStoragePocket" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="10"/>
 	<ingredient name="resourceDuctTape" count="3"/>
 	<ingredient name="resourceScrapPolymers" count="20"/>
@@ -1534,7 +1509,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="3"/>
 </recipe>
 
-<recipe name="modArmorWaterPurifier" count="1" craft_area="workbench" >
+<recipe name="modArmorWaterPurifier" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="10"/>
@@ -1542,624 +1517,577 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<!--<recipe name="modGunMeleeBlessedMetal" count="1" craft_area="workbench" >
-	<ingredient name="resourceForgedSteel" count="5"/>
-	<ingredient name="resourceGlue" count="5"/>
-	<ingredient name="resourceMechanicalParts" count="5"/>
-	<ingredient name="resourceSpring" count="10"/>
-</recipe>-->
-
-<!--<recipe name="modGunMeleeFeelTheHeat" count="1" craft_area="workbench" >
-	<ingredient name="resourceForgedSteel" count="5"/>
-	<ingredient name="resourceGlue" count="5"/>
-	<ingredient name="resourceMechanicalParts" count="5"/>
-	<ingredient name="resourceSpring" count="10"/>
-</recipe>-->
-
-<recipe name="modGunBarrelExtender" count="1" craft_area="workbench" >
+<recipe name="modGunBarrelExtender" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceOil" count="2"/>
 	<ingredient name="resourceMechanicalParts" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 </recipe>
 
-<recipe name="modGunDrumMagazineExtender" count="1" craft_area="workbench" >
+<recipe name="modGunDrumMagazineExtender" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="20"/>
 	<ingredient name="resourceOil" count="4"/>
 	<ingredient name="resourceMechanicalParts" count="4"/>
 	<ingredient name="resourceScrapPolymers" count="10"/>
 </recipe>
 
-<recipe name="modGunBipod" count="1" craft_area="workbench" >
+<recipe name="modGunBipod" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunBowArrowRest" count="1" craft_area="workbench" >
+<recipe name="modGunBowArrowRest" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunBowPolymerString" count="1" craft_area="workbench" >
+<recipe name="modGunBowPolymerString" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunChoke" count="1" craft_area="workbench" >
+<recipe name="modGunChoke" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunCrippleEm" count="1" craft_area="workbench" >
+<recipe name="modGunCrippleEm" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunDuckbill" count="1" craft_area="workbench" >
+<recipe name="modGunDuckbill" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunFlashlight" count="1" craft_area="workbench" >
+<recipe name="modGunFlashlight" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceScrapPolymers" count="10"/>
 	<ingredient name="resourceGlue" count="2"/>
 	<ingredient name="meleeToolFlashlight02" count="1"/>
 	<ingredient name="resourceElectricParts" count="5"/>
 </recipe>
 
-<recipe name="modGunForegrip" count="1" craft_area="workbench" >
+<recipe name="modGunForegrip" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunLaserSight" count="1" craft_area="workbench" >
+<recipe name="modGunLaserSight" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceGlue" count="2"/>
 	<ingredient name="resourceMechanicalParts" count="2"/>
 	<ingredient name="resourceElectricParts" count="10"/>
 </recipe>
 
-<recipe name="modGunMagazineExtender" count="1" craft_area="workbench" >
+<recipe name="modGunMagazineExtender" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunShotgunTubeExtenderMagazine" count="1" craft_area="workbench" >
+<recipe name="modGunShotgunTubeExtenderMagazine" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunMeleeRadRemover" count="1" craft_area="workbench" >
+<recipe name="modGunMeleeRadRemover" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunMeleeTheHunter" count="1" craft_area="workbench" >
+<recipe name="modGunMeleeTheHunter" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunMuzzleBrake" count="1" craft_area="workbench" >
+<recipe name="modGunMuzzleBrake" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="10"/>
 	<ingredient name="resourceOil" count="2"/>
 	<ingredient name="resourceMechanicalParts" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 </recipe>
 
-<recipe name="modGunReflexSight" count="1" craft_area="workbench" >
+<recipe name="modGunReflexSight" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceElectricParts" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="10"/>
 </recipe>
 
-<recipe name="modGunRetractingStock" count="1" craft_area="workbench" >
+<recipe name="modGunRetractingStock" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunRodAndSpring" count="1" craft_area="workbench" >
+<recipe name="modGunRodAndSpring" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modGunScopeLarge" count="1" craft_area="workbench" >
+<recipe name="modGunScopeLarge" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceBrokenGlass" count="20"/>
 	<ingredient name="resourceScrapPolymers" count="10"/>
 </recipe>
 
-<recipe name="modGunScopeMedium" count="1" craft_area="workbench" >
+<recipe name="modGunScopeMedium" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceGlue" count="3"/>
 	<ingredient name="resourceBrokenGlass" count="15"/>
 	<ingredient name="resourceScrapPolymers" count="8"/>
 </recipe>
 
-<recipe name="modGunScopeSmall" count="1" craft_area="workbench" >
+<recipe name="modGunScopeSmall" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="10"/>
 	<ingredient name="resourceGlue" count="2"/>
 	<ingredient name="resourceBrokenGlass" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 </recipe>
 
-<recipe name="modGunSoundSuppressorSilencer" count="1" craft_area="workbench" >
+<recipe name="modGunSoundSuppressorSilencer" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="10"/>
 	<ingredient name="resourceOil" count="2"/>
 	<ingredient name="resourceMechanicalParts" count="2"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 </recipe>
 
-<recipe name="modGunTriggerGroupAutomatic" count="1" craft_area="workbench" >
+<recipe name="modGunTriggerGroupAutomatic" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 </recipe>
 
-<recipe name="modGunTriggerGroupBurst3" count="1" craft_area="workbench" >
+<recipe name="modGunTriggerGroupBurst3" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 </recipe>
 
-<recipe name="modGunTriggerGroupSemi" count="1" craft_area="workbench" >
+<recipe name="modGunTriggerGroupSemi" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 </recipe>
 
-<recipe name="modMeleeDiamondTip" count="1" craft_area="workbench" >
+<recipe name="modMeleeDiamondTip" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceRawDiamond" count="3"/>
 </recipe>
 
-<recipe name="modMeleeBunkerBuster" count="1" craft_area="workbench" >
+<recipe name="modMeleeBunkerBuster" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeClubBarbedWire" count="1" craft_area="workbench" >
+<recipe name="modMeleeClubBarbedWire" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeClubBurningShaft" count="1" craft_area="workbench" >
+<recipe name="modMeleeClubBurningShaft" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceOil" count="5"/>
 	<ingredient name="ammoGasCan" count="50"/>
 </recipe>
 
-<recipe name="modMeleeClubMetalSpikes" count="1" craft_area="workbench" >
+<recipe name="modMeleeClubMetalSpikes" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeClubMetalChain" count="1" craft_area="workbench" >
+<recipe name="modMeleeClubMetalChain" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeErgonomicGrip" count="1" craft_area="workbench" >
+<recipe name="modMeleeErgonomicGrip" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeFortifyingGrip" count="1" craft_area="workbench" >
+<recipe name="modMeleeFortifyingGrip" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeFiremansAxeMod" count="1" craft_area="workbench" tags="learnable,jz_FireFighterTag">
+<recipe name="modMeleeFiremansAxeMod" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeGraveDigger" count="1" craft_area="workbench" >
+<recipe name="modMeleeGraveDigger" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeIronBreaker" count="1" craft_area="workbench" >
+<recipe name="modMeleeIronBreaker" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeSerratedBlade" count="1" craft_area="workbench" >
+<recipe name="modMeleeSerratedBlade" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeStructuralBrace" count="1" craft_area="workbench" >
+<recipe name="modMeleeStructuralBrace" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeTemperedBlade" count="1" craft_area="workbench" >
+<recipe name="modMeleeTemperedBlade" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeWeightedHead" count="1" craft_area="workbench" >
+<recipe name="modMeleeWeightedHead" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modMeleeWoodSplitter" count="1" craft_area="workbench" >
+<recipe name="modMeleeWoodSplitter" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="modShotgunSawedOffBarrel" count="1" craft_area="workbench" >
+<recipe name="modShotgunSawedOffBarrel" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="5"/>
 	<ingredient name="resourceGlue" count="5"/>
 	<ingredient name="resourceMechanicalParts" count="5"/>
 	<ingredient name="resourceSpring" count="10"/>
 </recipe>
 
-<recipe name="motionsensor" count="1" craft_area="workbench" >
+<recipe name="motionsensor" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="2"/>
 	<ingredient name="resourceMechanicalParts" count="1"/>
 	<ingredient name="resourceElectricParts" count="5"/>
 </recipe>
 
-<recipe name="officeChair01" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceLeather" count="8"/>
-	<ingredient name="resourceCropCottonPlant" count="10"/>
-	<ingredient name="resourceMechanicalParts" count="4"/>
-	<ingredient name="resourceForgedIron" count="4"/>
-</recipe>
-
 <!-- Clothing = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
-<recipe name="apparelPlantFiberGloves" count="1">
+<recipe name="apparelPlantFiberGloves" count="1" craft_time="30" craft_exp_gain="5">
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="apparelPlantFiberHat" count="1">
+<recipe name="apparelPlantFiberHat" count="1" craft_time="30" craft_exp_gain="5">
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="apparelPlantFiberHood" count="1">
+<recipe name="apparelPlantFiberHood" count="1" craft_time="30" craft_exp_gain="5">
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="apparelPlantFiberPants" count="1">
+<recipe name="apparelPlantFiberPants" count="1" craft_time="30" craft_exp_gain="5">
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="apparelPlantFiberShirt" count="1">
+<recipe name="apparelPlantFiberShirt" count="1" craft_time="30" craft_exp_gain="5">
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="apparelPlantFiberShoes" count="1">
+<recipe name="apparelPlantFiberShoes" count="1" craft_time="30" craft_exp_gain="5">
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="apparelFlannelShirt" count="1" >
+<recipe name="apparelFlannelShirt" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="20"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelSweatshirt" count="1" >
+<recipe name="apparelSweatshirt" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="25"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelSkullCap" count="1" >
+<recipe name="apparelSkullCap" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="10"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelDenimPants" count="1" >
+<recipe name="apparelDenimPants" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="25"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelDenimShortsPants" count="1" >
+<recipe name="apparelDenimShortsPants" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="20"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelOveralls" count="1" >
+<recipe name="apparelOveralls" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="25"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelSkirt" count="1" >
+<recipe name="apparelSkirt" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="20"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelWornBoots" count="1" >
+<recipe name="apparelWornBoots" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="5"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelRunningShoesRegular" count="1" >
+<recipe name="apparelRunningShoesRegular" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="5"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelCowboyBoots" count="1" >
+<recipe name="apparelCowboyBoots" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="5"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelSuitDressShoes" count="1" >
+<recipe name="apparelSuitDressShoes" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="5"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelTankTop" count="1" >
+<recipe name="apparelTankTop" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="25"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelTShirtPlain" count="1" >
+<recipe name="apparelTShirtPlain" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="25"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelCowboyHat" count="1" >
+<recipe name="apparelCowboyHat" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="5"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelCoatLeatherDuster" count="1" >
+<recipe name="apparelCoatLeatherDuster" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="25"/>
 	<ingredient name="resourceSewingKit" count="3"/>
 </recipe>
 
-<recipe name="apparelCoatPufferCoat" count="1" >
+<recipe name="apparelCoatPufferCoat" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="35"/>
 	<ingredient name="resourceFeather" count="50"/>
 	<ingredient name="resourceCropCottonPlant" count="35"/>
 	<ingredient name="resourceSewingKit" count="3"/>
 </recipe>
 
-<recipe name="apparelArmyPants" count="1" >
+<recipe name="apparelArmyPants" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="25"/>
 	<ingredient name="resourceMilitaryFiber" count="1"/>
 	<ingredient name="resourceSewingKit" count="3"/>
 </recipe>
 
-<recipe name="apparelArmyShirt" count="1" >
+<recipe name="apparelArmyShirt" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="25"/>
 	<ingredient name="resourceMilitaryFiber" count="1"/>
 	<ingredient name="resourceSewingKit" count="3"/>
 </recipe>
 
-<recipe name="apparelGhillieSuitHood" count="1" >
+<recipe name="apparelGhillieSuitHood" count="1" craft_area="jz_ArmorTable" craft_tool="jz_LeatherNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceYuccaFibers" count="50"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelGhillieSuitJacket" count="1" >
+<recipe name="apparelGhillieSuitJacket" count="1" craft_area="jz_ArmorTable" craft_tool="jz_LeatherNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceYuccaFibers" count="50"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelGhillieSuitPants" count="1" >
+<recipe name="apparelGhillieSuitPants" count="1" craft_area="jz_ArmorTable" craft_tool="jz_LeatherNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceYuccaFibers" count="50"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modClothingStoragePocket" count="1">
+<recipe name="modClothingStoragePocket" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="2"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="resourceCloth" count="15"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="modClothingCargoStoragePocket" count="1" >
+<recipe name="modClothingCargoStoragePocket" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="4"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceCloth" count="30"/>
 	<ingredient name="resourceSewingKit" count="2"/>
 </recipe>
 
-<recipe name="apparelCigar" count="1" >
+<recipe name="apparelCigar" count="1" craft_time="4" craft_exp_gain="5">
 	<ingredient name="resourceYuccaFibers" count="250"/>
 	<ingredient name="resourcePaper" count="1"/>
 </recipe>
 
-<recipe name="plantedAloe1" count="1" craft_time="1" >
+<recipe name="plantedAloe1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceCropAloeLeaf" count="5"/>
 </recipe>
 
-<recipe name="plantedBlueberry1" count="1" craft_time="1" >
+<recipe name="plantedBlueberry1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="foodCropBlueberries" count="5"/>
 </recipe>
 
-<recipe name="plantedChrysanthemum1" count="1" craft_time="1" >
+<recipe name="plantedChrysanthemum1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
 </recipe>
 
-<recipe name="plantedCoffee1" count="1" craft_time="1" >
+<recipe name="plantedCoffee1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceCropCoffeeBeans" count="5"/>
 </recipe>
 
-<recipe name="plantedCorn1" count="1" craft_time="1" >
+<recipe name="plantedCorn1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="foodCropCorn" count="5"/>
 </recipe>
 
-<recipe name="plantedCotton1" count="1" craft_time="1" >
+<recipe name="plantedCotton1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceCropCottonPlant" count="5"/>
 </recipe>
 
-<recipe name="plantedGoldenrod1" count="1" craft_time="1" >
+<recipe name="plantedGoldenrod1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceCropGoldenrodPlant" count="5"/>
 </recipe>
 
-<recipe name="plantedGraceCorn1" count="1" craft_time="1" >
+<recipe name="plantedGraceCorn1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="foodCropGraceCorn" count="5"/>
 </recipe>
 
-<recipe name="plantedHop1" count="1" craft_time="1" >
+<recipe name="plantedHop1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceCropHopsFlower" count="5"/>
 </recipe>
 
-<recipe name="plantedMushroom1" count="1" craft_time="2" >
+<recipe name="plantedMushroom1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="foodCropMushrooms" count="5"/>
 	<ingredient name="resourceClayLump" count="2"/>
 </recipe>
 
-<recipe name="plantedPotato1" count="1" craft_time="1" >
+<recipe name="plantedPotato1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="foodCropPotato" count="5"/>
 </recipe>
 
-<recipe name="plantedYucca1" count="1" craft_time="1" >
+<recipe name="plantedYucca1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="foodCropYuccaFruit" count="5"/>
 </recipe>
 
-<recipe name="plantedPumpkin1" count="1" craft_time="1" >
+<recipe name="plantedPumpkin1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="foodCropPumpkin" count="5"/>
 </recipe>
 
-<recipe name="decoPumpkinJackOLantern" count="1" craft_time="1" >
-	<ingredient name="foodCropPumpkin" count="1"/>
-	<ingredient name="candle" count="1"/>
-</recipe>
-
-<recipe name="plantedtreeGrassSeed1" count="1" craft_exp_gain="0">
+<recipe name="plantedtreeGrassSeed1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceYuccaFibers" count="5"/>
 </recipe>
 
-<recipe name="pouredConcreteBlockVariantHelper" count="1" craft_area="cementMixer" >
-	<ingredient name="resourceConcreteMix" count="10"/>
-</recipe>
-
-<recipe name="pressureplate" count="1" craft_area="workbench" >
+<recipe name="pressureplate" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="2"/>
 	<ingredient name="resourceElectricParts" count="2"/>
 </recipe>
 
-<recipe name="pressureplateLong" count="1" craft_area="workbench" >
+<recipe name="pressureplateLong" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="50"/>
 	<ingredient name="resourceMechanicalParts" count="8"/>
 	<ingredient name="resourceElectricParts" count="6"/>
 </recipe>
 
-<recipe name="rScrapIronPlateMine" count="1" craft_area="workbench" >
+<recipe name="rScrapIronPlateMine" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceScrapIron" count="30"/>
 	<ingredient name="resourceGunPowder" count="8"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 </recipe>
 
-<recipe name="rebarFrameBlockVariantHelper" count="1" material_based="true" craft_area="forge" >
-	<ingredient name="unit_iron" count="5"/>
-	<ingredient name="unit_clay" count="1"/>
-</recipe>
-
-<recipe name="resourceAirFilter" count="1" craft_area="workbench" >
-	<ingredient name="resourceScrapIron" count="15"/>
-</recipe>
-
-<recipe name="resourceArrowHeadIron" count="1" material_based="true" craft_area="forge" >
+<recipe name="resourceArrowHeadIron" count="1" material_based="true" craft_area="forge" craft_tool="toolAnvil" craft_time="1" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="unit_iron" count="2"/>
 	<ingredient name="unit_clay" count="1"/>
 </recipe>
 
-<recipe name="resourceArrowHeadSteelAP" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" >
-	<ingredient name="unit_iron" count="5"/>
+<recipe name="resourceArrowHeadSteelAP" count="1" material_based="true" craft_area="jz_SteelForge" craft_tool="toolAnvil" craft_time="1" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="unit_steel" count="5"/>
 	<ingredient name="unit_clay" count="1"/>
 </recipe>
 
-<recipe name="resourceBuckshot" count="1" material_based="true" craft_area="forge" >
+<recipe name="resourceBuckshot" count="1" material_based="true" craft_area="forge" craft_tool="toolAndDieSet" craft_time="1" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="unit_lead" count="3"/>
 	<ingredient name="unit_clay" count="1"/>
 </recipe>
 
-<recipe name="resourceBulletCasing" count="1" material_based="true" craft_area="forge" >
+<recipe name="resourceBulletCasing" count="1" material_based="true" craft_area="forge" craft_tool="toolAndDieSet" craft_time="1" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="unit_brass" count="2"/>
 	<ingredient name="unit_clay" count="1"/>
 </recipe>
 
-<recipe name="resourceBulletTip" count="1" material_based="true" craft_area="forge" >
+<recipe name="resourceBulletTip" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="1" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="unit_lead" count="2"/>
 	<ingredient name="unit_clay" count="1"/>
 </recipe>
 
-<recipe name="resourceCandyTin" count="1" craft_area="workbench" >
-	<ingredient name="resourceScrapIron" count="5"/>
-</recipe>
-
-<recipe name="resourceCement" count="1" material_based="true" craft_area="forge" >
+<recipe name="resourceCement" count="1" material_based="true" craft_area="forge" craft_time="1" craft_exp_gain="1" tags="learnable" >
 	<ingredient name="unit_stone" count="10"/>
 </recipe>
 
-<recipe name="resourceCloth" count="1">
-	<ingredient name="resourceCropCottonPlant" count="1"/>
-</recipe>
-
-<recipe name="resourceCloth" count="1" >
-	<ingredient name="resourceYuccaFibers" count="20"/>
+<recipe name="resourceCloth" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SmallLoom" craft_time="4" craft_exp_gain="5" >
+	<ingredient name="resourceCropCottonPlant" count="5"/>
 </recipe>
 
 <recipe name="resourceCobblestones" count="1">
@@ -2171,92 +2099,63 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCrushedSand" count="1"/>
 	<ingredient name="resourceRockSmall" count="1"/>
 	<ingredient name="resourceCement" count="1"/>
+	<ingredient name="jz_DrinkDirtyOuncesOfWater" count="1"/>
 </recipe>
 
-<recipe name="resourceCrushedSand" count="1" craft_area="cementMixer" >
+<recipe name="resourceCrushedSand" count="1" craft_area="jz_StoneMill" craft_time="1" craft_exp_gain="0" >
 	<ingredient name="resourceRockSmall" count="1"/>
 </recipe>
 
-<recipe name="resourceDuctTape" count="1">
-	<ingredient name="resourceGlue" count="1"/>
-	<ingredient name="resourceCloth" count="1"/>
-</recipe>
-
-<recipe name="resourceElectricParts" count="1" craft_area="workbench" >
+<recipe name="resourceElectricParts" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceInsulator" count="1"/>
 	<ingredient name="resourceForgedIron" count="1"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 </recipe>
 
-<recipe name="resourceForgedIron" count="1" material_based="true" craft_area="forge" >
+<recipe name="resourceForgedIron" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="10" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="unit_iron" count="10"/>
 	<ingredient name="unit_clay" count="5"/>
 </recipe>
 
-<recipe name="resourceForgedSteel" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible">
+<recipe name="resourceForgedSteel" count="1" material_based="true" craft_area="forge" craft_tool="toolForgeCrucible" craft_time="10" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="unit_iron" count="20"/>
 	<ingredient name="unit_clay" count="10"/>
 </recipe>
 
-<recipe name="resourceGlue" count="1" craft_area="campfire" craft_tool="toolCookingPot">
-	<ingredient name="resourceBone" count="7"/>
-	<ingredient name="drinkJarRiverWater" count="1"/>
+<recipe name="resourceGlue" count="2" craft_area="chemistryStation" craft_tool="toolBeaker" craft_time="4" craft_exp_gain="10" tags="learnable" >
+	<ingredient name="jz_Hoof" count="7"/>
+	<ingredient name="jz_BoneMeal" count="1"/>
+	<ingredient name="jz_DrinkCleanOuncesOfWater" count="8"/>
 </recipe>
 
-<recipe name="resourceGlue" count="1" craft_area="chemistryStation" >
-	<ingredient name="resourceBone" count="5"/>
-	<ingredient name="drinkJarRiverWater" count="1"/>
-</recipe>
-
-<recipe name="resourceGunPowder" count="1" craft_area="chemistryStation" >
+<recipe name="resourceGunPowder" count="1" craft_area="chemistryStation" craft_tool="jz_MortarAndPestle" craft_time="4" craft_exp_gain="2" tags="learnable" >
 	<ingredient name="resourceCoal" count="1"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="1"/>
 </recipe>
 
-<recipe name="resourceGunPowder" count="1">
+<recipe name="resourceGunPowder" count="1" craft_area="jz_MortarAndPestle" craft_time="4" craft_exp_gain="2" tags="learnable" >
 	<ingredient name="resourceCoal" count="2"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="2"/>
 </recipe>
 
-<recipe name="resourceHubcap" count="1" craft_area="workbench" >
-	<ingredient name="resourceScrapIron" count="10"/>
-</recipe>
-
-<recipe name="resourceInsulator" count="1" material_based="true" craft_area="forge" >
+<recipe name="resourceInsulator" count="1" material_based="true" craft_area="forge" craft_tool="toolAndDieSet" craft_time="4" craft_exp_gain="2" tags="learnable" >
 	<ingredient name="unit_iron" count="2"/>
 	<ingredient name="unit_glass" count="10"/>
 	<ingredient name="unit_clay" count="20"/>
 </recipe>
 
-<recipe name="resourceMechanicalParts" count="1" craft_area="workbench" >
+<recipe name="resourceMechanicalParts" count="1" craft_area="workbench" craft_tool="toolAndDieSet" craft_time="4" craft_exp_gain="2" tags="learnable" >
 	<ingredient name="resourceForgedSteel" count="2"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 </recipe>
 
-<recipe name="resourceMetalPipe" count="1" material_based="true" craft_area="forge" >
-	<ingredient name="unit_iron" count="10"/>
-	<ingredient name="unit_clay" count="5"/>
-</recipe>
-
-<recipe name="resourceMetalPipe" count="1">
+<recipe name="resourceMetalPipe" count="1" craft_area="workbench" craft_tool="toolAndDieSet" craft_time="4" craft_exp_gain="2" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="1"/>
 </recipe>
 
-<recipe name="resourceMilitaryFiber" count="10" craft_area="chemistryStation" >
-	<ingredient name="resourceAcid" count="1"/>
-	<ingredient name="resourceDuctTape" count="5"/>
-	<ingredient name="resourceScrapPolymers" count="10"/>
-	<ingredient name="resourceYuccaFibers" count="100"/>
-</recipe>
-
-<recipe name="resourceNail" count="1" material_based="true" craft_area="forge" >
+<recipe name="resourceNail" count="1" material_based="true" craft_area="forge" craft_tool="toolAnvil" craft_time="2" craft_exp_gain="2" tags="learnable" >
 	<ingredient name="unit_iron" count="1"/>
 	<ingredient name="unit_clay" count="1"/>
-</recipe>
-
-<recipe name="resourceOil" count="1" craft_area="chemistryStation" >
-	<ingredient name="resourceOilShale" count="24"/>
-	<ingredient name="drinkCanEmpty" count="1"/>
 </recipe>
 
 <recipe name="resourcePaint" count="100" craft_area="chemistryStation" >
@@ -2264,67 +2163,33 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceOil" count="1"/>
 </recipe>
 
-<recipe name="resourcePaper" count="10" craft_area="chemistryStation" >
-	<ingredient name="resourceWood" count="10"/>
-	<ingredient name="resourceGlue" count="1"/>
-	<ingredient name="drinkJarRiverWater" count="1"/>
-</recipe>
-
-<recipe name="resourceRepairKit" count="1">
-	<ingredient name="resourceForgedIron" count="1"/>
-	<ingredient name="resourceDuctTape" count="1"/>
-</recipe>
-
-<recipe name="resourceRocketCasing" count="1" material_based="true" craft_area="forge" >
+<recipe name="resourceRocketCasing" count="1" material_based="true" craft_area="forge" craft_tool="toolAndDieSet" craft_time="3" craft_exp_gain="1" tags="learnable" >
 	<ingredient name="unit_iron" count="50"/>
 	<ingredient name="unit_clay" count="30"/>
 </recipe>
 
-<recipe name="resourceRocketTip" count="1" material_based="true" craft_area="forge" >
+<recipe name="resourceRocketTip" count="1" material_based="true" craft_area="forge" craft_tool="toolAndDieSet" craft_time="3" craft_exp_gain="1" tags="learnable" >
 	<ingredient name="unit_lead" count="50"/>
 	<ingredient name="unit_clay" count="30"/>
 </recipe>
 
-<recipe name="resourceSpring" count="1" craft_area="workbench" >
-	<ingredient name="resourceForgedSteel" count="4"/>
-	<ingredient name="resourceCoal" count="4"/>
-</recipe>
-
-<recipe name="scrapHatch_v1" count="1" >
+<recipe name="scrapHatch_v1" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceScrapIron" count="40"/>
+	<ingredient name="resourceSpring" count="2"/>
+	<ingredient name="resourceMechanicalParts" count="1"/>
 </recipe>
 
-<recipe name="scrapIronFrameBlockVariantHelper" count="1" material_based="true" craft_area="forge" >
-	<ingredient name="unit_iron" count="15"/>
-	<ingredient name="unit_clay" count="4"/>
+<recipe name="scrapIronFrameBlockVariantHelper" count="1" craft_time="10" craft_exp_gain="5">
+	<ingredient name="resourceScrapIron" count="20"/>
+	<ingredient name="jz_NutAndBolt" count="5"/>
+</recipe>
+
+<recipe name="scrapIronFrameBlockVariantHelper" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="5">
+	<ingredient name="resourceScrapIron" count="20"/>
+	<ingredient name="jz_NutAndBolt" count="5"/>
 </recipe>
 
 <recipe name="scrapIronSheet" count="1" material_based="true" craft_area="forge" >
-	<ingredient name="unit_iron" count="40"/>
-	<ingredient name="unit_clay" count="5"/>
-</recipe>
-
-<recipe name="scrapIronStairs25" count="1" material_based="true" craft_area="forge" >
-	<ingredient name="unit_iron" count="40"/>
-	<ingredient name="unit_clay" count="5"/>
-</recipe>
-
-<recipe name="scrapIronStairsFilledRailingLeft" count="1" material_based="true" craft_area="forge" >
-	<ingredient name="unit_iron" count="40"/>
-	<ingredient name="unit_clay" count="5"/>
-</recipe>
-
-<recipe name="scrapIronStairsFilledRailingRight" count="1" material_based="true" craft_area="forge" >
-	<ingredient name="unit_iron" count="40"/>
-	<ingredient name="unit_clay" count="5"/>
-</recipe>
-
-<recipe name="scrapIronArrowSlitHalf" count="1" material_based="true" craft_area="forge" >
-	<ingredient name="unit_iron" count="40"/>
-	<ingredient name="unit_clay" count="5"/>
-</recipe>
-
-<recipe name="scrapIronCTRpole" count="1" material_based="true" craft_area="forge" >
 	<ingredient name="unit_iron" count="40"/>
 	<ingredient name="unit_clay" count="5"/>
 </recipe>
@@ -2334,44 +2199,11 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCloth" count="2"/>
 </recipe>
 
-<recipe name="sectionalLeatherCouchSofaBlockVariantHelper" count="1">
-	<ingredient name="resourceLeather" count="5"/>
-	<ingredient name="resourceNail" count="10"/>
-	<ingredient name="resourceWood" count="10"/>
-</recipe>
-
-<recipe name="sectionalPlaidCouchSofaBlockVariantHelper" count="1">
-	<ingredient name="resourceCloth" count="5"/>
-	<ingredient name="resourceNail" count="10"/>
-	<ingredient name="resourceWood" count="10"/>
-</recipe>
-
-<recipe name="couchSofa01" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceCloth" count="15"/>
-	<ingredient name="resourceNail" count="10"/>
-	<ingredient name="resourceWood" count="15"/>
-</recipe>
-
-<recipe name="chairCouchSofa01" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceCloth" count="15"/>
-	<ingredient name="resourceNail" count="10"/>
-	<ingredient name="resourceWood" count="15"/>
-</recipe>
-
-<recipe name="leatherCouchSofa2" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceLeather" count="15"/>
-	<ingredient name="resourceNail" count="10"/>
-	<ingredient name="resourceWood" count="15"/>
-</recipe>
-
-<recipe name="leatherChairCouchSofa2" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceLeather" count="15"/>
-	<ingredient name="resourceNail" count="10"/>
-	<ingredient name="resourceWood" count="15"/>
-</recipe>
-
-<recipe name="secureDoorWooden" count="1">
-	<ingredient name="resourceWood" count="4"/>
+<recipe name="secureDoorWooden" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" craft_time="4" craft_exp_gain="5">
+	<ingredient name="jz_Plank" count="10" />
+	<ingredient name="resourceDoorKnob" count="1" />
+	<ingredient name="resourceSpring" count="3" />
+	<ingredient name="resourceMechanicalParts" count="1" />
 </recipe>
 
 <recipe name="shotgunTurret" count="1" craft_area="workbench" > <!-- trap -->
@@ -2435,7 +2267,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCement" count="4"/>
 </recipe>
 
-<recipe name="thrownAmmoMolotovCocktail" count="1" tags="learnable,jz_FireFighterTag">
+<recipe name="thrownAmmoMolotovCocktail" count="1" tags="learnable">
 	<ingredient name="resourceCloth" count="1"/>
 	<ingredient name="ammoGasCan" count="300"/>
 	<ingredient name="resourceOil" count="1"/>
@@ -2443,7 +2275,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="thrownAmmoPipeBomb" count="1" craft_area="workbench" >
-	<ingredient name="resourceYuccaFibers" count="1"/>
+	<ingredient name="jz_FiberRope" count="1"/>
 	<ingredient name="resourceGunPowder" count="12"/>
 	<ingredient name="resourceMetalPipe" count="1"/>
 </recipe>
@@ -2478,7 +2310,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="toolAnvil" count="1" material_based="true" craft_area="forge" >
-	<ingredient name="unit_iron" count="1000"/>
+	<ingredient name="unit_iron" count="1200"/>
 	<ingredient name="unit_clay" count="100"/>
 </recipe>
 
@@ -2491,7 +2323,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="toolBellows" count="1" >
-	<ingredient name="resourceWood" count="6"/>
+	<ingredient name="jz_Plank" count="6"/>
 	<ingredient name="resourceLeather" count="20"/>
 	<ingredient name="resourceMetalPipe" count="2"/>
 	<ingredient name="resourceDuctTape" count="5"/>
@@ -2530,32 +2362,9 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceWood" count="20"/>
 </recipe>
 
-<recipe name="treePlant02" count="1">
-	<ingredient name="resourceYuccaFibers" count="4"/>
-	<ingredient name="resourceClayLump" count="8"/>
-</recipe>
-
 <recipe name="tripwirepost" count="1" craft_area="workbench" >
 	<ingredient name="resourceWood" count="5"/>
 	<ingredient name="resourceElectricParts" count="1"/>
-</recipe>
-
-<recipe name="tv" count="1" craft_area="workbench" >
-	<ingredient name="resourceElectricParts" count="12"/>
-	<ingredient name="glassBlockVariantHelper" count="1"/>
-	<ingredient name="resourceScrapPolymers" count="8"/>
-</recipe>
-
-<recipe name="tv_large_1" count="1" craft_area="workbench" >
-	<ingredient name="resourceElectricParts" count="12"/>
-	<ingredient name="glassBlockVariantHelper" count="1"/>
-	<ingredient name="resourceScrapPolymers" count="8"/>
-</recipe>
-
-<recipe name="tv_large_2" count="1" craft_area="workbench" >
-	<ingredient name="resourceElectricParts" count="12"/>
-	<ingredient name="glassBlockVariantHelper" count="1"/>
-	<ingredient name="resourceScrapPolymers" count="8"/>
 </recipe>
 
 <recipe name="vaultDoor01" count="1" craft_area="workbench" >
@@ -2716,26 +2525,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="glassBlockVariantHelper" count="1"/>
 </recipe>
 
-<recipe name="woodArrowBlock" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodArrowSlitHalf" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodBars" count="1">
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodBarsCentered" count="1">
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodCTRpole" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
 <recipe name="woodCatwalkBlockVariantHelper" count="1">
 	<ingredient name="resourceWood" count="8"/>
 </recipe>
@@ -2749,55 +2538,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="woodHatch1_v1" count="1">
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodLogPillar100" count="1">
-	<ingredient name="resourceWood" count="10"/>
-</recipe>
-
-<recipe name="woodPillar100" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodPlate" count="1">
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodCTRPlate" count="1">
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodPole" count="1">
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodStairs25" count="1">
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-
-<recipe name="woodStairsFilledRailingLeft" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodStairsFilledRailingRight" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodSupport" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodWedgeTip" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodRampIncline" count="1" craft_area="tablesaw" >
-	<ingredient name="resourceWood" count="6"/>
-</recipe>
-
-<recipe name="woodRampInclineFiller" count="1" craft_area="tablesaw" >
 	<ingredient name="resourceWood" count="6"/>
 </recipe>
 
@@ -3634,10 +3374,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="jz_SteelShovelHead" count="1" craft_area="jz_SteelForge" craft_tool="jz_MoldShovelHead" material_based="true" craft_time="30" >
 	<ingredient name="unit_steel" count="100" />
 	<ingredient name="unit_clay" count="5" />
-</recipe>
-	
-<recipe name="jz_Stick" count="3" craft_time="1" craft_exp_gain="0">
-	<ingredient name="jz_Plank" count="1" />
 </recipe>
 
 <recipe name="jz_StoneMill" count="1" craft_area="forge" material_based="true" craft_time="300" tags="learnable">

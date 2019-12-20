@@ -17264,49 +17264,24 @@ perkNightStalkerSilentNight
     <property name="Weight" value="5" />
 </item>
 
-<!--JZMOD FOOD SERVINGS-->
-<item name="jz_FoodServingFruit">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_unit_fruit" />
-	<property name="Material" value="Mfruit" />
-	<property name="Weight" value="5" />
-	<property name="Stacknumber" value="5000" />
-    <property name="Group" value="Food/Cooking" />
+<item name="unit_coal">
+	<property name="Extends" value="unit_iron" />
+	<property name="CustomIcon" value="resourceCoal" />
+	<property name="Material" value="Mforgecoal" />
+	<property name="CreativeMode" value="Dev" />
 </item>
 
-<item name="jz_FoodServingGrain">
-	<property name="Extends" value="jz_FoodServingFruit" />
-	<property name="CustomIcon" value="ui_game_symbol_unit_grain" />
-	<property name="Material" value="Mgrain" />
-    <property name="Weight" value="3" />
+<item name="unit_steel">
+	<property name="Extends" value="unit_iron" />
+	<property name="CustomIcon" value="scrapIron" />
+	<property name="Material" value="Msteel" />
+	<property name="CreativeMode" value="Dev" />
 </item>
 
-<item name="jz_FoodServingVeggie">
-	<property name="Extends" value="jz_FoodServingFruit" />
-	<property name="CustomIcon" value="ui_game_symbol_unit_veggie" />
-	<property name="Material" value="Mveggie" />
-    <property name="Weight" value="1" />
-</item>
-
-<item name="jz_FoodServingProtein">
-	<property name="Extends" value="jz_FoodServingFruit" />
-	<property name="CustomIcon" value="ui_game_symbol_unit_protein" />
-	<property name="Material" value="Mprotein" />
-    <property name="Weight" value="5" />
-</item>
-
-<item name="jz_FoodBioMass">
-	<property name="Extends" value="jz_MasterFood" />
-	<property name="Material" value="MbioMass" />
-	<property name="Weight" value="5" />
-	<property name="Stacknumber" value="5000" />
-	<property name="CustomIcon" value="ui_game_symbol_bioMass" />
-    <property name="DescriptionKey" value="bioMassDesc" />
-	<property class="Action0">
-	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01"/><display_value name="dFoodPoisoningRisk" value="1.00"/>
-	</effect_group>
+<item name="unit_plastic">
+	<property name="Extends" value="unit_iron" />
+	<property name="CustomIcon" value="scrapPlastics" />
+	<property name="Material" value="Mplastics" />
 </item>
 
 <item name="jz_FiberRope">
@@ -17320,99 +17295,7 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="fiberRopeDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_fiberRope" />
 </item>
-
-<item name="jz_Stick">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mwood" />
-	<property name="Weight" value="1" />
-	<property name="RepairAmount" value="10" />
-	<property name="FuelValue" value="1" />
-	<property name="DescriptionKey" value="jz_StickDesc" />
-    <property name="CustomIcon" value="ui_game_symbol_stick" />
-</item>
-
-<item name="jz_ScrapSteel">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_scrapSteel" />
-	<property name="Material" value="Msteel" />
-	<property name="Weight" value="1" />
-	<property name="MeltTimePerUnit" value="0.5" />
-    <property name="RepairAmount" value="10" />
-</item>
-
-<item name="jz_AnimalHide">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="FuelValue" value="1" />
-	<property name="DescriptionKey" value="jz_AnimalHideDesc" />
-</item>
-
-<item name="jz_BrainMatter">
-	<property name="Extends" value="jz_MasterItem" />
-    <property name="CustomIcon" value="ui_game_symbol_brainMatter" />
-	<property name="DescriptionKey" value="jz_BrainMatterDesc" />
-	<property name="Material" value="Mprotein" />
-    <property name="Weight" value="1" />
-</item>
-
-<item name="jz_CuredLeather">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="curedLeatherDesc" />
-	<property name="CustomIcon" value="leather" />
-	<property name="CustomIconTint" value="edf4b0" />
-</item>
-
-<item name="jz_AnimalSkin">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="curedLeatherDesc" />
-	<property name="CustomIcon" value="leather" />
-	<property name="CustomIconTint" value="edf4b0" />
-</item>
-
-<item name="jz_CrossbowParts">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mwood" />
-	<property name="DescriptionKey" value="crossbow_PartsDesc" />
-	<property name="CustomIcon" value="augur_Parts" />
-	<property name="Weight" value="10" />
-	<property name="Group" value="Ammo/Weapons" />
-</item>
-
-<item name="jz_CrossbowLimb">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mwood" />
-	<property name="DescriptionKey" value="crossbow_LimbDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_crossbowLimb" />
-	<property name="Weight" value="10" />
-	<property name="Group" value="Ammo/Weapons" />
-</item>
-
-<item name="jz_CrossbowStock">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mwood" />
-	<property name="DescriptionKey" value="crossbow_StockDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_crossbowStock" />
-	<property name="Weight" value="10" />
-	<property name="FuelValue" value="15" />
-	<property name="Group" value="Ammo/Weapons" />
-</item>
-
-<item name="jz_CrossbowBarrel">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mwood" />
-	<property name="DescriptionKey" value="crossbow_BarrelDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_crossbowBarrel" />
-	<property name="Weight" value="10" />
-	<property name="Group" value="Ammo/Weapons" />
-</item>
-
-<item name="jz_BoltCylinder">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mwood" />
-	<property name="DescriptionKey" value="boltCylinderDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_boltCylinder" />
-	<property name="Group" value="Ammo/Weapons" />
-</item>
-<!--JZMOD CRAFTED GUNS-->
+<!--JZMOD GUNS-->
 <item name="jz_CraftedRevolver">
 	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,magazine,firingMode,selfLoading,9mmGun,canHaveCosmetic,jz_PistolSkillTag"/>
 	<property name="DisplayType" value="rangedGun"/>
@@ -17496,43 +17379,6 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>	
 	
-<item name="jz_CraftedRevolverStock">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="CraftedGunPartsDesc" />
-	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="10" />
-	<property name="Group" value="Ammo/Weapons" />
-	<property name="CustomIcon" value="ui_game_symbol_CraftedRevolverStock" />
-</item>
-
-<item name="jz_CraftedRevolverBarrel">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="CraftedGunPartsDesc" />
-	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="20" />
-	<property name="Group" value="Ammo/Weapons" />
-    <property name="CustomIcon" value="ui_game_symbol_CraftedRevolverBarrel" />
-</item>
-
-<item name="jz_CraftedRevolverCylinder">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="RevolverPartsDesc" />
-    <property name="CustomIcon" value="parts44Magnum_cylinder" />
-    <property name="CustomIconTint" value="424041" />
-	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="5" />
-	<property name="Group" value="Ammo/Weapons" />
-</item>
-
-<item name="jz_BlunderbussDouble">
-	<property name="Extends" value="gunBlunderbuss" />
-	<property name="DescriptionKey" value="BlunderbussDoubleDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_blunderbussDouble" />
-	<effect_group name="Base Effects">
-		<passive_effect name="MagazineSize" operation="base_set" value="2"/>
-	</effect_group>
-</item>
-
 <item name="jz_CraftedRifle">
 	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,stock,canHaveCosmetic,jz_HuntingRifleSkillTag"/>
 	<property name="DisplayType" value="rangedGun"/>
@@ -17619,17 +17465,17 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_RevolverParts">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="revolverPartsDesc" />
-	<property name="CustomIcon" value="parts44Magnum_parts" />
-	<property name="CustomIconTint" value="424041" />
-	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="5" />
-	<property name="Group" value="Ammo/Weapons" />
+<item name="jz_BlunderbussDouble">
+	<property name="Extends" value="gunBlunderbuss" />
+	<property name="DescriptionKey" value="BlunderbussDoubleDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_blunderbussDouble" />
+	<effect_group name="Base Effects">
+		<passive_effect name="MagazineSize" operation="base_set" value="2"/>
+	</effect_group>
 </item>
 
-<item name="jz_CraftedRifleRreceiver">
+<!-- JZMOD GUN PARTS -->
+<item name="jz_PartsCraftedRifleRreceiver">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="craftedRiflePartsDesc" />
 	<property name="CustomIcon" value="partsHuntingRifle_receiver" />
@@ -17638,7 +17484,7 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Ammo/Weapons" />
 </item>
 
-<item name="jz_CraftedRifleStock">
+<item name="jz_PartsCraftedRifleStock">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="craftedRiflePartsDesc" />
 	<property name="CustomIcon" value="partsHuntingRifle_stock" />
@@ -17647,13 +17493,465 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Ammo/Weapons" />
 </item>
 
-<item name="jz_CraftedRifleBarrel">
+<item name="jz_PartsCraftedRifleBarrel">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="craftedRiflePartsDesc" />
 	<property name="CustomIcon" value="partsHuntingRifle_barrel" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsCraftedRevolverStock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CraftedGunPartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+	<property name="CustomIcon" value="ui_game_symbol_CraftedRevolverStock" />
+</item>
+
+<item name="jz_PartsCraftedRevolverBarrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CraftedGunPartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+	<property name="Group" value="Ammo/Weapons" />
+    <property name="CustomIcon" value="ui_game_symbol_CraftedRevolverBarrel" />
+</item>
+
+<item name="jz_PartsOldRevolverCylinder">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="RevolverPartsDesc" />
+    <property name="CustomIcon" value="parts44Magnum_cylinder" />
+    <property name="CustomIconTint" value="424041" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="Group" value="Ammo/Weapons" />
+</item> 
+
+<item name="jz_PartsWoodenBowHandle">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="WoodenBowPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsWoodenBowHandle" />
+	<property name="Material" value="Mwood" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsWoodenBowCams">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="WoodenBowPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsWoodenBowCams" />
+	<property name="Material" value="Mwood" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsWoodenBowCord">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="WoodenBowPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsWoodenBowCord" />
+	<property name="Material" value="Morganic" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsCrossbowStock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CrossbowPartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCrossbowStock" />
+</item>
+
+<item name="jz_PartsCrossbowLimb">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CrossbowPartsDesc" />
+	<property name="Material" value="Mwood" />
+	<property name="Weight" value="20" />
+	<property name="Group" value="Ammo/Weapons" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsCrossbowLimb" />
+</item>
+
+<item name="jz_PartsCrossbowReciver">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CrossbowPartsDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsCrossbowReciver" />
+   	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item> 
+
+<item name="jz_PartsCompoundBowHandle">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CompoundBowPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundBowHandle" />
+	<property name="Material" value="Mplastics" />
+	<property name="Weight" value="30" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsCompoundBowCams">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CompoundBowPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundBowCams" />
+	<property name="Material" value="Mplastics" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsCompoundBowCord">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CompoundBowPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundBowCord" />
+	<property name="Material" value="Morganic" />
+	<property name="Weight" value="20" />
+    <property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsCompoundCrossbowStock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CompoundCrossbowPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundCrossbowStock" />
+	<property name="Material" value="Mplastics" />
+	<property name="Weight" value="30" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsCompoundBowCord">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CompoundCrossbowPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundBowCord" />
+	<property name="Material" value="Mplastics" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsCompoundCrossbowCams">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="CompoundCrossbowPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundCrossbowCams" />
+	<property name="Material" value="Morganic" />
+	<property name="Weight" value="20" />
+    <property name="Group" value="Ammo/Weapons" />
+</item>
+
+
+<item name="jz_PartsPistolBarrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="PistolPartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsPistolBarrel" />
+</item>
+
+<item name="jz_PartsPistolFrame">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="PistolPartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsPistolFrame" />
+</item>
+
+<item name="jz_PartsPistolGrip">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="PistolPartsDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsPistolGrip" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="Group" value="Ammo/Weapons" />
+</item> 
+
+<item name="jz_PartsPumpShotgunBarrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="PumpShotgunPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsPumpShotgunBarrel" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsPumpShotgunReciver">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="PumpShotgunPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsPumpShotgunReciver" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsPumpShotgunStock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="PumpShotgunPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsPumpShotgunStock" />
+	<property name="Material" value="Mwood" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsDoubleBarrelReceiver">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="DoubleBarrelPartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsDoubleBarrelReceiver" />
+</item>
+
+<item name="jz_PartsDoubleBarrelStock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="DoubleBarrelPartsDesc" />
+	<property name="Material" value="Mwood" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsDoubleBarrelStock" />
+</item>
+
+<item name="jz_PartsDoubleBarrelBarrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="DoubleBarrelPartsDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsDoubleBarrelBarrel" />
+   	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+	<property name="Group" value="Ammo/Weapons" />
+</item> 
+
+<item name="jz_PartsHuntingRifleBarrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="HuntingRiflePartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsHuntingRifleBarrel" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsHuntingRifleStock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="HuntingRiflePartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsHuntingRifleStock" />
+	<property name="Material" value="Mwood" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsHuntingRifleReceiver">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="HuntingRiflePartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsHuntingRifleReceiver" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+    <property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_Parts44MagnumCylinder">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="MagnumPartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="Group" value="Ammo/Weapons" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_Parts44MagnumCylinder" />
+</item>
+
+<item name="jz_Parts44MagnumFrame">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="MagnumPartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_Parts44MagnumFrame" />
+</item>
+
+<item name="jz_Parts44MagnumGrip">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="MagnumPartsDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_Parts44MagnumGrip" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item> 
+
+<item name="jz_PartsSMG5Barrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="SMG5PartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSMG5Barrel" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsSMG5Receiver">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="SMG5PartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSMG5Receiver" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsSMG5Grip">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="SMG5PartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSMG5Grip" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsARBarrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="AR15PartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+	<property name="Group" value="Ammo/Weapons" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsARBarrel" />
+</item>
+
+<item name="jz_PartsARReceiver">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="AR15PartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsARReceiver" />
+</item>
+
+<item name="jz_PartsARStock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="AR15PartsDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsARStock" />
+   	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item> 
+
+<item name="jz_PartsAK47Stock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="AK47PartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsAK47Stock" />
+	<property name="Material" value="Mwood" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsAK47Receiver">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="AK47PartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsAK47Receiver" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsAK47Barrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="AK47PartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsAK47Barrel" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+    <property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsSniperRifleBarrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="SniperPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSniperRifleBarrel" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="30" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsSniperRifleStock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="SniperPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSniperRifleStock" />
+	<property name="Material" value="Mplastics" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsSniperRifleReceiver">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="SniperPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSniperRifleReceiver" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+    <property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsM60Barrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="M60PartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsM60Barrel" />
+</item>
+
+<item name="jz_PartsM60Stock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="M60PartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsM60Stock" />
+</item>
+
+<item name="jz_PartsM60Receiver">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="M60PartsDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsM60Receiver" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="Group" value="Ammo/Weapons" />
+</item> 
+
+<item name="jz_PartsRocketLauncherBarrel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="RocketLauncherPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsRocketLauncherBarrel" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsRocketLauncherStock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="RocketLauncherPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsRocketLauncherStock" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_PartsRocketLauncherParts">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="RocketLauncherPartsDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_PartsRocketLauncherParts" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+</item>
+
+<item name="jz_BasicGunParts">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="BasicGunPartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+	<property name="CustomIcon" value="ui_game_symbol_jz_BasicGunParts" />
+</item>
+
+<item name="jz_MilitaryGunParts">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="MilitaryGunPartsDesc" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="Msteel" />
+	<property name="Weight" value="10" />
+	<property name="Group" value="Ammo/Weapons" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_MilitaryGunParts" />
 </item>
 
 <item name="jz_OldRevolver">
@@ -17673,19 +17971,7 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="oldRifleDesc" />
 	<property name="RepairTools" value="jz_CantRepair"/>	
 </item>
-
-<item name="jz_Ammo308mmBullet">
-	<property name="Extends" value="ammo762mmBulletBall" />
-	<property name="DescriptionKey" value="308mmBulletDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_308mmBullet" />
-</item>
-
-<item name="jz_Ammo556mmBullet">
-	<property name="Extends" value="ammo762mmBulletBall" />
-	<property name="DescriptionKey" value="5.45mmBulletDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_556mmBullet" />
-</item>
-
+<!-- JZMOD MELEE WEAPONS -->
 <item name="jz_SteakKnife">
 	<property name="Extends" value="meleeToolKnifeIron" />
 	<property name="RepairTools" value="jz_CantRepair" />
@@ -17826,6 +18112,145 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Tools/Traps"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<property name="DescriptionKey" value="screwdriverDesc" />
+</item>
+
+<item name="jz_MasonHammer"> 
+	<property name="Tags" value="blunt,melee,grunting,light,tool,canHaveCosmetic,jz_StoneBuildingTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="HoldType" value="29"/>
+	<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="CustomIcon" value="ui_game_symbol_stoneHammer" />
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="metaldestroy"/>
+	<property name="EconomicValue" value="350"/>
+	<property name="UnlockedBy" value="meleeToolWrenchSchematic"/>
+	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.ToolMasonHammer" value="1" param1="1"/>
+		<property name="Sound_harvesting" value="wrench_harvest"/>
+		<property name="Particle_harvesting" value="true" param1="metal"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".3"/>
+		<property name="SwingDegrees" value="50"/>
+		<property name="SwingAngle" value="180"/>
+	</property>
+	<property class="Action1"> 
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value=".64"/>
+		<property name="Repair_amount" value="400"/>
+		<property name="Upgrade_hit_offset" value="-2"/>
+		<property name="Sound_start" value="repair_block"/>
+		<property name="Allowed_upgrade_items" value="resourceCobblestones,jz_Bricks"/>
+		<property name="UsePowerAttackAnimation" value="false"/>
+	</property>
+	
+	<effect_group name="MasonHammer">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="18"/> <!-- meleeToolWrench -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="BlockDamage" operation="base_set" value="38.5"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="salvageHarvest"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="200,682" tier="1,6" tags="perkSalvageOperations"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSalvageOperations"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="25.2" tags="secondary"/>
+	</effect_group>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+</item>
+
+<item name="jz_ConcreteSledge"> 
+	<property name="Tags" value="blunt,melee,grunting,light,tool,canHaveCosmetic,jz_ConcreteBuildingTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="HoldType" value="29"/>
+	<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="metaldestroy"/>
+	<property name="EconomicValue" value="350"/>
+	<property name="UnlockedBy" value="meleeToolWrenchSchematic"/>
+	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.ToolSledge" value="1" param1="1"/>
+		<property name="Sound_harvesting" value="wrench_harvest"/>
+		<property name="Particle_harvesting" value="true" param1="metal"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".3"/>
+		<property name="SwingDegrees" value="50"/>
+		<property name="SwingAngle" value="180"/>
+	</property>
+	<property class="Action1"> 
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value=".64"/>
+		<property name="Repair_amount" value="400"/>
+		<property name="Upgrade_hit_offset" value="-2"/>
+		<property name="Sound_start" value="repair_block"/>
+		<property name="Allowed_upgrade_items" value="resourceConcreteMix"/>
+		<property name="UsePowerAttackAnimation" value="false"/>
+	</property>
+	
+	<effect_group name="ConcreteSledge">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="18"/> <!-- meleeToolWrench -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="BlockDamage" operation="base_set" value="38.5"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="salvageHarvest"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="200,682" tier="1,6" tags="perkSalvageOperations"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSalvageOperations"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="25.2" tags="secondary"/>
+	</effect_group>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
 <item name="jz_WelderTool">
@@ -18236,6 +18661,149 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 
 
 -->
+<!--JZMOD FOOD ITEMS-->
+<item name="jz_FoodServingFruit">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="CustomIcon" value="ui_game_symbol_unit_fruit" />
+	<property name="Material" value="Mfruit" />
+	<property name="Weight" value="5" />
+	<property name="Stacknumber" value="5000" />
+    <property name="Group" value="Food/Cooking" />
+</item>
+
+<item name="jz_FoodServingGrain">
+	<property name="Extends" value="jz_FoodServingFruit" />
+	<property name="CustomIcon" value="ui_game_symbol_unit_grain" />
+	<property name="Material" value="Mgrain" />
+    <property name="Weight" value="3" />
+</item>
+
+<item name="jz_FoodServingVeggie">
+	<property name="Extends" value="jz_FoodServingFruit" />
+	<property name="CustomIcon" value="ui_game_symbol_unit_veggie" />
+	<property name="Material" value="Mveggie" />
+    <property name="Weight" value="1" />
+</item>
+
+<item name="jz_FoodServingProtein">
+	<property name="Extends" value="jz_FoodServingFruit" />
+	<property name="CustomIcon" value="ui_game_symbol_unit_protein" />
+	<property name="Material" value="Mprotein" />
+    <property name="Weight" value="5" />
+</item>
+
+<item name="jz_FoodBioMass">
+	<property name="Extends" value="jz_MasterFood" />
+	<property name="Material" value="MbioMass" />
+	<property name="Weight" value="5" />
+	<property name="Stacknumber" value="5000" />
+	<property name="CustomIcon" value="ui_game_symbol_bioMass" />
+    <property name="DescriptionKey" value="bioMassDesc" />
+	<property class="Action0">
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01"/><display_value name="dFoodPoisoningRisk" value="1.00"/>
+	</effect_group>
+</item>
+
+<item name="jz_DrinkDirtyOuncesOfWater">
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="waterDysentery"/>
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="128"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="0"/>
+		<property name="Sound_start" value="player_drinking"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+
+	<effect_group tiered="false">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/><display_value name="dDysenteryRisk" value=".12"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+
+<item name="jz_DrinkDrityDrinkOfWater">
+	<property name="Extends" value="jz_DrinkDirtyOuncesOfWater" />
+	<property name="Stacknumber" value="1"/> 
+	<effect_group tiered="false">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/><display_value name="dDysenteryRisk" value=".12"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+
+<item name="jz_DrinkCleanOuncesOfWater">
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="waterDysentery"/>
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="128"/> 
+	<property name="EconomicValue" value="40"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+	<effect_group tiered="false">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+
+<item name="jz_DrinkCleanDrinkOfWater">
+	<property name="Extends" value="jz_DrinkDirtyOuncesOfWater" />
+	<property name="Stacknumber" value="1"/> 
+	<effect_group tiered="false">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
 
 <item name="foodCanBeef">
 	<property name="Extends" value="jz_MasterFood" />
@@ -21057,86 +21625,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="CustomIcon" value="ui_game_symbol_scubaTankEmpty" />
 </item>
 
-<!--JZMOD UNITS-->
-<item name="unit_coal">
-	<property name="Extends" value="unit_iron" />
-	<property name="CustomIcon" value="resourceCoal" />
-	<property name="Material" value="Mforgecoal" />
-	<property name="CreativeMode" value="Dev" />
-</item>
-
-<item name="unit_steel">
-	<property name="Extends" value="unit_iron" />
-	<property name="CustomIcon" value="scrapIron" />
-	<property name="Material" value="Msteel" />
-	<property name="CreativeMode" value="Dev" />
-</item>
-
-<item name="unit_plastic">
-	<property name="Extends" value="unit_iron" />
-	<property name="CustomIcon" value="scrapPlastics" />
-	<property name="Material" value="Mplastics" />
-</item>
-
-<item name="jz_Stick">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mwood" />
-	<property name="Weight" value="1" />
-	<property name="RepairAmount" value="10" />
-	<property name="FuelValue" value="1" />
-	<property name="DescriptionKey" value="stickDesc" />
-    <property name="CustomIcon" value="ui_game_symbol_stick" />
-</item>
-
-<item name="jz_ScrapSteel">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_scrapSteel" />
-	<property name="Material" value="Msteel" />
-	<property name="Weight" value="1" />
-	<property name="MeltTimePerUnit" value="0.5" />
-    <property name="RepairAmount" value="10" />
-</item>
-
-<item name="jz_ScrapRubber">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="scrapRubberDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_scrapRubber" />
-	<property name="CustomIconTint" value="232323" />
-	<property name="Material" value="Mrubber" />
-	<property name="Weight" value="1" />
-</item>
-
-<item name="jz_BioMass">
-	<property name="Extends" value="jz_MasterFood" />
-	<property name="Material" value="MbioMass" />
-	<property name="Weight" value="5" />
-	<property name="Stacknumber" value="5000" />
-	<property name="CustomIcon" value="ui_game_symbol_bioMass" />
-    <property name="DescriptionKey" value="bioMassDesc" />
-	<property class="Action0">
-	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="60"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffIllFoodPoisoning0">
-			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
-		</triggered_effect>
-		<display_value name="FoodPoisoningRisk" value=".5" />
-	</effect_group>
-</item>
-
-<item name="jz_SkillPaper">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="scrapRubberDesc" />
-	<property name="CustomIcon" value="questMaster" />
-	<property name="CustomIconTint" value="232323" />
-	<property name="Material" value="MprofessionPage" />
-	<property name="Weight" value="3" />
-</item>
-
 <!-- JZMOD HUNTING TROPHYS -->
 <item name="jz_TrophyDeer">
 	<property name="Extends" value="jz_MasterFood" />
@@ -21276,6 +21764,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="1" />
 	<property name="Group" value="Resources" />
 </item>
+
 <item name="jz_PartLargeEngineBlock">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_engineBlock" />
@@ -21284,6 +21773,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="1" />
 	<property name="Group" value="Resources" />
 </item>
+
 <item name="jz_PartSmallExhaust">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_engineExhaust" />
@@ -21292,6 +21782,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="1" />
 	<property name="Group" value="Resources" />
 </item>
+
 <item name="jz_PartLargeExhaust">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_engineExhaust" />
@@ -21299,6 +21790,22 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="200" />
 	<property name="Stacknumber" value="1" />
 	<property name="Group" value="Resources" />
+</item>
+
+<item name="jz_Alternator">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="alternatorDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_alternator" />
+</item>
+
+<item name="jz_FanBelt">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mrubber" />
+	<property name="Weight" value="2" />
+	<property name="DescriptionKey" value="fanBeltDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_fanBelt" />
 </item>
 <!--JZMOD MOLDS-->
 <item name="jz_MoldPickAxeHead">
@@ -21407,6 +21914,92 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="Group" value="Science" />
 </item>
 <!--JZMOD OTHER-->
+<item name="jz_Stick">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mwood" />
+	<property name="Weight" value="1" />
+	<property name="RepairAmount" value="10" />
+	<property name="FuelValue" value="1" />
+	<property name="DescriptionKey" value="stickDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_stick" />
+</item>
+
+<item name="jz_ScrapSteel">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="CustomIcon" value="ui_game_symbol_scrapSteel" />
+	<property name="Material" value="Msteel" />
+	<property name="Weight" value="1" />
+	<property name="MeltTimePerUnit" value="0.5" />
+    <property name="RepairAmount" value="10" />
+</item>
+
+<item name="jz_AnimalHide">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="FuelValue" value="1" />
+	<property name="DescriptionKey" value="jz_AnimalHideDesc" />
+</item>
+
+<item name="jz_BrainMatter">
+	<property name="Extends" value="jz_MasterItem" />
+    <property name="CustomIcon" value="ui_game_symbol_brainMatter" />
+	<property name="DescriptionKey" value="jz_BrainMatterDesc" />
+	<property name="Material" value="Mprotein" />
+    <property name="Weight" value="1" />
+</item>
+
+<item name="jz_AnimalSkin">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="curedLeatherDesc" />
+	<property name="CustomIcon" value="leather" />
+	<property name="CustomIconTint" value="edf4b0" />
+</item>
+
+<item name="jz_CuredLeather">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="curedLeatherDesc" />
+	<property name="CustomIcon" value="leather" />
+	<property name="CustomIconTint" value="edf4b0" />
+</item>
+
+<item name="jz_ScrapRubber">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="scrapRubberDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_scrapRubber" />
+	<property name="CustomIconTint" value="232323" />
+	<property name="Material" value="Mrubber" />
+	<property name="Weight" value="1" />
+</item>
+
+<item name="jz_BioMass">
+	<property name="Extends" value="jz_MasterFood" />
+	<property name="Material" value="MbioMass" />
+	<property name="Weight" value="5" />
+	<property name="Stacknumber" value="5000" />
+	<property name="CustomIcon" value="ui_game_symbol_bioMass" />
+    <property name="DescriptionKey" value="bioMassDesc" />
+	<property class="Action0">
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="60"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffIllFoodPoisoning0">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
+		</triggered_effect>
+		<display_value name="FoodPoisoningRisk" value=".5" />
+	</effect_group>
+</item>
+
+<item name="jz_SkillPaper">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="DescriptionKey" value="scrapRubberDesc" />
+	<property name="CustomIcon" value="questMaster" />
+	<property name="CustomIconTint" value="232323" />
+	<property name="Material" value="MprofessionPage" />
+	<property name="Weight" value="3" />
+</item>
 <item name="jz_SteelPipe">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Meshfile" value="Items/Crafting/Metal/shortMetalPipe" />
@@ -21420,39 +22013,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_shortMetalPipe" />
 </item>
 
-<item name="jz_CuredLeather">
-	<property name="Extends" value="jz_MasterItem" />
-    <property name="CustomIcon" value="ui_game_symbol_CuredLeather" />
-	<property name="Material" value="Mplastics" />
-	<property name="DescriptionKey" value="CuredLeatherDesc" />
-</item>
-
 <item name="jz_ScavengedParts">
 	<property name="Extends" value="jz_MasterItem" />
     <property name="CustomIcon" value="ui_game_symbol_ScavengedParts" />
 	<property name="Material" value="Mplastics" />
 	<property name="DescriptionKey" value="ScavengedPartsDesc" />
-</item>
-
-<item name="jz_ZincPowder">
-	<property name="Extends" value="jz_MasterItem" />
-    <property name="CustomIcon" value="ui_game_symbol_CuredLeather" />
-	<property name="Material" value="Mplastics" />
-	<property name="DescriptionKey" value="CuredLeatherDesc" />
-</item>
-
-<item name="jz_GunOil">
-	<property name="Extends" value="jz_MasterItem" />
-    <property name="CustomIcon" value="ui_game_symbol_GunOil" />
-	<property name="Material" value="Mplastics" />
-	<property name="DescriptionKey" value="GunOilDesc" />
-</item>
-
-<item name="jz_HammerHead">
-	<property name="Extends" value="jz_MasterItem" />
-    <property name="CustomIcon" value="ui_game_symbol_HammerHead" />
-	<property name="Material" value="Mplastics" />
-	<property name="DescriptionKey" value="HammerHeadDesc" />
 </item>
 
 <item name="jz_DriedTobacco">
@@ -21469,13 +22034,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DescriptionKey" value="inkPenDesc" />
 </item>
 
-<item name="jz_SkillPaper">
-	<property name="Extends" value="jz_MasterItem" />
-    <property name="CustomIcon" value="ui_game_symbol_ink Pen" />
-	<property name="Material" value="Mplastics" />
-	<property name="DescriptionKey" value="inkPenDesc" />
-</item>
-
 <item name="jz_WeaponRepairKit">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mmetal" />
@@ -21484,22 +22042,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="RepairAmount" value="1000" />
 	<property name="DescriptionKey" value="weaponRepairKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_repairKit" />
-</item>
-
-<item name="jz_BrainMatter">
-	<property name="Extends" value="jz_MasterItem" />
-    <property name="CustomIcon" value="ui_game_symbol_brainMatter" />
-	<property name="DescriptionKey" value="brainMatterDesc" />
-    <property name="Material" value="Mprotein" />
-    <property name="Weight" value="1" />
-</item>
-
-<item name="jz_CuredLeather">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Morganic" />
-	<property name="DescriptionKey" value="curedLeatherDesc" />
-	<property name="CustomIcon" value="leather" />
-	<property name="CustomIconTint" value="edf4b0" />
 </item>
 
 <item name="jz_GunOil">
@@ -21585,22 +22127,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="potassiumNitratePowder" />
 	<property name="DescriptionKey" value="zincPowderDesc" />
-</item>
-
-<item name="jz_Alternator">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="5" />
-	<property name="DescriptionKey" value="alternatorDesc" />
-    <property name="CustomIcon" value="ui_game_symbol_alternator" />
-</item>
-
-<item name="jz_FanBelt">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mrubber" />
-	<property name="Weight" value="2" />
-	<property name="DescriptionKey" value="fanBeltDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_fanBelt" />
 </item>
 
 <item name="jz_NutAndBolt">
@@ -21774,6 +22300,104 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_wheat" />
 </item>
 
+
+<item name="jz_FireWood">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="CustomIcon" value="ui_game_symbol_fireWood" />
+	<property name="DescriptionKey" value="fireWoodDesc" />
+    <property name="Material" value="Mwood" />
+	<property name="FuelValue" value="125" />
+</item>
+
+<item name="jz_ScrapWire">
+	<property name="Meshfile" value="Items/Misc/sackPrefab" />
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
+	<property name="CustomIcon" value="ui_game_symbol_scrapCable" />
+	<property name="Material" value="Mmetal" />
+	<property name="HoldType" value="45" />
+	<property name="Stacknumber" value="5000" />
+	<property name="Weight" value="5" />
+	<property name="RepairTime" value="20" />
+	<property name="RepairAmount" value="1000" />
+	<property name="Group" value="Resources" />
+</item>
+
+<item name="Molds">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="CustomIcon" value="ui_game_symbol_mold" />
+</item>
+
+<item name="tools">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="CustomIcon" value="ui_game_symbol_steelTools" />
+</item>
+
+<item name="cookingUtensils">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="CustomIcon" value="ui_game_symbol_cookingUtensils" />
+</item>
+
+<item name="jz_MoldyFruit">
+	<property name="Extends" value="foodShamSandwich" />
+	<property name="Weight" value="1" />
+	<property name="CustomIcon" value="ui_game_symbol_moldyFruit" />
+</item>
+
+<item name="jz_MoldyVeggies">
+	<property name="Extends" value="foodShamSandwich" />
+	<property name="Weight" value="1" />
+	<property name="CustomIcon" value="ui_game_symbol_moldyVeggies" />
+</item>
+
+<item name="jz_Charcoal">
+	<property name="Extends" value="resourceCoal" />
+	<property name="FuelValue" value="100" />
+	<property name="CustomIcon" value="ui_game_symbol_charcoal" />
+</item>
+
+<item name="jz_SteelOre">
+    <property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Msteel" />
+	<property name="Stacknumber" value="5000" />
+	<property name="Weight" value="10" />
+    <property name="CustomIcon" value="ui_game_symbol_steelOre" />
+</item>
+
+<item name="jz_HandSaw">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="CustomIcon" value="ui_game_symbol_circularSaw" />
+	<property name="DescriptionKey" value="handSawDesc" />
+	<property name="Group" value="Books" />
+</item>
+
+<item name="jz_SledgeHead">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="100" />
+	<property name="DescriptionKey" value="ironSledgeHeadDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_ironSledgeHead" />
+</item>
+
+<item name="jz_Plank">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mwood" />
+	<property name="Weight" value="4" />
+	<property name="Stacknumber" value="5000" />
+	<property name="FuelValue" value="3" />
+	<property name="CustomIcon" value="ui_game_symbol_plank" />
+	<property name="DescriptionKey" value="plankDesc" />
+</item>
+
+<item name="jz_PaperBook">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="HoldType" value="21"/>
+	<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mpaper"/>
+	<property name="FuelValue" value="2"/>
+	<property name="Weight" value="2"/>
+</item>
+<!-- JZMOD JUNK -->
 <item name="jz_IronSoldier">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_ironSoldier" />
@@ -22169,54 +22793,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="2" />
 </item>
 
-<item name="jz_FireWood">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_fireWood" />
-	<property name="DescriptionKey" value="fireWoodDesc" />
-    <property name="Material" value="Mwood" />
-	<property name="FuelValue" value="125" />
-</item>
-
-<item name="jz_ScrapWire">
-	<property name="Meshfile" value="Items/Misc/sackPrefab" />
-	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab" />
-	<property name="CustomIcon" value="ui_game_symbol_scrapCable" />
-	<property name="Material" value="Mmetal" />
-	<property name="HoldType" value="45" />
-	<property name="Stacknumber" value="5000" />
-	<property name="Weight" value="5" />
-	<property name="RepairTime" value="20" />
-	<property name="RepairAmount" value="1000" />
-	<property name="Group" value="Resources" />
-</item>
-
-<item name="Molds">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_mold" />
-</item>
-
-<item name="tools">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_steelTools" />
-</item>
-
-<item name="cookingUtensils">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_cookingUtensils" />
-</item>
-
-<item name="jz_MoldyFruit">
-	<property name="Extends" value="foodShamSandwich" />
-	<property name="Weight" value="1" />
-	<property name="CustomIcon" value="ui_game_symbol_moldyFruit" />
-</item>
-
-<item name="jz_MoldyVeggies">
-	<property name="Extends" value="foodShamSandwich" />
-	<property name="Weight" value="1" />
-	<property name="CustomIcon" value="ui_game_symbol_moldyVeggies" />
-</item>
-
 <item name="jz_PlasticCondom">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mrubber" />
@@ -22388,35 +22964,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="1" />
 </item>
 
-<item name="jz_Charcoal">
-	<property name="Extends" value="resourceCoal" />
-	<property name="FuelValue" value="100" />
-	<property name="CustomIcon" value="ui_game_symbol_charcoal" />
-</item>
-
-<item name="jz_SteelOre">
-    <property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Msteel" />
-	<property name="Stacknumber" value="5000" />
-	<property name="Weight" value="10" />
-    <property name="CustomIcon" value="ui_game_symbol_steelOre" />
-</item>
-
-<item name="jz_HandSaw">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_circularSaw" />
-	<property name="DescriptionKey" value="handSawDesc" />
-	<property name="Group" value="Books" />
-</item>
-
-<item name="jz_SledgeHead">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="100" />
-	<property name="DescriptionKey" value="ironSledgeHeadDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_ironSledgeHead" />
-</item>
-
 <item name="jz_BarterForGoldenrodTea">
     <property name="Extends" value="questMaster" />
 	<property name="DescriptionKey" value="barterForGoldenrodTeaDesc" />
@@ -22497,250 +23044,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<property name="QuestGiven" value="q_barterForFirstAidKit" />
 	</property>
 </item>
-<item name="jz_Plank">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mwood" />
-	<property name="Weight" value="4" />
-	<property name="Stacknumber" value="5000" />
-	<property name="FuelValue" value="3" />
-	<property name="CustomIcon" value="ui_game_symbol_plank" />
-	<property name="DescriptionKey" value="plankDesc" />
-</item>
-<item name="jz_MasonHammer"> 
-	<property name="Tags" value="blunt,melee,grunting,light,tool,canHaveCosmetic,jz_StoneBuildingTag"/>
-	<property name="DisplayType" value="melee"/>
-	<property name="HoldType" value="29"/>
-	<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="CustomIcon" value="ui_game_symbol_stoneHammer" />
-	<property name="RepairTools" value="resourceRepairKit"/>
-	<property name="DegradationBreaksAfter" value="false"/>
-	<property name="SoundJammed" value="ItemNeedsRepair"/>
-	<property name="SoundDestroy" value="metaldestroy"/>
-	<property name="EconomicValue" value="350"/>
-	<property name="UnlockedBy" value="meleeToolWrenchSchematic"/>
-	<property name="ShowQuality" value="true"/>
-	<property class="Action0">
-		<property name="Class" value="DynamicMelee"/>
-		<property name="Sound_start" value="swoosh"/>
-		<property name="ToolCategory.ToolMasonHammer" value="1" param1="1"/>
-		<property name="Sound_harvesting" value="wrench_harvest"/>
-		<property name="Particle_harvesting" value="true" param1="metal"/>
-
-		<property name="UseGrazingHits" value="true"/>
-		<property name="GrazeStart" value=".25"/>
-		<property name="GrazeEnd" value=".3"/>
-		<property name="SwingDegrees" value="50"/>
-		<property name="SwingAngle" value="180"/>
-	</property>
-	<property class="Action1"> 
-		<property name="Class" value="Repair"/>
-		<property name="Delay" value=".64"/>
-		<property name="Repair_amount" value="400"/>
-		<property name="Upgrade_hit_offset" value="-2"/>
-		<property name="Sound_start" value="repair_block"/>
-		<property name="Allowed_upgrade_items" value="resourceCobblestones,jz_Bricks"/>
-		<property name="UsePowerAttackAnimation" value="false"/>
-	</property>
-	
-	<effect_group name="MasonHammer">
-		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
-		<passive_effect name="BlockRange" operation="base_set" value="3"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="18"/> <!-- meleeToolWrench -->
-		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
-		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
-
-		<passive_effect name="BlockDamage" operation="base_set" value="38.5"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
-		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
-
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
-
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
-		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="salvageHarvest"/>
-		<passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="200,682" tier="1,6" tags="perkSalvageOperations"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSalvageOperations"/>
-		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
-		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
-	</effect_group>
-	<effect_group name="Power Attack">
-		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="StaminaLoss" operation="base_add" value="25.2" tags="secondary"/>
-	</effect_group>
-	<property name="Group" value="Tools/Traps"/>
-	<property name="RepairExpMultiplier" value="5.5"/>
-</item>
-<item name="jz_ConcreteSledge"> 
-	<property name="Tags" value="blunt,melee,grunting,light,tool,canHaveCosmetic,jz_ConcreteBuildingTag"/>
-	<property name="DisplayType" value="melee"/>
-	<property name="HoldType" value="29"/>
-	<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="RepairTools" value="resourceRepairKit"/>
-	<property name="DegradationBreaksAfter" value="false"/>
-	<property name="SoundJammed" value="ItemNeedsRepair"/>
-	<property name="SoundDestroy" value="metaldestroy"/>
-	<property name="EconomicValue" value="350"/>
-	<property name="UnlockedBy" value="meleeToolWrenchSchematic"/>
-	<property name="ShowQuality" value="true"/>
-	<property class="Action0">
-		<property name="Class" value="DynamicMelee"/>
-		<property name="Sound_start" value="swoosh"/>
-		<property name="ToolCategory.ToolSledge" value="1" param1="1"/>
-		<property name="Sound_harvesting" value="wrench_harvest"/>
-		<property name="Particle_harvesting" value="true" param1="metal"/>
-
-		<property name="UseGrazingHits" value="true"/>
-		<property name="GrazeStart" value=".25"/>
-		<property name="GrazeEnd" value=".3"/>
-		<property name="SwingDegrees" value="50"/>
-		<property name="SwingAngle" value="180"/>
-	</property>
-	<property class="Action1"> 
-		<property name="Class" value="Repair"/>
-		<property name="Delay" value=".64"/>
-		<property name="Repair_amount" value="400"/>
-		<property name="Upgrade_hit_offset" value="-2"/>
-		<property name="Sound_start" value="repair_block"/>
-		<property name="Allowed_upgrade_items" value="resourceConcreteMix"/>
-		<property name="UsePowerAttackAnimation" value="false"/>
-	</property>
-	
-	<effect_group name="ConcreteSledge">
-		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
-		<passive_effect name="BlockRange" operation="base_set" value="3"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="18"/> <!-- meleeToolWrench -->
-		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
-		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
-
-		<passive_effect name="BlockDamage" operation="base_set" value="38.5"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
-		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
-
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
-
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
-		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="salvageHarvest"/>
-		<passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="200,682" tier="1,6" tags="perkSalvageOperations"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSalvageOperations"/>
-		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
-		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
-	</effect_group>
-	<effect_group name="Power Attack">
-		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="StaminaLoss" operation="base_add" value="25.2" tags="secondary"/>
-	</effect_group>
-	<property name="Group" value="Tools/Traps"/>
-	<property name="RepairExpMultiplier" value="5.5"/>
-</item>
-
-<item name="jz_DrinkDirtyOuncesOfWater">
-	<property name="HoldType" value="3"/>
-	<property name="DisplayType" value="waterDysentery"/>
-	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mglass"/>
-	<property name="Stacknumber" value="128"/>
-	<property name="EconomicValue" value="0"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="SellableToTrader" value="false"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="0"/>
-		<property name="Sound_start" value="player_drinking"/>
-	</property>
-	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
-
-	<effect_group tiered="false">
-		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/><display_value name="dDysenteryRisk" value=".12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
-			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-		</triggered_effect>
-	</effect_group>
-
-	<effect_group tiered="false">
-		<requirement name="HasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
-	</effect_group>
-</item>
-<item name="jz_DrinkDrityDrinkOfWater">
-	<property name="Extends" value="jz_DrinkDirtyOuncesOfWater" />
-	<property name="Stacknumber" value="1"/> 
-	<effect_group tiered="false">
-		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/><display_value name="dDysenteryRisk" value=".12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
-			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
-		</triggered_effect>
-	</effect_group>
-
-	<effect_group tiered="false">
-		<requirement name="HasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
-	</effect_group>
-</item>
-
-<item name="jz_DrinkCleanOuncesOfWater">
-	<property name="HoldType" value="3"/>
-	<property name="DisplayType" value="waterDysentery"/>
-	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mglass"/>
-	<property name="Stacknumber" value="128"/> 
-	<property name="EconomicValue" value="40"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="player_drinking"/>
-	</property>
-	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
-	<effect_group tiered="false">
-		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<requirement name="HasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
-	</effect_group>
-</item>
-
-<item name="jz_DrinkCleanDrinkOfWater">
-	<property name="Extends" value="jz_DrinkDirtyOuncesOfWater" />
-	<property name="Stacknumber" value="1"/> 
-	<effect_group tiered="false">
-		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-	</effect_group>
-
-	<effect_group tiered="false">
-		<requirement name="HasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
-	</effect_group>
-</item>
 
 <item name="jz_FoodTestItem1">
 	<property name="Extends" value="jz_MasterFood" />
@@ -22761,13 +23064,4 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 </item>
 
-<item name="jz_PaperBook">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="HoldType" value="21"/>
-	<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mpaper"/>
-	<property name="FuelValue" value="2"/>
-	<property name="Weight" value="2"/>
-</item>
 </items> <!-- Item limit: There can be 32k items in the game. IDs are generated internally on loading the game/items. -->
