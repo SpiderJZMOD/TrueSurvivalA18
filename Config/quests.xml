@@ -1745,7 +1745,7 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClocthArmorInspection" />
+			<property name="item" value="jz_ClothArmorInspection" />
 			<property name="count" value="3" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_ClothArmorCrafting" value="1" />
@@ -1761,7 +1761,7 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClocthArmorInspection" />
+			<property name="item" value="jz_ClothArmorInspection" />
 			<property name="count" value="3" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_ClothArmorCrafting" value="1" />
@@ -1777,7 +1777,7 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClocthArmorInspection" />
+			<property name="item" value="jz_ClothArmorInspection" />
 			<property name="count" value="3" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_ClothArmorCrafting" value="1" />
@@ -1793,7 +1793,7 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClocthArmorInspection" />
+			<property name="item" value="jz_ClothArmorInspection" />
 			<property name="count" value="3" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_ClothArmorCrafting" value="1" />
@@ -1809,7 +1809,7 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClocthArmorInspection" />
+			<property name="item" value="jz_ClothArmorInspection" />
 			<property name="count" value="3" /><!--250-->
 		</objective>
 		<reward type="Quest" id="jzquest_ClothArmorCraftingLv5Pt2" />
@@ -1824,7 +1824,7 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClocthArmorInspection" />
+			<property name="item" value="jz_ClothArmorInspection" />
 			<property name="count" value="3" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_ClothArmorCrafting" value="1" />		
@@ -7632,6 +7632,73 @@
 			<!-- <reward type="Quest" id="quest_tier6complete" /> -->
 		<!-- </quest_tier_reward> -->
 	</quest_tier_rewards>
-
+<!--JZMOD PROFESSION QUEST CHAINS-->
+	<!--Doctor-->
+	<quest id="StartDoctor" name_key="challenge_Profession" subtitle_key="Doctors Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Doctor" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+	</quest>
+	<!--Carpenter-->
+	<quest id="StartCarpenter" name_key="challenge_Profession" subtitle_key="Carpenters Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Carpenter" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="meleeToolClawHammer" value="300" />
+	</quest>
+	<!--Cop-->
+	<quest id="StartCop" name_key="challenge_Profession" subtitle_key="Cops Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Cop" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="jz_OldRevolver" value="600" />
+	</quest>
+	<!--Soldier-->
+	<quest id="StartSoldier" name_key="challenge_Profession" subtitle_key="Soldiers Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Soldier" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="jz_OldRifle" value="600" />
+	</quest>
+	<!--Scientist-->
+	<quest id="StartScientist" name_key="challenge_Profession" subtitle_key="Chemists Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Chemist" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">	
+    </quest>
+	<quest id="challenge_Scientist" name_key="challenge_Profession" subtitle_key="challenge_Scientist_subtitle" description_key="challenge_Scientist_offer" icon="ui_game_symbol_Chemist" repeatable="false" category_key="challenge" offer_key="challenge_Scientist_offer" difficulty="easy">
+		<objective type="Craft" id="purificationTablets" value="10" />
+		<reward type="Exp" value="400" />
+		<reward type="SkillPoints" value="1" />
+	</quest>
+	<!--Chef-->
+	<quest id="StartChef" name_key="challenge_Profession" subtitle_key="Chefs Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Chef" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="jz_OldKnife" value="600" />
+	</quest>
+	<!--Fitness Instructor-->
+	<quest id="StartFitness" name_key="challenge_Profession" subtitle_key="Fitness Instructors Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Fitness" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="meleeClubBaseballBat" value="300" />
+	</quest>
+	<!--Fireman-->
+	<quest id="StartFireman" name_key="challenge_Profession" subtitle_key="Firemans Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Fireman" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="jz_OldAxe" value="600" />
+	</quest>
+	<!--Iron Worker-->
+	<quest id="StartIronWorker" name_key="challenge_Profession" subtitle_key="Construction Workers Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Construction" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="meleeToolWrench" value="300" />
+	</quest>
+	<!--Electrician-->
+	<quest id="StartElectrician" name_key="challenge_Profession" subtitle_key="Electriciana Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Electrician" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="jz_Screwdriver" value="300" />
+	</quest>
+	<!--Welder-->
+	<quest id="StartSteelWelder" name_key="challenge_Profession" subtitle_key="Metal Workers Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Metal" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="welderTool" value="300" />
+	</quest>
+	<!--Burglar-->
+	<quest id="StartThief" name_key="challenge_Profession" subtitle_key="Burglars Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Burglar" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="jz_OldKnife" value="600" />
+	</quest>
+	<!--Park Ranger-->
+	<quest id="StartRanger" name_key="challenge_Profession" subtitle_key="Park Rangers Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Ranger" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="jz_OldRifle" value="600" />
+	</quest>
+	<!--Mechanic-->
+	<quest id="StartMechanic" name_key="challenge_Profession" subtitle_key="Mechanics Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Mechanic" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="jz_Screwdriver" value="600" />
+	</quest>
+	<!--Bouncer-->
+	<quest id="StartBouncer" name_key="challenge_Profession" subtitle_key="Bouncer Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Mechanic" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="brassKnuckles" value="300" />
+	</quest>
+	<!--Mason-->
+	<quest id="StartMason" name_key="challenge_Profession" subtitle_key="Mason Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Mechanic" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
+		<reward type="Item" id="brickHammer" value="300" />
+	</quest>
 
 </quests>

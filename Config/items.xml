@@ -12238,13 +12238,13 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="drinkYuccaJuiceSmoothieSchematic">
+<item name="drinkFruitJuiceSmoothieSchematic">
 	<property name="Extends" value="schematicNoQualityRecipeMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="drinkYuccaJuiceSmoothie"/>
-	<property name="Unlocks" value="drinkYuccaJuiceSmoothie"/>
+	<property name="Unlocks" value="drinkFruitJuiceSmoothie"/>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkYuccaJuiceSmoothie" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkFruitJuiceSmoothie" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -16632,7 +16632,8 @@ perkNightStalkerSilentNight
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_FireFighter" level="-1"/>
 	</effect_group>
-</item>
+</item> 
+
 <item name="jz_ProfessionPoliceOfficer">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_CopProfessionDesc"/>
@@ -16643,6 +16644,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_PoliceOfficer" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionParkRanger">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_ParkRangerProfessionDesc"/>
@@ -16653,6 +16655,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_ParkRanger" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionBouncer">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_BouncerProfessionDesc"/>
@@ -16663,6 +16666,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_Bouncer" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionChef">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_ChefProfessionDesc"/>
@@ -16673,6 +16677,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_Chef" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionBurglar">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_ThiefProfessionDesc"/>
@@ -16684,6 +16689,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="PerkLevel" operation="base_add" value="1" tags="jz_Burglar" />
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionCarpenter">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_CarpenterProfessionDesc"/>
@@ -16694,6 +16700,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_Carpenter" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionMason">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_MasonProfessionDesc"/>
@@ -16704,6 +16711,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_Mason" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionSoldier">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_SoldierProfessionDesc"/>
@@ -16714,6 +16722,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_Soldier" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionFitnessInstructor">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_FitnessInstructorProfessionDesc"/>
@@ -16724,6 +16733,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_FitnessInstructor" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionElectrician">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_ElectricianProfessionDesc"/>
@@ -16734,6 +16744,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_Electrician" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionMetalWorker">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_MetalWorkerProfessionDesc"/>
@@ -16744,6 +16755,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_MetalWorker" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionMechanic">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_MechanicProfessionDesc"/>
@@ -16754,6 +16766,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_Mechanic" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionDoctor">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_DoctorProfessionDesc"/>
@@ -16764,6 +16777,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_Doctor" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionFarmer">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_BouncerProfessionDesc"/>
@@ -16774,6 +16788,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_Farmer" level="-1"/>
 	</effect_group>
 </item>
+
 <item name="jz_ProfessionChemist">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_ChemistProfessionDesc"/>
@@ -16783,6 +16798,141 @@ perkNightStalkerSilentNight
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_Chemist" level="-1"/>
 	</effect_group>
+</item>
+<!-- JZMOD PROFESSION QUEST -->
+<item name="qc_Doctor">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartDoctor" />
+	</property>
+</item>
+
+<item name="qc_Carpenter">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartCarpenter" />
+	</property>
+</item>
+
+<item name="qc_Cop">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartCop" />
+	</property>
+</item>
+
+<item name="qc_Soldier">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartSoldier" />
+	</property>
+</item>
+
+<item name="qc_Bouncer">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartBouncer" />
+	</property>
+</item>
+
+<item name="qc_Chef">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartChef" />
+	</property>
+</item>
+
+<item name="qc_FitnessInstructor">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartFitness" />
+	</property>
+</item>
+
+<item name="qc_IronWorker">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartIronWorker" />
+	</property>
+</item>
+
+<item name="qc_Electrician">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartElectrician" />
+	</property>
+</item>
+
+<item name="qc_Thief">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartThief" />
+	</property>
+</item>
+
+<item name="qc_ParkRanger">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartRanger" />
+	</property>
+</item>
+
+<item name="qc_Mechanic">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartMechanic" />
+	</property>
+</item>
+
+<item name="qc_Fireman">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartFireman" />
+	</property>
+</item>
+
+<item name="qc_Chemist">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartScientist" />
+	</property>
+</item>
+
+<item name="qc_Mason">
+	<property name="Extends" value="challengeQuestMaster" />
+	<property name="CustomIcon" value="challengeQuestMaster"/>
+	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
+	<property class="Action1">
+		<property name="QuestGiven" value="StartMason" />
+	</property>
 </item>
 <!--JZMOD NEGATIVE TRAITS-->
 <item name="jz_NegativeTraitSlowDriver">
@@ -17208,7 +17358,7 @@ perkNightStalkerSilentNight
 <item name="jz_TatteredShoes">
 	<property name="Tags" value="lowerbody,feet,clothing"/>
 	<property name="DisplayType" value="clothing"/>
-	<property name="CustomIcon" value="apparelRunningShoesHP" />
+	<property name="CustomIcon" value="apparelRunningShoesRegular" />
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mcloth"/>
@@ -18512,7 +18662,7 @@ perkNightStalkerSilentNight
 	<property name="FuelValue" value="1" />
 	<property name="Weight" value="5" />
 	<property class="Action0">
-		<property name="Create_item" value="emptyJar" />
+		<property name="Create_item" value="drinkJarEmpty" />
 	</property>
 	<effect_group tiered="false" name="JZMOD WOUND SYSTEM">
 		<!-- SMALL WOUND -->
@@ -18580,7 +18730,7 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="antiVenomDesc" />
 	<property name="Stacknumber" value="15" />
 	<property class="Action0">
-		<property name="Create_item" value="emptyJar" />
+		<property name="Create_item" value="drinkJarEmpty" />
 		<property name="Sound_start" value="UseActions/player_drinking" />
 	</property>
 	<effect_group tiered="false">
@@ -19983,14 +20133,14 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Dev"/> <!-- not done, yet -->
 </item>
 
-<item name="drinkYuccaJuiceSmoothie"> 
+<item name="drinkFruitJuiceSmoothie"> 
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="drinkYuccaSmoothie"/>
 	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Stacknumber" value="10"/> 
-	<property name="UnlockedBy" value="drinkYuccaJuiceSmoothieSchematic"/>
+	<property name="UnlockedBy" value="drinkFruitJuiceSmoothieSchematic"/>
 	<property class="Action0">
 		<property name="Sound_start" value="player_drinking"/>
 		<property name="Buff" value="buffYuccaJuiceCooling,buffExtinguishFireBuff"/>
@@ -21808,6 +21958,15 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_fanBelt" />
 </item>
 <!--JZMOD MOLDS-->
+<item name="jz_MoldCrowbar">
+    <property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="MresourceClayLump" />
+	<property name="HoldType" value="45" />
+	<property name="Stacknumber" value="1" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_MoldCrowbar" />
+    <property name="Group" value="Science" />
+</item>
+
 <item name="jz_MoldPickAxeHead">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
@@ -21897,6 +22056,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="CustomIcon" value="ui_game_symbol_axeHeadMold" />
     <property name="Group" value="Science" />
 </item>
+
 <item name="jz_MoldSmallEngineBlock">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
@@ -21905,6 +22065,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="CustomIcon" value="ui_game_symbol_smallEngineMold" />
     <property name="Group" value="Science" />
 </item>
+
 <item name="jz_MoldLargeEngineBlock">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
@@ -21913,7 +22074,105 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="CustomIcon" value="ui_game_symbol_mediumEngineMold" />
     <property name="Group" value="Science" />
 </item>
+
+<item name="jz_MoldDart">
+    <property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="MresourceClayLump" />
+	<property name="HoldType" value="45" />
+	<property name="Stacknumber" value="1" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_MoldDart" />
+	<property name="DescriptionKey" value="jz_MoldDartDesc" />
+    <property name="Group" value="Science" />
+</item>
 <!--JZMOD OTHER-->
+<item name="jz_SmallLoom">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="50" />
+	<property name="DescriptionKey" value="jz_SmallLoomDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_SmallLoom" />
+</item>
+
+<item name="jz_Still">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="50" />
+	<property name="DescriptionKey" value="jz_StillDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_Still" />
+</item>
+
+<item name="jz_Tallow">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Morganic" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_TallowDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_Tallow" />
+</item>
+
+<item name="jz_LabEquipment">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mglass" />
+	<property name="Weight" value="20" />
+	<property name="DescriptionKey" value="jz_LabEquipmentDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_LabEquipment" />
+</item>
+
+<item name="jz_BulletPress">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+	<property name="DescriptionKey" value="jz_BulletPressDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_BulletPress" />
+</item>
+
+<item name="jz_BulletPress">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+	<property name="DescriptionKey" value="jz_BulletPressDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_BulletPress" />
+</item>
+
+<item name="jz_PartsAugerBit">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="10" />
+	<property name="DescriptionKey" value="jz_PartsAugerBitDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsAugerBit" />
+</item>
+
+<item name="jz_PartsAugerHousing">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+	<property name="DescriptionKey" value="jz_PartsAugerHousingDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jjz_PartsAugerHousing" />
+</item>
+
+<item name="jz_PartsChainsawBlade">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_PartsChainsawBladeDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsChainsawBlade" />
+</item>
+
+<item name="jz_PartsChainsawHousing">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+	<property name="DescriptionKey" value="jz_PartsChainsawHousingDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_PartsChainsawHousing" />
+</item>
+
+<item name="jz_GunTools">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
+	<property name="DescriptionKey" value="jz_GunToolsDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_GunTools" />
+</item>
+
 <item name="jz_Stick">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mwood" />
@@ -22963,6 +23222,385 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_ironScissors" />
 	<property name="Weight" value="1" />
 </item>
+<!-- JZMOD SCHEMATICS -->
+<item name="jz_SchematicMolotovCocktail">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_MolotovCocktailSchematic"/>
+	<property name="Unlocks" value="thrownAmmoMolotovCocktail"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="thrownAmmoMolotovCocktail" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicBlunderbuss">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_BlunderbussSchematic"/>
+	<property name="Unlocks" value="gunBlunderbuss"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunBlunderbuss" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicFruitJuice">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicFruitJuice"/>
+	<property name="Unlocks" value="jz_DrinkFruitJuice"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_DrinkFruitJuice" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicKabobs">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicKabobs"/>
+	<property name="Unlocks" value="jz_FoodKabobSmall"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodKabobSmall" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodKabobMedium" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodKabobLarge" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicMeatPies">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicMeatPies"/>
+	<property name="Unlocks" value="jz_FoodMeatPieSmall"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodMeatPieSmall" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodMeatPieMedium" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodMeatPieLarge" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicGlazedMeats">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicGlazedMeats"/>
+	<property name="Unlocks" value="jz_FoodGlazedMeatSmall"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodGlazedMeatSmall" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodGlazedMeatMedium" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodGlazedMeatLarge" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicFriedEggOmelet">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicFriedEggOmelet"/>
+	<property name="Unlocks" value="jz_FoodFriedEggOmelet"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodFriedEggOmelet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicBread">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicBread"/>
+	<property name="Unlocks" value="jz_FoodBread"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodBread" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicMead">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicMead"/>
+	<property name="Unlocks" value="jz_DrinkMead"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_DrinkMead" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicGoodMeals">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicGoodMeals"/>
+	<property name="Unlocks" value="jz_FoodGoodMealMediumFG"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodGoodMealMediumFG" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodGoodMealMediumVG" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodGoodMealMediumVF" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodGoodMealLargeFG" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodGoodMealLargeVG" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodGoodMealLargeVF" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicGrainAlcohol">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicGrainAlcohol"/>
+	<property name="Unlocks" value="drinkJarGrainAlcohol"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_DrinkFruitJuice" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicWellnessJuice">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicWellnessJuice"/>
+	<property name="Unlocks" value="jz_DrinkWellnessJuice"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_DrinkWellnessJuice" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicHealthyMeals">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicHealthyMeals"/>
+	<property name="Unlocks" value="jz_FoodHealthyMealMedium"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodHealthyMealMedium" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodHealthyMealLarge" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicApplePie">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicApplePie"/>
+	<property name="Unlocks" value="jz_FoodApplePie"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodApplePie" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCarrotCake">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicCarrotCake"/>
+	<property name="Unlocks" value="jz_FoodCarrotCake"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodCarrotCake" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicBrainShnitzel">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicBrainShnitzel"/>
+	<property name="Unlocks" value="jz_FoodBrainShnitzel"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodBrainShnitzel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_FoodVenisonSteakAndPotato">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_FoodVenisonSteakAndPotato"/>
+	<property name="Unlocks" value="jz_FoodVenisonSteakAndPotato"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodVenisonSteakAndPotato" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCraftedRevolver">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicCraftedRevolver"/>
+	<property name="Unlocks" value="jz_CraftedRevolver"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_CraftedRevolver" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRevolverBarrel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsOldRevolverCylinder" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRevolverStock" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_BasicGunParts" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCraftedRifle">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_FoodVenisonSteakAndPotato"/>
+	<property name="Unlocks" value="jz_CraftedRifle"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_CraftedRifle" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRifleRreceiver" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRifleStock" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRifleBarrel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_BasicGunParts" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCraftedRifle">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_FoodVenisonSteakAndPotato"/>
+	<property name="Unlocks" value="jz_CraftedRifle"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_CraftedRifle" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRifleRreceiver" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRifleStock" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRifleBarrel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_BasicGunParts" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicIronPickaxe">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicIronPickaxe"/>
+	<property name="Unlocks" value="meleeToolPickaxeIron"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolPickaxeIron" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicIronFireaxe">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicIronFireaxe"/>
+	<property name="Unlocks" value="meleeToolFireaxeIron"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolFireaxeIron" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicIronShovel">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicIronShovel"/>
+	<property name="Unlocks" value="meleeToolShovelIron"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolShovelIron" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicClawHammer">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicClawHammer"/>
+	<property name="Unlocks" value="meleeToolClawHammer"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolClawHammer" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicSteelPickaxe">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicSteelPickaxe"/>
+	<property name="Unlocks" value="meleeToolPickaxeSteel"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolPickaxeSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicSteelFireaxe">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicSteelFireaxe"/>
+	<property name="Unlocks" value="meleeToolFireaxeSteel"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolFireaxeSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicSteelShovel">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicSteelShovel"/>
+	<property name="Unlocks" value="meleeToolShovelSteel"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolShovelSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_LargeEngine">
+	<property name="HoldType" value="45"/>
+	<property name="Tags" value="junk"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MsmallEngine"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="200"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="Group" value="Resources"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property class="Attributes">
+		<property name="DegradationMax" value="1000,6000"/> <!-- needed for electrical calculations -->
+		<property name="VehicleNoise" value="1,.1"/>
+		<property name="VehicleMaxSpeed" value="5,18"/>
+		<property name="VehicleAcceleration" value="7,14"/>
+		<property name="VehicleMetersPerLiter" value="8,12"/>
+		<property name="VehicleIdleSecondsPerLiter" value="6,12"/>
+		<property name="VehicleStartDelayInSeconds" value="1,.1"/>
+		<property name="VehicleStartChance" value=".5,.99"/>
+		<property name="VehicleTankSize" value="1000, 2000"/>
+		<property name="VehicleFuelItem" value="ammoGasCan"/>
+	</property>
+</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <item name="jz_BarterForGoldenrodTea">
     <property name="Extends" value="questMaster" />

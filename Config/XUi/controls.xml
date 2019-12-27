@@ -673,7 +673,7 @@
 			
 			<sprite name="itemIcon" depth="4" width="50" height="50" atlas="{partatlas}" sprite="{particon}" pos="330,-30" pivot="center" color="{particoncolor}" foregroundlayer="true" />
 			
-			<label depth="4" pos="16,-16" width="350" height="28" text="EMPTY MODIFIER SLOT" font_size="26" justify="center" visible="{emptyvisible}" />
+			<label depth="4" pos="16,-16" width="350" height="28" text="EMPTY MODIFIER SLOT" text_key="xuiEmptyModifierSlot" font_size="26" justify="center" visible="{emptyvisible}" />
 		</rect>
 	</vehicle_part_slot>
 	
@@ -690,7 +690,7 @@
 			
 			<sprite name="itemIcon" depth="4" width="50" height="50" atlas="{partatlas}" sprite="{particon}" color="{particoncolor}" visible="{partvisible}" pos="330,-30" pivot="center" foregroundlayer="true" />
 			
-			<label depth="4" pos="16,-16" width="350" height="28" text="EMPTY MODIFIER SLOT" font_size="26" justify="center" visible="{emptyvisible}" />
+			<label depth="4" pos="16,-16" width="350" height="28" text="EMPTY MODIFIER SLOT" text_key="xuiEmptyModifierSlot" font_size="26" justify="center" visible="{emptyvisible}" />
 		</rect>
 	</item_part_slot>
 	
@@ -707,7 +707,7 @@
 			
 			<sprite name="itemIcon" depth="4" width="50" height="50" atlas="{partatlas}" sprite="{particon}" color="{particoncolor}" visible="{partvisible}" pos="330,-30" pivot="center" foregroundlayer="true" />
 			
-			<label depth="4" pos="16,-16" width="350" height="28" text="EMPTY COSMETIC SLOT" font_size="26" justify="center" visible="{emptyvisible}" />
+			<label depth="4" pos="16,-16" width="350" height="28" text="EMPTY COSMETIC SLOT" text_key="xuiEmptyCosmeticSlot" font_size="26" justify="center" visible="{emptyvisible}" />
 		</rect>
 	</item_part_slot_cosmetic>
 	
@@ -1041,7 +1041,7 @@
 			<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="-3,3" width="78" height="78" color="[black]" type="sliced" fillcenter="false" />	
 			<sprite depth="3" name="background" sprite="menu_empty3px" width="73" height="73" color="[darkGrey]" type="sliced" globalopacity="true" fillcenter="false"/>
 			<sprite depth="2" name="highlightOverlay" width="72" height="72" color="[darkGrey]" pos="0,0" type="sliced" globalopacity="true"/>
-			<sprite depth="4" name="itemIcon" width="64" height="64" atlas="ItemIconAtlas" sprite="{itemicon}" pos="35,-35" pivot="center" foregroundlayer="true"/>
+			<sprite depth="4" name="itemIcon" width="64" height="64" atlas="ItemIconAtlas" sprite="{itemicon}" color="{itemicontint}" pos="35,-35" pivot="center" foregroundlayer="true"/>
 			
 			<!-- <label depth="7" name="stackValue" pos="0,-48" width="70" height="28" text="Test" effect="outline" font_size="26" justify="center"/> -->
 			<!--#$-IGS BEGIN: Setting itemName above the soft cursor. -$#-->

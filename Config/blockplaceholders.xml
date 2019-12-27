@@ -245,27 +245,6 @@
 		<block name="cntFoodPileMedium" prob=".1"/>
 	</placeholder>
 
-		<!-- <block name="cntChest01" prob="1"/> -->
-		<!-- <block name="cntDeskSafe" prob="1"/> -->
-		<!--
-		<block name="cntBackpack01" prob="1"/>
-		<block name="cntBackpack03" prob="1"/>
-		<block name="cntDuffle01" prob="1"/>
-		<block name="cntSportsBag01" prob="1"/>
-		<block name="cntSportsBag02" prob="1"/>
-		-->
-
-
-	<!-- Random stone/resource -->
-	<placeholder name="terrStoneRandomLootHelper">
-		<block name="terrStone" prob="80"/>
-		<block name="terrOreIron" prob="12"/>
-		<block name="terrOreCoal" prob="2.5"/>
-		<block name="terrOrePotassiumNitrate" prob="2.5"/>
-		<block name="terrOreLead" prob="2.5"/>
-		<block name="terrOreSilver" prob="0.5"/>
-	</placeholder>
-
 	<!-- stone terrain block tailired to biomes -->
 	<placeholder name="terrStoneHelper">
 		<block name="terrSnowyStone" biome="snow"/>

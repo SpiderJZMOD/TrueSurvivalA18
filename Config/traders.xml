@@ -596,8 +596,13 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="foodMeatStewSchematic"/>
 			<item name="foodSteakAndPotatoSchematic"/>
 			<item name="foodVegetableStewSchematic"/>
+			<item name="foodShamChowderSchematic"/>
 			<item name="foodHoboStewSchematic"/>
-			<item name="drinkYuccaJuiceSmoothieSchematic"/>
+			<item name="foodFishTacosSchematic"/>
+			<item name="foodChiliDogSchematic"/>
+			<item name="foodPumpkinPieSchematic"/>
+			<item name="foodPumpkinCheesecakeSchematic"/>
+			<item name="foodPumpkinBreadSchematic"/>
 			<item name="drinkJarBeerSchematic"/>
 			<item name="drinkJarGrandpasAwesomeSauceSchematic"/>
 			<item name="drinkJarGrandpasLearningElixirSchematic"/>
@@ -711,6 +716,7 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="speakerSchematic"/>
 			<item name="spotlightPlayerSchematic"/>
 			<item name="switchSchematic"/>
+			<item name="generatorbankSchematic"/>
 			<item name="batterybankSchematic"/>
 			<item name="electrictimerrelaySchematic"/>
 		</trader_item_group>
@@ -763,12 +769,9 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="forgeSchematic"/>
 			<item name="workbenchSchematic"/>
 			<item name="chemistryStationSchematic"/>
+			<item name="foodShamChowderSchematic"/>
 			<item name="foodHoboStewSchematic"/>
-			<item name="drinkYuccaJuiceSmoothieSchematic"/>
 			<item name="drinkJarBeerSchematic"/>
-			<item name="drinkJarGrandpasAwesomeSauceSchematic"/>
-			<item name="drinkJarGrandpasLearningElixirSchematic"/>
-			<item name="drinkJarGrandpasMoonshineSchematic"/>
 			<item name="vehicleMotorcycleChassisSchematic"/>
 			<item name="vehicleMotorcycleHandlebarsSchematic"/>
 			<item name="vehicle4x4TruckChassisSchematic"/>
@@ -911,7 +914,6 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="foodBaconAndEggs" count="2,4"/>
 			<item name="foodVegetableStew" count="2,4"/>
 			<item name="foodHoboStew" count="1,4"/>
-			
 		</trader_item_group>
 
 		<trader_item_group name="preparedDrink">
@@ -922,7 +924,6 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="drinkJarCoffee" count="1,5"/>
 			<item name="drinkJarBeer" count="1,5"/>
 			<item name="drinkJarGrainAlcohol" count="2,4"/>
-			<item name="drinkYuccaJuiceSmoothie" count="1"/>
 		</trader_item_group>
 
 		<trader_item_group name="foodAll">
@@ -984,7 +985,6 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="resourceMechanicalParts" count="15,80" prob="0.8"/>
 			<item name="resourceElectricParts" count="15,50" prob="0.7"/>
 			<item name="resourceElectricParts" count="10,30" prob="0.6"/>
-			<item name="resourceInsulator" count="20,60" prob="0.6"/>
 			<item name="resourceLockPick" count="1,10"/>
 		</trader_item_group>
 
@@ -1046,52 +1046,42 @@ quality_mod: adjusts the price range of all items with a quality level.
 		</trader_item_group>
 
 		<trader_item_group name="decorativeCurtains" count="all">
-			<item name="curtain_top1Sheet3" count="4,15"/>
-			<item name="curtain_bottom1Sheet3" count="4,15"/>
+			<item name="curtain_top1Sheet3" count="10,15"/>
+			<item name="curtain_bottom1Sheet3" count="10,15"/>
 		</trader_item_group>
 
 		<trader_item_group name="decorativeBlinds" count="all">
-			<item name="miniblindTopSheet" count="4,15"/>
-			<item name="miniblindBottomSheet" count="4,15"/>
+			<item name="miniblindTopSheet" count="10,15"/>
+			<item name="miniblindBottomSheet" count="10,15"/>
 		</trader_item_group>
-
 
 		<trader_item_group name="decorativeBlocks" count="1">
 			<item group="decorativeCurtains"/>
 			<item group="decorativeBlinds"/>
-			<item name="airConditioner"/>
-			<item name="woodFurnitureBlockVariantHelper"/>
-			<item name="metalFurnitureBlockVariantHelper"/>
-			<item name="cntCabinetOldSink"/>
+			<item name="airConditioner" count="2,3"/>
+			<item name="cntCabinetOldSink" count="2,4"/>
 			<item name="cntCashRegister"/>
 			<item name="cntCoolerClosed"/>
 			<item name="cntFileCabinetTallClosed"/>
-			<item name="cntFurnaceDrawer"/>
-			<item name="cntGraniteSink"/>
-			<item name="cntGreenDrawer"/>
-			<item name="cntLockersShortClosed"/>
-			<item name="cntMunitionsBox"/>
-			<item name="faucet02"/>
-			<item name="faucet04"/>
-			<item name="faucetBrass02"/>
-			<item name="faucetBrass04"/>
-			<item name="fountain"/>
-			<item name="fusebox"/>
-			<item name="mattress"/>
-			<item name="mattressFlat"/>
-			<item name="couchSofa01"/>
-			<item name="chairCouchSofa01"/>
-			<item name="leatherChairCouchSofa2"/>
+			<item name="cntGraniteSink" count="2,4"/>
+			<item name="cntLockersShortClosed" count="2,4"/>
+			<item name="cntMunitionsBox" count="2,3"/>
+			<item name="faucetBrass02" count="2,4"/>
+			<item name="faucetBrass04" count="2,4"/>
+			<item name="fountain" count="1,2"/>
+			<item name="fusebox" count="2,3"/>
+			<item name="mattress" count="4,6"/>
+			<item name="mattressFlat" count="4,6"/>
+			<item name="couchSofa01" count="2,3"/>
+			<item name="chairCouchSofa01" count="3,5"/>
+			<item name="leatherChairCouchSofa2" count="2,3"/>
 			<item name="cntWaterCoolerFull"/>
-			<item name="metalPipeStraight"/>
-			<item name="metalPipeValve"/>
-			<item name="cntShoppingCartEmpty"/>
-			<item name="treeAzalea"/>
-			<item name="barStool"/>
-			<item name="cntTrash_can01"/>
-			<item name="cntBin"/>
+			<item name="metalPipeStraight" count="20,30"/>
+			<item name="metalPipeValve" count="5,8"/>
+			<item name="cntShoppingCartEmpty" count="2,4"/>
+			<item name="treeAzalea" count="8,15"/>
+			<item name="barStool" count="4,8"/>
 			<item name="window02" count="4,15"/>
-			<item name="shutters1Plate" count="4,15"/>
 		</trader_item_group>
 
 <!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->

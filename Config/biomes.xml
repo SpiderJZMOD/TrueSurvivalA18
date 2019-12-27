@@ -99,7 +99,7 @@ If you do not declare them, the decorations of the main biome are used.
 		<property name="Temperature" value="-10"/>
 		<property name="AmbientSound" value="..."/>
 		<property name="ParticleEffect" value="..."/></property>
-</weather>
+		</weather>
 
 
 <!-- All biome definitions here -->
@@ -149,9 +149,9 @@ If you do not declare them, the decorations of the main biome are used.
 			<Precipitation min="50" max="100" prob=".75"/>
 			<Wind min="20" max="40" prob="0.9"/>
 			<Wind min="40" max="100" prob="0.1"/>
-      <ParticleEffect prefab="ParticleEffects/p_snowstorm1" ChunkMargin="7"/>
-    </weather>
-		<replacements> <!-- This affects only the grow event of blocks/plants. Grown blocks of one type are auto-replaced by the second.  -->
+			<ParticleEffect prefab="ParticleEffects/p_snowstorm1" ChunkMargin="7"/>
+		</weather>
+		<replacements> <!-- This affects only the grow event of blocks/plants. Grown blocks of one type are auto-replaced by the second. -->
 			<replace source="treeTallGrassDiagonal" target="treeSnowyGrassDiagonal"/>
 		</replacements>
 
@@ -161,7 +161,6 @@ If you do not declare them, the decorations of the main biome are used.
 				<layer depth="*" blockname="terrStone">
 					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-					<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 				</layer>
 				<layer depth="3" blockname="terrBedrock"/>
 			</layers>
@@ -185,7 +184,6 @@ If you do not declare them, the decorations of the main biome are used.
 				<layer depth="*" blockname="terrStone">
 					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-					<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 				</layer>
 				<layer depth="3" blockname="terrBedrock"/>
 			</layers>
@@ -206,7 +204,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="1" blockname="terrSnow"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_coal_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="prefab" name="rock_form02" prob=".0005" rotatemax="7"/><decoration type="prefab" name="rock_form01" prob=".0005" rotatemax="7"/><decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="rock05" prob=".005"/><decoration type="block" blockname="rock06" prob=".005"/><decoration type="block" blockname="rock07" prob=".005"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="treeWinterEverGreen" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeWinterPine13m" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeWinterPine19m" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeWinterPine28m" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeSnowyDeadBush" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeSnowyGrassDiagonal" prob=".1"/><decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -214,7 +212,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="1" blockname="terrSnow"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_nitrate_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="prefab" name="rock_form02" prob=".0005" rotatemax="7"/><decoration type="prefab" name="rock_form01" prob=".0005" rotatemax="7"/><decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="rock05" prob=".005"/><decoration type="block" blockname="rock06" prob=".005"/><decoration type="block" blockname="rock07" prob=".005"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="treeWinterEverGreen" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeWinterPine13m" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeWinterPine19m" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeWinterPine28m" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeSnowyDeadBush" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeSnowyGrassDiagonal" prob=".1"/><decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -222,7 +220,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="1" blockname="terrSnow"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_lead_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="prefab" name="rock_form02" prob=".0005" rotatemax="7"/><decoration type="prefab" name="rock_form01" prob=".0005" rotatemax="7"/><decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="rock05" prob=".005"/><decoration type="block" blockname="rock06" prob=".005"/><decoration type="block" blockname="rock07" prob=".005"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="treeWinterEverGreen" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeWinterPine13m" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeWinterPine19m" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeWinterPine28m" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeSnowyDeadBush" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeSnowyGrassDiagonal" prob=".1"/><decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -233,7 +231,6 @@ If you do not declare them, the decorations of the main biome are used.
 			<layer depth="*" blockname="terrStone">
 				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-				<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 			</layer>
 			<layer depth="3" blockname="terrBedrock"/>
 		</layers>
@@ -263,7 +260,7 @@ If you do not declare them, the decorations of the main biome are used.
 	</biome>
 
 
-	<!-- Pine Forest Main Biome  -->
+	<!-- Pine Forest Main Biome -->
 	<biome name="pine_forest" topsoil_block="terrForestGround" biomemapcolor="#004000">
 		<weather>
 			<Temperature min="-35" max="15" prob="1"/>
@@ -284,7 +281,6 @@ If you do not declare them, the decorations of the main biome are used.
 				<layer depth="*" blockname="terrStone">
 					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-					<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 				</layer>
 				<layer depth="3" blockname="terrBedrock"/>
 			</layers>
@@ -306,7 +302,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="1" blockname="terrForestGround"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_coal_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/><decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/><decoration type="prefab" name="rock_form01" prob=".001" rotatemax="7"/><decoration type="block" blockname="plantedCotton3Harvest" prob="0.001"/><decoration type="block" blockname="rock01" prob=".001"/><decoration type="block" blockname="rock02" prob=".001"/><decoration type="block" blockname="rock04" prob=".001"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.01" rotatemax="7"/><decoration type="block" blockname="treeJuniper4m" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeMountainPine12m" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeMountainPine19m" prob="0.0015" rotatemax="7"/><decoration type="block" blockname="treeMountainPine27m" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeMountainPine31m" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeMountainPine41m" prob="0.004" rotatemax="7"/><decoration type="block" blockname="plantedSnowberry3Harvest" prob=".001"/><decoration type="block" blockname="plantedChrysanthemum3Harvest" prob="0.001"/><decoration type="block" blockname="treeTallGrassDiagonal" prob=".4"/><decoration type="block" blockname="treeOakLrg01" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeOakMed01" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeOakMed02" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeOakSml01" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeFirLrg01" prob="0.0005" rotatemax="7"/><decoration type="block" blockname="treeMountainPine48m" prob="0.0005" rotatemax="7"/><decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -314,7 +310,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="1" blockname="terrForestGround"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_nitrate_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/><decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/><decoration type="prefab" name="rock_form01" prob=".001" rotatemax="7"/><decoration type="block" blockname="plantedCotton3Harvest" prob="0.001"/><decoration type="block" blockname="rock01" prob=".001"/><decoration type="block" blockname="rock02" prob=".001"/><decoration type="block" blockname="rock04" prob=".001"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.01" rotatemax="7"/><decoration type="block" blockname="treeJuniper4m" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeMountainPine12m" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeMountainPine19m" prob="0.0015" rotatemax="7"/><decoration type="block" blockname="treeMountainPine27m" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeMountainPine31m" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeMountainPine41m" prob="0.004" rotatemax="7"/><decoration type="block" blockname="plantedSnowberry3Harvest" prob=".001"/><decoration type="block" blockname="plantedChrysanthemum3Harvest" prob="0.001"/><decoration type="block" blockname="treeTallGrassDiagonal" prob=".4"/><decoration type="block" blockname="treeOakLrg01" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeOakMed01" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeOakMed02" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeOakSml01" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeFirLrg01" prob="0.0005" rotatemax="7"/><decoration type="block" blockname="treeMountainPine48m" prob="0.0005" rotatemax="7"/><decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -322,7 +318,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="1" blockname="terrForestGround"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_lead_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntForestRandomLootHelper" prob="0.00025"/><decoration type="prefab" name="rock_form02" prob=".001" rotatemax="7"/><decoration type="prefab" name="rock_form01" prob=".001" rotatemax="7"/><decoration type="block" blockname="plantedCotton3Harvest" prob="0.001"/><decoration type="block" blockname="rock01" prob=".001"/><decoration type="block" blockname="rock02" prob=".001"/><decoration type="block" blockname="rock04" prob=".001"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.01" rotatemax="7"/><decoration type="block" blockname="treeJuniper4m" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeMountainPine12m" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeMountainPine19m" prob="0.0015" rotatemax="7"/><decoration type="block" blockname="treeMountainPine27m" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeMountainPine31m" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeMountainPine41m" prob="0.004" rotatemax="7"/><decoration type="block" blockname="plantedSnowberry3Harvest" prob=".001"/><decoration type="block" blockname="plantedChrysanthemum3Harvest" prob="0.001"/><decoration type="block" blockname="treeTallGrassDiagonal" prob=".4"/><decoration type="block" blockname="treeOakLrg01" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeOakMed01" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeOakMed02" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeOakSml01" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeFirLrg01" prob="0.0005" rotatemax="7"/><decoration type="block" blockname="treeMountainPine48m" prob="0.0005" rotatemax="7"/><decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -333,7 +329,6 @@ If you do not declare them, the decorations of the main biome are used.
 			<layer depth="*" blockname="terrStone">
 				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-				<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 			</layer>
 			<layer depth="3" blockname="terrBedrock"/>
 		</layers>
@@ -387,8 +382,8 @@ If you do not declare them, the decorations of the main biome are used.
 			<Precipitation min="50" max="100" prob=".75"/>
 			<Wind min="10" max="20" prob="0.9"/>
 			<Wind min="20" max="100" prob="0.1"/>
-      <ParticleEffect prefab="ParticleEffects/p_sandstorm" ChunkMargin="7"/>
-    </weather>
+			<ParticleEffect prefab="ParticleEffects/p_sandstorm" ChunkMargin="7"/>
+		</weather>
 
 		<subbiome prob="0.09"> <!-- Desert Sub Biome Clustered Cactus and Desert Shrub -->
 			<layers>
@@ -396,7 +391,6 @@ If you do not declare them, the decorations of the main biome are used.
 				<layer depth="*" blockname="terrSandStone">
 					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-					<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 				</layer>
 				<layer depth="1" blockname="terrSandStone"/> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
@@ -424,7 +418,6 @@ If you do not declare them, the decorations of the main biome are used.
 				<layer depth="*" blockname="terrSandStone">
 					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-					<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 				</layer>
 				<layer depth="1" blockname="terrSandStone"/> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
@@ -444,7 +437,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="4" blockname="terrDesertGround"/>
 				<layer depth="1" blockname="terrSandStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrSandStone"> <resource blockname="terrOreOilDeposit" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="1" blockname="terrSandStone"/><layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrSandStone"> <resource blockname="terrOreOilDeposit" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="1" blockname="terrSandStone"/><layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_shale_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="treeCactus01" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus02" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus03" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus04" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus05" prob="0.004" rotatemax="3"/><decoration type="block" blockname="rock01" prob=".001" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".001" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".001" rotatemax="3"/><decoration type="block" blockname="cntDesertRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.020" rotatemax="7"/><decoration type="block" blockname="plantedYucca3Harvest" prob="0.002" rotatemax="3"/><decoration type="block" blockname="plantedAloe3Harvest" rotatemax="3" prob="0.003"/><decoration type="block" blockname="treeDesertShrub" prob="0.05" rotatemax="7"/><decoration type="block" blockname="driftwood" prob="0.002"/><decoration type="block" blockname="driftwood2" prob="0.002"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="decoCowSkull" prob="0.00025"/><decoration type="block" blockname="treeCactus06" prob="0.0009" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".00025"/><decoration type="block" blockname="treeOakMed01" prob="0.0003" rotatemax="7"/><decoration type="block" blockname="treeOakSml01" prob="0.002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -452,7 +445,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="4" blockname="terrDesertGround"/>
 				<layer depth="1" blockname="terrSandStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrSandStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="1" blockname="terrSandStone"/><layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrSandStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="1" blockname="terrSandStone"/><layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_nitrate_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="treeCactus01" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus02" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus03" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus04" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus05" prob="0.004" rotatemax="3"/><decoration type="block" blockname="rock01" prob=".001" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".001" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".001" rotatemax="3"/><decoration type="block" blockname="cntDesertRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.020" rotatemax="7"/><decoration type="block" blockname="plantedYucca3Harvest" prob="0.002" rotatemax="3"/><decoration type="block" blockname="plantedAloe3Harvest" rotatemax="3" prob="0.003"/><decoration type="block" blockname="treeDesertShrub" prob="0.05" rotatemax="7"/><decoration type="block" blockname="driftwood" prob="0.002"/><decoration type="block" blockname="driftwood2" prob="0.002"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="decoCowSkull" prob="0.00025"/><decoration type="block" blockname="treeCactus06" prob="0.0009" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".00025"/><decoration type="block" blockname="treeOakMed01" prob="0.0003" rotatemax="7"/><decoration type="block" blockname="treeOakSml01" prob="0.002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -460,7 +453,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="4" blockname="terrDesertGround"/>
 				<layer depth="1" blockname="terrSandStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrSandStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="1" blockname="terrSandStone"/><layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrSandStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="1" blockname="terrSandStone"/><layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_lead_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="treeCactus01" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus02" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus03" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus04" prob="0.004" rotatemax="3"/><decoration type="block" blockname="treeCactus05" prob="0.004" rotatemax="3"/><decoration type="block" blockname="rock01" prob=".001" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".001" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".001" rotatemax="3"/><decoration type="block" blockname="cntDesertRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.020" rotatemax="7"/><decoration type="block" blockname="plantedYucca3Harvest" prob="0.002" rotatemax="3"/><decoration type="block" blockname="plantedAloe3Harvest" rotatemax="3" prob="0.003"/><decoration type="block" blockname="treeDesertShrub" prob="0.05" rotatemax="7"/><decoration type="block" blockname="driftwood" prob="0.002"/><decoration type="block" blockname="driftwood2" prob="0.002"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="decoCowSkull" prob="0.00025"/><decoration type="block" blockname="treeCactus06" prob="0.0009" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".00025"/><decoration type="block" blockname="treeOakMed01" prob="0.0003" rotatemax="7"/><decoration type="block" blockname="treeOakSml01" prob="0.002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -472,7 +465,6 @@ If you do not declare them, the decorations of the main biome are used.
 			<layer depth="*" blockname="terrSandStone">
 				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-				<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 			</layer>
 			<layer depth="1" blockname="terrSandStone"/> <layer depth="3" blockname="terrBedrock"/>
 		</layers>
@@ -480,7 +472,7 @@ If you do not declare them, the decorations of the main biome are used.
 		<!-- Decorations Main: Desert -->
 		<decorations>
 			<!--decoration type="terrain" name="bluff1" prob=".0001" scale="0.1"/>
-			<decoration type="terrain" name="bluff2" prob=".0001" scale="0.06,0.1" /-->     <!-- min max scale -->
+			<decoration type="terrain" name="bluff2" prob=".0001" scale="0.06,0.1" /--> <!-- min max scale -->
 			<decoration type="prefab" name="deco_iron_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/>
 			<decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/>
 			<decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/>
@@ -535,7 +527,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="4" blockname="terrSand"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_coal_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="treeAzalea" prob=".003" rotatemax="3"/><decoration type="block" blockname="cntStreetRandomLootHelper" prob=".0007" rotatemax="3"/><decoration type="block" blockname="rock01" prob=".001" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".005" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".001" rotatemax="3"/><decoration type="block" blockname="driftwood" prob="0.001" rotatemax="3"/><decoration type="block" blockname="driftwood2" prob="0.001" rotatemax="3"/><decoration type="block" blockname="cinderBlocks01" prob=".0001" rotatemax="7"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.01" rotatemax="7"/><decoration type="block" blockname="carsRandomHelper" prob="0.001" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".15"/><decoration type="block" blockname="treeTallGrassDiagonal" prob=".35"/></decorations>
 		</subbiome>
@@ -543,7 +535,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="4" blockname="terrSand"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_nitrate_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="treeAzalea" prob=".003" rotatemax="3"/><decoration type="block" blockname="cntStreetRandomLootHelper" prob=".0007" rotatemax="3"/><decoration type="block" blockname="rock01" prob=".001" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".005" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".001" rotatemax="3"/><decoration type="block" blockname="driftwood" prob="0.001" rotatemax="3"/><decoration type="block" blockname="driftwood2" prob="0.001" rotatemax="3"/><decoration type="block" blockname="cinderBlocks01" prob=".0001" rotatemax="7"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.01" rotatemax="7"/><decoration type="block" blockname="carsRandomHelper" prob="0.001" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".15"/><decoration type="block" blockname="treeTallGrassDiagonal" prob=".35"/></decorations>
 		</subbiome>
@@ -551,7 +543,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="4" blockname="terrSand"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_lead_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="treeAzalea" prob=".003" rotatemax="3"/><decoration type="block" blockname="cntStreetRandomLootHelper" prob=".0007" rotatemax="3"/><decoration type="block" blockname="rock01" prob=".001" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".005" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".001" rotatemax="3"/><decoration type="block" blockname="driftwood" prob="0.001" rotatemax="3"/><decoration type="block" blockname="driftwood2" prob="0.001" rotatemax="3"/><decoration type="block" blockname="cinderBlocks01" prob=".0001" rotatemax="7"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.005" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.01" rotatemax="7"/><decoration type="block" blockname="carsRandomHelper" prob="0.001" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".15"/><decoration type="block" blockname="treeTallGrassDiagonal" prob=".35"/></decorations>
 		</subbiome>
@@ -563,7 +555,6 @@ If you do not declare them, the decorations of the main biome are used.
 			<layer depth="*" blockname="terrStone">
 				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-				<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 			</layer>
 			<layer depth="3" blockname="terrBedrock"/>
 		</layers>
@@ -614,7 +605,6 @@ If you do not declare them, the decorations of the main biome are used.
 			<layer depth="*" blockname="terrStone">
 				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-				<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 			</layer>
 			<layer depth="3" blockname="terrBedrock"/>
 		</layers>
@@ -665,7 +655,6 @@ If you do not declare them, the decorations of the main biome are used.
 				<layer depth="*" blockname="terrStone">
 					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-					<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 				</layer>
 				<layer depth="3" blockname="terrBedrock"/>
 			</layers>
@@ -687,7 +676,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="2" blockname="terrDestroyedStone"/> <layer depth="2" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_coal_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntWastelandRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="block" blockname="scrapMetalPile" prob=".015" rotatemax="3"/><decoration type="block" blockname="brickDestroyedBlock01" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock02" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock03" prob=".0004" rotatemax="7"/><decoration type="block" blockname="rock01" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".004" rotatemax="3"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="cinderBlocks01" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks02" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks03" prob=".006" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple01" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple02" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple03" prob="0.0012" rotatemax="3"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.0006" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="prefab" name="waste_rubble_bldg_01" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_02" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_03" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_09" prob=".002"/><decoration type="prefab" name="waste_rubble_highway_01" prob=".002"/><decoration type="prefab" name="mp_waste_pile_01" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_02" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_03" prob=".005"/><decoration type="prefab" name="mp_waste_pile_04" prob=".003"/><decoration type="prefab" name="mp_waste_pile_05" prob=".003"/><decoration type="block" blockname="carWrecksRandomHelper" prob="0.0005" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".05"/><decoration type="block" blockname="mineCandyTin" prob="0.00015"/><decoration type="block" blockname="mineHubcap" prob="0.0001"/><decoration type="block" blockname="hubcapNoMine" prob="0.0011"/></decorations>
 		</subbiome>
@@ -695,7 +684,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="2" blockname="terrDestroyedStone"/> <layer depth="2" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_nitrate_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntWastelandRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="block" blockname="scrapMetalPile" prob=".015" rotatemax="3"/><decoration type="block" blockname="brickDestroyedBlock01" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock02" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock03" prob=".0004" rotatemax="7"/><decoration type="block" blockname="rock01" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".004" rotatemax="3"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="cinderBlocks01" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks02" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks03" prob=".006" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple01" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple02" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple03" prob="0.0012" rotatemax="3"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.0006" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="prefab" name="waste_rubble_bldg_01" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_02" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_03" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_09" prob=".002"/><decoration type="prefab" name="waste_rubble_highway_01" prob=".002"/><decoration type="prefab" name="mp_waste_pile_01" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_02" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_03" prob=".005"/><decoration type="prefab" name="mp_waste_pile_04" prob=".003"/><decoration type="prefab" name="mp_waste_pile_05" prob=".003"/><decoration type="block" blockname="carWrecksRandomHelper" prob="0.0005" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".05"/><decoration type="block" blockname="mineCandyTin" prob="0.00015"/><decoration type="block" blockname="mineHubcap" prob="0.0001"/><decoration type="block" blockname="hubcapNoMine" prob="0.0011"/></decorations>
 		</subbiome>
@@ -703,7 +692,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="2" blockname="terrDestroyedStone"/> <layer depth="2" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_lead_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntWastelandRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="block" blockname="scrapMetalPile" prob=".015" rotatemax="3"/><decoration type="block" blockname="brickDestroyedBlock01" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock02" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock03" prob=".0004" rotatemax="7"/><decoration type="block" blockname="rock01" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".004" rotatemax="3"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="cinderBlocks01" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks02" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks03" prob=".006" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple01" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple02" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple03" prob="0.0012" rotatemax="3"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.0006" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="prefab" name="waste_rubble_bldg_01" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_02" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_03" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_09" prob=".002"/><decoration type="prefab" name="waste_rubble_highway_01" prob=".002"/><decoration type="prefab" name="mp_waste_pile_01" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_02" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_03" prob=".005"/><decoration type="prefab" name="mp_waste_pile_04" prob=".003"/><decoration type="prefab" name="mp_waste_pile_05" prob=".003"/><decoration type="block" blockname="carWrecksRandomHelper" prob="0.0005" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".05"/><decoration type="block" blockname="mineCandyTin" prob="0.00015"/><decoration type="block" blockname="mineHubcap" prob="0.0001"/><decoration type="block" blockname="hubcapNoMine" prob="0.0011"/></decorations>
 		</subbiome>
@@ -715,7 +704,6 @@ If you do not declare them, the decorations of the main biome are used.
 			<layer depth="*" blockname="terrStone">
 				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-				<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 			</layer>
 			<layer depth="3" blockname="terrBedrock"/>
 		</layers>
@@ -777,8 +765,8 @@ If you do not declare them, the decorations of the main biome are used.
 			<Wind min="20" max="100" prob="0.1"/>
 			<Precipitation min="0" max="0" prob=".0"/>
 			<Precipitation min="50" max="100" prob=".75"/>
-      <ParticleEffect prefab="ParticleEffects/p_smokestorm" ChunkMargin="7"/>
-    </weather>
+			<ParticleEffect prefab="ParticleEffects/p_smokestorm" ChunkMargin="7"/>
+		</weather>
 
 		<subbiome prob="0.02"> <!-- Burnt Forest Sub Biome -->
 			<layers>
@@ -787,7 +775,6 @@ If you do not declare them, the decorations of the main biome are used.
 				<layer depth="*" blockname="terrStone">
 					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-					<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 				</layer>
 				<layer depth="3" blockname="terrBedrock"/>
 			</layers>
@@ -808,7 +795,6 @@ If you do not declare them, the decorations of the main biome are used.
 				<layer depth="*" blockname="terrStone">
 					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-					<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 				</layer>
 				<layer depth="3" blockname="terrBedrock"/>
 			</layers>
@@ -824,7 +810,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="1" blockname="terrBurntForestGround"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_coal_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntBurntForestRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="rock01" prob=".005" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".005" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".005" rotatemax="3"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="treeBurntMaple01" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple02" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple03" prob="0.003" rotatemax="3"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeDeadTree01" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.003" rotatemax="7"/><decoration type="prefab" name="remnant_burnt_deco_01" prob=".0009"/><decoration type="prefab" name="remnant_burnt_deco_02" prob=".0009"/><decoration type="block" blockname="emberPileDeco1" prob="0.001" rotatemax="7"/><decoration type="block" blockname="emberPileDeco2" prob="0.001" rotatemax="7"/><decoration type="block" blockname="emberPileDeco3" prob="0.01" rotatemax="7"/><decoration type="block" blockname="emberPileDeco4" prob="0.01" rotatemax="7"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".02"/><decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -832,7 +818,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="1" blockname="terrBurntForestGround"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_nitrate_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntBurntForestRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="rock01" prob=".005" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".005" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".005" rotatemax="3"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="treeBurntMaple01" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple02" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple03" prob="0.003" rotatemax="3"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeDeadTree01" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.003" rotatemax="7"/><decoration type="prefab" name="remnant_burnt_deco_01" prob=".0009"/><decoration type="prefab" name="remnant_burnt_deco_02" prob=".0009"/><decoration type="block" blockname="emberPileDeco1" prob="0.001" rotatemax="7"/><decoration type="block" blockname="emberPileDeco2" prob="0.001" rotatemax="7"/><decoration type="block" blockname="emberPileDeco3" prob="0.01" rotatemax="7"/><decoration type="block" blockname="emberPileDeco4" prob="0.01" rotatemax="7"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".02"/><decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -840,7 +826,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="1" blockname="terrBurntForestGround"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_lead_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntBurntForestRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="rock01" prob=".005" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".005" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".005" rotatemax="3"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="treeBurntMaple01" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple02" prob="0.003" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple03" prob="0.003" rotatemax="3"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeDeadTree01" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.003" rotatemax="7"/><decoration type="prefab" name="remnant_burnt_deco_01" prob=".0009"/><decoration type="prefab" name="remnant_burnt_deco_02" prob=".0009"/><decoration type="block" blockname="emberPileDeco1" prob="0.001" rotatemax="7"/><decoration type="block" blockname="emberPileDeco2" prob="0.001" rotatemax="7"/><decoration type="block" blockname="emberPileDeco3" prob="0.01" rotatemax="7"/><decoration type="block" blockname="emberPileDeco4" prob="0.01" rotatemax="7"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".02"/><decoration type="block" blockname="treeStump" prob=".0002" rotatemax="7"/></decorations>
 		</subbiome>
@@ -852,7 +838,6 @@ If you do not declare them, the decorations of the main biome are used.
 			<layer depth="*" blockname="terrStone">
 				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-				<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 			</layer>
 			<layer depth="3" blockname="terrBedrock"/>
 		</layers>
@@ -904,21 +889,21 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="2" blockname="terrAsphalt"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 		</subbiome>
 		<subbiome prob="0.312"> <!-- Ore Sub Biome: potassiumNitrate -->
 			<layers>
 				<layer depth="2" blockname="terrAsphalt"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 		</subbiome>
 		<subbiome prob="0.342"> <!-- Ore Sub Biome: leadOre -->
 			<layers>
 				<layer depth="2" blockname="terrAsphalt"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 		</subbiome>
 
@@ -928,7 +913,6 @@ If you do not declare them, the decorations of the main biome are used.
 			<layer depth="*" blockname="terrStone">
 				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-				<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 			</layer>
 			<layer depth="3" blockname="terrBedrock"/>
 		</layers>
@@ -954,21 +938,21 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="2" blockname="terrAsphalt"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 		</subbiome>
 		<subbiome prob="0.312"> <!-- Ore Sub Biome: potassiumNitrate -->
 			<layers>
 				<layer depth="2" blockname="terrAsphalt"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 		</subbiome>
 		<subbiome prob="0.342"> <!-- Ore Sub Biome: leadOre -->
 			<layers>
 				<layer depth="2" blockname="terrAsphalt"/> <layer depth="3" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 		</subbiome>
 
@@ -979,7 +963,6 @@ If you do not declare them, the decorations of the main biome are used.
 			<layer depth="*" blockname="terrStone">
 				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-				<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 			</layer>
 			<layer depth="3" blockname="terrBedrock"/>
 		</layers>
@@ -1010,7 +993,6 @@ If you do not declare them, the decorations of the main biome are used.
 				<layer depth="*" blockname="terrStone">
 					<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 					<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-					<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 				</layer>
 				<layer depth="3" blockname="terrBedrock"/>
 			</layers>
@@ -1030,7 +1012,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="2" blockname="terrDestroyedStone"/> <layer depth="2" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreCoal" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_coal_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntWastelandRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="block" blockname="scrapMetalPile" prob=".015" rotatemax="3"/><decoration type="block" blockname="brickDestroyedBlock01" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock02" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock03" prob=".0004" rotatemax="7"/><decoration type="block" blockname="rock01" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".004" rotatemax="3"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="cinderBlocks01" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks02" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks03" prob=".006" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple01" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple02" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple03" prob="0.0012" rotatemax="3"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.0006" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="prefab" name="waste_rubble_bldg_01" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_02" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_03" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_09" prob=".002"/><decoration type="prefab" name="waste_rubble_highway_01" prob=".0015"/><decoration type="prefab" name="mp_waste_pile_01" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_02" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_03" prob=".005"/><decoration type="prefab" name="mp_waste_pile_04" prob=".003"/><decoration type="prefab" name="mp_waste_pile_05" prob=".003"/><decoration type="block" blockname="carsRandomHelper" prob="0.13" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".05"/></decorations>
 		</subbiome>
@@ -1038,7 +1020,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="2" blockname="terrDestroyedStone"/> <layer depth="2" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOrePotassiumNitrate" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_nitrate_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntWastelandRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="block" blockname="scrapMetalPile" prob=".015" rotatemax="3"/><decoration type="block" blockname="brickDestroyedBlock01" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock02" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock03" prob=".0004" rotatemax="7"/><decoration type="block" blockname="rock01" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".004" rotatemax="3"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="cinderBlocks01" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks02" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks03" prob=".006" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple01" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple02" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple03" prob="0.0012" rotatemax="3"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.0006" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="prefab" name="waste_rubble_bldg_01" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_02" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_03" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_09" prob=".002"/><decoration type="prefab" name="waste_rubble_highway_01" prob=".0015"/><decoration type="prefab" name="mp_waste_pile_01" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_02" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_03" prob=".005"/><decoration type="prefab" name="mp_waste_pile_04" prob=".003"/><decoration type="prefab" name="mp_waste_pile_05" prob=".003"/><decoration type="block" blockname="carsRandomHelper" prob="0.13" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".05"/></decorations>
 		</subbiome>
@@ -1046,7 +1028,7 @@ If you do not declare them, the decorations of the main biome are used.
 			<layers>
 				<layer depth="2" blockname="terrDestroyedStone"/> <layer depth="2" blockname="terrDirt"/>
 				<layer depth="1" blockname="terrStone"> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer>
-				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> <resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
+				<layer depth="*" blockname="terrStone"> <resource blockname="terrOreLead" prob="0.6500" rwgGenerationType="all"/> <resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/> </layer> <layer depth="3" blockname="terrBedrock"/>
 			</layers>
 			<decorations><decoration type="prefab" name="deco_lead_vein" checkresource="-7" onslopes="true" prob=".00657" rotatemax="3"/><decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/><decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/><decoration type="block" blockname="cntWastelandRandomLootHelper" prob="0.00025"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="block" blockname="scrapMetalPile" prob=".015" rotatemax="3"/><decoration type="block" blockname="brickDestroyedBlock01" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock02" prob=".0004" rotatemax="7"/><decoration type="block" blockname="brickDestroyedBlock03" prob=".0004" rotatemax="7"/><decoration type="block" blockname="rock01" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock02" prob=".004" rotatemax="3"/><decoration type="block" blockname="rock04" prob=".004" rotatemax="3"/><decoration type="block" blockname="cntBirdnest" prob="0.001"/><decoration type="block" blockname="cinderBlocks01" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks02" prob=".006" rotatemax="7"/><decoration type="block" blockname="cinderBlocks03" prob=".006" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple01" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple02" prob="0.0012" rotatemax="7"/><decoration type="block" blockname="treeBurntMaple03" prob="0.0012" rotatemax="3"/><decoration type="block" blockname="treeMountainPineDry21m" prob="0.0006" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.001" rotatemax="7"/><decoration type="block" blockname="treeDeadTree02" prob="0.002" rotatemax="7"/><decoration type="block" blockname="treeDeadPineLeaf" prob="0.010" rotatemax="7"/><decoration type="prefab" name="waste_rubble_bldg_01" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_02" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_03" prob=".003"/><decoration type="prefab" name="waste_rubble_bldg_09" prob=".002"/><decoration type="prefab" name="waste_rubble_highway_01" prob=".0015"/><decoration type="prefab" name="mp_waste_pile_01" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_02" prob=".0065"/><decoration type="prefab" name="mp_waste_pile_03" prob=".005"/><decoration type="prefab" name="mp_waste_pile_04" prob=".003"/><decoration type="prefab" name="mp_waste_pile_05" prob=".003"/><decoration type="block" blockname="carsRandomHelper" prob="0.13" rotatemax="3"/><decoration type="block" blockname="treeBrownGrassDiagonal" prob=".05"/></decorations>
 		</subbiome>
@@ -1058,7 +1040,6 @@ If you do not declare them, the decorations of the main biome are used.
 			<layer depth="*" blockname="terrStone">
 				<resource blockname="terrOreIron" prob="0.6500" rwgGenerationType="all"/>
 				<resource blockname="terrGravel" prob="0.7830" rwgGenerationType="all"/>
-				<resource blockname="terrOreSilver" prob="0.00030" rwgGenerationType="all"/><resource blockname="terrOreGold" prob="0.00020" rwgGenerationType="all"/><resource blockname="terrOreDiamond" prob="0.00010" rwgGenerationType="all"/>
 			</layer>
 			<layer depth="3" blockname="terrBedrock"/>
 		</layers>

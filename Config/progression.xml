@@ -1589,7 +1589,7 @@
 				<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".2"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalBandage,medicalFirstAidBandage"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalFirstAidBandage,thrownAmmoMolotovCocktail"/>
 			<passive_effect name="StaminaMax" operation="perc_add" level="1" value=".5"/>
 			
 			<effect_description level="1" desc_key="jz_FireFighterRank1Desc" long_desc_key="jz_FireFighter1LongDesc"/>
@@ -1616,7 +1616,7 @@
 	<!-- Park Ranger -->
 	<perk name="jz_ParkRanger" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Park Ranger" desc_key="jz_ParkRangerDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugHerbalAntibiotics"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugHerbalAntibiotics,meleeThrownSpearIron,meleeThrownSpearSteel"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_PrimitativeCraftingTag"/>
 			
 			<effect_description level="1" desc_key="jz_ParkRangerRank1Desc" long_desc_key="jz_ParkRangerLongDesc"/>
@@ -1638,7 +1638,7 @@
 	<!-- Chef -->
 	<perk name="jz_Chef" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Chef" desc_key="jz_ChefDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ChefTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="foodCornBread,foodMeatStew,jz_FoodVenisonSteakAndPotato,foodHoboStew,foodBlueberryPie,foodPumpkinPie,foodPumpkinBread,foodBaconAndEggs,foodVegetableStew,jz_FoodBearStew,jz_FoodCarrotCake,jz_FoodBread,jz_FoodFlour,foodCornMeal,jz_FoodBrainShnitzel,jz_FoodGoodMealMediumFG,jz_FoodGoodMealMediumVG,jz_FoodGoodMealMediumVF,jz_FoodGoodMealLargeFG,jz_FoodGoodMealLargeVG,jz_FoodGoodMealLargeVF,jz_FoodHealthyMealMedium,jz_FoodHealthyMealLarge,jz_FoodGlazedMeatSmall,jz_FoodGlazedMeatMedium,jz_FoodGlazedMeatLarge,jz_FoodKabobSmall,jz_FoodKabobMedium,jz_FoodKabobLarge,jz_FoodMeatPieSmall,jz_FoodMeatPieMedium,jz_FoodMeatPieLarge"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ChefTag"/>
 			<effect_description level="1" desc_key="jz_ChefRank1Desc" long_desc_key="jz_ChefLongDesc"/>
 		</effect_group>
@@ -1649,9 +1649,9 @@
 			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
 				<passive_effect name="NoiseMultiplier" operation="perc_add" level="1" value="-.1"/>
 				<passive_effect name="CrouchSpeed" operation="perc_add" level="1" value=".1"/>
-		</effect_group>
-		<effect_group>
-			<passive_effect name="ScavengingTime" operation="perc_subtract" level="1" value=".25"/>
+			</effect_group>
+			<effect_group>
+			<passive_effect name="ScavengingTime" operation="perc_add" level="1" value="-.2"/>
 			<passive_effect name="TreasureRadius" operation="base_subtract" level="1" value="6"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceLockPick"/>
 			<effect_description level="1" desc_key="jz_BurglarRank1Desc" long_desc_key="jz_BurglarLongDesc"/>
@@ -1660,7 +1660,7 @@
 	<!-- Carpenter -->
 	<perk name="jz_Carpenter" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Carpenter" desc_key="jz_CarpenterDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_CarpenterTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="woodFrameBlockVariantHelper,jz_Plank"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_WorkBenchTag,jz_TablesawTag"/>
 			<effect_description level="1" desc_key="jz_CarpenterRank1Desc" long_desc_key="jz_CarpenterLongDesc"/>
 		</effect_group>
@@ -1686,24 +1686,24 @@
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FoodGrubs,jz_WeaponRepairKit,gunBlunderbuss,ammoBlunderbuss,gunAK47,thrownAmmoPipeBomb"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FoodGrubs,jz_WeaponRepairKit,gunBlunderbuss,ammoBlunderbuss,gunAK47,thrownAmmoPipeBomb,mineCookingPot"/>
 			<effect_description level="1" desc_key="jz_SoldierRank1Desc" long_desc_key="jz_SoldierLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Fitness Instructor -->
 	<perk name="jz_FitnessInstructor" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fitness Instructor" desc_key="jz_FitnessInstructorDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
-			<passive_effect name="WalkSpeed" operation="perc_add" value=".1"/>
+			<passive_effect name="RunSpeed" operation="perc_add" level="1" value=".1"/>
+			<passive_effect name="WalkSpeed" operation="perc_add" level="1" value=".1"/>
 			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="0.05" tags="running"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="jz_FitnessInstructorTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkJarGoldenRodTea,drinkJarRedTea,drinkCanMegaCrush,jz_DrinkWellnessJuice,drugVitamins"/>
 			<effect_description level="1" desc_key="jz_FitnessInstructorRank1Desc" long_desc_key="jz_FitnessInstructorLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Electrician -->
 	<perk name="jz_Electrician" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Electrician" desc_key="jz_ElectricianDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ElectricianTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="generatorbank,pressureplate,batterybank,ceilingLight01_player,electrictimerrelay,electricwirerelay,motionsensor,speaker,switch,electricfencepost,spotlightPlayer,meleeStunBaton"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ElectricianTag"/>
 			<effect_description level="1" desc_key="jz_ElectricianRank1Desc" long_desc_key="jz_ElectricianLongDesc"/>
 		</effect_group>
@@ -1711,15 +1711,15 @@
 	<!-- Metal Worker -->
 	<perk name="jz_MetalWorker" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Metal Worker" desc_key="jz_MetalWorkerDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MetalWorkerTag"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MetalWorkerTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="scrapIronFrameBlockVariantHelper,jz_IronSheetMetal"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ForgeTag"/>
 			<effect_description level="1" desc_key="jz_MetalWorkerRank1Desc" long_desc_key="jz_MetalWorkerLongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Mechanic --> 
 	<perk name="jz_Mechanic" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mechanic" desc_key="jz_MechanicDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MechanicTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="smallEngine,jz_LargeEngine,vehicleMinibikePlaceable,vehicleBicyclePlaceable,vehicleMotorcyclePlaceable,vehicle4x4TruckPlaceable,vehicleGyrocopterPlaceable"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MechanicTag"/>
 			<effect_description level="1" desc_key="jz_MechanicRank1Desc" long_desc_key="jz_MechanicLongDesc"/>
 		</effect_group>
@@ -1727,7 +1727,7 @@
 	<!-- Doctor -->
 	<perk name="jz_Doctor" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Doctor" desc_key="jz_DoctorDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_DoctorTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalFirstAidBandage,jz_MedicalStimulant,jz_MedicalSutureKit,jz_MedicalAntiVenom,drugPainkillers,drugSteroids,drugAntibiotics"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_DoctorTag"/>
 			<effect_description level="1" desc_key="jz_DoctorRank1Desc" long_desc_key="jz_DoctorLongDesc"/>
 		</effect_group>
@@ -1735,7 +1735,7 @@
 	<!-- Farmer -->
 	<perk name="jz_Farmer" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Farmer" desc_key="jz_FarmerDesc" icon="ui_game_symbol_mining">
 	<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FarmerTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="plantedPotato1,plantedCoffee1,plantedCorn1,plantedBlueberry1,plantedCotton1,plantedGoldenrod1,plantedAloe1,plantedMushroom1,plantedYucca1,plantedChrysanthemum1,plantedPumpkin1"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_FarmerTag"/>
 			<effect_description level="1" desc_key="jz_FarmerRank1Desc" long_desc_key="jz_FarmerLongDesc"/>
 		</effect_group>
@@ -1743,7 +1743,7 @@
 	<!-- Chemist -->
 	<perk name="jz_Chemist" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Chemist" desc_key="jz_ChemistDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ChemistTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkCanMegaCrush,jz_MedicalStimulant,resourceAcid,resourceOilShaleBundle,resourceGunPowder,jz_MedicalPurificationTablets"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ChemistTag"/>
 			<effect_description level="1" desc_key="jz_ChemistRank1Desc" long_desc_key="jz_ChemistLongDesc"/>
 		</effect_group>

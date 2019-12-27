@@ -1062,9 +1062,9 @@
 					<grid pos="8,-40" rows="13" cell_width="600" cell_height="45" repeat_content="false" arrangement="vertical" >
 						<videooption name="Resolution" type="ComboBoxList&lt;XUiC_OptionsVideo.ResolutionInfo&gt;" value_wrap="false" />
 
-						<videooption name="Fullscreen" type="ComboBoxBool" />
+						<videooption name="Fullscreen" type="ComboBoxBool" localization_prefix="xuiComboYesNo" />
 
-						<videooption name="VSync" type="ComboBoxList&lt;System.String&gt;" values="Off,On,Half" value_wrap="false" />
+						<videooption name="VSync" type="ComboBoxList&lt;System.String&gt;" values="Off,On,Half" localization_prefix="xuiOptionsVideoVsync" value_wrap="false" />
 
 						<rect>
 							<videooption name="Gamma" type="ComboBoxFloat" value_increment="0.1" value_wrap="false" format_string="0%" />
@@ -1074,56 +1074,56 @@
 				</rect>
 				
 				<rect tab_key="xuiOptionsVideoQuality">
-					<videooption pos="8,-40" name="QualityPreset" type="ComboBoxList&lt;System.String&gt;" values="Lowest,Low,Medium,High,Ultra,Custom" value_wrap="false" />
+					<videooption pos="8,-40" name="QualityPreset" type="ComboBoxList&lt;System.String&gt;" values="Lowest,Low,Medium,High,Ultra,Custom" localization_prefix="xuiOptionsVideoPresets" value_wrap="false" />
 
 					<grid pos="8,-110" rows="11" cell_width="600" cell_height="42" repeat_content="false" arrangement="vertical" >
-						<videooption name="AntiAliasing" type="ComboBoxBool" />
+						<videooption name="AntiAliasing" type="ComboBoxBool" localization_prefix="xuiComboOnOff" />
 
-						<videooption name="TextureQuality" type="ComboBoxList&lt;System.String&gt;" values="Full,Half,Quarter,Eighth" value_wrap="false" reverse_list="true" />
+						<videooption name="TextureQuality" type="ComboBoxList&lt;System.String&gt;" values="Full,Half,Quarter,Eighth" localization_prefix="xuiOptionsVideoTexQuality" value_wrap="false" reverse_list="true" />
 						
-						<videooption name="TextureFilter" type="ComboBoxList&lt;System.String&gt;" values="Low,Medium,High,Ultra,Ultra+" value_wrap="false" />
+						<videooption name="TextureFilter" type="ComboBoxList&lt;System.String&gt;" values="Low,Medium,High,Ultra,Ultra+" localization_prefix="xuiOptionsVideoPresets" value_wrap="false" />
 
-						<videooption name="UMATextureQuality" type="ComboBoxList&lt;System.String&gt;" values="High,Middle,Low,Lowest" value_wrap="false" reverse_list="true" />
+						<videooption name="UMATextureQuality" type="ComboBoxList&lt;System.String&gt;" values="High,Medium,Low,Lowest" localization_prefix="xuiOptionsVideoPresets" value_wrap="false" reverse_list="true" />
 
-						<videooption name="ReflectionQuality" type="ComboBoxList&lt;System.String&gt;" values="Off,Low,Middle,High,Ultra,Ultra+" value_wrap="false" />
+						<videooption name="ReflectionQuality" type="ComboBoxList&lt;System.String&gt;" values="Off,Low,Medium,High,Ultra,Ultra+" localization_prefix="xuiOptionsVideoPresets" value_wrap="false" />
 
-						<videooption name="ReflectedShadows" type="ComboBoxBool" />
+						<videooption name="ReflectedShadows" type="ComboBoxBool" localization_prefix="xuiComboOnOff" />
 
-						<videooption name="ShadowsDistance" type="ComboBoxList&lt;System.String&gt;" values="Off,Near,Middle,Far" value_wrap="false" />
+						<videooption name="ShadowsDistance" type="ComboBoxList&lt;System.String&gt;" values="Off,Near,Medium,Far" localization_prefix="xuiOptionsVideoDistance" value_wrap="false" />
 
-						<videooption name="WaterQuality" type="ComboBoxList&lt;System.String&gt;" values="Low,High" value_wrap="false" />
+						<videooption name="WaterQuality" type="ComboBoxList&lt;System.String&gt;" values="Low,High" localization_prefix="xuiOptionsVideoPresets" value_wrap="false" />
 
 						<videooption name="WaterParticles" type="ComboBoxFloat" value_increment="0.10" value_wrap="false" format_string="0%" />
 
-						<videooption name="ViewDistance" type="ComboBoxList&lt;System.String&gt;" values="Low,Medium,High" value_wrap="false" />
+						<videooption name="ViewDistance" type="ComboBoxList&lt;System.String&gt;" values="Low,Medium,High" localization_prefix="xuiOptionsVideoPresets" value_wrap="false" />
 
 						<videooption name="LODDistance" type="ComboBoxFloat" value_increment="0.05" value_wrap="false" format_string="0%" />
 
 						<!--videooption name="FieldOfView" type="ComboBoxInt" value_increment="2" value_wrap="false" /-->
 
-						<videooption name="TreeQuality" type="ComboBoxList&lt;System.String&gt;" values="Lowest,Low,Middle,High,Ultra" value_wrap="false" />
+						<videooption name="TerrainQuality" type="ComboBoxList&lt;System.String&gt;" values="Lowest,Low,Medium,High,Ultra" localization_prefix="xuiOptionsVideoPresets" value_wrap="false" />
+						
+						<videooption name="TreeQuality" type="ComboBoxList&lt;System.String&gt;" values="Lowest,Low,Medium,High,Ultra" localization_prefix="xuiOptionsVideoPresets" value_wrap="false" />
 
-						<videooption name="GrassDistance" type="ComboBoxList&lt;System.String&gt;" values="Near,Normal,Far" value_wrap="false" />
+						<videooption name="GrassDistance" type="ComboBoxList&lt;System.String&gt;" values="Near,Normal,Far" localization_prefix="xuiOptionsVideoDistance" value_wrap="false" />
 
-						<videooption name="Occlusion" type="ComboBoxBool" />
+						<videooption name="Occlusion" type="ComboBoxBool" localization_prefix="xuiComboOnOff" />
 						
 						<!-- Image Effects -->
 
-						<videooption name="Bloom" type="ComboBoxBool" />
+						<videooption name="Bloom" type="ComboBoxBool" localization_prefix="xuiComboOnOff" />
 
-						<videooption name="DepthOfField" type="ComboBoxBool" />
+						<videooption name="DepthOfField" type="ComboBoxBool" localization_prefix="xuiComboOnOff" />
 
-						<videooption name="MotionBlur" type="ComboBoxList&lt;System.String&gt;" values="Off,Simple,Normal" value_wrap="false" />
+						<videooption name="MotionBlur" type="ComboBoxList&lt;System.String&gt;" values="Off,Simple,Normal" localization_prefix="xuiOptionsVideoComplexity" value_wrap="false" />
 
-						<videooption name="SSAO" type="ComboBoxBool" />
+						<videooption name="SSAO" type="ComboBoxBool" localization_prefix="xuiComboOnOff" />
 
-						<videooption name="SSReflections" type="ComboBoxList&lt;System.String&gt;" values="Off,Low,Middle,High" value_wrap="false" />
+						<videooption name="SSReflections" type="ComboBoxList&lt;System.String&gt;" values="Off,Low,Medium,High" localization_prefix="xuiOptionsVideoPresets" value_wrap="false" />
 
-						<videooption name="SunShafts" type="ComboBoxBool" />
+						<videooption name="SunShafts" type="ComboBoxBool" localization_prefix="xuiComboOnOff" />
 
-						<rect />
-
-						<videooption name="StreamingMipmapsEnabled" type="ComboBoxBool" />
+						<videooption name="StreamingMipmapsEnabled" type="ComboBoxBool" localization_prefix="xuiComboOnOff" />
 						
 					</grid>
 				</rect>
@@ -1138,7 +1138,7 @@
 						
 						<videooption name="TempCelsius" type="ComboBoxBool" localization_prefix="xuiBoolCelsius" />
 
-						<videooption name="JournalPopup" type="ComboBoxBool" />
+						<videooption name="JournalPopup" type="ComboBoxBool" localization_prefix="xuiComboYesNo" />
 					</grid>
 				</rect>
 				
@@ -1171,13 +1171,13 @@
 
         <rect />
 
-        <audiooption name="DynamicMusicEnabled" type="ComboBoxBool" visible="{notinlinux}" />
+        <audiooption name="DynamicMusicEnabled" type="ComboBoxBool" localization_prefix="xuiComboYesNo" visible="{notinlinux}" />
 
         <audiooption name="DynamicMusicDailyTimeAllotted" type="ComboBoxFloat" value_increment="0.1" value_wrap="false" format_string="0%" visible="{notinlinux}" />
 
         <rect />
 
-				<audiooption name="VoiceChatEnabled" type="ComboBoxBool" />
+				<audiooption name="VoiceChatEnabled" type="ComboBoxBool" localization_prefix="xuiComboYesNo" />
 
 				<audiooption name="VoiceVolumeLevel" type="ComboBoxFloat" value_increment="0.05" value_wrap="false" format_string="0%" />
 
@@ -1231,13 +1231,13 @@
 
 						<controloption name="ZoomSensitivity" type="ComboBoxFloat" value_increment="0.01" value_wrap="false" format_string="0.00" />
 						
-						<controloption name="InvertMouseLookY" type="ComboBoxBool" />
+						<controloption name="InvertMouseLookY" type="ComboBoxBool" localization_prefix="xuiComboYesNo" />
 
-						<controloption name="AllowController" type="ComboBoxBool" />
+						<controloption name="AllowController" type="ComboBoxBool" localization_prefix="xuiComboYesNo" />
 
 						<controloption name="ControllerInterfaceSensitivity" type="ComboBoxFloat" value_increment="0.1" value_wrap="false" format_string="0.00" />
 
-						<controloption name="ControllerVibration" type="ComboBoxBool" />
+						<controloption name="ControllerVibration" type="ComboBoxBool" localization_prefix="xuiComboYesNo" />
 					</grid>
 				</rect>
 				
