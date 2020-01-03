@@ -71,7 +71,7 @@
 		<objective type="BlockPlace" id="jz_CharacterChoiceComputer" value="1" phase="1" />
 		
 		<reward type="Item" id="jz_ProfessionChoice" value="5" />
-		<reward type="Item" id="drinkJarBoiledWater" value="1" />
+		<reward type="Item" id="jz_DrinkCleanOuncesOfWater" value="16" />
 		<reward type="Item" id="jz_TatteredShirt" value="1" />
 		<reward type="Item" id="jz_TatteredPants" value="1" />
 		<reward type="Item" id="jz_TatteredShoes" value="1" />
@@ -88,6 +88,8 @@
 		<reward type="Quest" id="jzquest_OutOfShapeRefund" />
 		<reward type="Quest" id="jzquest_HemophobicRefund" />
 		<reward type="Quest" id="jzquest_ThinSkinnedRefund" />
+		<reward type="Quest" id="jzquest_SmokerRefund" />
+		<reward type="Quest" id="jzquest_BadLegRefund" />	
 		<reward type="Quest" id="jzquest_WeakRefund" />
 		<reward type="Quest" id="jzquest_StoneaxeCraftingLv1" />
 		<reward type="Quest" id="jzquest_StoneShovelCraftingLv1" />
@@ -154,13 +156,9 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundSlowDriver" />
-			<property name="count" value="1" />
-		</objective>
+		<objective type="FetchKeep" id="jz_TraitRefundSlowDriver" value="1" phase="1"/>
 		
-		<reward type="Item" id="jz_ProfessionChoice" value="3" />
+		<reward type="Item" id="jz_ProfessionChoice" value="2" />
     </quest>
 	<quest id="jzquest_SleepyRefund">
 		<property name="name_key" value="jzquest_SleepyRefund" />
@@ -171,13 +169,9 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundSleepy" />
-			<property name="count" value="1" />
-		</objective>
-		
-		<reward type="Item" id="jz_ProfessionChoice" value="3" />
+		<objective type="FetchKeep" id="jz_TraitRefundSleepy" value="1" phase="1"/>
+				
+		<reward type="Item" id="jz_ProfessionChoice" value="2" />
     </quest>
 	<quest id="jzquest_ClumsyRefund">
 		<property name="name_key" value="jzquest_ClumsyRefund" />
@@ -188,13 +182,9 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundClumsy" />
-			<property name="count" value="1" />
-		</objective>
-		
-		<reward type="Item" id="jz_ProfessionChoice" value="3" />
+		<objective type="FetchKeep" id="jz_TraitRefundClumsy" value="1" phase="1"/>
+				
+		<reward type="Item" id="jz_ProfessionChoice" value="2" />
     </quest>
 	<quest id="jzquest_AllThumbsRefund">
 		<property name="name_key" value="jzquest_AllThumbsRefund" />
@@ -205,13 +195,9 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundAllThumbs" />
-			<property name="count" value="1" />
-		</objective>
-		
-		<reward type="Item" id="jz_ProfessionChoice" value="3" />
+		<objective type="FetchKeep" id="jz_TraitRefundAllThumbs" value="1" phase="1"/>
+	
+		<reward type="Item" id="jz_ProfessionChoice" value="2" />
     </quest>
 	<quest id="jzquest_WeakStomachRefund">
 		<property name="name_key" value="jzquest_WeakStomachRefund" />
@@ -222,12 +208,8 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundWeakStomach" />
-			<property name="count" value="1" />
-		</objective>
-		
+		<objective type="FetchKeep" id="jz_TraitRefundWeakStomach" value="1" phase="1"/>
+	
 		<reward type="Item" id="jz_ProfessionChoice" value="3" />
     </quest>
 	<quest id="jzquest_AgoraphobicRefund">
@@ -239,12 +221,8 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundAgoraphobic" />
-			<property name="count" value="1" />
-		</objective>
-		
+		<objective type="FetchKeep" id="jz_TraitRefundAgoraphobic" value="1" phase="1"/>
+				
 		<reward type="Item" id="jz_ProfessionChoice" value="3" />
     </quest>
 	<quest id="jzquest_ClaustrophobicRefund">
@@ -256,12 +234,8 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundClaustrophobic" />
-			<property name="count" value="1" />
-		</objective>
-		
+		<objective type="FetchKeep" id="jz_TraitRefundClaustrophobic" value="1" phase="1"/>
+	
 		<reward type="Item" id="jz_ProfessionChoice" value="3" />
     </quest>
 	<quest id="jzquest_BadLegRefund">
@@ -273,12 +247,8 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundBadLeg" />
-			<property name="count" value="1" />
-		</objective>
-		
+		<objective type="FetchKeep" id="jz_TraitRefundBadLeg" value="1" phase="1"/>
+				
 		<reward type="Item" id="jz_ProfessionChoice" value="3" />
     </quest>
 	<quest id="jzquest_AsthmaticRefund">
@@ -290,12 +260,8 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundAsthmatic" />
-			<property name="count" value="1" />
-		</objective>
-		
+		<objective type="FetchKeep" id="jz_TraitRefundAsthmatic" value="1" phase="1"/>
+				
 		<reward type="Item" id="jz_ProfessionChoice" value="3" />
     </quest>
 	<quest id="jzquest_OutOfShapeRefund">
@@ -307,11 +273,7 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundOutOfShape" />
-			<property name="count" value="1" />
-		</objective>
+		<objective type="FetchKeep" id="jz_TraitRefundOutOfShape" value="1" phase="1"/>
 		
 		<reward type="Item" id="jz_ProfessionChoice" value="3" />
     </quest>
@@ -324,13 +286,9 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundSmoker" />
-			<property name="count" value="1" />
-		</objective>
+		<objective type="FetchKeep" id="jz_TraitRefundSmoker" value="1" phase="1"/>
 		
-		<reward type="Item" id="jz_ProfessionChoice" value="3" />
+		<reward type="Item" id="jz_ProfessionChoice" value="4" />
     </quest>
 	<quest id="jzquest_HemophobicRefund">
 		<property name="name_key" value="jzquest_HemophobicRefund" />
@@ -341,13 +299,9 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundHemophobic" />
-			<property name="count" value="1" />
-		</objective>
+		<objective type="FetchKeep" id="jz_TraitRefundHemophobic" value="1" phase="1"/>
 		
-		<reward type="Item" id="jz_ProfessionChoice" value="3" />
+		<reward type="Item" id="jz_ProfessionChoice" value="4" />
     </quest>
 	<quest id="jzquest_ThinSkinnedRefund">
 		<property name="name_key" value="jzquest_ThinSkinnedRefund" />
@@ -358,13 +312,9 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundThinSkinned" />
-			<property name="count" value="1" />
-		</objective>
-		
-		<reward type="Item" id="jz_ProfessionChoice" value="3" />
+		<objective type="FetchKeep" id="jz_TraitRefundThinSkinned" value="1" phase="1"/>
+				
+		<reward type="Item" id="jz_ProfessionChoice" value="4" />
     </quest>
 	<quest id="jzquest_WeakRefund">
 		<property name="name_key" value="jzquest_WeakRefund" />
@@ -375,13 +325,9 @@
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
 
-		<objective type="Craft">
-			<property name="phase" value="1" />
-			<property name="item" value="jz_TraitRefundWeak" />
-			<property name="count" value="1" />
-		</objective>
+		<objective type="FetchKeep" id="jz_TraitRefundWeak" value="1" phase="1"/>
 		
-		<reward type="Item" id="jz_ProfessionChoice" value="3" />
+		<reward type="Item" id="jz_ProfessionChoice" value="4" />
     </quest>
 	
 <!--StoneaxeCrafting -->
@@ -7638,15 +7584,15 @@
 	</quest>
 	<!--Carpenter-->
 	<quest id="StartCarpenter" name_key="challenge_Profession" subtitle_key="Carpenters Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Carpenter" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="meleeToolClawHammer" value="300" />
+		<reward type="Item" id="meleeToolClawHammer" value="3" />
 	</quest>
 	<!--Cop-->
 	<quest id="StartCop" name_key="challenge_Profession" subtitle_key="Cops Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Cop" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="jz_OldRevolver" value="600" />
+		<reward type="Item" id="jz_OldRevolver" value="6" />
 	</quest>
 	<!--Soldier-->
 	<quest id="StartSoldier" name_key="challenge_Profession" subtitle_key="Soldiers Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Soldier" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="jz_OldRifle" value="600" />
+		<reward type="Item" id="jz_OldRifle" value="6" />
 	</quest>
 	<!--Scientist-->
 	<quest id="StartScientist" name_key="challenge_Profession" subtitle_key="Chemists Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Chemist" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">	
@@ -7658,47 +7604,47 @@
 	</quest>
 	<!--Chef-->
 	<quest id="StartChef" name_key="challenge_Profession" subtitle_key="Chefs Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Chef" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="jz_OldKnife" value="600" />
+		<reward type="Item" id="jz_OldKnife" value="6" />
 	</quest>
 	<!--Fitness Instructor-->
 	<quest id="StartFitness" name_key="challenge_Profession" subtitle_key="Fitness Instructors Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Fitness" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="meleeClubBaseballBat" value="300" />
+		<reward type="Item" id="meleeClubBaseballBat" value="3" />
 	</quest>
 	<!--Fireman-->
 	<quest id="StartFireman" name_key="challenge_Profession" subtitle_key="Firemans Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Fireman" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="jz_OldAxe" value="600" />
+		<reward type="Item" id="jz_OldAxe" value="6" />
 	</quest>
 	<!--Iron Worker-->
 	<quest id="StartIronWorker" name_key="challenge_Profession" subtitle_key="Construction Workers Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Construction" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="meleeToolWrench" value="300" />
+		<reward type="Item" id="meleeToolWrench" value="3" />
 	</quest>
 	<!--Electrician-->
 	<quest id="StartElectrician" name_key="challenge_Profession" subtitle_key="Electriciana Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Electrician" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="jz_Screwdriver" value="300" />
+		<reward type="Item" id="jz_Screwdriver" value="3" />
 	</quest>
 	<!--Welder-->
 	<quest id="StartSteelWelder" name_key="challenge_Profession" subtitle_key="Metal Workers Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Metal" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="welderTool" value="300" />
+		<reward type="Item" id="welderTool" value="3" />
 	</quest>
 	<!--Burglar-->
 	<quest id="StartThief" name_key="challenge_Profession" subtitle_key="Burglars Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Burglar" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="jz_OldKnife" value="600" />
+		<reward type="Item" id="jz_OldKnife" value="6" />
 	</quest>
 	<!--Park Ranger-->
 	<quest id="StartRanger" name_key="challenge_Profession" subtitle_key="Park Rangers Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Ranger" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="jz_OldRifle" value="600" />
+		<reward type="Item" id="jz_OldRifle" value="6" />
 	</quest>
 	<!--Mechanic-->
 	<quest id="StartMechanic" name_key="challenge_Profession" subtitle_key="Mechanics Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Mechanic" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="jz_Screwdriver" value="600" />
+		<reward type="Item" id="jz_Screwdriver" value="6" />
 	</quest>
 	<!--Bouncer-->
 	<quest id="StartBouncer" name_key="challenge_Profession" subtitle_key="Bouncer Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Mechanic" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="brassKnuckles" value="300" />
+		<reward type="Item" id="meleeKnucklesIron" value="3" />
 	</quest>
 	<!--Mason-->
 	<quest id="StartMason" name_key="challenge_Profession" subtitle_key="Mason Quests" description_key="challenge_all_offer" icon="ui_game_symbol_Mechanic" repeatable="false" category_key="challenge" offer_key="challenge_all_offer" difficulty="easy">
-		<reward type="Item" id="brickHammer" value="300" />
+		<reward type="Item" id="jz_MasonHammer" value="3" />
 	</quest>
 
 </quests>

@@ -28455,23 +28455,23 @@ NOT the TextureNumber.
 		<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	</property>
 	<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
-	<property name="CraftActionName" value="lblContextActionCook"/>
+	<property name="CraftActionName" value="lblContextActionCraft"/>
 	<property name="CraftIcon" value="ui_game_symbol_spatula"/>
 	<property name="OpenSound" value="open_workbench"/>
 	<property name="CloseSound" value="close_workbench"/>
-	<property name="WorkstationJournalTip" value="campfireTip"/>
 	<property class="RepairItems"> <property name="resourceRockSmall" value="8"/> </property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="" count="0" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Basics"/>
-	<property name="DescriptionKey" value="campfireDesc"/>
+	<property name="DescriptionKey" value="jz_CharacterChoiceComputerDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property name="EconomicBundleSize" value="0"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 	<property name="SortOrder1" value="70i0"/>
+	<property name="CustomIcon" value="ui_game_symbol_Start" />
 </block>
 
 <block name="jz_PrepTable">
@@ -28905,13 +28905,7 @@ NOT the TextureNumber.
 	<property name="IsTerrainDecoration" value="true" />
 	<property name="CanPickup" value="true" />
 	<property name="CustomIcon" value="ui_game_symbol_soldier" />
-	<property name="DescriptionKey" value="professionChoiceDesc" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesSoldier" />
-		<property name="Item" value="professionKey" />
-		<property name="ItemCount" value="1" />
-		<property name="UpgradeHitCount" value="1" />
-	</property>
+	<property name="DescriptionKey" value="jz_ProfessionSoldierKitDesc" />
 	<property name="Group" value="Basics" />
 	<drop event="Destroy" count="0" />
 	<drop event="Fall" name="jz_ProfessionSoldier" count="1" prob="1" />
@@ -28920,11 +28914,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionDoctor">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionDoctorKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_doctor" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesDoctor" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionDoctor" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesDoctor" />
@@ -28939,11 +28930,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionBouncer">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionBouncerKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_bouncer" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesBouncer" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionBouncer" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesBouncer" />
@@ -28958,11 +28946,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionChemist">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionChemistKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_chemist" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesChemist" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionChemist" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesChemist" />
@@ -28977,11 +28962,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionCarpenter">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionCarpenterKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_carpenter" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesCarpenter" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionCarpenter" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesCarpenter" />
@@ -28996,11 +28978,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionCop">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionCopKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_cop" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesCop" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionCop" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesCop" />
@@ -29015,11 +28994,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionChef">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionChefKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_chef" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesChef" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionChef" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesChef" />
@@ -29034,11 +29010,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionFitnessInstructor">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionFitnessInstructorKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_fitness" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesFitnessInstructor" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionFitnessInstructor" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesFitnessInstructor" />
@@ -29053,11 +29026,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionFireman">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionFiremanKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_fireman" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesFireman" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionFireman" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesFireman" />
@@ -29070,32 +29040,26 @@ NOT the TextureNumber.
 	<drop event="Fall" name="jz_SuppliesFireman" count="1" prob="1" />
 </block>
 
-<block name="jz_ProfessionIronWorker">
+<block name="jz_ProfessionMetalWorker">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionMetalWorkerKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_construction" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesIronWorker" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionIronWorker" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesIronWorker" />
+	<property name="DowngradeBlock" value="jz_SuppliesMetalWorker" />
 </block>
 
-<block name="jz_SuppliesIronWorker">
+<block name="jz_SuppliesMetalWorker">
 	<property name="Extends" value="jz_SuppliesSoldier" />
 	<property name="LootList" value="222" />
 	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesIronWorker" count="1" prob="1" />
+	<drop event="Fall" name="jz_SuppliesMetalWorker" count="1" prob="1" />
 </block>
 
 <block name="jz_ProfessionElectrician">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionElectricianKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_electrician" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesElectrician" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionElectrician" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesElectrician" />
@@ -29108,32 +29072,26 @@ NOT the TextureNumber.
 	<drop event="Fall" name="jz_SuppliesElectrician" count="1" prob="1" />
 </block>
 
-<block name="jz_ProfessionSteelWelder">
+<block name="jz_ProfessionFarmer">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionFarmerKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_metal" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesSteelWelder" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionSteelWelder" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesSteelWelder" />
+	<drop event="Fall" name="jz_ProfessionFarmer" count="1" prob="1" />
+	<property name="DowngradeBlock" value="jz_SuppliesFarmer" />
 </block>
 
-<block name="jz_SuppliesSteelWelder">
+<block name="jz_SuppliesFarmer">
 	<property name="Extends" value="jz_SuppliesSoldier" />
 	<property name="LootList" value="224" />
 	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesSteelWelder" count="1" prob="1" />
+	<drop event="Fall" name="jz_SuppliesFarmer" count="1" prob="1" />
 </block>
 
 <block name="jz_ProfessionThief">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionThiefKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_burglar" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesThief" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionThief" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesThief" />
@@ -29148,11 +29106,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionParkRanger">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionParkRangerKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_ranger" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesParkRanger" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionParkRanger" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesParkRanger" />
@@ -29167,11 +29122,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionMechanic">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionMechanicKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_mechanic" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesMechanic" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionMechanic" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesMechanic" />
@@ -29186,11 +29138,8 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionMason">
 	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="professionKitDesc" />
+	<property name="DescriptionKey" value="jz_ProfessionMasonKitDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_mason" />
-	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_SuppliesMason" />
-	</property>
 	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_ProfessionMason" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_SuppliesMason" />
@@ -30200,7 +30149,8 @@ NOT the TextureNumber.
 	<property name="EconomicValue" value="20"/>
 	<property name="FilterTags" value="fbuilding"/>
 	<property name="FilterTags" value="fbuilding,firon"/>
-</block>
+</block> 
+
 <block name="jz_SteelSheetMetal">
 	<property name="DescriptionKey" value="jz_SteelSheetMetalDesc"/>
 	<property name="DisplayType" value="blockHardened"/>
@@ -30217,6 +30167,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fbuilding"/>
 	<property name="FilterTags" value="fbuilding,firon"/>
 </block>
+
 <block name="bikeLoot">
 	<property name="Class" value="Loot" />
 	<property name="Material" value="MdroppedBackpack" />
@@ -30226,6 +30177,7 @@ NOT the TextureNumber.
 	<property name="CanPickup" value="false" />
 	<drop event="Destroy" count="0" />
 </block>
+
 <block name="bikeNABox">
 	<property name="Material" value="Mglass" />
     <property name="CustomIcon" value="ui_game_symbol_bikeNABox" />

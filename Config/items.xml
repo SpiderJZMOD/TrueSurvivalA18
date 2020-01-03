@@ -3112,6 +3112,7 @@ Mesh files no longer used:
 		<property name="SideOffset" value="0,0,0"/>
 		<property name="BarrelOffset" value="0,0,0"/>
 		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+		<property name="DescriptionKey" value="jz_CraftedFirearmDesc" />
 	</property>
 	<property class="Action1">
 		<property name="Class" value="Zoom"/>
@@ -16514,6 +16515,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="5" />
 	<property name="Group" value="Resources" />
 	<property name="SellableToTrader" value="false" />
+	<property name="EconomicValue" value="0"/>
 </item>
 
 <item name="jz_MasterFood">
@@ -16536,94 +16538,124 @@ perkNightStalkerSilentNight
 <!--JZMOD STARTING CHOICE ITEMS-->
 <item name="jz_ProfessionChoice">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_ProfessionChoiceDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="ui_game_symbol_ProfessionChoice" />
 </item>
 
 <item name="jz_TraitRefundSlowDriver">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundSleepy">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 <item name="jz_TraitRefundClumsy">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundAllThumbs">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundWeakStomach">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundAgoraphobic">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundClaustrophobic">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundBadLeg">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundAsthmatic">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundOutOfShape">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundSmoker">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundHemophobic">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundThinSkinned">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 
 <item name="jz_TraitRefundWeak">
 	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Material" value="Mpaper" />
 	<property name="DescriptionKey" value="jz_TraitRefundDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Weight" value="2" />
+	<property name="CustomIcon" value="resourcePaper" />
 </item>
 <!--JZMOD PROFESSIONS-->
-<item name="jz_ProfessionFireFighter">
+<item name="jz_ProfessionFireFighterBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_FiremanProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16634,7 +16666,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item> 
 
-<item name="jz_ProfessionPoliceOfficer">
+<item name="jz_ProfessionPoliceOfficerBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_CopProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16645,7 +16677,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionParkRanger">
+<item name="jz_ProfessionParkRangerBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_ParkRangerProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16656,7 +16688,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionBouncer">
+<item name="jz_ProfessionBouncerBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_BouncerProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16667,7 +16699,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionChef">
+<item name="jz_ProfessionChefBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_ChefProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16678,7 +16710,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionBurglar">
+<item name="jz_ProfessionBurglarBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_ThiefProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16690,7 +16722,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionCarpenter">
+<item name="jz_ProfessionCarpenterBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_CarpenterProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16701,7 +16733,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionMason">
+<item name="jz_ProfessionMasonBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_MasonProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16712,7 +16744,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionSoldier">
+<item name="jz_ProfessionSoldierBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_SoldierProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16723,7 +16755,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionFitnessInstructor">
+<item name="jz_ProfessionFitnessInstructorBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_FitnessInstructorProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16734,7 +16766,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionElectrician">
+<item name="jz_ProfessionElectricianBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_ElectricianProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16745,7 +16777,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionMetalWorker">
+<item name="jz_ProfessionMetalWorkerBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_MetalWorkerProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16756,7 +16788,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionMechanic">
+<item name="jz_ProfessionMechanicBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_MechanicProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16767,7 +16799,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionDoctor">
+<item name="jz_ProfessionDoctorBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_DoctorProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16778,7 +16810,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionFarmer">
+<item name="jz_ProfessionFarmerBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_BouncerProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16789,7 +16821,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_ProfessionChemist">
+<item name="jz_ProfessionChemistBook">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_ChemistProfessionDesc"/>
 	<property name="EconomicValue" value="0"/>
@@ -16804,7 +16836,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartDoctor" />
 	</property>
 </item>
@@ -16813,7 +16845,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartCarpenter" />
 	</property>
 </item>
@@ -16822,7 +16854,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartCop" />
 	</property>
 </item>
@@ -16831,7 +16863,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartSoldier" />
 	</property>
 </item>
@@ -16840,7 +16872,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartBouncer" />
 	</property>
 </item>
@@ -16849,7 +16881,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartChef" />
 	</property>
 </item>
@@ -16858,7 +16890,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartFitness" />
 	</property>
 </item>
@@ -16867,7 +16899,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartIronWorker" />
 	</property>
 </item>
@@ -16876,7 +16908,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartElectrician" />
 	</property>
 </item>
@@ -16885,7 +16917,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartThief" />
 	</property>
 </item>
@@ -16894,7 +16926,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartRanger" />
 	</property>
 </item>
@@ -16903,7 +16935,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartMechanic" />
 	</property>
 </item>
@@ -16912,7 +16944,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartFireman" />
 	</property>
 </item>
@@ -16921,7 +16953,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartScientist" />
 	</property>
 </item>
@@ -16930,16 +16962,23 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="challengeQuestMaster" />
 	<property name="CustomIcon" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_ProfessionGroupDesc" />
-	<property class="Action1">
+	<property class="Action0">
 		<property name="QuestGiven" value="StartMason" />
 	</property>
 </item>
 <!--JZMOD NEGATIVE TRAITS-->
+	
 <item name="jz_NegativeTraitSlowDriver">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Use_time" value="0"/>
+		<property name="Sound_start" value="read_mod"/>
+		<property name="Create_item" value="jz_TraitRefundSlowDriver"/>
+		<property name="Create_item_count" value="1"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitSlowDriver" level="-1"/>
@@ -16947,10 +16986,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitSleepy">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitSleepyDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundSleepy"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitSleepy" level="-1"/>
@@ -16958,10 +16997,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitClumsy">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitClumsyDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundClumsy"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitClumsy" level="-1"/>
@@ -16969,21 +17008,21 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitAllThumbs">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitAllThumbsDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundAllThumbs"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitAllThumbs" level="-1"/>
 	</effect_group>
 </item>
 
-<item name="jz_NegativeTraitStomach">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+<item name="jz_NegativeTraitWeakStomach">
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitWeakStomachDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundWeakStomach"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitWeakStomach" level="-1"/>
@@ -16991,10 +17030,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitAgoraphobic">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitAgoraphobicDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundAgoraphobic"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitAgoraphobic" level="-1"/>
@@ -17002,10 +17041,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitClaustrophobic">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitClaustrophobicDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundClaustrophobic"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitClaustrophobicTraits" level="-1"/>
@@ -17013,10 +17052,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitBadLeg">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitBadLegDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundBadLeg"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitBadLeg" level="-1"/>
@@ -17024,10 +17063,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitAsthmatic">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitAsthmaticDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundAsthmatic"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitAsthmatic" level="-1"/>
@@ -17035,10 +17074,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitOutOfShape">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitOutOfShapeDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundOutOfShape"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitOutOfShape" level="-1"/>
@@ -17046,10 +17085,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitSmoker">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitSmokerDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundSmoker"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitSmoker" level="-1"/>
@@ -17057,10 +17096,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitHemophobic">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitHemophobicDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundHemophobic"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitHemophobic" level="-1"/>
@@ -17068,10 +17107,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitThinSkinned">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitThinSkinnedDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundThinSkinned"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitThinSkinned" level="-1"/>
@@ -17079,10 +17118,10 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_NegativeTraitWeak">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
-	<property name="EconomicValue" value="0"/>
+	<property name="Extends" value="jz_NegativeTraitSlowDriver"/>
+	<property name="DescriptionKey" value="jz_NegativeTraitWeakDesc"/>
 	<property class="Action0">
+		<property name="Create_item" value="jz_TraitRefundWeak"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="jz_TraitWeak" level="-1"/>
@@ -17091,7 +17130,7 @@ perkNightStalkerSilentNight
 <!--JZMOD POSITIVE TRAITS-->
 <item name="jz_PositiveTraitFastDriver"> 
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitFastDriverDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17102,7 +17141,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitWakeful">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitWakefulDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17113,7 +17152,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitGraceful">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitGracefulDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17124,7 +17163,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitDexterous">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitDexterousDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17135,7 +17174,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitIronGut">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitIronGutDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17146,7 +17185,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitOutdoorsman">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitOutdoorsmanDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17157,7 +17196,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitFit">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitFitDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17168,7 +17207,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitThickSkinned">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitThickSkinnedDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17179,7 +17218,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitGymnast">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitGymnastDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17190,7 +17229,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitMedic">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitMedicDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17201,7 +17240,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitAmateurMechanic">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitAmateurMechanicDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17212,7 +17251,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitHunter">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitHunterDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17223,7 +17262,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitRunner">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitRunnerDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17234,7 +17273,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PositiveTraitStout">
 	<property name="Extends" value="schematicMaster"/>
-	<property name="DescriptionKey" value="jz_SlowDriverTraitDesc"/>
+	<property name="DescriptionKey" value="jz_PositiveTraitStoutDesc"/>
 	<property name="EconomicValue" value="0"/>
 	<property class="Action0">
 	</property>
@@ -17464,6 +17503,7 @@ perkNightStalkerSilentNight
 	<property name="SellableToTrader" value="false" />
 	<property name="UnlockedBy" value="jz_HandCraftedFireArms"/>
 	<property name="ShowQuality" value="true"/>
+	<property name="DescriptionKey" value="jz_CraftedFirearmDesc" />
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Magazine_items" value="ammo9mmBulletBall"/>
@@ -17549,6 +17589,7 @@ perkNightStalkerSilentNight
 	<property name="UnlockedBy" value="jz_HandCraftedFireArms"/>
 	<property name="ShowQuality" value="true"/>
 	<property name="SellableToTrader" value="false" />
+	<property name="DescriptionKey" value="jz_CraftedFirearmDesc" />
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value=".5"/> 
@@ -17625,9 +17666,9 @@ perkNightStalkerSilentNight
 </item>
 
 <!-- JZMOD GUN PARTS -->
-<item name="jz_PartsCraftedRifleRreceiver">
+<item name="jz_PartsCraftedRifleReceiver">
 	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="craftedRiflePartsDesc" />
+	<property name="DescriptionKey" value="CraftedGunPartsDesc" />
 	<property name="CustomIcon" value="partsHuntingRifle_receiver" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
@@ -17636,7 +17677,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PartsCraftedRifleStock">
 	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="craftedRiflePartsDesc" />
+	<property name="DescriptionKey" value="CraftedGunPartsDesc" />
 	<property name="CustomIcon" value="partsHuntingRifle_stock" />
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="10" />
@@ -17645,7 +17686,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_PartsCraftedRifleBarrel">
 	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="craftedRiflePartsDesc" />
+	<property name="DescriptionKey" value="CraftedGunPartsDesc" />
 	<property name="CustomIcon" value="partsHuntingRifle_barrel" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
@@ -18866,6 +18907,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="EconomicValue" value="0"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
+	<property name="CustomIcon" value="ui_game_symbol_DirtyWater" />
+	<property name="DescriptionKey" value="jz_DrinkDirtyOuncesOfWaterDesc" />
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="0"/>
@@ -18895,6 +18938,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_DrinkDrityDrinkOfWater">
 	<property name="Extends" value="jz_DrinkDirtyOuncesOfWater" />
 	<property name="Stacknumber" value="1"/> 
+	<property name="DescriptionKey" value="jz_DrinkDrityDrinkOfWaterDesc" />
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
 
@@ -18922,6 +18966,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="128"/> 
 	<property name="EconomicValue" value="40"/>
+	<property name="CustomIcon" value="ui_game_symbol_CleanWater" />
+	<property name="DescriptionKey" value="jz_DrinkCleanOuncesOfWaterDesc" />
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1"/>
@@ -18941,8 +18987,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <item name="jz_DrinkCleanDrinkOfWater">
-	<property name="Extends" value="jz_DrinkDirtyOuncesOfWater" />
+	<property name="Extends" value="jz_DrinkCleanOuncesOfWater" />
 	<property name="Stacknumber" value="1"/> 
+	<property name="DescriptionKey" value="jz_DrinkCleanDrinkOfWaterDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_CleanWater" />
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/>
@@ -22085,6 +22133,30 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="Group" value="Science" />
 </item>
 <!--JZMOD OTHER-->
+<item name="jz_StartingGuide">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Morganic" />
+	<property name="Weight" value="50" />
+	<property name="DescriptionKey" value="jz_MminibikeSeatDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_MminibikeSeat" />
+</item>
+
+<item name="jz_MinibikeSeat">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Morganic" />
+	<property name="Weight" value="50" />
+	<property name="DescriptionKey" value="jz_MinibikeSeatDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_MinibikeSeat" />
+</item>
+
+<item name="jz_BikeWheels">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mrubber" />
+	<property name="Weight" value="50" />
+	<property name="DescriptionKey" value="jz_BikeWheelsDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_BikeWheels" />
+</item>
+
 <item name="jz_SmallLoom">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mmetal" />

@@ -2550,182 +2550,139 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="unit_clay" count="1"/>
 </recipe>
 <!-- *********************************************************TRUE SURVIVAL RECIPES *************************************************************** -->
-<!--Negative Trait Refunds -->
-<recipe name="jz_TraitRefundSlowDriver" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_SlowDriverTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundSleepy" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_SleepyTraitRefund">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundClumsy" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_ClumsyTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundAllThumbs" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_AllThumbsTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundWeakStomach" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_WeakStomachTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundAgoraphobic" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_AgoraphobicTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundClaustrophobic" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_ClaustrophobicTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundBadLeg" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_BadLegTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundAsthmatic" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_AsthmaticTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundOutOfShape" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_OutOfShapeTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundSmoker" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_SmokerTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundHemophobic" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_HemophobicTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundThinSkinned" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_ThinSkinnedTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
-<recipe name="jz_TraitRefundWeak" count="1" craft_area="jz_CharacterChoiceComputer" tags="learnable,jz_WeakTraitRefundTag">
-	<ingredient name="resourceYuccaFibers" count="1"/>
-</recipe>
 <!-- Starting Negative Choices -->
-<recipe name="jz_NegativeTraitSlowDriver" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitSlowDriver" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitSleepy" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitSleepy" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitClumsy" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitClumsy" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitAllThumbs" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitAllThumbs" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitStomach" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitWeakStomach" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitAgoraphobic" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitAgoraphobic" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitClaustrophobic" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitClaustrophobic" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitBadLeg" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitBadLeg" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitAsthmatic" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitAsthmatic" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitOutOfShape" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitOutOfShape" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitSmoker" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitSmoker" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitHemophobic" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitHemophobic" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitThinSkinned" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitThinSkinned" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_NegativeTraitWeak" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_NegativeTraitWeak" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
 <!-- Starting Positive Choices -->
-<recipe name="jz_PositiveTraitFastDriver" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitFastDriver" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_PositiveTraitWakeful" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitWakeful" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_PositiveTraitGraceful" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitGraceful" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="1"/>
 </recipe>
-<recipe name="jz_PositiveTraitDexterous" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitDexterous" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="2"/>
 </recipe>
-<recipe name="jz_PositiveTraitIronGut" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitIronGut" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="2"/>
 </recipe>
-<recipe name="jz_PositiveTraitOutdoorsman" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitOutdoorsman" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="2"/>
 </recipe>
-<recipe name="jz_PositiveTraitFit" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitFit" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="3"/>
 </recipe>
-<recipe name="jz_PositiveTraitThickSkinned" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitThickSkinned" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="3"/>
 </recipe>
-<recipe name="jz_PositiveTraitGymnast" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitGymnast" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="3"/>
 </recipe>
-<recipe name="jz_PositiveTraitMedic" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitMedic" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="3"/>
 </recipe>
-<recipe name="jz_PositiveTraitAmateurMechanic" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitAmateurMechanic" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="4"/>
 </recipe>
-<recipe name="jz_PositiveTraitHunter" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitHunter" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="4"/>
 </recipe>
-<recipe name="jz_PositiveTraitRunner" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitRunner" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="4"/>
 </recipe>
-<recipe name="jz_PositiveTraitStout" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_PositiveTraitStout" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="4"/>
 </recipe>
 <!-- Starting Profession Choices -->
-<recipe name="jz_ProfessionFireFighter" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionFireman" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="8"/>
 </recipe>
-<recipe name="jz_ProfessionPoliceOfficer" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionCop" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="8"/>
 </recipe>
-<recipe name="jz_ProfessionParkRanger" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionParkRanger" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="8"/>
 </recipe>
-<recipe name="jz_ProfessionBouncer" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionBouncer" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="8"/>
 </recipe>
-<recipe name="jz_ProfessionChef" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionChef" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="8"/>
 </recipe>
-<recipe name="jz_ProfessionBurglar" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionThief" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="8"/>
 </recipe>
-<recipe name="jz_ProfessionCarpenter" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionCarpenter" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="9"/>
 </recipe>
-<recipe name="jz_ProfessionMason" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionMason" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="9"/>
 </recipe>
-<recipe name="jz_ProfessionSoldier" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionSoldier" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="9"/>
 </recipe>
-<recipe name="jz_ProfessionFitnessInstructor" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionFitnessInstructor" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="9"/>
 </recipe>
-<recipe name="jz_ProfessionElectrician" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionElectrician" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="9"/>
 </recipe>
-<recipe name="jz_ProfessionMetalWorker" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionMetalWorker" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="10"/>
 </recipe>
-<recipe name="jz_ProfessionMechanic" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionMechanic" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="10"/>
 </recipe>
-<recipe name="jz_ProfessionDoctor" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionDoctor" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="11"/>
 </recipe>
-<recipe name="jz_ProfessionFarmer" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionFarmer" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="11"/>
 </recipe>
-<recipe name="jz_ProfessionChemist" count="1" craft_area="jz_CharacterChoiceComputer" >
+<recipe name="jz_ProfessionChemist" count="1" craft_area="jz_CharacterChoiceComputer" craft_time="3" craft_exp_gain="0">
 	<ingredient name="jz_ProfessionChoice" count="11"/>
 </recipe>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * JZMOD ADDED RECIPES * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

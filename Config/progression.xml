@@ -1590,7 +1590,7 @@
 		</effect_group>
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalFirstAidBandage,thrownAmmoMolotovCocktail"/>
-			<passive_effect name="StaminaMax" operation="perc_add" level="1" value=".5"/>
+			<passive_effect name="StaminaMax" operation="perc_add" level="1" value=".05"/>
 			
 			<effect_description level="1" desc_key="jz_FireFighterRank1Desc" long_desc_key="jz_FireFighter1LongDesc"/>
 		</effect_group>
@@ -1630,7 +1630,7 @@
 				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.1" tags="secondary"/>
 		</effect_group>	
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeKnucklesLeather,meleeKnucklesLeather"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MoldBrassKnuckles,meleeKnucklesIron,meleeKnucklesLeather,drinkJarBeer,jz_DrinkMead,drinkJarGrainAlcohol"/>
 		
 			<effect_description level="1" desc_key="jz_BouncerRank1Desc" long_desc_key="jz_BouncerLongDesc"/>
 		</effect_group>
@@ -1668,7 +1668,7 @@
 	<!-- Mason -->
 	<perk name="jz_Mason" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mason" desc_key="jz_MasonDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MasonTag"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MasonHammer,flagstoneBlockVariantHelper,brickBlockVariantHelper,jz_Bricks,resourceCobblestones"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MasonTag"/>
 			<effect_description level="1" desc_key="jz_MasonRank1Desc" long_desc_key="jz_MasonLongDesc"/>
 		</effect_group>
@@ -1881,9 +1881,6 @@
 	</perk>
 	<!-- ******************************************************************  Negative Traits  ******************************************************************************** -->
 	<perk name="jz_TraitSlowDriver" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sunday Driver" desc_key="jz_TraitSlowDriverDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_SlowDriverTraitRefundTag"/>
-		</effect_group>
 		<!--5% slower driver -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitSlowDriverDesc" long_desc_key="jz_TraitSlowDriverLongDesc"/>
@@ -1892,17 +1889,12 @@
 	<perk name="jz_TraitSleepy" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sleepy" desc_key="jz_TraitSleepyDesc" icon="ui_game_symbol_mining">
 		<!--20% slower tiered recovery -->
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_TraitRefundSleepy"/>
-		</effect_group>
-		
-		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitSleepyDesc" long_desc_key="jz_TraitSleepyLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitClumsy" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Clumsy" desc_key="jz_TraitClumsyDesc" icon="ui_game_symbol_mining">
 		<!--10% more noise moving -->
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ClumsyTraitRefundTag"/>
 			<passive_effect name="NoiseMultiplier" operation="perc_add" level="1" value=".1" />
 		</effect_group>
 		<effect_group>
@@ -1912,7 +1904,6 @@
 	<perk name="jz_TraitAllThumbs" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="All Thumbs" desc_key="jz_TraitAllThumbsDesc" icon="ui_game_symbol_mining">
 		<!--10% slower crafting 10% slower lock-picking -->
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_AllThumbsTraitRefundTag"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="0.1" />
 			<passive_effect name="LockPickTime" operation="perc_add" level="1" value="0.1" />
 		</effect_group>
@@ -1922,9 +1913,6 @@
 	</perk>
 	<perk name="jz_TraitWeakStomach" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Weak Stomach" desc_key="jz_TraitWeakStomachDesc" icon="ui_game_symbol_mining">
 		<!--15% more chance for food illnesses -->
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_WeakStomachTraitRefundTag"/>
-		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitWeakStomachDesc" long_desc_key="jz_TraitWeakStomachLongDesc"/>
 		</effect_group>
@@ -1946,9 +1934,6 @@
 				<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" level="1" value="-.1"/>
 				<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" level="1" value="-.1"/>
 				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="1" value="-.1"/>
-		</effect_group>
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_AgoraphobicTraitRefundTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitAgoraphobicDesc" long_desc_key="jz_TraitAgoraphobicLongDesc"/>
@@ -1973,16 +1958,10 @@
 				<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="1" value="-.1"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ClaustrophobicTraitRefundTag"/>
-		</effect_group>
-		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitClaustrophobicDesc" long_desc_key="jz_TraitClaustrophobicLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitBadLeg" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Bad Leg" desc_key="jz_TraitBadLegDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_BadLegTraitRefundTag"/>
-		</effect_group>
 		<!--Bad Leg Buff -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitBadLegDesc" long_desc_key="jz_TraitBadLegLongDesc"/>
@@ -1991,7 +1970,6 @@
 	<perk name="jz_TraitAsthmatic" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Asthmatic" desc_key="jz_TraitAsthmaticDesc" icon="ui_game_symbol_mining">
 		<!--20% slower Stam Regan -->
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_AsthmaticTraitRefundTag"/>
 			<passive_effect name="StaminaChangeOT" operation="perc_subtract" level="1" value=".2"/>
 		</effect_group>
 		<effect_group>
@@ -2006,7 +1984,6 @@
 				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="0.05" tags="secondary"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_OutOfShapeTraitRefundTag"/>
 			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="-.05">
 				<requirement name="HasBuff" buff="buffEncumberedInv"/></passive_effect>
 		</effect_group>
@@ -2017,7 +1994,6 @@
 	<perk name="jz_TraitSmoker" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Smoker" desc_key="jz_TraitSmokerDesc" icon="ui_game_symbol_mining">
 		<!--Smoking Adiction, 20% slower stam regan while running, 10% slower top speed -->
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_SmokerTraitRefundTag"/>
 			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="-0.2" tags="running"/>
 			<passive_effect name="RunSpeed" operation="perc_subtract" level="1" value="0.1"/>
 		</effect_group>
