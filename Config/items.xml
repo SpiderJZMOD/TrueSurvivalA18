@@ -17810,7 +17810,7 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Ammo/Weapons" />
 </item>
 
-<item name="jz_PartsCompoundBowCord">
+<item name="jz_PartsCompoundCrossbowCord">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="CompoundCrossbowPartsDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundBowCord" />
@@ -17827,7 +17827,6 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
 </item>
-
 
 <item name="jz_PartsPistolBarrel">
 	<property name="Extends" value="jz_MasterItem" />
@@ -18175,13 +18174,14 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="jz_SteakKnife" />
 	<property name="DegradationBreaksAfter" value="true" />
 	<property name="CustomIcon" value="ui_game_symbol_cookingKnife" />
+    <property name="DescriptionKey" value="jz_OldKnifeDesc" />
 </item>
 
 <item name="jz_ChefKnife">
 	<property name="Extends" value="meleeToolKnifeIron" />
 	<property name="CustomIcon" value="ui_game_symbol_chefKnife" />
 	<property name="RepairTools" value="jz_CantRepair" />
-	<property name="DescriptionKey" value="steakKnifeDesc" />
+	<property name="DescriptionKey" value="jz_ChefKnifeDesc" />
 </item>
 
 <item name="jz_OldAxe">
@@ -18319,6 +18319,7 @@ perkNightStalkerSilentNight
 	<property name="EconomicValue" value="350"/>
 	<property name="UnlockedBy" value="meleeToolWrenchSchematic"/>
 	<property name="ShowQuality" value="true"/>
+    <property name="DescriptionKey" value="jz_MasonHammerDesc" />
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sound_start" value="swoosh"/>
@@ -18388,6 +18389,7 @@ perkNightStalkerSilentNight
 	<property name="EconomicValue" value="350"/>
 	<property name="UnlockedBy" value="meleeToolWrenchSchematic"/>
 	<property name="ShowQuality" value="true"/>
+    <property name="DescriptionKey" value="jz_ConcreteSledgeDesc" />
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sound_start" value="swoosh"/>
