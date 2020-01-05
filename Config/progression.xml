@@ -75,6 +75,13 @@
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillNextLvTotal" operation="set" value="3"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillLvAdd" operation="set" value="3"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillNextLvTotal" operation="set" value="3"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ClothArmorCraftingLvAdd" operation="set" value="3"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ClothArmorCraftingNextLvTotal" operation="set" value="3"/>
+			
+			
+			
+			
+			
 			<effect_description level="1"  desc_key="jz_ActionSkillDesc" long_desc_key="jz_ActionSkillLongDesc"/>
 		</effect_group>
 	</attribute>
@@ -1068,11 +1075,34 @@
 			<effect_description level="5" desc_key="jz_CarBatteryCraftingRank5Desc" long_desc_key="jz_CarBatteryCraftingRank5LongDesc"/>
 		</effect_group>
 	</perk>
-	<!-- ClothArmorCrafting-->
+	<!--  Crafting-->
 	<perk name="jz_ClothArmorCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Cloth Armor Crafting" desc_key="jz_ClothArmorCraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClothArmorCraftingTag"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ClothArmorCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_ClothArmorCraftingLv" operation="LT" value="5"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ClothArmorInspectionTag"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="jz_ClothArmorCraftingXP" operation="add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_ClothArmorCraftingLv" operation="LT" value="5"/>
+			<requirement name="CVarCompare" cvar="jz_ClothArmorCraftingXP" operation="GTE" value="@jz_ClothArmorCraftingNextLvTotal"/>
+			<requirement name="HoldingItemHasTags" tags="jz_ClothArmorInspectionTag"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_ClothArmorCraftingLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_ClothArmorCraftingNextLvTotal" operation="add" value="@jz_ClothArmorCraftingLvAdd"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_ClothArmorCraftingLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="You have leveled up Cloth Armor Crafting!!"/>
+		</effect_group>
+		<effect_group> 
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ClothArmorCraftingXP" operation="add" value="@jz_ClothArmorCraftingLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ClothArmorCraftingLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ClothArmorCraftingNextLvTotal" operation="add" value="@jz_ClothArmorCraftingLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ClothArmorCraftingLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up Cloth Armor Crafting!"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_ClothArmorCraftingRank1Desc" long_desc_key="jz_ClothArmorCraftingRank1LongDesc"/>
