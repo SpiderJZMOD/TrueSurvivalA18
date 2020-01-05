@@ -189,179 +189,160 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_MeltedRubber" count="2"/>
 </recipe>
 
-<recipe name="barbedFence" count="1" craft_time="5"> 
-	<ingredient name="resourceScrapIron" count="8"/>
-	<ingredient name="jz_Plank" count="10"/>
-</recipe>
-
-<recipe name="bedroll" count="1" craft_time="10" >
+<recipe name="bedroll" count="1" craft_time="10" craft_exp_gain="5" >
 	<ingredient name="resourceYuccaFibers" count="10"/>
 </recipe>
 
-<recipe name="brickBlockVariantHelper" count="1" craft_time="5" >
-	<ingredient name="jz_Stick" count="20"/>
-	<ingredient name="jz_FiberRope" count="1"/>
-</recipe>
-
-<recipe name="campfire" count="1" craft_time="30" >
+<recipe name="campfire" count="1" craft_time="30" craft_exp_gain="5">
 	<ingredient name="resourceRockSmall" count="16"/>
 	<ingredient name="resourceYuccaFibers" count="4"/>
 </recipe>
 
-<recipe name="candleTableLightPlayer" count="1" craft_time="5" >
+<recipe name="candleTableLightPlayer" count="1" craft_time="1" craft_exp_gain="0">
 	<ingredient name="candle" count="1"/>
 </recipe>
 
-<recipe name="woodSignBlockVariantHelper" count="1" craft_time="5" >
-	<ingredient name="resourceNail" count="10"/>
-	<ingredient name="jz_Plank" count="10"/>
-</recipe>
-<recipe name="flagstoneBlockVariantHelper" count="1">
-	<ingredient name="jz_Stick" count="20"/>
-	<ingredient name="jz_FiberRope" count="1"/>
-</recipe>
-
-<recipe name="farmPlotBlockPlayer" count="1" craft_time="30">
+<recipe name="farmPlotBlockPlayer" count="1" craft_time="10" craft_exp_gain="50" tags="learnable">
 	<ingredient name="jz_Plank" count="4"/>
 	<ingredient name="jz_FoodBioMass" count="10"/>
 	<ingredient name="resourcePotassiumNitratePowder" count="25"/>
 	<ingredient name="dirtFragment" count="100"/>
 </recipe>
 
-<recipe name="forge" count="1" craft_time="60" craft_exp_gain="100" tags="learnable">
+<recipe name="forge" count="1" craft_time="60" craft_exp_gain="300" tags="learnable">
 	<ingredient name="resourceRockSmall" count="100"/>
 	<ingredient name="resourceClayLump" count="100"/>
 	<ingredient name="toolBellows" count="1"/>
 	<ingredient name="resourceMetalPipe" count="3"/>
 </recipe>
 
-<recipe name="gunBowPrimitive" count="1" craft_time="30" craft_exp_gain="25" tags="jz_PrimitiveBowCraftingTag">
+<recipe name="gunBowPrimitive" count="1" craft_time="30" craft_exp_gain="5" tags="jz_PrimitiveBowCraftingTag">
 	<ingredient name="jz_WoodBranch" count="4"/>
 	<ingredient name="jz_FiberRope" count="3"/>
 </recipe> 
 
-<recipe name="jz_PartsOldRevolverCylinder" count="1" craft_time="5" craft_exp_gain="0">
+<recipe name="jz_PartsOldRevolverCylinder" count="1" craft_time="15" craft_exp_gain="50">
 	<ingredient name="jz_OldRevolver" count="4"/>
 </recipe> 
 
-<recipe name="hayBaleBlock" count="1" craft_time="5" craft_exp_gain="0">
+<recipe name="hayBaleBlock" count="1" craft_time="5" craft_exp_gain="1">
 	<ingredient name="resourceYuccaFibers" count="10"/>
 </recipe>
 
-<recipe name="medicalAloeCream" count="1" craft_exp_gain="10" craft_time="4" tags="learnable">
+<recipe name="medicalAloeCream" count="1" craft_exp_gain="5" craft_time="10" tags="learnable">
 	<ingredient name="resourceCropAloeLeaf" count="5"/>
 </recipe>
 
-<recipe name="medicalBandage" count="1" craft_exp_gain="10" craft_time="4" tags="learnable">
+<recipe name="medicalBandage" count="1" craft_exp_gain="5" craft_time="10" >
 	<ingredient name="resourceCloth" count="3"/>
 </recipe>
 
-<recipe name="medicalFirstAidBandage" count="1" craft_exp_gain="10" craft_time="4" tags="learnable">
+<recipe name="medicalFirstAidBandage" count="1" craft_exp_gain="10" craft_time="10" tags="learnable">
 	<ingredient name="medicalAloeCream" count="1"/>
 	<ingredient name="medicalBandage" count="1"/>
 </recipe>
 
-<recipe name="medicalFirstAidBandage" count="1" craft_exp_gain="10" craft_time="4" tags="learnable">
+<recipe name="medicalFirstAidBandage" count="1" craft_exp_gain="10" craft_time="10" tags="learnable">
 	<ingredient name="jz_MedicalHerbalCream" count="1"/>
 	<ingredient name="medicalBandage" count="1"/>
 </recipe>
 
-<recipe name="medicalSplint" count="1" craft_time="10" craft_exp_gain="20" tags="learnable">
+<recipe name="medicalSplint" count="1" craft_time="10" craft_exp_gain="10" tags="learnable">
 	<ingredient name="resourceCloth" count="2"/>
 	<ingredient name="jz_Stick" count="4"/>
 	<ingredient name="jz_FiberRope" count="4"/>
 </recipe>
 
-<recipe name="meleeToolKnifeBone" count="1" craft_time="30" craft_exp_gain="20" tags="jz_BoneKnifeCraftingTag">
+<recipe name="meleeToolKnifeBone" count="1" craft_time="30" craft_exp_gain="5" tags="jz_BoneKnifeCraftingTag">
 	<ingredient name="resourceBone" count="1"/>
 </recipe>
 
-<recipe name="meleeClubWood" count="1" craft_time="30" craft_exp_gain="20" tags="jz_WoodenClubCraftingTag"> 
+<recipe name="meleeClubWood" count="1" craft_time="30" craft_exp_gain="5" tags="jz_WoodenClubCraftingTag"> 
 	<ingredient name="jz_WoodBranch" count="10"/>
 	<ingredient name="jz_FiberRope" count="5"/>
 </recipe>
 
-<recipe name="meleeToolClawHammer" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_ClawHammerCraftingTag">
+<recipe name="meleeToolClawHammer" count="1" craft_time="30" craft_exp_gain="10" tags="learnable,jz_ClawHammerCraftingTag">
 	<ingredient name="jz_HammerHead" count="1"/>
 	<ingredient name="resourceGlue" count="1"/>
 	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
-<recipe name="meleeToolFireaxeIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronFireaxeCraftingTag">
+<recipe name="meleeToolFireaxeIron" count="1" craft_time="30" craft_exp_gain="25" tags="learnable,jz_IronFireaxeCraftingTag">
 	<ingredient name="jz_IronFireaxeHead" count="1"/>
 	<ingredient name="resourceGlue" count="1"/>
 	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
-<recipe name="meleeToolFireaxeSteel" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_SteelFireaxeCraftingTag">
+<recipe name="meleeToolFireaxeSteel" count="1" craft_time="30" craft_exp_gain="100" tags="learnable,jz_SteelFireaxeCraftingTag">
 	<ingredient name="jz_SteelFireaxeHead" count="1"/>
 	<ingredient name="resourceGlue" count="1"/>
 	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
-<recipe name="meleeThrownSpearStone" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_StoneSpearCraftingTag">
+<recipe name="meleeThrownSpearStone" count="1" craft_time="30" craft_exp_gain="5" tags="learnable,jz_StoneSpearCraftingTag">
 	<ingredient name="resourceRockSmall" count="5"/>
 	<ingredient name="jz_FiberRope" count="2"/>
 	<ingredient name="jz_Stick" count="10"/>
 </recipe>
 
-<recipe name="meleeThrownSpearIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronSpearCraftingTag">
+<recipe name="meleeThrownSpearIron" count="1" craft_time="30" craft_exp_gain="25" tags="learnable,jz_IronSpearCraftingTag">
 	<ingredient name="resourceForgedIron" count="16"/>
 	<ingredient name="jz_Stick" count="10"/>
 	<ingredient name="resourceLeather" count="2"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 </recipe>
 
-<recipe name="meleeToolKnifeMachete" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" craft_time="30" craft_exp_gain="20" tags="learnable,jz_MacheteCraftingTag">
+<recipe name="meleeToolKnifeMachete" count="1" craft_time="30" craft_exp_gain="25" tags="learnable,jz_MacheteCraftingTag">
 	<ingredient name="jz_LargeKnifeBlade" count="1"/>
 	<ingredient name="jz_MeltedRubber" count="2"/>
 	<ingredient name="jz_Stick" count="3"/>
 </recipe>
 
-<recipe name="meleeToolPickaxeIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronPickaxeCraftingTag">
+<recipe name="meleeToolPickaxeIron" count="1" craft_time="30" craft_exp_gain="25" tags="learnable,jz_IronPickaxeCraftingTag">
 	<ingredient name="jz_IronPickaxeHead" count="1"/>
 	<ingredient name="jz_Stick" count="5"/>
 	<ingredient name="resourceGlue" count="1"/>
 </recipe>
 
-<recipe name="meleeToolPickaxeSteel" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_SteelPickaxeCraftingTag">
+<recipe name="meleeToolPickaxeSteel" count="1" craft_time="30" craft_exp_gain="100" tags="learnable,jz_SteelPickaxeCraftingTag">
 	<ingredient name="jz_SteelPickaxeHead" count="1"/>
 	<ingredient name="jz_Stick" count="5"/>
 	<ingredient name="resourceGlue" count="1"/>
 </recipe>
 
-<recipe name="meleeToolShovelIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronShovelCraftingTag">
+<recipe name="meleeToolShovelIron" count="1" craft_time="30" craft_exp_gain="25" tags="learnable,jz_IronShovelCraftingTag">
 	<ingredient name="jz_IronShovelHead" count="1"/>
 	<ingredient name="jz_Stick" count="5"/>
 	<ingredient name="resourceNail" count="1"/>
 </recipe>
 
-<recipe name="meleeToolShovelSteel" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_SteelShovelCraftingTag">
+<recipe name="meleeToolShovelSteel" count="1" craft_time="30" craft_exp_gain="100" tags="learnable,jz_SteelShovelCraftingTag">
     <ingredient name="jz_SteelShovelHead" count="1"/>
 	<ingredient name="jz_Stick" count="5"/>
 	<ingredient name="resourceNail" count="1"/>
 </recipe>
 
-<recipe name="meleeToolShovelStone" count="1" craft_time="30" craft_exp_gain="20" tags="jz_StoneShovelCraftingTag">
+<recipe name="meleeToolShovelStone" count="1" craft_time="30" craft_exp_gain="5" tags="jz_StoneShovelCraftingTag">
 	<ingredient name="resourceRockSmall" count="6"/>
 	<ingredient name="jz_FiberRope" count="2"/>
 	<ingredient name="jz_WoodBranch" count="2"/>
 </recipe>
 
-<recipe name="meleeToolSledgehammerStone" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_StoneSledgeCraftingTag">
+<recipe name="meleeToolSledgehammerStone" count="1" craft_time="30" craft_exp_gain="5" tags="learnable,jz_StoneSledgeCraftingTag">
 	<ingredient name="resourceRockSmall" count="10"/>
 	<ingredient name="jz_FiberRope" count="5"/>
 	<ingredient name="jz_Stick" count="10"/>
 </recipe>
 
-<recipe name="meleeToolSledgehammerIron" count="1" craft_time="30" craft_exp_gain="20" tags="learnable,jz_IronSledgeCraftingTag">
+<recipe name="meleeToolSledgehammerIron" count="1" craft_time="30" craft_exp_gain="25" tags="learnable,jz_IronSledgeCraftingTag">
 	<ingredient name="resourceForgedIron" count="30"/>
-	<ingredient name="resourceWood" count="10"/>
+	<ingredient name="jz_Stick" count="10"/>
 	<ingredient name="resourceLeather" count="2"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 </recipe>
 
-<recipe name="meleeToolStoneAxe" count="1" craft_time="30" craft_exp_gain="20" tags="jz_StoneaxeCraftingTag">
+<recipe name="meleeToolStoneAxe" count="1" craft_time="30" craft_exp_gain="5" tags="jz_StoneaxeCraftingTag">
 	<ingredient name="resourceRockSmall" count="5"/>
 	<ingredient name="jz_FiberRope" count="2"/>
 	<ingredient name="jz_WoodBranch" count="3"/>
@@ -370,13 +351,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="meleeToolTorch" count="1" craft_time="30" craft_exp_gain="20">
 	<ingredient name="jz_Tallow" count="1"/>
 	<ingredient name="resourceCloth" count="1"/>
-	<ingredient name="jz_WoodBranch" count="5"/>
+	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
 <recipe name="meleeToolTorch" count="1" craft_time="30" craft_exp_gain="20">
 	<ingredient name="resourceCoal" count="5"/>
 	<ingredient name="resourceCloth" count="1"/>
-	<ingredient name="jz_WoodBranch" count="5"/>
+	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
 <recipe name="meleeKnucklesLeather" count="1" craft_time="30" craft_exp_gain="20" tags="jz_KnuckleWrapCraftingTag">
@@ -384,17 +365,89 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceLeather" count="2"/>
 </recipe>
 
-<recipe name="apparelCigar" count="1" craft_time="4" craft_exp_gain="5">
+<recipe name="apparelCigar" count="1" craft_time="3" craft_exp_gain="5">
 	<ingredient name="resourceYuccaFibers" count="250"/>
 	<ingredient name="resourcePaper" count="1"/>
 </recipe>
 
-<recipe name="resourceCobblestones" count="1">
+<recipe name="resourceCobblestones" count="1" craft_time="1" craft_exp_gain="1" tags="learnable">
 	<ingredient name="resourceClayLump" count="1"/>
 	<ingredient name="resourceRockSmall" count="1"/>
 </recipe>
 
-<recipe name="scrapIronFrameBlockVariantHelper" count="1" craft_time="10" craft_exp_gain="5">
+<recipe name="terrDestroyedStone" count="1" craft_time="1" craft_exp_gain="0">
+	<ingredient name="resourceRockSmall" count="18"/>
+</recipe>
+
+<recipe name="terrDirt" count="1" craft_time="1" craft_exp_gain="0">
+	<ingredient name="resourceClayLump" count="16"/>
+</recipe>
+
+<recipe name="terrTopSoil" count="1" craft_time="1" craft_exp_gain="0">
+	<ingredient name="resourceClayLump" count="16"/>
+</recipe>
+
+<recipe name="terrGravel" count="1" craft_time="1" craft_exp_gain="0">
+	<ingredient name="resourceCrushedSand" count="11" />
+	<ingredient name="resourceRockSmall" count="11"/>
+</recipe>
+
+<recipe name="thrownAmmoMolotovCocktail" count="1" craft_time="30" craft_exp_gain="30" tags="learnable">
+	<ingredient name="resourceCloth" count="1"/>
+	<ingredient name="ammoGasCan" count="300"/>
+	<ingredient name="drinkJarEmpty" count="1"/>
+</recipe>
+
+<recipe name="toolBellows" count="1" craft_time="30" craft_exp_gain="30" tags="learnable">
+	<ingredient name="jz_Plank" count="4"/>
+	<ingredient name="resourceLeather" count="20"/>
+	<ingredient name="resourceMetalPipe" count="2"/>
+	<ingredient name="resourceDuctTape" count="5"/>
+	<ingredient name="resourceNail" count="5"/>
+</recipe>
+
+<recipe name="trapSpikesIronDmg0" count="1" craft_time="5" craft_exp_gain="20" tags="learnable">
+	<ingredient name="resourceMetalPipe" count="20"/>
+</recipe>
+
+<recipe name="trapSpikesWoodDmg0" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
+	<ingredient name="jz_Stick" count="20"/>
+</recipe>
+
+<recipe name="window03Wood" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
+	<ingredient name="jz_Plank" count="4"/>
+	<ingredient name="glassBlockVariantHelper" count="1"/>
+</recipe>
+
+<recipe name="woodCatwalkBlockVariantHelper" count="1"craft_time="5" craft_exp_gain="5" >
+	<ingredient name="jz_Plank" count="8"/>
+</recipe>
+
+<recipe name="woodFenceRailingTrellisSheetBlockVariantHelper" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
+	<ingredient name="jz_Plank" count="2"/>
+</recipe>
+
+<recipe name="woodFrameBlockVariantHelper" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
+	<ingredient name="jz_Plank" count="10"/>
+    <ingredient name="resourceNail" count="5"/>
+</recipe>
+
+<recipe name="brickBlockVariantHelper" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
+	<ingredient name="jz_Stick" count="20"/>
+	<ingredient name="jz_FiberRope" count="1"/>
+</recipe>
+
+<recipe name="woodSignBlockVariantHelper" count="1" craft_time="5" craft_exp_gain="10" >
+	<ingredient name="jz_Plank" count="10"/>
+    <ingredient name="resourceNail" count="10"/>	
+</recipe>
+
+<recipe name="flagstoneBlockVariantHelper" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
+	<ingredient name="jz_Stick" count="20"/>
+	<ingredient name="jz_FiberRope" count="1"/>
+</recipe>
+
+<recipe name="scrapIronFrameBlockVariantHelper" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
 	<ingredient name="resourceScrapIron" count="20"/>
 	<ingredient name="jz_NutAndBolt" count="5"/>
 </recipe>
@@ -402,63 +455,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="sandbagBlockVariantHelper" count="1">
 	<ingredient name="resourceCrushedSand" count="4"/>
 	<ingredient name="resourceCloth" count="2"/>
-</recipe>
-
-<recipe name="terrDestroyedStone" count="1" craft_time="2">
-	<ingredient name="resourceRockSmall" count="18"/>
-</recipe>
-
-<recipe name="terrDirt" count="1">
-	<ingredient name="resourceClayLump" count="16"/>
-</recipe>
-
-<recipe name="terrTopSoil" count="1">
-	<ingredient name="resourceClayLump" count="16"/>
-</recipe>
-
-<recipe name="terrGravel" count="1">
-	<ingredient name="resourceCrushedSand" count="11"/>
-	<ingredient name="resourceRockSmall" count="11"/>
-</recipe>
-
-<recipe name="thrownAmmoMolotovCocktail" count="1" tags="learnable">
-	<ingredient name="resourceCloth" count="1"/>
-	<ingredient name="ammoGasCan" count="300"/>
-	<ingredient name="resourceOil" count="1"/>
-	<ingredient name="drinkJarEmpty" count="1"/>
-</recipe>
-
-<recipe name="toolBellows" count="1" >
-	<ingredient name="jz_Plank" count="6"/>
-	<ingredient name="resourceLeather" count="20"/>
-	<ingredient name="resourceMetalPipe" count="2"/>
-	<ingredient name="resourceDuctTape" count="5"/>
-	<ingredient name="resourceNail" count="5"/>
-</recipe>
-
-<recipe name="trapSpikesIronDmg0" count="1">
-	<ingredient name="resourceForgedIron" count="4"/>
-</recipe>
-
-<recipe name="trapSpikesWoodDmg0" count="1">
-	<ingredient name="resourceWood" count="20"/>
-</recipe>
-
-<recipe name="window03Wood" count="1">
-	<ingredient name="resourceWood" count="4"/>
-	<ingredient name="glassBlockVariantHelper" count="1"/>
-</recipe>
-
-<recipe name="woodCatwalkBlockVariantHelper" count="1">
-	<ingredient name="resourceWood" count="8"/>
-</recipe>
-
-<recipe name="woodFenceRailingTrellisSheetBlockVariantHelper" count="1">
-	<ingredient name="resourceWood" count="2"/>
-</recipe>
-
-<recipe name="woodFrameBlockVariantHelper" count="1">
-	<ingredient name="resourceWood" count="2"/>
 </recipe>
 
 <recipe name="woodHatch1_v1" count="1">
@@ -1107,6 +1103,11 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="ammoGasCan" count="500"/>
 	<ingredient name="resourceRocketCasing" count="1"/>
+</recipe>
+
+<recipe name="barbedFence" count="1" craft_time="5" craft_exp_gain="50"tags="learnable">
+	<ingredient name="resourceScrapIron" count="8"/>
+	<ingredient name="jz_Plank" count="10"/>
 </recipe>
 
 <recipe name="autoTurret" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="25" tags="learnable,jz_SteelArmorCraftingTag">
