@@ -22422,6 +22422,130 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="Group" value="Science" />
 </item>
 <!--JZMOD OTHER-->
+<item name="jz_CanOpener">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_CanOpenerDesc" />
+    <property name="CustomIcon" value="ui_game_symbol_jz_CanOpener" />
+	
+	<effect_group>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="jz_BuffCanOpener"/>
+	</effect_group>
+</item>
+
+<item name="jz_CanStock">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanStock" />
+</item>
+
+<item name="jz_CanSoup">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanSoup" />
+</item>
+
+<item name="jz_CanPears">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanPears" />
+</item>
+
+<item name="jz_CanPeas">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanPeas" />
+</item>
+
+<item name="jz_CanMiso">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanMiso" />
+</item>
+
+<item name="jz_CanSalmon">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanSalmon" />
+</item>
+
+<item name="jz_CanPasta">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanPasta" />
+</item>
+
+<item name="jz_CanSham">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanSham" />
+</item>
+
+<item name="jz_CanTuna">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanTuna" />
+</item>
+
+<item name="jz_CanChili">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanChili" />
+</item>
+
+<item name="jz_CanDogfood">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanDogfood" />
+</item>
+
+<item name="jz_CanCatfood">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanCatfood" />
+</item>
+
+<item name="jz_CanLamb">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanLamb" />
+</item>
+
+<item name="jz_CanChicken">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="5" />
+	<property name="DescriptionKey" value="jz_ClosedCanFoodDesc" />
+    <property name="CustomIcon" value="foodCanChicken" />
+</item>
+
 <item name="jz_StartingGuide">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Morganic" />

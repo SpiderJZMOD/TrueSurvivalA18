@@ -5735,6 +5735,19 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodStuffed"/>	
 		</effect_group>
 	</buff>
+	
+	<buff name="jz_BuffCanOpener" hidden="true" remove_on_death="true">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="foodCanStock"/>
+		</effect_group>
+	</buff>
+	
+	
+	
+	
+	
 </buffs>
 
 

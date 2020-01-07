@@ -2244,7 +2244,14 @@
 		</effect_group>
 	</perk>
 
-
+	<!-- Can Opener-->
+	<perk name="jz_Canopener" parent="jz_Other" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Can Opener" desc_key="jz_CanOpenerDesc" icon="ui_game_symbol_mining">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="foodCanStock"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="foodCanSoup"/>
+		</effect_group>
+		
+	</perk>
 
 
 
