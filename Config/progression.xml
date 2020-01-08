@@ -4,7 +4,7 @@
 <level max_level="300" exp_to_level="10000" experience_multiplier="1.05" skill_points_per_level="1">
 </level>
 <attributes min_level="0" max_level="0" base_skill_point_cost="0" >
-	<attribute name="attFortitude" name_key="jz_ActionSkillName" desc_key="jz_ActionSkillDesc" icon="ui_game_symbol_stealth">
+	<attribute name="attFortitude" name_key="Action Skills" desc_key="jz_ActionSkillDesc" icon="ui_game_symbol_stealth">
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_MiningXP" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="jz_AxeXP" operation="Equals" value="0"/>
@@ -82,27 +82,27 @@
 			
 			
 			
-			<effect_description level="1"  desc_key="jz_ActionSkillDesc" long_desc_key="jz_ActionSkillLongDesc"/>
+			<effect_description level="1"  desc_key="jz_ActionSkillDesc" long_desc_key="jz_ActionSkillDesc"/>
 		</effect_group>
 	</attribute>
-	<attribute name="jz_CraftingSkills" name_key="jz_CraftingSkillsName" desc_key="jz_CraftingSkillsDesc" icon="ui_game_symbol_stealth">
+	<attribute name="jz_CraftingSkills" name_key="Crafting Skills" desc_key="jz_CraftingSkillsDesc" icon="ui_game_symbol_stealth">
 		<effect_group>
-			<effect_description level="1"  desc_key="jz_CraftingSkillsDesc" long_desc_key="jz_CraftingSkillsLongDesc"/>
+			<effect_description level="1"  desc_key="jz_CraftingSkillsDesc" long_desc_key="jz_CraftingSkillsDesc"/>
 		</effect_group>
 		</attribute>
-	<attribute name="jz_Professions" name_key="jz_ProfessionsName" desc_key="jz_ProfessionsDesc" icon="ui_game_symbol_stealth">
+	<attribute name="jz_Professions" name_key="Professions" desc_key="jz_ProfessionsDesc" icon="ui_game_symbol_stealth">
 		<effect_group>
-			<effect_description level="1" desc_key="jz_ProfessionsDesc" long_desc_key="jz_ProfessionsLongDesc"/>
+			<effect_description level="1" desc_key="jz_ProfessionsDesc" long_desc_key="jz_ProfessionsDesc"/>
 		</effect_group>
 		</attribute>
-	<attribute name="jz_PositiveTraits" name_key="jz_TraitsName" desc_key="jz_TraitsDesc" icon="ui_game_symbol_stealth">
+	<attribute name="jz_PositiveTraits" name_key="Positive Player Traits" desc_key="jz_PosTraitsDesc" icon="ui_game_symbol_stealth">
 		<effect_group>
 			<effect_description level="1" desc_key="jz_PositiveTraitsDesc" long_desc_key="jz_PositiveTraitsLongDesc"/>
 		</effect_group>
 		</attribute>
-	<attribute name="jz_NegativeTraits" name_key="jz_NegativeTraitsName" desc_key="jz_NegativeTraitsDesc" icon="ui_game_symbol_stealth" >
+	<attribute name="jz_NegativeTraits" name_key="Negative Player Traits" desc_key="jz_NegativeTraitsDesc" icon="ui_game_symbol_stealth" >
 		<effect_group>
-			<effect_description level="1" desc_key="jz_NegativeTraitsDesc" long_desc_key="jz_NegativeTraitsLongDesc"/>
+			<effect_description level="1" desc_key="jz_NegativeTraitsDesc" long_desc_key="jz_NegativeTraitsDesc"/>
 		</effect_group>
 		</attribute>
 	<attribute name="jz_Other" name_key="jz_OtherName" desc_key="jz_OtherDesc" icon="ui_game_symbol_stealth" >
@@ -136,7 +136,7 @@
 <perks min_level="0" max_level="1" base_skill_point_cost="0" cost_multiplier_per_level="1"> 
 	<!-- ******************************************************************  ACTION SKILLS  ******************************************************************************** -->
 	<!--MiningSkill-->
-	<perk name="jz_MiningSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Mining Skill" desc_key="Gain experience by breaking blocks with Pickaxes and Shovels to improve your use of them by 3% faster swing speed per Lv, 3% less stamina per use per Lv and 2% bonus dismemberment per Lv." icon="ui_game_symbol_mining">
+	<perk name="jz_MiningSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Mining Skill" desc_key="jz_MiningSkillDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_MiningSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -168,7 +168,7 @@
 		</effect_group>
 	</perk>
 	<!--AxeSkill-->
-	<perk name="jz_AxeSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Axe Skill" desc_key="Gain experience by breaking blocks with Axes to improve your use of them by 3% faster swing speed per Lv, 3% less stamina per use per Lv and 2% bonus dismemberment per Lv." icon="ui_game_symbol_stealth">
+	<perk name="jz_AxeSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Axe Skill" desc_key="jz_AxeSkillDesc" icon="ui_game_symbol_stealth">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_AxeSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -200,7 +200,7 @@
 		</effect_group>
 	</perk>
 	<!--ChainsawSkill-->
-	<perk name="jz_ChainsawSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Chainsaw Skill" desc_key="Gain experience by breaking blocks with Chainsaw to improve your use of them by 3% faster swing speed per Lv, 3% less stamina per use per Lv and 2% bonus dismemberment per Lv." icon="ui_game_symbol_stealth">
+	<perk name="jz_ChainsawSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Chainsaw Skill" desc_key="jz_ChainsawSkillDesc" icon="ui_game_symbol_stealth">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_ChainsawSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -232,7 +232,7 @@
 		</effect_group>
 	</perk>
 	<!--AugerSkill-->
-	<perk name="jz_AugerSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Auger Skill" desc_key="Gain experience by breaking blocks with Augers to improve your use of them by 3% faster swing speed per Lv, 3% less stamina per use per Lv and 2% bonus dismemberment per Lv." icon="ui_game_symbol_stealth">
+	<perk name="jz_AugerSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Auger Skill" desc_key="jz_AugerSkillDesc" icon="ui_game_symbol_stealth">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_AugerSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -264,7 +264,7 @@
 		</effect_group>
 	</perk>
 	<!--UnarmedSkill-->
-	<perk name="jz_UnarmedSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Brawling Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while being unarmed or using Brass Knuckles to improve your use of them by 3% more damage per Lv, 3% faster swing speed per Lv, 3% less stamina use per swing per Lv and 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_boxer">
+	<perk name="jz_UnarmedSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Brawling Skill" desc_key="jz_UnarmedSkillDesc" icon="ui_game_symbol_boxer">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_UnarmedSkillTag"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -299,7 +299,7 @@
 		</effect_group>
 	</perk>
 	<!--BluntSkill-->
-	<perk name="jz_BluntSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Blunt Weapon Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while wielding Blunt Weapons to improve your use of them by 3% faster swing speed per Lv, 3% less stamina use per swing per level and 3 % bonus dismemberment chance per Lv." icon="ui_game_symbol_melee">
+	<perk name="jz_BluntSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Blunt Weapon Skill" desc_key="jz_BluntSkillDesc" icon="ui_game_symbol_melee">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_BluntSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.30" level="1,100"/>
@@ -333,7 +333,7 @@
 		</effect_group>
 	</perk>
 	<!--SledgeSkill-->
-	<perk name="jz_SledgeSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Sledge Weapon Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while wielding Sledge Hammer to improve your use of them by 3% faster swing speed per Lv, 3% less stamina use per swing per level and 3 % bonus dismemberment chance per Lv." icon="ui_game_symbol_melee">
+	<perk name="jz_SledgeSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Sledge Weapon Skill" desc_key="jz_SledgeSkillDesc" icon="ui_game_symbol_melee">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_SledgeSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.30" level="1,100"/>
@@ -367,7 +367,7 @@
 		</effect_group>
 	</perk>
 	<!--BladeSkill-->
-	<perk name="jz_BladeSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Bladed Weapon Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while wielding Blunt Weapons to improve your use of them by 3% faster swing speed per Lv, 3% less stamina use per swing per level and 3 % bonus dismemberment chance per Lv." icon="ui_game_symbol_deep_cuts">
+	<perk name="jz_BladeSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Bladed Weapon Skill" desc_key="jz_BladeSkillDesc" icon="ui_game_symbol_deep_cuts">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_BladeSkillTag"/>
 				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0,0.30" level="1,100"/>
@@ -401,7 +401,7 @@
 		</effect_group>
 	</perk>
 	<!--ArcherySkill-->
-	<perk name="jz_ArcherySkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Archery Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using a Bow or Crossbow to improve your use of them by 3% faster reload speed per Lv, 2% farther range per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_archery">
+	<perk name="jz_ArcherySkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Archery Skill" desc_key="jz_ArcherySkillDesc" icon="ui_game_symbol_archery">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_ArcherySkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -437,7 +437,7 @@
 		</effect_group>
 	</perk>
 	<!--SpearSkill-->
-	<perk name="jz_SpearSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Spear Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using a Spear to improve your use of them by 3% faster reload speed per Lv, 2% farther range per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_archery">
+	<perk name="jz_SpearSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Spear Skill" desc_key="jz_SpearSkillDesc" icon="ui_game_symbol_archery">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_SpearSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -473,7 +473,7 @@
 		</effect_group>
 	</perk>
 	<!--PistolSkill-->
-	<perk name="jz_PistolSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Pistol Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Handguns to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_gunslinger">
+	<perk name="jz_PistolSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Pistol Skill" desc_key="jz_PistolSkillDesc" icon="ui_game_symbol_gunslinger">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -508,7 +508,7 @@
 		</effect_group>
 	</perk>
 	<!--44MagSkill-->
-	<perk name="jz_44MagSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="44Mag Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Shotguns to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_shotgun">
+	<perk name="jz_44MagSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="44Mag Skill" desc_key="jz_44MagSkillDesc" icon="ui_game_symbol_shotgun">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -543,7 +543,7 @@
 		</effect_group>
 	</perk>
 	<!--SMG5Skill-->
-	<perk name="jz_SMG5Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="SMG5 Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Shotguns to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_shotgun">
+	<perk name="jz_SMG5Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="SMG5 Skill" desc_key="jz_SMG5SkillDesc" icon="ui_game_symbol_shotgun">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_SMG5SkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -578,7 +578,7 @@
 		</effect_group>
 	</perk>
 	<!--BlunderbussSkill-->
-	<perk name="jz_BlunderbussSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Rifle Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
+	<perk name="jz_BlunderbussSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Rifle Skill" desc_key="jz_BlunderbussSkillDesc" icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -613,7 +613,7 @@
 		</effect_group>
 	</perk>
 	<!--DBShotgunSkill-->
-	<perk name="jz_DBShotgunSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="DBShotgun Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using DBShotgun to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
+	<perk name="jz_DBShotgunSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="DBShotgun Skill" desc_key="jz_DBShotgunSkillDesc" icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -648,7 +648,7 @@
 		</effect_group>
 	</perk>
 	<!--PShotgunSkill-->
-	<perk name="jz_PShotgunSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="PShotgun Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
+	<perk name="jz_PShotgunSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="PShotgun Skill" desc_key="jz_PShotgunSkillDesc" icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_PShotgunSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -683,7 +683,7 @@
 		</effect_group>
 	</perk>
 	<!--HuntingRifleSkill-->
-	<perk name="jz_HuntingRifleSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="HuntingRifle Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
+	<perk name="jz_HuntingRifleSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="HuntingRifle Skill" desc_key="jz_HuntingRifleSkillDesc" icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -718,7 +718,7 @@
 		</effect_group>
 	</perk>
 	<!--MarksmanSkill-->
-	<perk name="jz_MarksmanSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Marksman Rifle Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
+	<perk name="jz_MarksmanSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Marksman Rifle Skill" desc_key="jz_MarksmanSkillDesc" icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_MarksmanSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -753,7 +753,7 @@
 		</effect_group>
 	</perk>
 	<!--AK47Skill-->
-	<perk name="jz_AK47Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="AK47 Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
+	<perk name="jz_AK47Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="AK47 Skill" desc_key="jz_AK47SkillDesc" icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_AK47SkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -788,7 +788,7 @@
 		</effect_group>
 	</perk>
 	<!--M60Skill-->
-	<perk name="jz_M60Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="M60 Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
+	<perk name="jz_M60Skill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="M60 Skill" desc_key="jz_M60SkillDesc" icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_M60SkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -823,7 +823,7 @@
 		</effect_group>
 	</perk>
 	<!--ExposivesSkill-->
-	<perk name="jz_ExposivesSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Exposives Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
+	<perk name="jz_ExposivesSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="Exposives Skill" desc_key="jz_ExposivesSkillDesc" icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -858,7 +858,7 @@
 		</effect_group>
 	</perk>
 	<!--JunkTurretSkill-->
-	<perk name="jz_JunkTurretSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="JunkTurret Skill" desc_key="Gain experience by hitting enemies and receive bonus xp for the killing blow while using Rifles to improve your use of them by 3% faster reload speed per Lv, 3% better aiming and control per Lv, 3% bonus dismemberment chance per Lv." icon="ui_game_symbol_rifle">
+	<perk name="jz_JunkTurretSkill" parent="attFortitude" min_level="1" max_level="100" base_skill_point_cost="1" cost_multiplier_per_level="1.2" name_key="JunkTurret Skill" desc_key="jz_JunkTurretSkillDesc" icon="ui_game_symbol_rifle">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_JunkTurretSkillTag"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0,0.3" level="1,100"/>
@@ -894,185 +894,185 @@
 	</perk>
 	<!-- ******************************************************************  CRAFTING SKILLS  ******************************************************************************** -->
 	<!-- StoneaxeCrafting-->
-	<perk name="jz_StoneaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stoneaxe Crafting" desc_key="jz_StoneaxeCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_StoneaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stoneaxe Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_StoneaxeCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_StoneaxeCraftingRank1Desc" long_desc_key="jz_StoneaxeCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_StoneaxeCraftingRank2Desc" long_desc_key="jz_StoneaxeCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_StoneaxeCraftingRank3Desc" long_desc_key="jz_StoneaxeCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_StoneaxeCraftingRank4Desc" long_desc_key="jz_StoneaxeCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_StoneaxeCraftingRank5Desc" long_desc_key="jz_StoneaxeCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_StoneaxeCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_StoneaxeCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_StoneaxeCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_StoneaxeCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_StoneaxeCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- StoneShovelCrafting-->
-	<perk name="jz_StoneShovelCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stone Shovel Crafting" desc_key="jz_StoneShovelCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_StoneShovelCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stone Shovel Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_StoneShovelCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_StoneShovelCraftingRank1Desc" long_desc_key="jz_StoneShovelCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_StoneShovelCraftingRank2Desc" long_desc_key="jz_StoneShovelCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_StoneShovelCraftingRank3Desc" long_desc_key="jz_StoneShovelCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_StoneShovelCraftingRank4Desc" long_desc_key="jz_StoneShovelCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_StoneShovelCraftingRank5Desc" long_desc_key="jz_StoneShovelCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_StoneShovelCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_StoneShovelCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_StoneShovelCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_StoneShovelCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_StoneShovelCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- IronFireaxeCrafting-->
-	<perk name="jz_IronFireaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Fireaxe Crafting" desc_key="jz_IronFireaxeCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_IronFireaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Fireaxe Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronFireaxeCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_IronFireaxeCraftingRank1Desc" long_desc_key="jz_IronFireaxeCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_IronFireaxeCraftingRank2Desc" long_desc_key="jz_IronFireaxeCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_IronFireaxeCraftingRank3Desc" long_desc_key="jz_IronFireaxeCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_IronFireaxeCraftingRank4Desc" long_desc_key="jz_IronFireaxeCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_IronFireaxeCraftingRank5Desc" long_desc_key="jz_IronFireaxeCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_IronFireaxeCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_IronFireaxeCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_IronFireaxeCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_IronFireaxeCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_IronFireaxeCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- SteelFireaxeCrafting-->
-	<perk name="jz_SteelFireaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Fireaxe Crafting" desc_key="jz_SteelFireaxeCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_SteelFireaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Fireaxe Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelFireaxeCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_SteelFireaxeCraftingRank1Desc" long_desc_key="jz_SteelFireaxeCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_SteelFireaxeCraftingRank2Desc" long_desc_key="jz_SteelFireaxeCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_SteelFireaxeCraftingRank3Desc" long_desc_key="jz_SteelFireaxeCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_SteelFireaxeCraftingRank4Desc" long_desc_key="jz_SteelFireaxeCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_SteelFireaxeCraftingRank5Desc" long_desc_key="jz_SteelFireaxeCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_SteelFireaxeCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_SteelFireaxeCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_SteelFireaxeCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_SteelFireaxeCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_SteelFireaxeCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- IronPickaxeCrafting-->
-	<perk name="jz_IronPickaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Pickaxe Crafting" desc_key="jz_IronPickaxeCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_IronPickaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Pickaxe Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronPickaxeCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_IronPickaxeCraftingRank1Desc" long_desc_key="jz_IronPickaxeCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_IronPickaxeCraftingRank2Desc" long_desc_key="jz_IronPickaxeCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_IronPickaxeCraftingRank3Desc" long_desc_key="jz_IronPickaxeCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_IronPickaxeCraftingRank4Desc" long_desc_key="jz_IronPickaxeCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_IronPickaxeCraftingRank5Desc" long_desc_key="jz_IronPickaxeCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_IronPickaxeCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_IronPickaxeCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_IronPickaxeCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_IronPickaxeCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_IronPickaxeCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- SteelPickaxeCrafting-->
-	<perk name="jz_SteelPickaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Pickaxe Crafting" desc_key="jz_SteelPickaxeCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_SteelPickaxeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Pickaxe Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelPickaxeCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_SteelPickaxeCraftingRank1Desc" long_desc_key="jz_SteelPickaxeCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_SteelPickaxeCraftingRank2Desc" long_desc_key="jz_SteelPickaxeCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_SteelPickaxeCraftingRank3Desc" long_desc_key="jz_SteelPickaxeCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_SteelPickaxeCraftingRank4Desc" long_desc_key="jz_SteelPickaxeCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_SteelPickaxeCraftingRank5Desc" long_desc_key="jz_SteelPickaxeCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_SteelPickaxeCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_SteelPickaxeCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_SteelPickaxeCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_SteelPickaxeCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_SteelPickaxeCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- IronShovelCrafting-->
-	<perk name="jz_IronShovelCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Shovel Crafting" desc_key="jz_IronShovelCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_IronShovelCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Shovel Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronShovelCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_IronShovelCraftingRank1Desc" long_desc_key="jz_IronShovelCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_IronShovelCraftingRank2Desc" long_desc_key="jz_IronShovelCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_IronShovelCraftingRank3Desc" long_desc_key="jz_IronShovelCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_IronShovelCraftingRank4Desc" long_desc_key="jz_IronShovelCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_IronShovelCraftingRank5Desc" long_desc_key="jz_IronShovelCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_IronShovelCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_IronShovelCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_IronShovelCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_IronShovelCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_IronShovelCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- SteelShovelCrafting-->
-	<perk name="jz_SteelShovelCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Shovel Crafting" desc_key="jz_SteelShovelCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_SteelShovelCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Shovel Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelShovelCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_SteelShovelCraftingRank1Desc" long_desc_key="jz_SteelShovelCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_SteelShovelCraftingRank2Desc" long_desc_key="jz_SteelShovelCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_SteelShovelCraftingRank3Desc" long_desc_key="jz_SteelShovelCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_SteelShovelCraftingRank4Desc" long_desc_key="jz_SteelShovelCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_SteelShovelCraftingRank5Desc" long_desc_key="jz_SteelShovelCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_SteelShovelCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_SteelShovelCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_SteelShovelCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_SteelShovelCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_SteelShovelCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- ChainsawCrafting-->
-	<perk name="jz_ChainsawCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Chainsaw Crafting" desc_key="jz_ChainsawCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_ChainsawCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Chainsaw Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ChainsawCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_ChainsawCraftingRank1Desc" long_desc_key="jz_ChainsawCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_ChainsawCraftingRank2Desc" long_desc_key="jz_ChainsawCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_ChainsawCraftingRank3Desc" long_desc_key="jz_ChainsawCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_ChainsawCraftingRank4Desc" long_desc_key="jz_ChainsawCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_ChainsawCraftingRank5Desc" long_desc_key="jz_ChainsawCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_ChainsawCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ChainsawCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ChainsawCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ChainsawCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ChainsawCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- AugerCrafting-->
-	<perk name="jz_AugerCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Auger Crafting" desc_key="jz_AugerCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_AugerCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Auger Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_AugerCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_AugerCraftingRank1Desc" long_desc_key="jz_AugerCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_AugerCraftingRank2Desc" long_desc_key="jz_AugerCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_AugerCraftingRank3Desc" long_desc_key="jz_AugerCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_AugerCraftingRank4Desc" long_desc_key="jz_AugerCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_AugerCraftingRank5Desc" long_desc_key="jz_AugerCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_AugerCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_AugerCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_AugerCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_AugerCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_AugerCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- WrenchCrafting-->
-	<perk name="jz_WrenchCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Wrench Crafting" desc_key="jz_WrenchCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_WrenchCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Wrench Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_WrenchCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_WrenchCraftingRank1Desc" long_desc_key="jz_WrenchCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_WrenchCraftingRank2Desc" long_desc_key="jz_WrenchCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_WrenchCraftingRank3Desc" long_desc_key="jz_WrenchCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_WrenchCraftingRank4Desc" long_desc_key="jz_WrenchCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_WrenchCraftingRank5Desc" long_desc_key="jz_WrenchCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_WrenchCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_WrenchCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_WrenchCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_WrenchCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_WrenchCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- ClawHammerCrafting-->
-	<perk name="jz_ClawHammerCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Claw Hammer Crafting" desc_key="jz_ClawHammerCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_ClawHammerCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Claw Hammer Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClawHammerCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_ClawHammerCraftingRank1Desc" long_desc_key="jz_ClawHammerCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_ClawHammerCraftingRank2Desc" long_desc_key="jz_ClawHammerCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_ClawHammerCraftingRank3Desc" long_desc_key="jz_ClawHammerCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_ClawHammerCraftingRank4Desc" long_desc_key="jz_ClawHammerCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_ClawHammerCraftingRank5Desc" long_desc_key="jz_ClawHammerCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_ClawHammerCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ClawHammerCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ClawHammerCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ClawHammerCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ClawHammerCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- SolarCellCrafting-->
-	<perk name="jz_SolarCellCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Solar Cell Crafting" desc_key="jz_SolarCellCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_SolarCellCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Solar Cell Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SolarCellCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_SolarCellCraftingRank1Desc" long_desc_key="jz_SolarCellCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_SolarCellCraftingRank2Desc" long_desc_key="jz_SolarCellCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_SolarCellCraftingRank3Desc" long_desc_key="jz_SolarCellCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_SolarCellCraftingRank4Desc" long_desc_key="jz_SolarCellCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_SolarCellCraftingRank5Desc" long_desc_key="jz_SolarCellCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_SolarCellCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_SolarCellCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_SolarCellCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_SolarCellCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_SolarCellCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- CarBatteryCrafting-->
-	<perk name="jz_CarBatteryCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Car Battery Crafting" desc_key="jz_CarBatteryCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_CarBatteryCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Car Battery Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_CarBatteryCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_CarBatteryCraftingRank1Desc" long_desc_key="jz_CarBatteryCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_CarBatteryCraftingRank2Desc" long_desc_key="jz_CarBatteryCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_CarBatteryCraftingRank3Desc" long_desc_key="jz_CarBatteryCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_CarBatteryCraftingRank4Desc" long_desc_key="jz_CarBatteryCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_CarBatteryCraftingRank5Desc" long_desc_key="jz_CarBatteryCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_CarBatteryCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_CarBatteryCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_CarBatteryCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_CarBatteryCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_CarBatteryCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!--  Crafting-->
@@ -1105,11 +1105,11 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up Cloth Armor Crafting!"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_ClothArmorCraftingRank1Desc" long_desc_key="jz_ClothArmorCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_ClothArmorCraftingRank2Desc" long_desc_key="jz_ClothArmorCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_ClothArmorCraftingRank3Desc" long_desc_key="jz_ClothArmorCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_ClothArmorCraftingRank4Desc" long_desc_key="jz_ClothArmorCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_ClothArmorCraftingRank5Desc" long_desc_key="jz_ClothArmorCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_ClothArmorCraftingRank1Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ClothArmorCraftingRank2Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ClothArmorCraftingRank3Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ClothArmorCraftingRank4Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ClothArmorCraftingRank5Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- LeatherArmorCrafting-->
@@ -1120,11 +1120,11 @@
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_LeatherArmorCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_LeatherArmorCraftingRank1Desc" long_desc_key="jz_LeatherArmorCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_LeatherArmorCraftingRank2Desc" long_desc_key="jz_LeatherArmorCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_LeatherArmorCraftingRank3Desc" long_desc_key="jz_LeatherArmorCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_LeatherArmorCraftingRank4Desc" long_desc_key="jz_LeatherArmorCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_LeatherArmorCraftingRank5Desc" long_desc_key="jz_LeatherArmorCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_LeatherArmorCraftingRank1Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_LeatherArmorCraftingRank2Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_LeatherArmorCraftingRank3Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_LeatherArmorCraftingRank4Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_LeatherArmorCraftingRank5Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- ScrapArmorCrafting-->
@@ -1135,11 +1135,11 @@
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ScrapArmorCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_ScrapArmorCraftingRank1Desc" long_desc_key="jz_ScrapArmorCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_ScrapArmorCraftingRank2Desc" long_desc_key="jz_ScrapArmorCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_ScrapArmorCraftingRank3Desc" long_desc_key="jz_ScrapArmorCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_ScrapArmorCraftingRank4Desc" long_desc_key="jz_ScrapArmorCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_ScrapArmorCraftingRank5Desc" long_desc_key="jz_ScrapArmorCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_ScrapArmorCraftingRank1Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ScrapArmorCraftingRank2Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ScrapArmorCraftingRank3Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ScrapArmorCraftingRank4Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ScrapArmorCraftingRank5Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- IronArmorCrafting-->
@@ -1173,442 +1173,429 @@
 		</effect_group>
 	</perk>
 	<!-- BoneKnifeCrafting-->
-	<perk name="jz_BoneKnifeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Bone Knife Crafting" desc_key="jz_BoneKnifeCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_BoneKnifeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Bone Knife Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_BoneKnifeCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_BoneKnifeCraftingRank1Desc" long_desc_key="jz_BoneKnifeCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_BoneKnifeCraftingRank2Desc" long_desc_key="jz_BoneKnifeCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_BoneKnifeCraftingRank3Desc" long_desc_key="jz_BoneKnifeCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_BoneKnifeCraftingRank4Desc" long_desc_key="jz_BoneKnifeCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_BoneKnifeCraftingRank5Desc" long_desc_key="jz_BoneKnifeCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_BoneKnifeCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_BoneKnifeCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_BoneKnifeCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_BoneKnifeCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_BoneKnifeCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- HuntingKnifeCrafting-->
-	<perk name="jz_HuntingKnifeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Hunting Knife Crafting" desc_key="jz_HuntingKnifeCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_HuntingKnifeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Hunting Knife Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_HuntingKnifeCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_HuntingKnifeCraftingRank1Desc" long_desc_key="jz_HuntingKnifeCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_HuntingKnifeCraftingRank2Desc" long_desc_key="jz_HuntingKnifeCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_HuntingKnifeCraftingRank3Desc" long_desc_key="jz_HuntingKnifeCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_HuntingKnifeCraftingRank4Desc" long_desc_key="jz_HuntingKnifeCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_HuntingKnifeCraftingRank5Desc" long_desc_key="jz_HuntingKnifeCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_HuntingKnifeCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_HuntingKnifeCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_HuntingKnifeCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_HuntingKnifeCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_HuntingKnifeCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- MacheteCrafting-->
-	<perk name="jz_MacheteCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Machete Crafting" desc_key="jz_MacheteCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_MacheteCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Machete Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_MacheteCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_MacheteCraftingRank1Desc" long_desc_key="jz_MacheteCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_MacheteCraftingRank2Desc" long_desc_key="jz_MacheteCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_MacheteCraftingRank3Desc" long_desc_key="jz_MacheteCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_MacheteCraftingRank4Desc" long_desc_key="jz_MacheteCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_MacheteCraftingRank5Desc" long_desc_key="jz_MacheteCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_MacheteCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_MacheteCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_MacheteCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_MacheteCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_MacheteCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- WoodenClubCrafting-->
-	<perk name="jz_WoodenClubCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Wooden Club Crafting" desc_key="jz_WoodenClubCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_WoodenClubCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Wooden Club Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_WoodenClubCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_WoodenClubCraftingRank1Desc" long_desc_key="jz_WoodenClubCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_WoodenClubCraftingRank2Desc" long_desc_key="jz_WoodenClubCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_WoodenClubCraftingRank3Desc" long_desc_key="jz_WoodenClubCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_WoodenClubCraftingRank4Desc" long_desc_key="jz_WoodenClubCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_WoodenClubCraftingRank5Desc" long_desc_key="jz_WoodenClubCraftingRank5LongDesc"/>
-		</effect_group>
-	</perk>
-	<!-- BaseballBatCrafting-->
-	<perk name="jz_BaseballBatCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Baseball Bat Crafting" desc_key="jz_BaseballBatCraftingDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_BaseballBatCraftingTag"/>
-		</effect_group>
-		<effect_group>
-			<effect_description level="1" desc_key="jz_BaseballBatCraftingRank1Desc" long_desc_key="jz_BaseballBatCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_BaseballBatCraftingRank2Desc" long_desc_key="jz_BaseballBatCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_BaseballBatCraftingRank3Desc" long_desc_key="jz_BaseballBatCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_BaseballBatCraftingRank4Desc" long_desc_key="jz_BaseballBatCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_BaseballBatCraftingRank5Desc" long_desc_key="jz_BaseballBatCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_WoodenClubCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_WoodenClubCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_WoodenClubCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_WoodenClubCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_WoodenClubCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- IronClubCrafting-->
-	<perk name="jz_IronClubCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Club Crafting" desc_key="jz_IronClubCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_IronClubCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Club Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronClubCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_IronClubCraftingRank1Desc" long_desc_key="jz_IronClubCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_IronClubCraftingRank2Desc" long_desc_key="jz_IronClubCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_IronClubCraftingRank3Desc" long_desc_key="jz_IronClubCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_IronClubCraftingRank4Desc" long_desc_key="jz_IronClubCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_IronClubCraftingRank5Desc" long_desc_key="jz_IronClubCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_IronClubCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_IronClubCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_IronClubCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_IronClubCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_IronClubCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
     <!-- StunBatonCrafting-->
-	<perk name="jz_StunBatonCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stun Baton Crafting" desc_key="jz_StunBatonCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_StunBatonCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stun Baton Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_StunBatonCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_StunBatonCraftingRank1Desc" long_desc_key="jz_StunBatonCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_StunBatonCraftingRank2Desc" long_desc_key="jz_StunBatonCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_StunBatonCraftingRank3Desc" long_desc_key="jz_StunBatonCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_StunBatonCraftingRank4Desc" long_desc_key="jz_StunBatonCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_StunBatonCraftingRank5Desc" long_desc_key="jz_StunBatonCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_StunBatonCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_StunBatonCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_StunBatonCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_StunBatonCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_StunBatonCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- StoneSpearCrafting-->
-	<perk name="jz_StoneSpearCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stone Spear Crafting" desc_key="jz_StoneSpearCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_StoneSpearCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stone Spear Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_StoneSpearCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_StoneSpearCraftingRank1Desc" long_desc_key="jz_StoneSpearCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_StoneSpearCraftingRank2Desc" long_desc_key="jz_StoneSpearCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_StoneSpearCraftingRank3Desc" long_desc_key="jz_StoneSpearCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_StoneSpearCraftingRank4Desc" long_desc_key="jz_StoneSpearCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_StoneSpearCraftingRank5Desc" long_desc_key="jz_StoneSpearCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_StoneSpearCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_StoneSpearCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_StoneSpearCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_StoneSpearCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_StoneSpearCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- IronSpearCrafting-->
-	<perk name="jz_IronSpearCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Spear Crafting" desc_key="jz_IronSpearCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_IronSpearCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Spear Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronSpearCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_IronSpearCraftingRank1Desc" long_desc_key="jz_IronSpearCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_IronSpearCraftingRank2Desc" long_desc_key="jz_IronSpearCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_IronSpearCraftingRank3Desc" long_desc_key="jz_IronSpearCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_IronSpearCraftingRank4Desc" long_desc_key="jz_IronSpearCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_IronSpearCraftingRank5Desc" long_desc_key="jz_IronSpearCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_IronSpearCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_IronSpearCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_IronSpearCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_IronSpearCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_IronSpearCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- SteelSpearCrafting-->
-	<perk name="jz_SteelSpearCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Spear Crafting" desc_key="jz_SteelSpearCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_SteelSpearCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Spear Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelSpearCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_SteelSpearCraftingRank1Desc" long_desc_key="jz_SteelSpearCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_SteelSpearCraftingRank2Desc" long_desc_key="jz_SteelSpearCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_SteelSpearCraftingRank3Desc" long_desc_key="jz_SteelSpearCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_SteelSpearCraftingRank4Desc" long_desc_key="jz_SteelSpearCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_SteelSpearCraftingRank5Desc" long_desc_key="jz_SteelSpearCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_SteelSpearCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_SteelSpearCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_SteelSpearCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_SteelSpearCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_SteelSpearCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- StoneSledgeeCrafting-->
-	<perk name="jz_StoneSledgeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stone Sledge Crafting" desc_key="jz_StoneSledgeCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_StoneSledgeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Stone Sledge Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_StoneSledgeCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_StoneSledgeCraftingRank1Desc" long_desc_key="jz_StoneSledgeCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_StoneSledgeCraftingRank2Desc" long_desc_key="jz_StoneSledgeCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_StoneSledgeCraftingRank3Desc" long_desc_key="jz_StoneSledgeCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_StoneSledgeCraftingRank4Desc" long_desc_key="jz_StoneSledgeCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_StoneSledgeCraftingRank5Desc" long_desc_key="jz_StoneSledgeCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_StoneSledgeCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_StoneSledgeCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_StoneSledgeCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_StoneSledgeCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_StoneSledgeCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- IronSledgeCrafting-->
-	<perk name="jz_IronSledgeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Sledge Crafting" desc_key="jz_IronSledgeCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_IronSledgeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Sledge Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronSledgeCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_IronSledgeCraftingRank1Desc" long_desc_key="jz_IronSledgeCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_IronSledgeCraftingRank2Desc" long_desc_key="jz_IronSledgeCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_IronSledgeCraftingRank3Desc" long_desc_key="jz_IronSledgeCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_IronSledgeCraftingRank4Desc" long_desc_key="jz_IronSledgeCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_IronSledgeCraftingRank5Desc" long_desc_key="jz_IronSledgeCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_IronSledgeCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_IronSledgeCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_IronSledgeCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_IronSledgeCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_IronSledgeCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- SteelSledgeCrafting-->
-	<perk name="jz_SteelSledgeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Sledge Crafting" desc_key="jz_SteelSledgeCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_SteelSledgeCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Sledge Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelSledgeCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_SteelSledgeCraftingRank1Desc" long_desc_key="jz_SteelSledgeCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_SteelSledgeCraftingRank2Desc" long_desc_key="jz_SteelSledgeCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_SteelSledgeCraftingRank3Desc" long_desc_key="jz_SteelSledgeCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_SteelSledgeCraftingRank4Desc" long_desc_key="jz_SteelSledgeCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_SteelSledgeCraftingRank5Desc" long_desc_key="jz_SteelSledgeCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_SteelSledgeCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_SteelSledgeCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_SteelSledgeCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_SteelSledgeCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_SteelSledgeCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- KnuckleWrapCrafting-->
-	<perk name="jz_KnuckleWrapCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Knuckle Wrap Crafting" desc_key="jz_KnuckleWrapCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_KnuckleWrapCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Knuckle Wrap Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_KnuckleWrapCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_KnuckleWrapCraftingRank1Desc" long_desc_key="jz_KnuckleWrapCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_KnuckleWrapCraftingRank2Desc" long_desc_key="jz_KnuckleWrapCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_KnuckleWrapCraftingRank3Desc" long_desc_key="jz_KnuckleWrapCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_KnuckleWrapCraftingRank4Desc" long_desc_key="jz_KnuckleWrapCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_KnuckleWrapCraftingRank5Desc" long_desc_key="jz_KnuckleWrapCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_KnuckleWrapCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_KnuckleWrapCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_KnuckleWrapCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_KnuckleWrapCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_KnuckleWrapCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- BrassKnucklesCrafting-->
-	<perk name="jz_BrassKnucklesCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Brass Knuckles Crafting" desc_key="jz_BrassKnucklesCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_BrassKnucklesCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Brass Knuckles Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_BrassKnucklesCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_BrassKnucklesCraftingRank1Desc" long_desc_key="jz_BrassKnucklesCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_BrassKnucklesCraftingRank2Desc" long_desc_key="jz_BrassKnucklesCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_BrassKnucklesCraftingRank3Desc" long_desc_key="jz_BrassKnucklesCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_BrassKnucklesCraftingRank4Desc" long_desc_key="jz_BrassKnucklesCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_BrassKnucklesCraftingRank5Desc" long_desc_key="jz_BrassKnucklesCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_BrassKnucklesCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_BrassKnucklesCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_BrassKnucklesCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_BrassKnucklesCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_BrassKnucklesCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- SteelKnucklesCrafting-->
-	<perk name="jz_SteelKnucklesCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Knuckles Crafting" desc_key="jz_SteelKnucklesCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_SteelKnucklesCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Knuckles Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelKnucklesCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_SteelKnucklesCraftingRank1Desc" long_desc_key="jz_SteelKnucklesCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_SteelKnucklesCraftingRank2Desc" long_desc_key="jz_SteelKnucklesCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_SteelKnucklesCraftingRank3Desc" long_desc_key="jz_SteelKnucklesCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_SteelKnucklesCraftingRank4Desc" long_desc_key="jz_SteelKnucklesCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_SteelKnucklesCraftingRank5Desc" long_desc_key="jz_SteelKnucklesCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_SteelKnucklesCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_SteelKnucklesCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_SteelKnucklesCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_SteelKnucklesCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_SteelKnucklesCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- PistolCrafting-->
-	<perk name="jz_PistolCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Pistol Crafting" desc_key="jz_PistolCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_PistolCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Pistol Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_PistolCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_PistolCraftingRank1Desc" long_desc_key="jz_PistolCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_PistolCraftingRank2Desc" long_desc_key="jz_PistolCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_PistolCraftingRank3Desc" long_desc_key="jz_PistolCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_PistolCraftingRank4Desc" long_desc_key="jz_PistolCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_PistolCraftingRank5Desc" long_desc_key="jz_PistolCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_PistolCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_PistolCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_PistolCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_PistolCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_PistolCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- 44MagCrafting-->
-	<perk name="jz_44MagCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="44 Magnum Crafting" desc_key="jz_44MagCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_44MagCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="44 Magnum Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_44MagCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_44MagCraftingRank1Desc" long_desc_key="jz_44MagCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_44MagCraftingRank2Desc" long_desc_key="jz_44MagCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_44MagCraftingRank3Desc" long_desc_key="jz_44MagCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_44MagCraftingRank4Desc" long_desc_key="jz_44MagCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_44MagCraftingRank5Desc" long_desc_key="jz_44MagCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_44MagCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_44MagCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_44MagCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_44MagCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_44MagCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- SMG5Crafting-->
-	<perk name="jz_SMG5Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="SMG5 Crafting" desc_key="jz_SMG5CraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_SMG5Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="SMG5 Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SMG5CraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_SMG5CraftingRank1Desc" long_desc_key="jz_SMG5CraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_SMG5CraftingRank2Desc" long_desc_key="jz_SMG5CraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_SMG5CraftingRank3Desc" long_desc_key="jz_SMG5CraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_SMG5CraftingRank4Desc" long_desc_key="jz_SMG5CraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_SMG5CraftingRank5Desc" long_desc_key="jz_SMG5CraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_SMG5CraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_SMG5CraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_SMG5CraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_SMG5CraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_SMG5CraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- BlunderbussCrafting-->
-	<perk name="jz_BlunderbussCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Blunderbuss Crafting" desc_key="jz_BlunderbussCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_BlunderbussCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Blunderbuss Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_BlunderbussCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_BlunderbussCraftingRank1Desc" long_desc_key="jz_BlunderbussCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_BlunderbussCraftingRank2Desc" long_desc_key="jz_BlunderbussCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_BlunderbussCraftingRank3Desc" long_desc_key="jz_BlunderbussCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_BlunderbussCraftingRank4Desc" long_desc_key="jz_BlunderbussCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_BlunderbussCraftingRank5Desc" long_desc_key="jz_BlunderbussCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_BlunderbussCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_BlunderbussCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_BlunderbussCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_BlunderbussCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_BlunderbussCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- DBShotgunCrafting-->
-	<perk name="jz_DBShotgunCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Double Barrel Shotgun Crafting" desc_key="jz_DBShotgunCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_DBShotgunCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Double Barrel Shotgun Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 			<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_DBShotgunCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_DBShotgunCraftingRank1Desc" long_desc_key="jz_DBShotgunCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_DBShotgunCraftingRank2Desc" long_desc_key="jz_DBShotgunCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_DBShotgunCraftingRank3Desc" long_desc_key="jz_DBShotgunCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_DBShotgunCraftingRank4Desc" long_desc_key="jz_DBShotgunCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_DBShotgunCraftingRank5Desc" long_desc_key="jz_DBShotgunCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_DBShotgunCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_DBShotgunCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_DBShotgunCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_DBShotgunCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_DBShotgunCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- PumpShotgunCrafting-->
-	<perk name="jz_PumpShotgunCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Pump Shotgun Crafting" desc_key="jz_PumpShotgunCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_PumpShotgunCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Pump Shotgun Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_PumpShotgunCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_PumpShotgunCraftingRank1Desc" long_desc_key="jz_PumpShotgunCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_PumpShotgunCraftingRank2Desc" long_desc_key="jz_PumpShotgunCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_PumpShotgunCraftingRank3Desc" long_desc_key="jz_PumpShotgunCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_PumpShotgunCraftingRank4Desc" long_desc_key="jz_PumpShotgunCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_PumpShotgunCraftingRank5Desc" long_desc_key="jz_PumpShotgunCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_PumpShotgunCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_PumpShotgunCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_PumpShotgunCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_PumpShotgunCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_PumpShotgunCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- HuntingRifleCrafting-->
-	<perk name="jz_HuntingRifleCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Hunting Rifle Crafting" desc_key="jz_HuntingRifleCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_HuntingRifleCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Hunting Rifle Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_HuntingRifleCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_HuntingRifleCraftingRank1Desc" long_desc_key="jz_HuntingRifleCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_HuntingRifleCraftingRank2Desc" long_desc_key="jz_HuntingRifleCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_HuntingRifleCraftingRank3Desc" long_desc_key="jz_HuntingRifleCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_HuntingRifleCraftingRank4Desc" long_desc_key="jz_HuntingRifleCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_HuntingRifleCraftingRank5Desc" long_desc_key="jz_HuntingRifleCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_HuntingRifleCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_HuntingRifleCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_HuntingRifleCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_HuntingRifleCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_HuntingRifleCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- MarksmanCrafting-->
-	<perk name="jz_MarksmanCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Marksman Crafting" desc_key="jz_MarksmanCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_MarksmanCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Marksman Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_MarksmanCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_MarksmanCraftingRank1Desc" long_desc_key="jz_MarksmanCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_MarksmanCraftingRank2Desc" long_desc_key="jz_MarksmanCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_MarksmanCraftingRank3Desc" long_desc_key="jz_MarksmanCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_MarksmanCraftingRank4Desc" long_desc_key="jz_MarksmanCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_MarksmanCraftingRank5Desc" long_desc_key="jz_MarksmanCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_MarksmanCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_MarksmanCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_MarksmanCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_MarksmanCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_MarksmanCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- AK47Crafting-->
-	<perk name="jz_AK47Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="AK47 Crafting" desc_key="jz_AK47CraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_AK47Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="AK47 Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_AK47CraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_AK47CraftingRank1Desc" long_desc_key="jz_AK47CraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_AK47CraftingRank2Desc" long_desc_key="jz_AK47CraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_AK47CraftingRank3Desc" long_desc_key="jz_AK47CraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_AK47CraftingRank4Desc" long_desc_key="jz_AK47CraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_AK47CraftingRank5Desc" long_desc_key="jz_AK47CraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_AK47CraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_AK47CraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_AK47CraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_AK47CraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_AK47CraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- M60StoneaxeCrafting-->
-	<perk name="jz_M60Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="M60 Crafting" desc_key="jz_M60CraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_M60Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="M60 Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_M60CraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_M60CraftingRank1Desc" long_desc_key="jz_M60CraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_M60CraftingRank2Desc" long_desc_key="jz_M60CraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_M60CraftingRank3Desc" long_desc_key="jz_M60CraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_M60CraftingRank4Desc" long_desc_key="jz_M60CraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_M60CraftingRank5Desc" long_desc_key="jz_M60CraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_M60CraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_M60CraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_M60CraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_M60CraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_M60CraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- RocketLauncherCrafting-->
-	<perk name="jz_RocketLauncherCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Rocket Launcher Crafting" desc_key="jz_RocketLauncherCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_RocketLauncherCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Rocket Launcher Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_RocketLauncherCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_RocketLauncherCraftingRank1Desc" long_desc_key="jz_RocketLauncherCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_RocketLauncherCraftingRank2Desc" long_desc_key="jz_RocketLauncherCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_RocketLauncherCraftingRank3Desc" long_desc_key="jz_RocketLauncherCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_RocketLauncherCraftingRank4Desc" long_desc_key="jz_RocketLauncherCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_RocketLauncherCraftingRank5Desc" long_desc_key="jz_RocketLauncherCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_RocketLauncherCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_RocketLauncherCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_RocketLauncherCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_RocketLauncherCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_RocketLauncherCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- PrimitiveBowCrafting-->
-	<perk name="jz_PrimitiveBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Primitive Bow Crafting" desc_key="jz_PrimitiveBowCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_PrimitiveBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Primitive Bow Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_PrimitiveBowCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_PrimitiveBowCraftingRank1Desc" long_desc_key="jz_PrimitiveBowCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_PrimitiveBowCraftingRank2Desc" long_desc_key="jz_PrimitiveBowCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_PrimitiveBowCraftingRank3Desc" long_desc_key="jz_PrimitiveBowCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_PrimitiveBowCraftingRank4Desc" long_desc_key="jz_PrimitiveBowCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_PrimitiveBowCraftingRank5Desc" long_desc_key="jz_PrimitiveBowCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_PrimitiveBowCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_PrimitiveBowCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_PrimitiveBowCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_PrimitiveBowCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_PrimitiveBowCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- WoddenBowCrafting-->
-	<perk name="jz_WoodenBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Wodden Bow Crafting" desc_key="jz_WoodenBowCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_WoodenBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Wodden Bow Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_WoodenBowCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_WoodenBowCraftingRank1Desc" long_desc_key="jz_WoodenBowCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_WoodenBowCraftingRank2Desc" long_desc_key="jz_WoodenBowCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_WoodenBowCraftingRank3Desc" long_desc_key="jz_WoodenBowCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_WoodenBowCraftingRank4Desc" long_desc_key="jz_WoodenBowCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_WoodenBowCraftingRank5Desc" long_desc_key="jz_WoodenBowCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_WoodenBowCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_WoodenBowCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_WoodenBowCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_WoodenBowCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_WoodenBowCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- CompoundBowCrafting-->
-	<perk name="jz_CompoundBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Compound Bow Crafting" desc_key="jz_CompoundBowCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_CompoundBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Compound Bow Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_CompoundBowCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_CompoundBowCraftingRank1Desc" long_desc_key="jz_CompoundBowCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_CompoundBowCraftingRank2Desc" long_desc_key="jz_CompoundBowCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_CompoundBowCraftingRank3Desc" long_desc_key="jz_CompoundBowCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_CompoundBowCraftingRank4Desc" long_desc_key="jz_CompoundBowCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_CompoundBowCraftingRank5Desc" long_desc_key="jz_CompoundBowCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_CompoundBowCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_CompoundBowCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_CompoundBowCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_CompoundBowCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_CompoundBowCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- IronCrossbowCrafting-->
-	<perk name="jz_IronCrossbowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="IronCrossbow Crafting" desc_key="jz_IronCrossbowCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_IronCrossbowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="IronCrossbow Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronCrossbowCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_IronCrossbowCraftingRank1Desc" long_desc_key="jz_IronCrossbowCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_IronCrossbowCraftingRank2Desc" long_desc_key="jz_IronCrossbowCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_IronCrossbowCraftingRank3Desc" long_desc_key="jz_IronCrossbowCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_IronCrossbowCraftingRank4Desc" long_desc_key="jz_IronCrossbowCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_IronCrossbowCraftingRank5Desc" long_desc_key="jz_IronCrossbowCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_IronCrossbowCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_IronCrossbowCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_IronCrossbowCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_IronCrossbowCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_IronCrossbowCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- CompoundCrossbowCrafting-->
-	<perk name="jz_CompoundCrossbowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Compound Crossbow Crafting" desc_key="jz_CompoundCrossbowCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_CompoundCrossbowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Compound Crossbow Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_CompoundCrossbowCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_CompoundCrossbowCraftingRank1Desc" long_desc_key="jz_CompoundCrossbowCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_CompoundCrossbowCraftingRank2Desc" long_desc_key="jz_CompoundCrossbowCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_CompoundCrossbowCraftingRank3Desc" long_desc_key="jz_CompoundCrossbowCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_CompoundCrossbowCraftingRank4Desc" long_desc_key="jz_CompoundCrossbowCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_CompoundCrossbowCraftingRank5Desc" long_desc_key="jz_CompoundCrossbowCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_CompoundCrossbowCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_CompoundCrossbowCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_CompoundCrossbowCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_CompoundCrossbowCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_CompoundCrossbowCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- JunkTurretCrafting-->
-	<perk name="jz_JunkTurretCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Junk Turret Crafting" desc_key="jz_JunkTurretCraftingDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_JunkTurretCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Junk Turret Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
 		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_JunkTurretCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_JunkTurretCraftingRank1Desc" long_desc_key="jz_JunkTurretCraftingRank1LongDesc"/>
-			<effect_description level="2" desc_key="jz_JunkTurretCraftingRank2Desc" long_desc_key="jz_JunkTurretCraftingRank2LongDesc"/>
-			<effect_description level="3" desc_key="jz_JunkTurretCraftingRank3Desc" long_desc_key="jz_JunkTurretCraftingRank3LongDesc"/>
-			<effect_description level="4" desc_key="jz_JunkTurretCraftingRank4Desc" long_desc_key="jz_JunkTurretCraftingRank4LongDesc"/>
-			<effect_description level="5" desc_key="jz_JunkTurretCraftingRank5Desc" long_desc_key="jz_JunkTurretCraftingRank5LongDesc"/>
+			<effect_description level="1" desc_key="jz_JunkTurretCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_JunkTurretCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_JunkTurretCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_JunkTurretCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_JunkTurretCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- ******************************************************************  Professions  ******************************************************************************** -->
