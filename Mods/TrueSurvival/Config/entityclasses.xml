@@ -1,0 +1,674 @@
+<configs>
+	<append xpath="/entity_classes">
+		
+
+<entity_class name="Parasite" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ParaziteDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Fat" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ParaziteFatDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Insect" extends="animalZombieVulture" >
+<property name="Class" value="EntityHornet"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?InsectDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="false" />
+<property name="PhysicsBody" value="vulture" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Hybrid" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?HybridDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Mantis" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ParaziteSpiderDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Slider" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ParaziteSliderDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Pangolin" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?PangolinDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+<property name="SoundHurt" value="Animals/Bear/bearpain"/>
+	<property name="SoundDeath" value="Animals/Bear/beardeath"/>
+	<property name="SoundRandom" value="Animals/Bear/bearroam"/>
+	<property name="SoundSense" value="Animals/Bear/bearsense"/>
+	<property name="SoundAlert" value="Animals/Bear/bearalert"/>
+	<property name="SoundAttack" value="Animals/Bear/bearattack"/>
+	<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
+	<property name="SoundGiveUp" value="Animals/Bear/beargiveup"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Ripper" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?RipperDogDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+<property name="SoundRandom" value="Enemies/Zombie_Dogs/zombiedogroam"/>
+	<property name="SoundAlert" value="Enemies/Zombie_Dogs/zombiedogalert"/>
+	<property name="SoundHurt" value="Enemies/Zombie_Dogs/zombiedogpain"/>
+	<property name="SoundDeath" value="Enemies/Zombie_Dogs/zombiedogdeath"/>
+	<property name="SoundAttack" value="Enemies/Zombie_Dogs/zombiedogattack"/>
+	<property name="SoundSense" value="Enemies/Zombie_Dogs/zombiedogsense"/>
+	<property name="SoundGiveUp" value="Enemies/Zombie_Dogs/zombiedoggiveup"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Horror" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?HorrorDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Creepy" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?CreepyDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Spider" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?SpiderDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Bug" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?BugDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Alien" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?AlienDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Shell" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ShellDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Exterminator" extends="zombieFatCop" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ExterminatorDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+<property name="RightHandJointName" value="Muzzle" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Devourer" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?DevourerDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Daemon" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?DaemonDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+<property name="RightHandJointName" value="Muzzle" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Horned" extends="zombieTemplateMale" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?HornedDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="meleeHandZombieFeral" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
+	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
+	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
+	<property name="SoundDeath" value="Enemies/Spider_Zombie/spiderdeath"/>
+	<property name="SoundHurt" value="Enemies/Spider_Zombie/spiderpain"/>
+	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Nasty" extends="zombieFatCop" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?NastyDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+<property name="RightHandJointName" value="Muzzle" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+<entity_class name="Parasite Slug" extends="zombieFatCop" >
+			<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?SlugDark" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+<property name="RightHandJointName" value="Muzzle" />
+			<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.85"/>
+			<property name="PainResistPerHit" value=".01"/>
+			<property name="MaxViewAngle" value="250"/>
+			<property name="Weight" value="250"/>
+			<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+			<property name="AttackTimeoutNight" value="1.7"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="SightRange" value="50"/> 
+			<property name="AttackIndexes" value="2" />
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="700"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="0"/> <!-- Feral damage -->
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+				<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>				
+		</entity_class>
+
+	</append>
+</configs>
