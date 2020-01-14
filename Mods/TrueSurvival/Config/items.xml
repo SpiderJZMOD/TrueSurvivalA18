@@ -18408,6 +18408,7 @@ perkNightStalkerSilentNight
 <!-- JZMOD MELEE WEAPONS -->
 <item name="jz_SteakKnife">
 	<property name="Extends" value="meleeToolKnifeIron" />
+	<property name="Meshfile" value="#@modfolder:Resources/JZMeleeSteakKnife.unity3d?MeleeSteakKnifePrefab" />
 	<property name="RepairTools" value="jz_CantRepair" />
 	<property name="CustomIcon" value="ui_game_symbol_cookingKnife" />
 	<property name="Weight" value="5" />
@@ -18423,6 +18424,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_ChefKnife">
 	<property name="Extends" value="meleeToolKnifeIron" />
+	<property name="Meshfile" value="#@modfolder:Resources/JZMeleeChefsKnife.unity3d?MeleeChefsKnifePrefab" />
 	<property name="CustomIcon" value="ui_game_symbol_chefKnife" />
 	<property name="RepairTools" value="jz_CantRepair" />
 	<property name="DescriptionKey" value="jz_ChefKnifeDesc" />
@@ -18437,8 +18439,7 @@ perkNightStalkerSilentNight
 
 <item name="jz_FryingPan">
 	<property name="CustomIcon" value="ui_game_symbol_fryingPan" />
-	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/hunting_knifePrefab.prefab"/>
-<!--	<property name="Meshfile" value="#JZMeleeFrynPan.unity3d?MeleeFrynPanPrefab.prefab" />-->
+	<property name="Meshfile" value="#@modfolder:Resources/JZMeleeFrynPan.unity3d?MeleeFrynPanPrefab" />
 	<property name="Material" value="Mmetal" />
 	<property name="HoldType" value="2" />
 	<property name="Stacknumber" value="1" />
@@ -18478,11 +18479,172 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="fryingPanDesc" />
 </item>
 
+<item name="jz_PoliceBaton">
+	<property name="Tags" value="blunt,club,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic,jz_BluntSkillTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="Group" value="Ammo/Weapons,Basics"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZBaton.unity3d?BatonPrefab" />
+	<property name="HoldType" value="2"/>
+	<property name="Material" value="Mwood"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="EconomicValue" value="175"/>
+	<property name="FuelValue" value="250"/>
+	<property name="ShowQuality" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".15"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+
+	<effect_group name="meleeClubWood">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="13.8"/> <!-- meleeClubWood -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="BlockDamage" operation="base_set" value="11.6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="13.5" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" tags="perkPummelPete"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+
+		<triggered_effect trigger="onSelfSecondaryActionStart" action="AddJournalEntry" journal="powerAttackTip"/>
+	</effect_group>
+</item>
+
+<item name="jz_Crowbar">
+	<property name="Tags" value="blunt,melee,grunting,light,tool,canHaveCosmetic"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="HoldType" value="18"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZCrowbar.unity3d?CrowbarPrefab" />
+	<property name="Material" value="Mmetal"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="metaldestroy"/>
+	<property name="EconomicValue" value="350"/>
+	<property name="UnlockedBy" value="jz_ScrewdriverSchematic"/>
+	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="ToolCategory.ToolScrewDriver" value="1" param1="1"/>
+		<property name="Sound_harvesting" value="wrench_harvest"/>
+		<property name="Particle_harvesting" value="true" param1="metal"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".3"/>
+		<property name="SwingDegrees" value="50"/>
+		<property name="SwingAngle" value="180"/>
+	</property>
+	<property class="Action1"> 
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value=".64"/>
+		<property name="Repair_amount" value="400"/>
+		<property name="Upgrade_hit_offset" value="-2"/>
+		<property name="Sound_start" value="repair_block"/>
+		<property name="Allowed_upgrade_items" value="jz_Plank"/>
+		<property name="UsePowerAttackAnimation" value="false"/>
+	</property>
+	
+	<effect_group name="meleeToolWrench">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="18"/> <!-- meleeToolWrench -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="BlockDamage" operation="base_set" value="38.5"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="salvageHarvest"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="200,682" tier="1,6" tags="perkSalvageOperations"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSalvageOperations"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="25.2" tags="secondary"/>
+	</effect_group>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+	<property name="DescriptionKey" value="screwdriverDesc" />
+</item>
+
 <item name="jz_Screwdriver">
 	<property name="Tags" value="blunt,melee,grunting,light,tool,canHaveCosmetic"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="29"/>
-	<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZScrewdriver.unity3d?ScrewdriverPrefab" />
 	<property name="Material" value="Mmetal"/>
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="DegradationBreaksAfter" value="true"/>
@@ -18553,7 +18715,7 @@ perkNightStalkerSilentNight
 	<property name="Tags" value="blunt,melee,grunting,light,tool,canHaveCosmetic,jz_StoneBuildingTag"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="29"/>
-	<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZMasonHammer.unity3d?MasonHammerPrefab" />
 	<property name="Material" value="Mmetal"/>
 	<property name="CustomIcon" value="ui_game_symbol_stoneHammer" />
 	<property name="RepairTools" value="resourceRepairKit"/>
@@ -18760,6 +18922,7 @@ perkNightStalkerSilentNight
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<property name="DescriptionKey" value="welderToolDesc" />
 </item>
+
 <!--JZMOD PROFESSION PAGES -->
 <item name="jz_ProfessionPage">
 	<property name="Extends" value="jz_MasterItem" />

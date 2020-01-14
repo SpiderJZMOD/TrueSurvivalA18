@@ -28433,11 +28433,10 @@ NOT the TextureNumber.
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Path" value="solid"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
-<!--	<property name="Model" value="#JZDryingRack.unity3d?DryingRackPrefab.prefab" />-->
+	<property name="Model" value="#@modfolder:Resources/JZDryingRack.unity3d?DryingRackPrefab" />
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="DisplayType" value="blockMulti" />
-	<property name="MultiBlockDim" value="2,2,2"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Class" value="Campfire" />
 	<property name="HeatMapStrength" value="1" />
@@ -28466,7 +28465,7 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
 	<!-- NEEDS ASSET<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#MortarandPestle?MortarandPestlePrefab" />-->
-    <property name="ModelOffset" value="0,.5,0" />
+    <property name="ModelOffset" value="0,0,0" />
     <property name="MultiBlockDim" value="1,1,1" />
 	<property name="CustomIcon" value="ui_game_symbol_stoneMill" />
 	<property name="Place" value="TowardsPlacerInverted" />
@@ -28490,7 +28489,6 @@ NOT the TextureNumber.
 	<property name="SellableToTrader" value="false" />
 </block>
 
-  <!--JZMOD Free 88 -->
 <block name="jz_ResearchDesk">
 	<property name="Material" value="Mwood" />
 	<property name="Stacknumber" value="1" />
@@ -28522,10 +28520,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Forge" />
 	<property name="Material" value="Mstone" />
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
-	<!--<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#JZWorkStations.unity3d?BlastForgePrefab.prefab" />-->
-    <property name="ModelOffset" value="0,0.0,0" />
+	<property name="Model" value="#@modfolder:Resources/JZBlastForge.unity3d?BlastForgePrefab" />
+    <property name="ModelOffset" value="0,.5,0" />
 	<property name="Place" value="TowardsPlacerInverted" />
 	<property name="ParticleName" value="campfire" />
 	<property name="ParticleOffset" value="0.5,1,0.5" />
@@ -28557,7 +28553,7 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
 	<!-- NEEDS ASSET<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#moonshine?moonshinePrefab" />-->
-    <property name="ModelOffset" value="0,-0.05,0" />
+    <property name="ModelOffset" value="0,0,0" />
     <property name="MultiBlockDim" value="2,2,1" />
     <property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 	<property name="HeatMapStrength" value="2" />
@@ -28580,34 +28576,6 @@ NOT the TextureNumber.
 	<property name="Group" value="Tools/Traps" />
 </block>
 
-<block name="jz_BulletPress">
-	<property name="Material" value="Mmetal_thin" />
-	<property name="Place" value="TowardsPlacerInverted" />
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
-	<!-- NEEDS ASSET<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#ammoreloder?ammunitionReloader1" />-->
-    <property name="ModelOffset" value="0,-0.05,0" />
-	<property name="CustomIcon" value="ui_game_symbol_bulletPress" />
-	<property name="Class" value="Campfire" />
-	<property name="ActiveRadiusEffects" value="+heatSource(3)" />
-	<property name="Stacknumber" value="1" />
-	<property name="HeatMapStrength" value="2" />
-	<property name="HeatMapTime" value="1200" />
-	<property name="HeatMapFrequency" value="25" />
-	<property class="Workstation">
-		<property name="Modules" value="output,fuel" />
-	</property>
-	<property class="RepairItems">
-		<property name="resourceScrapIron" value="50" />
-	</property>
-	<property name="DescriptionKey" value="bulletPressDesc" />
-	<drop event="Harvest" name="" count="0" tool_category="ToolWrench" />
-	<drop event="Destroy" name="" count="0" tool_category="ToolWrench" />
-	<drop event="Destroy" count="0" />
-	<property name="CraftingSkillGroup" value="engineeringCraft" />
-</block>
-
 <block name="jz_MortarAndPestle">
 	<property name="DescriptionKey" value="MortarAndPestle1Desc" />
 	<property name="Material" value="Mstone" />
@@ -28615,7 +28583,31 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
 	<!-- NEEDS ASSET<property name="Shape" value="ModelEntity" />
 	<property name="Model" value="#MortarandPestle?MortarandPestlePrefab" />-->
-	<property name="ModelOffset" value="0,.5,0" />
+	<property name="ModelOffset" value="0,0,0" />
+	<property name="CustomIcon" value="ui_game_symbol_mortarAndPestle" />
+	<property name="Class" value="Campfire" />
+	<property name="Stacknumber" value="1" />
+	<property name="HeatMapStrength" value="1" />
+	<property name="HeatMapTime" value="1200" />
+	<property name="HeatMapFrequency" value="25" />
+	<property class="RepairItems">
+		<property name="resourceRockSmall" value="50" />
+	</property>
+	<property class="Workstation">
+		<property name="Modules" value="output,fuel" />
+	</property>
+	<drop event="Harvest" name="" count="0" tool_category="ToolWrench" />
+	<drop event="Destroy" name="" count="0" tool_category="ToolWrench" />
+	<drop event="Destroy" count="0" />
+	<property name="Group" value="Basics" />
+</block>
+
+<block name="jz_Anvil">
+	<property name="DescriptionKey" value="MortarAndPestle1Desc" />
+	<property name="Material" value="Mstone" />
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZAnvil.unity3d?AnvilPrefab" />
+	<property name="ModelOffset" value="0,0,0" />
 	<property name="CustomIcon" value="ui_game_symbol_mortarAndPestle" />
 	<property name="Class" value="Campfire" />
 	<property name="Stacknumber" value="1" />
@@ -28638,8 +28630,8 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="jz_FermentationBarrelDesc" />
 	<property name="Material" value="Mwood" />
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/TEST.unity3d?AnvilPrefab" />
-	<property name="ModelOffset" value="0,.5,0" />
+	<property name="Model" value="#@modfolder:Resources/JZFermentationBarrel.unity3d?FermentationBarrelPrefab" />
+	<property name="ModelOffset" value="0,0,0" /> 
 	<property name="CustomIcon" value="ui_game_symbol_mortarAndPestle" />
 	<property name="Class" value="Campfire" />
 	<property name="Stacknumber" value="1" />
@@ -28661,16 +28653,14 @@ NOT the TextureNumber.
 <block name="jz_MethaneProducer">
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
-	<!-- NEEDS ASSET<property name="Shape" value="ModelEntity" />
-	<property name="Model" value="#watertank?watertankPrefab" />-->
+	<property name="Model" value="#@modfolder:Resources/JZMethaneProducer.unity3d?MethaneProducerPrefab" />
 	<property name="Texture" value="284" />
 	<property name="Material" value="Mmetal_thin" />
 	<property name="Class" value="Campfire" />
 	<property name="Stacknumber" value="1" />
 	<property name="CustomIcon" value="ui_game_symbol_methaneProducer" />
-	<property name="ModelOffset" value="0,0.55,0" />
-    <property name="MultiBlockDim" value="1,1,1" />
+	<property name="ModelOffset" value="0,0,0" />
+    <property name="MultiBlockDim" value="1,2,2" />
     <property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 	<property class="RepairItems"> <property name="resourceScrapIron" value="50" /> </property>
 	<property class="Workstation">
@@ -30100,6 +30090,171 @@ NOT the TextureNumber.
 	<property name="Group" value="Basics" />
 	<drop event="Destroy" count="0" />
 	<property name="DowngradeBlock" value="bikeLoot" />
+</block>
+
+<block name="jz_GoreBlockHumanBones">
+	<property name="Material" value="Morganic"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile1.unity3d?GoreBonePile1Prefab" />
+	<property name="ImposterExclude" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<drop event="Harvest" name="goreBlockHumanBones" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="2,4" tag="butcherHarvest"/>
+	<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
+	<property name="FilterTags" value="fdecor,fother"/>
+</block>
+
+<block name="jz_GoreBlockHumanBones2">
+	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile2.unity3d?GoreBonePile2Prefab" />
+</block>
+
+<block name="jz_GoreBlockHumanBones3">
+	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile3.unity3d?GoreBonePile3Prefab" />
+</block>
+
+<block name="jz_GoreBlockHumanBones4">
+	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile4.unity3d?GoreBonePile4Prefab" />
+</block>
+
+<block name="jz_GoreBlockHumanBones5">
+	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile5.unity3d?GoreBonePile5Prefab" />
+</block>
+
+<block name="jz_GoreBlockHumanBones6">
+	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile6.unity3d?GoreBonePile6Prefab" />
+</block>
+
+<block name="jz_GoreBlockHumanBones7">
+	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile7.unity3d?GoreBonePile7Prefab" />
+</block>
+
+<block name="jz_GoreBlockHumanBones8">
+	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile8.unity3d?GoreBonePile8Prefab" />
+</block>
+
+<block name="jz_GoreBlockHumanBones9">
+	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile9.unity3d?GoreBonePile9Prefab" />
+</block>
+
+<block name="jz_GoreBlockHumanBones10">
+	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile10.unity3d?GoreBonePile10Prefab" />
+</block>
+
+<block name="jz_DecoWaterBottle">
+	<property name="CustomIcon" value="toolCookingPot"/>
+	<property name="Material" value="MmetalNoGlue"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZWaterBottleBlock.unity3d?WaterBottleBlockPrefab" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanPickup" value="true" param1="toolCookingPot"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
+</block>
+
+<block name="jz_GasTank">
+	<property name="CustomIcon" value="toolCookingPot"/>
+	<property name="Material" value="MmetalNoGlue"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGasTank.unity3d?GasTankPrefab" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanPickup" value="true" param1="toolCookingPot"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
+</block>
+
+<block name="jz_Palmtree1">
+	<property name="Extends" value="treeMasterGrowing" param1="CustomIcon,DescriptionKey,Harvest"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="MaxDamage" value="10"/>
+	<property name="Material" value="Mplants"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Model" value="#@modfolder:Resources/JZTreePalmA1.unity3d?TreePalmA1Prefab" />
+	<property name="ModelOffset" value="0,.5,0"/>
+	<property name="Collide" value="melee"/>
+	<property name="FallOver" value="false"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="PlantGrowing.Next" value="treePlantedOak08m"/>
+	<drop event="Destroy" name="treePlantedOak1m" count="1"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="Group" value="Resources"/>
+	<property name="ParticleOnDeath" value="treeGib_sapling"/>
+	<property name="SortOrder2" value="0142"/> <!-- SortTree -->
+	<property name="ActivationDistance" value="4"/>
+</block>
+
+<block name="jz_Palmtree2">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="treeOakSml01"/>
+	<property name="Model" value="#@modfolder:Resources/JZTreePalmA2.unity3d?TreePalmA2Prefab" />
+	<property name="ModelOffset" value="0,.5,0"/>
+	<property name="MultiBlockDim" value="1,7,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="PlantGrowing.Next" value="treePlantedOak16m"/>
+	<property name="SortOrder2" value="0144"/> <!-- SortTree -->
+	<!--JZMOD ANY-->
+	<drop event="Destroy" name="jz_Stick" count="2,10"/>
+	<drop event="Destroy" name="jz_LogSmall" count="2,6"/>
+	<drop event="Destroy" name="treePlantedOak1m" count="1" prob="0.3" />
+</block>
+
+<block name="jz_Palmtree3">
+	<property name="Extends" value="treeMasterGrowing"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="treeOakMed01"/>
+	<property name="Material" value="MtreeWoodMedium"/>
+	<property name="Model" value="#@modfolder:Resources/JZTreePalmA3.unity3d?TreePalmA3Prefab" />
+	<property name="ModelOffset" value="0,.5,0"/>
+	<property name="MultiBlockDim" value="1,15,1"/>
+	<property name="BigDecorationRadius" value="4"/>
+	<property name="PlantGrowing.Next" value="treePlantedOak27m"/>
+	<property name="SortOrder2" value="0146"/> <!-- SortTree -->
+	<!--JZMOD ANY-->
+	<drop event="Destroy" name="jz_Stick" count="5,20"/>
+	<drop event="Destroy" name="jz_LogSmall" count="3,6"/>
+	<drop event="Destroy" name="jz_LogLarge" count="5,10"/>
+	<drop event="Destroy" name="treePlantedOak1m" count="1,2" prob="0.3" />
 </block>
 </set>
 </configs> 

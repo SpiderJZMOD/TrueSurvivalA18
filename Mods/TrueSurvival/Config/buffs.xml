@@ -77,6 +77,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="1000"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="1000"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="set" value="1000"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="set" value="1000"/><!--JZMOD GODMOD FOOD STAT-->
 
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LegHurtCounter" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LegHurtDuration" operation="set" value="0"/>
