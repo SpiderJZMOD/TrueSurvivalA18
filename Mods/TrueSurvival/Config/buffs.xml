@@ -856,7 +856,7 @@
 			<!-- Taking care of food/water not being maxed with all the game start / initial chunk generation -->
 			<passive_effect name="WaterChangeOT" operation="base_add" value="2,2" duration="0,8"/>
 			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="2,2" duration="0,8"/><!--Tiredness-->
-		
+					
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value="5"/><!--VeggieVitamin-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value="5"/><!--FruitVitamin-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value="5"/><!--GrainVitamin-->
@@ -2405,9 +2405,6 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 -->
 	</buff>
 
-
-
-
 	<buff name="buffRadiation03" name_key="buffRadiation03Name" description_key="buffRadiation03Desc" tooltip_key="buffRadiation03Tooltip" icon="ui_game_symbol_radiation" icon_color="255,0,0" icon_blink="true">
 		<damage_type value="radiation"/>
 		<stack_type value="ignore"/>
@@ -3419,7 +3416,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		
 	<buff name="jz_BuffFullnessFader" hidden="true" remove_on_death="false">
 		<stack_type value="ignore"/>
-		<update_rate value="10"/>
+		<update_rate value="30"/>
 		<duration value="0"/>
 		<effect_group name="Food Stat Fader">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GTE" value="1"/>
@@ -3701,7 +3698,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 <!-- JZMOD FOOD SYSTEM -->
 	<buff name="jz_BuffVitaminFader" hidden="true" remove_on_death="false">
 		<stack_type value="ignore"/>
-		<update_rate value="6"/>
+		<update_rate value="420"/>
 		<duration value="0"/>
 		<effect_group name="Protein Vitamin Fader ">
 			<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="GTE" value="0.1"/>
