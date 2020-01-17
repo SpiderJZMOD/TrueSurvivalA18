@@ -30109,55 +30109,55 @@ NOT the TextureNumber.
 </block>
 
 <block name="jz_GoreBlockHumanBones2">
-	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile2.unity3d?GoreBonePile2Prefab" />
 </block>
 
 <block name="jz_GoreBlockHumanBones3">
-	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile3.unity3d?GoreBonePile3Prefab" />
 </block>
 
 <block name="jz_GoreBlockHumanBones4">
-	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile4.unity3d?GoreBonePile4Prefab" />
 </block>
 
 <block name="jz_GoreBlockHumanBones5">
-	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile5.unity3d?GoreBonePile5Prefab" />
 </block>
 
 <block name="jz_GoreBlockHumanBones6">
-	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile6.unity3d?GoreBonePile6Prefab" />
 </block>
 
 <block name="jz_GoreBlockHumanBones7">
-	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile7.unity3d?GoreBonePile7Prefab" />
 </block>
 
 <block name="jz_GoreBlockHumanBones8">
-	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile8.unity3d?GoreBonePile8Prefab" />
 </block>
 
 <block name="jz_GoreBlockHumanBones9">
-	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile9.unity3d?GoreBonePile9Prefab" />
 </block>
 
 <block name="jz_GoreBlockHumanBones10">
-	<property name="Extends" value="jz_SteelFrameMaster"/>
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile10.unity3d?GoreBonePile10Prefab" />
 </block>
@@ -30174,6 +30174,25 @@ NOT the TextureNumber.
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="CanPickup" value="true" param1="toolCookingPot"/>
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
+</block>
+
+<block name="jz_FoodChips">
+	<property name="CustomIcon" value="toolCookingPot"/>
+	<property name="Material" value="MmetalNoGlue"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFoodChips.unity3d?FoodChipsPrefab" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanPickup" value="true" param1="jz_FoodChips"/>
+	<drop event="Destroy" name="jz_FoodChips" count="1"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="Group" value="Tools/Traps,Food/Cooking"/>
 	<property name="EconomicValue" value="12"/>
@@ -30200,6 +30219,190 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
 </block>
 
+<block name="jz_TireMarks">
+	<property name="CustomIcon" value="toolCookingPot"/>
+	<property name="Material" value="MmetalNoGlue"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/> 
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZDecorTireMarks.unity3d?DecorTireMarksPrefab" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanPickup" value="false" />
+	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
+</block>
+
+<block name="jz_Creepy04">
+	<property name="CustomIcon" value="toolCookingPot"/>
+	<property name="Material" value="MmetalNoGlue"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/> 
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy04.unity3d?Creepy04Prefab" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanPickup" value="false" />
+	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
+</block>
+
+<block name="jz_Creepy01">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy01.unity3d?Creepy01Prefab" />
+</block>
+
+<block name="jz_Creepy02">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy02.unity3d?Creepy02Prefab" />
+</block>
+
+<block name="jz_Creepy07">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy07.unity3d?Creepy07Prefab" />
+</block>
+
+<block name="jz_Creepy08">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy08.unity3d?Creepy08Prefab" />
+</block>
+
+<block name="jz_Creepy09">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy09.unity3d?Creepy09Prefab" />
+</block>
+
+<block name="jz_Creepy10">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy10.unity3d?Creepy10Prefab" />
+</block>
+
+<block name="jz_Creepy11">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy11.unity3d?Creepy11Prefab" />
+</block>
+
+<block name="jz_Creepy14">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy14.unity3d?Creepy14Prefab" />
+</block>
+
+<block name="jz_Creepy15">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy15.unity3d?Creepy15Prefab" />
+</block>
+
+<block name="jz_Creepy16">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy16.unity3d?Creepy16Prefab" />
+</block>
+
+<block name="jz_Creepy17">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy17.unity3d?Creepy17Prefab" />
+</block>
+
+<block name="jz_Creepy19">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy19.unity3d?Creepy19Prefab" />
+</block>
+
+<block name="jz_Creepy23">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy23.unity3d?Creepy23Prefab" />
+</block>
+
+<block name="jz_Creepy25">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy25.unity3d?Creepy25Prefab" />
+</block>
+
+<block name="jz_CreepyEye">
+	<property name="Extends" value="jz_Creepy04"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepyEye.unity3d?CreepyEyePrefab" />
+</block>
+
+<block name="jz_TruckElectricBox">
+	<property name="CustomIcon" value="toolCookingPot"/>
+	<property name="Material" value="MmetalNoGlue"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZDecorTruckElectricBox.unity3d?DecorTruckElectricBoxPrefab" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanPickup" value="true" param1="toolCookingPot"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
+</block>
+
+<block name="jz_TruckTrash">
+	<property name="CustomIcon" value="toolCookingPot"/>
+	<property name="Material" value="MmetalNoGlue"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/> 
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZDecorTruckTrash.unity3d?DecorTruckTrashPrefab" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanPickup" value="true" param1="toolCookingPot"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
+</block>
+
+<block name="jz_MetalTrash">
+	<property name="CustomIcon" value="toolCookingPot"/>
+	<property name="Material" value="MmetalNoGlue"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/> 
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZDecorMetalTrash.unity3d?DecorMetalTrashPrefab" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Group" value="Tools/Traps,Food/Cooking"/>
+	<property name="EconomicValue" value="12"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
+</block>
+
 <block name="jz_Palmtree1">
 	<property name="Extends" value="treeMasterGrowing" param1="CustomIcon,DescriptionKey,Harvest"/>
 	<property name="CreativeMode" value="Player"/>
@@ -30208,7 +30411,7 @@ NOT the TextureNumber.
 	<property name="StabilitySupport" value="false"/>
 	<property name="Model" value="#@modfolder:Resources/JZTreePalmA1.unity3d?TreePalmA1Prefab" />
 	<property name="ModelOffset" value="0,.5,0"/>
-	<property name="Collide" value="melee"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="FallOver" value="false"/>
 	<property name="BigDecorationRadius" value="4"/>
 	<property name="OnlySimpleRotations" value="true"/>
@@ -30231,6 +30434,7 @@ NOT the TextureNumber.
 	<property name="ModelOffset" value="0,.5,0"/>
 	<property name="MultiBlockDim" value="1,7,1"/>
 	<property name="BigDecorationRadius" value="4"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="PlantGrowing.Next" value="treePlantedOak16m"/>
 	<property name="SortOrder2" value="0144"/> <!-- SortTree -->
 	<!--JZMOD ANY-->
@@ -30248,6 +30452,7 @@ NOT the TextureNumber.
 	<property name="ModelOffset" value="0,.5,0"/>
 	<property name="MultiBlockDim" value="1,15,1"/>
 	<property name="BigDecorationRadius" value="4"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="PlantGrowing.Next" value="treePlantedOak27m"/>
 	<property name="SortOrder2" value="0146"/> <!-- SortTree -->
 	<!--JZMOD ANY-->
@@ -30256,5 +30461,330 @@ NOT the TextureNumber.
 	<drop event="Destroy" name="jz_LogLarge" count="5,10"/>
 	<drop event="Destroy" name="treePlantedOak1m" count="1,2" prob="0.3" />
 </block>
+
+<block name="jz_VehiclesApache">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleApache.unity3d?VehicleApachePrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesBulldozer">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleBulldozer.unity3d?VehicleBulldozerPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesCaprise">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleCaprise.unity3d?VehicleCaprisePrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesCrashedApache">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleCrashedApache.unity3d?VehicleCrashedApachePrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesCrashedHeli">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleCrashedHeli.unity3d?VehicleCrashedHeliPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesForkLift">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleForkLift.unity3d?VehicleForkLiftPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesGarbageTruck">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleGarbageTruck.unity3d?VehicleGarbageTruckPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesHeli">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleHeli.unity3d?VehicleHeliPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesHotRod">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleHotRod.unity3d?VehicleHotRodPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesLingo">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleLingo.unity3d?VehicleLingoPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesLovo">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleLovo.unity3d?VehicleLovoPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesPassied">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehiclePassied.unity3d?VehiclePassiedPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesPickup">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehiclePickup.unity3d?VehiclePickupPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesPolice">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehiclePolice.unity3d?VehiclePolicePrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesRedVan">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleRedVan.unity3d?VehicleRedVanPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesRustyVan">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleRustyVan.unity3d?VehicleRustyVanPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesTank">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleTank.unity3d?VehicleTankPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesTank2">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleTank2.unity3d?VehicleTank2Prefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesTaxi">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleTaxi.unity3d?VehicleTaxiPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+<block name="jz_VehiclesTowTruck">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleTowTruck.unity3d?VehicleTowTruckPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesTractor">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleTractor.unity3d?VehicleTractorPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesTVVan">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleTVVan.unity3d?VehicleTVVanPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesWhiteCar">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleWhiteCar.unity3d?VehicleWhiteCarPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesWreckedGreenCar">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedGrPassied.unity3d?VehicleWreckedGrPassiedPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesWreckedPassied">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedPassied.unity3d?VehicleWreckedPassiedPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesWreckedTank">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedTank.unity3d?VehicleWreckedTankPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesAPC">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleAPC.unity3d?VehicleAPCPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesBigRigWhite">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleBigWhiteRig.unity3d?VehicleBigWhiteRigPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesCementTruck">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleCementTruck.unity3d?VehicleCementTruckPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesCoolerTrailer">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleCooler.unity3d?VehicleCoolerPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesFlatBed1">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleFlatBed1.unity3d?VehicleFlatBed1Prefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesFlatBed2">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleFlatBed2.unity3d?VehicleFlatBed2Prefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesBigRigRed">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleRedRig.unity3d?VehicleRedRigPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesWreckedBigRigCab">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedBigRigCab.unity3d?VehicleWreckedBigRigCabPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesWreckedRigTrailer">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedRigTrailer.unity3d?VehicleWreckedRigTrailerPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+<block name="jz_VehiclesWreckedTanker">
+	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedTanker.unity3d?VehicleWreckedTankerPrefab" />
+	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+</block>
+
+
 </set>
 </configs> 

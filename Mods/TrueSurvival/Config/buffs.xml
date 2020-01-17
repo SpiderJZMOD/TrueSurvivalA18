@@ -863,6 +863,8 @@
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value="5"/><!--ProteinVitamin-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="50"/><!--Food-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodAmountAdd" operation="add" value="99"/><!--Tiredness-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_WellnessLv" operation="add" value="80"/><!--Wellness-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="80"/><!--Health-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="99"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodAmount" operation="add" value="48"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="waterAmount" operation="add" value="48"/>
