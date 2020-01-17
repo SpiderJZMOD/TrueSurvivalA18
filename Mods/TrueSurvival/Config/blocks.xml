@@ -22175,7 +22175,7 @@ NOT the TextureNumber.
 	<property name="DisplayInfo" value="Name"/>
 </block>
 
-<block name="cntCar03SedanDamage0Master">
+<block name="cntCar03SedanDamage0Master"><!-- Good Car -->
 	<property name="CreativeMode" value="None"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="Class" value="CarExplodeLoot"/> <!-- cars explode when destroyed by a tool without harvest settings -->
@@ -22216,7 +22216,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="floot"/>
 </block>
 
-<block name="cntCar03SedanDamage1Master">
+<block name="cntCar03SedanDamage1Master"><!-- 1/2 way Car -->
 	<property name="CreativeMode" value="None"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="Class" value="CarExplodeLoot"/>
@@ -30462,15 +30462,6 @@ NOT the TextureNumber.
 	<drop event="Destroy" name="treePlantedOak1m" count="1,2" prob="0.3" />
 </block>
 
-<block name="jz_VehiclesApache">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIconTint" value="5050d0"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZVehicleApache.unity3d?VehicleApachePrefab" />
-	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
-</block>
-
 <block name="jz_VehiclesBulldozer">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
 	<property name="CreativeMode" value="Player"/>
@@ -30489,22 +30480,21 @@ NOT the TextureNumber.
 	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
 </block>
 
-<block name="jz_VehiclesCrashedApache">
+<block name="jz_VehiclesApache">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleApache.unity3d?VehicleApachePrefab" />
+	<property name="DowngradeBlock" value="jz_VehiclesCrashedApache"/>
+</block>
+
+<block name="jz_VehiclesCrashedApache">
+	<property name="Extends" value="cntCar03SedanDamage2Master"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehicleCrashedApache.unity3d?VehicleCrashedApachePrefab" />
-	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
-</block>
-
-<block name="jz_VehiclesCrashedHeli">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIconTint" value="5050d0"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZVehicleCrashedHeli.unity3d?VehicleCrashedHeliPrefab" />
-	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
 </block>
 
 <block name="jz_VehiclesForkLift">
@@ -30531,7 +30521,15 @@ NOT the TextureNumber.
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehicleHeli.unity3d?VehicleHeliPrefab" />
-	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
+	<property name="DowngradeBlock" value="jz_VehiclesCrashedHeli"/>
+</block>
+
+<block name="jz_VehiclesCrashedHeli">
+	<property name="Extends" value="cntCar03SedanDamage2Master"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIconTint" value="5050d0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleCrashedHeli.unity3d?VehicleCrashedHeliPrefab" />
 </block>
 
 <block name="jz_VehiclesHotRod">
@@ -30598,7 +30596,7 @@ NOT the TextureNumber.
 </block>
 
 <block name="jz_VehiclesRustyVan">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="Extends" value="cntCar03SedanDamage1Master"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -30660,7 +30658,7 @@ NOT the TextureNumber.
 </block>
 
 <block name="jz_VehiclesWhiteCar">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="Extends" value="cntCar03SedanDamage1Master"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -30669,7 +30667,7 @@ NOT the TextureNumber.
 </block>
 
 <block name="jz_VehiclesWreckedGreenCar">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="Extends" value="cntCar03SedanDamage1Master"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -30678,7 +30676,7 @@ NOT the TextureNumber.
 </block>
 
 <block name="jz_VehiclesWreckedPassied">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="Extends" value="cntCar03SedanDamage1Master"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -30687,12 +30685,11 @@ NOT the TextureNumber.
 </block>
 
 <block name="jz_VehiclesWreckedTank">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="Extends" value="cntCar03SedanDamage2Master"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedTank.unity3d?VehicleWreckedTankPrefab" />
-	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
 </block>
 
 <block name="jz_VehiclesAPC">
@@ -30731,16 +30728,7 @@ NOT the TextureNumber.
 	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
 </block>
 
-<block name="jz_VehiclesFlatBed1">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIconTint" value="5050d0"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZVehicleFlatBed1.unity3d?VehicleFlatBed1Prefab" />
-	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
-</block>
-
-<block name="jz_VehiclesFlatBed2">
+<block name="jz_VehiclesFlatBed">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
@@ -30759,32 +30747,141 @@ NOT the TextureNumber.
 </block>
 
 <block name="jz_VehiclesWreckedBigRigCab">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="Extends" value="cntCar03SedanDamage2Master"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedBigRigCab.unity3d?VehicleWreckedBigRigCabPrefab" />
-	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
 </block>
 
 <block name="jz_VehiclesWreckedRigTrailer">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="Extends" value="cntCar03SedanDamage2Master"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedRigTrailer.unity3d?VehicleWreckedRigTrailerPrefab" />
-	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
 </block>
 
 <block name="jz_VehiclesWreckedTanker">
-	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="Extends" value="cntCar03SedanDamage2Master"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedTanker.unity3d?VehicleWreckedTankerPrefab" />
-	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
 </block>
 
+<block name="jz_MasterBlock2Item">
+	<property name="CreativeMode" value="player"/>
+	<property name="CustomIcon" value="ui_game_symbol_NoIcon"/>
+	<property name="Material" value="MmetalNoGlue"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/> 
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZWaterBottleBlock.unity3d?WaterBottleBlockPrefab" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CanPickup" value="true" param1="jz_DrinkCleanOuncesOfWater" count="5,32"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Group" value="Food/Cooking"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
+</block>
 
+<block name="jz_MasterHarvestableDecor">
+    <property name="CreativeMode" value="player"/>
+	<property name="DescriptionKey" value="decorationBlockGroupDesc"/>
+    <property name="CustomIcon" value="ui_game_symbol_NoIcon"/>
+	<property name="Material" value="Mwood_weak"/>
+    <property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/> 
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZDecorTruckTrash.unity3d?DecorTruckTrashPrefab" />
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="VehicleHitScale" value="999"/>
+    <property name="CanPickup" value="false" />
+</block>
+
+<block name="jz_MasterMilitaryVehicle1"><!-- Good Car -->
+	<property name="CreativeMode" value="player"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Class" value="CarExplodeLoot"/> <!-- cars explode when destroyed by a tool without harvest settings -->
+	<property name="CustomIcon" value="ui_game_symbol_NoIcon"/>
+	<property name="ItemTypeIcon" value="explosion"/>
+	<property name="LootList" value="19"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleTank.unity3d?VehicleTankPrefab" />
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Place" value="TowardsPlacer"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="3,3,7"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="ShowModelOnFall" value="false"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="VerticalOffset" value="0.0"/>
+	<drop event="Harvest" name="resourceLeather" count="1,3" prob="0.5" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest"/>
+	<drop event="Harvest" name="cntCar03SedanDamage0Master" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.2" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
+	<property name="DowngradeBlock" value="jz_MasterMilitaryVehicle2"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="CanDecorateOnSlopes" value="false"/>
+	<property class="Explosion">
+		<property name="ParticleIndex" value="4"/> <!-- which prefab/particle is used -->
+		<property name="RadiusBlocks" value="3.5"/> <!-- damage radius for blocks -->
+		<property name="BlockDamage" value="500"/> <!-- damage for blocks in the center of the explosion -->
+
+		<property name="RadiusEntities" value="5"/> <!-- damage radius for entities -->
+		<property name="EntityDamage" value="250"/> <!-- damage for entities in the center of the explosion -->
+	</property>
+	<property name="ActivationDistance" value="6"/>
+	<property name="FilterTags" value="floot"/>
+</block>
+
+<block name="jz_MasterMilitaryVehicle2"> <!-- car wreck -->
+	<property name="CreativeMode" value="player"/>
+	<property name="Class" value="CarExplode"/>
+	<property name="CustomIcon" value="ui_game_symbol_NoIcon"/>
+	<property name="ItemTypeIcon" value="explosion"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedTank.unity3d?VehicleWreckedTankPrefab" />
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Place" value="TowardsPlacer"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="3,3,7"/>
+	<property name="ShowModelOnFall" value="false"/>
+	<property name="VerticalOffset" value="0"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="ammoGasCan" count="50,500" prob="0.5" tag="allHarvest"/>
+	<drop event="Harvest" name="ammoGasCan" count="50,500" prob="0.5" tag="salvageHarvest"/> <!-- together 100 avg -->
+	<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.45" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="20" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapPolymers" count="2,7" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="12" tag="allHarvest"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="1" stick_chance="1"/>
+	<property name="BigDecorationRadius" value="5"/>
+	<property name="CanDecorateOnSlopes" value="false"/>
+	<property class="Explosion">
+		<property name="ParticleIndex" value="4"/> <!-- which prefab/particle is used -->
+		<property name="RadiusBlocks" value="3.5"/> <!-- damage radius for blocks -->
+		<property name="BlockDamage" value="500"/> <!-- damage for blocks in the center of the explosion -->
+		<property name="RadiusEntities" value="5"/> <!-- damage radius for entities -->
+		<property name="EntityDamage" value="250"/> <!-- damage for entities in the center of the explosion -->
+	</property>
+	<property name="ActivationDistance" value="6"/>
+	<property name="FilterTags" value="floot"/>
+</block>
 </set>
 </configs> 
