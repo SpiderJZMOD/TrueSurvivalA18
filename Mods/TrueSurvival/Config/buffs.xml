@@ -3659,7 +3659,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 
 	<buff name="buffHealStaminaMax" name_key="buffHealStaminaMaxName" icon="ui_game_symbol_hunger" icon_color="0,200,0" hidden="true">
 		<stack_type value="ignore"/>
-		<update_rate value="1"/>
+		<update_rate value="0.2"/>
 		<duration value="0"/>
 		<effect_group >
 			<requirement name="!IsStatAtMax" stat="maxstamina"/>
@@ -5533,16 +5533,6 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>	
 	</buff>
 	
-	<buff name="jz_BuffSleepingOnNiceBed" remove_on_death="true" name_key="jz_BuffSleepingOnNiceBedName" description_key="jz_BuffSleepingOnNiceBedDesc" icon="ui_game_symbol_animal_tracker" >
-		<stack_type value="replace"/>
-		<update_rate value=".2"/>
-		<duration value="3"/>
-		<effect_group>
-			<requirement name="!IsStatAtMax" stat="maxstamina"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value=".1"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value=".1"/>
-		</effect_group>	
-	</buff>
 	<!-- JZMOD SNAKE BITE -->
 	<buff name="jz_BuffSnakeBite" remove_on_death="false" name_key="jz_BuffSnakeBiteName" description_key="jz_BuffSnakeBiteDesc" icon="ui_game_symbol_animal_tracker" >
 		<stack_type value="ignore"/>
@@ -5726,5 +5716,48 @@ icon="ui_game_symbol_pack_mule"
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="foodCanStock"/>
 		</effect_group>
 	</buff>
+	<!-- FATIGUE RECOVERY-->
+	<buff name="jz_BuffFurniturHardRecover" hidden="true" remove_on_death="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>
+	</buff>
+	<buff name="jz_BuffFurniturSoftRecover" hidden="true" remove_on_death="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>
+	</buff>
+	<buff name="jz_BuffBedSmRecover" hidden="true" remove_on_death="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="3"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>
+	</buff>
+	<buff name="jz_BuffBedMedRecover" hidden="true" remove_on_death="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="5"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>
+	</buff>
+	<buff name="jz_BuffBedLrgRecover" hidden="true" remove_on_death="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="6"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>
+	</buff>
+	
+	
 </set>
 </configs> 

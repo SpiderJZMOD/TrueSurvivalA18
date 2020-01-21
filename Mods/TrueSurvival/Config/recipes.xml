@@ -551,6 +551,14 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="foodGrilledMeat" count="1" />
 </recipe>
 
+<recipe name="jz_DrinkCleanDrinkOfWater" count="1" craft_time="1" craft_exp_gain="0">
+	<ingredient name="jz_DrinkCleanOuncesOfWater" count="16"/>
+</recipe>
+
+<recipe name="jz_DrinkDrityDrinkOfWater" count="1" craft_time="1" craft_exp_gain="0">
+	<ingredient name="jz_DrinkDirtyOuncesOfWater" count="16"/>
+</recipe>
+
 <recipe name="jz_DrinkVeggieJuice" count="1" craft_time="20" craft_exp_gain="10">
 	<ingredient name="jz_FoodServingFruit" count="15" />
 </recipe>

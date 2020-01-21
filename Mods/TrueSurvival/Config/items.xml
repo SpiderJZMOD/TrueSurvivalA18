@@ -10055,7 +10055,13 @@ perkNightStalkerSilentNight
 			<requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffSmallWound"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+	<effect_group tiered="false" name="BLEEDING">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
 	</effect_group>
 </item>
 
@@ -10083,6 +10089,10 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffWound"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="15"/>
+	</effect_group>
+	<effect_group tiered="false" name="BLEEDING">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
 	</effect_group>
 </item>
 
@@ -17748,6 +17758,7 @@ perkNightStalkerSilentNight
 	<property name="UnlockedBy" value="jz_HandCraftedFireArms"/>
 	<property name="ShowQuality" value="true"/>
 	<property name="DescriptionKey" value="jz_CraftedFirearmDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_CraftedRevolver" />
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Magazine_items" value="ammo9mmBulletBall"/>
@@ -17834,6 +17845,7 @@ perkNightStalkerSilentNight
 	<property name="ShowQuality" value="true"/>
 	<property name="SellableToTrader" value="false" />
 	<property name="DescriptionKey" value="jz_CraftedFirearmDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_craftedRifle" />
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value=".5"/> 
@@ -17958,7 +17970,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsOldRevolverCylinder">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="RevolverPartsDesc" />
-    <property name="CustomIcon" value="parts44Magnum_cylinder" />
+    <property name="CustomIcon" value="ui_game_symbol_RevolverCylinder" />
     <property name="CustomIconTint" value="424041" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="5" />
@@ -18441,7 +18453,7 @@ perkNightStalkerSilentNight
 
 		<passive_effect name="MagazineSize" operation="base_set" value="6"/>
 		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> <!-- 2s -->
-		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="0,0,0,0,0,0"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0,0,0,0,0,0" tier="1,2,3,4,5,6"/>
 		
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
@@ -18475,13 +18487,91 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_OldRifle">
-	<property name="Extends" value="gunHuntingRifle" />
-	<property name="Material" value="Mmetal" />
-	<property name="DegradationBreaksAfter" value="true" />
-	<property name="CustomIcon" value="gunHuntingRifle" />
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,jz_HuntingRifleSkillTag"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="30"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab"/>
+	<property name="Material" value="Mmetal"/> 
+	<property name="Weight" value="20"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="Group" value="Ammo/Weapons"/>
 	<property name="DescriptionKey" value="oldRifleDesc" />
-	<property name="RepairTools" value="jz_CantRepair"/>	
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="ShowQuality" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".5"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammo9mmBulletBall"/>
+		<property name="Reload_time" value="2.75"/>
+		<property name="Sound_start" value="sniperrifle_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="hunting_rifle_reload"/>
+		<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_magnum_fpv"/>
+		<property name="ScopeOffset" value="-.00062,.1115,.125"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+	</property>
+
+	<effect_group name="gunHuntingRifle">
+		<passive_effect name="MaxRange" operation="base_set" value="150"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="70"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/> <!-- random effective rng -->
+		<passive_effect name="EntityDamage" operation="base_add" value="15"/>
+
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="120"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+
+		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".81"/> <!-- 2.66s -->
+
+		<passive_effect name="ModSlots" operation="base_set" value="0,0,0,0,0,0" tier="1,2,3,4,5,6"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkDeadEye"/> <!-- random DegMax -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/> <!-- random APM -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".048"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2"/>
+
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.35"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".35"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="50"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".65"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="170,320" tier="1,6" tags="perkDeadEye"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeadEye"/>
+	</effect_group>
 </item>
+
 <!-- JZMOD MELEE WEAPONS -->
 <item name="jz_SteakKnife">
 	<property name="Extends" value="meleeToolKnifeIron" />
@@ -19214,6 +19304,10 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffSevereWound"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageThree"/>
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="20"/>
+	</effect_group>
+	<effect_group tiered="false" name="BLEEDING">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
 	</effect_group>
 </item>
 
@@ -21307,6 +21401,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>

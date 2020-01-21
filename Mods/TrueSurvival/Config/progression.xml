@@ -1632,7 +1632,7 @@
 	<!-- Park Ranger -->
 	<perk name="jz_ParkRanger" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Park Ranger" desc_key="jz_ParkRangerDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugHerbalAntibiotics,meleeThrownSpearIron,meleeThrownSpearSteel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugHerbalAntibiotics,meleeThrownSpearStone,meleeThrownSpearIron,meleeThrownSpearSteel"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_PrimitativeCraftingTag"/>
 			
 			<effect_description level="1" desc_key="jz_ParkRangerDesc" long_desc_key="jz_ParkRangerDesc"/>
@@ -2236,10 +2236,17 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="foodCanStock"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="foodCanSoup"/>
 		</effect_group>
-		
 	</perk>
 
-
+	<!--JZMOD HEAD SHOTS ONLY - PVP FRIENDLY -->
+	<perk name="_HeadShotSystem" parent="jz_Other" min_level="1" max_level="1" base_skill_point_cost="0" cost_multiplier_per_level="1" name_key="Head Shots for Zombies" desc_key="All player damage is increased only on zombie heads and decreased only on zombies bodies" icon="ui_game_symbol_head_shot">
+		<effect_group>	
+			<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="15" level="1" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="upperbody"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="lowerbody"/>
+		</effect_group>
+	</perk>
 
 
 
