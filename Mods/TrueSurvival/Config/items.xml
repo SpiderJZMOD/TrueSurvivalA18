@@ -623,7 +623,7 @@
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="EconomicValue" value="1000"/>
 	<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="6"/>
-	<property name="UnlockedBy" value="meleeToolSteelSetSchematic"/>
+	<property name="UnlockedBy" value="jz_SchematicSteelShovel"/>
 
 	<effect_group name="meleeToolShovelSteel">
 		<passive_effect name="MaxRange" operation="base_set" value="2.8"/>
@@ -17840,12 +17840,11 @@ perkNightStalkerSilentNight
 	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="RepairExpMultiplier" value="10.8"/>
-	<property name="EconomicValue" value="500"/>
-	<property name="UnlockedBy" value="jz_HandCraftedFireArms"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="UnlockedBy" value="jz_SchematicCraftedRifle"/>
 	<property name="ShowQuality" value="true"/>
 	<property name="SellableToTrader" value="false" />
 	<property name="DescriptionKey" value="jz_CraftedFirearmDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_craftedRifle" />
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value=".5"/> 
@@ -17929,6 +17928,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+    <property name="UnlockedBy" value="jz_SchematicCraftedRifle"/>
 </item>
 
 <item name="jz_PartsCraftedRifleStock">
@@ -17938,6 +17938,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+    <property name="UnlockedBy" value="jz_SchematicCraftedRifle"/>
 </item>
 
 <item name="jz_PartsCraftedRifleBarrel">
@@ -17947,6 +17948,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
+    <property name="UnlockedBy" value="jz_SchematicCraftedRifle"/>
 </item>
 
 <item name="jz_PartsCraftedRevolverFrame">
@@ -22653,7 +22655,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_MoldSledgeHead">
     <property name="Extends" value="jz_MasterItem" />
     <property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_sledgeHeadMold" />
     <property name="Group" value="Science" />
@@ -22662,16 +22663,15 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_MoldShovelHead">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_shovelMold" />
+    <property name="UnlockedBy" value="jz_SchematicSteelShovel"/>
     <property name="Group" value="Science" />
 </item>
 
 <item name="jz_MoldBrassKnuckles">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_brassKnucklesMold" />
     <property name="Group" value="Science" />
@@ -22680,7 +22680,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_MoldAxeHead">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_axeHeadMold" />
     <property name="Group" value="Science" />
@@ -22689,7 +22688,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_MoldSmallEngineBlock">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_smallEngineMold" />
     <property name="Group" value="Science" />
@@ -24182,19 +24180,9 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicBrainShnitzel"/>
 	<property name="Unlocks" value="jz_FoodBrainShnitzel"/>
+    <property name="DescriptionKey" value="jz_SchematicCraftedRevolverDesc"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodBrainShnitzel" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
-</item>
-
-<item name="jz_FoodVenisonSteakAndPotato">
-	<property name="Extends" value="schematicMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_FoodVenisonSteakAndPotato"/>
-	<property name="Unlocks" value="jz_FoodVenisonSteakAndPotato"/>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_FoodVenisonSteakAndPotato" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -24202,13 +24190,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_SchematicCraftedRevolver">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicCraftedRevolver"/>
-	<property name="Unlocks" value="jz_CraftedRevolver"/>
+	<property name="CustomIcon" value="ui_game_symbol_CraftedRevolver"/>
+	<property name="Unlocks" value="jz_CraftedRevolver,jz_PartsCraftedRevolverBarrel,jz_PartsCraftedRevolverFrame"/>
+    <property name="DescriptionKey" value="jz_SchematicCraftedRevolverDesc"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_CraftedRevolver" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRevolverBarrel" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRevolverFrame" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_BasicGunParts" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -24216,14 +24204,14 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_SchematicCraftedRifle">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_FoodVenisonSteakAndPotato"/>
-	<property name="Unlocks" value="jz_CraftedRifle"/>
+	<property name="CustomIcon" value="ui_game_symbol_craftedRifle"/>
+	<property name="Unlocks" value="jz_CraftedRifle,jz_PartsCraftedRifleReceiver,jz_PartsCraftedRifleStock,jz_PartsCraftedRifleBarrel"/>
+    <property name="DescriptionKey" value="jz_SchematicCraftedRifleDesc"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_CraftedRifle" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRifleReceiver" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRifleStock" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PartsCraftedRifleBarrel" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_BasicGunParts" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -24231,9 +24219,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_SchematicIronPickaxe">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicIronPickaxe"/>
-	<property name="Unlocks" value="meleeToolPickaxeIron"/>
+	<property name="CustomIcon" value="meleeToolPickaxeIron"/>
+	<property name="Unlocks" value="meleeToolPickaxeIron,jz_MoldPickAxeHead"/>
+	<property name="DescriptionKey" value="jz_SchematicIronPickaxeDesc"/>
 	<effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldPickAxeHead" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolPickaxeIron" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
@@ -24242,9 +24232,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_SchematicIronFireaxe">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicIronFireaxe"/>
-	<property name="Unlocks" value="meleeToolFireaxeIron"/>
+	<property name="CustomIcon" value="meleeToolFireaxeIron"/>
+	<property name="Unlocks" value="meleeToolFireaxeIron,jz_MoldAxeHead"/>
+	<property name="DescriptionKey" value="jz_SchematicIronFireaxeDesc"/>
 	<effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldAxeHead" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolFireaxeIron" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
@@ -24253,9 +24245,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_SchematicIronShovel">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicIronShovel"/>
-	<property name="Unlocks" value="meleeToolShovelIron"/>
+	<property name="CustomIcon" value="meleeToolShovelIron"/>
+	<property name="Unlocks" value="meleeToolShovelIron,jz_MoldShovelHead"/>
+    <property name="DescriptionKey" value="jz_SchematicIronShovelDesc"/>
 	<effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldShovelHead" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolShovelIron" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
@@ -24264,9 +24258,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_SchematicClawHammer">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicClawHammer"/>
-	<property name="Unlocks" value="meleeToolClawHammer"/>
+	<property name="CustomIcon" value="meleeToolClawHammer"/>
+	<property name="Unlocks" value="meleeToolClawHammer,jz_MoldHammerHead"/>
+    <property name="DescriptionKey" value="jz_SchematicClawHammerDesc"/>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldHammerHead" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolClawHammer" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
@@ -24275,9 +24271,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_SchematicSteelPickaxe">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicSteelPickaxe"/>
-	<property name="Unlocks" value="meleeToolPickaxeSteel"/>
+	<property name="CustomIcon" value="meleeToolPickaxeSteel"/>
+	<property name="Unlocks" value="meleeToolPickaxeSteel,jz_MoldPickAxeHead"/>
+    <property name="DescriptionKey" value="jz_SchematicSteelPickaxeDesc"/>
 	<effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldPickAxeHead" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolPickaxeSteel" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
@@ -24286,9 +24284,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_SchematicSteelFireaxe">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicSteelFireaxe"/>
-	<property name="Unlocks" value="meleeToolFireaxeSteel"/>
+	<property name="CustomIcon" value="meleeToolFireaxeSteel"/>
+	<property name="Unlocks" value="meleeToolFireaxeSteel,jz_MoldAxeHead"/>
+    <property name="DescriptionKey" value="jz_SchematicSteelFireaxeDesc"/>
 	<effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldAxeHead" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolFireaxeSteel" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
@@ -24297,9 +24297,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_SchematicSteelShovel">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicSteelShovel"/>
-	<property name="Unlocks" value="meleeToolShovelSteel"/>
+	<property name="CustomIcon" value="meleeToolShovelSteel"/>
+	<property name="Unlocks" value="meleeToolShovelSteel,jz_MoldShovelHead"/>
+    <property name="DescriptionKey" value="jz_SchematicSteelShovelDesc"/>
 	<effect_group tiered="false">
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldShovelHead" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolShovelSteel" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
@@ -24308,38 +24310,23 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_SchematicLargeEngine">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="ui_game_symbol_jz_SchematicSteelShovel"/>
-	<property name="Unlocks" value="meleeToolShovelSteel"/>
+	<property name="CustomIcon" value="ui_game_symbol_jz_LargeEngine"/>
+	<property name="Unlocks" value="jz_LargeEngine"/>
+    <property name="DescriptionKey" value="jz_SchematicLargeEngineDesc"/>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolShovelSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_LargeEngine" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
 <item name="jz_LargeEngine">
-	<property name="HoldType" value="45"/>
-	<property name="Tags" value="junk"/>
-	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="MsmallEngine"/>
-	<property name="RepairTools" value="resourceRepairKit"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="200"/>
-	<property name="EconomicValue" value="1000"/>
-	<property name="Group" value="Resources"/>
-	<property name="DegradationBreaksAfter" value="false"/>
-	<property class="Attributes">
-		<property name="DegradationMax" value="1000,6000"/> <!-- needed for electrical calculations -->
-		<property name="VehicleNoise" value="1,.1"/>
-		<property name="VehicleMaxSpeed" value="5,18"/>
-		<property name="VehicleAcceleration" value="7,14"/>
-		<property name="VehicleMetersPerLiter" value="8,12"/>
-		<property name="VehicleIdleSecondsPerLiter" value="6,12"/>
-		<property name="VehicleStartDelayInSeconds" value="1,.1"/>
-		<property name="VehicleStartChance" value=".5,.99"/>
-		<property name="VehicleTankSize" value="1000, 2000"/>
-		<property name="VehicleFuelItem" value="ammoGasCan"/>
-	</property>
+    <property name="Extends" value="jz_MasterItem"/>
+    <property name="Stacknumber" value="1"/>
+	<property name="Material" value="Msteel"/>
+    <property name="Weight" value="300"/>
+    <property name="CustomIcon" value="ui_game_symbol_jz_LargeEngine"/>
+	<property name="DescriptionKey" value="jz_LargeEngineDesc"/>
+    <property name="UnlockedBy" value="jz_SchematicLargeEngine"/>
 </item>
 
 
@@ -24473,5 +24460,80 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
 </item>
+<!--
+	<display_value name="dBlockRepairAmount" value="150"/>
+    <display_value name="dBleeding" value="1"/>
+    <display_value name="dBurning" value=".30"/>
+    <display_value name="dStatStunEffect" value="4"/>
+    <display_value name="dTargetArmor" value="1"/>
+    <display_value name="dTargetPenetration" value="1"/>
+    <display_value name="dDegradationPerUse" value=".3"/>
+    <display_value name="dDamageDoor" value="1000"/>
+    <display_value name="dEntityDamage" value="11.8"/>
+	<display_value name="dBlockDamage" value="1"/>
+    <display_value name="dExDamageBlock" value="2500"/>
+    <display_value name="dExDamageEntity" value="420"/>
+    <display_value name="dExRadius" value="5"/>
+    <display_value name="dEntityDamageFire" value="120"/>
+	<display_value name="dDuration" value="14"/>
+    <display_value name="dFuseTime" value="4"/>
+    <display_value name="dStaminaChangeOT" value="0"/>
+    <display_value name="dNoiseMultiplier" value=".1"/>
+    <display_value name="dLightMultiplier" value="-.07"/>
+    <display_value name="dTreasureRadius" value="-1"/>
+    <display_value name="dCraftingTime" value="-.1"/>
+	<display_value name="dPlayerExpGain" value=".1"/>
+    <display_value name="dStaminaRegen" value=".2"/>  
+    <display_value name="dRunSpeed" value=".1"/>
+    <display_value name="foodHealthAmount" value="5"/>
+    <display_value name="dStopsBleeding" value="1"/>
+    <display_value name="dDiseaseResist" value="1"/>
+    <display_value name="dInstantHealth" value="40"/>
+	<display_value name="dHealthLoss" value=".1"/>
+	<display_value name="$waterAmountAdd" value="-40"/>
+	<display_value name="dStunResist" value="1"/>
+    <display_value name="dCureInfection" value=".1"/> 
+    <display_value name="dStrength" value="3"/>
+	<display_value name="dCarryCapacity" value="50"/>
+    <display_value name="dPerception" value="2"/>
+	<display_value name="dFortitude" value="2"/>
+	<display_value name="dMaxHealth" value="20"/>
+	<display_value name="dPhysicalDamageResist" value="50"/>
+	<display_value name="dHypothermalResist" value="50"/>
+	<display_value name="dHyperthermalResist" value="50"/>	
+    <display_value name="dFoodPoisoningRisk" value=".04"/> 
+    <display_value name="dBartering" value=".05"/>
+    <display_value name="dDysenteryRisk" value=".2"/>
+    <display_value name="dEfficientDigestion" value=".15"/>
+    <display_value name="dEntityDamageBrawling" value="3"/>
+	<display_value name="dCraftingSmeltTime" value=".5"/>
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </set>
 </configs> 
