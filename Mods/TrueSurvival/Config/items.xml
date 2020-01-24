@@ -23258,12 +23258,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mglass" />
 	<property name="CustomIcon" value="ui_game_symbol_lightBulb" />
+    <property name="DescriptionKey" value="jz_LightBulbDesc" />
 </item>
 
 <item name="jz_AnimalBladder">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Stacknumber" value="500" />
-	<property name="DescriptionKey" value="fiberRopeDesc" />
+	<property name="DescriptionKey" value="jz_AnimalBladderDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_animalBladder" />
 </item>
 
@@ -23307,6 +23308,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Meshfile" value="Items/Food/honeyPrefab" />
 	<property name="CraftingSkillGroup" value="chemistryCraft" />
 	<property name="CustomIcon" value="ui_game_symbol_nitroglycerin" />
+    <property name="DescriptionKey" value="jz_NitroglycerinDesc" />
 </item>
 
 <item name="jz_SharpeningStone">
@@ -23317,13 +23319,14 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="HoldType" value="40" />
 	<property name="RepairTime" value="10" />
 	<property name="RepairAmount" value="300" />
+    <property name="DescriptionKey" value="jz_SharpeningStoneDesc" />
 </item>
 
 <item name="jz_SmallKnifeBlade">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="50" />
-	<property name="DescriptionKey" value="huntingKnifeBladeDesc" />
+	<property name="DescriptionKey" value="jz_SmallKnifeBladeDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_smallKnifeBlade" />
 </item>
 
@@ -23331,7 +23334,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="100" />
-	<property name="DescriptionKey" value="huntingKnifeBladeDesc" />
+	<property name="DescriptionKey" value="jz_LargeKnifeBladeDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_largeKnifeBlade" />
 </item>
 
@@ -23339,7 +23342,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="100" />
-	<property name="DescriptionKey" value="huntingKnifeBladeDesc" />
+	<property name="DescriptionKey" value="jz_IronPickaxeHeadDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_ironPickaxeHead" />
 </item>
 
@@ -23347,7 +23350,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="100" />
-	<property name="DescriptionKey" value="huntingKnifeBladeDesc" />
+	<property name="DescriptionKey" value="jz_IronFireaxeHeadDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_ironFireaxeHead" />
 </item>
 
@@ -23355,7 +23358,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="100" />
-	<property name="DescriptionKey" value="huntingKnifeBladeDesc" />
+	<property name="DescriptionKey" value="jz_IronShovelHeadDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_ironShovelHead" />
 </item>
 
@@ -23364,7 +23367,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_ironPickaxeHead" />
 	<property name="Material" value="Msteel" />
 	<property name="Weight" value="100" />
-	<property name="DescriptionKey" value="huntingKnifeBladeDesc" />
+	<property name="DescriptionKey" value="jz_SteelPickaxeHeadDesc" />
 </item>
 
 <item name="jz_SteelFireaxeHead">
@@ -23372,7 +23375,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_ironFireaxeHead" />
 	<property name="Material" value="Msteel" />
 	<property name="Weight" value="100" />
-	<property name="DescriptionKey" value="huntingKnifeBladeDesc" />
+	<property name="DescriptionKey" value="jz_SteelFireaxeHeadDesc" />
 </item>
 
 <item name="jz_SteelShovelHead">
@@ -23380,14 +23383,14 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_ironShovelHead" />
 	<property name="Material" value="Msteel" />
 	<property name="Weight" value="100" />
-	<property name="DescriptionKey" value="huntingKnifeBladeDesc" />
+	<property name="DescriptionKey" value="jz_SteelShovelHeadDesc" />
 </item>
 
 <item name="jz_HammerHead">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
-	<property name="DescriptionKey" value="huntingKnifeBladeDesc" />
+	<property name="DescriptionKey" value="jz_HammerHeadDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_hammerHead" />
 </item>
 
@@ -23412,7 +23415,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterItem" />
     <property name="Material" value="Mgrain" />
     <property name="Weight" value="1" />
-	<property name="DescriptionKey" value="cannabisBubDesc" />
+	<property name="DescriptionKey" value="jz_WheatDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_wheat" />
 </item>
 
@@ -23429,6 +23432,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_scrapCable" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="5" />
+    <property name="DescriptionKey" value="jz_ScrapWireDesc" />
 </item>
 
 <item name="Molds">
@@ -23450,24 +23454,28 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="foodShamSandwich" />
 	<property name="Weight" value="1" />
 	<property name="CustomIcon" value="ui_game_symbol_moldyFruit" />
+    <property name="DescriptionKey" value="jz_MoldyFruitDesc" />
 </item>
 
 <item name="jz_MoldyVeggies">
 	<property name="Extends" value="foodShamSandwich" />
 	<property name="Weight" value="1" />
 	<property name="CustomIcon" value="ui_game_symbol_moldyVeggies" />
+     <property name="DescriptionKey" value="jz_MoldyVeggiesDesc" />
 </item>
 
 <item name="jz_Charcoal">
 	<property name="Extends" value="resourceCoal" />
 	<property name="FuelValue" value="100" />
 	<property name="CustomIcon" value="ui_game_symbol_charcoal" />
+    <property name="DescriptionKey" value="jz_CharcoalDesc" />
 </item>
 
 <item name="jz_SteelOre">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Msteel" />
 	<property name="Weight" value="10" />
+    <property name="DescriptionKey" value="jz_SteelOreDesc" />
     <property name="CustomIcon" value="ui_game_symbol_steelOre" />
 </item>
 
@@ -23503,18 +23511,21 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Material" value="Mpaper"/>
 	<property name="FuelValue" value="2"/>
 	<property name="Weight" value="10"/>
+    <property name="DescriptionKey" value="jz_PaperBookDesc" />
 </item>
 
 <item name="jz_HoneyComb">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_honeyComb" />
+    <property name="DescriptionKey" value="jz_HoneyCombDesc" />
 </item>
 
 <!-- JZMOD JUNK -->
 <item name="jz_IronScissors">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mmetal" />
-	<property name="CustomIcon" value="jz_IronJunkDesc" />
+	<property name="CustomIcon" value="ui_game_symbol_ironScissors" />
+    <property name="DescriptionKey" value="jz_IronJunkDesc" />
 	<property name="Weight" value="1" />
 </item>
 
@@ -23561,7 +23572,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_LeadMusketBalls">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_leadMusketBalls" />
-	<property name="DescriptionKey" value="jz_BrassJunkDesc" />
+	<property name="DescriptionKey" value="jz_LeadJunkDesc" />
 	<property name="Material" value="Mlead_scrap" />
 	<property name="Weight" value="1" />
 </item>
@@ -23569,7 +23580,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_LeadSolder">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_leadSolder" />
-	<property name="DescriptionKey" value="jz_BrassJunkDesc" />
+	<property name="DescriptionKey" value="jz_LeadJunkDesc" />
 	<property name="Material" value="Mlead_scrap" />
 	<property name="Weight" value="3" />
 </item>
@@ -23577,7 +23588,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_LeadSoldier">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_leadSoldier" />
-	<property name="DescriptionKey" value="jz_BrassJunkDesc" />
+	<property name="DescriptionKey" value="jz_LeadJunkDesc" />
 	<property name="Material" value="Mlead_scrap" />
 	<property name="Weight" value="1" />
 </item>
@@ -24007,14 +24018,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="1" />
 </item>
 
-<item name="jz_SteelSpoon">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_steelSpoon" />
-	<property name="DescriptionKey" value="jz_SteelJunkDesc" />
-	<property name="Material" value="Msteel" />
-	<property name="Weight" value="1" />
-</item>
-
 <item name="jz_SteelBracelet">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_steelBracelet" />
@@ -24103,6 +24106,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="thrownAmmoMolotovCocktail"/>
 	<property name="Unlocks" value="thrownAmmoMolotovCocktail"/>
+    <property name="DescriptionKey" value="jz_SchematicMolotovCocktailDesc"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="thrownAmmoMolotovCocktail" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
@@ -24114,6 +24118,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="gunBlunderbuss"/>
 	<property name="Unlocks" value="gunBlunderbuss"/>
+    <property name="DescriptionKey" value="jz_SchematicBlunderbussDesc"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunBlunderbuss" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>

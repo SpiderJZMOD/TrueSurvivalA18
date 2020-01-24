@@ -261,7 +261,7 @@ OldAxeDesc,"A old rusty Axe, there is no repairing this thing."
 jz_OldAxe,Old Axe
 fryingPanDesc,"A simple iron Frying Pan. Can be used to cook with or to bash a head or two" 
 jz_FryingPan,Frying Pan
-screwdriverDesc,"A well made Screwdriver for disassembling electronices and as a tool to craft items."
+screwdriverDesc,"A well made Screwdriver for disassembling electronics and as a tool to craft items."
 jz_Screwdriver,Screwdriver
 jz_MasonHammerDesc,"A Mason Hammer used for disassembling Brick and Flagstone Blocks and upgrade and repair them."
 jz_MasonHammer,Mason Hammer
@@ -272,25 +272,225 @@ jz_WelderTool,Welder Tool
 jz_LargeEngine,Large Engine
 jz_LargeEngineDesc,A full size vehicle engine
 jz_SchematicLargeEngine,Engine Crafting Guild
-jz_SchematicLargeEngineDesc,"This book completly details how to assemble a vehicles engine from its parts"
-jz_SchematicSteelShovel,Steel Shovel Crafting Guid
-jz_SchematicSteelShovelDesc,"This book completly details how to craft and assemble a Steel Shovel and its parts"
-jz_SchematicSteelFireaxe,Steel Fireaxe Crafting Guid
-jz_SchematicSteelFireaxeDesc,"This book completly details how to craft and assemble a Steel Fireaxe and its parts"
-jz_SchematicSteelPickaxe,Steel Pickaxe Crafting Guid
-jz_SchematicSteelPickaxeDesc,"This book completly details how to craft and assemble a Steel Pickaxe and its parts"
-jz_SchematicClawHammer,Claw Hammer Crafting Guid
-jz_SchematicClawHammerDesc,"This book completly details how to craft and assemble a Claw Hammer and its parts"
-jz_SchematicIronShovel,Iron Shovel Crafting Guid
-jz_SchematicIronShovelDesc,"This book completly details how to craft and assemble a Iron Shovel and its parts"
-jz_SchematicIronFireaxe,Iron Fireaxe Crafting Guid
-jz_SchematicIronFireaxeDesc,"This book completly details how to craft and assemble a Iron Fireaxe and its parts"
-jz_SchematicIronPickaxe,Iron Pickaxe Crafting Guid
-jz_SchematicIronPickaxeDesc,"This book completly details how to craft and assemble a Iron Pickaxe and its parts"
-jz_SchematicCraftedRifle,Makeshift Rifle Crafting Guid
-jz_SchematicCraftedRifleDesc,"This book details how to assemble a Makeshift Rifle and how to craft some of the needed parts"
-jz_SchematicCraftedRevolver,Makeshift Revolver Crafting Guid
-jz_SchematicCraftedRevolverDesc,"This book details how to assemble a Makeshift Revolver and how to craft some of the needed parts"
+jz_SchematicLargeEngineDesc,"This book completely details how to assemble a vehicles engine from its parts. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicSteelShovel,Steel Shovel Crafting Guide
+jz_SchematicSteelShovelDesc,"This book completely details how to craft and assemble a Steel Shovel and its parts. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicSteelFireaxe,Steel Fireaxe Crafting Guide
+jz_SchematicSteelFireaxeDesc,"This book completely details how to craft and assemble a Steel Fireaxe and its parts. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicSteelPickaxe,Steel Pickaxe Crafting Guide
+jz_SchematicSteelPickaxeDesc,"This book completely details how to craft and assemble a Steel Pickaxe and its parts. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicClawHammer,Claw Hammer Crafting Guide
+jz_SchematicClawHammerDesc,"This book completely details how to craft and assemble a Claw Hammer and its parts. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicIronShovel,Iron Shovel Crafting Guide
+jz_SchematicIronShovelDesc,"This book completely details how to craft and assemble a Iron Shovel and its parts. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicIronFireaxe,Iron Fireaxe Crafting Guide
+jz_SchematicIronFireaxeDesc,"This book completely details how to craft and assemble a Iron Fireaxe and its parts. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicIronPickaxe,Iron Pickaxe Crafting Guide
+jz_SchematicIronPickaxeDesc,"This book completely details how to craft and assemble a Iron Pickaxe and its parts. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicCraftedRifle,Makeshift Rifle Crafting Guide
+jz_SchematicCraftedRifleDesc,"This book details how to assemble a Makeshift Rifle and how to craft some of the needed parts. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicCraftedRevolver,Makeshift Revolver Crafting Guide
+jz_SchematicCraftedRevolverDesc,"This book details how to assemble a Makeshift Revolver and how to craft some of the needed parts. If you know this recipe you can scrap it for Skill Paper."
+jz_FoodSchematicDesc,"An battered old Cook Book. Looks like only one recipe is still readable. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicBrainShnitzel,Brain Schnitzel Recipe
+jz_SchematicCarrotCake,Carrot Cake Recipe
+jz_SchematicApplePie,Apple Pie Recipe
+jz_SchematicHealthyMeals,Health Meals Recipe
+jz_SchematicWellnessJuice,Wellness Juice Recipe
+jz_SchematicGrainAlcohol,Grain Alcohol Recipe
+jz_SchematicGoodMeals,Good Meals Recipe
+jz_SchematicMead,Mead Recipe
+jz_SchematicBread,Bred Recipe
+jz_SchematicFriedEggOmelet,Fried Omelet Recipe
+jz_SchematicGlazedMeats,Glazed Meats Recipe
+jz_SchematicMeatPies,Meat Pies Recipe
+jz_SchematicKabobs,Kabobs Recipe
+jz_SchematicBlunderbuss,Blunderbuss Schematic
+jz_SchematicBlunderbussDesc,"This book details how to assemble a Makeshift Blunderbuss. If you know this recipe you can scrap it for Skill Paper."
+jz_SchematicMolotovCocktail,Molotov Cocktail Schematic
+jz_SchematicMolotovCocktailDesc,"This book details how to assemble a Molotov Cocktail. If you know this recipe you can scrap it for Skill Paper."
+jz_GlassJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Broken Glass."
+jz_GlassBong,Glass Bong
+jz_GlassEye,Glass Eye
+jz_GlassFrame,Picture Frame
+jz_GlassCompact,Compact
+jz_GlassPerfume,Perfume Bottle
+jz_SteelJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Scrap Steel."
+jz_SteelButterKnife,Butter Knife
+jz_SteelSpoon,Spoon
+jz_SteelFork,Fork
+jz_SteelDogBowl,Dog Bowl
+jz_SteelBracelet,Bracelet 
+jz_SteelHinge,Hinge
+jz_RubberJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Scrap Steel."
+jz_RubberOldRainBoot,Old Rain Boot
+jz_RubberCondom,Condom
+jz_RubberBands,Rubber Bands
+jz_RubberChicken,Rubber Chicken
+jz_RubberDuck,Rubber Duck
+jz_RubberDoll,Old Doll
+jz_MechanicalJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Mechanical Parts."
+jz_MechanicalTypeWriter,Type Writer
+jz_MechanicalOldWatch,Old Watch
+jz_MechanicalKeyPad,Broken Key Pad
+jz_ElectricJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Electronic Parts."
+jz_ElectricBlender,Blender
+jz_ElectricBlackVibrator,Black Vibrator
+jz_ElectricToaster,Old Toaster
+jz_ElectricToyMotor,Broken Toy Motor
+jz_ElectricShaver,Electric Shaver
+jz_TechJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Tech Parts."
+jz_TechBrokenLapTop,Broken Laptop
+jz_TechBrokenIPad,Broken IPad
+jz_TechBrokenIPod,Broken IPod
+jz_TechClockRadio,Clock Radio
+jz_TechCellPhone,Busted Cell Phone
+jz_Tech3ds,Cracked 3DS
+jz_PlasticJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Plastic Scraps."
+jz_PlasticLighter,Lighter
+jz_PlasticShoppingBag,Shopping Bag
+jz_PlasticKite,Kite
+jz_PlasticFrisbee,Frisbee
+jz_PlasticToothBrush,Tooth Brush
+jz_PlasticHairBrush,Hair Brush
+jz_PlasticLegos,Legos
+jz_PlasticSoldier,Toy Soldier
+jz_PlasticCds,"Old CD's"
+jz_ClothJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Cloth."
+jz_ClothChewedDogCollar,Broken Dog Collar
+jz_ClothOldShoe,Holey Shoe
+jz_ClothOldBlanket,Torn Blanket
+jz_ClothRug,Old Rug
+jz_ClothRags,Dirty Rags
+jz_ClothTeddyBear,Worn Teddy Bear
+jz_PaperJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Paper."
+jz_PaperMatches,Matches
+jz_PaperGoggles,3D Glasses
+jz_PaperToilet,Toilet Paper
+jz_PaperNews,Old New Paper
+jz_PaperPlayingCards,Playing Cards
+jz_WoodJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Sticks."
+jz_WoodYoyo,Yoyo
+jz_WoodBranchDesc,"Good strong tree branch. A primitive tool cold be made with this or if you cant find a use for it you can scrap it for Sticks."
+jz_WoodBranch,Tree Branch
+jz_WoodSpoon,Spoon
+jz_WoodWhistle,Whistle
+jz_WoodSoldier,Toy Soldier
+jz_StoneJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Stones."
+jz_StoneCrackedAshTray,Cracked Ash Tray
+jz_StoneStatue,Small Statue
+jz_StonePaperWeight,Paper Weight
+jz_StonePlate,Chipped Plate
+jz_BrassJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Scrap Brass."
+jz_BrassCowBell,Cow Bell
+jz_BrassMonkey,Toy Monkey
+jz_BrassHinge,Hinge
+jz_LeadJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Scrap Lead."
+jz_LeadSoldier,Toy Soldier
+jz_LeadSolder,Welding Solder
+jz_LeadMusketBalls,Musket Balls
+jz_IronJunkDesc,"Old junk. If you cant find a use for it you can scrap it for Scrap Iron."
+jz_IronHairSpray,Hairy Spray Can
+jz_IronHinge,Hinge
+jz_IronWeight,Weights
+jz_IronPaperClips,Paper Clips
+jz_IronSoldier,Toy Soldier
+jz_IronScissors,Scissors
+jz_HoneyCombDesc,"A fresh section of honeycomb dripping with honey."
+jz_HoneyComb,Honeycomb
+jz_PaperBookDesc,"An old ragged book with unreadable pages."
+jz_PaperBook,Old Book
+plankDesc,"A cut plank of wood."
+jz_Plank,Plank
+ironSledgeHeadDesc,"A Sledge Hammer Head made from Iron."
+jz_SledgeHead,Iron Sledge Hammer Head
+handSawDesc,"A Rusty old Handsaw"
+jz_HandSaw,Handsaw
+jz_SteelOreDesc,"Raw Steel Ore. Must be processed in a Steel Forge."
+jz_SteelOre,Steel Ore
+jz_CharcoalDesc,"Dusty old bag of Grilling Charcoal."
+jz_Charcoal,Charcoal
+jz_MoldyVeggiesDesc,"Old Rotten Vegetables. Not much use but can be scraped to Biomass and used in Farming."
+jz_MoldyVeggies,Moldy Veggies
+jz_MoldyFruitDesc,"Old Rotten Fruit. Not much use but can be scraped to Biomass and used in Farming."
+jz_MoldyFruit,Moldy Fruit
+jz_ScrapWireDesc,"Small length of usable Copper wiring"
+jz_ScrapWire,Scrap Wire
+fireWoodDesc,"Dry cut Fire Wood treated with oils to burn much longer than normal wood."
+jz_FireWood,Fire Wood
+jz_WheatDesc,"Dry Wheat Stocks. Not edible in this form but can be ground into Flour."
+jz_Wheat,Wheat
+jointDesc,"A tightly rolled Cigarette with the sweet smell of Cannabis. Use with Caution!"   
+jz_Joint,Joint
+jz_HammerHeadDesc,"Hammer Head that can be used to craft the tool"
+jz_HammerHead,Claw Hammer Head
+jz_SteelShovelHeadDesc,"Steel Shovel Head that can be used to craft the tool"
+jz_SteelShovelHead,Steel Shovel Head
+jz_SteelFireaxeHeadDesc,"Steel Fireaxe Head that can be used to craft the tool"
+jz_SteelFireaxeHead,Steel Fireaxe Head
+jz_SteelPickaxeHeadDesc,"Steel Pickaxe Head that can be used to craft the tool"
+jz_SteelPickaxeHead,Steel Pickaxe Head
+jz_IronShovelHeadDesc,"Iron Shovel Head that can be used to craft the tool"
+jz_IronShovelHead,Iron Shovel Head
+jz_IronFireaxeHeadDesc,"Iron Fireaxe Head that can be used to craft the tool"
+jz_IronFireaxeHead,Iron Fireaxe Head
+jz_IronPickaxeHeadDesc,"Iron Pickaxe Head that can be used to craft the tool"
+jz_IronPickaxeHead,Iron Pickaxe Head
+jz_LargeKnifeBladeDesc,"Machete Blade that can be used to craft the tool"
+jz_LargeKnifeBlade,Machete Blade
+jz_SmallKnifeBladeDesc,"Hunting Blade that can be used to craft the tool"
+jz_SmallKnifeBlade,HuntingKnife Blade
+jz_SharpeningStoneDesc,"A manurfactured stone for sharpening blades" 
+jz_SharpeningStone,Sharpening Stone
+jz_NitroglycerinDesc,"A highly unstable liquid that is used to make high grade explosives."
+jz_Nitroglycerin,Nitroglycerin
+hoofDesc,"Freshly removed foot of a hoofed animal"
+jz_Hoof,Hoof
+CuredSinewDesc,"A animal sinew that has been processed to make it a very strong string"
+jz_CuredSinew,Cured Sinew
+bowStringDesc,"A strong cord used to string a Bow or Crossbow"
+jz_BowString,Bow String
+boneMealDesc,"Finely ground bones"
+jz_BoneMeal,Bone Meal
+sinewDesc,"A carefully harvested tendon from a fresh dead animal."
+jz_Sinew,Sinew
+jz_AnimalBladderDesc,"A unpunctured animal bladder harvested from a fresh dead animal."
+jz_AnimalBladder,Animal Bladder
+jz_LightBulbDesc,"A un broken light buld"
+jz_LightBulb,Light Bulb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
