@@ -2242,6 +2242,7 @@
 	<perk name="_HeadShotSystem" parent="jz_Other" min_level="1" max_level="1" base_skill_point_cost="0" cost_multiplier_per_level="1" name_key="Head Shots for Zombies" desc_key="All player damage is increased only on zombie heads and decreased only on zombies bodies" icon="ui_game_symbol_head_shot">
 		<effect_group>	
 			<requirement name="EntityTagCompare" target="other" tags="zombie"/>
+			<requirement name="!EntityTagCompare" target="other" tags="parasite"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="15" level="1" tags="head"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="upperbody"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="lowerbody"/>

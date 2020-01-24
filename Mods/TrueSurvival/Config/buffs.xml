@@ -3587,7 +3587,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 	
 	<buff name="jz_BuffDecreseStamina" hidden="true">
 		<stack_type value="ignore"/>
-		<update_rate value="1"/>
+		<update_rate value=".2"/>
 		<duration value="0"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="subtract" value="1"/>

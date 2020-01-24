@@ -1574,17 +1574,20 @@
 </material>
 <!-- JZMOD ADDED BLOCK MATERIALS -->
 	<!-- JZMOD FAST TRAVEL BUFF ON ROADS -->
+	
 	<material id="MFastRoad">
 		<property name="damage_category" value="stone" />
 		<property name="surface_category" value="stone" />
-		<property name="Hardness" type="float" value="2" />
+		<property name="forge_category" value="stone"/>
+		<property name="Hardness" type="float" value="1" />
 		<property name="stepsound" value="stone" />
-		<property name="stability_glue" value="90" />
+		<property name="stability_glue" value="120" />
 		<property name="movement_factor" value="1.4" />
 		<property name="fertile_level" value="1" />
-		<property name="Mass" type="int" value="15" />
-		<property name="explosionresistance" value=".2" />
-		<property name="MaxDamage" value="500" />
+		<property name="Mass" type="int" value="10" />
+		<property name="explosionresistance" value="1.1" />
+		<property name="MaxDamage" value="2500" />
+		<property name="Experience" value="4"/>
 	</material>
 	<!-- JZMOD FORGE UNITS -->
 	<material id="Mforgecoal">

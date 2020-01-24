@@ -3881,6 +3881,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 </entity_class>
 
 <entity_class name="Parasite" extends="zombieTemplateMale" ><!-- Mutated Human w/Extended Claw-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ParaziteDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -3914,7 +3915,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Fat" extends="zombieTemplateMale" ><!-- Fat Mutant w/parasite coming out stomach-->
+<entity_class name="ParasiteFat" extends="zombieTemplateMale" ><!-- Fat Mutant w/parasite coming out stomach-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ParaziteFatDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -3948,7 +3950,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Insect" extends="animalZombieVulture" ><!-- Flying Bug with stinger-->
+<entity_class name="ParasiteInsect" extends="animalZombieVulture" ><!-- Flying Bug with stinger-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Class" value="EntityHornet"/> 
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?InsectDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
@@ -3984,7 +3987,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Hybrid" extends="zombieTemplateMale" ><!-- Mutated Soldier need to be bigger-->
+<entity_class name="ParasiteHybrid" extends="zombieTemplateMale" ><!-- Mutated Soldier need to be bigger-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?HybridDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4018,7 +4022,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Mantis" extends="zombieTemplateMale" ><!-- 4 spider legs and claw Arms Kinda small-->
+<entity_class name="ParasiteMantis" extends="zombieTemplateMale" ><!-- 4 spider legs and claw Arms Kinda small-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ParaziteSpiderDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4052,7 +4057,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Slider" extends="zombieTemplateMale" ><!-- mutant human walks on hands pincher for but /way to small-->
+<entity_class name="ParasiteSlider" extends="zombieTemplateMale" ><!-- mutant human walks on hands pincher for but /way to small-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ParaziteSliderDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4086,7 +4092,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Pangolin" extends="zombieTemplateMale" ><!-- Short mutant animal /head buts/ more moves?-->
+<entity_class name="ParasitePangolin" extends="zombieTemplateMale" ><!-- Short mutant animal /head buts/ more moves?-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?PangolinDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4122,7 +4129,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Ripper" extends="zombieTemplateMale" ><!-- dog mutant head buts?-->
+<entity_class name="ParasiteRipper" extends="zombieTemplateMale" ><!-- dog mutant head buts?-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?RipperDogDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4157,7 +4165,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Horror" extends="zombieTemplateMale" ><!--Scary Bites no eyes-->
+<entity_class name="ParasiteHorror" extends="zombieTemplateMale" ><!--Scary Bites no eyes-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?HorrorDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4191,7 +4200,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Creepy" extends="zombieTemplateMale" ><!-- Mutant Snake w/2 Arms-->
+<entity_class name="ParasiteCreepy" extends="zombieTemplateMale" ><!-- Mutant Snake w/2 Arms-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?CreepyDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4225,7 +4235,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Spider" extends="zombieTemplateMale" ><!-- 4 legs 2 spike arms-->
+<entity_class name="ParasiteSpider" extends="zombieTemplateMale" ><!-- 4 legs 2 spike arms-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?SpiderDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4259,7 +4270,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Bug" extends="zombieTemplateMale" ><!-- Blue Water Mutant -->
+<entity_class name="ParasiteBug" extends="zombieTemplateMale" ><!-- Blue Water Mutant -->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?BugDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4293,7 +4305,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Alien" extends="zombieTemplateMale" ><!-- Hunch Back/ Long Arms Mutant-->
+<entity_class name="ParasiteAlien" extends="zombieTemplateMale" ><!-- Hunch Back/ Long Arms Mutant-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?AlienDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4327,7 +4340,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Shell" extends="zombieTemplateMale" ><!-- muscle mutant w claws too small?-->
+<entity_class name="ParasiteShell" extends="zombieTemplateMale" ><!-- muscle mutant w claws too small?-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ShellDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4361,7 +4375,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Exterminator" extends="zombieFatCop" ><!-- Muscle Mutant spits / should be bigger-->
+<entity_class name="ParasiteExterminator" extends="zombieFatCop" ><!-- Muscle Mutant spits / should be bigger-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?ExterminatorDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4389,7 +4404,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Devourer" extends="zombieTemplateMale" ><!-- Predator Mouth Mutant-->
+<entity_class name="ParasiteDevourer" extends="zombieTemplateMale" ><!-- Predator Mouth Mutant-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?DevourerDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4423,7 +4439,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Daemon" extends="zombieTemplateMale" ><!--Demon Mutant-->
+<entity_class name="ParasiteDaemon" extends="zombieTemplateMale" ><!--Demon Mutant-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?DaemonDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4458,7 +4475,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Horned" extends="zombieTemplateMale" ><!--Horned Troll Mutant DROP?-->
+<entity_class name="ParasiteHorned" extends="zombieTemplateMale" ><!--Horned Troll Mutant DROP?-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?HornedDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4492,7 +4510,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Nasty" extends="zombieFatCop" ><!-- Scorpion Boss Spits -->
+<entity_class name="ParasiteNasty" extends="zombieFatCop" ><!-- Scorpion Boss Spits -->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?NastyDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4520,7 +4539,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="Parasite Slug" extends="zombieFatCop" ><!-- no eyes all mouth/ to small-->
+<entity_class name="ParasiteSlug" extends="zombieFatCop" ><!-- no eyes all mouth/ to small-->
+	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?SlugDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
