@@ -868,6 +868,7 @@ group desc for stuff like metal siding
 
 <block name="woodFrameMaster">
 	<property name="Extends" value="woodWeakNoUpgradeMaster"/>
+	<property name="Tags" value="jz_WoodBuilding"/>
 	<property name="MaxDamage" value="50"/>
 	<property name="Shape" value="New"/>
 	<property name="LightOpacity" value="0"/>
@@ -912,7 +913,7 @@ group desc for stuff like metal siding
 
 <block name="woodNoUpgradeMaster">
 	<property name="Group" value="Building,advBuilding"/>
-	<property name="Tags" value="wood"/>
+	<property name="Tags" value="wood,jz_WoodBuilding"/>
 	<property name="DescriptionKey" value="woodFrameGroupDesc"/>
 	<property name="Material" value="Mwood_regular"/>
 	<property name="Texture" value="241"/>
@@ -937,6 +938,7 @@ group desc for stuff like metal siding
 
 <block name="woodMaster">
 	<property name="Extends" value="woodNoUpgradeMaster"/>
+	<property name="Tags" value="jz_WoodBuilding"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="rWoodMaster"/>
@@ -952,7 +954,7 @@ group desc for stuff like metal siding
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="DescriptionKey" value="rWoodGroupDesc"/>
 	<property name="Material" value="MwoodReinforced"/>
-	<property name="Tags" value="wood"/>
+	<property name="Tags" value="wood,jz_WoodBuilding"/>
 	<property name="PassThroughDamage" value="true"/>
 	<property name="Texture" value="379"/>
 	<!-- <property name="ImposterExchange" value="imposterBlock" param1="119"/> -->
@@ -979,7 +981,7 @@ group desc for stuff like metal siding
 
 <block name="rWoodMetalMaster">
 	<property name="Group" value="Building,advBuilding"/>
-	<property name="Tags" value="wood"/>
+	<property name="Tags" value="wood,jz_WoodBuilding"/>
 	<property name="DescriptionKey" value="rWoodMetalGroupDesc"/>
 	<property name="Material" value="MwoodMetal"/>
 	<property name="PassThroughDamage" value="true"/>
@@ -1010,6 +1012,7 @@ group desc for stuff like metal siding
 </block>
 
 <block name="scrapIronFrameMaster">
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="DescriptionKey" value="scrapFrameGroupDesc"/>
 	<property name="Material" value="Mmetal_frame"/>
@@ -1052,6 +1055,7 @@ group desc for stuff like metal siding
 </block>
 
 <block name="scrapIronNoUpgradeMaster">
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="DisplayType" value="blockHardened"/>
 	<property name="Material" value="Mmetal_medium"/>
@@ -1085,6 +1089,7 @@ group desc for stuff like metal siding
 </block>
 
 <block name="rScrapIronMaster">
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="DisplayType" value="blockHardened"/>
 	<property name="Material" value="Mmetal_medium"/>
@@ -13237,6 +13242,7 @@ NOT the TextureNumber.
 	<property name="SortOrder1" value="a060"/>
 	<!--JZMOD ANY-->
 	<drop event="Destroy" name="jz_Stick" count="2,5"/>
+	<drop event="Destroy" name="jz_WoodBranch" count="0,1"/>
 </block>
 
 <block name="treeAzalea">
@@ -13255,6 +13261,7 @@ NOT the TextureNumber.
 	<property name="SortOrder1" value="a060"/>
 	<!--JZMOD ANY-->
 	<drop event="Destroy" name="jz_Stick" count="2,5"/>
+	<drop event="Destroy" name="jz_WoodBranch" count="0,1"/>
 	<drop event="Destroy" name="resourceYuccaFibers" count="1,2"/>
 </block>
 
@@ -29166,7 +29173,7 @@ NOT the TextureNumber.
 </block>
 <block name="jz_SteelFrameMaster">
 	<property name="Group" value="Building,advBuilding"/>
-	<property name="Material" value="Mmetal_frame"/>
+	<property name="Material" value="Msteel"/>
 	<property name="Shape" value="New"/>
 	<property name="LightOpacity" value="0"/>
 	<property name="Model" value="cube"/>
@@ -30588,6 +30595,7 @@ NOT the TextureNumber.
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="VehicleHitScale" value="999"/>
     <property name="CanPickup" value="false" />
+	<property name="CanDecorateOnSlopes" value="false"/>
 </block>
 
 <block name="jz_TruckElectricBox">
@@ -30884,8 +30892,9 @@ NOT the TextureNumber.
 	<property name="CanPickup" value="false" />
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZDecorTireMarks1.unity3d?DecorTireMarks1Prefab" />
-	<drop event="Destroy" count="0"/>
 	<property name="FilterTags" value="fdecor,fother"/>
+	<property name="CanDecorateOnSlopes" value="false"/>
+	<drop event="Destroy" count="0"/>
 </block>
 
 <block name="jz_TireMarks2">
@@ -30939,6 +30948,7 @@ NOT the TextureNumber.
 <block name="jz_TireMarkRandomHelper">
 	<property name="Extends" value="cntWastelandRandomLootHelper"/>
 	<property name="CreativeMode" value="Dev"/>
+	<property name="CanDecorateOnSlopes" value="false"/>
 </block>
 
 <block name="jz_MutatedDecorRandomHelper">
@@ -30994,5 +31004,103 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="floot,fdesign"/>
 	<property name="DisplayInfo" value="Name"/>
 </block>
+
+
+
+
+
+
+
+
+
+
+
+
+<block name="ConfigFeatureBlock">
+      <property name="Extends" value="terrDesertGround"/>
+
+      <property class="FoodSpoilage">
+        <property name="Logging" value="false"/>
+        <property name="FoodSpoilage" value="true" />  <!-- Turns on Food spoilage-->
+        <property name="Toolbelt" value="6" />     <!-- Penalty of 3 points per spoilage tick --> 
+        <property name="Backpack" value="5" />     <!-- Penalty of 5 points per spoilage tick -->
+        <property name="Container" value="4" />    <!-- Penalty of 2 points per spoilage tick -->
+        <property name="MinimumSpoilage" value="0.1" />  <!-- absolute minimum spoilage per tick -->
+        <property name="TickPerLoss" value="1000" />   <!-- Global Setting Example value=10   10 ticks per Spoilage increase. -->
+        <property name="SpoiledItem" value="foodRottingFlesh" />  <!-- When spoiled, this item will turn into this item.-->
+      </property>
+
+      <property class="AdvancedSoundFeatures" >
+        <property name="Logging" value="false"/>
+      </property>
+      <property class="AdvancedItemFeatures" >
+        <property name="Logging" value="false"/>
+        <property name="AdvancedItemRepair" value="false" />  <!-- Enables more repair options for more complicated repair and scrapping recipes. -->
+        <property name="DurabilityAffectsDamage" value="false" />  <!-- For melee, a weapon is reduced as durability goes down. Fix your stuff! -->
+      </property>
+
+      <property class="AdvancedPlayerFeatures" >
+        <property name="Logging" value="false"/>
+        <property name="AntiNerdPole" value="true" /> <!-- Player cannot jump and place a block under neath them-->
+        <property name="OneBlockCrouch" value="false" />  <!-- Allow you to fit through one block spaces -->
+        <property name="SoftHands" value="true" />    <!-- Damages the player if they hit something with their bare hands. -->
+      </property>
+
+      <property class="AdvancedZombieFeatures">
+        <property name="Logging" value="false"/>
+        <property name="HeadshotOnly" value="false" />  <!-- Only way to kill them is through head shots -->
+        <property name="RandomSize" value="false" />     <!-- Give them random sizes for more variety -->
+        <property name="RandomWalk" value="true" />   <!-- Give them random walks. -->
+        <property name="UMATweaks"  value="true" />     <!-- Improvements on reducing load times of UMA Zombies -->
+        <property name="LowerResolutionUMA" value="true" />    <!-- Lower resolution on UMAs drastically -->
+      </property>
+
+      <property class="AdvancedProgression">
+        <property name="Logging" value="false"/>
+        <property name="ZeroXP" value="false" /> <!-- Disable gaining Experience from any source. -->
+      </property>
+
+      <property class="ErrorHandling">
+        <property name="Logging" value="false"/>
+        <property name="NoExceptionHijack" value="false" />  <!-- Disables the console drop down on red exception -->
+      </property>
+      
+      <property class="AdvancedUI">
+        <property name="Logging" value="false"/>
+        <property name="DisableXPIconNotification" value="true" />   <!-- Don't like the UI element for XP? Set to true to disable. -->
+        <property name="UnlockEnemyHealthBar" value="false" /> <!-- Unlocks the enemy health bar-->
+      </property>
+
+      <property class="AdvancedWorldGen">
+        <property name="Logging" value="false"/>
+        <!--property name="DisableSplatMap" value="false" /-->   <!-- Disable the splat map: Also disables distant terrain -->
+        <!-- Mod moved to SphereII Legacy Distant Terrain -->
+      </property>
+      
+      <property class="AdvancedNPCFeatures" >
+        <property name="Logging" value="false"/>
+        <property name="EnhancedFeatures" value="true" />   <!-- Allow NPCs to open doors, etc-->
+        <property name="MakeTraderVulnerable" value="true" /> <!-- allow the Trader NPCs to die. -->
+        <property name="NPCSpeedFix" value="true" />        <!-- allow the Trader NPCs to move at a reasonable speed -->
+        <property name="NPCMaslow" value="false" />    <!-- Turn on or off Maslow for NPCs -->
+        <property name="AnimalMaslow" value="false" /> <!-- Turn on or off maslow for animals. -->
+      </property>
+
+      <property class="AdvancedWorkstationFeatures" >
+        <property name="Logging" value="true"/>
+        <property name="EnablePoweredWorkstations" value="false" />
+      </property>
+
+      <property class="AdvancedTroubleshootingFeatures" >
+        <property name="Logging" value="false"/>
+        <property name="VerboseXMLParser" value="false" />
+      </property>
+      
+      <property class="AdvancedPrefabFeatures" >
+        <property name="Logging" value="false"/>
+        <property name="DisableTraderProtection" value="false" />  <!-- Disables Trader Protection in their prefabs -->
+      </property>
+
+    </block>
 </set>
 </configs> 

@@ -606,7 +606,7 @@
 </material>
 
 <material id="Msteel">
-	<property name="damage_category" value="metal"/>
+	<property name="damage_category" value="jzSteel"/>
 	<property name="surface_category" value="metal"/>
 	<property name="forge_category" value="iron"/>
 	<property name="Hardness" type="float" value="1"/>
@@ -1625,7 +1625,7 @@
 		<property name="MaxDamage" value="150" />
 	</material>
 	<!-- JZMOD SKILL BOOKS -->
-	<material id="MprofessionPage">
+	<material id="MskillPaper">
 		<property name="damage_category" value="paper" />
 		<property name="surface_category" value="paper" />
 		<property name="forge_category" value="skillPaper" />

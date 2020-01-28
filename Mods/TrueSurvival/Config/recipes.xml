@@ -19,6 +19,7 @@
 <recipe name="resourcePaint" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * JZMOD SCRAP ITEMS * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<recipe name="jz_SkillPaper" count="1" tooltip="ttScrapMetalLead" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourceTechParts" count="1" tooltip="ttScrapMetalLead" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="jz_ScrapRubber" count="1" tooltip="ttScrapMetalLead" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="jz_Stick" count="1" tooltip="ttScrapMetalLead" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
@@ -544,7 +545,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="jz_FoodTunaSandwich" count="1" craft_time="5" craft_exp_gain="5">
-	<ingredient name="jz_FoodBread" count="2" />
+	<ingredient name="jz_FoodBread" count="1" />
 	<ingredient name="foodCanTuna" count="1" />
 </recipe>
 
@@ -3880,8 +3881,12 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_BlankSkillBook" count="1"/>
 </recipe>
 
-<recipe name="jz_ProfessionPage" count="1" craft_area="jz_ResearchDesk"  >
-	<ingredient name="jz_SkillPaper" count="10" />
+<recipe name="jz_ProfessionPage" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="500" >
+	<ingredient name="jz_SkillPaper" count="20" />
+</recipe>
+
+<recipe name="jz_BlankSkillBook" count="1" craft_area="jz_ResearchDesk" craft_time="150" craft_exp_gain="100" >
+	<ingredient name="jz_SkillPaper" count="5" />
 	<ingredient name="jz_InkPen" count="1" />
 </recipe>
 </set>

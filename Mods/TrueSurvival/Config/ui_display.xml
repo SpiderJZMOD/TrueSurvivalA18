@@ -301,6 +301,7 @@
 		<item_display_info display_type="clothing" display_group="groupAttire" >
 			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
 			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
+			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>
 		</item_display_info>
 		<item_display_info display_type="clothingRunningShoes" display_group="groupAttire" >
 			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
@@ -341,7 +342,8 @@
 			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
 			<display_entry name="dLightMultiplier" title_key="statVisibility" display_type="Percent" display_leading_plus="true" show_inverted="false" negative_preferred="false"/>
 			<display_entry name="dNoiseMultiplier" title_key="statNoiseReduction" display_type="Percent" display_leading_plus="true" show_inverted="false" negative_preferred="false"/>
-		</item_display_info>
+			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>
+	</item_display_info>
 		<item_display_info display_type="clothingGhillieHood" display_group="groupAttire" >
 			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
 			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
@@ -745,6 +747,7 @@
 			<display_entry name="canShootThrough" title_key="statCanShootThrough" display_type="Bool"/>
 			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
 		</item_display_info>
+		
 		<item_display_info display_type="blockShootThroughHardened" display_group="groupBlocks">
 			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
 			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>

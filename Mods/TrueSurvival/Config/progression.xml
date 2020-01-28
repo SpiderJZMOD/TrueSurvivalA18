@@ -1765,7 +1765,7 @@
 		</effect_group>
 	</perk>
 	<!-- ******************************************************************  Positive Traits  ******************************************************************************** -->
-	<perk name="jz_TraitFastDriver" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fast Driver" desc_key="jz_TraitFastDriverDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitFastDriver" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="5" name_key="Fast Driver" desc_key="jz_TraitFastDriverDesc" icon="ui_game_symbol_mining">
 		<!--5% faster driver -->
 		<effect_group>
 			<passive_effect name="VehicleVelocityMaxPer" operation="perc_set" level="1" value="1.1"/>
@@ -1773,7 +1773,7 @@
 			<effect_description level="1" desc_key="jz_TraitFastDriverDesc" long_desc_key="jz_TraitFastDriverDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitWakeful" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Wakeful" desc_key="jz_TraitWakefulDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitWakeful" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="5" name_key="Wakeful" desc_key="jz_TraitWakefulDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
 		</effect_group>
@@ -1782,14 +1782,14 @@
 			<effect_description level="1" desc_key="jz_TraitWakefulDesc" long_desc_key="jz_TraitWakefulDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitGraceful" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Graceful" desc_key="jz_TraitGracefulDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitGraceful" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="5" name_key="Graceful" desc_key="jz_TraitGracefulDesc" icon="ui_game_symbol_mining">
 		<!--10% less noise moving -->
 		<effect_group>
 			<passive_effect name="NoiseMultiplier" operation="perc_add" level="1" value="-.1"/>
 			<effect_description level="1" desc_key="jz_TraitGracefulDesc" long_desc_key="jz_TraitGracefulDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitDexterous" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Dexterous" desc_key="jz_TraitDexterousDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitDexterous" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="10" name_key="Dexterous" desc_key="jz_TraitDexterousDesc" icon="ui_game_symbol_mining">
 		<!--10% faster crafting 10% faster lock-picking -->
 		<effect_group>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.1" />
@@ -1797,13 +1797,13 @@
 			<effect_description level="1" desc_key="jz_TraitDexterousDesc" long_desc_key="jz_TraitDexterousDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitIronGut" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Gut" desc_key="jz_TraitIronGutDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitIronGut" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="10" name_key="Iron Gut" desc_key="jz_TraitIronGutDesc" icon="ui_game_symbol_mining">
 		<!--15% less chance for food illnesses -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitIronGutDesc" long_desc_key="jz_TraitIronGutDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitOutdoorsman" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Outdoorsman" desc_key="jz_TraitOutdoorsmanDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitOutdoorsman" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="10" name_key="Outdoorsman" desc_key="jz_TraitOutdoorsmanDesc" icon="ui_game_symbol_mining">
 		<!--10% less effects from weather -->
 		<effect_group>
 			<passive_effect name="HypothermalResist" operation="base_add" level="1" value="10"/>
@@ -1812,7 +1812,7 @@
 			<effect_description level="1" desc_key="jz_TraitOutdoorsmanDesc" long_desc_key="jz_TraitOutdoorsmanDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitFit" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fit" desc_key="jz_TraitFitDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitFit" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="15" name_key="Fit" desc_key="jz_TraitFitDesc" icon="ui_game_symbol_mining">
 		<!--5% less encumbrance effect, 5% less stam per swing, 5% faster stam regain -->
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="melee"/>
@@ -1828,7 +1828,7 @@
 			<effect_description level="1" desc_key="jz_TraitFitDesc" long_desc_key="jz_TraitFitDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitThickSkinned" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Thick Skinned" desc_key="jz_TraitThickSkinnedDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitThickSkinned" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="15" name_key="Thick Skinned" desc_key="jz_TraitThickSkinnedDesc" icon="ui_game_symbol_mining">
 		<!--10% less chance to get scratches and bites -->
 		<effect_group>
 			<passive_effect name="BuffResistance" operation="base_add" level="1" value=".1" tags="jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
@@ -1838,7 +1838,7 @@
 			<effect_description level="1" desc_key="jz_TraitThickSkinnedDesc" long_desc_key="jz_TraitThickSkinnedDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitGymnast" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gymnast" desc_key="jz_TraitGymnastDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitGymnast" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="15" name_key="Gymnast" desc_key="jz_TraitGymnastDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
 		</effect_group>
@@ -1847,13 +1847,13 @@
 			<effect_description level="1" desc_key="jz_TraitGymnastDesc" long_desc_key="jz_TraitGymnastDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitMedic" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Medic" desc_key="jz_TraitMedicDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitMedic" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="15" name_key="Medic" desc_key="jz_TraitMedicDesc" icon="ui_game_symbol_mining">
 		<!--20% More healing from first aid -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitMedicDesc" long_desc_key="jz_TraitMedicDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitAmateurMechanic" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Amateur Mechanic" desc_key="jz_TraitAmateurMechanicDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitAmateurMechanic" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="20" name_key="Amateur Mechanic" desc_key="jz_TraitAmateurMechanicDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
 		</effect_group>
@@ -1862,7 +1862,7 @@
 			<effect_description level="1" desc_key="jz_TraitAmateurMechanicDesc" long_desc_key="jz_TraitAmateurMechanicDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitHunter" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Hunter" desc_key="jz_TraitHunterDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitHunter" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="20" name_key="Hunter" desc_key="jz_TraitHunterDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
 		</effect_group>
@@ -1871,7 +1871,7 @@
 			<effect_description level="1" desc_key="jz_TraitHunterDesc" long_desc_key="jz_TraitHunterDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitRunner" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Runner" desc_key="jz_TraitRunnerDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitRunner" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="20" name_key="Runner" desc_key="jz_TraitRunnerDesc" icon="ui_game_symbol_mining">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
 		</effect_group>
@@ -1880,7 +1880,7 @@
 			<effect_description level="1" desc_key="jz_TraitRunnerDesc" long_desc_key="jz_TraitRunnerDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitStout" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Stout" desc_key="jz_TraitStoutDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitStout" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="20" name_key="Stout" desc_key="jz_TraitStoutDesc" icon="ui_game_symbol_mining">
 		<!--10% less encumbrance speed, 10% less stam per swing, 10% faster stam regain when encumbered -->
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="melee"/>

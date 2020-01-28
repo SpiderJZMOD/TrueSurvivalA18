@@ -180,11 +180,11 @@
 			<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffStatusCheck01,buffStatusCheck02,buffPerkAbilityUpdate,buffNearDeathTraumaTrigger"/>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusHungry01">
-				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LTE" value="25"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LTE" value="30"/>
 				<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusHungry02">
-				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LTE" value="10"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LTE" value="15"/>
 			</triggered_effect>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusThirsty01">
@@ -382,61 +382,51 @@
 		<effect_group name="100% Full Buff Notification">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="100"/>
 			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>		 	
 		</effect_group>
 		<effect_group name="90% Full Buff Notification">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="90"/>
 			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
 		</effect_group>
 		<effect_group name="80% Full Buff Notification">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="80"/>
 			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
 		</effect_group>
 		<effect_group name="70% Full Buff Notification">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="70"/>
 			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
 		</effect_group>
 		<effect_group name="60% Full Buff Notification">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="60"/>
 			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
 		</effect_group>
 		<effect_group name="50% Full Buff Notification">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="50"/>
 			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
 		</effect_group>
 		<effect_group name="40% Full Buff Notification">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="40"/>
 			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
+			<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
-		</effect_group>
-		<effect_group name="30% Full Buff Notification">
-			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="30"/>
-			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
-		</effect_group>
-		<effect_group name="20% Full Buff Notification">
-			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="20"/>
-			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
-		</effect_group>
-		<effect_group name="10% Full Buff Notification">
-			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="10"/>
-			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
-		</effect_group>
-		<effect_group name="5% Full Buff Notification">
-			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="5"/>
-			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>			
-		</effect_group>
-		<effect_group name="Starving Buff Notification">
-			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffFoodStarving"/>			
 		</effect_group>
 		<!-- JZMOD NUTRITION LEVELING AND NOTIFICATION -->
 		<effect_group name="Malnourished Activation">
@@ -2578,7 +2568,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 			<passive_effect name="HealthChangeOT" operation="base_add" value="1">
 				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LTE" value="@$NearDeathRegen"/>
 			</passive_effect>
-			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="1"><!--Tiredness-->
+			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="1"><!--Fatigue-->
 				<requirement name="StatComparePercModMaxToMax" stat="Stamina" operation="LTE" value="@$NearDeathRegen"/>
 			</passive_effect>
 			<passive_effect name="WaterChangeOT" operation="base_add" value="1">
@@ -2610,7 +2600,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 	</buff>
 
 
-	<buff name="buffDysenteryCatch" name_key="buff Dysentery Catch"  hidden="true">
+	<buff name="buffDysenteryCatch" remove_on_death="false" name_key="buff Dysentery Catch"  hidden="true">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value=".1"/>
@@ -2624,7 +2614,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffDysenteryMain" name_key="buff Dysentery Main" hidden="true" icon="ui_game_symbol_dysentery">
+	<buff name="buffDysenteryMain" remove_on_death="false" name_key="buff Dysentery Main" hidden="true" icon="ui_game_symbol_dysentery">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -2743,8 +2733,8 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffDysentery01Untreated"/>
 		</effect_group>
 	</buff>
-
-	<buff name="buffDysenteryAddCure" name_key="buff Dysentery Add Cure" hidden="true" icon="ui_game_symbol_pills">
+ 
+	<buff name="buffDysenteryAddCure" remove_on_death="false" name_key="buff Dysentery Add Cure" hidden="true" icon="ui_game_symbol_pills">
 		<stack_type value="ignore"/>
 		<duration value=".1"/>
 		<effect_group>
@@ -2765,7 +2755,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffDysenteryCureDisplay" name_key="buffDysenteryCureDisplayName" description_key="buffDysenteryCureDisplayDesc" showonhud="false" icon="ui_game_symbol_pills">
+	<buff name="buffDysenteryCureDisplay" remove_on_death="false" name_key="buffDysenteryCureDisplayName" description_key="buffDysenteryCureDisplayDesc" showonhud="false" icon="ui_game_symbol_pills">
 		<duration value="0"/>
 		<update_rate value="1.7"/>
 		<display_value value=".dysenteryCureDisplayPerc"/><display_value_key value="{0:0.0}%"/>
@@ -2782,7 +2772,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffDysentery01Untreated" name_key="buffDysentery01UntreatedName" description_key="buffDysentery01UntreatedDesc" icon="ui_game_symbol_dysentery" icon_color="255,128,0">
+	<buff name="buffDysentery01Untreated" remove_on_death="false" name_key="buffDysentery01UntreatedName" description_key="buffDysentery01UntreatedDesc" icon="ui_game_symbol_dysentery" icon_color="255,128,0">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -2791,7 +2781,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysentery01GetBetter"/>
 		</effect_group>
 	</buff>
-	<buff name="buffDysentery01GetBetter" name_key="buffDysentery01GetBetterName" description_key="buffDysentery01GetBetterDesc" icon="ui_game_symbol_dysentery_better" icon_color="255,128,0">
+	<buff name="buffDysentery01GetBetter" remove_on_death="false" name_key="buffDysentery01GetBetterName" description_key="buffDysentery01GetBetterDesc" icon="ui_game_symbol_dysentery_better" icon_color="255,128,0">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -2801,7 +2791,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffDysentery01UntreatedDiarrhea" name_key="buffDysentery01UntreatedName" description_key="buffDysentery01UntreatedDesc" icon="ui_game_symbol_dysentery" icon_color="255,128,0" icon_blink="true">
+	<buff name="buffDysentery01UntreatedDiarrhea" remove_on_death="false" name_key="buffDysentery01UntreatedName" description_key="buffDysentery01UntreatedDesc" icon="ui_game_symbol_dysentery" icon_color="255,128,0" icon_blink="true">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="5.5"/>
@@ -2809,13 +2799,15 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysentery01Untreated"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysentery01GetBetter"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmount" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmountAdd" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerAwakeAdd" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmount" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="set" value="0"/>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="water" operation="add" value="-1.5"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" value_type="modifiedmax" operation="add" value="-.5"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="-2"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerAwakeDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>
 		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffDysentery01Untreated">
@@ -2829,7 +2821,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffDysentery01GetBetterDiarrhea" name_key="buffDysentery01GetBetterName" description_key="buffDysentery01GetBetterDesc" icon="ui_game_symbol_dysentery_better" icon_color="255,128,0" icon_blink="true">
+	<buff name="buffDysentery01GetBetterDiarrhea" remove_on_death="false" name_key="buffDysentery01GetBetterName" description_key="buffDysentery01GetBetterDesc" icon="ui_game_symbol_dysentery_better" icon_color="255,128,0" icon_blink="true">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="5.5"/>
@@ -2837,13 +2829,15 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysentery01Untreated"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffDysentery01GetBetter"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmount" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmountAdd" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerAwakeAdd" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmount" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="set" value="0"/>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="water" operation="add" value="-1.5"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" value_type="modifiedmax" operation="add" value="-.5"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="-2"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerAwakeDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>
 		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffDysentery01Untreated">
@@ -2858,21 +2852,20 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 	</buff>
 
 
-	<buff name="buffIllFoodPoisoning01" name_key="buffIllFoodPoisoning01Name" description_key="buffIllFoodPoisoning01Desc" tooltip_key="buffIllFoodPoisoning01Tooltip" icon="ui_game_symbol_food_poisoning" icon_color="255,128,0">
+	<buff name="buffIllFoodPoisoning01" remove_on_death="false" name_key="buffIllFoodPoisoning01Name" description_key="buffIllFoodPoisoning01Desc" tooltip_key="buffIllFoodPoisoning01Tooltip" icon="ui_game_symbol_food_poisoning" icon_color="255,128,0">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="5"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Water" operation="add" value="-20"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Stamina" value_type="modifiedmax" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Stamina" value_type="modifiedmax" operation="add" value="3"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="set" value="3"/>
 			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="player#vomit"/>
 
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$foodAmount" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$waterAmount" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$foodAmountAdd" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$waterAmountAdd" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$foodAmountAdd2" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerFoodAdd" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerAwakeAdd" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmount" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$waterAmountAdd2" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$waterStaminaRegenAmount" operation="set" value="0"/>
 
@@ -2885,7 +2878,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffIllPneumonia00" hidden="true">
+	<buff name="buffIllPneumonia00" remove_on_death="false" hidden="true">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="90"/>
@@ -2897,12 +2890,12 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffIllPneumonia01" name_key="buffIllPneumonia01Name" description_key="buffIllPneumonia01Desc" tooltip_key="buffIllPneumonia01Tooltip" icon="ui_game_symbol_" icon_color="255,0,0" icon_blink="true">
+	<buff name="buffIllPneumonia01" remove_on_death="false" name_key="buffIllPneumonia01Name" description_key="buffIllPneumonia01Desc" tooltip_key="buffIllPneumonia01Tooltip" icon="ui_game_symbol_" icon_color="255,0,0" icon_blink="true">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="300"/>
 		<effect_group>
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="2" tags="jz_StoneaxeCrafting"/>
+			<!--<passive_effect name="AttributeLevel" operation="base_subtract" value="2" tags="jz_StoneaxeCrafting"/>-->
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
 
@@ -2919,7 +2912,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 	<!-- JZMOD GRAB CHANCE SCALES OFF CURRENT STAMINA -->
-	<buff name="buffInfectionCatch" name_key="buff Grab Chance"  hidden="true">
+	<buff name="buffInfectionCatch" remove_on_death="false" name_key="buff Grab Chance"  hidden="true">
 		<damage_type value="Infection"/>
 		<stack_type value="ignore"/>
 		<duration value=".1"/>
@@ -2978,7 +2971,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 		
-	<buff name="buffInfectionMain" name_key="buff Infection Main" hidden="true" icon="ui_game_symbol_infection">
+	<buff name="buffInfectionMain" remove_on_death="false" name_key="buff Infection Main" hidden="true" icon="ui_game_symbol_infection">
 		<damage_type value="Infection"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -3108,7 +3101,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffInfectionAddCure" name_key="buff Infection Add Cure" hidden="true" icon="ui_game_symbol_pills">
+	<buff name="buffInfectionAddCure" remove_on_death="false" name_key="buff Infection Add Cure" hidden="true" icon="ui_game_symbol_pills">
 		<stack_type value="ignore"/>
 		<duration value=".1"/>
 		<effect_group>
@@ -3125,7 +3118,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffInfectionCureDisplay" name_key="buffInfectionCureDisplayName" description_key="buffInfectionCureDisplayDesc" showonhud="false" icon="ui_game_symbol_pills">
+	<buff name="buffInfectionCureDisplay" remove_on_death="false" name_key="buffInfectionCureDisplayName" description_key="buffInfectionCureDisplayDesc" showonhud="false" icon="ui_game_symbol_pills">
 		<duration value="0"/>
 		<update_rate value="1.7"/>
 		<display_value value=".infectionCureDisplayPerc"/><display_value_key value="{0:0.0}%"/>
@@ -3142,7 +3135,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffInfection01Untreated" name_key="buffInfection01UntreatedName" description_key="buffInfection01UntreatedDesc" tooltip_key="buffInfection01UntreatedTooltip" icon="ui_game_symbol_infection">
+	<buff name="buffInfection01Untreated" remove_on_death="false" name_key="buffInfection01UntreatedName" description_key="buffInfection01UntreatedDesc" tooltip_key="buffInfection01UntreatedTooltip" icon="ui_game_symbol_infection">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -3155,7 +3148,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInfection03GetBetter"/>
 		</effect_group>
 	</buff>
-	<buff name="buffInfection01GetBetter" name_key="buffInfection01GetBetterName" description_key="buffInfection01GetBetterDesc" icon="ui_game_symbol_infection_better">
+	<buff name="buffInfection01GetBetter" remove_on_death="false" name_key="buffInfection01GetBetterName" description_key="buffInfection01GetBetterDesc" icon="ui_game_symbol_infection_better">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -3169,7 +3162,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffInfection02Untreated" name_key="buffInfection02UntreatedName" description_key="buffInfection02UntreatedDesc" icon="ui_game_symbol_infection" icon_color="255,128,0">
+	<buff name="buffInfection02Untreated" remove_on_death="false" name_key="buffInfection02UntreatedName" description_key="buffInfection02UntreatedDesc" icon="ui_game_symbol_infection" icon_color="255,128,0">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -3186,7 +3179,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.25"/>
 		</effect_group>
 	</buff>
-	<buff name="buffInfection02GetBetter" name_key="buffInfection02GetBetterName" description_key="buffInfection02GetBetterDesc" icon="ui_game_symbol_infection_better" icon_color="255,128,0">
+	<buff name="buffInfection02GetBetter" remove_on_death="false" name_key="buffInfection02GetBetterName" description_key="buffInfection02GetBetterDesc" icon="ui_game_symbol_infection_better" icon_color="255,128,0">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -3204,7 +3197,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffInfection03Untreated" name_key="buffInfection03UntreatedName" description_key="buffInfection03UntreatedDesc" icon="ui_game_symbol_infection" icon_color="255,0,0">
+	<buff name="buffInfection03Untreated" remove_on_death="false" name_key="buffInfection03UntreatedName" description_key="buffInfection03UntreatedDesc" icon="ui_game_symbol_infection" icon_color="255,0,0">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -3224,7 +3217,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 			<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.35"/>
 		</effect_group>
 	</buff>
-	<buff name="buffInfection03GetBetter" name_key="buffInfection03GetBetterName" description_key="buffInfection03GetBetterDesc" icon="ui_game_symbol_infection_better" icon_color="255,0,0">
+	<buff name="buffInfection03GetBetter" remove_on_death="false" name_key="buffInfection03GetBetterName" description_key="buffInfection03GetBetterDesc" icon="ui_game_symbol_infection_better" icon_color="255,0,0">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="0"/>
@@ -3245,7 +3238,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffInfection04" tooltip_key="buffInfection04Tooltip" icon="ui_game_symbol_infection" icon_color="255,0,0">
+	<buff name="buffInfection04" remove_on_death="false" tooltip_key="buffInfection04Tooltip" icon="ui_game_symbol_infection" icon_color="255,0,0">
 		<damage_type value="Infection"/>
 		<stack_type value="ignore"/>
 		<duration value=".1"/>
@@ -3254,51 +3247,53 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffStatusHungry01" name_key="buffStatusHungry01Name" description_key="buffStatusHungry01Desc" tooltip_key="buffStatusHungry01Tooltip" icon="ui_game_symbol_hunger" icon_color="255,128,0">
+	<buff name="buffStatusHungry01" remove_on_death="false" name_key="buffStatusHungry01Name" description_key="buffStatusHungry01Desc" tooltip_key="buffStatusHungry01Tooltip" icon="ui_game_symbol_jz_hunger" icon_color="255,128,0">
 		<damage_type value="Starvation"/>
 		<stack_type value="ignore"/>
+		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffStatusHungry01">
-				<requirement name="StatComparePercModMaxToMax" stat="Stamina" operation="GT" value="0.52"/>
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GT" value="30"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Player$Hungry" play_in_head="true"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff"  buff="jz_BuffPlayerFoodNotification"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff"  buff="jz_BuffPlayerFoodNotificationOC"/>
 		</effect_group>
 	</buff>
 
-	<buff name="buffStatusHungry02" name_key="buffStatusHungry02Name" description_key="buffStatusHungry02Desc" tooltip_key="buffStatusHungry02Tooltip" icon="ui_game_symbol_hunger" icon_color="255,0,0" icon_blink="true">
+	<buff name="buffStatusHungry02" remove_on_death="false" name_key="buffStatusHungry02Name" description_key="buffStatusHungry02Desc" tooltip_key="buffStatusHungry02Tooltip" icon="ui_game_symbol_jz_hunger" icon_color="255,0,0" icon_blink="true">
 		<damage_type value="Starvation"/>
 		<damage_source value="Internal"/>
 		<stack_type value="ignore"/>
 		<update_rate value="2.2"/>
+		<duration value="0"/>
+		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
 		<effect_group>
-			<requirement name="NotHasBuff" buff="buffHealStaminaMax"/>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" value=".00416"/> <!-- 15 p h -->
 			<passive_effect name="StaminaChangeOT" operation="perc_subtract" value=".1"/>
 			<passive_effect name="HealthMaxModifierOT" operation="base_subtract" value="0.05"/>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value=".3">
-					<requirement name="StatComparePercModMaxToMax" stat="stamina" operation="LT" value=".26"/>
-			</triggered_effect>
 		</effect_group>
 
 		<effect_group>
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="2" tags="jz_StoneaxeCrafting"/>
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="1" tags="jz_StoneaxeCrafting"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<passive_effect name="HealthChangeOT" operation="base_subtract" value=".00416"/> <!-- 15 p h -->
-
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffStatusHungry01"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff"  buff="jz_BuffPlayerFoodNotification"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff"  buff="jz_BuffPlayerFoodNotificationOC"/>
 			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="Player$Hungry" play_in_head="true"/>
 		</effect_group>
 
 		<effect_group>
-			<requirement name="StatComparePercModMaxToMax" stat="Stamina" operation="GTE" value="0.32"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffStatusHungry02"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusHungry01"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffStatusHungry02">
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GT" value="15"/>	
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value=".3">
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LT" value="6"/>
+			</triggered_effect>
 		</effect_group>
 	</buff>
 
-	<buff name="buffStatusThirsty01" name_key="buffStatusThirsty01Name" description_key="buffStatusThirsty01Desc" tooltip_key="buffStatusThirsty01Tooltip" icon="ui_game_symbol_water" icon_color="255,128,0">
+	<buff name="buffStatusThirsty01" remove_on_death="false" name_key="buffStatusThirsty01Name" description_key="buffStatusThirsty01Desc" tooltip_key="buffStatusThirsty01Tooltip" icon="ui_game_symbol_water" icon_color="255,128,0">
 		<damage_type value="Dehydration"/>
 		<stack_type value="ignore"/>
 		<effect_group>
@@ -3308,7 +3303,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffStatusThirsty02" name_key="buffStatusThirsty02Name" description_key="buffStatusThirsty02Desc" tooltip_key="buffStatusThirsty02Tooltip" icon="ui_game_symbol_water" icon_color="255,0,0" icon_blink="true">
+	<buff name="buffStatusThirsty02" remove_on_death="false" name_key="buffStatusThirsty02Name" description_key="buffStatusThirsty02Desc" tooltip_key="buffStatusThirsty02Tooltip" icon="ui_game_symbol_water" icon_color="255,0,0" icon_blink="true">
 		<damage_type value="Dehydration"/>
 		<damage_source value="Internal"/>
 		<stack_type value="ignore"/>
@@ -3323,10 +3318,6 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 
 		<effect_group>
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="2" tags="jz_StoneaxeCrafting"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffStatusThirsty01"/>
 		</effect_group>
 
@@ -3516,6 +3507,8 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 			
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffPlayerFoodNotificationOC">
 				<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotification"/>
+				<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
+				<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 			</triggered_effect>
 			
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerFoodStat" operation="add" value="1"/>
@@ -3572,7 +3565,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 
 	<buff name="jz_BuffIncreseStamina" hidden="true">
 		<stack_type value="ignore"/>
-		<update_rate value="1"/>
+		<update_rate value="0.2"/>
 		<duration value="0"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="1"/>
@@ -3657,9 +3650,9 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="buffHealStaminaMax" name_key="buffHealStaminaMaxName" icon="ui_game_symbol_hunger" icon_color="0,200,0" hidden="true">
+	<buff name="buffHealStaminaMax" name_key="buffHealStaminaMaxName" hidden="true">
 		<stack_type value="ignore"/>
-		<update_rate value="0.2"/>
+		<update_rate value="0.5"/>
 		<duration value="0"/>
 		<effect_group >
 			<requirement name="!IsStatAtMax" stat="maxstamina"/>
@@ -3739,7 +3732,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffGoodDiet" remove_on_death="false" name_key="jz_BuffGoodDietName" description_key="jz_BuffGoodDietDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffGoodDiet" remove_on_death="false" name_key="jz_BuffGoodDietName" description_key="jz_BuffGoodDietDesc" icon="ui_game_symbol_goodNutrition1" >
 		<stack_type value="ignore"/>
 		<duration value="0"/>
 	</buff>
@@ -3749,7 +3742,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		<duration value="0"/>
 	</buff>
 	
-	<buff name="jz_BuffBalancedDiet" remove_on_death="false" name_key="jz_BuffBalancedDietName" description_key="jz_BuffBalancedDietDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffBalancedDiet" remove_on_death="false" name_key="jz_BuffBalancedDietName" description_key="jz_BuffBalancedDietDesc" icon="ui_game_symbol_goodNutrition2" >
 		<stack_type value="ignore"/>
 		<update_rate value="3"/>
 		<duration value="0"/>
@@ -3764,7 +3757,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		<duration value="0"/>
 	</buff>
 	
-	<buff name="jz_BuffHealthyDiet" remove_on_death="false" name_key="jz_BuffHealthyDietName" description_key="jz_BuffHealthyDietDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffHealthyDiet" remove_on_death="false" name_key="jz_BuffHealthyDietName" description_key="jz_BuffHealthyDietDesc" icon="ui_game_symbol_goodNutrition3" >
 		<stack_type value="ignore"/>
 		<update_rate value="3"/>
 		<duration value="0"/>
@@ -3814,7 +3807,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>
 	</buff>
 
-	<buff name="jz_BuffBadDiet" remove_on_death="false" name_key="jz_BuffBadDietName" description_key="jz_BuffBadDietDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffBadDiet" remove_on_death="false" name_key="jz_BuffBadDietName" description_key="jz_BuffBadDietDesc" icon="ui_game_symbol_malnourished1" >
 		<stack_type value="ignore"/>
 		<update_rate value="3"/>
 		<duration value="0"/>
@@ -3838,7 +3831,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>		
 	</buff>
 	
-	<buff name="jz_BuffVitaminDeficiency" remove_on_death="false" name_key="jz_BuffVitaminDeficiencyName" description_key="jz_BuffVitaminDeficiencyDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffVitaminDeficiency" remove_on_death="false" name_key="jz_BuffVitaminDeficiencyName" description_key="jz_BuffVitaminDeficiencyDesc" icon="ui_game_symbol_malnourished2" >
 		<stack_type value="ignore"/>
 		<update_rate value="2"/>
 		<duration value="0"/>
@@ -3865,7 +3858,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>		
 	</buff>
 	
-	<buff name="jz_BuffMalnourished" remove_on_death="false" name_key="jz_BuffMalnourishedName" description_key="jz_BuffMalnourishedDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffMalnourished" remove_on_death="false" name_key="jz_BuffMalnourishedName" description_key="jz_BuffMalnourishedDesc" icon="ui_game_symbol_malnourished3" >
 		<stack_type value="ignore"/>
 		<update_rate value="1"/>
 		<duration value="0"/>
@@ -3892,7 +3885,7 @@ Kill Streak: Successive kills increase damage bonus by 30%, 40% up to a maximum 
 		</effect_group>		
 	</buff>
 	
-	<buff name="buffPuking01" name_key="buffPuking01Name" icon="ui_game_symbol_hunger" icon_color="255,0,0" hidden="true">
+	<buff name="buffPuking01" hidden="false" name_key="buffPuking01Name" icon="ui_game_symbol_vomit"  >
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
 		<duration value="4"/>
@@ -4845,8 +4838,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 
-	<buff name="buffRingOfFire" name_key="buffRingOfFireName" description_key="buffRingOfFireDesc"
-		icon="ui_game_symbol_fire" icon_color="200,200,0" icon_blink="true" remove_on_death="false">
+	<buff name="buffRingOfFire" name_key="buffRingOfFireName" description_key="buffRingOfFireDesc" icon="ui_game_symbol_fire" icon_color="200,200,0" icon_blink="true" remove_on_death="false">
 		<stack_type value="replace"/>
 		<duration value="0"/>
 		<update_rate value=".7"/>
@@ -4861,8 +4853,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="forge_fire_die" play_in_head="true"/>
 		</effect_group>
 	</buff>
-	<buff name="buffRingOfFireEffect" name_key="buffRingOfFireEffectName" description_key="buffRingOfFireEffectDesc" tooltip_key="buffRingOfFireEffectDesc"
-		icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
+	<buff name="buffRingOfFireEffect" name_key="buffRingOfFireEffectName" description_key="buffRingOfFireEffectDesc" tooltip_key="buffRingOfFireEffectDesc" icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
 		<damage_type value="heat"/>
 		<stack_type value="ignore"/>
 		<duration value="10"/>
@@ -5261,8 +5252,8 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
 			
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffThrobbingPainScreen"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="RemBuff" buff="jz_BuffThrobbingPainScreen"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="RemBuff" buff="jz_BuffThrobbingPainScreenRestart"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="jz_BuffThrobbingPainScreen"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="jz_BuffThrobbingPainScreenRestart"/>
 		</effect_group>
 		<effect_group>		
 			<passive_effect name="HypothermalResist" operation="base_add" value="-10"/>
@@ -5658,55 +5649,27 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>	
 	</buff>
 	<!-- JZMOD FOOD STAT ICONS -->
-	<buff name="jz_BuffFoodStuffed" remove_on_death="false" name_key="jz_BuffFoodStuffedName" description_key="jz_BuffFoodStuffedDesc" icon="ui_game_symbol_hunger" >
+	<buff name="jz_BuffPlayerFoodNotification" remove_on_death="false" name_key="Fullness" description_key="jz_BuffFoodFullDesc" icon="ui_game_symbol_jz_hunger" >
 		<stack_type value="ignore"/>
-		<duration value="10"/>
-		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodFive"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodTen"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodStarving"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodThirty"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodFourty"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodFifty"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodSixty"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodSeventy"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodEighty"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodNinety"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodFull"/>	
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffFoodTwenty"/>	
-		</effect_group>
-	</buff>
-	<buff name="jz_BuffPlayerFoodNotification" remove_on_death="false" name_key="Fullness" description_key="jz_BuffFoodFullDesc" icon="ui_game_symbol_hunger" >
-		<stack_type value="ignore"/>
-		<duration value="10"/>
+		<duration value="30"/>
 		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
 	</buff>
 	
-	<buff name="jz_BuffPlayerFoodNotificationOC" remove_on_death="false" name_key="Fullness" description_key="jz_BuffFoodFullDesc" icon="ui_game_symbol_hunger" >
+	<buff name="jz_BuffPlayerFoodNotificationOC" remove_on_death="false" name_key="Fullness" description_key="jz_BuffFoodFullDesc" icon="ui_game_symbol_jz_hunger" >
 		<stack_type value="ignore"/>
 		<duration value="0"/>
 		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
 	</buff>
 	
-	<buff name="jz_BuffFoodStarving" remove_on_death="false" name_key="jz_BuffFoodStarvingName" description_key="jz_BuffFoodStarvingDesc" icon="ui_game_symbol_hunger" >
+	<buff name="jz_BuffFoodStuffed" remove_on_death="false" name_key="jz_BuffFoodStuffedName" description_key="jz_BuffFoodStuffedDesc" icon="ui_game_symbol_stuffed" >
 		<stack_type value="ignore"/>
-		<duration value="10"/>
-		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
+		<duration value="0"/>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodFive"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodTen"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodTwenty"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodThirty"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodFourty"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodFifty"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodSixty"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodSeventy"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodEighty"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodNinety"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodFull"/>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodStuffed"/>	
+			<passive_effect name="Mobility" operation="perc_add" value="-0.5"/>
+			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LT" value="101">
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodStuffed"/></requirement>	
 		</effect_group>
+		
 	</buff>
 	
 	<buff name="jz_BuffCanOpener" hidden="true" remove_on_death="true">
@@ -5717,7 +5680,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	<!-- FATIGUE RECOVERY-->
-	<buff name="jz_BuffFurniturHardRecover" hidden="true" remove_on_death="true">
+	<buff name="jz_BuffFurniturHardRecover" hidden="false" remove_on_death="true" name_key="Resting" description_key="jz_BuffFurniturHardRecoverDesc" icon="ui_game_symbol_seats" >
 		<stack_type value="ignore"/>
 		<duration value="1"/>
 		<effect_group>
@@ -5725,7 +5688,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffProcessConsumables"/>		
 		</effect_group>
 	</buff>
-	<buff name="jz_BuffFurniturSoftRecover" hidden="true" remove_on_death="true">
+	<buff name="jz_BuffFurniturSoftRecover" hidden="false" remove_on_death="true" name_key="Resting Comfortably" description_key="jz_BuffFurniturSoftRecoverDesc" icon="ui_game_symbol_seats" >
 		<stack_type value="ignore"/>
 		<duration value="1"/>
 		<effect_group>
@@ -5733,7 +5696,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffProcessConsumables"/>		
 		</effect_group>
 	</buff>
-	<buff name="jz_BuffBedSmRecover" hidden="true" remove_on_death="true">
+	<buff name="jz_BuffBedSmRecover" hidden="false" remove_on_death="true" name_key="Sleeping Recovery" description_key="jz_BuffBedSmRecoverDesc" icon="ui_game_symbol_cozyBed" >
 		<stack_type value="ignore"/>
 		<duration value="1"/>
 		<effect_group>
@@ -5741,7 +5704,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffProcessConsumables"/>		
 		</effect_group>
 	</buff>
-	<buff name="jz_BuffBedMedRecover" hidden="true" remove_on_death="true">
+	<buff name="jz_BuffBedMedRecover" hidden="false" remove_on_death="true" name_key="Bed Recovery" description_key="jz_BuffBedMedRecoverDesc" icon="ui_game_symbol_cozyBed" >
 		<stack_type value="ignore"/>
 		<duration value="1"/>
 		<effect_group>
@@ -5749,7 +5712,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffProcessConsumables"/>		
 		</effect_group>
 	</buff>
-	<buff name="jz_BuffBedLrgRecover" hidden="true" remove_on_death="true">
+	<buff name="jz_BuffBedLrgRecover" hidden="false" remove_on_death="true" name_key="Nice Bed Recovery" description_key="jz_BuffBedLrgRecoverDesc" icon="ui_game_symbol_cozyBed" >
 		<stack_type value="ignore"/>
 		<duration value="1"/>
 		<effect_group>
