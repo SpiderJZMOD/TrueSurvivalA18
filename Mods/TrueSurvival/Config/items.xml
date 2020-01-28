@@ -22277,7 +22277,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 
 <item name="jz_FoodShamSandwich">
 	<property name="Extends" value="jz_MasterFood" />
-	<property name="DescriptionKey" value="shamSandwichDesc" />
+    <property name="DescriptionKey" value="jz_SandwichDesc" />
 	<property name="DisplayType" value="jz_FoodProteinGrain"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22432,6 +22432,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="drinkJarBeer" />
 	<property name="CustomIcon" value="ui_game_symbol_mead" />
 	<property name="CustomIconTint" value="af8d05" />
+    <property name="DescriptionKey" value="jz_DrinkMeadDesc" />
 	<property name="UnlockedBy" value="jz_SchematicMead"/>
 </item>
 
@@ -22576,6 +22577,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_FoodCharredSandwich">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_shamSandwich" />
+    <property name="DescriptionKey" value="jz_SandwichDesc" />
 	<property name="DisplayType" value="jz_FoodProteinGrain"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22602,6 +22604,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_FoodGrilledSandwich">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_shamSandwich" />
+    <property name="DescriptionKey" value="jz_SandwichDesc" />
 	<property name="DisplayType" value="jz_FoodProteinGrain"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22628,6 +22631,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_FoodBoiledSandwich">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_shamSandwich" />
+    <property name="DescriptionKey" value="jz_SandwichDesc" />
 	<property name="DisplayType" value="jz_FoodProteinGrain"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22655,6 +22659,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_stirFry" />
 	<property name="UnlockedBy" value="jz_SchematicGoodMeals"/>
+    <property name="DescriptionKey" value="jz_GoodMealDesc" />
 	<property name="DisplayType" value="jz_FoodPFGWellness"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22683,6 +22688,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_stirFry" />
 	<property name="UnlockedBy" value="jz_SchematicGoodMeals"/>
+    <property name="DescriptionKey" value="jz_GoodMealDesc" />
 	<property name="DisplayType" value="jz_FoodPVGWellness"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22711,6 +22717,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_stirFry" />
 	<property name="UnlockedBy" value="jz_SchematicGoodMeals"/>
+    <property name="DescriptionKey" value="jz_GoodMealDesc" />
 	<property name="DisplayType" value="jz_FoodPVFWellness"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22739,6 +22746,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_stirFry" />
 	<property name="UnlockedBy" value="jz_SchematicGoodMeals"/>
+    <property name="DescriptionKey" value="jz_GoodMealDesc" />
 	<property name="DisplayType" value="jz_FoodPFGWellness"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22767,6 +22775,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_stirFry" />
 	<property name="UnlockedBy" value="jz_SchematicGoodMeals"/>
+    <property name="DescriptionKey" value="jz_GoodMealDesc" />
 	<property name="DisplayType" value="jz_FoodPVGWellness"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22795,6 +22804,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_stirFry" />
 	<property name="UnlockedBy" value="jz_SchematicGoodMeals"/>
+    <property name="DescriptionKey" value="jz_GoodMealDesc" />
 	<property name="DisplayType" value="jz_FoodPVFWellness"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22823,6 +22833,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_stirFry" />
 	<property name="UnlockedBy" value="jz_SchematicHealthyMeals"/>
+    <property name="DescriptionKey" value="jz_HealthyMealDesc" />
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22852,6 +22863,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_stirFry" />
 	<property name="UnlockedBy" value="jz_SchematicHealthyMeals"/>
+     <property name="DescriptionKey" value="jz_HealthyMealDesc" />
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22881,6 +22893,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_fruitGlazedMeats" />
 	<property name="UnlockedBy" value="jz_SchematicGlazedMeats"/>
+     <property name="DescriptionKey" value="jz_GlazedMeatDesc" />
 	<property name="DisplayType" value="jz_FoodProteinFruit"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22908,6 +22921,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_fruitGlazedMeats" />
 	<property name="UnlockedBy" value="jz_SchematicGlazedMeats"/>
+     <property name="DescriptionKey" value="jz_GlazedMeatDesc" />
 	<property name="DisplayType" value="jz_FoodProteinFruit"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22935,6 +22949,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_fruitGlazedMeats" />
 	<property name="UnlockedBy" value="jz_SchematicGlazedMeats"/>
+    <property name="DescriptionKey" value="jz_GlazedMeatDesc" />
 	<property name="DisplayType" value="jz_FoodProteinFruit"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22962,6 +22977,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_kabob" />
 	<property name="UnlockedBy" value="jz_SchematicKabobs"/>
+    <property name="DescriptionKey" value="jz_KabobDesc" />
 	<property name="DisplayType" value="jz_FoodProteinVeggie"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -22989,6 +23005,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_kabob" />
 	<property name="UnlockedBy" value="jz_SchematicKabobs"/>
+    <property name="DescriptionKey" value="jz_KabobDesc" />
 	<property name="DisplayType" value="jz_FoodProteinVeggie"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -23018,6 +23035,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_kabob" />
 	<property name="UnlockedBy" value="jz_SchematicKabobs"/>
+    <property name="DescriptionKey" value="jz_KabobDesc" />
 	<property name="DisplayType" value="jz_FoodProteinVeggie"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -23046,6 +23064,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Material" value="Mfruit" />
 	<property name="Weight" value="2" />
 	<property name="CustomIcon" value="ui_game_symbol_strawberry" />
+    <property name="DescriptionKey" value="jz_FoodStrawberryDesc" />
 	<property name="DisplayType" value="jz_FoodFruit"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -23080,7 +23099,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 
 <item name="jz_FoodCereal">
 	<property name="Extends" value="jz_MasterFood" />
-	<property name="DescriptionKey" value="GrainScrapDesc" />
+	<property name="DescriptionKey" value="jz_FoodCerealDesc" />
 	<property name="Material" value="Mgrain" />
 	<property name="Weight" value="6" />
 	<property name="Stacknumber" value="5000" />
@@ -23111,7 +23130,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	
 <item name="jz_FoodChips">
 	<property name="Extends" value="jz_MasterFood" />
-	 <property name="DescriptionKey" value="GrainScrapDesc" />
+	 <property name="DescriptionKey" value="jz_FoodChipsDesc" />
 	<property name="Material" value="Mgrain" />
 	<property name="Weight" value="3" />
 	<property name="Stacknumber" value="5000" />
@@ -23177,6 +23196,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="5" />
 	<property name="Stacknumber" value="5000" />
 	<property name="CustomIcon" value="ui_game_symbol_peanutButter" />
+    <property name="DescriptionKey" value="jz_FoodPeanutButterDesc" />
 	<property name="DisplayType" value="jz_FoodProtein"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="10"/><display_value name="TSFullness" value="10"/>
@@ -23197,7 +23217,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 
 <item name="jz_FoodOatMeal">
 	<property name="Extends" value="jz_MasterFood" />
-	<property name="DescriptionKey" value="GrainScrapDesc" />
+	<property name="DescriptionKey" value="jz_FoodOatMealDesc" />
 	<property name="Material" value="Mgrain" />
 	<property name="Weight" value="3" />
 	<property name="Stacknumber" value="5000" />		
@@ -23224,6 +23244,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Material" value="Morganic" />
 	<property name="Stacknumber" value="5000" />
 	<property name="CustomIcon" value="ui_game_symbol_mreSmall" />
+    <property name="DescriptionKey" value="MREDesc" />
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="60"/><display_value name="TSFullness" value="60"/>
@@ -23246,6 +23267,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Material" value="Morganic" />
 	<property name="Stacknumber" value="5000" />
 	<property name="CustomIcon" value="ui_game_symbol_mreMedium" />
+    <property name="DescriptionKey" value="MREDesc" />
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="60"/><display_value name="TSFullness" value="60"/>
@@ -23266,6 +23288,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="Material" value="Morganic" />
 	<property name="Stacknumber" value="5000" />
+    <property name="DescriptionKey" value="MREDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_mreLarge" />
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<effect_group tiered="false">
@@ -23339,6 +23362,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_FoodSalmonSandwich">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_shamSandwich" />
+    <property name="DescriptionKey" value="jz_SandwichDesc" />
 	<property name="DisplayType" value="jz_FoodProteinGrain"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -23362,6 +23386,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_FoodTunaSandwich">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="ui_game_symbol_shamSandwich" />
+    <property name="DescriptionKey" value="jz_SandwichDesc" />
 	<property name="DisplayType" value="jz_FoodProteinGrain"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -23386,6 +23411,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="cornBread" />
 	<property name="UnlockedBy" value="jz_SchematicMeatPies"/>
+    <property name="DescriptionKey" value="jz_MeatPiesDesc" />
 	<property name="DisplayType" value="jz_FoodProteinGrain"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -23413,6 +23439,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="cornBread" />
 	<property name="UnlockedBy" value="jz_SchematicMeatPies"/>
+    <property name="DescriptionKey" value="jz_MeatPiesDesc" />
 	<property name="DisplayType" value="jz_FoodProteinGrain"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -23440,6 +23467,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="CustomIcon" value="cornBread" />
 	<property name="UnlockedBy" value="jz_SchematicMeatPies"/>
+    <property name="DescriptionKey" value="jz_MeatPiesDesc" />
 	<property name="DisplayType" value="jz_FoodProteinGrain"/>
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
@@ -23839,6 +23867,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="200" />
 	<property name="Stacknumber" value="1" />
 	<property name="Group" value="Resources" />
+     <property name="DescriptionKey" value="jz_PartSmallEngineBlockDesc" />
 </item>
 
 <item name="jz_PartLargeEngineBlock">
@@ -23848,6 +23877,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="200" />
 	<property name="Stacknumber" value="1" />
 	<property name="Group" value="Resources" />
+     <property name="DescriptionKey" value="jz_PartLargeEngineBlockDesc" />
 </item>
 
 <item name="jz_PartSmallExhaust">
@@ -23857,6 +23887,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="200" />
 	<property name="Stacknumber" value="1" />
 	<property name="Group" value="Resources" />
+     <property name="DescriptionKey" value="jz_PartSmallExhaustDesc" />
 </item>
 
 <item name="jz_PartLargeExhaust">
@@ -23866,6 +23897,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="200" />
 	<property name="Stacknumber" value="1" />
 	<property name="Group" value="Resources" />
+    <property name="DescriptionKey" value="jz_PartLargeExhaustDesc" />
 </item>
 
 <item name="jz_Alternator">
@@ -23887,7 +23919,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_MoldCrowbar">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
+	<property name="DescriptionKey" value="jz_MoldDDesc" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_jz_MoldCrowbar" />
     <property name="Group" value="Science" />
@@ -23896,7 +23928,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_MoldPickAxeHead">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
+	<property name="DescriptionKey" value="jz_MoldDDesc" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_pickaxeHeadMold" />
     <property name="Group" value="Science" />
@@ -23914,7 +23946,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_MoldLargeKnifeBlade">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
+	<property name="DescriptionKey" value="jz_MoldDDesc" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_knifeBladeMold" />
     <property name="Group" value="Science" />
@@ -23923,7 +23955,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_MoldHammerHead">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
+	<property name="DescriptionKey" value="jz_MoldDDesc" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_hammerHeadMold" />
     <property name="Group" value="Science" />
@@ -23932,7 +23964,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_MoldWrench">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
+	<property name="DescriptionKey" value="jz_MoldDDesc" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_scrapWrenchMold" />
     <property name="Group" value="Science" />
@@ -23941,7 +23973,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_MoldScrewdriverHead">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
+	<property name="DescriptionKey" value="jz_MoldDDesc" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_screwdriverHeadMold" />
     <property name="Group" value="Science" />
@@ -23953,6 +23985,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_sledgeHeadMold" />
     <property name="Group" value="Science" />
+    <property name="DescriptionKey" value="jz_MoldDDesc" />
 </item>
     
 <item name="jz_MoldShovelHead">
@@ -23962,6 +23995,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="CustomIcon" value="ui_game_symbol_shovelMold" />
     <property name="UnlockedBy" value="jz_SchematicSteelShovel"/>
     <property name="Group" value="Science" />
+    <property name="DescriptionKey" value="jz_MoldDDesc" />
 </item>
 
 <item name="jz_MoldBrassKnuckles">
@@ -23970,6 +24004,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_brassKnucklesMold" />
     <property name="Group" value="Science" />
+    <property name="DescriptionKey" value="jz_MoldDDesc" />
 </item>
     
 <item name="jz_MoldAxeHead">
@@ -23978,6 +24013,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_axeHeadMold" />
     <property name="Group" value="Science" />
+    <property name="DescriptionKey" value="jz_MoldDDesc" />
 </item>
 
 <item name="jz_MoldSmallEngineBlock">
@@ -23986,12 +24022,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_smallEngineMold" />
     <property name="Group" value="Science" />
+    <property name="DescriptionKey" value="jz_MoldDDesc" />
 </item>
 
 <item name="jz_MoldLargeEngineBlock">
     <property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="MresourceClayLump" />
-	<property name="HoldType" value="45" />
+	<property name="DescriptionKey" value="jz_MoldDDesc" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_mediumEngineMold" />
     <property name="Group" value="Science" />
@@ -24003,7 +24040,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="HoldType" value="45" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_jz_MoldDart" />
-	<property name="DescriptionKey" value="jz_MoldDartDesc" />
+	<property name="DescriptionKey" value="jz_MoldDDesc" />
     <property name="Group" value="Science" />
 </item>
 <!--JZMOD OTHER-->
@@ -24131,14 +24168,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="CustomIcon" value="foodCanChicken" />
 </item>
 
-<item name="jz_StartingGuide">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Morganic" />
-	<property name="Weight" value="50" />
-	<property name="DescriptionKey" value="jz_MminibikeSeatDesc" />
-    <property name="CustomIcon" value="ui_game_symbol_jz_MminibikeSeat" />
-</item>
-
 <item name="jz_MinibikeSeat">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Morganic" />
@@ -24185,14 +24214,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="20" />
 	<property name="DescriptionKey" value="jz_LabEquipmentDesc" />
     <property name="CustomIcon" value="ui_game_symbol_jz_LabEquipment" />
-</item>
-
-<item name="jz_BulletPress">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="20" />
-	<property name="DescriptionKey" value="jz_BulletPressDesc" />
-    <property name="CustomIcon" value="ui_game_symbol_jz_BulletPress" />
 </item>
 
 <item name="jz_BulletPress">
@@ -24264,7 +24285,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 
 <item name="jz_AnimalHide">
 	<property name="Extends" value="jz_MasterItem" />
-	<property name="FuelValue" value="1" />
+	<property name="CustomIcon" value="leather" />
+	<property name="CustomIconTint" value="edf4b0" />
 	<property name="DescriptionKey" value="jz_AnimalHideDesc" />
 </item>
 
@@ -24274,13 +24296,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DescriptionKey" value="jz_BrainMatterDesc" />
 	<property name="Material" value="Mprotein" />
     <property name="Weight" value="1" />
-</item>
-
-<item name="jz_AnimalSkin">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="curedLeatherDesc" />
-	<property name="CustomIcon" value="leather" />
-	<property name="CustomIconTint" value="edf4b0" />
 </item>
 
 <item name="jz_CuredLeather">
@@ -24352,7 +24367,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterItem" />
     <property name="CustomIcon" value="ui_game_symbol_DriedTobacco" />
 	<property name="Material" value="Mplastics" />
-	<property name="DescriptionKey" value="inkPenDesc" />
+	<property name="DescriptionKey" value="jz_DriedTobaccoDesc" />
 </item>
 
 <item name="jz_InkPen">
@@ -24411,14 +24426,15 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Material" value="Mstone" />
 	<property name="Weight" value="5" />
 	<property name="Group" value="Resources" />
+    <property name="DescriptionKey" value="jz_BricksDesc" />
 </item>
 
 <item name="jz_AirCompressor">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_airCompressor" />
-	<property name="Material" value="Mmetal" />
+	<property name="Material" value="MmechanicalParts" />
 	<property name="Stacknumber" value="1" />
-	<property name="Weight" value="80" />
+	<property name="Weight" value="7" />
 	<property name="DescriptionKey" value="airCompressorDesc" />
 </item>
 
