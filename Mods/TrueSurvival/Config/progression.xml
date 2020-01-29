@@ -2243,7 +2243,7 @@
 		<effect_group>	
 			<requirement name="EntityTagCompare" target="other" tags="zombie"/>
 			<requirement name="!EntityTagCompare" target="other" tags="parasite"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="15" level="1" tags="head"/>
+				<!--<passive_effect name="DamageModifier" operation="perc_add" value="2" level="1" tags="head"/>-->
 				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="upperbody"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="lowerbody"/>
 		</effect_group>

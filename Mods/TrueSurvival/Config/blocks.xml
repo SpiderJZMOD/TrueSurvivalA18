@@ -28584,7 +28584,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mstone" />
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZBlastForge.unity3d?BlastForgePrefab" />
-    <property name="ModelOffset" value="0,.5,0" />
+    <property name="ModelOffset" value="0,0,0" />
 	<property name="Place" value="TowardsPlacerInverted" />
 	<property name="ParticleName" value="campfire" />
 	<property name="ParticleOffset" value="0.5,1,0.5" />
@@ -30767,7 +30767,6 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockMulti"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZCreepy04.unity3d?Creepy04Prefab" />
-	<property name="ModelOffset" value="0,.6,0"/> 
 	<property name="MultiBlockDim" value="2,9,2"/>
 	<property name="BigDecorationRadius" value="5"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
@@ -30790,11 +30789,10 @@ NOT the TextureNumber.
 	<property name="Model" value="#@modfolder:Resources/JZCreepy04.unity3d?Creepy04Prefab" />
 </block>
 
-<block name="jz_Creepy01">
+<block name="jz_Creepy04Short">
 	<property name="Extends" value="jz_MasterMutatedDecor"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZCreepy01.unity3d?Creepy01Prefab" />
-	<property name="MultiBlockDim" value="3,9,3"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy04Short.unity3d?Creepy04ShortPrefab" />
 </block>
 
 <block name="jz_Creepy02">
@@ -30807,6 +30805,12 @@ NOT the TextureNumber.
 	<property name="Extends" value="jz_MasterMutatedDecor"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZCreepy07.unity3d?Creepy07Prefab" />
+</block>
+
+<block name="jz_Creepy07Short">
+	<property name="Extends" value="jz_MasterMutatedDecor"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepy07Short.unity3d?Creepy07ShortPrefab" />
 </block>
 
 <block name="jz_Creepy08">
@@ -30846,42 +30850,58 @@ NOT the TextureNumber.
 	<property name="Model" value="#@modfolder:Resources/JZCreepy15.unity3d?Creepy15Prefab" />
 </block>
 
-<block name="jz_Creepy16">
+<block name="jz_Creepy18">
 	<property name="Extends" value="jz_MasterMutatedDecor"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZCreepy16.unity3d?Creepy16Prefab" />
-</block>
-
-<block name="jz_Creepy17">
-	<property name="Extends" value="jz_MasterMutatedDecor"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZCreepy17.unity3d?Creepy17Prefab" />
-	<property name="ModelOffset" value="0,.4,0"/> 
-</block>
-
-<block name="jz_Creepy19">
-	<property name="Extends" value="jz_MasterMutatedDecor"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZCreepy19.unity3d?Creepy19Prefab" />
-</block>
-
-<block name="jz_Creepy23">
-	<property name="Extends" value="jz_MasterMutatedDecor"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZCreepy23.unity3d?Creepy23Prefab" />
+	<property name="Model" value="#@modfolder:Resources/JZCreepy18.unity3d?Creepy18Prefab" />
 </block>
 
 <block name="jz_Creepy25">
 	<property name="Extends" value="jz_MasterMutatedDecor"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZCreepy25.unity3d?Creepy25Prefab" />
-	<property name="ModelOffset" value="0,.3,0"/>
 </block>
 
 <block name="jz_CreepyEye">
 	<property name="Extends" value="jz_MasterMutatedDecor"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZCreepyEye.unity3d?CreepyEyePrefab" />
+</block>
+
+<block name="jz_CreepyBush">
+	<property name="Extends" value="jz_MasterMutatedDecor"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepyBush.unity3d?CreepyBushPrefab" />
+</block>
+
+<block name="jz_CreepyBush2">
+	<property name="Extends" value="jz_MasterMutatedDecor"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepyBush2.unity3d?CreepyBush2Prefab" />
+</block>
+
+<block name="jz_CreepyBush3">
+	<property name="Extends" value="jz_MasterMutatedDecor"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepyBush3.unity3d?CreepyBush3Prefab" />
+</block>
+
+<block name="jz_CreepyTree">
+	<property name="Extends" value="jz_MasterMutatedDecor"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepyTree.unity3d?CreepyTreePrefab" />
+</block>
+
+<block name="jz_CreepyTree2">
+	<property name="Extends" value="jz_MasterMutatedDecor"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepyTree2.unity3d?CreepyTree2Prefab" />
+</block>
+
+<block name="jz_CreepyTree3">
+	<property name="Extends" value="jz_MasterMutatedDecor"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCreepyTree3.unity3d?CreepyTree3Prefab" />
 </block>
 
 <block name="jz_MasterTireMarks">

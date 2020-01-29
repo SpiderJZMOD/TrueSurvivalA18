@@ -4132,7 +4132,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteRipper" extends="zombieTemplateMale" ><!-- dog mutant head buts?-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/Parazites.unity3d?RipperDogDark" /> 
+	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?RipperDogDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4308,7 +4308,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteAlien" extends="zombieTemplateMale" ><!-- Hunch Back/ Long Arms Mutant-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:TSCritters1/Parazites.unity3d?AlienDark" /> 
+	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?AlienDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4343,7 +4343,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteShell" extends="zombieTemplateMale" ><!-- muscle mutant w claws too small?-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:TSCritters2/Parazites.unity3d?ShellDark" /> 
+	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?ShellDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />

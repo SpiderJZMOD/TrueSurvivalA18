@@ -847,11 +847,11 @@
 			<passive_effect name="WaterChangeOT" operation="base_add" value="2,2" duration="0,8"/>
 			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="2,2" duration="0,8"/><!--Tiredness-->
 					
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value="5"/><!--VeggieVitamin-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value="5"/><!--FruitVitamin-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value="5"/><!--GrainVitamin-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value="5"/><!--ProteinVitamin-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="50"/><!--Food-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value="4"/><!--VeggieVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value="4"/><!--FruitVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value="4"/><!--GrainVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value="4"/><!--ProteinVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="100"/><!--Food-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodAmountAdd" operation="add" value="99"/><!--Tiredness-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_WellnessLv" operation="add" value="80"/><!--Wellness-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="80"/><!--Health-->
