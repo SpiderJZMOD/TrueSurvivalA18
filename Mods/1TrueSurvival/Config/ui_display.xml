@@ -1,4 +1,3 @@
-
 <configs>
 <set xpath="/ui_display_info">
 <!-- all of the name= entries are CASE SENSITIVE -->
@@ -18,7 +17,7 @@
 			<display_entry name="MagazineSize" title_key="statMagazineSize"/>
 			<display_entry name="RoundsPerMinute" title_key="statRoundsPerMinute"/>
 			<display_entry name="DamageFalloffRange" title_key="statDamageFalloffRange"/>
-			<display_entry name="DegradationMax" title_key="statDegradationMax"/>
+			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="perkBoomstick" />
 			<display_entry name="dStatStunEffect" title_key="statStunEffect" display_type="Time"/>
 		</item_display_info>
 
@@ -83,7 +82,7 @@
 		<item_display_info display_type="motorTool" display_group="groupMelee">
 			<display_entry name="EntityDamage" title_key="statEntityDamageMelee"/>
 			<display_entry name="BlockDamage" title_key="statBlockDamage"/>
-			<display_entry name="MagazineSize" title_key="statMagazineSize"/>
+			<display_entry name="MagazineSize" title_key="statFuelCapacity"/>
 			<display_entry name="RoundsPerMinute" title_key="statAttacksPerMinute"/>
 			<display_entry name="DegradationMax" title_key="statDegradationMax" tags="perkMiner69r,admin"/>
 		</item_display_info>
@@ -301,7 +300,7 @@
 		<item_display_info display_type="clothing" display_group="groupAttire" >
 			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
 			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
-			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>
+			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>																			   
 		</item_display_info>
 		<item_display_info display_type="clothingRunningShoes" display_group="groupAttire" >
 			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
@@ -343,7 +342,7 @@
 			<display_entry name="dLightMultiplier" title_key="statVisibility" display_type="Percent" display_leading_plus="true" show_inverted="false" negative_preferred="false"/>
 			<display_entry name="dNoiseMultiplier" title_key="statNoiseReduction" display_type="Percent" display_leading_plus="true" show_inverted="false" negative_preferred="false"/>
 			<display_entry name="dCarryCapacity" title_key="statCarryCapacity" display_leading_plus="true"/>
-	</item_display_info>
+		</item_display_info>
 		<item_display_info display_type="clothingGhillieHood" display_group="groupAttire" >
 			<display_entry name="HypothermalResist" title_key="statHypothermalResist"/>
 			<display_entry name="HyperthermalResist" title_key="statHyperthermalResist"/>
@@ -417,10 +416,17 @@
 			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
 		</item_display_info>
 
+		<item_display_info display_type="food" display_group="groupConsumables">
+			<display_entry name="$foodAmountAdd" title_key="statFoodAmount"/>
+			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="dFoodPoisoningRisk" title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
+		</item_display_info>
+
 		<item_display_info display_type="foodCureInfection" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="jz_statFoodAmount"/>
 			<display_entry name="TSHealth" title_key="statHealthAmount"/>
 			<display_entry name="dFoodPoisoningRisk" title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
+			<display_entry name="dCureInfection" title_key="statCureInfection" display_type="Percent"/>
 		</item_display_info>
 
 		<item_display_info display_type="foodWater" display_group="groupConsumables">
@@ -475,6 +481,7 @@
 		<item_display_info display_type="medical" display_group="groupConsumables">
 			<display_entry name="maxHealthAmount" title_key="statMaxHealthAmount"/>
 			<display_entry name="foodHealthAmount" title_key="statHealthAmount"/>
+			<display_entry name="dStopsBleeding" title_key="statStopsBleeding" display_type="Bool"/>
 		</item_display_info>
 
 		<item_display_info display_type="medicalVitamins" display_group="groupConsumables">
@@ -520,7 +527,134 @@
 			<display_entry name="TSHydration" title_key="Hydration"/>
 			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
 		</item_display_info>
-		<!-- JZMOD FOOD DISPLAY -->
+
+		<!-- UNODIR every block will show this display -->
+		<item_display_info display_type="defaultBlock" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/> <!-- will show 0 or 1 without show_bool -->
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockFallDamage" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+			<display_entry name="FallDamage" title_key="statFallDamage" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockHardened" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockHardenedMulti" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMassMultiblock" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockMulti" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMassMultiblock" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockShootThrough" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
+			<display_entry name="canShootThrough" title_key="statCanShootThrough" display_type="Bool"/>
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+		</item_display_info>
+		<item_display_info display_type="blockShootThroughHardened" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
+			<display_entry name="canShootThrough" title_key="statCanShootThrough" display_type="Bool"/>
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockElectrical" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+			<display_entry name="RequiredPower" title_key="statRequiredPower"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockElectricalHardened" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+			<display_entry name="RequiredPower" title_key="statRequiredPower"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockElectricalMulti" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMassMultiblock" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+			<display_entry name="RequiredPower" title_key="statRequiredPower"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockElectricalHardenedMulti" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMassMultiblock" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
+			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
+			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
+			<display_entry name="RequiredPower" title_key="statRequiredPower"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockTerrain" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockTerrainFertile" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="FertileLevel" title_key="statFertileLevel"/>
+		</item_display_info>
+
+		<item_display_info display_type="blockTerrainHardened" display_group="groupBlocks">
+			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
+			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
+			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
+			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
+		</item_display_info>
+
+		<item_display_info display_type="toolAnvil" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeForge" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+		<item_display_info display_type="toolBellows" display_group="workstationTools">
+			<display_entry name="dCraftingSmeltTime" title_key="statCraftingSmeltTime" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
+<!-- JZMOD FOOD DISPLAY -->
 		<item_display_info display_type="jz_FoodBad" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
 			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
@@ -691,138 +825,6 @@
 			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
 			<display_entry name="TSVeggie" title_key="Vegetable Vitamins" display_type="Decimal"/>
 		</item_display_info>
-
-
-
-
-		<!-- UNODIR every block will show this display -->
-		<item_display_info display_type="defaultBlock" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/> <!-- will show 0 or 1 without show_bool -->
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockFallDamage" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-			<display_entry name="FallDamage" title_key="statFallDamage" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockHardened" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockHardenedMulti" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMassMultiblock" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockMulti" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMassMultiblock" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockShootThrough" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
-			<display_entry name="canShootThrough" title_key="statCanShootThrough" display_type="Bool"/>
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-		</item_display_info>
-		
-		<item_display_info display_type="blockShootThroughHardened" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
-			<display_entry name="canShootThrough" title_key="statCanShootThrough" display_type="Bool"/>
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockElectrical" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-			<display_entry name="RequiredPower" title_key="statRequiredPower"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockElectricalHardened" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-			<display_entry name="RequiredPower" title_key="statRequiredPower"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockElectricalMulti" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMassMultiblock" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-			<display_entry name="RequiredPower" title_key="statRequiredPower"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockElectricalHardenedMulti" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMassMultiblock" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
-			<display_entry name="StabilitySupport" title_key="statStabilitySupport" display_type="Bool"/>
-			<display_entry name="LightOpacity" title_key="statLightOpacity"/>
-			<display_entry name="RequiredPower" title_key="statRequiredPower"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockTerrain" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockTerrainFertile" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="FertileLevel" title_key="statFertileLevel"/>
-		</item_display_info>
-
-		<item_display_info display_type="blockTerrainHardened" display_group="groupBlocks">
-			<display_entry name="Mass" title_key="statMass" negative_preferred="true"/>
-			<display_entry name="StabilityGlue" title_key="statStabilityGlue"/>
-			<display_entry name="MaxDamage" title_key="statMaxDamage"/>
-			<display_entry name="ExplosionResistance" title_key="statExplosionResistance" display_type="Percent"/>
-		</item_display_info>
-
-		<item_display_info display_type="toolAnvil" display_group="workstationTools">
-			<display_entry name="dCraftingTime" title_key="statCraftingTimeForge" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
-		</item_display_info>
-		<item_display_info display_type="toolBellows" display_group="workstationTools">
-			<display_entry name="dCraftingSmeltTime" title_key="statCraftingSmeltTime" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
-		</item_display_info>
-
 	</item_display>
 
 	<character_stat_display>
@@ -928,53 +930,5 @@
 		<trader_category name="Chemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
 		<trader_category name="Medical" icon="ui_game_symbol_medical" display_name="lblCategoryMedicine" />
 	</trader_category_display>
-
 </set>
 </configs> 
-<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-This UI system can display all passive effects on an item - the base stats.
-
-It can also display CVARS that are added when using the item with these exact 2 actions:
-onSelfPrimaryActionEnd
-onSelfSecondaryActionEnd
-
-<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="14"/>
-
-The "name" is the name of the cvar.
-
-= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
-display_type="Integer"	;	The values are "Integer", "Decimal", "Bool", and "Percent"
-show_inverted="true"	;
-negative_preferred="true";	For item comparisons sometimes lower is better.
-
--->
-
-
-
-
-<!--
-
-			<display_entry name="MaxRange" title_key="statMaxRange"/>
-			<display_entry name="KickDegreesHorizontal" title_key="statKickDegreesHorizontal"/>
-
-The 6th line on the UI displays no text, only a number.
-
-Shotgun ammo / shotguns display the damage per single ray.
-
-Values <1, like the recoil of a pistol (0.8) display as zero rounding down.
-Suggest rounding to nearest integer instead.
-
-
-Figure out a way to display these item stats and/or convert them to mineffects.
-<item name="ammoRocketHE">
-	<property class="Action1">
-		<property name="Class" value="Projectile"/>
-		<property name="Explosion.RadiusBlocks" value="5"/>
-		<property name="Explosion.BlockDamage" value="500"/>
-		<property name="Explosion.RadiusEntities" value="5"/>
-		<property name="Explosion.EntityDamage" value="350"/>
-
-
-display_leading_plus="true"
--->

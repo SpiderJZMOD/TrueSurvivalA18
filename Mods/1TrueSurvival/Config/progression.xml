@@ -1081,29 +1081,6 @@
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ClothArmorCraftingTag"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_ClothArmorCraftingLv" operation="LT" value="5"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ClothArmorInspectionTag"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="jz_ClothArmorCraftingXP" operation="add" value="1"/>
-		</effect_group>
-		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_ClothArmorCraftingLv" operation="LT" value="5"/>
-			<requirement name="CVarCompare" cvar="jz_ClothArmorCraftingXP" operation="GTE" value="@jz_ClothArmorCraftingNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ClothArmorInspectionTag"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_ClothArmorCraftingLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_ClothArmorCraftingNextLvTotal" operation="add" value="@jz_ClothArmorCraftingLvAdd"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_ClothArmorCraftingLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message="You have leveled up Cloth Armor Crafting!!"/>
-		</effect_group>
-		<effect_group> 
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ClothArmorCraftingXP" operation="add" value="@jz_ClothArmorCraftingLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ClothArmorCraftingLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ClothArmorCraftingNextLvTotal" operation="add" value="@jz_ClothArmorCraftingLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_ClothArmorCraftingLv" operation="add" value="1"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up Cloth Armor Crafting!"/>
-		</effect_group>
-		<effect_group>
 			<effect_description level="1" desc_key="jz_ClothArmorCraftingRank1Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
 			<effect_description level="2" desc_key="jz_ClothArmorCraftingRank2Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
 			<effect_description level="3" desc_key="jz_ClothArmorCraftingRank3Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
@@ -1113,9 +1090,8 @@
 	</perk>
 	<!-- LeatherArmorCrafting-->
 	<perk name="jz_LeatherArmorCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Leather Armor Crafting" desc_key="jz_LeatherArmorCraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_LeatherArmorCraftingTag"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClothArmorCraftingArmorCraftingTag"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_LeatherArmorCraftingTag"/>
 		</effect_group>
 		<effect_group>
@@ -1128,7 +1104,6 @@
 	</perk>
 	<!-- ScrapArmorCrafting-->
 	<perk name="jz_ScrapArmorCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Scrap Iron Armor Crafting" desc_key="jz_ScrapArmorCraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ScrapArmorCraftingTag"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ScrapArmorCraftingTag"/>
@@ -1143,7 +1118,6 @@
 	</perk>
 	<!-- IronArmorCrafting-->
 	<perk name="jz_IronArmorCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Armor Crafting" desc_key="jz_IronArmorCraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronArmorCraftingTag"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_IronArmorCraftingTag"/>
@@ -1158,7 +1132,6 @@
 	</perk>
 	<!-- SteelArmorCrafting-->
 	<perk name="jz_SteelArmorCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Armor Crafting" desc_key="jz_SteelArmorCraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelArmorCraftingTag"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_SteelArmorCraftingTag"/>
@@ -1459,7 +1432,6 @@
 	</perk>
 	<!-- MarksmanCrafting-->
 	<perk name="jz_MarksmanCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Marksman Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_MarksmanCraftingTag"/>
 		</effect_group>
@@ -1473,7 +1445,6 @@
 	</perk>
 	<!-- AK47Crafting-->
 	<perk name="jz_AK47Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="AK47 Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_AK47CraftingTag"/>
 		</effect_group>
@@ -1487,7 +1458,6 @@
 	</perk>
 	<!-- M60StoneaxeCrafting-->
 	<perk name="jz_M60Crafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="M60 Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_M60CraftingTag"/>
 		</effect_group>
@@ -1501,7 +1471,6 @@
 	</perk>
 	<!-- RocketLauncherCrafting-->
 	<perk name="jz_RocketLauncherCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Rocket Launcher Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_RocketLauncherCraftingTag"/>
 		</effect_group>
@@ -1515,7 +1484,6 @@
 	</perk>
 	<!-- PrimitiveBowCrafting-->
 	<perk name="jz_PrimitiveBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Primitive Bow Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_PrimitiveBowCraftingTag"/>
 		</effect_group>
@@ -1529,7 +1497,6 @@
 	</perk>
 	<!-- WoddenBowCrafting-->
 	<perk name="jz_WoodenBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Wodden Bow Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_WoodenBowCraftingTag"/>
 		</effect_group>
@@ -1543,7 +1510,6 @@
 	</perk>
 	<!-- CompoundBowCrafting-->
 	<perk name="jz_CompoundBowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Compound Bow Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_CompoundBowCraftingTag"/>
 		</effect_group>
@@ -1557,7 +1523,6 @@
 	</perk>
 	<!-- IronCrossbowCrafting-->
 	<perk name="jz_IronCrossbowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="IronCrossbow Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronCrossbowCraftingTag"/>
 		</effect_group>
@@ -1571,7 +1536,6 @@
 	</perk>
 	<!-- CompoundCrossbowCrafting-->
 	<perk name="jz_CompoundCrossbowCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Compound Crossbow Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_CompoundCrossbowCraftingTag"/>
 		</effect_group>
@@ -1585,7 +1549,6 @@
 	</perk>
 	<!-- JunkTurretCrafting-->
 	<perk name="jz_JunkTurretCrafting" parent="jz_CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Junk Turret Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_mining">
-		
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_JunkTurretCraftingTag"/>
 		</effect_group>
@@ -1774,10 +1737,7 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitWakeful" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="5" name_key="Wakeful" desc_key="jz_TraitWakefulDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
-		<!--20% faster tiered recovery -->
+		<!--20% faster fatigue recovery -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitWakefulDesc" long_desc_key="jz_TraitWakefulDesc"/>
 		</effect_group>
@@ -1798,7 +1758,7 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitIronGut" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="10" name_key="Iron Gut" desc_key="jz_TraitIronGutDesc" icon="ui_game_symbol_mining">
-		<!--15% less chance for food illnesses -->
+		<!--15% less chance for food illnesses DONE-->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitIronGutDesc" long_desc_key="jz_TraitIronGutDesc"/>
 		</effect_group>
@@ -1839,25 +1799,29 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitGymnast" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="15" name_key="Gymnast" desc_key="jz_TraitGymnastDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--10% less stam jumping, 10% farther falling, 10% higher jumping -->
+		<effect_group>
+			<passive_effect name="JumpStrength" operation="perc_add" level="1" value=".10"/>
+			<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.1" tags="jumping"/>
+		</effect_group>
+		
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitGymnastDesc" long_desc_key="jz_TraitGymnastDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitMedic" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="15" name_key="Medic" desc_key="jz_TraitMedicDesc" icon="ui_game_symbol_mining">
-		<!--20% More healing from first aid -->
+		<!--20% More healing from first aid   XXXXXXXX TO DO NEEDS CHANGED XXXXXXXXXXXXXX -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitMedicDesc" long_desc_key="jz_TraitMedicDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitAmateurMechanic" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="20" name_key="Amateur Mechanic" desc_key="jz_TraitAmateurMechanicDesc" icon="ui_game_symbol_mining">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--20% More resources from harvesting vehicles, starts with Bicycle and Mini Bike recipes -->
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleBicyclePlaceable,vehicleMinibikePlaceable"/>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1" value=".2" tags="MechanicHarvestTag"/>
+		</effect_group>
+		
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitAmateurMechanicDesc" long_desc_key="jz_TraitAmateurMechanicDesc"/>
 		</effect_group>
@@ -1866,16 +1830,18 @@
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
 		</effect_group>
-		<!--Can track Deer and pigs -->
+		<!--Can track Deer and pigs XXXXXXXX TO DO XXXXXXXXXXXXXX-->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitHunterDesc" long_desc_key="jz_TraitHunterDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitRunner" parent="jz_PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="20" name_key="Runner" desc_key="jz_TraitRunnerDesc" icon="ui_game_symbol_mining">
+		<!--20% faster stam regan while running, 10% faster top speed-->
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<passive_effect name="RunSpeed" operation="perc_add" level="1" value=".1"/>
+			<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.2" tags="running"/>
 		</effect_group>
-		<!--20% faster stam regan while running, 10% faster top speed -->
+		
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitRunnerDesc" long_desc_key="jz_TraitRunnerDesc"/>
 		</effect_group>
@@ -1897,13 +1863,15 @@
 	</perk>
 	<!-- ******************************************************************  Negative Traits  ******************************************************************************** -->
 	<perk name="jz_TraitSlowDriver" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sunday Driver" desc_key="jz_TraitSlowDriverDesc" icon="ui_game_symbol_mining">
-		<!--5% slower driver -->
+		<!--10% slower driver -->
 		<effect_group>
+			<passive_effect name="VehicleVelocityMaxPer" operation="perc_set" level="1" value=".9"/>
+			<passive_effect name="VehicleVelocityMaxTurboPer" operation="perc_set" level="1" value=".9"/>
 			<effect_description level="1" desc_key="jz_TraitSlowDriverDesc" long_desc_key="jz_TraitSlowDriverLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitSleepy" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sleepy" desc_key="jz_TraitSleepyDesc" icon="ui_game_symbol_mining">
-		<!--20% slower tiered recovery -->
+		<!--20% slower fatigue recovery -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitSleepyDesc" long_desc_key="jz_TraitSleepyDesc"/>
 		</effect_group>
@@ -1980,6 +1948,15 @@
 	<perk name="jz_TraitBadLeg" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Bad Leg" desc_key="jz_TraitBadLegDesc" icon="ui_game_symbol_mining">
 		<!--Bad Leg Buff -->
 		<effect_group>
+			<triggered_effect trigger="onSelfRun" action="AddBuff" buff="jz_BuffBadLeg">
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfLandJump" action="AddBuff" buff="jz_BuffBadLeg">
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+			</triggered_effect>
+		</effect_group>
+		
+		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitBadLegDesc" long_desc_key="jz_TraitBadLegDesc"/>
 		</effect_group>
 	</perk>
@@ -2018,7 +1995,7 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitHemophobic" parent="jz_NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Hemophobic" desc_key="jz_TraitHemophobicDesc" icon="ui_game_symbol_mining">
-		<!--20% less healing from first aid -->
+		<!--20% less healing from first aid XXXXXXXX TO DO NEEDS CHANGING XXXXXXXXXXXXXX-->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_HemophobicTraitRefundTag"/>
 		</effect_group>
@@ -2243,6 +2220,7 @@
 		<effect_group>	
 			<requirement name="EntityTagCompare" target="other" tags="zombie"/>
 			<requirement name="!EntityTagCompare" target="other" tags="parasite"/>
+			<requirement name="!EntityTagCompare" target="other" tags="animal"/>
 				<!--<passive_effect name="DamageModifier" operation="perc_add" value="2" level="1" tags="head"/>-->
 				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="upperbody"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="lowerbody"/>

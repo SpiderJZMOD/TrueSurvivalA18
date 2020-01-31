@@ -1,7 +1,6 @@
 <configs>
 <set xpath="/worldgeneration">
 
-
 <!-- Weather definitions here -->
 <weather>
 	<property class="Foggy">
@@ -630,7 +629,6 @@
 			<decoration type="block" blockname="rockResource" prob=".00033" rotatemax="3"/>
 			<decoration type="block" blockname="rockResource02" prob=".00033" rotatemax="3"/>
 			<decoration type="block" blockname="cntWastelandRandomLootHelper" prob="0.00025"/>
-			
 			<decoration type="block" blockname="jz_MutatedDecorRandomHelper" prob="0.001"/>
 			<blockontop blockname="jz_MilitaryVehicleRandomHelper" prob="0.0005" rotatemax="3"/>
 			
@@ -791,7 +789,6 @@
 			<decoration type="block" blockname="rock02" prob=".005" rotatemax="3"/>
 			<decoration type="block" blockname="rock04" prob=".005" rotatemax="3"/>
 			<decoration type="block" blockname="cntBirdnest" prob="0.001"/>
-			
 			<decoration type="block" blockname="jz_CreepyEye" prob="0.0001" rotatemax="3"/>
 			<decoration type="block" blockname="jz_Creepy15" prob="0.0001" rotatemax="3"/>
 			<decoration type="block" blockname="jz_Creepy25" prob="0.0005" rotatemax="3"/>
@@ -1093,7 +1090,7 @@
 		<blockontop blockname="jz_MetalTrash" prob="0.0004"/>
 		<blockontop blockname="jz_GoreDecorRandomHelper" prob="0.001" rotatemax="3"/>
 		<blockontop blockname="jz_TireMarkRandomHelper" prob="0.003" rotatemax="3"/>
-		<decoration type="block" blockname="treeBrownGrassDiagonal" prob=".005"/>
+		<decoration type="block" blockname="treeBrownGrassDiagonal" prob=".005"/>													   
 	</poi>
 	<poi name="Country Road Asphalt" poimapcolor="#2" blockname="terrAsphalt">
 		<decal texture="0" face="0" prob="0.005"/>
@@ -1126,7 +1123,7 @@
 		<blockontop blockname="jz_MetalTrash" prob="0.0004"/>
 		<blockontop blockname="jz_GoreDecorRandomHelper" prob="0.001" rotatemax="3"/>
 		<blockontop blockname="jz_TireMarkRandomHelper" prob="0.003" rotatemax="3"/>
-		<decoration type="block" blockname="treeBrownGrassDiagonal" prob=".005"/>
+		<decoration type="block" blockname="treeBrownGrassDiagonal" prob=".005"/>		   
 		<!--blockontop blockname="terrOrePotassiumNitrate" prob="0.02" offset="-1"/-->
 	</poi>
 	<poi name="Road Gravel" poimapcolor="#3" blockname="terrGravel">
@@ -1168,6 +1165,5 @@
 	-->
 	<!--poi name="Empty" poimapcolor="#f6ff00" /-->
 </pois>
-	
 </set>
 </configs> 

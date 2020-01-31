@@ -1,5 +1,5 @@
 <configs>
-<set xpath="/xui">
+<set xpath="/xui">			  
 	<ruleset name="default" scale="1.255" stackpanel_scale="1.05">
 	
 		<window_group name="crafting" controller="XUiC_CraftingWindowGroup">
@@ -57,7 +57,7 @@
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="windowCraftingQueue"/>
-			<window name="windowToolsChemistryStation"/>
+			<window name="windowToolsChemistryStation"/>							   
 			<window name="windowFuel" />
 			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
@@ -91,6 +91,10 @@
 		<window_group name="toolTip" actionSet="false">
 			<window name="toolTip" />
 			<window name="popupMenu" />
+		</window_group>
+		
+		<window_group name="interactionPrompt" actionSet="false">
+			<window name="interactionPrompt" />
 		</window_group>
 		
 		<window_group name="tipWindow">
@@ -333,22 +337,7 @@
 			<window name="serverinfowindow" />
 		</window_group>
 -->
-		<window_group name="workstation_cntVendingMachine" controller="XUiC_WorkstationWindowGroup">
-            <window name="windowCraftingList" />
-			<window name="craftingInfoPanel" />
-			<window name="windowCraftingQueue" />
-            <window name="windowOutput" />
-           	<window name="windowNonPagingHeader" />
-		</window_group>
-        <window_group name="workstation_cntVendingMachineTrader" controller="XUiC_WorkstationWindowGroup">
-            <window name="windowCraftingList" />
-			<window name="craftingInfoPanel" />
-			<window name="windowCraftingQueue" />
-            <window name="windowOutput" />
-           	<window name="windowNonPagingHeader" />
-		</window_group>
-		
-		 <!--JZMOD ADDED-->
+	 <!--JZMOD ADDED-->
 		<window_group name="workstation_jz_CharacterChoiceComputer" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
@@ -448,8 +437,6 @@
 			<window name="lowerwindowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
-      
 	</ruleset>
-	
 </set>
-</configs> 
+</configs>   

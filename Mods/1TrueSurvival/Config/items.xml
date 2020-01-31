@@ -4848,7 +4848,7 @@
 	<!--use_action class="LiftUpTerrain" delay="1" use_time="..." gain_health="-5"gain_stamina="-20" gain_food="0" gain_water="10" gain_sickness="15" condition_raycast_block="77,78,79,80" sound_start="player_drinking" /-->
 </item>
 
-<item name="meleeHandZombie01">
+<item name="meleeHandZombie01"><!-- JZMOD REGULAR -->
 	<property name="Extends" value="meleeHandMaster"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
@@ -4867,7 +4867,7 @@
 	</effect_group>
 </item>
 
-<item name="meleeHandZombieFeral">
+<item name="meleeHandZombieFeral"><!-- JZMOD FERAL -->
 	<property name="Extends" value="meleeHandZombie01"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
@@ -4884,7 +4884,7 @@
 	</effect_group>
 </item>
 
-<item name="meleeHandZombie02"> <!-- crawler. This hand item is automatically used (hardcoded) if a zombie turns into a crawler. Can be overridden in entityclasses. See zombieBurnt. -->
+<item name="meleeHandZombie02"> <!-- JZMOD CRAWLER --><!-- crawler. This hand item is automatically used (hardcoded) if a zombie turns into a crawler. Can be overridden in entityclasses. See zombieBurnt. -->
 	<property name="Extends" value="meleeHandMaster"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="HoldType" value="24"/>
@@ -4927,7 +4927,7 @@
 	</effect_group>
 </item>
 
-<item name="meleeHandZombieBurning">
+<item name="meleeHandZombieBurning"><!-- JZMOD BURNING REGULAR -->
 	<property name="Extends" value="meleeHandMaster"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
@@ -4948,7 +4948,7 @@
 	</effect_group>
 </item>
 
-<item name="meleeHandZombieBurningFeral">
+<item name="meleeHandZombieBurningFeral"><!-- JZMOD BURNING FERAL -->
 	<property name="Extends" value="meleeHandZombieBurning"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
@@ -4966,7 +4966,7 @@
 	</effect_group>
 </item>
 
-<item name="meleeHandZombieBurningCrawler">
+<item name="meleeHandZombieBurningCrawler"><!-- JZMOD BURNING CRAWLER -->
 	<property name="Extends" value="meleeHandMaster"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="HoldType" value="24"/>
@@ -4991,7 +4991,7 @@
 	</effect_group>
 </item>
 
-<item name="meleeHandZombieCop">
+<item name="meleeHandZombieCop"><!-- JZMOD SPITTER ACID -->
 	<property name="Extends" value="meleeHandMaster"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="Degradation" value="99999" param1="true"/>
@@ -5178,7 +5178,7 @@
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
 		<property name="DamageEntity" value="20"/>
-		<property name="DamageBlock" value="20"/>
+		<property name="DamageBlock" value="200"/>
 		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
 	</property>
 	<effect_group name="meleeHandZombieStrong" tiered="false">
@@ -5214,7 +5214,7 @@
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
 		<property name="DamageEntity" value="40"/>
-		<property name="DamageBlock" value="60"/>
+		<property name="DamageBlock" value="300"/>
 	</property>
 	<effect_group name="meleeHandZombieStrongFeral" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -7701,19 +7701,11 @@ add knockdown resist to armor
 	<property name="EconomicValue" value="75"/>
 	<property name="ShowQuality" value="true"/>
 </item>
-
+		
 <item name="armorClothHat">
 	<property name="Extends" value="armorClothMaster" param1="CustomIcon"/>
 	<property name="Tags" value="head,armor,armorHead,lightArmor,padded,canHaveCosmetic,lightArmorDeg,jz_ClothArmorInspectionTag"/>
 	<property name="EquipSlot" value="Head"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Consume" value="true"/>
-		<property name="Sound_start" value="read_mod"/>
-	</property>
 	<effect_group>
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.8"/>
@@ -7776,7 +7768,6 @@ add knockdown resist to armor
 		<property name="Layer" value="2"/>
 		<property name="UISlot" value="ChestArmor"/>
 	</property>
-	
 </item>
 
 <item name="armorClothGloves">
@@ -7797,6 +7788,10 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="Gloves"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorClothGloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorClothPants">
@@ -7817,6 +7812,10 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="LegArmor"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorClothPants" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorClothBoots">
@@ -7837,6 +7836,10 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorClothBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <!-- Leather Armor -->
@@ -7856,6 +7859,13 @@ add knockdown resist to armor
 	<property name="EconomicValue" value="250"/>
 	<property name="UnlockedBy" value="perkLightArmor,armorLeatherSetSchematic"/>
 	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_mod"/>
+	</property>
 </item>
 
 <item name="armorLeatherHood">
@@ -7882,6 +7892,10 @@ add knockdown resist to armor
 		<property name="Mask0" value="Head" param1="inner"/>
 		<property name="Mask1" value="Head" param1="outer"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherHood" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorLeatherChest">
@@ -7908,6 +7922,10 @@ add knockdown resist to armor
 		<property name="Layer" value="2"/>
 		<property name="UISlot" value="ChestArmor"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherChest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorLeatherGloves"> <!-- item name directly referenced in the code -->
@@ -7934,6 +7952,10 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="Gloves"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherGloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorLeatherPants">
@@ -7960,6 +7982,10 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="LegArmor"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherPants" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorLeatherBoots">
@@ -7987,6 +8013,10 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorLeatherBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <!-- Military Armor -->
@@ -8165,6 +8195,13 @@ add knockdown resist to armor
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="EconomicValue" value="250"/>
 	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_mod"/>
+	</property>
 </item>
 
 <item name="armorScrapHelmet">
@@ -8199,7 +8236,10 @@ add knockdown resist to armor
 		<property name="Mask8" value="Eyes" param1="middle"/>
 		<property name="Mask9" value="Eyes" param1="outer"/>
 	</property>
-
+<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorScrapHelmet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorScrapChest">
@@ -8226,6 +8266,10 @@ add knockdown resist to armor
 		<property name="Layer" value="2"/>
 		<property name="UISlot" value="ChestArmor"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorScrapChest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorScrapGloves">
@@ -8252,6 +8296,10 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="Gloves"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorScrapGloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorScrapLegs">
@@ -8278,6 +8326,10 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="LegArmor"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorScrapLegs" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorScrapBoots">
@@ -8304,6 +8356,10 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorScrapBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <!-- Iron Armor (formerly Bandit Armor) -->
@@ -8323,6 +8379,13 @@ add knockdown resist to armor
 	<property name="EconomicValue" value="500"/>
 	<property name="UnlockedBy" value="perkHeavyArmor,armorIronSetSchematic"/>
 	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_mod"/>
+	</property>
 </item>
 
 <item name="armorIronHelmet">
@@ -8358,6 +8421,10 @@ add knockdown resist to armor
 		<property name="Mask8" value="Eyes" param1="middle"/>
 		<property name="Mask9" value="Eyes" param1="outer"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronHelmet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorIronChest">
@@ -8384,6 +8451,10 @@ add knockdown resist to armor
 		<property name="Layer" value="2"/>
 		<property name="UISlot" value="ChestArmor"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronChest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorIronGloves">
@@ -8410,6 +8481,10 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Gloves"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronGloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorIronLegs">
@@ -8436,6 +8511,10 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="LegArmor"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronLegs" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorIronBoots">
@@ -8462,6 +8541,10 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorIronBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <!-- Steel Armor (formerly Iron Armor) -->
@@ -8481,6 +8564,13 @@ add knockdown resist to armor
 	<property name="EconomicValue" value="1000"/>
 	<property name="UnlockedBy" value="armorSteelSetSchematic"/>
 	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="UseAnimation" value="false"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="read_mod"/>
+	</property>
 </item>
 
 <item name="armorSteelHelmet">
@@ -8515,6 +8605,10 @@ add knockdown resist to armor
 		<property name="Mask8" value="Eyes" param1="middle"/>
 		<property name="Mask9" value="Eyes" param1="outer"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelHelmet" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorSteelChest"> <!-- item name directly referenced in the code -->
@@ -8542,6 +8636,10 @@ add knockdown resist to armor
 		<property name="Layer" value="2"/>
 		<property name="UISlot" value="ChestArmor"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelChest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorSteelGloves">
@@ -8569,6 +8667,10 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Gloves"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelGloves" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorSteelLegs"> <!-- item name directly referenced in the code -->
@@ -8595,6 +8697,10 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="LegArmor"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelLegs" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorSteelBoots">
@@ -8622,6 +8728,10 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="armorSteelBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
 </item>
 
 <item name="armorMiningHelmet">
@@ -13843,7 +13953,7 @@ perkNightStalkerSilentNight
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="MresourceIronFragment"/>
+	<property name="Material" value="MresourceScrapIron"/>
 	<property name="Weight" value="5"/>
 	<property name="Stacknumber" value="1200"/> <!-- STK resource -->
 	<property name="SellableToTrader" value="false"/>
@@ -14929,7 +15039,7 @@ perkNightStalkerSilentNight
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Miron"/>
+	<property name="Material" value="Mmetal"/>
 	<property name="Stacknumber" value="250"/> <!-- STK loot -->
 	<property name="EconomicValue" value="26"/>
 	<property name="Group" value="Tools/Traps,Food/Cooking"/>
@@ -14940,7 +15050,7 @@ perkNightStalkerSilentNight
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Miron"/>
+	<property name="Material" value="Mmetal"/>
 	<property name="Stacknumber" value="250"/> <!-- STK loot -->
 	<property name="EconomicValue" value="26"/>
 	<property name="Group" value="Tools/Traps,Food/Cooking"/>
@@ -18135,9 +18245,8 @@ perkNightStalkerSilentNight
 <!--JZMOD ARMOR SKILL ITEMS-->
 <item name="jz_ClothArmorInspection">
 	<property name="Extends" value="jz_MasterItem" />
-	<property name="Weight" value="1" />
-	<property name="Material" value="Mpaper" />
-	<property name="HoldType" value="16" />
+	<property name="Material" value="Mcloth" />
+	<property name="Weight" value="20" />
 	<property name="Group" value="Clothing" />
 	<property name="DescriptionKey" value="jz_ClothArmorInspectionDesc" />
 	<property name="CustomIcon" value="resourcePaper" />
@@ -18145,9 +18254,8 @@ perkNightStalkerSilentNight
 
 <item name="jz_LeatherArmorInspection">
 	<property name="Extends" value="jz_MasterItem" />
-	<property name="Weight" value="1" />
-	<property name="Material" value="Mpaper" />
-	<property name="HoldType" value="16" />
+	<property name="Material" value="Mleather" />
+	<property name="Weight" value="20" />
 	<property name="Group" value="Clothing" />
 	<property name="DescriptionKey" value="jz_LeatherArmorInspectionDesc" />
 	<property name="CustomIcon" value="resourcePaper" />
@@ -18155,9 +18263,8 @@ perkNightStalkerSilentNight
 
 <item name="jz_ScrapArmorInspection">
 	<property name="Extends" value="jz_MasterItem" />
-	<property name="Weight" value="1" />
-	<property name="Material" value="Mpaper" />
-	<property name="HoldType" value="16" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
 	<property name="Group" value="Clothing" />
 	<property name="DescriptionKey" value="jz_ScrapArmorInspectionDesc" />
 	<property name="CustomIcon" value="resourcePaper" />
@@ -18165,9 +18272,8 @@ perkNightStalkerSilentNight
 
 <item name="jz_IronArmorInspection">
 	<property name="Extends" value="jz_MasterItem" />
-	<property name="Weight" value="1" />
-	<property name="Material" value="Mpaper" />
-	<property name="HoldType" value="16" />
+	<property name="Material" value="Mmetal" />
+	<property name="Weight" value="20" />
 	<property name="Group" value="Clothing" />
 	<property name="DescriptionKey" value="jz_IronArmorInspectionDesc" />
 	<property name="CustomIcon" value="resourcePaper" />
@@ -18175,9 +18281,8 @@ perkNightStalkerSilentNight
 
 <item name="jz_SteelArmorInspection">
 	<property name="Extends" value="jz_MasterItem" />
-	<property name="Weight" value="1" />
-	<property name="Material" value="Mpaper" />
-	<property name="HoldType" value="16" />
+	<property name="Material" value="Msteel" />
+	<property name="Weight" value="20" />
 	<property name="Group" value="Clothing" />
 	<property name="DescriptionKey" value="jz_SteelArmorInspectionDesc" />
 	<property name="CustomIcon" value="resourcePaper" />
@@ -23231,6 +23336,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
 		<display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value=".2"/><display_value name="TSGrain" value=".2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="5"/><display_value name="dFoodPoisoningRisk" value=".05"/> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">

@@ -1,14 +1,5 @@
 <configs>
-<set xpath="/spawning">
-
-<!--
-	 biome
-	 maxcount: int - the sum of all spawned entities in the group may not exceed this number
-	 daytime: Any,Day,Night - determines the time of day the entity spawns
-	 <property name="TotalAlive" value="3" />
-	 total alive means how many are alive at once.
-	 <property name="TotalPerWave" value="10,20" />Total per wave means a random number between the first and second. The total alive will replenish the dead ranks until TotalPerWave's random number is met.
--->
+<set xpath="/spawning">			   
 
 
 	<!-- Biome spawning -->
