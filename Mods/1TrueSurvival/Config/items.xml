@@ -19982,6 +19982,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="medicalAloeCream" />
 	<property name="CustomIcon" value="medicalAloeCream" />
 	<property name="CustomIconTint" value="7c5706" />
+    <property name="DescriptionKey" value="jz_MedicalHerbalCreamDesc" />
 </item>
 
 <item name="jz_MedicalSutureKit">
@@ -20173,6 +20174,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="5" />
 	<property name="Stacknumber" value="5000" />
     <property name="Group" value="Food/Cooking" />
+    <property name="DescriptionKey" value="jz_FoodServingFuitDesc" />
 </item>
 
 <item name="jz_FoodServingGrain">
@@ -20180,6 +20182,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_unit_grain" />
 	<property name="Material" value="Mgrain" />
     <property name="Weight" value="3" />
+    <property name="DescriptionKey" value="jz_FoodServingGrainDesc" />
 </item>
 
 <item name="jz_FoodServingVeggie">
@@ -20187,6 +20190,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_unit_veggie" />
 	<property name="Material" value="Mveggie" />
     <property name="Weight" value="1" />
+    <property name="DescriptionKey" value="jz_FoodServingVeggieDesc" />
 </item>
 
 <item name="jz_FoodServingProtein">
@@ -20194,6 +20198,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_unit_protein" />
 	<property name="Material" value="Mprotein" />
     <property name="Weight" value="5" />
+    <property name="DescriptionKey" value="jz_FoodServingProteinDesc" />
 </item>
 
 <item name="jz_FoodBioMass">
@@ -22230,7 +22235,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_FoodApplePie">
 	<property name="Extends" value="jz_MasterFood" />
     <property name="CustomIcon" value="ui_game_symbol_applePie" />
-	<property name="DescriptionKey" value="pieDesc" />
+	<property name="DescriptionKey" value="ApplepieDesc" />
 	<property name="UnlockedBy" value="jz_SchematicApplePie"/>
 	<property name="DisplayType" value="jz_FoodFGWellness"/>
 	<property name="Spoilable" value="true" />
