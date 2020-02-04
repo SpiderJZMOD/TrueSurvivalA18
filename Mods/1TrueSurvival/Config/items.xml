@@ -3,7 +3,7 @@
 <!-- * * * * * * * * * * Tools (perkMiner69r, perkMotherLode | perkTheHuntsman) * * * * * * * * * * -->
 
 <item name="meleeToolStoneAxe"> <!-- T1 Tools -->
-	<property name="Tags" value="axe,melee,light,tool,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic,jz_MiningSkillTag"/>
+	<property name="Tags" value="axe,melee,light,tool,canHaveCosmetic,jz_MiningSkillTag"/>
 	<property name="DisplayType" value="meleeRepairTool"/>
 	<property name="HoldType" value="32"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Axe/stone_axePrefab.prefab"/>
@@ -36,7 +36,7 @@
 		<property name="Repair_amount" value="150"/>
 		<property name="Upgrade_hit_offset" value="-1"/>
 		<property name="Sound_start" value="repair_block"/>
-		<property name="Allowed_upgrade_items" value="resourceWood,jz_Plank"/>
+		<property name="Allowed_upgrade_items" value="jz_Plank"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
 	<effect_group name="meleeToolStoneAxe">
@@ -1105,8 +1105,7 @@
 	<property name="Material" value="Mmetal"/>
 	<property name="RepairTools" value="jz_SharpeningStone"/>
 	<property name="DegradationBreaksAfter" value="true"/>
-	<property name="FuelValue" value="100"/>
-	<property name="EconomicValue" value="350"/>
+	<property name="EconomicValue" value="0"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
 	<property name="UnlockedBy" value="meleeToolKnifeIronSchematic"/>
@@ -1466,8 +1465,8 @@
 		
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="13.5" tags="primary"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" tags="perkPummelPete"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
@@ -1565,8 +1564,8 @@
 
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="52"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="16.1" tags="primary"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="200,500" tier="1,6" tags="perkPummelPete"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="200,500" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
@@ -1642,8 +1641,8 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="52"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="16.1" tags="primary"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="200,500" tier="1,6" tags="perkPummelPete"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="200,500" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
@@ -1680,8 +1679,6 @@
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sound_start" value="batwood_swinglight"/>
 		<property name="Sphere" value=".1"/>
-		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
-
 		<property name="UseGrazingHits" value="true"/>
 		<property name="GrazeStart" value=".25"/>
 		<property name="GrazeEnd" value=".32"/>
@@ -1699,9 +1696,7 @@
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sound_start" value="batwood_swingheavy"/>
 		<property name="Sphere" value=".15"/>
-		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
 		<property name="UsePowerAttackAnimation" value="true"/>
-
 		<property name="UseGrazingHits" value="true"/>
 		<property name="IsHorizontalSwing" value="true"/>
 		<property name="GrazeStart" value=".25"/>
@@ -1739,15 +1734,12 @@
 
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="52"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="16.1" tags="primary"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="300,700" tier="1,6" tags="perkPummelPete"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="300,700" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
 
-		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
-		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
-		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
 	</effect_group>
 	<effect_group name="Power Attack">
 		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
@@ -1841,11 +1833,7 @@
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
-
-		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
-		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
-		<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
-
+		
 		<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Sparks"/>
 
 		<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="Sparks" prefab="ItemModEffects/baton_electricityPrefab" parentTransform="Handle" localPos="0,0,0" localRot="0,0,0">
@@ -11020,11 +11008,12 @@ perkNightStalkerSilentNight
 		<property name="Sound_start" value="player_painkillers"/>
 	</property>
 	<effect_group tiered="false">
-		<display_value name="dDiseaseResist" value="1"/>
-		<display_value name="dDuration" value="723"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugVitaminsDuration" operation="add" value="723"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugVitaminsDuration" operation="set" value="2163">
-			<requirement name="CVarCompare" cvar="$buffDrugVitaminsDuration" operation="GT" value="2163"/></triggered_effect>
+		<display_value name="dDuration" value="3600"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".2"/><display_value name="TSFruit" value=".2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value=".2"/><display_value name="TSGrain" value=".2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/><display_value name="TSProtein" value=".2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugVitamins"/>
 	</effect_group>
 </item>
@@ -11052,11 +11041,9 @@ perkNightStalkerSilentNight
 		<display_value name="$waterAmountAdd" value="-40"/>
 		<display_value name="dStunResist" value="1"/>
 		<display_value name="dDuration" value="183"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="add" value="183"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
-			<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffThrobbingPain"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$jz_PlayerHealthMaxDrain" operation="add" value="1"/><display_value name="TSWellness" value="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffPainkiller"/>
 	</effect_group>
 </item>
 
@@ -14232,7 +14219,7 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="1"/><display_value name="TSFullness" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="2"/><display_value name="TSStamina" value="-2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/><display_value name="TSHealth" value="0"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
@@ -18645,6 +18632,7 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="partsHuntingRifle_receiver" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 	<property name="Group" value="Ammo/Weapons" />
     <property name="UnlockedBy" value="jz_SchematicCraftedRifle"/>
 </item>
@@ -18657,6 +18645,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
     <property name="UnlockedBy" value="jz_SchematicCraftedRifle"/>
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCraftedRifleBarrel">
@@ -18667,6 +18656,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
     <property name="UnlockedBy" value="jz_SchematicCraftedRifle"/>
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCraftedRevolverFrame">
@@ -18676,6 +18666,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="CustomIcon" value="ui_game_symbol_CraftedRevolverStock" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCraftedRevolverBarrel">
@@ -18685,6 +18676,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
     <property name="CustomIcon" value="ui_game_symbol_CraftedRevolverBarrel" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsOldRevolverCylinder">
@@ -18695,6 +18687,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="5" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item> 
 
 <item name="jz_PartsWoodenBowHandle">
@@ -18704,6 +18697,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsWoodenBowCams">
@@ -18713,6 +18707,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsWoodenBowCord">
@@ -18721,6 +18716,7 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="ui_game_symbol_jz_PartsWoodenBowCord" />
 	<property name="Material" value="Morganic" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCrossbowStock">
@@ -18730,6 +18726,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCrossbowStock" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCrossbowLimb">
@@ -18739,6 +18736,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
     <property name="CustomIcon" value="ui_game_symbol_jz_PartsCrossbowLimb" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCrossbowReciver">
@@ -18748,6 +18746,7 @@ perkNightStalkerSilentNight
    	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item> 
 
 <item name="jz_PartsCompoundBowHandle">
@@ -18757,6 +18756,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mplastics" />
 	<property name="Weight" value="30" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCompoundBowCams">
@@ -18766,6 +18766,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mplastics" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCompoundBowCord">
@@ -18775,6 +18776,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Morganic" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCompoundCrossbowStock">
@@ -18784,6 +18786,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mplastics" />
 	<property name="Weight" value="30" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCompoundCrossbowCord">
@@ -18793,6 +18796,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mplastics" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsCompoundCrossbowCams">
@@ -18802,6 +18806,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Morganic" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsPistolBarrel">
@@ -18811,6 +18816,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="CustomIcon" value="ui_game_symbol_jz_PartsPistolBarrel" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsPistolFrame">
@@ -18820,6 +18826,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
     <property name="CustomIcon" value="ui_game_symbol_jz_PartsPistolFrame" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsPistolGrip">
@@ -18829,6 +18836,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="5" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item> 
 
 <item name="jz_PartsPumpShotgunBarrel">
@@ -18838,6 +18846,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsPumpShotgunReciver">
@@ -18847,6 +18856,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsPumpShotgunStock">
@@ -18856,6 +18866,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsDoubleBarrelReceiver">
@@ -18865,6 +18876,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="CustomIcon" value="ui_game_symbol_jz_PartsDoubleBarrelReceiver" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsDoubleBarrelStock">
@@ -18874,6 +18886,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
     <property name="CustomIcon" value="ui_game_symbol_jz_PartsDoubleBarrelStock" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsDoubleBarrelBarrel">
@@ -18883,6 +18896,7 @@ perkNightStalkerSilentNight
    	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item> 
 
 <item name="jz_PartsHuntingRifleBarrel">
@@ -18892,6 +18906,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsHuntingRifleStock">
@@ -18901,6 +18916,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsHuntingRifleReceiver">
@@ -18910,6 +18926,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_Parts44MagnumCylinder">
@@ -18919,6 +18936,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="5" />
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="CustomIcon" value="ui_game_symbol_jz_Parts44MagnumCylinder" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_Parts44MagnumFrame">
@@ -18928,6 +18946,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
     <property name="CustomIcon" value="ui_game_symbol_jz_Parts44MagnumFrame" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_Parts44MagnumGrip">
@@ -18937,6 +18956,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item> 
 
 <item name="jz_PartsSMG5Barrel">
@@ -18946,6 +18966,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsSMG5Receiver">
@@ -18955,6 +18976,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsSMG5Grip">
@@ -18964,6 +18986,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsARBarrel">
@@ -18973,6 +18996,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="CustomIcon" value="ui_game_symbol_jz_PartsARBarrel" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsARReceiver">
@@ -18982,6 +19006,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
     <property name="CustomIcon" value="ui_game_symbol_jz_PartsARReceiver" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsARStock">
@@ -18991,6 +19016,7 @@ perkNightStalkerSilentNight
    	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item> 
 
 <item name="jz_PartsAK47Stock">
@@ -19000,6 +19026,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsAK47Receiver">
@@ -19009,6 +19036,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsAK47Barrel">
@@ -19018,6 +19046,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsSniperRifleBarrel">
@@ -19027,6 +19056,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="30" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsSniperRifleStock">
@@ -19036,6 +19066,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mplastics" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsSniperRifleReceiver">
@@ -19045,6 +19076,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsM60Barrel">
@@ -19054,6 +19086,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="CustomIcon" value="ui_game_symbol_jz_PartsM60Barrel" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsM60Stock">
@@ -19063,6 +19096,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
     <property name="CustomIcon" value="ui_game_symbol_jz_PartsM60Stock" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsM60Receiver">
@@ -19072,6 +19106,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="5" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item> 
 
 <item name="jz_PartsRocketLauncherBarrel">
@@ -19081,6 +19116,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsRocketLauncherStock">
@@ -19090,6 +19126,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsRocketLauncherParts">
@@ -19099,6 +19136,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_BasicGunParts">
@@ -19108,6 +19146,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="CustomIcon" value="ui_game_symbol_jz_BasicGunParts" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_MilitaryGunParts">
@@ -19118,6 +19157,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
     <property name="CustomIcon" value="ui_game_symbol_jz_MilitaryGunParts" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_OldRevolver"> 
@@ -19323,8 +19363,99 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_OldKnife">
-	<property name="Extends" value="jz_SteakKnife" />
-	<property name="DegradationBreaksAfter" value="true" />
+	<property name="Tags" value="knife,melee,grunting,light,weapon,meleeWeapon,jz_BladeSkillTag"/>
+	<property name="DisplayType" value="meleeKnife"/>
+	<property name="HoldType" value="36"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZMeleeSteakKnife.unity3d?MeleeSteakKnifePrefab" />
+	<property name="Material" value="Mmetal"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="FuelValue" value="100"/>
+	<property name="EconomicValue" value="350"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="UnlockedBy" value="meleeToolKnifeIronSchematic"/>
+	<property name="ShowQuality" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Damage_type" value="Slashing"/>
+		<property name="Sphere" value=".1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="ToolCategory.Butcher" value="0" param1="5"/>
+		<property name="Sound_harvesting" value="open_animal" param1="organic"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".35"/>
+		<property name="SwingDegrees" value="90"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Damage_type" value="Slashing"/>
+		<property name="Sphere" value=".1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+		<property name="ToolCategory.Butcher" value="0" param1="5"/>
+		<property name="Sound_harvesting" value="open_animal" param1="organic"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".2"/>
+		<property name="GrazeEnd" value=".3"/>
+		<property name="SwingDegrees" value="80"/>
+		<property name="SwingAngle" value="140"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+	
+	<effect_group name="meleeToolKnifeIron">
+		<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="8.1"/> <!-- meleeToolKnifeIron -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="BlockDamage" operation="base_set" value="8.5"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="60"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="butcherHarvest"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="11.5" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="231,577" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0,0,0,0,0,0" tier="1,2,3,4,5,6"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="17.3" tags="secondary"/>
+	</effect_group>
+	<property name="Group" value="Ammo/Weapons"/>
 	<property name="CustomIcon" value="ui_game_symbol_cookingKnife" />
     <property name="DescriptionKey" value="jz_OldKnifeDesc" />
 </item>
@@ -19338,40 +19469,171 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_OldAxe">
-	<property name="Extends" value="meleeToolFireaxeIron" />
-	<property name="RepairTools" value="jz_CantRepair" />
+	<property name="Tags" value="axe,melee,grunting,medium,tool,jz_AxeSkillTag,jz_FireFighterTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="HoldType" value="17"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Axe/fireaxePrefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".15"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="ToolCategory.Butcher" value="0" param1="4"/>
+		<property name="Sound_harvesting" value="open_animal" param1="organic"/>
+		<property name="GrazeStart" value=".4"/>
+		<property name="GrazeEnd" value=".5"/>
+		<property name="SwingDegrees" value="50"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="SwingAngle" value="0"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".15"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="ToolCategory.Butcher" value="0" param1="4"/>
+		<property name="Sound_harvesting" value="open_animal" param1="organic"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+		<property name="GrazeStart" value=".4"/>
+		<property name="GrazeEnd" value=".5"/>
+		<property name="SwingDegrees" value="50"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="SwingAngle" value="135"/>
+	</property>
+	<effect_group name="meleeToolFireaxeIron">
+		<passive_effect name="MaxRange" operation="base_set" value="2.6"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3.5"/>
+
+		<passive_effect name="EntityDamage" operation="base_set" value="15.3"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="BlockDamage" operation="base_set" value="47.4"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15" /> <!-- random DegMax -->
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.05,.05"/> <!-- random APM -->
+		<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,.05"/> <!-- random StamLoss -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="188,641" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="47"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="20" tags="primary"/>
+
+		<passive_effect name="HarvestCount" operation="base_set" value=".7" tags="butcherHarvest"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value=".5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		
+		<passive_effect name="ModSlots" operation="base_set" value="0,0,0,0,0,0" tier="1,2,3,4,5,6"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="40" tags="secondary"/>
+	</effect_group>
+
+	<property name="Group" value="Tools/Traps"/>
 	<property name="CustomIcon" value="ui_game_symbol_oldAxe" />
 	<property name="DescriptionKey" value="OldAxeDesc" />
 </item>
 
 <item name="jz_FryingPan">
+	<property name="Tags" value="melee,light,tool,canHaveCosmetic,jz_WoodBuildingTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="HoldType" value="2"/>
 	<property name="CustomIcon" value="ui_game_symbol_fryingPan" />
 	<property name="Meshfile" value="#@modfolder:Resources/JZMeleeFrynPan.unity3d?MeleeFrynPanPrefab" />
-	<property name="Material" value="Mmetal" />
-	<property name="HoldType" value="2" />
-	<property name="Stacknumber" value="1" />
-	<property name="RepairTools" value="shortMetalPipe" />
-	<property name="Degradation" value="50" param1="true" />
-	<property name="SoundDestroy" value="wooddestroy1" />
-	<property name="FuelValue" value="5" />
-	<property name="Weight" value="10" />
-	<property name="EconomicValue" value="200" />
+	<property name="Material" value="Mmetal"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="EconomicValue" value="0"/>
 	<property name="SellableToTrader" value="false" />
+	<property name="ShowQuality" value="true"/>
+	
 	<property class="Action0">
-		<property name="Class" value="Melee" />
-		<property name="Delay" value="1" />
-		<property name="Range" value="1.8" />
-		<property name="Sphere" value="0.9" />
-		<property name="Sound_start" value="swoosh" />
-		<property name="Stamina_usage" value="3" />
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".15"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="metalstaborganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>
+
+	<effect_group name="meleeClubWood">
+		<passive_effect name="MaxRange" operation="base_set" value="2.2"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="8"/> <!-- meleeClubWood -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="BlockDamage" operation="base_set" value="12"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
 		
-	</property>
-	<property class="Attributes">
-		<property name="EntityDamage" value="5,15" />
-		<property name="BlockDamage" value="1,5" />
-		<property name="DegradationMax" value="100,600" />
-		<property name="DegradationRate" value="3,1" />
-	</property>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="60"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="12" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0,0,0,0,0,0" tier="1,2,3,4,5,6"/>
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="17" tags="secondary"/>
+	</effect_group>
 	<property name="Group" value="food/Cooking" />
 	<property name="DescriptionKey" value="fryingPanDesc" />
 </item>
@@ -19454,8 +19716,8 @@ perkNightStalkerSilentNight
 		
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="13.5" tags="primary"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" tags="perkPummelPete"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
@@ -19982,7 +20244,6 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="medicalAloeCream" />
 	<property name="CustomIcon" value="medicalAloeCream" />
 	<property name="CustomIconTint" value="7c5706" />
-    <property name="DescriptionKey" value="jz_MedicalHerbalCreamDesc" />
 </item>
 
 <item name="jz_MedicalSutureKit">
@@ -20090,7 +20351,13 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="4"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffAntiVenom,buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffSnakeBite"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffSnakeBiteLvTwo"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffSnakeBiteLvThree"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffSnakeLimp"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffSnakeLimpPt1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffSnakeLimpPt2"/>
 	</effect_group>
 </item>
 
@@ -20174,7 +20441,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="5" />
 	<property name="Stacknumber" value="5000" />
     <property name="Group" value="Food/Cooking" />
-    <property name="DescriptionKey" value="jz_FoodServingFuitDesc" />
+	<property name="Spoilable" value="true" />
+    <property name="ShowQuality" value="false"/>
+    <property name="SpoiledItem" value="jz_MoldyFruit" />
+    <property name="TickPerLoss" value="270" />
+    <property name="SpoilageMax" value="1000" />
+    <property name="SpoilagePerTick" value="1" />
 </item>
 
 <item name="jz_FoodServingGrain">
@@ -20182,7 +20454,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_unit_grain" />
 	<property name="Material" value="Mgrain" />
     <property name="Weight" value="3" />
-    <property name="DescriptionKey" value="jz_FoodServingGrainDesc" />
+	<property name="Spoilable" value="true" />
+    <property name="ShowQuality" value="false"/>
+    <property name="SpoiledItem" value="foodMoldyBread" />
+    <property name="TickPerLoss" value="270" />
+    <property name="SpoilageMax" value="1000" />
+    <property name="SpoilagePerTick" value="1" />
 </item>
 
 <item name="jz_FoodServingVeggie">
@@ -20190,7 +20467,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_unit_veggie" />
 	<property name="Material" value="Mveggie" />
     <property name="Weight" value="1" />
-    <property name="DescriptionKey" value="jz_FoodServingVeggieDesc" />
+	<property name="Spoilable" value="true" />
+    <property name="ShowQuality" value="false"/>
+    <property name="SpoiledItem" value="jz_MoldyVeggies" />
+    <property name="TickPerLoss" value="270" />
+    <property name="SpoilageMax" value="1000" />
+    <property name="SpoilagePerTick" value="1" />
 </item>
 
 <item name="jz_FoodServingProtein">
@@ -20198,7 +20480,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_unit_protein" />
 	<property name="Material" value="Mprotein" />
     <property name="Weight" value="5" />
-    <property name="DescriptionKey" value="jz_FoodServingProteinDesc" />
+	<property name="Spoilable" value="true" />
+    <property name="ShowQuality" value="false"/>
+    <property name="SpoiledItem" value="foodRottingFlesh" />
+    <property name="TickPerLoss" value="270" />
+    <property name="SpoilageMax" value="1000" />
+    <property name="SpoilagePerTick" value="1" />
 </item>
 
 <item name="jz_FoodBioMass">
@@ -20330,7 +20617,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20355,7 +20642,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20380,7 +20667,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20405,7 +20692,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="5"/><display_value name="TSFullness" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20430,7 +20717,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="8"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20455,7 +20742,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20480,7 +20767,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="5"/><display_value name="TSFullness" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20505,7 +20792,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20530,7 +20817,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20555,7 +20842,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20580,7 +20867,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20606,7 +20893,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="5"/><display_value name="TSFullness" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20631,7 +20918,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="8"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20655,7 +20942,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="5"/><display_value name="TSFullness" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20679,7 +20966,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="5"/><display_value name="TSFullness" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20710,7 +20997,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="5"/><display_value name="TSFullness" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/><display_value name="TSHydration" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/><display_value name="TSHydration" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20734,7 +21021,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="5"/><display_value name="TSFullness" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="10"/><display_value name="TSHydration" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20852,7 +21139,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="10"/><display_value name="TSFullness" value="10"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="20"/><display_value name="TSStamina" value="-20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20879,7 +21166,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="17"/><display_value name="TSFullness" value="17"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="34"/><display_value name="TSStamina" value="-34"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="6">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -20939,7 +21226,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="23"/><display_value name="TSFullness" value="23"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="46"/><display_value name="TSStamina" value="-46"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -21148,7 +21435,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="13"/><display_value name="TSFullness" value="13"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="13"/><display_value name="TSHydration" value="13"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="13"/><display_value name="TSHydration" value="13"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="26"/><display_value name="TSStamina" value="-26"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -21173,7 +21460,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="3"/><display_value name="TSFullness" value="3"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -21198,7 +21485,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Stacknumber" value="10"/> 
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="3"/><display_value name="TSFullness" value="3"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="2"/><display_value name="TSWellness" value="-2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
@@ -21225,7 +21512,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="2"/><display_value name="TSFullness" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="4"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="add" value="1"/><display_value name="TSHealth" value="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/><display_value name="TSWellness" value="-1"/>
@@ -21381,7 +21668,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="1"/><display_value name="TSFullness" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="5"/><display_value name="TSStamina" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".1"/><display_value name="TSFruit" value=".1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
@@ -21410,7 +21697,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="2"/><display_value name="TSFullness" value="2"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="5"/><display_value name="TSStamina" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -21472,7 +21759,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="ExchangeItem"/>
 		<property name="Delay" value="1.0"/>
-		<property name="Change_item_to" value="drinkJarRiverWater"/>
+		<property name="Change_item_to" value="jz_DrinkDrityDrinkOfWater"/> 
 		<property name="Do_block_action" value="deplete1"/>
 		<property name="Focused_blockname_1" value="water"/>
 		<property name="Focused_blockname_2" value="waterMoving"/>
@@ -21616,7 +21903,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="20"/><display_value name="TSHydration" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/><display_value name="TSHydration" value="20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
 	<effect_group tiered="false">
@@ -21640,7 +21927,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="25"/><display_value name="TSHydration" value="25"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/><display_value name="TSHydration" value="25"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
 	<effect_group tiered="false">
@@ -22040,7 +22327,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="7"/><display_value name="TSFullness" value="7"/> 
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/> 
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="40"/><display_value name="TSStamina" value="-40"/> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22097,7 +22384,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="20"/><display_value name="TSFullness" value="20"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaMaxDrain" operation="add" value="40"/><display_value name="TSStamina" value="-40"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22130,7 +22417,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="30"/><display_value name="TSFullness" value="30"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="60"/><display_value name="TSStamina" value="-60"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22158,7 +22445,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="2"/><display_value name="TSFullness" value="2"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="4"/><display_value name="TSStamina" value="-4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22217,7 +22504,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="8"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="4"/><display_value name="TSHydration" value="4"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="4"/><display_value name="TSHydration" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22235,7 +22522,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_FoodApplePie">
 	<property name="Extends" value="jz_MasterFood" />
     <property name="CustomIcon" value="ui_game_symbol_applePie" />
-	<property name="DescriptionKey" value="ApplepieDesc" />
+	<property name="DescriptionKey" value="pieDesc" />
 	<property name="UnlockedBy" value="jz_SchematicApplePie"/>
 	<property name="DisplayType" value="jz_FoodFGWellness"/>
 	<property name="Spoilable" value="true" />
@@ -22309,7 +22596,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="60"/><display_value name="TSHydration" value="60"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/><display_value name="TSHydration" value="60"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".2"/><display_value name="TSFruit" value=".2"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="2">
@@ -22344,7 +22631,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="20"/><display_value name="TSHydration" value="20"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/><display_value name="TSHydration" value="20"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".2"/><display_value name="TSFruit" value=".2"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -22375,7 +22662,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="20"/><display_value name="TSHydration" value="20"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/><display_value name="TSHydration" value="20"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -22458,7 +22745,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="3"/><display_value name="TSFullness" value="3"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22486,7 +22773,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="30"/><display_value name="TSFullness" value="30"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="60"/><display_value name="TSStamina" value="-60"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22522,7 +22809,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="3"/><display_value name="TSFullness" value="3"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22559,7 +22846,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="8"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="8"/><display_value name="TSHydration" value="8"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="8"/><display_value name="TSHydration" value="8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22582,7 +22869,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="12"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="12"/><display_value name="TSHydration" value="12"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="12"/><display_value name="TSHydration" value="12"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22605,7 +22892,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="16"/><display_value name="TSFullness" value="16"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="16"/><display_value name="TSHydration" value="16"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="16"/><display_value name="TSHydration" value="16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="32"/><display_value name="TSStamina" value="-32"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22628,7 +22915,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="8"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="4"/><display_value name="TSHydration" value="4"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="4"/><display_value name="TSHydration" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22651,7 +22938,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="6"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="6"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -22674,7 +22961,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="16"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="8"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="8"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="32"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -23013,7 +23300,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="8"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="4"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="4"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -23041,7 +23328,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="16"/><display_value name="TSFullness" value="16"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="32"/><display_value name="TSStamina" value="-32"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -23069,7 +23356,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="24"/><display_value name="TSFullness" value="24"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="48"/><display_value name="TSStamina" value="-48"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -23097,7 +23384,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="8"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -23127,7 +23414,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="16"/><display_value name="TSFullness" value="16"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="32"/><display_value name="TSStamina" value="-32"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -23155,7 +23442,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="24"/><display_value name="TSFullness" value="24"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="48"/><display_value name="TSStamina" value="-48"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -23184,7 +23471,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="1"/><display_value name="TSFullness" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="2"/><display_value name="TSStamina" value="-2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
@@ -23285,7 +23572,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="6"/><display_value name="TSFullness" value="6"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="12"/><display_value name="TSStamina" value="-12"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -23359,7 +23646,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="60"/><display_value name="TSFullness" value="60"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="99"/><display_value name="TSStamina" value="-99"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="12">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -23382,7 +23669,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="60"/><display_value name="TSFullness" value="60"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="5"/><display_value name="TSHydration" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/><display_value name="TSHydration" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="120"/><display_value name="TSStamina" value="-120"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -23404,7 +23691,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="90"/><display_value name="TSFullness" value="90"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="5"/><display_value name="TSHydration" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/><display_value name="TSHydration" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="180"/><display_value name="TSStamina" value="-180"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="30">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
@@ -24376,13 +24663,60 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <item name="jz_Stick">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mwood" />
+	<property name="Tags" value="blunt,melee,weapon,meleeWeapon"/>
+	<property name="HoldType" value="2"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab"/>
+	<property name="Material" value="Mwood"/>
 	<property name="Weight" value="1" />
+	<property name="Stacknumber" value="5000"/> 
+	<property name="FuelValue" value="1"/>
+	<property name="EconomicValue" value="0"/>
 	<property name="RepairAmount" value="10" />
-	<property name="FuelValue" value="1" />
 	<property name="DescriptionKey" value="stickDesc" />
     <property name="CustomIcon" value="ui_game_symbol_stick" />
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+	
+	<effect_group name="stick" tiered="false" >
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="1"/> 
+		<passive_effect name="BlockDamage" operation="base_set" value="1"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="6" />
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+	</effect_group>
 </item>
 
 <item name="jz_ScrapSteel">
@@ -24789,14 +25123,14 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <item name="jz_MoldyFruit">
-	<property name="Extends" value="foodShamSandwich" />
+	<property name="Extends" value="foodMoldyBread" />
 	<property name="Weight" value="1" />
 	<property name="CustomIcon" value="ui_game_symbol_moldyFruit" />
     <property name="DescriptionKey" value="jz_MoldyFruitDesc" />
 </item>
 
 <item name="jz_MoldyVeggies">
-	<property name="Extends" value="foodShamSandwich" />
+	<property name="Extends" value="foodMoldyBread" />
 	<property name="Weight" value="1" />
 	<property name="CustomIcon" value="ui_game_symbol_moldyVeggies" />
      <property name="DescriptionKey" value="jz_MoldyVeggiesDesc" />
@@ -25012,12 +25346,59 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <item name="jz_WoodBranch">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mwood" />
-	<property name="FuelValue" value="1" />
+	<property name="Tags" value="blunt,melee,weapon,meleeWeapon"/>
+	<property name="HoldType" value="2"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZBranchMelee.unity3d?BranchMeleePrefab" />
+	<property name="DropMeshfile" value="#@modfolder:Resources/JZBranchMelee.unity3d?BranchMeleePrefab"/>
+	<property name="Material" value="Mwood"/>
+	<property name="Stacknumber" value="5000"/> 
+	<property name="FuelValue" value="2"/>
+	<property name="EconomicValue" value="0"/>
 	<property name="CustomIcon" value="ui_game_symbol_woodBranch" />
 	<property name="Weight" value="5" />
 	<property name="DescriptionKey" value="jz_WoodBranchDesc" />
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+	
+	<effect_group name="stick" tiered="false" >
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="1"/> 
+		<passive_effect name="BlockDamage" operation="base_set" value="1"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="6" />
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+	</effect_group>
 </item>
 
 <item name="jz_WoodYoyo">
@@ -25796,268 +26177,772 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="UnlockedBy" value="jz_SchematicLargeEngine"/>
 </item>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<item name="jz_BarterForGoldenrodTea">
-    <property name="Extends" value="questMaster" />
-	<property name="DescriptionKey" value="barterForGoldenrodTeaDesc" />
+<item name="foodFishTacos"> <!-- Master Chef Tier 2 foods -->
+	<property name="Tags" value="food"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mplants"/>
+	<property name="Stacknumber" value="10"/> <!-- STK resource -->
+	<property name="EconomicValue" value="92"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="CraftingIngredientTime" value="10"/>
+	<!-- 14 is large round hold -->
+	<property name="UnlockedBy" value="perkMasterChef,foodFishTacosSchematic"/>
 	<property class="Action0">
-		<property name="QuestGiven" value="q_barterForGoldenrodTea" />
-		<property name="Delay" value="0" />
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
 	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="46"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="40"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/><display_value name="dFoodPoisoningRisk" value=".04"/> <!-- FP cooked -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
 </item>
 
-<item name="jz_BarterForCraftedRevolver">
-    <property name="Extends" value="questMaster" />
-	<property name="DescriptionKey" value="barterForCraftedRevolverDesc" />
+<item name="foodChiliDog"> <!-- Master Chef Tier 3 foods -->
+	<property name="Extends" value="foodCornOnTheCob"/>
+	<property name="EconomicValue" value="106"/>
+	<property name="UnlockedBy" value="perkMasterChef,foodChiliDogSchematic"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="53"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="30"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/><display_value name="dFoodPoisoningRisk" value=".04"/> <!-- FP cooked -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+
+<item name="foodShamChowder"> <!-- Master Chef Tier 2 foods -->
+	<property name="Extends" value="foodCanSham"/>
+	<property name="DisplayType" value="foodShamChowder"/>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+	<property name="EconomicValue" value="126"/>
+	<property name="UnlockedBy" value="perkMasterChef,foodShamChowderSchematic"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="53"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="80"/>
+		<display_value name="dFortitude" value="1"/>
+		<display_value name="dDuration" value="603"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="add" value="603"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="set" value="1803">
+			<requirement name="CVarCompare" cvar="$buffShamChowderDuration" operation="GT" value="1803"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffShamChowder"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/><display_value name="dFoodPoisoningRisk" value=".04"/> <!-- FP cooked -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+
+<item name="foodSteakAndPotato"> <!-- Master Chef Tier 1 foods -->
+	<property name="Tags" value="food"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mplants"/>
+	<property name="Stacknumber" value="10"/> <!-- STK resource -->
+	<property name="EconomicValue" value="70"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="CraftingIngredientTime" value="10"/>
+	<!-- 14 is large round hold -->
+	<property name="UnlockedBy" value="perkMasterChef,foodSteakAndPotatoSchematic"/>
 	<property class="Action0">
-		<property name="QuestGiven" value="q_barterForCraftedRevolver" />
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
 	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/><display_value name="dFoodPoisoningRisk" value=".04"/> <!-- FP cooked -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
 </item>
 
-<item name="jz_BarterForFirstAidBandage">
-    <property name="Extends" value="questMaster" />
-	<property name="DescriptionKey" value="barterForFirstAidBandageDesc" />
+<item name="drinkYuccaJuiceSmoothie"> <!-- Master Chef Tier 3 foods -->
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="drinkYuccaSmoothie"/>
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Stacknumber" value="10"/> <!-- STK drink -->
+	<property name="EconomicValue" value="156"/>
+	<property name="UnlockedBy" value="perkMasterChef,drinkYuccaJuiceSmoothieSchematic"/>
 	<property class="Action0">
-		<property name="QuestGiven" value="q_barterForFirstAidBandage" />
-	</property> 
-</item>
-
-<item name="jz_BarterForGrainAlcohol">
-    <property name="Extends" value="questMaster" />
-    <property name="DescriptionKey" value="barterForGrainAlcoholDesc" />
-	<property class="Action0">
-		<property name="QuestGiven" value="q_barterForGrainAlcohol" />
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="drinkJarEmpty"/>
 	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+	<effect_group tiered="false">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="78"/>
+			<display_value name="dStaminaRegen" value=".15"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="22"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="11"/>
+			<display_value name="dHypothermalResist" value="30"/>
+			<display_value name="dDuration" value="903"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="add" value="903"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="set" value="2703">
+			<requirement name="CVarCompare" cvar="$buffYuccaJuiceSmoothieDuration" operation="GT" value="2703"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffYuccaJuiceSmoothie"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
 </item>
 
-<item name="jz_BarterForForgedIron">
-    <property name="Extends" value="questMaster" />
-    <property name="DescriptionKey" value="barterForForgedIronDesc" />
+<item name="drinkYuccaJuiceSmoothieSchematic">
+	<property name="Extends" value="schematicNoQualityRecipeMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="drinkYuccaJuiceSmoothie"/>
+	<property name="Unlocks" value="drinkYuccaJuiceSmoothie"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkYuccaJuiceSmoothie" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_MeleePlank"> 
+	<property name="Tags" value="blunt,club,melee,grunting,light,weapon,meleeWeapon,jz_BluntSkillTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="Group" value="Ammo/Weapons,Basics"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZ2X4.unity3d?2X4Prefab" />
+	<property name="HoldType" value="2"/>
+	<property name="Material" value="Mwood"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="FuelValue" value="1"/>
+	<property name="ShowQuality" value="true"/>
+
 	<property class="Action0">
-		<property name="QuestGiven" value="q_barterForForgedIron" />
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
 	</property>
+
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".15"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+
+	<effect_group name="meleeClubWood">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="13.8"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="BlockDamage" operation="base_set" value="11.6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="13.5" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+	</effect_group>
 </item>
 
-<item name="jz_BarterForForgedSteel">
-    <property name="Extends" value="questMaster" />
-    <property name="DescriptionKey" value="barterForForgedSteelDesc" />
+<item name="jz_MeleePlankSpiked"> 
+	<property name="Tags" value="blunt,club,melee,grunting,light,weapon,meleeWeapon,jz_BluntSkillTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="Group" value="Ammo/Weapons,Basics"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZ2X4Spiked.unity3d?2X4SpikedPrefab" />
+	<property name="HoldType" value="2"/>
+	<property name="Material" value="Mwood"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="FuelValue" value="1"/>
+	<property name="ShowQuality" value="true"/>
+
 	<property class="Action0">
-		<property name="QuestGiven" value="q_barterForForgedSteel" />
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
 	</property>
+
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".15"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+
+	<effect_group name="meleeClubWood">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="13.8"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="BlockDamage" operation="base_set" value="11.6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="13.5" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+	</effect_group>
 </item>
 
-<item name="jz_BarterForCorrugatedMetalSheet">
-    <property name="Extends" value="questMaster" />
-	<property name="DescriptionKey" value="barterForCorrugatedMetalSheetDesc" />
+<item name="jz_MeleeTableLEgSpiked"> 
+	<property name="Tags" value="blunt,club,melee,grunting,light,weapon,meleeWeapon,jz_BluntSkillTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="Group" value="Ammo/Weapons,Basics"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZTableLegMeleeSpike.unity3d?TableLegMeleeSpikePrefab" />
+	<property name="HoldType" value="2"/>
+	<property name="Material" value="Mwood"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="FuelValue" value="1"/>
+	<property name="ShowQuality" value="true"/>
+
 	<property class="Action0">
-		<property name="QuestGiven" value="q_barterForCorrugatedMetalSheet" />
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
 	</property>
+
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".15"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+
+	<effect_group name="meleeClubWood">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="13.8"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="BlockDamage" operation="base_set" value="11.6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="13.5" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+	</effect_group>
 </item>
 
-<item name="jz_BarterForConcreteMix">
-    <property name="Extends" value="questMaster" />
-	<property name="DescriptionKey" value="barterForConcreteMixDesc" />
+<item name="jz_MeleeTableLeg"> 
+	<property name="Tags" value="blunt,club,melee,grunting,light,weapon,meleeWeapon,jz_BluntSkillTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="Group" value="Ammo/Weapons,Basics"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZTableLegMelee.unity3d?TableLegMeleePrefab" />
+	<property name="HoldType" value="2"/>
+	<property name="Material" value="Mwood"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="FuelValue" value="1"/>
+	<property name="ShowQuality" value="true"/>
+
 	<property class="Action0">
-		<property name="QuestGiven" value="q_barterForConcreteMix" />
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
 	</property>
+
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".15"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+
+	<effect_group name="meleeClubWood">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="13.8"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="BlockDamage" operation="base_set" value="11.6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="13.5" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+	</effect_group>
 </item>
 
-<item name="jz_BarterForMetalRivetSheet">
-    <property name="Extends" value="questMaster" />
-	<property name="DescriptionKey" value="barterForMetalRivetSheetDesc" />
+<item name="jz_MeleeRebar"> 
+	<property name="Tags" value="blunt,club,melee,grunting,light,weapon,meleeWeapon,jz_BluntSkillTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="Group" value="Ammo/Weapons,Basics"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZRebar2Melee.unity3d?Rebar2MeleePrefab" />
+	<property name="HoldType" value="2"/>
+	<property name="Material" value="Mwood"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="FuelValue" value="1"/>
+	<property name="ShowQuality" value="true"/>
+
 	<property class="Action0">
-		<property name="QuestGiven" value="q_barterForMetalRivetSheet" />
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
 	</property>
+
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".15"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+
+	<effect_group name="meleeClubWood">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="13.8"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="BlockDamage" operation="base_set" value="11.6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="13.5" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+	</effect_group>
 </item>
 
-<item name="jz_BarterForFirstAidKit">
-    <property name="Extends" value="questMaster" />
-	<property name="DescriptionKey" value="barterForFirstAidKitDesc" />
+<item name="jz_MeleePipe"> 
+	<property name="Tags" value="blunt,club,melee,grunting,light,weapon,meleeWeapon,jz_BluntSkillTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="Group" value="Ammo/Weapons,Basics"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZLgPipeMelee.unity3d?LgPipeMeleePrefab" />
+	<property name="HoldType" value="2"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="FuelValue" value="1"/>
+	<property name="ShowQuality" value="true"/>
+
 	<property class="Action0">
-		<property name="QuestGiven" value="q_barterForFirstAidKit" />
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
 	</property>
+
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".15"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
+
+	<effect_group name="meleeClubWood">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="13.8"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="BlockDamage" operation="base_set" value="11.6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="13.5" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+	</effect_group>
 </item>
 
-<!--
-	<display_value name="dBlockRepairAmount" value="150"/>
-    <display_value name="dBleeding" value="1"/>
-    <display_value name="dBurning" value=".30"/>
-    <display_value name="dStatStunEffect" value="4"/>
-    <display_value name="dTargetArmor" value="1"/>
-    <display_value name="dTargetPenetration" value="1"/>
-    <display_value name="dDegradationPerUse" value=".3"/>
-    <display_value name="dDamageDoor" value="1000"/>
-    <display_value name="dEntityDamage" value="11.8"/>
-	<display_value name="dBlockDamage" value="1"/>
-    <display_value name="dExDamageBlock" value="2500"/>
-    <display_value name="dExDamageEntity" value="420"/>
-    <display_value name="dExRadius" value="5"/>
-    <display_value name="dEntityDamageFire" value="120"/>
-	<display_value name="dDuration" value="14"/>
-    <display_value name="dFuseTime" value="4"/>
-    <display_value name="dStaminaChangeOT" value="0"/>
-    <display_value name="dNoiseMultiplier" value=".1"/>
-    <display_value name="dLightMultiplier" value="-.07"/>
-    <display_value name="dTreasureRadius" value="-1"/>
-    <display_value name="dCraftingTime" value="-.1"/>
-	<display_value name="dPlayerExpGain" value=".1"/>
-    <display_value name="dStaminaRegen" value=".2"/>  
-    <display_value name="dRunSpeed" value=".1"/>
-    <display_value name="foodHealthAmount" value="5"/>
-    <display_value name="dStopsBleeding" value="1"/>
-    <display_value name="dDiseaseResist" value="1"/>
-    <display_value name="dInstantHealth" value="40"/>
-	<display_value name="dHealthLoss" value=".1"/>
-	<display_value name="$waterAmountAdd" value="-40"/>
-	<display_value name="dStunResist" value="1"/>
-    <display_value name="dCureInfection" value=".1"/> 
-    <display_value name="dStrength" value="3"/>
-	<display_value name="dCarryCapacity" value="50"/>
-    <display_value name="dPerception" value="2"/>
-	<display_value name="dFortitude" value="2"/>
-	<display_value name="dMaxHealth" value="20"/>
-	<display_value name="dPhysicalDamageResist" value="50"/>
-	<display_value name="dHypothermalResist" value="50"/>
-	<display_value name="dHyperthermalResist" value="50"/>	
-    <display_value name="dFoodPoisoningRisk" value=".04"/> 
-    <display_value name="dBartering" value=".05"/>
-    <display_value name="dDysenteryRisk" value=".2"/>
-    <display_value name="dEfficientDigestion" value=".15"/>
-    <display_value name="dEntityDamageBrawling" value="3"/>
-	<display_value name="dCraftingSmeltTime" value=".5"/>
+<item name="jz_MeleeBranchSpiked"> 
+	<property name="Tags" value="blunt,club,melee,grunting,light,weapon,meleeWeapon,jz_BluntSkillTag"/>
+	<property name="DisplayType" value="melee"/>
+	<property name="Group" value="Ammo/Weapons,Basics"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZBranchSpiked.unity3d?BranchSpikedPrefab" />
+	<property name="HoldType" value="2"/>
+	<property name="Material" value="Mwood"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="FuelValue" value="1"/>
+	<property name="ShowQuality" value="true"/>
 
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".1"/>
 
-<property name="DisplayType" value="meleeRepairTool"/>
-melee
-motorTool
-meleeKnife
-simpleTool
-meleeTorch
-rangedGun
-rangedShotgun
-rangedLauncher
-rangedBow
-rangedTurret
-ammoBullet
-ammoBulletHP
-ammoBulletAP
-ammoShotgun
-ammoShotgunSlug
-ammoShotgunBreaching
-ammoBulletFake
-ammoLauncher
-ammoArrow
-ammoArrowFlaming
-ammoArrowExploding
-ammoGrenade
-ammoGrenadeContact
-ammoGrenadeTimedCharge
-ammoGrenadeFire
-ammoDart
-armorLight
-armorLightTempResist
-armorLightStealth
-armorHeavy
-armorHeavyHeatResist
-clothing
-clothingGhillieHood
-clothingGhillie
-armor
-clothingShades
-clothingAviatorGoggles
-clothingSkiGoggles
-clothingNerdGlasses
-clothingCigar
-clothingRunningShoes
-clothingJacketLetter
-medical
-medicalVitamins
-medicalPainkillers
-cureInfection
-drugSteroids
-drugRecog
-drugFortBites
-food
-foodWater
-foodWaterNegative
-foodShamChowder
-foodPumpkinCheesecake
-foodWaterOnly
-waterDysentery
-waterRedTea
-water
-waterGoldenrod
-drinkYuccaSmoothie
-waterCoffee
-waterMegaCrush
-waterBeer
-waterGrandpasMoonshine
-waterGrandpasAwesomeSauce
-waterGrandpasLearningElixir
-toolBellows
-toolAnvil
-DisplayType
+		<property name="UseGrazingHits" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="65"/>
+		<property name="SwingAngle" value="180"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
 
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Sphere" value=".15"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
 
+		<property name="UseGrazingHits" value="true"/>
+		<property name="IsHorizontalSwing" value="true"/>
+		<property name="GrazeStart" value=".25"/>
+		<property name="GrazeEnd" value=".32"/>
+		<property name="SwingDegrees" value="120"/>
+		<property name="SwingAngle" value="90"/>
+		<property class="HitSounds">
+			<property name="Override0" value="organic" param1="woodhitorganic"/>
+		</property>
+		<property class="GrazeSounds">
+			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+		</property>
+	</property>
 
+	<effect_group name="meleeClubWood">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="13.8"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
 
+		<passive_effect name="BlockDamage" operation="base_set" value="11.6"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
 
-
-
-
-
-
-
-
-
-
-
-
-
--->
-
-
-
-
-
-
-
-
-
-
-
-
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="13.5" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="60,110" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
+	</effect_group>
+</item>
 
 
 

@@ -187,7 +187,10 @@ The overall plan for loot distribution:
 </lootqualitytemplates>
 
 
-<lootgroup name="empty"/>
+<lootgroup name="empty">
+	<item name="cobweb" prob="1" count="0" />
+	<item name="cobweb" prob="0.1"  />
+</lootgroup>
 
 <lootgroup name="groupQuestChallenge">
 	<item name="qc_silenceofthelambs"/>
@@ -2024,7 +2027,6 @@ The overall plan for loot distribution:
 	<item name="resourceArrowHeadSteelAP"/>
 	<item name="toolCookingGrill"/>
 	<item name="toolCookingPot"/>
-	<item name="medicalFirstAidKit"/>
 	<item name="bedroll"/>
 	<item group="groupApparelShirtLong"/>
 	<item group="groupApparelPants"/>
@@ -2098,7 +2100,6 @@ The overall plan for loot distribution:
 
 <lootgroup name="airdropMedicine" count="all">
 	<item name="drugPainkillers" count="1,3"/>
-	<item name="medicalFirstAidKit" count="1,2"/>
 	<item name="drugAntibiotics" count="1,2"/>
 	<item name="toolBeaker" prob="0.4"/>
 	<item name="jz_MedicalAntivirialMeds" count="1,3" />
@@ -2125,7 +2126,6 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="airdropBouncer" count="all">
-	<item name="medicalFirstAidKit" count="1,2" />
 	<item name="drugPainkillers" />
 	<item name="jz_MedicalStimulant" count="1,2" />
 	<item name="foodCanBeef" />
@@ -2281,20 +2281,6 @@ The overall plan for loot distribution:
 	<item group="groupApparelClothes"/>
 	<item name="apparelFacialPiercings" prob="0.1"/>
 	<item name="resourceLockPick" count="2,8"/>
-</lootgroup>
-
-<lootgroup name="ZombieFootballPlayer">
-	<item name="armorFootballHelmetZU" prob="2.5"/>
-	<item name="apparelTShirtZU" prob="2.5"/>
-	<item name="apparelDenimPants" prob="2.5"/>
-	<item name="apparelRunningShoesRegular" prob="2.5"/>
-	<item name="resourceScrapPolymers" count="1,3"/>
-	<item name="drugPainkillers"/>
-	<item name="medicalBandage"/>
-	<item name="drugVitamins"/>
-	<item group="rareMedicine"/>
-	<item group="groupQuestChallenge" prob="0.073"/>
-	<item group="groupTreasureMaps" prob="0.092"/>
 </lootgroup>
 
 <lootgroup name="bicycleParts">
@@ -2690,7 +2676,6 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootgroup name="groupQuestMedical">
 	<item name="drugVitamins" count="2,4" loot_prob_template="GradeALoot"/>
 	<item name="medicalFirstAidBandage" count="4,5" loot_prob_template="GradeALoot"/>
-	<item name="medicalFirstAidKit" count="2,3" prob="1.0"/>
 	<item name="drugAntibiotics" count="1,3" prob="1.0"/>
 	<item name="drugHerbalAntibiotics" count="2,4" loot_prob_template="GradeALoot"/>
 	<item name="drugSteroids" count="3,5" loot_prob_template="GradeCLoot"/>
@@ -2911,9 +2896,54 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item name="drinkCanEmpty"/>
 </lootgroup>
 
+<lootgroup name="lumberjacks" >
+	<item name="jz_HandSaw" prob="21" />
+	<item name="jz_OldAxe" prob="26" />
+    <item name="jz_DrinkMead" prob="16" />
+	<item group="rareTools" prob="6" />
+	<item name="drinkJarGrainAlcohol" prob="9" />
+	<item name="resourceForgedIron" count="1,4" prob="9" />
+	<item name="resourceForgedSteel" count="1,4" prob="9" />
+</lootgroup>
 
+<lootgroup name="minerLoot" >
+	<item group="tools" prob="5" />
+	<item name="armorMiningHelmet" mods="modArmorHelmetLight" mod_chance="1" prob="5" />
+	<item name="thrownDynamite" count="2,6" prob="5" />
+	<item group="rareOres" prob="20" />
+	<item name="resourceScrapIron" count="30,150" prob="20" />
+	<item name="meleeToolTorch" prob="25" />
+</lootgroup>
 
+<lootgroup name="zombieUtilityWorker">
+	<item group="groupApparelShirtLong" prob="7" />
+	<item group="groupApparelPants" prob="7" />
+	<item name="apparelDenimShortsPants" mods="dye" mod_chance="0.00" prob="7"/>
+	<item group="groupApparelTankTopTShirt" prob="7" />
+	<item name="apparelBandana" prob="7" />
+	<item group="groupApparelShirtLong" prob="7" />
+	<item group="tools" prob="3" />
+	<item name="apparelWornBoots" prob="7" />
+	<item name="apparelShades" prob="7" />
+	<item name="armorMiningHelmet" mods="modArmorHelmetLight" mod_chance="1" prob="20" />
+	<item name="meleeToolFlashlight02" prob="7" />
+	<item name="resourceNail" count="10,40" prob="8" />
+	<item name="resourceForgedIron" count="5,15" prob="3" />
+	<item name="resourceForgedSteel" count="3,12" prob="3" />
+</lootgroup>
 
+<lootgroup name="zombieFootballPlayer">
+	<item name="armorFootballHelmetZU" prob="17" />
+	<item name="apparelTShirtZU" prob="17" />
+	<item name="apparelDenimPants" mods="dye,dye" mod_chance="1" prob="17"/>
+	<item name="apparelRunningShoesRegular" mods="dye,dye" mod_chance="1" prob="17"/>
+	<item name="drugPainkillers" prob="6" />
+	<item name="medicalFirstAidBandage" prob="8" />
+	<item name="drugVitamins" prob="11" />
+	<item group="rareMedicine" prob="5"/>
+	<item group="groupQuestChallenge" prob="1" />
+	<item group="groupTreasureMaps" prob="1" />
+</lootgroup>
 
 
 
@@ -4308,6 +4338,262 @@ treasureTemplate
 <lootcontainer id="233" count="0,1" size="6,3" sound_open="UseActions/open_trashcan" sound_close="UseActions/close_trashcan" loot_quality_template="qualBaseTemplate">
 	<item name="jz_DrinkCleanOuncesOfWater" count="10,300"/>
 </lootcontainer>
+
+<!-- JZMOD Zombie Loot -->
+<lootcontainer id="299" count="0" size="4,4" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+    <item group="empty" count="0" />
+</lootcontainer>
+<!-- ZombieFootballPlayer -->
+<lootcontainer id="300" count="1,2" size="4,4" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="60" />
+	<item group="zombieFootballPlayer" prob="10" />
+    <item group="empty" prob="30" />
+</lootcontainer>
+
+<!-- ZombieCheerleader -->
+<lootcontainer id="301" count="1,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="50" />
+	<item name="apparelTShirtZU" prob="3" />
+	<item name="apparelDenimShortsPants" mods="dye" mod_chance="0.00" prob="3"/>
+	<item name="apparelRunningShoesRegular" mods="dye,dye" mod_chance="1" prob="2"/>
+	<item group="groupQuestChallenge"  prob="1" />
+	<item group="groupTreasureMaps"  prob="1" />
+    <item group="empty" prob="40" />
+</lootcontainer>
+
+<!-- ZombieSkateboarder -->
+<lootcontainer id="302" count="0,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="50" />
+	<item name="apparelHoodySweatshirt" mods="dye" mod_chance="0.00" prob="2.5"/>
+	<item name="apparelDenimPants" mods="dye,dye" mod_chance="1" prob="2.5"/>
+	<item name="apparelRunningShoesRegular" mods="dye,dye" mod_chance="1" prob="2"/>
+	<item name="resourceMechanicalParts" count="1,3" prob="1" />
+	<item group="groupQuestChallenge"  prob="1" />
+	<item group="groupTreasureMaps"  prob="1" />
+    <item group="empty" prob="40" />
+</lootcontainer>
+
+<!-- zombieOldTimer / zombieCowboy -->
+<lootcontainer id="303" count="1,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="32" />
+	<item group="weaponsMagnumParts" prob="1" />
+	<item group="weaponsHuntingRifleParts" prob="1" />
+	<item name="thrownDynamite" count="1,3" prob="1" />
+	<item name="apparelCowboyHat" mods="dye,dye" mod_chance="1" prob="3" />
+	<item name="apparelBandana" mods="dye" mod_chance="0.00" prob="3"/>
+	<item name="apparelCoatLeatherPoncho" prob="3" />
+	<item name="apparelDenimPants" mods="dye" mod_chance="0.00" prob="3"/>
+	<item name="apparelCowboyBoots" prob="6" />
+	<item name="apparelCigarette" prob="1" />
+	<item name="apparelCigar" prob="1" />
+	<item group="rareOres" prob="1" />
+	<item name="drinkJarGrainAlcohol" prob="1" />
+	<item group="cannedfood" count="1" prob="1" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5,32" prob="1" />
+	<item group="groupTreasureMaps"  prob="1" />
+    <item group="empty" prob="40" />
+</lootcontainer>
+
+<!-- ZombieBiker -->
+<lootcontainer id="304" count="1,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="45" />
+	<item name="armorSwatHelmet" mods="modArmorHelmetLight" mod_chance=".2" prob="2"/>
+	<item name="apparelGothPants" prob="2" />
+	<item name="apparelGothBoots" prob="2" />
+	<item name="apparelShades" prob="6" />
+	<item name="drinkJarBeer" prob="2" />
+	<item name="drinkJarGrainAlcohol" prob="1" />
+	<item name="oldCash" count="1,15" prob="3" />
+	<item name="drugAntibiotics" prob="1" />
+	<item name="drugPainkillers" prob="1" />
+	<item group="weaponsCommonParts" prob="1" />
+	<item group="tools" prob="1" />
+	<item name="meleeClubIron" prob="1" />
+	<item name="meleeClubBaseballBat" prob="2" />
+	<item name="meleeToolKnifeIron" prob="1" />
+	<item name="meleeToolKnifeMachete" prob="2" />
+	<item name="jz_ProfessionPage" prob="1" />
+	<item group="skillBookChance" prob="1" />
+    <item group="empty" prob="25" />
+</lootcontainer>
+
+<!-- ZombieStripper -->
+<lootcontainer id="305" count="1,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="46" />
+	<item name="oldCash" count="4,45" prob="8" />
+	<item name="medicalBloodDrawKit" prob="2" />
+	<item name="drugPainkillers" prob="2" />
+	<item name="drugVitamins" prob="4" />
+	<item name="drugHerbalAntibiotics" prob="1" />
+	<item name="resourceFeather" count="5,15" prob="12" />
+    <item group="empty" prob="25" />
+</lootcontainer>
+
+<!-- ZombieFarmer -->
+<lootcontainer id="306" count="1,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="32" />
+	<item group="tools" prob="5" />
+	<item group="farmCrops" prob="10" />
+	<item group="seeds" prob="22" />
+	<item name="meleeToolShovelIron" prob="5" />
+	<item name="drinkJarBeer" prob="1" />
+	<item group="empty" prob="25" />
+</lootcontainer>
+
+<!-- generic zombie loot-->
+<lootcontainer id="307" count="1,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="25" />
+	<item group="groupApparelClothes" prob="20" />
+	<item group="rottenFood" prob="6" />
+	<item group="groupApparelHazmat"  prob="3" />
+	<item group="groupQuestChallenge"  prob="1" />
+	<item name="thrownAmmoPipeBomb" count="1,2" prob="2" />
+	<item group="groupTreasureMaps"  prob="1" />
+	<item name="apparelFacialPiercings" prob="5" />
+	<item group="T1BookList" prob="6" />
+    <item group="empty" prob="25" />
+</lootcontainer>
+
+<!-- zombie cop-->
+<lootcontainer id="308" count="1,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="18" />
+	<item group="T2BookList" prob="5" />
+	<item group="groupAmmoSmall" prob="20"/>
+	<item name="meleeToolFlashlight02" prob="10" />
+	<item name="armorMilitaryVest" prob="5" />
+	<item name="resourceMilitaryFiber" count="1,4" prob="10" />
+    <item name="jz_PoliceBaton" prob="6" />
+    <item group="pistolWeaponParts" prob="5" />
+    <item group="skillBookChance"  prob="1" />
+    <item group="empty" prob="20" />
+</lootcontainer>
+
+<!-- zombie nurse -->
+<lootcontainer id="309" count="1,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="55" />
+	<item group="medicine" prob="20"/>
+	<item name="toolBeaker" prob="5" />
+    <item group="empty" prob="20" />
+</lootcontainer>
+
+<!-- fatHawaiianZombie, fat zombie -->
+<lootcontainer id="310" count="1,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="21" />
+	<item group="rottenFood" prob="9" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="5,32" prob="7" />
+	<item group="pistolWeaponParts" prob="4" />
+    <item group="T1BookList" prob="7" />
+	<item group="cannedfood" prob="7" />
+	<item name="drugPainkillers" prob="6" />
+	<item group="groupAmmoSmall" prob="13" />
+    <item group="skillBookChance"  prob="1" />
+    <item group="empty" prob="25" />
+</lootcontainer>
+
+<!-- feral zombie loot -->
+<lootcontainer id="311" count="1,2" size="4,4" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="10" />
+	<item name="resourceBone" count="1,4" prob="3" />
+	<item group="CompoundBowParts" prob="5" />
+    <item group="CompoundCrossbowParts" prob="5" />
+	<item group="weaponsCommonParts" prob="5" />
+    <item group="weaponsMagnumParts" prob="5" />
+	<item group="weaponsMilitaryParts" prob="5" />
+	<item group="militaryArmor" prob="5" />
+	<item group="T1BookList" prob="8" />
+	<item group="T2BookList" prob="7" />
+	<item group="T3BookList" prob="6" />
+    <item name="jz_ProfessionPage" prob="10" />
+	<item group="skillBookChance" prob="1" />
+    <item group="empty" prob="25" />
+</lootcontainer>
+
+<!-- zombieMaleHazmat -->
+<lootcontainer id="312" count="1,3" size="8,4" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="56" />
+	<item group="groupApparelHazmat"  prob="3" />
+	<item group="rareMedicine" prob="2" />
+	<item name="drinkJarGrainAlcohol" count="1,4" prob="4" />
+	<item name="resourceDuctTape" count="1,3" prob="6" />
+	<item group="groupQuestChallenge"  prob="1" />
+	<item group="groupTreasureMaps"  prob="1" />
+    <item name="jz_ProfessionPage" prob="1" />
+    <item group="skillBookChance" prob="1" />
+    <item group="empty" prob="25" />
+</lootcontainer>
+
+<!-- snowzombie, lumberjack zombie loot-->
+<lootcontainer id="313" count="1,2" size="4,4" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="33" />
+	<item group="lumberjacks" prob="15" />
+	<item group="warmClothes" prob="15" />
+	<item group="groupApparelHazmat"  prob="2" />
+	<item group="rareOres" prob="8" />
+    <item name="jz_ProfessionPage" prob="1" />
+    <item group="skillBookChance" prob="1" />
+    <item group="empty" prob="25" />
+</lootcontainer>
+
+<!-- ZombieSoldier loot -->
+<lootcontainer id="314" count="1,2" size="4,4" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="54" />
+	<item group="weaponsMilitaryParts" prob="1" />
+	<item group="groupAmmoAdvanced" count="2,6" prob="5" />
+	<item group="militaryArmor" prob="10" />
+	<item name="apparelNightvisionGoggles" prob="3" />
+    <item name="jz_ProfessionPage" prob="1" />
+	<item group="skillBookChance" prob="1" />
+    <item group="empty" prob="25" />
+</lootcontainer>
+
+<!-- zombie utility worker / construction worker loot -->
+<lootcontainer id="315" count="1,2" size="4,4" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="33.33" />
+	<item group="zombieUtilityWorker" prob="33.33" />
+    <item group="empty" prob="33.33" />
+</lootcontainer>
+
+<!-- zombieBusinessMan -->
+<lootcontainer id="316" count="0,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item group="junkPersonal" prob="35" />
+	<item group="groupApparelSuit" prob="11" />
+	<item name="oldCash" count="5,20" prob="5" />
+	<item group="groupQuestChallenge"  prob="1" />
+	<item group="groupTreasureMaps"  prob="1" />
+    <item group="T1BookList" prob="10" />
+	<item group="T2BookList" prob="7" />
+	<item group="T3BookList" prob="5" />
+    <item group="empty" prob="25" />
+</lootcontainer>
+
+<!--Burnt Zombie Loot -->
+<lootcontainer id="317" count="0,2" size="3,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+	<item name="resourceCoal" count="5,15" />
+</lootcontainer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- the max cap for lootcontainer id is 1023 -->
 </set>
 </configs> 

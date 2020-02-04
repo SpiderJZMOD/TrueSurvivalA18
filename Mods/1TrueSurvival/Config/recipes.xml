@@ -13,7 +13,6 @@
 <recipe name="resourceScrapBrass" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourceScrapIron" count="1" tooltip="ttScrapMetalIron" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourceScrapLead" count="1" tooltip="ttScrapMetalLead" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
-<recipe name="resourceWood" count="1" tooltip="ttScrapMetalLead" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourceYuccaFibers" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourceClayLump" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 <recipe name="resourcePaint" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
@@ -804,6 +803,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_DrinkDirtyOuncesOfWater" count="16"/>
 </recipe>
 
+<recipe name="jz_DrinkCleanOuncesOfWater" count="16" craft_area="campfire" craft_tool="toolCookingPot" craft_time="4" craft_exp_gain="0" >
+	<ingredient name="jz_DrinkDrityDrinkOfWater" count="1"/>
+</recipe>
+
 <recipe name="jz_FoodRatOnAStick" count="1" craft_area="campfire" craft_tool="jz_Stick" craft_time="4" craft_exp_gain="10" >
 	<ingredient name="jz_FoodDeadRat" count="1" />
 </recipe>
@@ -1490,6 +1493,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_PartsSniperRifleBarrel" count="1"/>
 	<ingredient name="jz_PartsSniperRifleStock" count="1"/>
 	<ingredient name="jz_PartsSniperRifleReceiver" count="1"/>
+	<ingredient name="jz_MilitaryGunParts" count="2"/>
+</recipe>
+
+<recipe name="gunTacticalAR" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_MarksmanCraftingTag">
+	<ingredient name="jz_PartsARBarrel" count="1"/>
+	<ingredient name="jz_PartsARReceiver" count="1"/>
+	<ingredient name="jz_PartsARStock" count="1"/>
 	<ingredient name="jz_MilitaryGunParts" count="2"/>
 </recipe>
 

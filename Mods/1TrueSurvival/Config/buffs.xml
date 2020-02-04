@@ -207,10 +207,6 @@
 				<requirement name="HasBuff" buff="buffIsOnFire"/>
 			</triggered_effect>
 
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffPerkPain">
-				<requirement name="StatComparePercCurrentToMax" stat="Health" operation="LTE" value="@PainTolerance"/>
-			</triggered_effect>
-
 			<!-- One time weather survival buff for newbies -->
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNewbieCoat"/>
 
@@ -376,12 +372,12 @@
 		<!-- JZMOD FOOD STAT NOTIFICATION -->
 		<effect_group name="Stuffed Buff Notification">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GTE" value="101"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffFoodStuffed"/>	
-				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>					
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffFoodStuffed"/>				
 		</effect_group>
 		<effect_group name="100% Full Buff Notification">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="Equals" value="100"/>
 			<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+			<requirement name="NotHasBuff" buff="jz_BuffFoodStuffed"/>
 			<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
 			<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffPlayerFoodNotification"/>		 	
@@ -743,7 +739,6 @@
 		<stack_type value="replace"/>
 		<effect_group>
 			
-			<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar=".DeadEyeKillCounter" operation="set" value="0"/>
 			<!-- perkIntrinsicImmunity update; will likely have to overhaul diseases but... not now -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$illnessChance" operation="set" value="20">
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="Equals" value="1"/> </triggered_effect>
@@ -816,6 +811,23 @@
 		<!-- Be careful with that remove_on_death="false". You may have to restart screen effects, particles, etc. on game load. -->
 		<stack_type value="ignore"/>
 		<effect_group>
+			<!-- Taking care of food/water not being maxed with all the game start / initial chunk generation -->
+			<passive_effect name="WaterChangeOT" operation="base_add" value="2,2" duration="0,8"/>
+			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="2,2" duration="0,8"/><!--Tiredness-->
+					
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value="4"/><!--VeggieVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value="4"/><!--FruitVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value="4"/><!--GrainVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value="4"/><!--ProteinVitamin-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="100"/><!--Food-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodAmountAdd" operation="add" value="99"/><!--Tiredness-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_WellnessLv" operation="add" value="80"/><!--Wellness-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="80"/><!--Health-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="99"/><!--Hydration-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmount" operation="add" value="48"/><!--Hydration-->
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
+		</effect_group>
+		<effect_group>
 			<requirement name="PlayerLevel" operation="LT" value="2"/>
 				<passive_effect name="HypothermalResist" operation="base_add" value="65"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="65"/>
@@ -851,26 +863,259 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffNewbieCoat">
 				<requirement name="PlayerLevel" operation="GT" value="5"/>
 			</triggered_effect>
-
-			<!-- Taking care of food/water not being maxed with all the game start / initial chunk generation -->
-			<passive_effect name="WaterChangeOT" operation="base_add" value="2,2" duration="0,8"/>
-			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="2,2" duration="0,8"/><!--Tiredness-->
-					
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value="4"/><!--VeggieVitamin-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value="4"/><!--FruitVitamin-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value="4"/><!--GrainVitamin-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value="4"/><!--ProteinVitamin-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="100"/><!--Food-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodAmountAdd" operation="add" value="99"/><!--Tiredness-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_WellnessLv" operation="add" value="80"/><!--Wellness-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="80"/><!--Health-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="waterAmountAdd" operation="add" value="99"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodAmount" operation="add" value="48"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="waterAmount" operation="add" value="48"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
 		</effect_group>
 		
+		
 	</buff>
+
+	<buff name="buffPerkCharismaticNature" name_key="perkCharismaticNatureName" description_key="buffPerkCharismaticNatureDesc" icon="ui_game_symbol_talk" icon_color="0,255,0" icon_blink="false" hidden="false">
+	<!--
+	<buff name="buffPerkCharismaticNature" tooltip_key="buffPerkCharismaticNatureTooltip" icon="ui_game_symbol_talk">
+	-->
+		<stack_type value="replace"/>
+		<duration value="5"/>
+
+		<effect_group>
+			<requirement name="CVarCompare" cvar="CharismaticNature" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="CharismaticNature" operation="LTE" value="3"/>
+				<passive_effect name="AttributeLevel" tags="jz_StoneaxeCrafting" operation="base_add" value="1"/>
+				<passive_effect name="AttributeLevel" tags="jz_StoneaxeCrafting" operation="base_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="CharismaticNature" operation="GTE" value="2"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".2"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".2" tags="melee"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="CharismaticNature" operation="GTE" value="4"/>
+				<passive_effect name="AttributeLevel" tags="jz_StoneaxeCrafting" operation="base_add" value="2"/>
+				<passive_effect name="AttributeLevel" tags="jz_StoneaxeCrafting" operation="base_add" value="2"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="CharismaticNature" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffPerkParkour" name_key="buffPerkParkourName" description_key="buffPerkParkourDesc" icon="ui_game_symbol_parkour">
+		<stack_type value="replace"/>
+		<duration value="5"/>
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value="3"/>
+			<triggered_effect trigger="onSelfFallImpact" action="RemoveBuff" buff="buffPerkParkour"/>
+		</effect_group>
+		<!-- to activate <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffPerkParkour"/> -->
+	</buff>	
+<buff name="buffAnimalTracker" name_key="buffAnimalTrackerName" description_key="buffAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
+		<duration value="0"/>
+		<update_rate value=".5"/>
+		<display_value value=".AnimalTrackerDelay"/>
+		<display_value_format value="time"/>
+
+		<effect_group name="Startup">
+			<!-- set the time delay for animal tracking -->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="4">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="LT" value="2"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="3.5">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="3">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="2.5">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="2">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="5"/></triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="add" value="-.5"/>
+		</effect_group>
+
+		<effect_group name="check conditions for a successful track">
+			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="1"/>
+				<requirement name="HasTrackedEntity" tags="perkAT1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/>
+				<requirement name="HasTrackedEntity" tags="perkAT2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/>
+				<requirement name="HasTrackedEntity" tags="perkAT4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="5"/>
+				<requirement name="HasTrackedEntity" tags="perkAT5"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group>
+			<!-- tracking successful, activate next buff -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffAnimalTrackerAcquired">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAnimalTracker">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
+			</triggered_effect>
+
+			<!-- abort -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAnimalTracker">
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="Tracking not successful, shutdown">
+			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffAnimalTrackerNoneTooltip"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAnimalTracker"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffAnimalTrackerAcquired" name_key="buffAnimalTrackerAcquiredName" description_key="buffAnimalTrackerAcquiredDesc" icon="ui_game_symbol_animal_tracker" icon_color="0,255,0">
+		<duration value="0"/>
+		<display_value value=".AnimalTrackerLoseTimer"/>
+		<display_value_format value="time"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAnimalTracker"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20">
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group name="check conditions for no trackable animals">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="1"/>
+				<requirement name="HasTrackedEntity" tags="perkAT1" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/>
+				<requirement name="HasTrackedEntity" tags="perkAT2" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT3" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/>
+				<requirement name="HasTrackedEntity" tags="perkAT4" />
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="5"/>
+				<requirement name="HasTrackedEntity" tags="perkAT5" />
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="Track animals">
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT1">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="1"/></passive_effect>
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT2">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/></passive_effect>
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT3">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/></passive_effect>
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT4">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/></passive_effect>
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT5">
+				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="5"/></passive_effect>
+		</effect_group>
+
+		<effect_group name="Tracking time ran out or no targets">
+			<requirements compare_type="or">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerLoseTimer" operation="LTE" value="0"/>
+				<requirement name="CVarCompare" cvar=".AnimalTrackerTerminate" operation="Equals" value="1"/>
+			</requirements>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffPerkAnimalTrackerLostTooltip"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAnimalTrackerAcquired"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffBrawlerNoTeeth" name_key="buffBrawlerNoTeethName" description_key="buffBrawlerNoTeethDesc" icon="ui_game_symbol_boxer">
+		<duration value="0"/>
+		<effect_group>
+			<passive_effect name="BuffProcChance" operation="base_set" value="0" tags="buffInfectionCatch"/>
+			<passive_effect name="BuffProcChance" operation="perc_set" value="-5" tags="buffInfectionCatch"/>
+		</effect_group>
+	</buff>
+	<buff name="buffBurstCounter" name_key="buff Burst Counter" icon="ui_game_symbol_rifle" remove_on_death="false" hidden="true">
+		<duration value="2"/>
+		<stack_type value="replace"/>
+		<update_rate value=".6"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".BurstCounter" operation="add" value="1">
+				<requirement name="HoldingItemHasTags" tags="perkAutoWeaponsDamage"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".BurstCounter" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".BurstCounter" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffPistolPeteSwissKnees" name_key="buffPistolPeteSwissKnees" icon="ui_game_symbol_pistol" hidden="true">
+		<duration value="20"/>
+		<stack_type value="replace"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".PistolPeteSwissKnees" operation="add" value="10"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryCrippled01">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@.PistolPeteSwissKnees"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".PistolPeteSwissKnees" operation="add" value="10"/>
+			<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="buffInjuryCrippled01">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@.PistolPeteSwissKnees"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".PistolPeteSwissKnees" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffAutoWeaponsRagdoll" name_key="buffAutoWeaponsRagdoll" icon="ui_game_symbol_pistol" hidden="true">
+		<duration value="5"/>
+		<stack_type value="replace"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AutoWeaponsRagdoll" operation="add" value="4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryKnockdown01">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@.AutoWeaponsRagdoll"/>
+				<requirement name="NotHasBuff" buff="buffInjuryKnockdown01Cooldown"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".AutoWeaponsRagdoll" operation="add" value="4"/>
+			<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="buffInjuryKnockdown01">
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@.AutoWeaponsRagdoll"/>
+				<requirement name="NotHasBuff" buff="buffInjuryKnockdown01Cooldown"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AutoWeaponsRagdoll" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffAutoWeaponsComplete" name_key="buffAutoWeaponsCompleteName" description_key="buffAutoWeaponsCompleteDesc" showonhud="false" icon="ui_game_symbol_rifle" icon_color="0,255,0">
+		<duration value="20"/>
+		<stack_type value="replace"/>
+		<effect_group>
+			<passive_effect name="RunSpeed" operation="perc_add" value=".2"/>
+		</effect_group>
+	</buff>
+
+	<buff name="buffUrbanCombatAdrenalineRush" name_key="buffUrbanCombatAdrenalineRushName" description_key="buffUrbanCombatAdrenalineRushDesc" showonhud="false" icon="ui_game_symbol_light_armor2" icon_color="0,255,0">
+		<duration value="20"/>
+		<stack_type value="replace"/>
+	</buff>
+
 
 <!-- ****************** Injury Debuffs: Bleeding, Broken Limbs, Stunned, etc. ****************** -->
 	<buff name="buffInjuryBleedingZombie" name_key="buffInjuryBleedingZombie" icon="ui_game_symbol_critical" icon_color="255,255,0" icon_blink="true" hidden="true">
@@ -1316,10 +1561,7 @@
 		<stack_type value="replace"/>
 		<duration value="2"/>
 		<display_value value=".stunDisplay"/><display_value_key value="{0}"/>
-		<requirements compare_type="or">
-			<requirement name="NotHasBuff" buff="buffDrugPainkillers"/>
-		</requirements>
-
+		
 		<effect_group>
 			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.8,.2" duration="0,2"/>
 			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.8,.2" duration="0,2"/>
@@ -1349,7 +1591,6 @@
 		<display_value value=".stunDisplay"/><display_value_key value="{0}"/>
 
 		<requirements compare_type="or">
-			<requirement name="NotHasBuff" buff="buffDrugPainkillers"/>
 			<requirement name="NotHasBuff" buff="buffInjuryStunned02"/>
 			<requirement name="NotHasBuff" buff="buffInjuryStunned01Cooldown"/>
 		</requirements>
@@ -1386,7 +1627,6 @@
 		<display_value value=".stunDisplay"/><display_value_key value="{0}"/>
 
 		<requirements compare_type="or">
-			<requirement name="NotHasBuff" buff="buffDrugPainkillers"/>
 			<requirement name="NotHasBuff" buff="buffInjuryStunned01Cooldown"/>
 		</requirements>
 
@@ -2426,8 +2666,8 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="set" value="3"/>
 			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="player#vomit"/>
 
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerFoodAdd" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerAwakeAdd" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmount" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$waterAmountAdd2" operation="set" value="0"/>
@@ -2572,13 +2812,6 @@
 				<requirement name="CVarCompare" cvar="infectionCounter" operation="LT" value="0"/>
 			</triggered_effect>
 
-			<!--
-			<effect_group>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugHoneyDuration" operation="subtract" value="@$MetabolismDuration"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugHoneyDisplay" operation="set" value="@$buffDrugHoneyDuration"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugHoneyDisplay" operation="divide" value="@$MetabolismDuration"/>
-			</effect_group>
-			-->
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$infectionCureCounter" operation="add" value="-2">
 				<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="GT" value="0"/>
 			</triggered_effect>
@@ -2862,7 +3095,7 @@
 		<stack_type value="ignore"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffStatusThirsty01">
-				<requirement name="StatComparePercCurrentToMax" stat="Water" operation="GT" value="0.77"/>
+				<requirement name="StatComparePercCurrentToMax" stat="Water" operation="GT" value="0.49"/>
 			</triggered_effect>
 		</effect_group>
 	</buff>
@@ -2877,7 +3110,7 @@
 			<passive_effect name="HealthMaxModifierOT" operation="base_subtract" value=".1"/>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value=".5">
-				<requirement name="StatComparePercCurrentToMax" stat="Water" operation="LTE" value=".26"/>
+				<requirement name="StatComparePercCurrentToMax" stat="Water" operation="LTE" value=".05"/>
 			</triggered_effect>
 		</effect_group>
 
@@ -2886,7 +3119,7 @@
 		</effect_group>
 
 		<effect_group>
-			<requirement name="StatComparePercCurrentToMax" stat="Water" operation="GTE" value="0.32"/>
+			<requirement name="StatComparePercCurrentToMax" stat="Water" operation="GTE" value="0.20"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffStatusThirsty02"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffStatusThirsty01"/>
 		</effect_group>
@@ -3071,6 +3304,7 @@
 			
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffPlayerFoodNotificationOC">
 				<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotification"/>
+				<requirement name="NotHasBuff" buff="jz_BuffFoodStuffed"/>
 				<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
 				<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 			</triggered_effect>
@@ -3111,6 +3345,9 @@
 			
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffPlayerFoodNotificationOC">
 				<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotification"/>
+				<requirement name="NotHasBuff" buff="jz_BuffFoodStuffed"/>
+				<requirement name="NotHasBuff" buff="buffStatusHungry01"/>
+				<requirement name="NotHasBuff" buff="buffStatusHungry02"/>
 			</triggered_effect>
 			
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="jz_PlayerFoodStat" operation="subtract" value="1"/>
@@ -3543,47 +3780,16 @@
 		</effect_group>
 	</buff>
 
-	<buff name="buffDrugPainkillers" name_key="buffDrugPainkillersName" description_key="buffDrugPainkillersDesc" icon="ui_game_symbol_pills">
-		<stack_type value="replace"/><duration value="0"/>
-		<display_value value=".buffDrugPainkillersDisplay"/><display_value_format value="time"/>
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="subtract" value="@$MetabolismDuration"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugPainkillersDisplay" operation="set" value="@$buffDrugPainkillersDuration"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugPainkillersDisplay" operation="divide" value="@$MetabolismDuration"/>
-		</effect_group>
-		<effect_group>
-			<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="LTE" value="0"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugPainkillersDisplay" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugPainkillers"/>
-		</effect_group>
-
-		<effect_group>
-			<passive_effect name="HealthLoss" operation="perc_subtract" value="0.1"/>
-			<passive_effect name="WaterChangeOT" operation="base_subtract" value="0.222"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="40"/>
-		</effect_group>
+	<buff name="jz_BuffPainkiller" name_key="Pain" description_key="drugVitaminsDesc" icon="ui_game_symbol_pills">
+		<stack_type value="ignore"/>
+		<duration value="3600"/>
+		<display_value_format value="time"/>
 	</buff>
-
+	
 	<buff name="buffDrugVitamins" name_key="drugVitamins" description_key="drugVitaminsDesc" icon="ui_game_symbol_pills">
-		<stack_type value="replace"/><duration value="0"/>
-		<display_value value=".buffDrugVitaminsDisplay"/><display_value_format value="time"/>
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugVitaminsDuration" operation="subtract" value="@$MetabolismDuration"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugVitaminsDisplay" operation="set" value="@$buffDrugVitaminsDuration"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffDrugVitaminsDisplay" operation="divide" value="@$MetabolismDuration"/>
-		</effect_group>
-		<effect_group>
-			<requirement name="CVarCompare" cvar="$buffDrugVitaminsDuration" operation="LTE" value="0"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffDrugVitaminsDisplay" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffDrugVitaminsDuration" operation="set" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffDrugVitamins"/>
-		</effect_group>
-
-		<effect_group>
-			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInfectionCatch,buffIllFoodPoisoning01,buffDysenteryCatch"/>
-		</effect_group>
+		<stack_type value="ignore"/>
+		<duration value="3600"/>
+		<display_value_format value="time"/>
 	</buff>
 
 	<buff name="buffEncumberedInv" name_key="buffEncumberedInvName" description_key="buffEncumberedInvDesc" tooltip_key="buffEncumberedInvTooltip" icon="ui_game_symbol_pack_mule">
@@ -4555,7 +4761,92 @@ icon="ui_game_symbol_pack_mule"
 		<duration value="4"/>
 	</buff>
 
+<buff name="jz_BuffSmallAnimalTracker" name_key="jz_buffSmallAnimalTrackerName" description_key="jz_buffSmallAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
+		<duration value="0"/>
+		<update_rate value=".5"/>
+		<display_value value=".AnimalTrackerDelay"/>
+		<display_value_format value="time"/>
 
+		<effect_group name="Startup">
+			
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="4">
+				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="LT" value="2"/></triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="add" value="-.5"/>
+		</effect_group>
+
+		<effect_group name="check conditions for a successful track">
+			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
+				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="Equals" value="1"/>
+				<requirement name="HasTrackedEntity" tags="perkAT1"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group>
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_buffSmallAnimalTrackerAcquired">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffSmallAnimalTracker">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
+			</triggered_effect>
+
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffSmallAnimalTracker">
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="0"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="Tracking not successful, shutdown">
+			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffAnimalTrackerNoneTooltip"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffSmallAnimalTracker"/>
+		</effect_group>
+	</buff>
+
+	<buff name="jz_buffSmallAnimalTrackerAcquired" name_key="buffAnimalTrackerAcquiredName" description_key="buffAnimalTrackerAcquiredDesc" icon="ui_game_symbol_animal_tracker" icon_color="0,255,0">
+		<duration value="0"/>
+		<display_value value=".AnimalTrackerLoseTimer"/>
+		<display_value_format value="time"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAnimalTracker"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20">
+				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group name="check conditions for no trackable animals">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="Equals" value="1"/>
+				<requirement name="HasTrackedEntity" tags="perkAT1" />
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group name="Track animals">
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT1">
+				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="Equals" value="1"/></passive_effect>
+		</effect_group>	
+
+		<effect_group name="Tracking time ran out or no targets">
+			<requirements compare_type="or">
+				<requirement name="CVarCompare" cvar=".AnimalTrackerLoseTimer" operation="LTE" value="0"/>
+				<requirement name="CVarCompare" cvar=".AnimalTrackerTerminate" operation="Equals" value="1"/>
+			</requirements>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffPerkAnimalTrackerLostTooltip"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_buffSmallAnimalTrackerAcquired"/>
+		</effect_group>
+	</buff>
 <!-- JZMOD WOUND SYSTEM -->
 	<buff name="jz_BuffScratch" hidden="true" remove_on_death="false">
 		<stack_type value="ignore"/>
@@ -4602,6 +4893,7 @@ icon="ui_game_symbol_pack_mule"
 					<requirement name="NotHasBuff" buff="jz_BuffDowngradingWound"/>
 					<requirement name="NotHasBuff" buff="jz_BuffWound"/>
 					<requirement name="NotHasBuff" buff="jz_BuffThrobbingPain"/>
+					<requirement name="NotHasBuff" buff="jz_BuffPainkiller"/>
 					<requirement name="NotHasBuff" buff="jz_BuffTendingOne"/>
 					<requirement name="NotHasBuff" buff="jz_BuffDirtyBandageOne"/>
 					<requirement name="NotHasBuff" buff="jz_BuffTendingTwo"/></triggered_effect>
@@ -4667,7 +4959,7 @@ icon="ui_game_symbol_pack_mule"
 		<duration value="4"/>
 	</buff>
 	
-	<buff name="jz_BuffBruised" remove_on_death="false" name_key="jz_BuffBruisedName" description_key="jz_BuffBruisedDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffBruised" remove_on_death="false" name_key="Bruised" tooltip_key="Thats going to leave a bruise" description_key="You're getting bruised up. The bruises will heal by themselves over time but you might want to be more careful." icon="ui_game_symbol_bruised" >
 		<stack_type value="ignore"/>
 		<update_rate value="4"/>
 		<duration value="0"/>
@@ -4679,7 +4971,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>		
 	</buff>
 	
-	<buff name="jz_BuffSmallWound" remove_on_death="false" name_key="jz_BuffSmallWoundName" description_key="jz_BuffSmallWoundDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffSmallWound" remove_on_death="false" name_key="Small Wound" tooltip_key="Ouch! You've been wounded" description_key="You’ve gotten a small wound. Treat it with a bandage and be sure to change it when it gets dirty." icon="ui_game_symbol_smallWound" >
 		<stack_type value="ignore"/>
 		<update_rate value="15"/>
 		<duration value="0"/>
@@ -4700,7 +4992,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>		
 	</buff>
 	
-	<buff name="jz_BuffTendingOne" remove_on_death="false" name_key="jz_BuffTendingOneName" description_key="jz_BuffTendingOneDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffTendingOne" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Make sure to change it when it gets dirty so it does not get infected." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--1800-->
 		<effect_group>
@@ -4708,7 +5000,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffDirtyBandageOne" remove_on_death="false" name_key="jz_BuffDirtyBandageOneName" description_key="jz_BuffDirtyBandageOneDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffDirtyBandageOne" remove_on_death="false" name_key="Dirty Bandaged" tooltip_key="Your Wound Smells" description_key="Your bandage is dirty and starting to smell. Change it with another Bandage soon or your wound could get worse" icon="ui_game_symbol_dirtyBandage" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--900-->
 		<effect_group>
@@ -4718,7 +5010,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffTendingTwo" remove_on_death="false" name_key="jz_BuffTendingTwoName" description_key="jz_BuffTendingTwoDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffTendingTwo" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Try not to get hurt so it will heal." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--1800-->
 		<effect_group>
@@ -4728,11 +5020,11 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDowngradingWound"/>
 		</effect_group>
 	</buff>
-	
-	<buff name="jz_BuffThrobbingPain" remove_on_death="false" name_key="jz_BuffThrobbingPainName" description_key="jz_BuffThrobbingPainDesc" icon="ui_game_symbol_animal_tracker" >
+	<!-- JZMOD PAIN -->
+	<buff name="jz_BuffThrobbingPain" remove_on_death="false" name_key="Throbbing Pain" tooltip_key="OOwww! It Hurts!" description_key="The wound hurts take some Painkillers for the pain" icon="ui_game_symbol_pain" >
 		<stack_type value="ignore"/>
 		<update_rate value="5"/>
-		<duration value="10"/>
+		<duration value="0"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="stamina" operation="add" value="-1"/>
@@ -4762,8 +5054,8 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffThrobbingPainScreenRestart"/>
 		</effect_group>
 	</buff>
-	
-	<buff name="jz_BuffWound" remove_on_death="false" name_key="jz_BuffWoundName" description_key="jz_BuffWoundDesc" icon="ui_game_symbol_animal_tracker" >
+	<!-- JZMOD WOUND -->
+	<buff name="jz_BuffWound" remove_on_death="false" name_key="Wound" tooltip_key="Ouch! You've been wounded" description_key="You've gotten a wound. Treat it with a First Aid Bandage and be sure to change it when it gets dirty." icon="ui_game_symbol_wound" >
 		<stack_type value="ignore"/>
 		<update_rate value="25"/>
 		<duration value="0"/>
@@ -4783,7 +5075,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>		
 	</buff>
 	
-	<buff name="jz_BuffTendingThree" remove_on_death="false" name_key="jz_BuffTendingThreeName" description_key="jz_BuffTendingThreeDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffTendingThree" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Make sure to change it when it gets dirty so it does not get infected." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--1800-->
 		<effect_group>
@@ -4791,7 +5083,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffDirtyBandageTwo" remove_on_death="false" name_key="jz_BuffDirtyBandageTwoName" description_key="jz_BuffDirtyBandageTwoDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffDirtyBandageTwo" remove_on_death="false" name_key="Dirty Bandaged" tooltip_key="Your Wound Smells" description_key="Your bandage is dirty and starting to smell. Change it with another First Aid Bandage soon or your wound could get worst" icon="ui_game_symbol_dirtyBandage" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--900-->
 		<effect_group>
@@ -4801,7 +5093,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffTendingFour" remove_on_death="false" name_key="jz_BuffTendingFourName" description_key="jz_BuffTendingFourDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffTendingFour" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Try not to get hurt so it will heal." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--1800-->
 		<effect_group>
@@ -4812,7 +5104,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffSevereWound" remove_on_death="false" name_key="jz_BuffSevereWoundName" description_key="jz_BuffSevereWoundDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffSevereWound" remove_on_death="false" name_key="Severe Wound" tooltip_key="You have gotten a severe wound" description_key="You've gotten a sever wound. Treat it with Sanitized Bandage and be sure to change it when it gets dirty." icon="ui_game_symbol_severeWound" >
 		<stack_type value="ignore"/>
 		<update_rate value="10"/>
 		<duration value="0"/>
@@ -4831,7 +5123,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>		
 	</buff>
 	
-	<buff name="jz_BuffTendingFive" remove_on_death="false" name_key="jz_BuffTendingFiveName" description_key="jz_BuffTendingFiveDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffTendingFive" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Make sure to change it when it gets dirty so it does not get infected." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--1800-->
 		
@@ -4840,7 +5132,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffDirtyBandageThree" remove_on_death="false" name_key="jz_BuffDirtyBandageThreeName" description_key="jz_BuffDirtyBandageThreeDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffDirtyBandageThree" remove_on_death="false" name_key="Dirty Bandaged" tooltip_key="Your Wound Smells" description_key="Your bandage is dirty and starting to smell. Change it with another Sanitizing Bandage soon or your wound could get worst" icon="ui_game_symbol_dirtyBandage" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--900-->
 		
@@ -4851,7 +5143,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffTendingSix" remove_on_death="false" name_key="jz_BuffTendingSixName" description_key="jz_BuffTendingSixDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffTendingSix" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Try not to get hurt so it will heal." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--1800-->
 		
@@ -4863,7 +5155,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffGash" remove_on_death="false" name_key="jz_BuffGashName" description_key="jz_BuffGashDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffGash" remove_on_death="false" name_key="Gash" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed" icon="ui_game_symbol_gash">
 		<stack_type value="ignore"/>
 		<update_rate value="15"/>
 		<duration value="0"/>
@@ -4880,7 +5172,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffInfectedWound" remove_on_death="false" name_key="jz_BuffInfectedWoundName" description_key="jz_BuffInfectedWoundDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffInfectedWound" remove_on_death="false" name_key="Infected Wound" tooltip_key="Your wound has gotten infected" description_key="Your wound has gotten infected. Treat it with Sanitized Bandage and be sure to change it when it gets dirty or you could die." icon="ui_game_symbol_infectedWound" >
 	<stack_type value="ignore"/>
 		<update_rate value="10"/>
 		<duration value="0"/>
@@ -4899,7 +5191,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>		
 	</buff>
 	
-	<buff name="jz_BuffTendingSeven" remove_on_death="false" name_key="jz_BuffTendingSevenName" description_key="jz_BuffTendingSevenDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffTendingSeven" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Make sure to change it when it gets dirty so it does not get infected." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--1800-->
 		
@@ -4908,7 +5200,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffDirtyBandageFour" remove_on_death="false" name_key="jz_BuffDirtyBandageFourName" description_key="jz_BuffDirtyBandageFourDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffDirtyBandageFour" remove_on_death="false" name_key="Dirty Bandaged" tooltip_key="Your Wound Smells" description_key="Your bandage is dirty and starting to smell. Change it with another Sanitizing Bandage soon or you could die" icon="ui_game_symbol_dirtyBandage" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--900-->
 		<effect_group>
@@ -4931,7 +5223,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>	
 	</buff>
 	
-	<buff name="jz_BuffTendingEight" remove_on_death="false" name_key="jz_BuffTendingEightName" description_key="jz_BuffTendingEightDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffTendingEight" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Try not to get hurt so it will heal." icon="ui_game_symbol_animal_tracker" >
 		<stack_type value="ignore"/>
 		<duration value="30"/><!--1800-->
 		<effect_group>
@@ -4942,7 +5234,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	<!-- JZMOD BURN WOUND -->
-	<buff name="jz_BuffBurnWound" remove_on_death="false" name_key="jz_BuffBurnWoundName" description_key="jz_BuffBurnWoundDesc" icon="ui_game_symbol_animal_tracker" >
+	<buff name="jz_BuffBurnWound" remove_on_death="false" name_key="jz_BuffBurnWoundName" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Make sure to change it when it gets dirty so it does not get infected." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<update_rate value="30"/>
 		<duration value="7200"/>
@@ -4995,7 +5287,6 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
 			
-            <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffInfectionMain"/>		
 			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="26"/>		
 		</effect_group>	
 		<effect_group>		
@@ -5027,7 +5318,8 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
 			
 			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffSnakeBiteLvTwo" />
-			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffThrobbingPain" />			
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffThrobbingPain" >		
+				<requirement name="NotHasBuff" buff="jz_BuffPainkiller"/> </triggered_effect>			
 		</effect_group>	
 		<effect_group>		
 			<passive_effect name="Mobility" operation="perc_subtract" value="0.05"/>
@@ -5150,13 +5442,18 @@ icon="ui_game_symbol_pack_mule"
 	
 	<buff name="jz_BuffFoodStuffed" remove_on_death="false" name_key="jz_BuffFoodStuffedName" description_key="jz_BuffFoodStuffedDesc" icon="ui_game_symbol_stuffed" >
 		<stack_type value="ignore"/>
+		<update_rate value="1"/>
 		<duration value="0"/>
+		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
 		<effect_group>
 			<passive_effect name="Mobility" operation="perc_add" value="-0.5"/>
-			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LT" value="101">
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodStuffed"/></requirement>	
 		</effect_group>
-		
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffPlayerFoodNotificationOC"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffPlayerFoodNotification"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFoodStuffed">
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LT" value="101"/></triggered_effect>	
+		</effect_group>
 	</buff>
 	
 	<buff name="jz_BuffCanOpener" hidden="true" remove_on_death="true">
@@ -5352,6 +5649,16 @@ icon="ui_game_symbol_pack_mule"
 			</requirements>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffPerkAnimalTrackerLostTooltip"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAnimalTrackerAcquired"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffPainkiller" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="900"/>
+		<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffThrobbingPain"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffThrobbingPainScreen"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffThrobbingPainScreenRestart"/>
 		</effect_group>
 	</buff>
 </set>
