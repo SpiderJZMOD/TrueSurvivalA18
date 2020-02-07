@@ -241,6 +241,8 @@
 			<passive_effect name="ExpDeficitPerDeathPercentage" operation="base_set" value="0"/>
 			<passive_effect name="ExpDeficitMaxPercentage" operation="base_set" value="0"/>																											   
 	</effect_group>
+	
+	
 </entity_class>
 
 <entity_class name="playerFemale" extends="playerMale"> <!-- ignore="<excluded defs>" to not extend unwanted properties -->
@@ -269,7 +271,7 @@
 	<property name="EntityType" value="Zombie"/> <!-- This one decides for scoring -->
 	<property name="Tags" value="entity,zombie,walker"/>  <!-- this property DOES NOT inherit on extends and target_tags cannot be AND connected -->
 	<!-- Mesh and class properties -->
-	<property name="RandomSize" value="true" />
+	<!-- JZMOD DMT <property name="RandomSize" value="true" />-->
 	<property name="Mesh" value="Zombies/zombieStandardBoeRagdoll"/>
 	<property name="AvatarController" value="AvatarZombie01Controller"/>
 	<property name="ModelType" value="Standard"/>

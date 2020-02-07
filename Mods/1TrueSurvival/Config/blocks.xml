@@ -87,7 +87,7 @@
 	<property class="RepairItems">
 		<property name="resourceClayLump" value="14"/>
 	</property>
-	<drop event="Harvest" name="resourceClayLump" count="22" />
+	<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDirt" count="1" prob="0.25" stick_chance="1"/>
 	<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
@@ -111,7 +111,7 @@
 	<!--property class="Map"> <property name="Color" value="44,48,26"/> <property name="Color2" value="44,60,25"/> <property name="ElevMinMax" value="50,80"/> </property-->
 	<property name="ImposterExclude" value="true"/>
 	<property class="RepairItems"> <property name="resourceClayLump" value="14"/> </property>
-	<drop event="Harvest" name="resourceClayLump" count="22" />
+	<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest" />
 	<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrForestGround" count="1" prob="0.25" stick_chance="1"/>
@@ -136,7 +136,7 @@
 	<property name="ImposterExclude" value="true"/>
 	<property name="LPHardnessScale" value="2"/>
 	<property name="Map.Color" value="55,55,50"/>
-	<drop event="Harvest" name="resourceClayLump" count="22" />
+	<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest" />
 	<drop event="Destroy" name="resourceYuccaFibers" count="1" prob="0.25"/>
 	<drop event="Fall" name="terrBurntForestGround" count="1" prob="0.25" stick_chance="1"/>
 	<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
@@ -160,8 +160,8 @@
 	<property name="ImposterExclude" value="true"/>
 	<property name="Map.Color" value="255,221,153"/>
 	<drop event="Destroy" count="0"/>
-	<drop event="Harvest" name="resourceCrushedSand" count="11" />
-	<drop event="Harvest" name="resourceClayLump" count="2" />
+	<drop event="Harvest" name="resourceCrushedSand" count="11" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourceClayLump" count="2" tag="oreWoodHarvest" />
 	<property class="RepairItems">
 		<property name="resourceCrushedSand" value="7"/>
 		<property name="resourceClayLump" value="7"/>
@@ -184,8 +184,8 @@
 	<property name="Material" value="Msand"/><property name="NoScrapping" value="true"/>
 	<property name="Texture" value="185"/>
 	<property name="Map.Color" value="167,136,107"/>
-	<drop event="Harvest" name="resourceCrushedSand" count="11" />
-	<drop event="Harvest" name="resourceClayLump" count="2" />
+	<drop event="Harvest" name="resourceCrushedSand" count="11" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourceClayLump" count="2" tag="oreWoodHarvest" />
 	<property class="RepairItems">
 		<property name="resourceCrushedSand" value="8"/>
 		<property name="resourceClayLump" value="1"/>
@@ -209,7 +209,7 @@
 	<property name="Map.Color" value="230,230,255"/>
 	<property name="CanMobsSpawnOn" value="true"/>
 	<property class="RepairItems"> <property name="resourceSnowBall" value="10"/> </property>
-	<drop event="Harvest" name="resourceSnowBall" count="11" />
+	<drop event="Harvest" name="resourceSnowBall" count="11" tag="allHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrSnow" count="1" prob="0.25" stick_chance="1"/>
 	<drop event="Fall" name="resourceSnowBall" count="22" prob="0.187" stick_chance="0"/>
@@ -251,8 +251,8 @@
 	<property name="Weight" value="90"/>
 	<property name="Map.Color" value="152,149,63"/>
 	<property class="RepairItems"> <property name="resourceCobblestones" value="6"/> </property>
-	<drop event="Harvest" name="resourceCrushedSand" count="4" />
-	<drop event="Harvest" name="resourceRockSmall" count="12" />
+	<drop event="Harvest" name="resourceCrushedSand" count="4" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourceRockSmall" count="12" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<property name="CanMobsSpawnOn" value="true"/>
 	<property name="EconomicValue" value="5"/>
@@ -272,9 +272,9 @@
 	<property name="MaxDamage" value="30"/>
 	<property name="FuelValue" value="150"/>
 	<property name="ImposterExclude" value="true"/>
-	<drop event="Harvest" name="resourceCrushedSand" count="0" />
-	<drop event="Harvest" name="resourceRockSmall" count="0" />
-	<drop event="Harvest" name="jz_Plank" count="3" />
+	<drop event="Harvest" name="resourceCrushedSand" count="0" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourceRockSmall" count="0" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="jz_Plank" count="3" tag="allHarvest" />
 	<property name="Map.Color" value="110,95,49"/>
 	<property name="CanMobsSpawnOn" value="true"/>
 	<property name="FilterTags" value="fterrain,fconstruction,fdestruction"/>
@@ -293,8 +293,8 @@
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<property name="Map.Color" value="158,139,124"/>
 	<!-- gravel: 7 sand, 8 rocks  (1/2 the hit points of stone) -->
-	<drop event="Harvest" name="resourceCrushedSand" count="8" />
-	<drop event="Harvest" name="resourceRockSmall" count="9" />
+	<drop event="Harvest" name="resourceCrushedSand" count="8" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourceRockSmall" count="9" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="resourceCrushedSand" count="23" prob="0.16" stick_chance="0"/>
 	<drop event="Fall" name="resourceRockSmall" count="26" prob="0.16" stick_chance="0"/>
@@ -317,7 +317,7 @@
 	<property name="Map.Color" value="204,177,131"/>
 	<property class="RepairItems"><property name="resourceConcreteMix" value="5"/></property>
 	<property name="Group" value="Building"/>
-	<drop event="Harvest" name="resourceRockSmall" count="27" />
+	<drop event="Harvest" name="resourceRockSmall" count="27" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
 	<property name="CanMobsSpawnOn" value="true"/>
@@ -343,7 +343,7 @@
 	<property name="Map.Color" value="204,177,131"/>
 	<property class="RepairItems"><property name="resourceConcreteMix" value="5"/></property>
 	<property name="Group" value="Building"/>
-	<drop event="Harvest" name="resourceRockSmall" count="27" />
+	<drop event="Harvest" name="resourceRockSmall" count="27" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
 	<property name="CanMobsSpawnOn" value="true"/>
@@ -409,7 +409,7 @@
 	<property name="Mesh" value="terrain"/>
 	<property name="Texture" value="33"/>
 	<property name="ImposterExclude" value="true"/>
-	<drop event="Harvest" name="resourceScrapIron" count="105" />
+	<drop event="Harvest" name="resourceScrapIron" count="105" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="resourceScrapIron" count="30" prob="0.4" stick_chance="0"/>
 	<property name="CanMobsSpawnOn" value="true"/>
@@ -417,9 +417,6 @@
 	<property name="SortOrder1" value="d0l0"/>
 	<property name="SortOrder2" value="0050"/>
 	<property name="DisplayType" value="blockTerrain"/>
-	<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
-	<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
-	<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 	<property name="DescriptionKey" value="terrainBlockGroupDesc"/>															
 </block>
 
@@ -431,8 +428,8 @@
 	<property name="Texture" value="316"/>
 	<property name="Weight" value="100"/>
 	<property name="ImposterExclude" value="true"/>
-	<drop event="Harvest" name="resourceScrapLead" count="50" />
-	<drop event="Harvest" name="resourceRockSmall" count="14" />																		 
+	<drop event="Harvest" name="resourceScrapLead" count="50" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest" />																		 
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="resourceScrapLead" count="50" prob="0.4" stick_chance="0"/>
 	<property name="CanMobsSpawnOn" value="true"/>
@@ -443,9 +440,6 @@
 	<property name="SortOrder1" value="d0l0"/>
 	<property name="SortOrder2" value="0050"/>
 	<property name="DisplayType" value="blockTerrain"/>
-	<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
-	<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
-	<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 	<property name="DescriptionKey" value="terrainBlockGroupDesc"/>															
 </block>
 
@@ -456,8 +450,7 @@
 	<property name="Mesh" value="terrain"/>
 	<property name="Texture" value="34"/>
 	<property name="ImposterExclude" value="true"/>
-	<drop event="Harvest" name="resourceCoal" count="50" />
-	<drop event="Harvest" name="resourceCoal" count="50" tag="coalHarvest"/>
+	<drop event="Harvest" name="resourceCoal" count="50" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="resourceCoal" count="50" prob="0.4" stick_chance="0"/>
 	<property name="CanMobsSpawnOn" value="true"/>
@@ -465,9 +458,6 @@
 	<property name="SortOrder1" value="d0l0"/>
 	<property name="SortOrder2" value="0050"/>
 	<property name="DisplayType" value="blockTerrain"/>
-	<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
-	<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
-	<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 	<property name="DescriptionKey" value="terrainBlockGroupDesc"/>															
 </block>
 
@@ -478,7 +468,7 @@
 	<property name="Mesh" value="terrain"/>
 	<property name="Texture" value="300"/>
 	<property name="ImposterExclude" value="true"/>
-	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="50" />
+	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="50" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="resourcePotassiumNitratePowder" count="50" prob="0.4" stick_chance="0"/>
 	<property name="CanMobsSpawnOn" value="true"/>
@@ -486,9 +476,6 @@
 	<property name="SortOrder1" value="d0l0"/>
 	<property name="SortOrder2" value="0050"/>
 	<property name="DisplayType" value="blockTerrain"/>
-	<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
-	<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
-	<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 	<property name="DescriptionKey" value="terrainBlockGroupDesc"/>															
 </block>
 
@@ -501,7 +488,7 @@
 	<property name="ImposterExclude" value="true"/>
 	<property name="LPHardnessScale" value="2"/>
 	<property name="Map.Color" value="110,95,49"/>
-	<drop event="Harvest" name="resourceOilShale" count="50" />
+	<drop event="Harvest" name="resourceOilShale" count="50" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="resourceOilShale" count="50" prob="0.4" stick_chance="0"/>
 	<property name="CanMobsSpawnOn" value="true"/>
@@ -509,9 +496,6 @@
 	<property name="SortOrder1" value="d0l0"/>
 	<property name="SortOrder2" value="0050"/>
 	<property name="DisplayType" value="blockTerrain"/>
-	<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
-	<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
-	<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
 	<property name="DescriptionKey" value="terrainBlockGroupDesc"/>															
 </block>
 
@@ -1549,12 +1533,12 @@ group desc for stuff like metal siding
 	<property name="SortOrder1" value="a0c0"/>
 	<property name="ActivationDistance" value="12"/>
 	<!-- JZMOD ANY -->
-	<drop event="Harvest" name="jz_PlasticFrisbee" count="1" prob="0.01" />
-	<drop event="Harvest" name="jz_HoneyComb" count="1" prob="0.01" />
-	<drop event="Harvest" name="jz_PlasticKite" count="1" prob="0.01" />
-	<drop event="Harvest" name="jz_PaperToilet" count="1" prob="0.01" />
-	<drop event="Harvest" name="runningShoes" count="1" prob="0.01" />
-	<drop event="Harvest" name="cntTrashPile02" count="1" prob="0.01" />
+	<drop event="Destroy" name="jz_PlasticFrisbee" count="1" prob="0.01" />
+	<drop event="Destroy" name="jz_HoneyComb" count="1" prob="0.01" />
+	<drop event="Destroy" name="jz_PlasticKite" count="1" prob="0.01" />
+	<drop event="Destroy" name="jz_PaperToilet" count="1" prob="0.01" />
+	<drop event="Destroy" name="runningShoes" count="1" prob="0.01" />
+	<drop event="Destroy" name="cntTrashPile02" count="1" prob="0.01" />
 </block>
 
 <block name="treeMasterGrowing">
@@ -12212,8 +12196,8 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fbuilding,firon"/>
 	<property name="SortOrder1" value="40e0"/>
 	<!--JZMOD WRENCH-->
-	<drop event="Harvest" name="jz_NutAndBolt" count="3" tool_category="meleeToolWrench" />
-	<drop event="Destroy" name="jz_NutAndBolt" count="1,3" tool_category="meleeToolWrench" />
+	<drop event="Harvest" name="jz_NutAndBolt" count="3" tool_category="ToolWrench" />
+	<drop event="Destroy" name="jz_NutAndBolt" count="1,3" tool_category="ToolWrench" />
 </block>
 
 <block name="metalCatwalkTrap">
@@ -12478,7 +12462,7 @@ NOT the TextureNumber.
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<property class="RepairItems"> <property name="resourceCrushedSand" value="5"/> </property>
-	<drop event="Harvest" name="resourceCrushedSand" count="2" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceCrushedSand" count="2" tag="oreWoodHarvest"/>
 	<drop event="Harvest" name="resourceCloth" count="1" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<property name="DescriptionKey" value="sandbagsGroupDesc"/>
@@ -13413,7 +13397,6 @@ NOT the TextureNumber.
 	<property name="ModelOffset" value="0,0,0"/>
 	<property name="MultiBlockDim" value="1,6,1"/>
 	<property name="BigDecorationRadius" value="3"/>
-	<drop event="Harvest" name="jz_Plank" count="30" />
 	<property name="FallOver" value="true"/>
 	<property name="ParticleOnDeath" value="treeGib_winter_small"/>
 	<property name="SortOrder2" value="0400"/> <!-- SortTree -->
@@ -14724,8 +14707,8 @@ NOT the TextureNumber.
 	<property name="CanMobsSpawnOn" value="true"/>
 	<property class="RepairItems"> <property name="resourceClayLump" value="14"/> </property>
 	<property name="EconomicValue" value="50"/>
-	<drop event="Harvest" name="resourceClayLump" count="22" />
-	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4" />
+	<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="4" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDirt" count="1" prob="0.25" stick_chance="1"/>
 	<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
@@ -14741,8 +14724,8 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="farmPlotBlock"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CanMobsSpawnOn" value="false"/>
-	<drop event="Harvest" name="resourceClayLump" count="0" />
-	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="0" />
+	<drop event="Harvest" name="resourceClayLump" count="0" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="0" tag="oreWoodHarvest" />
 	<drop event="Destroy" name="farmPlotBlockPlayer" count="1"/>
 </block>
 
@@ -14903,8 +14886,8 @@ NOT the TextureNumber.
 	<property name="Extends" value="pipeSmall1x1"/>
 	<property name="Model" value="Plumbing/pipe_small_valve" param1="main_mesh"/> <property name="HandleFace" value="Bottom"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceScrapBrass" count="15,30" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1" prob="0.5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapBrass" count="15,30" tag="ToolWrench"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1" prob="0.5" tag="ToolWrench"/>
 </block>
 
 <block name="pipeSmallCorner">
@@ -14996,7 +14979,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fdecor,fother,felectrical"/>
 	<property name="SortOrder1" value="70e0"/>
 	<!--JZMOD ANY-->
-	<drop event="Harvest" name="resourceScrapIron" count="5" />
+	<drop event="Harvest" name="resourceScrapIron" count="5" tag="allHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<!--JZMOD WRENCH-->
@@ -15099,7 +15082,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fdecor,fother,felectrical"/>
 	<property name="SortOrder1" value="70e0"/>
 	<!--JZMOD ANY-->
-	<drop event="Harvest" name="resourceElectricParts" count="1" />
+	<drop event="Harvest" name="resourceElectricParts" count="1" tag="allHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<!--JZMOD WRENCH-->
@@ -17007,8 +16990,8 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="4"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="1,5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,2" tool_category="ToolScrewDriver"/>
+	<drop event="Harvest" name="resourceScrapIron" count="1,5" tool_category="ToolScrewDriver"/>
 	<drop event="Destroy" name="resourceScrapIron" count="2" prob="1"/>
 	<property name="FilterTags" value="floot,fdecor,fother,ffurniture"/>
 </block>
@@ -17174,9 +17157,9 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="1"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,1" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tool_category="ToolScrewDriver"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,1" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="1,2" tool_category="ToolScrewDriver"/>
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -17192,8 +17175,8 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceScrapIron" count="15,30" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceSnowBall" count="11" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tool_category="ToolScrewDriver"/>
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 </block>
 
@@ -17291,9 +17274,9 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="1"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="1,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="1,4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,3" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,1" tool_category="ToolScrewDriver"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
@@ -17815,9 +17798,9 @@ NOT the TextureNumber.
 		<property name="resourceMechanicalParts" value="4"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="1,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="2,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="1,4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceScrapPolymers" count="2,4" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapPolymers" count="2"/>
 	<drop event="Fall" count="0" stick_chance="0"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
@@ -17874,7 +17857,7 @@ NOT the TextureNumber.
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="Texture" value="526"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,4" tool_category="ToolScrewDriver" />
 	<property name="FilterTags" value="fdecor,felectrical,fother"/>
 	<property name="SortOrder1" value="70c0"/>
 	<drop event="Fall" count="0" prob="0"/>
@@ -17916,9 +17899,9 @@ NOT the TextureNumber.
 		<property name="EntityDamage" value="150"/> <!-- damage for entities in the center of the explosion -->
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,7" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,7" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,4" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tool_category="ToolWrench" />
 	<drop event="Destroy" count="0"/>
 	<property name="LPHardnessScale" value="0"/> <!-- disable LP for TNT blocks -->
 	<property name="EconomicValue" value="400"/> <!-- disassemble value -->
@@ -18151,10 +18134,9 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="" count="0" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceScrapIron" count="5,15" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
-	<drop event="Harvest" name="resourceForgedIron" count="3,6" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceForgedSteel" count="1,2" prob="1" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceSpring" count="1,2" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="3,6" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceSpring" count="1,2" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceMechanicalParts" count="1,3" tag="allHarvest"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 </block>
@@ -18230,10 +18212,9 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="" count="0" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceScrapIron" count="10,30" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
-	<drop event="Harvest" name="resourceForgedIron" count="8,12" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceForgedSteel" count="2,4" prob="1" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceSpring" count="1,5" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceMechanicalParts" count="1,5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="8,12" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceSpring" count="1,5" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceMechanicalParts" count="1,5" tag="allHarvest"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 </block>
@@ -18284,10 +18265,9 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="" count="0" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceScrapIron" count="15,45" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
-	<drop event="Harvest" name="resourceForgedIron" count="16,24" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceForgedSteel" count="1,2" prob="1" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceSpring" count="2,8" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceMechanicalParts" count="2,10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="16,24" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceSpring" count="2,8" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceMechanicalParts" count="2,10" tag="allHarvest"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="EconomicValue" value="690"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
@@ -18393,7 +18373,6 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<property name="FilterTags" value="fdecor,fother"/>
 	<property name="DescriptionKey" value="cntLootPileGroupDesc"/>
-	<drop event="Harvest" name="resourceAcid" prob=".05" count="1" tag="WasteTreasuresAcidHarvest"/>
 </block>
 
 <block name="cntMedicalPileMedium">
@@ -18418,7 +18397,6 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="107"/>
 	<drop event="Destroy" name="resourceScrapPolymers" count="1,4"/>
-	<drop event="Harvest" name="resourceAcid" prob=".05" count="1" tag="WasteTreasuresAcidHarvest"/>
 	<property name="FilterTags" value="floot"/>
 	<property name="DescriptionKey" value="cntLootPileGroupDesc"/>														   
 </block>
@@ -18817,7 +18795,7 @@ NOT the TextureNumber.
 		<property name="resourceForgedIron" value="3"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,2" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceLeather" count="1,2"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5,15"/>
 	<property name="EconomicValue" value="65"/>
@@ -18932,7 +18910,6 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="jz_Plank" count="2" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceCloth" count="2" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Destroy" name="oldCash" count="1,3" prob="0.05" tag="salvageHarvest"/>
 	<property name="EconomicValue" value="18"/>
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -19094,7 +19071,7 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="99"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="2,6" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapPolymers" count="2,6" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="1,8"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
@@ -19145,8 +19122,8 @@ NOT the TextureNumber.
 	<property name="Path" value="solid"/>
 	<property name="Model" value="Entities/Electrical/deskTopPCPrefab"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,6" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="4,6" prob="1"/>
 	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
 </block>
@@ -19179,8 +19156,8 @@ NOT the TextureNumber.
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="Weight" value="7"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/> <!-- HV: mounted fluorescent lamp -->
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,6" tool_category="ToolScrewDriver" /> <!-- HV: mounted fluorescent lamp -->
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" name="resourceScrapPolymers" count="2"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
@@ -19214,7 +19191,7 @@ NOT the TextureNumber.
 	<property name="ImposterExchange" value="imposterBlock" param1="11"/>
 	<property name="Path" value="solid"/>
 	<property class="RepairItems"> <property name="jz_Plank" value="30"/> </property>
-	<drop event="Harvest" name="jz_Plank" count="15" />
+	<drop event="Harvest" name="jz_Plank" count="15" tag="allHarvest" />
 	<drop event="Destroy" name="resourceScrapIron" count="4,10"/>
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 </block>
@@ -19227,7 +19204,7 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Furniture/reptileTerrariumPrefab"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="LightOpacity" value="2"/>
-	<drop event="Harvest" name="resourceCrushedSand" count="3" />
+	<drop event="Harvest" name="resourceCrushedSand" count="3" tag="oreWoodHarvest" />
 	<drop event="Harvest" name="resourceBrokenGlass" count="3" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" count="0" stick_chance="0"/>
@@ -19297,7 +19274,7 @@ NOT the TextureNumber.
 	<property name="Place" value="TowardsPlacer90"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
@@ -19319,9 +19296,9 @@ NOT the TextureNumber.
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,3" prob="0.4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="1,2" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="1,3" prob="0.4" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
@@ -19342,7 +19319,6 @@ NOT the TextureNumber.
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="4,8" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceScrapIron" count="20,50" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="8,15"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
@@ -19410,7 +19386,8 @@ NOT the TextureNumber.
 	</property>
 	<property name="DowngradeBlock" value="bed01Frame"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceScrapIron" count="5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceScrapIron" count="5" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceCloth" count="8" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -19428,8 +19405,8 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,1,2"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceSpring" count="3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceSpring" count="3" tool_category="ToolWrench" />
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceScrapIron" count="10" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
@@ -19457,11 +19434,11 @@ NOT the TextureNumber.
 	</property>
 	<drop event="Harvest" name="resourceCloth" count="16" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceSpring" count="6" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceSpring" count="6" tool_category="ToolWrench" />
 	<drop event="Harvest" name="jz_Plank" count="8" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="2" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceMetalPipe" count="2" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="10" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapIron" count="10"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<property name="EconomicValue" value="2600"/>
@@ -19523,9 +19500,9 @@ NOT the TextureNumber.
 		<property name="resourceMetalPipe" value="10"/>
 	</property> -->
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="2" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceMetalPipe" count="2" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="20" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="20" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceScrapPolymers" count="2,4" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -19552,11 +19529,11 @@ NOT the TextureNumber.
 		<property name="resourceMetalPipe" value="10"/>
 	</property> -->
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="2" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceMetalPipe" count="2" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="20" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,3" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,3" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceScrapPolymers" count="3,6" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5"/>
 </block>
@@ -19725,7 +19702,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="cntFileCabinetShortClosed"/> <property name="CustomIconTint" value="ff8080"/>
 	<property class="RepairItems"> <property name="resourceForgedIron" value="2"/> <property name="resourceMechanicalParts" value="1"/> </property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="EconomicValue" value="60"/>
@@ -19933,10 +19910,6 @@ NOT the TextureNumber.
 	<property name="LootList" value="15"/>
 	<drop event="Destroy" name="jz_Plank" count="1,3"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
-	<drop event="Harvest" name="resourceBone" prob=".05" count="1,4" tag="WasteTreasuresCoffinHarvest"/>
-	<drop event="Harvest" name="resourceRawDiamond" prob=".05" count="1" tag="WasteTreasuresCoffinHarvest"/>
-	<drop event="Harvest" name="resourceSilverNugget" prob=".05" count="1" tag="WasteTreasuresCoffinHarvest"/>
-	<drop event="Harvest" name="resourceGoldNugget" prob=".05" count="1" tag="WasteTreasuresCoffinHarvest"/>
 </block>
 
 <block name="cntBathTubEmpty">
@@ -19993,7 +19966,7 @@ NOT the TextureNumber.
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceScrapIron" count="30" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tool_category="ToolWrench" />
 </block>
 
 <block name="cntBookcaseEmpty">
@@ -20066,10 +20039,10 @@ NOT the TextureNumber.
 	<property name="ImposterExchange" value="imposterCTREighth" param1="148"/>
 	<property name="ImposterDontBlock" value="true"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,3" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,3" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
-	<drop event="Destroy" name="oldCash" count="1,3" prob="0.05" tag="salvageHarvest"/>
+	<drop event="Destroy" name="oldCash" count="1,3" prob="0.05" tag="allHarvest"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<property name="EconomicValue" value="250"/> <!-- disassemble value -->
 </block>
@@ -20081,8 +20054,8 @@ NOT the TextureNumber.
 	<property name="Material" value="MmetalNoGlue"/>
 	<property name="Model" value="LootContainers/cash_register" param1="main_mesh"/>
 	<property name="LootList" value="55"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,3" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,3" tag="allHarvest"/>
 </block>
 
 <block name="cntCashRegisterRandomLootHelper">
@@ -20105,7 +20078,7 @@ NOT the TextureNumber.
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="VehicleHitScale" value="4"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="EconomicValue" value="100"/> <!-- disassemble value -->
@@ -20125,7 +20098,7 @@ NOT the TextureNumber.
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
@@ -20179,7 +20152,7 @@ NOT the TextureNumber.
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,2" tool_category="ToolWrench" />
 	<property name="FilterTags" value="floot,fdecor,ffurniture"/>
 </block>
 
@@ -20205,7 +20178,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cntToolBoxOpen"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="#Entities/LootContainers?rollingToolChestEmptyPrefab.prefab"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="2,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="2,3" tool_category="ToolWrench" />
 </block>
 
 <block name="cntRollingToolBoxClosed">
@@ -20237,8 +20210,8 @@ NOT the TextureNumber.
 		<property name="resourceMechanicalParts" value="6"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="2,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceScrapIron" count="2,4" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapIron" count="3,6"/>
 	<drop event="Fall" count="0" stick_chance="0"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
@@ -20357,12 +20330,10 @@ NOT the TextureNumber.
 	<property name="EconomicValue" value="2000"/>
 	<property name="Buff" value="buffShocked"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceForgedIron" count="1,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,6" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceScrapPolymers" count="2,5" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceSpring" count="1,3" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceForgedSteel" count="2,3" tag="salvageHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<drop event="Destroy" count="0"/>
@@ -20498,8 +20469,7 @@ NOT the TextureNumber.
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="LootList" value="36"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="2,8" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceScrapPolymers" count="1,2"/>
+	<drop event="Destroy" name="resourceScrapPolymers" count="3,10"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 </block>
 
@@ -20514,8 +20484,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="" count="0" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="2,8" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceScrapPolymers" count="1,2"/>
+	<drop event="Destroy" name="resourceScrapPolymers" count="3,10"/>
 	<property name="FilterTags" value="floot,fdecor,ffurniture"/>
 </block>
 <block name="cntLuggageMediumClosed">
@@ -20682,9 +20651,8 @@ NOT the TextureNumber.
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="VehicleHitScale" value="999"/>
-	<drop event="Harvest" name="jz_Plank" count="8,14" />
+	<drop event="Harvest" name="jz_Stick" count="8,14" tag="allHarvest" />
 	<!-- <drop event="Destroy" name="treePlantedMaple1m" count="x"/> -->
-	<drop event="Destroy" name="treePlantedMountainPine1m" count="1" prob="0.03"/>
 	<property name="FilterTags" value="fdecor,fother,outdoor"/>
 </block>
 
@@ -20700,7 +20668,7 @@ NOT the TextureNumber.
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="ImposterExchange" value="imposterBlock" param1="32"/>
 	<property name="CustomUpgradeSound" value="place_block_wood"/>
-	<drop event="Harvest" name="jz_Plank" count="30" />
+	<drop event="Harvest" name="jz_Plank" count="30" tag="allHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.3" stick_chance="1"/>
 	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
@@ -20715,7 +20683,7 @@ NOT the TextureNumber.
 <block name="modularFireWoodStackC">
 	<property name="Extends" value="modularFireWoodStackA"/>
 	<property name="MaxDamage" value="50"/>
-	<drop event="Harvest" name="jz_Plank" count="10" />
+	<drop event="Harvest" name="jz_Plank" count="10" tag="allHarvest" />
 	<property name="Model" value="Entities/OutdoorDecor/modularFireWoodStackCPrefab"/>
 	<property name="ImposterExchange" value="imposterPyramid" param1="32"/>
 </block>
@@ -20908,8 +20876,8 @@ NOT the TextureNumber.
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="PassThroughDamage" value="true"/>
-	<drop event="Harvest" name="resourceRockSmall" count="22" />
-	<drop event="Destroy" count="0"/>
+	<drop event="Harvest" name="resourceRockSmall" count="22" tag="allHarvest" />
+	<drop event="Destroy" name="resourceRockSmall" count="10" />
 	<property name="DowngradeBlock" value="rockResourceBroke1"/>
 	<property name="Map.Color" value="120,120,120"/>
 	<property name="FilterTags" value="foutdoor"/>
@@ -20958,7 +20926,7 @@ NOT the TextureNumber.
 	<property name="Material" value="MoreStone"/>
 	<property name="Model" value="Entities/Resources/oreIronBoulderPrefab"/>
 	<property name="DescriptionKey" value="oreBoulderGroupDesc"/>
-	<drop event="Harvest" name="resourceRockSmall" count="14" />
+	<drop event="Harvest" name="resourceRockSmall" count="14" tag="allHarvest" />
 </block>
 
 <block name="oreIronBoulder">
@@ -20966,33 +20934,32 @@ NOT the TextureNumber.
 	<property name="Tags" value="ore"/>
 	<property name="Material" value="MoreMetal"/>
 	<property name="Model" value="Entities/Resources/oreIronBoulderPrefab"/>
-	<drop event="Harvest" name="resourceIronFragment" count="21" />
+	<drop event="Harvest" name="resourceIronFragment" count="21" tag="allHarvest" />
 </block>
 
 <block name="oreLeadBoulder">
 	<property name="Extends" value="oreBoulderMaster"/>
 	<property name="Material" value="MoreMetal"/>
 	<property name="Model" value="Entities/Resources/oreLeadBoulderPrefab"/>
-	<drop event="Harvest" name="resourceScrapLead" count="50" />
+	<drop event="Harvest" name="resourceScrapLead" count="50" tag="allHarvest" />
 </block>
 
 <block name="oreCoalBoulder">
 	<property name="Extends" value="oreBoulderMaster"/>
 	<property name="Model" value="Entities/Resources/oreCoalBoulderPrefab"/>
-	<drop event="Harvest" name="resourceCoal" count="50" />
-	<drop event="Harvest" name="resourceCoal" count="50" tag="coalHarvest"/>
+	<drop event="Harvest" name="resourceCoal" count="50" tag="allHarvest" />
 </block>
 
 <block name="orePotassiumNitrateBoulder">
 	<property name="Extends" value="oreBoulderMaster"/>
 	<property name="Model" value="Entities/Resources/oreNitrateBoulderPrefab"/>
-	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="50" />
+	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="50" tag="allHarvest" />
 </block>
 
 <block name="oreShaleBoulder">
 	<property name="Extends" value="oreBoulderMaster"/>
 	<property name="Model" value="Entities/Resources/oreShaleBoulderPrefab"/>
-	<drop event="Harvest" name="resourceOilShale" count="50" />
+	<drop event="Harvest" name="resourceOilShale" count="50" tag="allHarvest" />
 </block>
 
 <!-- not used in prefabs
@@ -21028,7 +20995,7 @@ NOT the TextureNumber.
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="Collide" value="movement,melee"/>
 	<property name="Model" value="OutdoorDecor/stalactite01" param1="main_mesh"/>
-	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="21" />
+	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="21" tag="allHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="resourcePotassiumNitratePowder" count="21" prob="0.4" stick_chance="0"/>
 	<property name="FilterTags" value="foutdoor,fterrain"/>
@@ -21084,8 +21051,7 @@ NOT the TextureNumber.
 	<!-- <property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/> -->
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="VehicleHitScale" value="999"/>
-	<drop event="Harvest" name="resourceCoal" count="2,4" />
-	<drop event="Harvest" name="resourceCoal" count="2,4" tag="coalHarvest"/>
+	<drop event="Harvest" name="resourceCoal" count="2,4" tag="allHarvest" />
 	<drop event="Destroy" name="jz_Plank" count="1"/>
 	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
 </block>
@@ -21108,8 +21074,7 @@ NOT the TextureNumber.
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="VehicleHitScale" value="999"/>
-	<drop event="Harvest" name="resourceCoal" count="2,4" />
-	<drop event="Harvest" name="resourceCoal" count="2,4" tag="coalHarvest"/>
+	<drop event="Harvest" name="resourceCoal" count="2,4" tag="allHarvest" />
 	<drop event="Destroy" name="jz_Plank" count="1"/>
 	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
 </block>
@@ -21134,8 +21099,7 @@ NOT the TextureNumber.
 	<property name="ParticleOffset" value="0,0,0"/> -->
 	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
-	<drop event="Harvest" name="resourceCoal" count="3,6" />
-	<drop event="Harvest" name="resourceCoal" count="3,6" tag="coalHarvest"/>
+	<drop event="Harvest" name="resourceCoal" count="3,6" tag="allHarvest" />
 	<drop event="Destroy" name="jz_Plank" count="1"/>
 	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
 </block>
@@ -21156,11 +21120,9 @@ NOT the TextureNumber.
 	<property name="Model" value="Industrial/pole_top01" param1="main_mesh"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-	<drop event="Harvest" name="resourceForgedIron" count="1,4" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceForgedSteel" count="1,3" tag="salvageHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="2,6" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="2,6" tool_category="ToolWrench" />
+	<drop event="Destroy" name="resourceScrapIron" count="20,55"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="FilterTags" value="fdecor,fother"/>
 </block>
@@ -21172,13 +21134,13 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Appliances/ac_unitPrefab"/> <property name="HandleFace" value="Bottom"/>
 	<property name="ImposterExchange" value="imposterBlock" param1="52"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="3,7" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="1,5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="1,10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="3,7" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,5" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceMetalPipe" count="1,5" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceScrapIron" count="1,10" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
-	<drop event="Destroy" name="resourceRadiator" count="1" prob="0.7" tag="salvageHarvest"/>
+	<drop event="Destroy" name="resourceRadiator" count="1" prob="0.7" tool_category="ToolWrench" />
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="EconomicValue" value="450"/> <!-- disassemble value -->
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
@@ -21192,11 +21154,11 @@ NOT the TextureNumber.
 	<property name="HandleFace" value="Bottom"/>
 	<property name="ImposterExchange" value="imposterPlate" param1="168"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="3,7" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="1,5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="1,10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="3,7" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,5" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceMetalPipe" count="1,5" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="1,10" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="EconomicValue" value="450"/> <!-- disassemble value -->
@@ -21208,11 +21170,11 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Appliances/vent_fan_doublePrefab"/>
 	<property name="MultiBlockDim" value="2,1,1"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="3,7" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="1,5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="1,10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="3,7" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,5" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceMetalPipe" count="1,5" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="1,10" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 </block>
 
@@ -21227,8 +21189,8 @@ NOT the TextureNumber.
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/> <!-- HV: mounted fluorescent lamp -->
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,6" tool_category="ToolScrewDriver" /> <!-- HV: mounted fluorescent lamp -->
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="5" prob="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Science"/>
@@ -21241,8 +21203,8 @@ NOT the TextureNumber.
 	<property name="Extends" value="satelliteDish" param1="MultiBlockDim"/>
 	<property name="Model" value="Entities/Electrical/satellite_dish_smallPrefab"/> <property name="HandleFace" value="North"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/> <!-- HV: mounted fluorescent lamp -->
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,6" tool_category="ToolScrewDriver" /> <!-- HV: mounted fluorescent lamp -->
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="allHarvest"/>
 </block>
 
 <block name="graveStone01">
@@ -21307,8 +21269,6 @@ NOT the TextureNumber.
 	<property name="ImposterExchange" value="imposterHalf" param1="112"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="LootList" value="40"/>
-	<drop event="Harvest" name="resourceForgedIron" count="2,4" prob="1" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceForgedSteel" count="2,4" prob="0.5" tag="salvageHarvest"/>
 	<drop event="Harvest" name="resourceScrapIron" count="30" prob="1" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<property name="EconomicValue" value="250"/> <!-- disassemble value -->
@@ -21335,14 +21295,14 @@ NOT the TextureNumber.
 	<property name="Extends" value="decoHoistChain"/>
 	<property name="Model" value="Entities/Industrial/hoistHookPrefab"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tool_category="ToolWrench" />
 </block>
 
 <block name="decoHoistMagnet">
 	<property name="Extends" value="decoHoistChain"/>
 	<property name="Model" value="Entities/Industrial/hoistMagnetPrefab"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tool_category="ToolScrewDriver" />
 </block>
 
 <block name="decoHoistTopMount">
@@ -21453,7 +21413,7 @@ NOT the TextureNumber.
 	<property name="ImposterExchange" value="imposterBlock" param1="57"/>
 	<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
 	<drop event="Harvest" name="jz_Plank" count="3" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceRockSmall" count="50" />
+	<drop event="Harvest" name="resourceRockSmall" count="50" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.5" stick_chance="1"/>
 	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
@@ -21635,9 +21595,9 @@ NOT the TextureNumber.
 	</property>
 	<drop event="Harvest" name="resourceRockSmall" count="30" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceRockSmall" count="20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceClayLump" count="20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceLeather" count="5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceRockSmall" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceClayLump" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="5" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="15"/>
@@ -21670,9 +21630,9 @@ NOT the TextureNumber.
 	</property>
 	<drop event="Harvest" name="resourceRockSmall" count="30" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceRockSmall" count="20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceClayLump" count="20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceLeather" count="5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceRockSmall" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceClayLump" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="5" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -21721,9 +21681,8 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
 	<drop event="Harvest" name="jz_Plank" count="20" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
-	<drop event="Harvest" name="jz_Plank" count="20" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="8" tool_category="ToolWrench" />
+	<drop event="Harvest" name="jz_Plank" count="20" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="15"/>
@@ -21759,9 +21718,8 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
 	<drop event="Harvest" name="jz_Plank" count="20" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
-	<drop event="Harvest" name="jz_Plank" count="20" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="8" tool_category="ToolWrench" />
+	<drop event="Harvest" name="jz_Plank" count="20" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -21809,9 +21767,8 @@ NOT the TextureNumber.
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="300" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceSpring" count="2" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceSpring" count="2" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="4" tool_category="ToolWrench" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="15"/>
@@ -21844,9 +21801,8 @@ NOT the TextureNumber.
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="300" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceSpring" count="2" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceSpring" count="2" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="4" tool_category="ToolWrench" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -21897,11 +21853,10 @@ NOT the TextureNumber.
 		<property name="jz_Plank" value="40"/>
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="80" tag="allHarvest"/>
-	<drop event="Harvest" name="jz_Plank" count="16" tag="allHarvest"/>
+	<drop event="Harvest" name="jz_Plank" count="16" tool_category="ToolClawHammer" />
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="jz_Plank" count="15" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="jz_Plank" count="15" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="15"/>
@@ -21936,11 +21891,10 @@ NOT the TextureNumber.
 		<property name="jz_Plank" value="40"/>
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="80" tag="allHarvest"/>
-	<drop event="Harvest" name="jz_Plank" count="16" tag="allHarvest"/>
+	<drop event="Harvest" name="jz_Plank" count="16" tool_category="ToolClawHammer" />
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="jz_Plank" count="15" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="jz_Plank" count="15" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -22215,9 +22169,9 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="cntCar03SedanDamage0Master" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.2" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" prob="0.1" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tool_category="ToolScrewDriver" />
 	<!-- <drop event="Fall" name="cntCar03SedanDamage1Master" count="1" prob="1.0" stick_chance="1"/> -->
 	<property name="DowngradeBlock" value="cntCar03SedanDamage1Master"/>
 	<property name="BigDecorationRadius" value="5"/>
@@ -22252,20 +22206,20 @@ NOT the TextureNumber.
 	<property name="ShowModelOnFall" value="false"/>
 	<property name="PassThroughDamage" value="true"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="smallEngine" count="1" prob="0.25" tag="salvageHarvest"/>
-	<drop event="Harvest" name="carBattery" count="1" prob="0.25" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceAcid" prob=".05" count="1" tag="WasteTreasuresAcidHarvest"/>
-	<drop event="Harvest" name="resourceRadiator" count="1" prob="0.5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceOil" count="1,3" prob="0.5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="smallEngine" count="1" prob="0.25" tool_category="ToolWrench" />
+	<drop event="Harvest" name="carBattery" count="1" prob="0.25" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceAcid" prob=".05" count="1" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceRadiator" count="1" prob="0.5" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceOil" count="1,3" prob="0.5" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceCloth" count="3,7" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceSpring" count="2,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="10,35" tag="salvageHarvest"/>
-	<drop event="Harvest" name="ammoGasCan" count="50,500" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceSpring" count="2,4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceScrapIron" count="10,35" tool_category="ToolWrench" />
+	<drop event="Harvest" name="ammoGasCan" count="50,500" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceScrapIron" count="12" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,2" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="allHarvest"/>
 	<property name="DowngradeBlock" value="cntCar03SedanDamage2Master"/>
 	<property name="BigDecorationRadius" value="5"/>
 	<property name="CanDecorateOnSlopes" value="false"/>
@@ -22296,15 +22250,15 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="2,2,6"/>
 	<property name="ShowModelOnFall" value="false"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.5" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.5" tool_category="ToolWrench" />
 	<drop event="Harvest" name="ammoGasCan" count="50,500" prob="0.5" tag="allHarvest"/>
-	<drop event="Harvest" name="ammoGasCan" count="50,500" prob="0.5" tag="salvageHarvest"/> <!-- together 100 avg -->
-	<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.45" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="2,7" tag="salvageHarvest"/>
+	<drop event="Harvest" name="ammoGasCan" count="50,500" prob="0.5" tool_category="ToolWrench" /> <!-- together 100 avg -->
+	<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.45" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceScrapIron" count="20" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceScrapPolymers" count="2,7" tool_category="ToolWrench" />
 	<drop event="Destroy" count="0"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,5" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceScrapIron" count="12" tag="allHarvest"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="1" stick_chance="1"/>
 	<property name="BigDecorationRadius" value="5"/>
@@ -22550,23 +22504,23 @@ NOT the TextureNumber.
 		<property name="EntityDamage" value="250"/> <!-- damage for entities in the center of the explosion -->
 	</property>
 	<drop event="Harvest" name="cntBusSchool" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="ammoGasCan" count="100,1000" tag="allHarvest"/>
-	<drop event="Harvest" name="ammoGasCan" count="100,1000" tag="salvageHarvest"/>
-	<drop event="Harvest" name="carBattery" count="1" prob="0.6" tag="salvageHarvest"/>
-	<drop event="Harvest" name="smallEngine" count="1" prob="0.75" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceAcid" prob=".15" count="1" tag="WasteTreasuresAcidHarvest"/>
+	<drop event="Harvest" name="ammoGasCan" count="100,1000" tool_category="ToolWrench" />
+	<drop event="Harvest" name="ammoGasCan" count="100,1000" tool_category="ToolWrench" />
+	<drop event="Harvest" name="carBattery" count="1" prob="0.6" tool_category="ToolWrench" />
+	<drop event="Harvest" name="smallEngine" count="1" prob="0.75" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceAcid" prob=".15" count="1" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceCloth" count="10,20" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceHeadlight" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,5" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceHeadlight" count="1,2" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceLeather" count="4,12" prob="0.5" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="7,20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceOil" count="2,4" prob="0.5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceOil" count="1,4" prob="0.5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceRadiator" count="1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="7,20" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.5" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceOil" count="2,4" prob="0.5" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceOil" count="1,4" prob="0.5" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceRadiator" count="1" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceScrapIron" count="50,120" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="30,116" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="8,22" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="30,116" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceScrapPolymers" count="8,22" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceSpring" count="3,6" tag="salvageHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
@@ -22614,7 +22568,6 @@ NOT the TextureNumber.
 	<property name="ModelOffset" value="0,0,0"/>
 	<property name="MultiBlockDim" value="3,3,7"/>
 	<property name="VerticalOffset" value="0"/>		
-	<drop event="Harvest" name="resourceMilitaryFiber" count="10,20" tag="WasteTreasuresCompleteHarvest"/>
 </block>
 
 <block name="cntWastelandRandomLootHelper">
@@ -22948,7 +22901,7 @@ NOT the TextureNumber.
 	<property name="ImposterDontBlock" value="true"/>
 	<property class="RepairItems"> <property name="resourceForgedIron" value="1"/> <property name="resourceElectricParts" value="3"/> </property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/> <!-- HV: mounted lamp -->
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tool_category="ToolScrewDriver" /> <!-- HV: mounted lamp -->
 	<drop event="Destroy" name="resourceScrapIron" count="5" prob="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="-1"/>
@@ -23027,8 +22980,8 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="2"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/> <!-- HV: mounted fluorescent lamp -->
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,6" tool_category="ToolScrewDriver" /><!-- HV: mounted fluorescent lamp -->
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tool_category="ToolScrewDriver" />
 	<property name="EconomicValue" value="191"/>
 </block>
 
@@ -23044,9 +22997,8 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Lighting/street_light01Prefab"/> <!-- <property name="HandleFace" value="Bottom"/> -->
 	<property name="OnlySimpleRotations" value="true"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="4,8" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceForgedSteel" count="1,2" prob="1" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<drop event="Harvest" name="resourceElectricParts" count="4,8" tool_category="ToolScrewDriver" />
+	<drop event="Destroy" name="resourceScrapIron" count="20,35"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="-1"/>
 	<property name="Group" value="Science"/>
@@ -23066,7 +23018,7 @@ NOT the TextureNumber.
 	<property name="OnlySimpleRotations" value="true"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="4,6" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="4,6" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 </block>
 
@@ -23088,8 +23040,8 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="2"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/> <!-- HV: mounted fluorescent lamp -->
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,6" tool_category="ToolScrewDriver" /> <!-- HV: mounted fluorescent lamp -->
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" name="resourceScrapIron" count="5" prob="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="-1"/>
@@ -23141,7 +23093,7 @@ NOT the TextureNumber.
 		<property name="resourceMechanicalParts" value="2"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tool_category="ToolScrewDriver" />
 </block>
 
 <block name="chandelierLight">
@@ -23170,7 +23122,7 @@ NOT the TextureNumber.
 	<property name="ImposterDontBlock" value="true"/>
 	<property class="RepairItems"> <property name="resourceScrapBrass" value="50"/> </property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceScrapBrass" count="15,25" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapBrass" count="15,25" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" name="candle" count="1,3" prob="1"/>
 	<property name="TakeDelay" value="-1"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -23264,8 +23216,8 @@ NOT the TextureNumber.
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="24" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceScrapIron" count="20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="20" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="3" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="-1"/>
@@ -23293,8 +23245,8 @@ NOT the TextureNumber.
 	</property>
 	<drop event="Harvest" name="resourceScrapIron" count="24" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceScrapIron" count="20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="20" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="3" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="OnlySimpleRotations" value="true"/>
@@ -23496,7 +23448,7 @@ NOT the TextureNumber.
 	</property>
     <property class="RepairItems"> <property name="resourceScrapIron" value="50" /> </property>
     <drop event="Harvest" name="" count="0" tool_category="Disassemble" />
-	<drop event="Destroy" name="resourceScrapIron" count="2" tool_category="Disassemble" />
+	<drop event="Destroy" name="resourceScrapIron" count="2" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapIron" count="2,4" prob="1" />
 </block>
 
@@ -23514,8 +23466,8 @@ NOT the TextureNumber.
 	<property name="Extends" value="porchLight01"/>
 	<property name="Model" value="Entities/Lighting/xray_displayPrefab"/> <property name="HandleFace" value="South"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="3,6" tag="salvageHarvest"/> <!-- HV: electronics -->
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="3,6" tool_category="ToolScrewDriver" /> <!-- HV: electronics -->
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" name="resourceScrapIron" count="2" prob="1"/>
 	<drop event="Fall" count="0" prob="0"/>
 </block>
@@ -23524,8 +23476,8 @@ NOT the TextureNumber.
 	<property name="Extends" value="xRayDisplayLight1"/>
 	<property name="Model" value="Entities/Lighting/xray_display_2Prefab"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="3,6" tag="salvageHarvest"/> <!-- HV: electronics -->
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="3,6" tool_category="ToolScrewDriver" /> <!-- HV: electronics -->
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tool_category="ToolScrewDriver" />
 </block>
 
 <block name="keystoneBlock"> <!-- landclaim -->
@@ -23593,8 +23545,8 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal_weak"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2" prob="0.7" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="2" prob="0.8" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2" prob="0.7" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceScrapPolymers" count="2" prob="0.8" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" name="resourceScrapIron" count="1,5" prob="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="-1"/>
@@ -23630,12 +23582,11 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="8"/>
 		<property name="resourceElectricParts" value="3"/>
 	</property>
-	<drop event="Harvest" name="resourceScrapIron" count="192" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="225" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="3" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="1" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Stacknumber" value="1"/>
@@ -23667,12 +23618,11 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="8"/>
 		<property name="resourceElectricParts" value="3"/>
 	</property>
-	<drop event="Harvest" name="resourceScrapIron" count="192" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="225" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="3" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="1" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -23735,12 +23685,11 @@ NOT the TextureNumber.
 	<property name="OnlySimpleRotations" value="true"/>
 	<property name="ImposterExchange" value="imposterRamp" param1="18"/>
 	<property name="IsTerrainDecoration" value="true"/>
-	<drop event="Harvest" name="resourceScrapIron" count="120" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="155" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,3" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.5" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -23775,12 +23724,11 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="2"/>
 		<property name="resourceScrapPolymers" value="4"/>
 	</property>
-	<drop event="Harvest" name="resourceScrapIron" count="120" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="155" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,3" tool_category="ToolScrewDriver" />
 	<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Stacknumber" value="1"/>
@@ -23812,12 +23760,11 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="2"/>
 		<property name="resourceScrapPolymers" value="4"/>
 	</property>
-	<drop event="Harvest" name="resourceScrapIron" count="120" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="155" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceForgedIron" count="3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,3" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="1,2" prob="0.6" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -23842,7 +23789,7 @@ NOT the TextureNumber.
 	<property name="Group" value="Science"/>
 	<property class="RepairItems"> <property name="resourceForgedIron" value="1"/></property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1" prob="0.2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1" prob="0.2" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" name="resourceScrapIron" count="1,5" prob="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="5"/>
@@ -23895,8 +23842,8 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="1"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,1" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,1" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,1" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapIron" count="5,20" prob="1"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="5"/>
@@ -23925,8 +23872,8 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="4"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,1" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,1" tool_category="ToolScrewDriver" />
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,1" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceScrapIron" count="20,100" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
@@ -23983,7 +23930,7 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="1"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" tool_category="ToolScrewDriver" />
 	<drop event="Harvest" name="resourceScrapIron" count="5,10" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
@@ -24013,7 +23960,7 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="3"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,3" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,3" tool_category="ToolScrewDriver" />
 	<drop event="Harvest" name="resourceScrapIron" count="5,10" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
@@ -24042,7 +23989,7 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="2"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" tool_category="ToolScrewDriver" />
 	<drop event="Harvest" name="resourceScrapIron" count="5,10" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
@@ -24067,7 +24014,7 @@ NOT the TextureNumber.
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="LootList" value="42"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,4" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Science"/>
@@ -24100,7 +24047,7 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="1"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="0,1" tool_category="ToolScrewDriver" />
 	<drop event="Harvest" name="resourceScrapIron" count="5,40" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
@@ -24135,8 +24082,8 @@ NOT the TextureNumber.
 		<property name="resourceElectricParts" value="2"/>
 	</property>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Harvest" name="resourceScrapIron" count="20,100" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
@@ -24274,8 +24221,8 @@ NOT the TextureNumber.
 		<property name="UpgradeHitCount" value="4"/>
 	</property>-->
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tool_category="ToolScrewDriver" />
 	<drop event="Harvest" name="resourceScrapIron" count="10,40" prob="1" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 
@@ -27445,7 +27392,7 @@ NOT the TextureNumber.
 		<property name="EntityDamage" value="250"/>
 	</property>
 	<property name="DescriptionKey" value="cntBarrelGroupDesc"/>
-	<drop event="Harvest" name="resourceScrapIron" count="3,6" tag="allToolsHarvest"/>
+	<drop event="Harvest" name="resourceScrapIron" count="3,6" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1,5" prob="0.75" stick_chance="1"/>
 	<property name="FilterTags" value="fdecor,fother,floot"/>
@@ -27474,7 +27421,7 @@ NOT the TextureNumber.
 		<property name="EntityDamage" value="250"/>
 	</property>
 	<property name="DescriptionKey" value="cntBarrelGroupDesc"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="2,5" tag="allToolsHarvest"/>
+	<drop event="Harvest" name="resourceScrapPolymers" count="2,5" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="resourceScrapPolymers" count="3" prob="0.3" stick_chance="0"/>
 	<property name="FilterTags" value="fdecor,fother,floot"/>
@@ -27774,8 +27721,8 @@ NOT the TextureNumber.
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="smallEngine" count="1" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="smallEngine" count="1" tool_category="ToolWrench" />
+	<drop event="Destroy" name="resourceScrapPolymers" count="3,7" tool_category="ToolWrench" />
 	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
 </block>
 
@@ -28739,7 +28686,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="cntFetchQuestSatchel"/>
 	<property name="IsTerrainDecoration" value="true" />
     <property name="Weight" value="20" />
-	<property name="LootList" value="10" />
+	<property name="LootList" value="1" />
 	<property class="RepairItems">
 		<property name="resourceCloth" value="10" />
 	</property>
@@ -30562,11 +30509,11 @@ NOT the TextureNumber.
 	<property name="PassThroughDamage" value="true"/>
 	<property name="VerticalOffset" value="0.0"/>
 	<drop event="Harvest" name="resourceLeather" count="1,3" prob="0.5" tag="allHarvest"/>
-	<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.2" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.2" tool_category="ToolWrench" />
 	<drop event="Destroy" count="0"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" prob="0.1" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tool_category="ToolWrench" />
 	<property name="DowngradeBlock" value="jz_MasterMilitaryVehicle2"/>
 	<property name="BigDecorationRadius" value="5"/>
 	<property name="CanDecorateOnSlopes" value="false"/>
@@ -30600,13 +30547,13 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceMetalPipe" count="5" prob="0.5" tag="salvageHarvest"/>
 	<drop event="Harvest" name="ammoGasCan" count="50,500" prob="0.5" tag="allHarvest"/>
-	<drop event="Harvest" name="ammoGasCan" count="50,500" prob="0.5" tag="salvageHarvest"/> <!-- together 100 avg -->
-	<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.45" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapIron" count="20" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="2,7" tag="salvageHarvest"/>
+	<drop event="Harvest" name="ammoGasCan" count="50,500" prob="0.5" tool_category="ToolWrench" /> <!-- together 100 avg -->
+	<drop event="Harvest" name="resourceHeadlight" count="1" prob="0.45" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceScrapIron" count="20" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceScrapPolymers" count="2,7" tool_category="ToolWrench" />
 	<drop event="Destroy" count="0"/>
-	<drop event="Harvest" name="resourceMechanicalParts" count="1,5" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,5" tool_category="ToolWrench" />
+	<drop event="Harvest" name="resourceElectricParts" count="0,2" prob="0.1" tool_category="ToolWrench" />
 	<drop event="Harvest" name="resourceScrapIron" count="12" tag="allHarvest"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="1" stick_chance="1"/>
 	<property name="BigDecorationRadius" value="5"/>
@@ -30963,7 +30910,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
 	<property name="FilterTags" value="fdecor,fother"/>
 	<property name="DowngradeBlock" value="jz_GoreDecorRandomHelper"/>
-	<drop event="Harvest" name="foodRottingFlesh" count="1" prob="1"/>
+	<drop event="Harvest" name="foodRottingFlesh" count="1" prob="1" tag="allHarvest" />
 	<drop event="Harvest" name="foodRottingFlesh" count="1,2" prob="1" tag="butcherHarvest"/>
 	<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
 </block>

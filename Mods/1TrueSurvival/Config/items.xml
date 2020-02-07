@@ -1058,7 +1058,10 @@
 	</property>
 
 	<effect_group name="meleeToolKnifeBone">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value="-50"/>
+	
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffZombieBite"/>
+		
+
 		<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
 		<passive_effect name="EntityDamage" operation="base_set" value="10.2"/> <!-- meleeToolKnifeBone -->
@@ -1156,6 +1159,9 @@
 	</property>
 
 	<effect_group name="meleeToolKnifeIron">
+	
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffScratch"/>
+	
 		<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
 		<passive_effect name="EntityDamage" operation="base_set" value="12.1"/> <!-- meleeToolKnifeIron -->
@@ -4739,6 +4745,7 @@
 		<property name="Sound_start" value="swoosh"/>
 	</property>
 	<effect_group name="meleeHandMaster" tiered="false">
+		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="1.65"/>
 	</effect_group>
 </item>
@@ -4846,6 +4853,7 @@
 	</property>
 	<effect_group name="meleeHandZombie01" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<passive_effect name="EntityDamage" operation="base_set" value="10"/> <!-- this passive is ignored so using the old notation! -->
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
@@ -4882,6 +4890,7 @@
 	</property>
 	<effect_group name="meleeHandZombie02" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="30"/>  A16 2 -->
 		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker,player" buff="buffLegSprained">
 			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
@@ -4927,6 +4936,7 @@
 	</property>
 	<effect_group name="meleeHandZombieBurning" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffBurningZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".08" tags="buffInjuryBleedingZombie"/>
@@ -4966,6 +4976,7 @@
 	</property>
 	<effect_group name="meleeHandZombieBurningCrawler" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="30"/>  A16 2 -->
 		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker,player" buff="buffLegSprained">
 			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
@@ -5152,6 +5163,7 @@
 	</property>
 	<effect_group name="meleeHandAnimalZombieDog" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
 		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="buffInjuryBleedingZombie"/>
@@ -5246,6 +5258,7 @@
 	</property>
 	<effect_group name="meleeHandAnimalZombieBear" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="40"/>  A16 1.5 -->
 		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="buffInfectionCatch"/>
@@ -10707,7 +10720,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="5"/>
 	<property name="EconomicValue" value="5"/>
 	<property name="Group" value="Science,Medical,Basics"/>
-	<property name="DescriptionKey" value="medicalBandageDesc"/>
+	<property name="DescriptionKey" value="jz_medicalBandageDesc"/>
 	<property name="PickupJournalEntry" value="firstAidTip"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
@@ -10743,7 +10756,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="medicalBandage"/>
 	<property name="Group" value="Science,Medical"/>
 	<property name="EconomicValue" value="15"/>
-	<property name="DescriptionKey" value="medicalFirstAidBandageDesc"/>
+	<property name="DescriptionKey" value="jz_medicalFirstAidBandageDesc"/>
 	<property name="Stacknumber" value="5"/>
 	<property name="CraftingIngredientExp" value="2"/>
 	<property name="UnlockedBy" value="medicalFirstAidBandageSchematic"/>
@@ -10776,6 +10789,7 @@ perkNightStalkerSilentNight
 	<property name="EconomicValue" value="200"/>
 	<property name="Stacknumber" value="5"/>
 	<property name="UnlockedBy" value="medicalFirstAidKitSchematic"/>
+	<property name="DescriptionKey" value="jz_medicalFirstAidBandageDesc"/>
 
 	<property class="Action0">
 		<!-- <requirement name="StatCompare" stat="health" operation="lte" value="50"/> -->
@@ -10786,33 +10800,7 @@ perkNightStalkerSilentNight
 	</property>
 
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="90"/> <!-- X -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthIncrease" operation="set" value="@medicPerkIncrease"/>
-
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="180"/> <!-- X -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="healthIncrease" operation="set" value="@healthPerkIncrease"/>
-		<display_value name="foodHealthAmount" value="180"/>
-
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
-
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="90"/> <!-- X -->
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.25">
-			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="1.25"/> </triggered_effect>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.5">
-			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="1.5"/> </triggered_effect>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="2">
-			<requirement name="CVarCompare" cvar="maxHealthIncrease" operation="Equals" value="2"/> </triggered_effect>
-
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medicalHealthAmount" operation="add" value="180"/> <!-- X -->
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="2.5">
-			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="2.5"/> </triggered_effect>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="3">
-			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="3"/> </triggered_effect>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="4">
-			<requirement name="CVarCompare" cvar="healthIncrease" operation="Equals" value="4"/> </triggered_effect>
-
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="300"/>
 	</effect_group>
@@ -11028,12 +11016,13 @@ perkNightStalkerSilentNight
 	<property name="EconomicValue" value="80"/>
 	<property name="Stacknumber" value="10"/> <!-- STK loot -->
 	<property name="Group" value="Science,CFChemicals,Medical"/>
+	<property name="DescriptionKey" value="schematicGeneralGroupDesc"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="player_painkillers"/>
-		<requirement name="NotHasBuff" buff="buffDrugPainkillers"/>
+		<requirement name="NotHasBuff" buff="jz_drugPainkillersDesc"/>
 	</property>
 	<effect_group tiered="false">
 		<display_value name="dInstantHealth" value="40"/>
@@ -11041,6 +11030,7 @@ perkNightStalkerSilentNight
 		<display_value name="$waterAmountAdd" value="-40"/>
 		<display_value name="dStunResist" value="1"/>
 		<display_value name="dDuration" value="183"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/><display_value name="TSHydration" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$jz_PlayerHealthMaxDrain" operation="add" value="1"/><display_value name="TSWellness" value="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffPainkiller"/>
@@ -20322,10 +20312,9 @@ perkNightStalkerSilentNight
 		<property name="Create_item" value="jz_SteelPipe" />
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="add" value="20"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStat" stat="Health" operation="subtract" value="20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffTendingBiteWound">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageThree"/> </triggered_effect>
+			<requirement name="HasBuff" buff="jz_BuffZombieBite"/> </triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffZombieBite"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound"  sound="player#painlg"/>		
 	</effect_group>
@@ -20337,6 +20326,13 @@ perkNightStalkerSilentNight
 	<property class="Action0">
 		<property name="Create_item" value="shortMetalPipe" />
 	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStat" stat="Health" operation="subtract" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffTendingBiteWound">
+			<requirement name="HasBuff" buff="jz_BuffZombieBite"/> </triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffZombieBite"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound"  sound="player#painlg"/>		
+	</effect_group>
 </item>
 
 <item name="jz_MedicalAntiVenom">
