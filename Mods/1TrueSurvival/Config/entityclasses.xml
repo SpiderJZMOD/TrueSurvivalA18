@@ -228,9 +228,49 @@
 		<passive_effect name="PerkLevel" operation="base_add" value="@jz_IronBuildingSkillLv" tags="jz_IronBuildingSkill"/>
 		<passive_effect name="PerkLevel" operation="base_add" value="@jz_ConcreteBuildingSkillLv" tags="jz_ConcreteBuildingSkill"/>
 		<passive_effect name="PerkLevel" operation="base_add" value="@jz_SteelBuildingSkillLv" tags="jz_SteelBuildingSkill"/>
+        <!-- JZMOD HUNTING SKILLS-->
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_SmallGameSkillLv" tags="jz_SmallGameHunterSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_LargeGameSkillLv" tags="jz_LargeGameHunterSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_SmallPredGameSkillLv" tags="jz_SmallPredGameHunterSkill"/>
+		<passive_effect name="PerkLevel" operation="base_add" value="@jz_LargePredGameSkillLv" tags="jz_LargePredGameHunterSkill"/>
+         
+        <passive_effect name="HarvestCount" operation="base_set" value="0" tags="SmallGameButcher"/>
+        <passive_effect name="HarvestCount" operation="base_set" value="0" tags="SmallGameHunter"/>
+        <passive_effect name="HarvestCount" operation="base_set" value="0" tags="LargeGameButcher"/>
+        <passive_effect name="HarvestCount" operation="base_set" value="0" tags="LargeGameHunter"/>
+        <passive_effect name="HarvestCount" operation="base_set" value="0" tags="SmallPredButcher"/>
+        <passive_effect name="HarvestCount" operation="base_set" value="0" tags="SmallPredHunter"/>
+        <passive_effect name="HarvestCount" operation="base_set" value="0" tags="LargePredButcher"/>
+        <passive_effect name="HarvestCount" operation="base_set" value="0" tags="LargePredHunter"/>
+          
+        <passive_effect name="HarvestCount" operation="base_set" value="1" tags="SmallGameButcher">
+            <requirement name="ProgressionLevel" progression_name="jz_SmallGameHunterSkill" operation="GTE" value="1"/>
+        </passive_effect>
+        <passive_effect name="HarvestCount" operation="base_set" value="1" tags="SmallGameHunter">
+            <requirement name="ProgressionLevel" progression_name="jz_SmallGameHunterSkill" operation="GTE" value="2"/>
+        </passive_effect>
+        <passive_effect name="HarvestCount" operation="base_set" value="1" tags="LargeGameButcher">
+            <requirement name="ProgressionLevel" progression_name="jz_LargeGameHunterSkill" operation="GTE" value="1"/>
+        </passive_effect>
+        <passive_effect name="HarvestCount" operation="base_set" value="1" tags="LargeGameHunter">
+            <requirement name="ProgressionLevel" progression_name="jz_LargeGameHunterSkill" operation="GTE" value="2"/>
+        </passive_effect>
+        <passive_effect name="HarvestCount" operation="base_set" value="1" tags="SmallPredButcher">
+            <requirement name="ProgressionLevel" progression_name="jz_SmallPredGameHunterSkill" operation="GTE" value="1"/>
+        </passive_effect>
+        <passive_effect name="HarvestCount" operation="base_set" value="1" tags="SmallPredHunter">
+            <requirement name="ProgressionLevel" progression_name="jz_SmallPredGameHunterSkill" operation="GTE" value="2"/>
+        </passive_effect>
+        <passive_effect name="HarvestCount" operation="base_set" value="1" tags="LargePredButcher">
+            <requirement name="ProgressionLevel" progression_name="jz_LargePredGameHunterSkill" operation="GTE" value="1"/>
+        </passive_effect>
+        <passive_effect name="HarvestCount" operation="base_set" value="1" tags="LargePredHunter">
+            <requirement name="ProgressionLevel" progression_name="jz_LargePredGameHunterSkill" operation="GTE" value="2"/>
+        </passive_effect>
+
 	</effect_group>
-	
-	<effect_group>
+   
+    <effect_group>
 		<requirement name="PlayerLevel" operation="LT" value="300"/>
 			<passive_effect name="ExpDeficitPerDeathPercentage" operation="base_set" value=".25"/>
 			<passive_effect name="ExpDeficitMaxPercentage" operation="base_set" value=".5"/>
@@ -2427,7 +2467,7 @@
 </entity_class>
 
 <entity_class name="animalStag" extends="animalTemplateTimid">
-	<property name="Tags" value="entity,animal,deer,perkAT02,perkAT03,perkAT04,perkAT05"/>
+	<property name="Tags" value="entity,animal,deer,perkAT02"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_deer"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_deer"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
@@ -2466,29 +2506,29 @@
     <drop event="Destroy" name="jz_BrainMatter" count="3" />
     <drop event="Destroy" name="resourceBone"  count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="20" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceAnimalFat" tag="Butcher" count="2" />
-	<drop event="Harvest" name="jz_Sinew" tag="Butcher" count="1" />
-	<drop event="Harvest" name="jz_Hoof" tag="Butcher" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Butcher" count="1" prob="0.3" />
-	<drop event="Harvest" name="jz_BrainMatter" tag="Butcher" count="2" />
-	<drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="Butcher" count="1" prob="0.3"/>
-    <drop event="Harvest" name="resourceBone" tag="Butcher" count="2"  />
+    <drop event="Harvest" name="foodRawMeat" tag="LargeGameButcher" count="20" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="LargeGameButcher" count="2" />
+	<drop event="Harvest" name="resourceAnimalFat" tag="LargeGameButcher" count="2" />
+	<drop event="Harvest" name="jz_Sinew" tag="LargeGameButcher" count="1" />
+	<drop event="Harvest" name="jz_Hoof" tag="LargeGameButcher" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargeGameButcher" count="1" prob="0.3" />
+	<drop event="Harvest" name="jz_BrainMatter" tag="LargeGameButcher" count="2" />
+	<drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="LargeGameButcher" count="1" prob="0.3"/>
+    <drop event="Harvest" name="resourceBone" tag="LargeGameButcher" count="2"  />
     <!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="20"/>
-    <drop event="Harvest" name="resourceAnimalFat" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_BrainMatter" tag="Hunter" count="1"/>
-	<drop event="Harvest" name="jz_Sinew" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="Hunter" count="1" prob="0.3"/>
-    <drop event="Harvest" name="resourceBone" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_AnimalBladder" tag="Hunter" count="1" prob="0.3" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" prob="0.2"/>
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" prob="0.2"/>
+    <drop event="Harvest" name="foodRawMeat" tag="LargeGameHunter" count="20"/>
+    <drop event="Harvest" name="resourceAnimalFat" tag="LargeGameHunter" count="1"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="LargeGameHunter" count="1"/>
+    <drop event="Harvest" name="jz_BrainMatter" tag="LargeGameHunter" count="1"/>
+	<drop event="Harvest" name="jz_Sinew" tag="LargeGameHunter" count="1" />
+    <drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="LargeGameHunter" count="1" prob="0.3"/>
+    <drop event="Harvest" name="resourceBone" tag="LargeGameHunter" count="1" />
+    <drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="LargeGameHunter" count="1" />
+    <drop event="Harvest" name="jz_AnimalBladder" tag="LargeGameHunter" count="1" prob="0.3" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargeGameHunter" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargeGameHunter" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargeGameHunter" count="1" prob="0.2"/>
+    <drop event="Harvest" name="jz_Hoof" tag="LargeGameHunter" count="1" prob="0.2"/>
 	
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="100"/>
@@ -2497,6 +2537,7 @@
 </entity_class>
 
 <entity_class name="animalDoe" extends="animalStag">
+    <property name="Tags" value="entity,animal,deer,perkAT02"/>
 	<property name="Prefab" value="/Entities/Animals/Deer/animalDeerDoeRagdoll"/>
 	<property name="Mass" value="110"/>
 
@@ -2510,29 +2551,29 @@
     <drop event="Destroy" name="jz_BrainMatter" count="3" />
     <drop event="Destroy" name="resourceBone"  count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="15" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceAnimalFat" tag="Butcher" count="2" />
-	<drop event="Harvest" name="jz_Sinew" tag="Butcher" count="1" />
-	<drop event="Harvest" name="jz_Hoof" tag="Butcher" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Butcher" count="1" prob="0.3" />
-	<drop event="Harvest" name="jz_BrainMatter" tag="Butcher" count="2" />
-	<drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="Butcher" count="1" prob="0.3"/>
-    <drop event="Harvest" name="resourceBone" tag="Butcher" count="2"  />
+    <drop event="Harvest" name="foodRawMeat" tag="LargeGameButcher" count="15" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="LargeGameButcher" count="2" />
+	<drop event="Harvest" name="resourceAnimalFat" tag="LargeGameButcher" count="2" />
+	<drop event="Harvest" name="jz_Sinew" tag="LargeGameButcher" count="1" />
+	<drop event="Harvest" name="jz_Hoof" tag="LargeGameButcher" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargeGameButcher" count="1" prob="0.3" />
+	<drop event="Harvest" name="jz_BrainMatter" tag="LargeGameButcher" count="2" />
+	<drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="LargeGameButcher" count="1" prob="0.3"/>
+    <drop event="Harvest" name="resourceBone" tag="LargeGameButcher" count="2"  />
     <!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="15"/>
-    <drop event="Harvest" name="resourceAnimalFat" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_BrainMatter" tag="Hunter" count="1"/>
-	<drop event="Harvest" name="jz_Sinew" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="Hunter" count="1" prob="0.3"/>
-    <drop event="Harvest" name="resourceBone" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_AnimalBladder" tag="Hunter" count="1" prob="0.3" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" prob="0.2"/>
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" prob="0.2"/>
+    <drop event="Harvest" name="foodRawMeat" tag="LargeGameHunter" count="15"/>
+    <drop event="Harvest" name="resourceAnimalFat" tag="LargeGameHunter" count="1"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="LargeGameHunter" count="1"/>
+    <drop event="Harvest" name="jz_BrainMatter" tag="LargeGameHunter" count="1"/>
+	<drop event="Harvest" name="jz_Sinew" tag="LargeGameHunter" count="1" />
+    <drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="LargeGameHunter" count="1" prob="0.3"/>
+    <drop event="Harvest" name="resourceBone" tag="LargeGameHunter" count="1" />
+    <drop event="Harvest" name="jz_FoodVenisonTenderloin" tag="LargeGameHunter" count="1" />
+    <drop event="Harvest" name="jz_AnimalBladder" tag="LargeGameHunter" count="1" prob="0.3" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargeGameHunter" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargeGameHunter" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargeGameHunter" count="1" prob="0.2"/>
+    <drop event="Harvest" name="jz_Hoof" tag="LargeGameHunter" count="1" prob="0.2"/>
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="50"/>
@@ -2541,7 +2582,7 @@
 </entity_class>
 
 <entity_class name="animalRabbit" extends="animalTemplateTimid">
-	<property name="Tags" value="entity,animal,rabbit,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
+	<property name="Tags" value="entity,animal,rabbit,perkAT01"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
 	<property name="Class" value="EntityAnimalRabbit"/>
@@ -2576,15 +2617,15 @@
 	<drop event="Destroy" name="jz_BrainMatter" count="1" />
     <drop event="Destroy" name="resourceBone"  count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="4" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="1" />
-	<drop event="Harvest" name="jz_BrainMatter" tag="Butcher" count="1" />
-	<drop event="Harvest" name="resourceBone" tag="Butcher" count="1"  />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallGameButcher" count="4" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="SmallGameButcher" count="1" />
+	<drop event="Harvest" name="jz_BrainMatter" tag="SmallGameButcher" count="1" />
+	<drop event="Harvest" name="resourceBone" tag="SmallGameButcher" count="1"  />
     <!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="4"/>
-    <drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="2"/>
-    <drop event="Harvest" name="jz_BrainMatter" tag="Hunter" count="2"/>
-	<drop event="Harvest" name="resourceBone" tag="Hunter" count="1" />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallGameHunter" count="4"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="SmallGameHunter" count="2"/>
+    <drop event="Harvest" name="jz_BrainMatter" tag="SmallGameHunter" count="2"/>
+	<drop event="Harvest" name="resourceBone" tag="SmallGameHunter" count="1" />
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="10"/>
@@ -2593,7 +2634,7 @@
 </entity_class>
 
 <entity_class name="animalChicken" extends="animalTemplateTimid">
-	<property name="Tags" value="entity,animal,chicken,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
+	<property name="Tags" value="entity,animal,chicken,perkAT01"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_chicken"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_chicken"/>
 	<property name="Mesh" value="Animals/CHICKEN/chickenPrefab"/>
@@ -2621,11 +2662,11 @@
 	<drop event="Destroy" name="foodRawMeat" count="2" />
 	<drop event="Destroy" name="resourceFeather" count="5" />
 	<!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="3" />
-	<drop event="Harvest" name="resourceFeather" tag="Butcher" count="5" />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallGameButcher" count="3" />
+	<drop event="Harvest" name="resourceFeather" tag="SmallGameButcher" count="5" />
     <!--JZMOD Hunter-->
-    <drop event="Destroy" name="foodRawMeat" tag="Hunter" count="3"/>
-    <drop event="Harvest" name="resourceFeather" tag="Hunter" count="5"/>
+    <drop event="Harvest" name="foodRawMeat" tag="SmallGameHunter" count="3"/>
+    <drop event="Harvest" name="resourceFeather" tag="SmallGameHunter" count="5"/>
 		
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="10"/>
@@ -2730,7 +2771,7 @@
 </entity_class>
 
 <entity_class name="animalBear" extends="animalTemplateHostile">
-	<property name="Tags" value="entity,animal,hostile,bear,perkAT05"/>
+	<property name="Tags" value="entity,animal,hostile,bear,perkAT04"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_bear"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_bear"/>
 	<property name="AvatarController" value="AvatarAnimalController"/>
@@ -2779,23 +2820,23 @@
     <drop event="Destroy" name="jz_BrainMatter" count="4" />
     <drop event="Destroy" name="resourceBone"  count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="20" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceAnimalFat" tag="Butcher" count="3" />
-	<drop event="Harvest" name="jz_Sinew" tag="Butcher" count="1" />
-	<drop event="Harvest" name="jz_BrainMatter" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceBone" tag="Butcher" count="2"  />
-    <drop event="Harvest" name="bearFlank" tag="Hunter" count="1" prob="0.3" />
+    <drop event="Harvest" name="foodRawMeat" tag="LargePredButcher" count="20" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="LargePredButcher" count="2" />
+	<drop event="Harvest" name="resourceAnimalFat" tag="LargePredButcher" count="3" />
+	<drop event="Harvest" name="jz_Sinew" tag="LargePredButcher" count="1" />
+	<drop event="Harvest" name="jz_BrainMatter" tag="LargePredButcher" count="2" />
+	<drop event="Harvest" name="resourceBone" tag="LargePredButcher" count="2"  />
+    <drop event="Harvest" name="bearFlank" tag="LargePredButcher" count="1" prob="0.3" />
 	<!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="20"/>
-    <drop event="Harvest" name="resourceAnimalFat" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_BrainMatter" tag="Hunter" count="1"/>
-	<drop event="Harvest" name="jz_Sinew" tag="Hunter" count="1" />
-	<drop event="Harvest" name="jz_FoodBearFlank" tag="Hunter" count="1" prob="0.3"/>
-    <drop event="Harvest" name="resourceBone" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_FoodBearFlank" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_AnimalBladder" tag="Butcher" count="1" prob="0.3" />
+    <drop event="Harvest" name="foodRawMeat" tag="LargePredHunter" count="20"/>
+    <drop event="Harvest" name="resourceAnimalFat" tag="LargePredHunter" count="1"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="LargePredHunter" count="1"/>
+    <drop event="Harvest" name="jz_BrainMatter" tag="LargePredHunter" count="1"/>
+	<drop event="Harvest" name="jz_Sinew" tag="LargePredHunter" count="1" />
+	<drop event="Harvest" name="jz_FoodBearFlank" tag="LargePredHunter" count="1" prob="0.3"/>
+    <drop event="Harvest" name="resourceBone" tag="LargePredHunter" count="1" />
+    <drop event="Harvest" name="jz_FoodBearFlank" tag="LargePredHunter" count="1" />
+    <drop event="Harvest" name="jz_AnimalBladder" tag="LargePredHunter" count="1" prob="0.3" />
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="800"/>
@@ -2846,7 +2887,7 @@
 </entity_class>
 
 <entity_class name="animalWolf" extends="animalTemplateHostile">
-	<property name="Tags" value="entity,animal,hostile,wolf,perkAT04,perkAT05"/>
+	<property name="Tags" value="entity,animal,hostile,wolf,perkAT03"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 	<!--property name="Prefab" value="Wolf"-->
@@ -2902,25 +2943,25 @@
     <drop event="Destroy" name="jz_BrainMatter" count="3" />
     <drop event="Destroy" name="resourceBone"  count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="8" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceAnimalFat" tag="Butcher" count="3" />
-	<drop event="Harvest" name="jz_Sinew" tag="Butcher" count="1" />
-	<drop event="Harvest" name="jz_BrainMatter" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceBone" tag="Butcher" count="2"  />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallPredButcher" count="8" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="SmallPredButcher" count="2" />
+	<drop event="Harvest" name="resourceAnimalFat" tag="SmallPredButcher" count="3" />
+	<drop event="Harvest" name="jz_Sinew" tag="SmallPredButcher" count="1" />
+	<drop event="Harvest" name="jz_BrainMatter" tag="SmallPredButcher" count="2" />
+	<drop event="Harvest" name="resourceBone" tag="SmallPredButcher" count="2"  />
     <!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="8"/>
-    <drop event="Harvest" name="resourceAnimalFat" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_BrainMatter" tag="Hunter" count="1"/>
-	<drop event="Harvest" name="jz_Sinew" tag="Hunter" count="1" />
-	<drop event="Harvest" name="resourceBone" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_AnimalBladder" tag="Butcher" count="1" prob="0.3" />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallPredHunter" count="8"/>
+    <drop event="Harvest" name="resourceAnimalFat" tag="SmallPredHunter" count="1"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="SmallPredHunter" count="1"/>
+    <drop event="Harvest" name="jz_BrainMatter" tag="SmallPredHunter" count="1"/>
+	<drop event="Harvest" name="jz_Sinew" tag="SmallPredHunter" count="1" />
+	<drop event="Harvest" name="resourceBone" tag="SmallPredHunter" count="1" />
+    <drop event="Harvest" name="jz_AnimalBladder" tag="SmallPredHunter" count="1" prob="0.3" />
 	
 </entity_class>
 
 <entity_class name="animalCoyote" extends="animalWolf">
-	<property name="Tags" value="entity,animal,hostile,coyote,perkAT04,perkAT05"/>
+	<property name="Tags" value="entity,animal,hostile,coyote,perkAT03"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 	<property name="PhysicsBody" value="wolf"/>
@@ -2967,24 +3008,25 @@
     <drop event="Destroy" name="jz_BrainMatter" count="3" />
     <drop event="Destroy" name="resourceBone"  count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="8" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceAnimalFat" tag="Butcher" count="3" />
-	<drop event="Harvest" name="jz_Sinew" tag="Butcher" count="1" />
-	<drop event="Harvest" name="jz_BrainMatter" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceBone" tag="Butcher" count="2"  />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallPredButcher" count="8" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="SmallPredButcher" count="2" />
+	<drop event="Harvest" name="resourceAnimalFat" tag="SmallPredButcher" count="3" />
+	<drop event="Harvest" name="jz_Sinew" tag="SmallPredButcher" count="1" />
+	<drop event="Harvest" name="jz_BrainMatter" tag="SmallPredButcher" count="2" />
+	<drop event="Harvest" name="resourceBone" tag="SmallPredButcher" count="2"  />
     <!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="8"/>
-    <drop event="Harvest" name="resourceAnimalFat" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_BrainMatter" tag="Hunter" count="1"/>
-	<drop event="Harvest" name="jz_Sinew" tag="Hunter" count="1" />
-	<drop event="Harvest" name="resourceBone" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_AnimalBladder" tag="Butcher" count="1" prob="0.3" />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallPredHunter" count="8"/>
+    <drop event="Harvest" name="resourceAnimalFat" tag="SmallPredHunter" count="1"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="SmallPredHunter" count="1"/>
+    <drop event="Harvest" name="jz_BrainMatter" tag="SmallPredHunter" count="1"/>
+	<drop event="Harvest" name="jz_Sinew" tag="SmallPredHunter" count="1" />
+	<drop event="Harvest" name="resourceBone" tag="SmallPredHunter" count="1" />
+    <drop event="Harvest" name="jz_AnimalBladder" tag="SmallPredHunter" count="1" prob="0.3" />
 	
 </entity_class>
 
 <entity_class name="animalDireWolf" extends="animalWolf">
+    <property name="Tags" value="entity,animal,hostile,wolf,perkAT04"/>
 	<property name="Mass" value="180"/>
 	<property name="Prefab" value="/Entities/Animals/Wolf/animalStandardDireWolfRagdoll"/>
 	<property name="ReplaceMaterial1" value="entities/animals/wolf/materials/wolfEyeFeral"/>
@@ -3017,20 +3059,20 @@
     <drop event="Destroy" name="jz_BrainMatter" count="3" />
     <drop event="Destroy" name="resourceBone"  count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="7" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceAnimalFat" tag="Butcher" count="3" />
-	<drop event="Harvest" name="jz_Sinew" tag="Butcher" count="1" />
-	<drop event="Harvest" name="jz_BrainMatter" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceBone" tag="Butcher" count="2"  />
+    <drop event="Harvest" name="foodRawMeat" tag="LargePredButcher" count="7" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="LargePredButcher" count="2" />
+	<drop event="Harvest" name="resourceAnimalFat" tag="LargePredButcher" count="3" />
+	<drop event="Harvest" name="jz_Sinew" tag="LargePredButcher" count="1" />
+	<drop event="Harvest" name="jz_BrainMatter" tag="LargePredButcher" count="2" />
+	<drop event="Harvest" name="resourceBone" tag="LargePredButcher" count="2"  />
     <!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="7"/>
-    <drop event="Harvest" name="resourceAnimalFat" tag="Hunter" count="1"/>
-	<drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_BrainMatter" tag="Hunter" count="1"/>
-	<drop event="Harvest" name="jz_Sinew" tag="Hunter" count="1" />
-	<drop event="Harvest" name="resourceBone" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_AnimalBladder" tag="Butcher" count="1" prob="0.3" />
+    <drop event="Harvest" name="foodRawMeat" tag="LargePredHunter" count="7"/>
+    <drop event="Harvest" name="resourceAnimalFat" tag="LargePredHunter" count="1"/>
+	<drop event="Harvest" name="jz_AnimalHide" tag="LargePredHunter" count="1"/>
+    <drop event="Harvest" name="jz_BrainMatter" tag="LargePredHunter" count="1"/>
+	<drop event="Harvest" name="jz_Sinew" tag="LargePredHunter" count="1" />
+	<drop event="Harvest" name="resourceBone" tag="LargePredHunter" count="1" />
+    <drop event="Harvest" name="jz_AnimalBladder" tag="LargePredHunter" count="1" prob="0.3" />
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="250"/>
@@ -3039,7 +3081,7 @@
 </entity_class>
 
 <entity_class name="animalMountainLion" extends="animalDireWolf">
-	<property name="Tags" value="entity,animal,hostile,mountainlion,perkAT05"/>
+	<property name="Tags" value="entity,animal,hostile,mountainlion,perkAT03"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_mountain_lion"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_mountain_lion"/>
 	<property name="PhysicsBody" value="MountainLion"/>
@@ -3083,20 +3125,20 @@
     <drop event="Destroy" name="jz_BrainMatter" count="3" />
     <drop event="Destroy" name="resourceBone"  count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="6" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceAnimalFat" tag="Butcher" count="3" />
-	<drop event="Harvest" name="jz_Sinew" tag="Butcher" count="1" />
-	<drop event="Harvest" name="jz_BrainMatter" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceBone" tag="Butcher" count="2"  />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallPredButcher" count="6" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="SmallPredButcher" count="2" />
+	<drop event="Harvest" name="resourceAnimalFat" tag="SmallPredButcher" count="3" />
+	<drop event="Harvest" name="jz_Sinew" tag="SmallPredButcher" count="1" />
+	<drop event="Harvest" name="jz_BrainMatter" tag="SmallPredButcher" count="2" />
+	<drop event="Harvest" name="resourceBone" tag="SmallPredButcher" count="2"  />
     <!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="6"/>
-    <drop event="Harvest" name="resourceAnimalFat" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_BrainMatter" tag="Hunter" count="1"/>
-	<drop event="Harvest" name="jz_Sinew" tag="Hunter" count="1" />
-	<drop event="Harvest" name="resourceBone" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_AnimalBladder" tag="Butcher" count="1" prob="0.3" />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallPredHunter" count="6"/>
+    <drop event="Harvest" name="resourceAnimalFat" tag="SmallPredHunter" count="1"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="SmallPredHunter" count="1"/>
+    <drop event="Harvest" name="jz_BrainMatter" tag="SmallPredHunter" count="1"/>
+	<drop event="Harvest" name="jz_Sinew" tag="SmallPredHunter" count="1" />
+	<drop event="Harvest" name="resourceBone" tag="SmallPredHunter" count="1" />
+    <drop event="Harvest" name="jz_AnimalBladder" tag="SmallPredHunter" count="1" prob="0.3" />
 	
 </entity_class>
 
@@ -3241,7 +3283,7 @@
 </entity_class>
 
 <entity_class name="animalSnake" extends="animalTemplateHostile">
-	<property name="Tags" value="entity,animal,hostile,snake,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
+	<property name="Tags" value="entity,animal,hostile,snake,perkAT03"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_snake"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_snake"/>
 	<property name="EntityType" value="Animal"/>
@@ -3300,12 +3342,12 @@
 	<drop event="Destroy" name="foodRawMeat" count="2" />
 	<drop event="Destroy" name="jz_VenomSack" count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="2" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="1" />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallPredButcher" count="2" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="SmallPredButcher" count="1" />
 	<drop event="Harvest" name="jz_VenomSack" count="1" />
 	<!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="4"/>
-    <drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="2"/>
+    <drop event="Harvest" name="foodRawMeat" tag="SmallPredHunter" count="4"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="SmallPredHunter" count="2"/>
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="10"/>
@@ -3314,7 +3356,7 @@
 </entity_class>
 
 <entity_class name="animalBoar" extends="animalTemplateHostile">
-	<property name="Tags" value="entity,animal,hostile,boar,perkAT03,perkAT04,perkAT05"/>
+	<property name="Tags" value="entity,animal,hostile,boar,perkAT01"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_pig"/>
 	<property name="TrackerIcon" value="ui_game_symbol_tracking_pig"/>
 	<property name="IsEnemyEntity" value="false"/><!-- override hostile template setting so he can spawn in safe zones -->
@@ -3352,29 +3394,29 @@
     <drop event="Destroy" name="jz_BrainMatter" count="3" />
     <drop event="Destroy" name="resourceBone"  count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="10" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceAnimalFat" tag="Butcher" count="4" />
-	<drop event="Harvest" name="jz_Sinew" tag="Butcher" count="1" />
-	<drop event="Harvest" name="jz_Hoof" tag="Butcher" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Butcher" count="1" prob="0.3" />
-	<drop event="Harvest" name="jz_BrainMatter" tag="Butcher" count="2" />
-	<drop event="Harvest" name="jz_FoodPorkBelly" tag="Butcher" count="1" prob="0.3"/>
-    <drop event="Harvest" name="resourceBone" tag="Butcher" count="2"  />
+    <drop event="Harvest" name="foodRawMeat" tag="SmallGameButcher" count="10" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="SmallGameButcher" count="2" />
+	<drop event="Harvest" name="resourceAnimalFat" tag="SmallGameButcher" count="4" />
+	<drop event="Harvest" name="jz_Sinew" tag="SmallGameButcher" count="1" />
+	<drop event="Harvest" name="jz_Hoof" tag="SmallGameButcher" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="SmallGameButcher" count="1" prob="0.3" />
+	<drop event="Harvest" name="jz_BrainMatter" tag="SmallGameButcher" count="2" />
+	<drop event="Harvest" name="jz_FoodPorkBelly" tag="SmallGameButcher" count="1" prob="0.3"/>
+    <drop event="Harvest" name="resourceBone" tag="SmallGameButcher" count="2"  />
     <!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="10"/>
-    <drop event="Harvest" name="resourceAnimalFat" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_BrainMatter" tag="Hunter" count="1"/>
-	<drop event="Harvest" name="jz_Sinew" tag="Hunter" count="1" />
-	<drop event="Harvest" name="jz_FoodPorkBelly" tag="Hunter" count="1" prob="0.3"/>
-    <drop event="Harvest" name="resourceBone" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_FoodPorkBelly" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_AnimalBladder" tag="Butcher" count="1" prob="0.3" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" prob="0.2"/>
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" prob="0.2"/>
+    <drop event="Harvest" name="foodRawMeat" tag="SmallGameHunter" count="10"/>
+    <drop event="Harvest" name="resourceAnimalFat" tag="SmallGameHunter" count="1"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="SmallGameHunter" count="1"/>
+    <drop event="Harvest" name="jz_BrainMatter" tag="SmallGameHunter" count="1"/>
+	<drop event="Harvest" name="jz_Sinew" tag="SmallGameHunter" count="1" />
+	<drop event="Harvest" name="jz_FoodPorkBelly" tag="SmallGameHunter" count="1" prob="0.3"/>
+    <drop event="Harvest" name="resourceBone" tag="SmallGameHunter" count="1" />
+    <drop event="Harvest" name="jz_FoodPorkBelly" tag="SmallGameHunter" count="1" />
+    <drop event="Harvest" name="jz_AnimalBladder" tag="SmallGameHunter" count="1" prob="0.3" />
+    <drop event="Harvest" name="jz_Hoof" tag="SmallGameHunter" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="SmallGameHunter" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="SmallGameHunter" count="1" prob="0.2"/>
+    <drop event="Harvest" name="jz_Hoof" tag="SmallGameHunter" count="1" prob="0.2"/>
 
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="250"/>
@@ -3383,7 +3425,7 @@
 </entity_class>
 
 <entity_class name="animalBossGrace" extends="animalBoar">
-	<property name="Tags" value="entity,animal,hostile,boar,perkAT05,boss"/>
+	<property name="Tags" value="entity,animal,hostile,boar,perkAT04,boss"/>
 	<property name="IsEnemyEntity" value="true"/>
 	<property name="ReplaceMaterial0" value="Entities/Animals/Boar/Materials/GRACE"/>
 	<property name="ReplaceMaterial1" value="Entities/Animals/Boar/Materials/GRACE"/>
@@ -3433,29 +3475,29 @@
     <drop event="Destroy" name="jz_BrainMatter" count="3" />
     <drop event="Destroy" name="resourceBone"  count="1" />
     <!--JZMOD Butcher-->
-    <drop event="Harvest" name="foodRawMeat" tag="Butcher" count="30" />
-	<drop event="Harvest" name="jz_AnimalHide" tag="Butcher" count="2" />
-	<drop event="Harvest" name="resourceAnimalFat" tag="Butcher" count="4" />
-	<drop event="Harvest" name="jz_Sinew" tag="Butcher" count="1" />
-	<drop event="Harvest" name="jz_Hoof" tag="Butcher" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Butcher" count="1" prob="0.3" />
-	<drop event="Harvest" name="jz_BrainMatter" tag="Butcher" count="2" />
-	<drop event="Harvest" name="jz_FoodPorkBelly" tag="Butcher" count="1" prob="0.3"/>
-    <drop event="Harvest" name="resourceBone" tag="Butcher" count="2"  />
+    <drop event="Harvest" name="foodRawMeat" tag="LargePredButcher" count="30" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="LargePredButcher" count="2" />
+	<drop event="Harvest" name="resourceAnimalFat" tag="LargePredButcher" count="4" />
+	<drop event="Harvest" name="jz_Sinew" tag="LargePredButcher" count="1" />
+	<drop event="Harvest" name="jz_Hoof" tag="LargePredButcher" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargePredButcher" count="1" prob="0.3" />
+	<drop event="Harvest" name="jz_BrainMatter" tag="LargePredButcher" count="2" />
+	<drop event="Harvest" name="jz_FoodPorkBelly" tag="LargePredButcher" count="1" prob="0.3"/>
+    <drop event="Harvest" name="resourceBone" tag="LargePredButcher" count="2"  />
     <!--JZMOD Hunter-->
-    <drop event="Harvest" name="foodRawMeat" tag="Hunter" count="30"/>
-    <drop event="Harvest" name="resourceAnimalFat" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_AnimalHide" tag="Hunter" count="1"/>
-    <drop event="Harvest" name="jz_BrainMatter" tag="Hunter" count="1"/>
-	<drop event="Harvest" name="jz_Sinew" tag="Hunter" count="1" />
-	<drop event="Harvest" name="jz_FoodPorkBelly" tag="Hunter" count="1" prob="0.3"/>
-    <drop event="Harvest" name="resourceBone" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_FoodPorkBelly" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_AnimalBladder" tag="Butcher" count="1" prob="0.3" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" />
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" prob="0.2"/>
-    <drop event="Harvest" name="jz_Hoof" tag="Hunter" count="1" prob="0.2"/>
+    <drop event="Harvest" name="foodRawMeat" tag="LargePredHunter" count="30"/>
+    <drop event="Harvest" name="resourceAnimalFat" tag="LargePredHunter" count="1"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="LargePredHunter" count="1"/>
+    <drop event="Harvest" name="jz_BrainMatter" tag="LargePredHunter" count="1"/>
+	<drop event="Harvest" name="jz_Sinew" tag="LargePredHunter" count="1" />
+	<drop event="Harvest" name="jz_FoodPorkBelly" tag="LargePredHunter" count="1" prob="0.3"/>
+    <drop event="Harvest" name="resourceBone" tag="LargePredHunter" count="1" />
+    <drop event="Harvest" name="jz_FoodPorkBelly" tag="LargePredHunter" count="1" />
+    <drop event="Harvest" name="jz_AnimalBladder" tag="LargePredHunter" count="1" prob="0.3" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargePredHunter" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargePredHunter" count="1" />
+    <drop event="Harvest" name="jz_Hoof" tag="LargePredHunter" count="1" prob="0.2"/>
+    <drop event="Harvest" name="jz_Hoof" tag="LargePredHunter" count="1" prob="0.2"/>
 
 
 	<effect_group name="Base Effects">

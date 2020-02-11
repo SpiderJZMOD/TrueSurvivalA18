@@ -74,6 +74,15 @@
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillNextLvTotal" operation="set" value="25"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillLvAdd" operation="set" value="25"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillNextLvTotal" operation="set" value="25"/>
+            <!-- Hunting -->
+            <triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SmallGameLvAdd" operation="set" value="30"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SmallGameNextLvTotal" operation="set" value="30"/>
+            <triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_LargeGameLvAdd" operation="set" value="30"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_LargeGameNextLvTotal" operation="set" value="30"/>
+            <triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SmallPredGameLvAdd" operation="set" value="30"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SmallPredGameNextLvTotal" operation="set" value="30"/>
+            <triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_LargePredGameLvAdd" operation="set" value="30"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_LargePredGameNextLvTotal" operation="set" value="30"/>
 		
 			<effect_description level="1"  desc_key="jz_ActionSkillDesc" long_desc_key="jz_ActionSkillDesc"/>
 		</effect_group>
@@ -2225,7 +2234,157 @@
 		</effect_group>
 	</perk>
 
-
+    <!--Small Game Hunting Skill-->
+	<perk name="jz_SmallGameHunterSkill" parent="jz_Other" min_level="0" max_level="3" base_skill_point_cost="0" cost_multiplier_per_level="0" name_key="Small Game Hunter" desc_key="Hunt, kill and butcher Chickens, Rabbits and Boars to improve at butchering them and learn how to Track them" icon="ui_game_symbol_deep_cuts">
+		<effect_group>
+            <passive_effect name="TrackDistance" operation="base_set" level="0,1,2,3" value="0,0,0,100"/>
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
+				<requirement name="NotHasBuff" buff="buffAnimalTracker"/>
+				<requirement name="ProgressionLevel" progression_name="jz_SmallGameHunterSkill" operation="Equals" value="3"/>
+			</triggered_effect>
+        </effect_group>
+        <effect_group>
+            <requirement name="CVarCompare" cvar="jz_SmallGameSkillLv" operation="LT" value="4"/>
+            <requirement name="EntityTagCompare" target="other" tags="perkAT01"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_SmallGameXP" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SmallGameXP" operation="add" value="2">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SmallGameXP" operation="add" value="1">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="LTE" value="0"/></triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_SmallGameSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_SmallGameXP" operation="GTE" value="@jz_SmallGameNextLvTotal"/>
+			<requirement name="EntityTagCompare" target="other" tags="perkAT01"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SmallGameLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SmallGameNextLvTotal" operation="add" value="@jz_SmallGameLvAdd"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SmallGameSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Small Game!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SmallGameXP" operation="add" value="@jz_SmallGameLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SmallGameLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SmallGameNextLvTotal" operation="add" value="@jz_SmallGameLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SmallGameSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Small Game!"/>
+		</effect_group>
+	</perk>
+    
+    <!--Large Game Hunting Skill-->
+	<perk name="jz_LargeGameHunterSkill" parent="jz_Other" min_level="0" max_level="3" base_skill_point_cost="0" cost_multiplier_per_level="0" name_key="Large Game Hunter" desc_key="Hunt, kill and butcher Stags and Does to improve at butchering them and learn how to Track them" icon="ui_game_symbol_deep_cuts">
+		<effect_group>
+            <passive_effect name="TrackDistance" operation="base_set" level="0,1,2,3" value="0,0,0,100"/>
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
+				<requirement name="NotHasBuff" buff="buffAnimalTracker"/>
+				<requirement name="ProgressionLevel" progression_name="jz_LargeGameHunterSkill" operation="Equals" value="3"/>
+			</triggered_effect>
+        </effect_group>
+        <effect_group>
+            <requirement name="CVarCompare" cvar="jz_LargeGameSkillLv" operation="LT" value="4"/>
+            <requirement name="EntityTagCompare" target="other" tags="perkAT02"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_LargeGameXP" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_LargeGameXP" operation="add" value="2">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_LargeGameXP" operation="add" value="1">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="LTE" value="0"/></triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_LargeGameSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_LargeGameXP" operation="GTE" value="@jz_LargeGameNextLvTotal"/>
+			<requirement name="EntityTagCompare" target="other" tags="perkAT02"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_LargeGameLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_LargeGameNextLvTotal" operation="add" value="@jz_LargeGameLvAdd"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_LargeGameSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Large Game!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_LargeGameXP" operation="add" value="@jz_LargeGameLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_LargeGameLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_LargeGameNextLvTotal" operation="add" value="@jz_LargeGameLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_LargeGameSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Large Game!"/>
+		</effect_group>
+	</perk>
+    
+    <!--Small Predator Hunting Skill-->
+	<perk name="jz_SmallPredGameHunterSkill" parent="jz_Other" min_level="0" max_level="3" base_skill_point_cost="0" cost_multiplier_per_level="0" name_key="Small Predator Hunter" desc_key="Hunt, kill and butcher Snake, Wolfs, Coyote, Mountain Lion and Dogs to improve at butchering them and learn how to Track them" icon="ui_game_symbol_deep_cuts">
+		<effect_group>
+            <passive_effect name="TrackDistance" operation="base_set" level="0,1,2,3" value="0,0,0,100"/>
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
+				<requirement name="NotHasBuff" buff="buffAnimalTracker"/>
+				<requirement name="ProgressionLevel" progression_name="jz_SmallPredGameHunterSkill" operation="Equals" value="3"/>
+			</triggered_effect>
+        </effect_group>
+        <effect_group>
+            <requirement name="CVarCompare" cvar="jz_SmallPredGameSkillLv" operation="LT" value="4"/>
+            <requirement name="EntityTagCompare" target="other" tags="perkAT03"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_SmallPredGameXP" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SmallPredGameXP" operation="add" value="2">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_SmallPredGameXP" operation="add" value="1">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="LTE" value="0"/></triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_SmallPredGameSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_SmallPredGameXP" operation="GTE" value="@jz_SmallPredGameNextLvTotal"/>
+			<requirement name="EntityTagCompare" target="other" tags="perkAT03"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SmallPredGameLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SmallPredGameNextLvTotal" operation="add" value="@jz_SmallPredGameLvAdd"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_SmallPredGameSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Small Predators!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SmallPredGameXP" operation="add" value="@jz_SmallPredGameLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SmallPredGameLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SmallPredGameNextLvTotal" operation="add" value="@jz_SmallPredGameLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_SmallPredGameSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Small Predators!"/>
+		</effect_group>
+	</perk>
+    
+    <!--Large Predator Hunting Skill-->
+	<perk name="jz_LargePredGameHunterSkill" parent="jz_Other" min_level="0" max_level="3" base_skill_point_cost="0" cost_multiplier_per_level="0" name_key="Large Predator Hunter" desc_key="Hunt, kill and butcher Bears, Dire Wolfs and Large Boars to improve at butchering them and learn how to Track them" icon="ui_game_symbol_deep_cuts">
+		<effect_group>
+            <passive_effect name="TrackDistance" operation="base_set" level="0,1,2,3" value="0,0,0,100"/>
+			<triggered_effect trigger="onSelfCrouch" action="AddBuff" buff="buffAnimalTracker">
+				<requirement name="NotHasBuff" buff="buffAnimalTracker"/>
+				<requirement name="ProgressionLevel" progression_name="jz_LargePredGameHunterSkill" operation="Equals" value="3"/>
+			</triggered_effect>
+        </effect_group>
+        <effect_group>
+            <requirement name="CVarCompare" cvar="jz_LargePredGameSkillLv" operation="LT" value="4"/>
+            <requirement name="EntityTagCompare" target="other" tags="perkAT04"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="jz_LargePredGameXP" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_LargePredGameXP" operation="add" value="2">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="jz_LargePredGameXP" operation="add" value="1">
+					<requirement name="StatCompareCurrent" target="other" stat="health" operation="LTE" value="0"/></triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="jz_LargePredGameSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_LargePredGameXP" operation="GTE" value="@jz_LargePredGameNextLvTotal"/>
+			<requirement name="EntityTagCompare" target="other" tags="perkAT04"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_LargePredGameLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_LargePredGameNextLvTotal" operation="add" value="@jz_LargePredGameLvAdd"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_LargePredGameSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Large Predators!"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_LargePredGameXP" operation="add" value="@jz_LargePredGameLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_LargePredGameLvAdd" operation="multiply" value="@jz_SkillLvMult"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_LargePredGameNextLvTotal" operation="add" value="@jz_LargePredGameLvAdd"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_LargePredGameSkillLv" operation="add" value="1"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Large Predators!"/>
+		</effect_group>
+	</perk>
 
 
 

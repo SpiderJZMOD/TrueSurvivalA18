@@ -576,6 +576,13 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffLimpB">
 				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GT" value="0.05"/></triggered_effect>
 		</effect_group>
+        <!-- JZMOD NATURAL HEALING ACTIVATION-->
+        <effect_group name="Natural Activation">
+            <requirement name="HasBuff" buff="jz_BuffHealthyDiet"/>
+            <requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GTE" value="95"/>
+            <requirement name="StatComparePercCurrentToMax" stat="health" operation="LTE" value="0.99"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_BuffNaturalHealing"/>
+        </effect_group>
 	</buff>
 	<buff name="buffStatusCheck02" hidden="true" remove_on_death="false">
 		<stack_type value="ignore"/>
@@ -912,6 +919,7 @@
 		</effect_group>
 		<!-- to activate <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffPerkParkour"/> -->
 	</buff>	
+    
 <buff name="buffAnimalTracker" name_key="buffAnimalTrackerName" description_key="buffAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
 		<duration value="0"/>
 		<update_rate value=".5"/>
@@ -920,16 +928,7 @@
 
 		<effect_group name="Startup">
 			<!-- set the time delay for animal tracking -->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="4">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="LT" value="2"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="3.5">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="3">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="2.5">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="2">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="5"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="3"/>
 
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="0"/>
 
@@ -940,24 +939,20 @@
 			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="1"/>
-				<requirement name="HasTrackedEntity" tags="perkAT1"/>
+				<requirement name="ProgressionLevel" progression_name="jz_SmallGameHunterSkill" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT01"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/>
-				<requirement name="HasTrackedEntity" tags="perkAT2"/>
+				<requirement name="ProgressionLevel" progression_name="jz_LargeGameHunterSkill" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT02"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/>
-				<requirement name="HasTrackedEntity" tags="perkAT3"/>
+				<requirement name="ProgressionLevel" progression_name="jz_SmallPredGameHunterSkill" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT03"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/>
-				<requirement name="HasTrackedEntity" tags="perkAT4"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="5"/>
-				<requirement name="HasTrackedEntity" tags="perkAT5"/>
+				<requirement name="ProgressionLevel" progression_name="jz_LargePredGameHunterSkill" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT04"/>
 			</triggered_effect>
 		</effect_group>
 
@@ -1004,38 +999,32 @@
 		<effect_group name="check conditions for no trackable animals">
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="1"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="1"/>
-				<requirement name="HasTrackedEntity" tags="perkAT1" />
+				<requirement name="ProgressionLevel" progression_name="jz_SmallGameHunterSkill" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT01" />
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/>
-				<requirement name="HasTrackedEntity" tags="perkAT2" />
+				<requirement name="ProgressionLevel" progression_name="jz_LargeGameHunterSkill" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT02" />
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/>
-				<requirement name="HasTrackedEntity" tags="perkAT3" />
+				<requirement name="ProgressionLevel" progression_name="jz_SmallPredGameHunterSkill" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT03" />
 			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/>
-				<requirement name="HasTrackedEntity" tags="perkAT4" />
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="5"/>
-				<requirement name="HasTrackedEntity" tags="perkAT5" />
+				<requirement name="ProgressionLevel" progression_name="jz_LargePredGameHunterSkill" operation="Equals" value="3"/>
+				<requirement name="HasTrackedEntity" tags="perkAT04" />
 			</triggered_effect>
 		</effect_group>
 
 		<effect_group name="Track animals">
-			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT1">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="1"/></passive_effect>
-			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT2">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="2"/></passive_effect>
-			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT3">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="3"/></passive_effect>
-			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT4">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="4"/></passive_effect>
-			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT5">
-				<requirement name="ProgressionLevel" progression_name="perkAnimalTracker" operation="Equals" value="5"/></passive_effect>
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT01">
+				<requirement name="ProgressionLevel" progression_name="jz_SmallGameHunterSkill" operation="Equals" value="3"/></passive_effect>
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT02">
+				<requirement name="ProgressionLevel" progression_name="jz_LargeGameHunterSkill" operation="Equals" value="3"/></passive_effect>
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT03">
+				<requirement name="ProgressionLevel" progression_name="jz_SmallPredGameHunterSkill" operation="Equals" value="3"/></passive_effect>
+			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT04">
+				<requirement name="ProgressionLevel" progression_name="jz_LargePredGameHunterSkill" operation="Equals" value="3"/></passive_effect>
 		</effect_group>
 
 		<effect_group name="Tracking time ran out or no targets">
@@ -4711,93 +4700,6 @@ icon="ui_game_symbol_pack_mule"
 	<buff name="buffDismemberSignal" name_key="buffToolMsgName" description_key="buffToolMsgDesc" tooltip_key="Dismember trigger" icon="ui_game_symbol_table_saw" icon_color="0,255,255" icon_blink="true">
 		<duration value="4"/>
 	</buff>
-
-<buff name="jz_BuffSmallAnimalTracker" name_key="jz_buffSmallAnimalTrackerName" description_key="jz_buffSmallAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
-		<duration value="0"/>
-		<update_rate value=".5"/>
-		<display_value value=".AnimalTrackerDelay"/>
-		<display_value_format value="time"/>
-
-		<effect_group name="Startup">
-			
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="4">
-				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="LT" value="2"/></triggered_effect>
-			
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="add" value="-.5"/>
-		</effect_group>
-
-		<effect_group name="check conditions for a successful track">
-			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerDelay" operation="set" value=".0117">
-				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="Equals" value="1"/>
-				<requirement name="HasTrackedEntity" tags="perkAT1"/>
-			</triggered_effect>
-		</effect_group>
-
-		<effect_group>
-			
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="jz_buffSmallAnimalTrackerAcquired">
-				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffSmallAnimalTracker">
-				<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="Equals" value=".0117"/>
-			</triggered_effect>
-
-			
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffSmallAnimalTracker">
-				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="0"/>
-			</triggered_effect>
-		</effect_group>
-
-		<effect_group name="Tracking not successful, shutdown">
-			<requirement name="CVarCompare" cvar=".AnimalTrackerDelay" operation="LTE" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffAnimalTrackerNoneTooltip"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffSmallAnimalTracker"/>
-		</effect_group>
-	</buff>
-
-	<buff name="jz_buffSmallAnimalTrackerAcquired" name_key="buffAnimalTrackerAcquiredName" description_key="buffAnimalTrackerAcquiredDesc" icon="ui_game_symbol_animal_tracker" icon_color="0,255,0">
-		<duration value="0"/>
-		<display_value value=".AnimalTrackerLoseTimer"/>
-		<display_value_format value="time"/>
-
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffAnimalTracker"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20"/>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="add" value="-1"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="20">
-				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
-			</triggered_effect>
-
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerLoseTimer" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0"/>
-		</effect_group>
-
-		<effect_group name="check conditions for no trackable animals">
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="1"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".AnimalTrackerTerminate" operation="set" value="0">
-				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="Equals" value="1"/>
-				<requirement name="HasTrackedEntity" tags="perkAT1" />
-			</triggered_effect>
-		</effect_group>
-
-		<effect_group name="Track animals">
-			<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="perkAT1">
-				<requirement name="ProgressionLevel" progression_name="jz_SmallAnimalTracker" operation="Equals" value="1"/></passive_effect>
-		</effect_group>	
-
-		<effect_group name="Tracking time ran out or no targets">
-			<requirements compare_type="or">
-				<requirement name="CVarCompare" cvar=".AnimalTrackerLoseTimer" operation="LTE" value="0"/>
-				<requirement name="CVarCompare" cvar=".AnimalTrackerTerminate" operation="Equals" value="1"/>
-			</requirements>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message_key="buffPerkAnimalTrackerLostTooltip"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_buffSmallAnimalTrackerAcquired"/>
-		</effect_group>
-	</buff>
 <!-- JZMOD WOUND SYSTEM -->
 	<buff name="jz_BuffScratch" hidden="true" remove_on_death="false">
 		<stack_type value="ignore"/>
@@ -5511,7 +5413,7 @@ icon="ui_game_symbol_pack_mule"
 		<duration value="5"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="3"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value=".5"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
 		</effect_group>
 	</buff>
@@ -5520,7 +5422,7 @@ icon="ui_game_symbol_pack_mule"
 		<duration value="5"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="4"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="2"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
 		</effect_group>
 	</buff>
@@ -5529,24 +5431,34 @@ icon="ui_game_symbol_pack_mule"
 		<duration value="5"/>
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="4"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
 		</effect_group>
 	</buff>
-	
+	<!-- JZMOD NATURAL HEALING --> 
+    <buff name="jz_BuffNaturalHealing" hidden="false" remove_on_death="true" name_key="Natural Healing" description_key="You will natural heal while full with your HEalthy Diet Buff" icon="ui_game_symbol_cozyBed" >
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>
+        <effect_group>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="jz_BuffHealthyDiet"/>
+                <requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LT" value="95"/>
+                <requirement name="StatComparePercCurrentToMax" stat="health" operation="GT" value="0.99"/>
+            </requirements>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffNaturalHealing" />
+		</effect_group>
+	</buff>
+    
 	<buff name="buffAnimalTracker" name_key="buffAnimalTrackerName" description_key="buffAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
 		<duration value="0"/>
 		<update_rate value=".5"/>
 		<display_value value=".AnimalTrackerDelay"/>
 		<display_value_format value="time"/>
-
-<!--
-
-
-<passive_effect name="AnimalTracking" operation="base_set" value="1" tags="chicken,deer,boar">
-				<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
-			</passive_effect>
--->
 
 		<effect_group name="Startup">
 			<!-- set the time delay for animal tracking -->
