@@ -158,14 +158,14 @@ ParasiteSlug
 	</entitygroup>
 
 	<entitygroup name="ZombiesNight">
-		<entity name="Parasite" prob="4.75"/>
+		<!--<entity name="Parasite" prob="4.75"/>
 		<entity name="ParasiteFat" prob="4.75"/>
 		<entity name="ParasiteInsect" prob="4.75"/>
 		<entity name="ParasiteRipper" prob="4.75"/>
 		<entity name="ParasiteHorror" prob="4.75"/>
 		<entity name="ParasiteExterminator" prob="4.75"/>
 		<entity name="ParasiteDevourer" prob="4.75"/>
-		<entity name="ParasiteSlug" prob="4.75"/>
+		<entity name="ParasiteSlug" prob="4.75"/>-->
 		<entity name="animalZombieDog" prob="4.75"/>
 		<entity name="zombieSpiderFeral" prob="4.75"/>
 		<entity name="zombieBoeFeral" prob="4.75"/>
@@ -201,16 +201,16 @@ ParasiteSlug
 		<entity name="zombieJoeRadiated" prob="4"/>
 		<entity name="zombieFemaleFatRadiated" prob="4"/>
 		<entity name="zombieBoeRadiated" prob="4"/>
-		<entity name="Parasite" prob="4"/>
+		<!--<entity name="Parasite" prob="4"/>
 		<entity name="ParasiteFat" prob="4"/>
 		<entity name="ParasiteHorror" prob="4"/>
 		<entity name="ParasiteExterminator" prob="4"/>
 		<entity name="ParasiteDevourer" prob="4"/>
-		<entity name="ParasiteSlug" prob="4"/>
+		<entity name="ParasiteSlug" prob="4"/>-->
 	</entitygroup>
 
 	<entitygroup name="ZombiesWastelandNight">
-		<entity name="ParasiteHybrid" prob="6.5"/>
+		<!--<entity name="ParasiteHybrid" prob="6.5"/>
 		<entity name="Parasite" prob="6.5"/>
 		<entity name="ParasiteFat" prob="6.5"/>
 		<entity name="ParasiteHorror" prob="6.5"/>
@@ -220,7 +220,7 @@ ParasiteSlug
 		<entity name="ParasiteAlien" prob="6.5"/>
 		<entity name="ParasiteShell" prob="6.5"/>
 		<entity name="ParasiteDaemon" prob="6.5"/>
-		<entity name="ParasiteHorned" prob="6.5"/>
+		<entity name="ParasiteHorned" prob="6.5"/>-->
 		<entity name="zombieWightFeral" prob="6.5"/>
 		<entity name="zombieSoldierFeral" prob="8"/>
 		<entity name="zombieWightRadiated" prob="6.5"/>
@@ -337,12 +337,12 @@ ParasiteSlug
 	<entitygroup name="zombieSnowGroupGS800"><entity name="zombieSnow" prob="0.25"/><entity name="zombieSnowFeral" prob="0.5"/></entitygroup>
 
 	<entitygroup name="ZombiesBoss">
-		<entity name="ParasiteNasty" prob="11"/>
+		<!--<entity name="ParasiteNasty" prob="11"/>
 		<entity name="ParasiteSpider" prob="11"/>
 		<entity name="ParasiteCreepy" prob="11"/>
 		<entity name="ParasitePangolin" prob="11"/>
 		<entity name="ParasiteSlider" prob="11"/>
-		<entity name="ParasiteMantis" prob="11"/>
+		<entity name="ParasiteMantis" prob="11"/>-->
 		<entity name="zombieFatCop" prob="14"/>
 		<entity name="zombieFatCopFeral" prob="10"/>
 		<entity name="zombieFatCopRadiated" prob="10"/>
@@ -465,15 +465,15 @@ ParasiteSlug
 		<entity name="animalSnake" prob="17"/>
 		<entity name="animalZombieVulture" prob="16"/>
 		<entity name="animalZombieDog" prob="14"/>
-		<entity name="ParasiteRipper" prob="14"/>
-		<entity name="ParasiteInsect" prob="15"/>
+		<!--<entity name="ParasiteRipper" prob="14"/>
+		<entity name="ParasiteInsect" prob="15"/>-->
 		<entity name="animalZombieVultureRadiated" prob="14"/>
 		<entity name="animalZombieBear" prob="10"/>
 	</entitygroup>
 
 	<entitygroup name="ZombieDogGroup">
 		<entity name="animalZombieDog" prob="60"/>
-		<entity name="ParasiteRipper" prob="40"/>
+		<!--<entity name="ParasiteRipper" prob="40"/>-->
 	</entitygroup>
 
 	<entitygroup name="WolfGroup">

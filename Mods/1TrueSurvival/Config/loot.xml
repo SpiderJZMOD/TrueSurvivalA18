@@ -1333,7 +1333,7 @@ The overall plan for loot distribution:
 	<item name="resourceMetalPipe" count="10,20"/>
 	<item name="resourceForgedIron" count="10,20" prob="2"/>
 	<item name="resourceForgedSteel" count="5,20"/>
-	<item name="toolAnvil"/>
+	<item name="jz_Anvil"/>
 	<item name="toolBellows" />
 	<item name="toolForgeCrucible" />
 	<item name="resourceNail" count="20,60"/>
@@ -1968,7 +1968,7 @@ The overall plan for loot distribution:
 	<item name="jz_Plank" count="50,250" prob="4" />
 	<item name="ironDoor1_v1" prob="4" />
 	<item name="meleeToolSledgehammerIron" prob="4" />
-	<item name="toolAnvil" prob="4" />
+	<item name="jz_Anvil" prob="4" />
 	<item name="toolBellows"  prob="4" />
 	<item name="toolForgeCrucible"  prob="4" />
 	<item group="rareTools" prob="4" />
@@ -3028,7 +3028,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- stove/oven, cooking pots and pans rotten food -->
 <lootcontainer id="5" count="1,2" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate">
-	<item name="toolCookingPot" count="1,2" prob="10"/>
+	<item name="toolCookingPot" prob="10"/>
 	<item name="toolCookingGrill" prob="16"/>
 	<item name="drinkJarEmpty" count="1,2" prob="12"/>
 	<item name="drinkCanEmpty" count="1,2" prob="12"/>
@@ -3143,10 +3143,10 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootcontainer id="14" count="0,2" size="6,2" sound_open="UseActions/open_mailbox" sound_close="UseActions/close_mailbox" loot_quality_template="qualBaseTemplate">
 	<item group="T1BookList" prob="20"/>
 	<item group="skillBookChance" prob="5"/>
-	<item name="jz_PaperBook" prob="30" />
-	<item name="jz_PaperNews" prob="30" />
+	<item name="jz_PaperBook" prob="32" />
+	<item name="jz_PaperNews" prob="32" />
 	<item name="jz_PaperMatches" prob="10" />
-	<item group="Explosives" prob="5" />
+	<item group="Explosives" prob="1" />
 </lootcontainer>
 
 <!-- misc storage, cardboard boxes-->

@@ -1351,6 +1351,7 @@ group desc for stuff like metal siding
 	<!--JZMOD ANY-->
 	<drop event="Destroy" name="resourceScrapIron" count="2,10" prob="1" />
 	<drop event="Fall" name="scrapMetalPile" count="1" prob=".75" stick_chance="1" />
+	<drop event="Destroy" count="0"/>
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceScrapIron" count="7" prob="1" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapIron" count="2,8" prob="1" tool_category="ToolWrench" />
@@ -1388,6 +1389,7 @@ group desc for stuff like metal siding
 	<property class="RepairItems"> <property name="resourceCloth" value="8"/> <property name="jz_Plank" value="2"/> </property>
 	<drop event="Harvest" name="resourceCloth" count="3" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceCloth" count="1"/>
+	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="resourceCloth" count="1" prob="0.3" stick_chance="0"/>
 	<property name="EconomicValue" value="25"/>
 	<property name="FilterTags" value="fbuilding,fdecor,fother"/>
@@ -1568,6 +1570,7 @@ group desc for stuff like metal siding
 	<property name="FuelValue" value="100"/>
 	<property class="RepairItems"> <property name="jz_Plank" value="3"/> </property>
 	<drop event="Destroy" name="jz_Plank" count="1,3"/>
+	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.3" stick_chance="1"/>
 	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
 	<property name="EconomicValue" value="5"/>
@@ -18910,6 +18913,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="jz_Plank" count="2" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceCloth" count="2" tag="allHarvest"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Destroy" count="0"/>
 	<property name="EconomicValue" value="18"/>
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -19074,6 +19078,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceScrapPolymers" count="2,6" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="1,8"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<drop event="Destroy" count="0"/>
 	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
 	<property name="EconomicValue" value="300"/> <!-- disassemble value -->
 </block>
@@ -19088,6 +19093,7 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="99"/>
 	<drop event="Destroy" name="resourceScrapPolymers" count="1,3"/>
+	<drop event="Destroy" count="0"/>
 	<drop event="Fall" count="0"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 </block>
@@ -19159,6 +19165,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceElectricParts" count="2,6" tool_category="ToolScrewDriver" /> <!-- HV: mounted fluorescent lamp -->
 	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Destroy" name="resourceScrapPolymers" count="2"/>
+	<drop event="Destroy" count="0"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
@@ -19277,6 +19284,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tool_category="ToolWrench" />
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<drop event="Destroy" count="0"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -19300,6 +19308,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceElectricParts" count="1,2" tool_category="ToolScrewDriver" />
 	<drop event="Harvest" name="resourceElectricParts" count="1,3" prob="0.4" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
+	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -19321,6 +19330,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceScrapIron" count="20,50" tag="allHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="8,15"/>
+	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
@@ -20652,6 +20662,7 @@ NOT the TextureNumber.
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="VehicleHitScale" value="999"/>
 	<drop event="Harvest" name="jz_Stick" count="8,14" tag="allHarvest" />
+	<drop event="Destroy" count="0"/>
 	<!-- <drop event="Destroy" name="treePlantedMaple1m" count="x"/> -->
 	<property name="FilterTags" value="fdecor,fother,outdoor"/>
 </block>
@@ -22158,7 +22169,7 @@ NOT the TextureNumber.
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Place" value="TowardsPlacer"/>
 	<property name="Model" value="#Entities/Vehicles?Car/car_white_dmg0Prefab.prefab"/>
-	<property name="ModelOffset" value="0,0,0"/>										 
+	<property name="ModelOffset" value="0,0,0"/>								 
 	<property name="DisplayType" value="blockMulti"/>
 	<property name="MultiBlockDim" value="2,2,6"/>
 	<property name="ImposterDontBlock" value="true"/>
@@ -27761,7 +27772,7 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/OutdoorDecor/tire02Prefab"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
-	<drop event="Destroy" name="resourceScrapPolymers" count="1,3" tag="oreWoodHarvest"/>
+	<drop event="Destroy" name="jz_ScrapRubber" count="5,15" tag="oreWoodHarvest"/>
 	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
 </block>
 
@@ -28299,7 +28310,7 @@ NOT the TextureNumber.
 <block name="jz_CharacterChoiceComputer">
 	<property name="Class" value="Campfire"/>
 	<property name="Material" value="MstoneNoGlue"/>
-	<property name="MaxDamage" value="100"/>
+	<property name="MaxDamage" value="20"/>
 	<property name="StabilitySupport" value="false"/> 
 	<property name="Path" value="solid"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -28447,7 +28458,7 @@ NOT the TextureNumber.
 	<property name="HeatMapTime" value="1200" />
 	<property name="HeatMapFrequency" value="25" />
 	<property class="Workstation">
-		<property name="Modules" value="output,fuel" />
+		<property name="Modules" value="output" />
 	</property>
 	<property class="RepairItems">
 		<property name="jz_Plank" value="10" />
@@ -29991,6 +30002,9 @@ NOT the TextureNumber.
 <block name="bikeLoot">
 	<property name="Class" value="Loot" />
 	<property name="Material" value="MdroppedBackpack" />
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="#Entities/LootContainers?crate_store_PassNGasPrefab.prefab"/>
     <property name="CustomIcon" value="ui_game_symbol_bikeNABox" />
 	<property name="Texture" value="423" />
 	<property name="LootList" value="111" />
@@ -30001,7 +30015,9 @@ NOT the TextureNumber.
 <block name="bikeNABox">
 	<property name="Material" value="Mglass" />
     <property name="CustomIcon" value="ui_game_symbol_bikeNABox" />
-	<property name="Texture" value="423" />
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="#Entities/LootContainers?crate_store_PassNGasPrefab.prefab"/>
 	<property name="CanPickup" value="true" />
 	<property name="DescriptionKey" value="bikeNABoxDesc" />
 	<property name="Group" value="Basics" />
@@ -30893,7 +30909,6 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="floot,fdesign"/>
 	<property name="DisplayInfo" value="Name"/>
 </block>
-
 
 <block name="jz_ZombieLoot">
 	<property name="Material" value="Morganic"/>

@@ -660,17 +660,17 @@
 <!-- JZMOD FOOD DISPLAY -->
 		<item_display_info display_type="jz_FoodBad" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSProtein" title_key="Protein Vitamins" display_type="Decimal"/>
-			<display_entry name="TSWellness" title_key="Wellness" negative_preferred="true"/>
+			<display_entry name="TSWellness" title_key="Wellness" />
 			<display_entry name="dFoodPoisoningRisk" title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
 		</item_display_info>
 		
 		<item_display_info display_type="jz_FoodWater" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSHealth" title_key="Health"/>
 			<display_entry name="dFoodPoisoningRisk" title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
 		</item_display_info>
@@ -678,7 +678,7 @@
 		<item_display_info display_type="jz_FoodProtein" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
 			<display_entry name="TSHydration" title_key="Hydration"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSProtein" title_key="Protein Vitamins" display_type="Decimal"/>
 			<display_entry name="TSHealth" title_key="Health"/>
 			<display_entry name="dFoodPoisoningRisk" title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
@@ -686,8 +686,8 @@
 		
 		<item_display_info display_type="jz_FoodGrain" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSGrain" title_key="Grain Vitamins" display_type="Decimal"/>
 			<display_entry name="TSHealth" title_key="Health"/>
 			<display_entry name="dFoodPoisoningRisk" title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
@@ -695,8 +695,8 @@
 		
 		<item_display_info display_type="jz_FoodVeggie" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSVeggie" title_key="Vegetable Vitamins" display_type="Decimal"/>
 			<display_entry name="TSHealth" title_key="Health"/>
 			<display_entry name="dFoodPoisoningRisk" title_key="statFoodPoisoningRisk" display_type="Percent" negative_preferred="true"/>
@@ -704,8 +704,8 @@
 		
 		<item_display_info display_type="jz_FoodFruit" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSFruit" title_key="Fruit Vitamins" display_type="Decimal"/>
 			<display_entry name="TSHealth" title_key="Health"/>
 			<display_entry name="TSWellness" title_key="Wellness"/>
@@ -714,8 +714,8 @@
 		
 		<item_display_info display_type="jz_FoodProteinVeggie" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSProtein" title_key="Protein Vitamins" display_type="Decimal"/>
 			<display_entry name="TSVeggie" title_key="Vegetable Vitamins" display_type="Decimal"/>
 			<display_entry name="TSHealth" title_key="Health"/>
@@ -724,8 +724,8 @@
 		
 		<item_display_info display_type="jz_FoodProteinGrain" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSProtein" title_key="Protein Vitamins" display_type="Decimal"/>
 			<display_entry name="TSGrain" title_key="Grain Vitamins" display_type="Decimal"/>
 			<display_entry name="TSHealth" title_key="Health"/>
@@ -734,8 +734,8 @@
 		
 		<item_display_info display_type="jz_FoodProteinFruit" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSProtein" title_key="Protein Vitamins" display_type="Decimal"/>
 			<display_entry name="TSFruit" title_key="Fruit Vitamins" display_type="Decimal"/>
 			<display_entry name="TSHealth" title_key="Health"/>
@@ -744,8 +744,8 @@
 		
 		<item_display_info display_type="jz_FoodVeggieGrain" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSGrain" title_key="Grain Vitamins" display_type="Decimal"/>
 			<display_entry name="TSVeggie" title_key="Vegetable Vitamins" display_type="Decimal"/>
 			<display_entry name="TSHealth" title_key="Health"/>
@@ -754,8 +754,8 @@
 
 		<item_display_info display_type="jz_FoodPVWellness" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSProtein" title_key="Protein Vitamins" display_type="Decimal"/>
 			<display_entry name="TSVeggie" title_key="Vegetable Vitamins" display_type="Decimal"/>
 			<display_entry name="TSHealth" title_key="Health"/>
@@ -764,7 +764,7 @@
 		
 		<item_display_info display_type="jz_FoodPVGWellness" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
 			<display_entry name="TSProtein" title_key="Protein Vitamins" display_type="Decimal"/>
 			<display_entry name="TSVeggie" title_key="Vegetable Vitamins" display_type="Decimal"/>
 			<display_entry name="TSGrain" title_key="Grain Vitamins" display_type="Decimal"/>
@@ -774,7 +774,7 @@
 		
 		<item_display_info display_type="jz_FoodPVFWellness" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
 			<display_entry name="TSProtein" title_key="Protein Vitamins" display_type="Decimal"/>
 			<display_entry name="TSVeggie" title_key="Vegetable Vitamins" display_type="Decimal"/>
 			<display_entry name="TSFruit" title_key="Fruit Vitamins" display_type="Decimal"/>
@@ -784,7 +784,7 @@
 		
 		<item_display_info display_type="jz_FoodPFGWellness" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
 			<display_entry name="TSProtein" title_key="Protein Vitamins" display_type="Decimal"/>
 			<display_entry name="TSFruit" title_key="Fruit Vitamins" display_type="Decimal"/>
 			<display_entry name="TSGrain" title_key="Grain Vitamins" display_type="Decimal"/>
@@ -794,8 +794,8 @@
 
 		<item_display_info display_type="jz_FoodFGWellness" display_group="groupConsumables">
 			<display_entry name="TSFullness" title_key="Fullness"/>
-			<display_entry name="TSHydration" title_key="Hydration" negative_preferred="true"/>
-			<display_entry name="TSStamina" title_key="Stamina" negative_preferred="true"/>
+			<display_entry name="TSHydration" title_key="Hydration" />
+			<display_entry name="TSStamina" title_key="Stamina" />
 			<display_entry name="TSGrain" title_key="Grain Vitamins" display_type="Decimal"/>
 			<display_entry name="TSFruit" title_key="Fruit Vitamins" display_type="Decimal"/>
 			<display_entry name="TSHealth" title_key="Health"/>

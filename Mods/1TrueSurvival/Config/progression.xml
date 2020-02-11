@@ -30,57 +30,51 @@
 			
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_WellnessLv" operation="set" value="20"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SkillLvMult" operation="set" value="1.015"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AxeSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AxeSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ChainsawSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ChainsawSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AugerSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AugerSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_UnarmedSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_UnarmedSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BluntSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BluntSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SledgeSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SledgeSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BladeSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BladeSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ArcherySkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ArcherySkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SpearSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SpearSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PistolSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PistolSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_44MagSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_44MagSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SMG5SkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SMG5SkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BlunderbussSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BlunderbussSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_DBShotgunSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_DBShotgunSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PShotgunSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PShotgunSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_HuntingRifleSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_HuntingRifleSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MarksmanSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MarksmanSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AK47SkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AK47SkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_M60SkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_M60SkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillNextLvTotal" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ClothArmorCraftingLvAdd" operation="set" value="3"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ClothArmorCraftingNextLvTotal" operation="set" value="3"/>
-			
-			
-			
-			
-			
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AxeSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AxeSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ChainsawSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ChainsawSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AugerSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AugerSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_UnarmedSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_UnarmedSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BluntSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BluntSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SledgeSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SledgeSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BladeSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BladeSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ArcherySkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ArcherySkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SpearSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SpearSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PistolSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PistolSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_44MagSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_44MagSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SMG5SkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SMG5SkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BlunderbussSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_BlunderbussSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_DBShotgunSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_DBShotgunSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PShotgunSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_PShotgunSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_HuntingRifleSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_HuntingRifleSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MarksmanSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MarksmanSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AK47SkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_AK47SkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_M60SkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_M60SkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_ExposivesSkillNextLvTotal" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillLvAdd" operation="set" value="25"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_JunkTurretSkillNextLvTotal" operation="set" value="25"/>
+		
 			<effect_description level="1"  desc_key="jz_ActionSkillDesc" long_desc_key="jz_ActionSkillDesc"/>
 		</effect_group>
 	</attribute>
@@ -1706,7 +1700,7 @@
 	<!-- Doctor -->
 	<perk name="jz_Doctor" parent="jz_Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Doctor" desc_key="jz_DoctorDesc" icon="ui_game_symbol_mining">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalFirstAidBandage,jz_MedicalStimulant,jz_MedicalSutureKit,jz_MedicalAntiVenom,drugPainkillers,drugSteroids,drugAntibiotics"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalFirstAidBandage,jz_MedicalStimulant,jz_MedicalSutureKit,jz_MedicalAntiVenom,drugPainkillers,drugSteroids,drugAntibiotics,jz_MedicalSanitizingBandage"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_DoctorTag"/>
 			<effect_description level="1" desc_key="jz_DoctorDesc" long_desc_key="jz_DoctorDesc"/>
 		</effect_group>
@@ -1949,10 +1943,14 @@
 		<!--Bad Leg Buff -->
 		<effect_group>
 			<triggered_effect trigger="onSelfRun" action="AddBuff" buff="jz_BuffBadLeg">
-				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="ProgressionLevel" progression_name="jz_TraitBadLeg" operation="GTE" value="1"/>
+				<requirement name="NotHasBuff" buff="jz_BuffBadLegLimpTimeOut"/>
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="10"/>
 			</triggered_effect>
 			<triggered_effect trigger="onSelfLandJump" action="AddBuff" buff="jz_BuffBadLeg">
-				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+				<requirement name="ProgressionLevel" progression_name="jz_TraitBadLeg" operation="GTE" value="1"/>
+				<requirement name="NotHasBuff" buff="jz_BuffBadLegLimpTimeOut"/>
+				<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="10"/>
 			</triggered_effect>
 		</effect_group>
 		

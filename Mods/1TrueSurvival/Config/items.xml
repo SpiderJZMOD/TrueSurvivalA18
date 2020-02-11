@@ -1059,9 +1059,8 @@
 
 	<effect_group name="meleeToolKnifeBone">
 	
-	<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffZombieBite"/>
+	<!-- Testing  <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffSnakeBite"/> -->
 		
-
 		<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
 		<passive_effect name="EntityDamage" operation="base_set" value="10.2"/> <!-- meleeToolKnifeBone -->
@@ -1158,10 +1157,7 @@
 		</property>
 	</property>
 
-	<effect_group name="meleeToolKnifeIron">
-	
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffScratch"/>
-	
+	<effect_group name="meleeToolKnifeIron">	
 		<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
 		<passive_effect name="EntityDamage" operation="base_set" value="12.1"/> <!-- meleeToolKnifeIron -->
@@ -1399,7 +1395,7 @@
 	<property name="Group" value="Ammo/Weapons,Basics"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab"/>
 	<property name="HoldType" value="2"/>
-	<property name="Material" value="Mwood"/>
+	<property name="Material" value="Mwood"/><property name="Weight" value="6"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -1496,7 +1492,7 @@
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Club/Club_Wood_RefinedPrefab.prefab"/>
 	<property name="HoldType" value="2"/>
-	<property name="Material" value="Mmetal"/>
+	<property name="Material" value="Mmetal"/><property name="Weight" value="6"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -1504,7 +1500,6 @@
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="EconomicValue" value="350"/>
 	<property name="FuelValue" value="250"/>
-	<property name="UnlockedBy" value="perkPummelPete,meleeClubIronSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -1593,7 +1588,7 @@
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Candycane/candycanePrefab.prefab"/>
 	<property name="HoldType" value="2"/>
-	<property name="Material" value="Mmetal"/>
+	<property name="Material" value="Mmetal"/><property name="Weight" value="6"/>
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -4849,17 +4844,17 @@
 	<property class="Action0">
 		<property name="DamageEntity" value="10"/>
 		<property name="DamageBlock" value="8"/>
-		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombie01" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<passive_effect name="EntityDamage" operation="base_set" value="10"/> <!-- this passive is ignored so using the old notation! -->
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -4873,10 +4868,11 @@
 	<effect_group name="meleeHandZombieFeral" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="jz_BuffZombieBiteTrigger"/>
+		
 	</effect_group>
 </item>
 
@@ -4886,7 +4882,7 @@
 	<property name="HoldType" value="24"/>
 	<property class="Action0">
 		<property name="Delay" value="2.0"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombie02" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -4896,10 +4892,10 @@
 			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
 		</triggered_effect>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".03" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -4917,10 +4913,10 @@
 			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
 		</triggered_effect>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -4932,17 +4928,17 @@
 		<property name="Sphere" value=".4"/>
 		<property name="DamageEntity" value="12"/>
 		<property name="DamageBlock" value="8"/>
-		<property name="Buff" value="buffBurningZombie,buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffBurningZombie,buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombieBurning" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffBurningZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".08" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -4956,11 +4952,11 @@
 	<effect_group name="meleeHandZombieBurningFeral" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffBurningZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -4972,7 +4968,7 @@
 		<property name="DamageEntity" value="24"/>
 		<property name="DamageBlock" value="24"/>
 		<property name="Delay" value="2.0"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Buff" value="buffBurningZombie,buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffBurningZombie,buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombieBurningCrawler" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -4982,11 +4978,11 @@
 			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
 		</triggered_effect>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffBurningZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5013,7 +5009,7 @@
 		<property name="Sound_end" value=""/>
 		<property name="Sound_empty" value=""/>
 		<property name="Sound_reload" value=""/>
-		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombieCop" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -5025,10 +5021,10 @@
 		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
 		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
 		<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5073,10 +5069,10 @@
 		<passive_effect name="BurstRoundCount" operation="base_set" value="3"/>
 		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4"/>
 		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="10"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".08" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5118,10 +5114,10 @@
 		<passive_effect name="BurstRoundCount" operation="base_set" value="6"/>
 		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="10"/>
 		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="40"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5159,17 +5155,17 @@
 		<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
 		<property name="DamageEntity" value="8"/>
 		<property name="DamageBlock" value="14"/>
-		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandAnimalZombieDog" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
 		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".85" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5179,15 +5175,15 @@
 	<property class="Action0">
 		<property name="DamageEntity" value="20"/>
 		<property name="DamageBlock" value="200"/>
-		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombieStrong" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".65" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".65" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".65" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5197,15 +5193,15 @@
 	<property class="Action0">
 		<property name="DamageEntity" value="20"/>
 		<property name="DamageBlock" value="500"/>
-		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombieStrong" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".2" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5219,10 +5215,10 @@
 	<effect_group name="meleeHandZombieStrongFeral" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".2" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5254,16 +5250,16 @@
 		<property name="Range" value="3.6"/>
 		<property name="DamageEntity" value="50"/>
 		<property name="DamageBlock" value="80"/>
-		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandAnimalZombieBear" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="40"/>  A16 1.5 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".8" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".8" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5277,10 +5273,10 @@
 	<effect_group name="meleeHandAnimalZombieBearFeral" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="40"/>  A16 1.5 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".9" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".6" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".9" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5289,15 +5285,15 @@
 	<property name="CreativeMode" value="None"/>
 	<property name="HoldType" value="9"/>
 	<property class="Action0">
-		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombieHazMat" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5312,10 +5308,10 @@
 	<effect_group name="meleeHandZombieHazMatFeral" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5324,16 +5320,16 @@
 	<property name="CreativeMode" value="None"/>
 	<property name="HoldType" value="9"/>
 	<property class="Action0">
-		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 		<property name="DamageBlock" value="40"/>
 	</property>
 	<effect_group name="meleeHandZombieWorker" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5348,10 +5344,10 @@
 	<effect_group name="meleeHandZombieWorkerFeral" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5360,15 +5356,15 @@
 	<property name="CreativeMode" value="None"/>
 	<property name="HoldType" value="9"/>
 	<property class="Action0">
-		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffScratch,jz_BuffZombieBiteTrigger,buffInfectionCatch"/>
 	</property>
 	<effect_group name="meleeHandZombieFootballPlayer" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5383,10 +5379,10 @@
 	<effect_group name="meleeHandZombieFootballPlayerFeral" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5395,15 +5391,15 @@
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
 		<property name="DamageEntity" value="8"/>
-		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,jz_BuffScratch,jz_BuffZombieBiteTrigger"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombieStripper" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5417,10 +5413,10 @@
 	<effect_group name="meleeHandZombieStripperFeral" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -5437,10 +5433,10 @@
 	<effect_group name="meleeHandZombieBehemoth" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="40"/>  A16 1.5 -->
+		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".65" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="jz_BuffZombieBiteTrigger"/>
 	</effect_group>
 </item>
 
@@ -7519,22 +7515,26 @@ add knockdown resist to armor
 
 <item name="vehicleWheels">
 	<property name="Extends" value="partsMaster"/>
+	<property name="Material" value="Mrubber" />
+	<property name="Weight" value="25" />
 	<property name="DescriptionKey" value="vehiclePartsGroupDesc"/>
-	<property name="EconomicValue" value="300"/>
-	<property name="Weight" value="50"/>
+	<property name="EconomicValue" value="0"/>
+
 	<property name="Group" value="Science"/>
 	<property name="UnlockedBy" value="vehicleAnySchematic"/>
 </item>
 
 <!-- parts are 30% of the vehicle so you get a discount building your own-->
 <item name="vehicleMinibikeChassis">
-	<property name="Extends" value="vehicleWheels"/>
-	<property name="EconomicValue" value="1800"/>
+	<property name="Extends" value="partsMaster"/>
+	<property name="DescriptionKey" value="vehiclePartsGroupDesc"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="Group" value="Science"/>
 	<property name="UnlockedBy" value="vehicleMinibikeChassisSchematic"/>
 </item>
 
 <item name="vehicleMinibikeHandlebars">
-	<property name="Extends" value="vehicleWheels"/>
+	<property name="Extends" value="vehicleMinibikeChassis"/>
 	<property name="EconomicValue" value="1800"/>
 	<property name="UnlockedBy" value="vehicleMinibikeHandlebarsSchematic"/>
 </item>
@@ -7562,13 +7562,13 @@ add knockdown resist to armor
 </item>
 
 <item name="vehicleBicycleChassis">
-	<property name="Extends" value="vehicleWheels"/>
+	<property name="Extends" value="vehicleMinibikeChassis"/>
 	<property name="EconomicValue" value="750"/>
 	<property name="UnlockedBy" value="vehicleBicycleChassisSchematic"/>
 </item>
 
 <item name="vehicleBicycleHandlebars">
-	<property name="Extends" value="vehicleWheels"/>
+	<property name="Extends" value="vehicleMinibikeChassis"/>
 	<property name="EconomicValue" value="750"/>
 	<property name="UnlockedBy" value="vehicleBicycleHandlebarsSchematic"/>
 </item>
@@ -7589,13 +7589,13 @@ add knockdown resist to armor
 </item>
 
 <item name="vehicleMotorcycleChassis">
-	<property name="Extends" value="vehicleWheels"/>
+	<property name="Extends" value="vehicleMinibikeChassis"/>
 	<property name="EconomicValue" value="3000"/>
 	<property name="UnlockedBy" value="vehicleMotorcycleChassisSchematic"/>
 </item>
 
 <item name="vehicleMotorcycleHandlebars">
-	<property name="Extends" value="vehicleWheels"/>
+	<property name="Extends" value="vehicleMinibikeChassis"/>
 	<property name="EconomicValue" value="3000"/>
 	<property name="UnlockedBy" value="vehicleMotorcycleHandlebarsSchematic"/>
 </item>
@@ -7615,7 +7615,7 @@ add knockdown resist to armor
 </item>
 
 <item name="vehicle4x4TruckChassis">
-	<property name="Extends" value="vehicleWheels"/>
+	<property name="Extends" value="vehicleMinibikeChassis"/>
 	<property name="EconomicValue" value="9000"/>
 	<property name="UnlockedBy" value="vehicle4x4TruckChassisSchematic"/>
 </item>
@@ -7641,7 +7641,7 @@ add knockdown resist to armor
 </item>
 
 <item name="vehicleGyroCopterChassis">
-	<property name="Extends" value="vehicleWheels"/>
+	<property name="Extends" value="vehicleMinibikeChassis"/>
 	<property name="EconomicValue" value="15000"/>
 	<property name="UnlockedBy" value="vehicleGyroCopterChassisSchematic"/>
 </item>
@@ -11277,7 +11277,8 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="8"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/><display_value name="TSHealth" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		<display_value name="dCureInfection" value=".05"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="5"/>
@@ -13831,9 +13832,21 @@ perkNightStalkerSilentNight
 		<property name="Max_strain_time" value="1.25"/>
 		<property name="Sound_start" value="swoosh"/>
 	</property>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
 	<property name="ThrowableDecoy" value="true"/>
 	<property name="DistractionTags" value="zombie,requires_contact"/>
 	<effect_group name="decoy" tiered="false">
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="jz_BuffBadLegLimpTimeOut">
+			<requirement name="HasBuff" buff="jz_BuffBadLeg"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="jz_BuffBadLeg"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="jz_BuffBadLegLimpA"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="jz_BuffBadLegLimpB"/>
+		
 		<passive_effect name="DistractionRadius" operation="base_set" value="15"/>
 		<passive_effect name="DistractionLifetime" operation="base_set" value="1"/>
 		<passive_effect name="DistractionStrength" operation="base_set" value="80"/>
@@ -13921,7 +13934,7 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Resources"/>
 
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="-1000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="add" value="1000"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInternalBleeding"/>
 	</effect_group>
 </item>
@@ -14084,7 +14097,8 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="10"/><display_value name="dFoodPoisoningRisk" value=".10"/> <!-- raw3 -->
@@ -19364,7 +19378,6 @@ perkNightStalkerSilentNight
 	<property name="EconomicValue" value="350"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
-	<property name="UnlockedBy" value="meleeToolKnifeIronSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -20538,7 +20551,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 
 <item name="jz_DrinkDrityDrinkOfWater">
 	<property name="Extends" value="jz_DrinkDirtyOuncesOfWater" />
-	<property name="Stacknumber" value="1"/> 
+	<property name="Stacknumber" value="15"/> 
 	<property name="DescriptionKey" value="jz_DrinkDrityDrinkOfWaterDesc" />
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
@@ -20616,14 +20629,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="4"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".6"/><display_value name="TSProtein" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20641,14 +20653,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="4"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".6"/><display_value name="TSProtein" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20666,14 +20677,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="4"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".6"/><display_value name="TSProtein" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20691,14 +20701,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/><display_value name="TSProtein" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20716,14 +20725,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-			<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".4"/><display_value name="TSProtein" value=".4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20741,14 +20749,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-			<display_value name="TSHealth" value="4"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".6"/><display_value name="TSProtein" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20766,14 +20773,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/><display_value name="TSProtein" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20791,14 +20797,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="4"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".6"/><display_value name="TSProtein" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20816,14 +20821,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="4"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value=".6"/><display_value name="TSGrain" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20841,14 +20845,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="4"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".6"/><display_value name="TSProtein" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20866,15 +20869,14 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="4"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".1"/><display_value name="TSProtein" value=".1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="multiply" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20892,14 +20894,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20917,14 +20918,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".2"/><display_value name="TSFruit" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20941,13 +20941,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20965,14 +20964,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".1"/><display_value name="TSProtein" value=".1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="30"/><display_value name="dFoodPoisoningRisk" value=".30"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatch">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
 		</triggered_effect>
 	</effect_group>
@@ -20996,8 +20994,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/><display_value name="TSHydration" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -21020,8 +21017,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="10"/><display_value name="TSHydration" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value=".2"/><display_value name="TSGrain" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
@@ -21092,8 +21088,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="15"/><display_value name="TSHydration" value="-15"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/><display_value name="TSProtein" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -21115,8 +21110,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="10"/><display_value name="TSHydration" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="18"/><display_value name="TSStamina" value="-18"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/><display_value name="TSProtein" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -21138,8 +21132,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="20"/><display_value name="TSStamina" value="-20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/><display_value name="TSProtein" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -21165,8 +21158,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="34"/><display_value name="TSStamina" value="-34"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="6">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="6"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="2"/>
@@ -21194,8 +21186,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="15"/><display_value name="TSHydration" value="-15"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="52"/><display_value name="TSStamina" value="-52"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="9">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="9"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="9"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="3">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="3"/>
@@ -21225,8 +21216,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="46"/><display_value name="TSStamina" value="-46"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="8"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".1"/><display_value name="TSProtein" value=".1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".1"/><display_value name="TSVeggie" value=".1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
@@ -21249,8 +21239,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/><display_value name="TSHydration" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="8"/><display_value name="TSStamina" value="-8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="1"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -21273,8 +21262,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/><display_value name="TSHydration" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="40"/><display_value name="TSStamina" value="-40"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="7"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="7"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>
@@ -21301,8 +21289,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="15"/><display_value name="TSHydration" value="-15"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="40"/><display_value name="TSStamina" value="-40"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="7"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="7"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>
@@ -21329,8 +21316,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/><display_value name="TSHydration" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="50"/><display_value name="TSStamina" value="-50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="8"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>
@@ -21356,8 +21342,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="15"/><display_value name="TSHydration" value="-15"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="40"/><display_value name="TSStamina" value="-40"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="7"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="7"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>
@@ -21383,8 +21368,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/><display_value name="TSHydration" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/><display_value name="TSProtein" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -21407,8 +21391,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="15"/><display_value name="TSHydration" value="-15"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="32"/><display_value name="TSStamina" value="-32"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="5"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".4"/><display_value name="TSProtein" value=".4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -21434,8 +21417,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="13"/><display_value name="TSHydration" value="13"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="26"/><display_value name="TSStamina" value="-26"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="5"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".6"/><display_value name="TSProtein" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -21459,8 +21441,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="1"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/><display_value name="TSWellness" value="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".1"/><display_value name="TSProtein" value=".1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
@@ -21547,8 +21528,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="3"/><display_value name="TSFullness" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSHydration" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="1"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".2"/> <!-- raw2 -->
@@ -21588,7 +21568,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 		
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="4"/><display_value name="dFoodPoisoningRisk" value=".04"/> <!-- FP cooked -->
@@ -21696,8 +21676,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="5"/><display_value name="TSStamina" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="1"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".1"/><display_value name="TSFruit" value=".1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 
@@ -21748,7 +21727,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Meshfile" value="#Other/Items?Food/emptyJarPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mglass"/>
-	<property name="Stacknumber" value="125"/> <!-- STK resource -->
+	<property name="Stacknumber" value="15"/> <!-- STK resource -->
 	<property name="Weight" value="10"/>
 	<property name="EconomicValue" value="6"/>
 	<property name="CraftingIngredientTime" value="9"/>
@@ -21992,7 +21971,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="78"/>
 			<display_value name="dStaminaRegen" value=".15"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
-				<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
+				<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/>
+				<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect><display_value name="TSHealth" value="5"/>
 			<display_value name="dHypothermalResist" value="30"/>
 			<display_value name="dDuration" value="903"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="add" value="903"/>
@@ -22326,8 +22306,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="40"/><display_value name="TSStamina" value="-40"/> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="7"/> 
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="7"/> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/><display_value name="TSWellness" value="-1"/> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".8"/><display_value name="TSProtein" value=".8"/> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
@@ -22356,8 +22335,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/><display_value name="TSHydration" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="14"/><display_value name="TSStamina" value="-14"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/> <display_value name="TSProtein" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -22383,8 +22361,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaMaxDrain" operation="add" value="40"/><display_value name="TSStamina" value="-40"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-			<display_value name="TSHealth" value="7"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="7"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/><display_value name="TSWellness" value="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".8"/><display_value name="TSProtein" value=".8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
@@ -22416,8 +22393,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="10"/><display_value name="TSHydration" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="60"/><display_value name="TSStamina" value="-60"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="10"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="3">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="3"/>
@@ -22444,8 +22420,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="4"/><display_value name="TSStamina" value="-4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="1"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".1"/><display_value name="TSFruit" value=".1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
@@ -22473,8 +22448,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="3"/><display_value name="TSFullness" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="1"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
@@ -22503,8 +22477,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="4"/><display_value name="TSHydration" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
@@ -22532,8 +22505,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="5"/><display_value name="TSHydration" value="-5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="40"/><display_value name="TSStamina" value="-40"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="7"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="7"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/> 
@@ -22560,8 +22532,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="15"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="40"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>
@@ -22683,8 +22654,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="15"/><display_value name="TSHydration" value="-15"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="44"/><display_value name="TSStamina" value="-44"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="7"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="7"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>		
@@ -22711,8 +22681,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="10"/><display_value name="TSHydration" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value=".2"/><display_value name="TSGrain" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -22744,8 +22713,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="1"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
@@ -22772,8 +22740,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="60"/><display_value name="TSStamina" value="-60"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="10">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="10"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="3">
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="3"/>
@@ -22783,7 +22750,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 </item>
 
-<item name="jz_FoodVenomSack">
+<item name="jz_VenomSack">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Stacknumber" value="500" />
 	<property name="CustomIcon" value="ui_game_symbol_venomSack" />
@@ -22808,8 +22775,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="1"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/><display_value name="TSWellness" value="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/><display_value name="TSProtein" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
@@ -22845,8 +22811,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="8"/><display_value name="TSHydration" value="8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".4"/><display_value name="TSFruit" value=".4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -22868,8 +22833,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="12"/><display_value name="TSHydration" value="12"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".6"/><display_value name="TSFruit" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -22891,8 +22855,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="16"/><display_value name="TSHydration" value="16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="32"/><display_value name="TSStamina" value="-32"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="5"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".8"/><display_value name="TSFruit" value=".8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -22914,8 +22877,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="4"/><display_value name="TSHydration" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".4"/><display_value name="TSVeggie" value=".4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
@@ -22933,13 +22895,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilageMax" value="1000" />
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="6"/><display_value name="TSHydration" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="12"/><display_value name="TSFullness" value="12"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="6"/><display_value name="TSHydration" value="6"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="24"/><display_value name="TSStamina" value="-24"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="4">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".6"/><display_value name="TSVeggie" value=".4"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="4"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".6"/><display_value name="TSVeggie" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
 </item>
@@ -22956,13 +22917,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilageMax" value="1000" />
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="16"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="8"/><display_value name="TSHydration" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="32"/><display_value name="TSStamina" value="-10"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="16"/><display_value name="TSFullness" value="16"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="8"/><display_value name="TSHydration" value="8"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="32"/><display_value name="TSStamina" value="-32"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".8"/><display_value name="TSVeggie" value=".4"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="5"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".8"/><display_value name="TSVeggie" value=".8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
 </item>
@@ -22983,8 +22943,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="20"/><display_value name="TSHydration" value="-20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="40"/><display_value name="TSStamina" value="-40"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="7"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="7"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>
@@ -23010,8 +22969,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="15"/><display_value name="TSHydration" value="-15"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="42"/><display_value name="TSStamina" value="-42"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="7"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="7"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>
@@ -23037,8 +22995,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="10"/><display_value name="TSHydration" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="44"/><display_value name="TSStamina" value="-44"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="7">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="7"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="7"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>
@@ -23065,8 +23022,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="6"/><display_value name="TSHydration" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="48"/><display_value name="TSStamina" value="-48"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="8"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="3"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="3"/>
@@ -23094,8 +23050,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="6"/><display_value name="TSHydration" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="48"/><display_value name="TSStamina" value="-48"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="8"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="3"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="3"/>
@@ -23123,8 +23078,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="6"/><display_value name="TSHydration" value="-6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="48"/><display_value name="TSStamina" value="-48"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="8"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="3"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="3"/>
@@ -23152,8 +23106,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="9"/><display_value name="TSHydration" value="-9"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="72"/><display_value name="TSStamina" value="-72"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="12">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="12"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="12"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="4"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="4"/>
@@ -23181,8 +23134,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="9"/><display_value name="TSHydration" value="-9"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="72"/><display_value name="TSStamina" value="-72"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="12">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="12"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="12"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="4"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="4"/>
@@ -23210,8 +23162,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="9"/><display_value name="TSHydration" value="-9"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="72"/><display_value name="TSStamina" value="-72"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="12">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="12"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="12"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="4"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="4"/>
@@ -23239,8 +23190,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="8"/><display_value name="TSHydration" value="-8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="64"/><display_value name="TSStamina" value="-64"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="11">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="11"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="11"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="4"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="4"/>
@@ -23269,8 +23219,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="12"/><display_value name="TSHydration" value="-12"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="96"/><display_value name="TSStamina" value="-96"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="16">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="16"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="5"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="5"/>
@@ -23296,11 +23245,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="SpoilagePerTick" value="1" />
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="8"/><display_value name="TSFullness" value="8"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="4"/><display_value name="TSHydration" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="4"/><display_value name="TSHydration" value="4"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="1"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>
@@ -23327,8 +23275,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="32"/><display_value name="TSStamina" value="-32"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="5"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="2"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="2"/>
@@ -23355,8 +23302,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="48"/><display_value name="TSStamina" value="-48"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="8"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="3"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="3"/>
@@ -23383,8 +23329,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="16"/><display_value name="TSStamina" value="-16"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="1"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="1"/>
@@ -23413,8 +23358,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="2"/><display_value name="TSHydration" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="32"/><display_value name="TSStamina" value="-32"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="5"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="2"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="2"/>
@@ -23441,13 +23385,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="48"/><display_value name="TSStamina" value="-48"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="8">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="8"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="8"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="3"> 
 			<requirement name="HasBuff" buff="jz_BuffBalancedDietTag"/></triggered_effect>
 		<display_value name="TSWellness" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".6"/><display_value name="TSProtein" value=".6"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".6"/><display_value name="TSVeggie" value=".4"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".6"/><display_value name="TSVeggie" value=".6"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 	</effect_group>
 </item>
@@ -23509,8 +23452,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="20"/><display_value name="TSHydration" value="-20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="14"/><display_value name="TSStamina" value="-14"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value=".2"/><display_value name="TSGrain" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="5"/><display_value name="dFoodPoisoningRisk" value=".05"/> 
@@ -23540,8 +23482,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="20"/><display_value name="TSHydration" value="-20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="12"/><display_value name="TSStamina" value="-12"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value=".2"/><display_value name="TSGrain" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="5"/><display_value name="dFoodPoisoningRisk" value=".05"/> 
@@ -23571,8 +23512,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="1"/><display_value name="TSHydration" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="12"/><display_value name="TSStamina" value="-12"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/><display_value name="TSWellness" value="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="95"/><display_value name="dFoodPoisoningRisk" value=".95"/> 
@@ -23596,8 +23536,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="50"/><display_value name="TSHydration" value="-50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="20"/><display_value name="TSStamina" value="-20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="3">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="3"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/><display_value name="TSProtein" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="10"/><display_value name="dFoodPoisoningRisk" value=".10"/> 
@@ -23621,8 +23560,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="20"/><display_value name="TSHydration" value="20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="2"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value=".2"/><display_value name="TSGrain" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="5"/><display_value name="dFoodPoisoningRisk" value=".05"/> 
@@ -23645,8 +23583,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="99"/><display_value name="TSStamina" value="-99"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="12">
-			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect>
-		<display_value name="TSHealth" value="12"/>
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="12"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value=".2"/><display_value name="TSFruit" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value=".2"/><display_value name="TSGrain" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
@@ -24573,7 +24510,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_BikeWheels">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mrubber" />
-	<property name="Weight" value="50" />
+	<property name="Weight" value="10" />
 	<property name="DescriptionKey" value="jz_BikeWheelsDesc" />
     <property name="CustomIcon" value="ui_game_symbol_jz_BikeWheels" />
 </item>
@@ -24624,6 +24561,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="10" />
 	<property name="DescriptionKey" value="jz_PartsAugerBitDesc" />
     <property name="CustomIcon" value="ui_game_symbol_jz_PartsAugerBit" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsAugerHousing">
@@ -24632,6 +24570,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="20" />
 	<property name="DescriptionKey" value="jz_PartsAugerHousingDesc" />
     <property name="CustomIcon" value="ui_game_symbol_jjz_PartsAugerHousing" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsChainsawBlade">
@@ -24640,6 +24579,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="5" />
 	<property name="DescriptionKey" value="jz_PartsChainsawBladeDesc" />
     <property name="CustomIcon" value="ui_game_symbol_jz_PartsChainsawBlade" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsChainsawHousing">
@@ -24648,6 +24588,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="20" />
 	<property name="DescriptionKey" value="jz_PartsChainsawHousingDesc" />
     <property name="CustomIcon" value="ui_game_symbol_jz_PartsChainsawHousing" />
+	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_GunTools">
