@@ -36,7 +36,7 @@
 		<property name="Repair_amount" value="150"/>
 		<property name="Upgrade_hit_offset" value="-1"/>
 		<property name="Sound_start" value="repair_block"/>
-		<property name="Allowed_upgrade_items" value="jz_Plank"/>
+		<property name="Allowed_upgrade_items" value="jz_Stick"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
 	<effect_group name="meleeToolStoneAxe">
@@ -149,7 +149,7 @@
 		<property name="Repair_amount" value="400"/>
 		<property name="Upgrade_hit_offset" value="-2"/>
 		<property name="Sound_start" value="repair_block"/>
-		<property name="Allowed_upgrade_items" value="resourceWood,jz_Plank"/>
+		<property name="Allowed_upgrade_items" value="jz_Plank"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
 	<effect_group name="meleeToolClawHammer">
@@ -166,6 +166,8 @@
 		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15" /> <!-- random DegMax -->
 		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.05,.05"/> <!-- random APM -->
 		<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,.05"/> <!-- random StamLoss -->
+
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="ToolClawHammer"/>
 
 		<display_value name="dBlockRepairAmount" value="400"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.05" tags="organic"/>
@@ -971,6 +973,8 @@
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="ToolWrench"/>
 		
 		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
@@ -19933,9 +19937,18 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<display_value name="dBlockRepairAmount" value="400"/>
 		
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="ToolMasonHammer"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.05" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="jz_StoneBuilding"/>
+		
 	</effect_group>
 	<effect_group name="Power Attack">
 		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
@@ -20003,9 +20016,18 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<display_value name="dBlockRepairAmount" value="400"/>
 		
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="ToolSledge"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.05" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="jz_ConcreteBuilding"/>
+		
 	</effect_group>
 	<effect_group name="Power Attack">
 		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
@@ -20017,7 +20039,7 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_WelderTool">
-<property name="Tags" value="blunt,melee,grunting,light,tool,canHaveCosmetic"/>
+<property name="Tags" value="blunt,melee,grunting,light,tool,jz_SteelBuildingTag"/>
 	<property name="DisplayType" value="meleeRepairTool"/>
 	<property name="HoldType" value="29"/>
 	<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
@@ -20073,9 +20095,19 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<display_value name="dBlockRepairAmount" value="400"/>
 		
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="ToolWeldingTorch"/>
+		
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.05" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="jz_SteelBuilding"/>
+		
 	</effect_group>
 	<effect_group name="Power Attack">
 		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
@@ -23557,7 +23589,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DisplayType" value="jz_FoodGrain"/>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="5"/><display_value name="TSFullness" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="20"/><display_value name="TSHydration" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerWaterDrain" operation="add" value="20"/><display_value name="TSHydration" value="-20"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>

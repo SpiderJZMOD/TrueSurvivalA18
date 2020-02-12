@@ -1093,15 +1093,15 @@
 		<blockontop blockname="carsRandomHelper" prob="0.003" rotatemax="3"/>
 		<blockontop blockname="decoCarTireSmallFlat" rotatemax="3" prob="0.001"/>
 		<blockontop blockname="cinderBlocks03" rotatemax="3" prob="0.0007"/>
-		<blockontop blockname="goreBlockAnimal" prob="0.0004"/>
+		<blockontop blockname="goreBlockAnimal" prob="0.00015"/>
 		<blockontop blockname="jz_CommercialVehicleRandomHelper" prob="0.001" rotatemax="3"/>
-		<blockontop blockname="jz_MilitaryVehicleRandomHelper" prob="0.001" rotatemax="3"/>
+		<blockontop blockname="jz_MilitaryVehicleRandomHelper" prob="0.0001" rotatemax="3"/>
 		<blockontop blockname="jz_TruckElectricBox" prob="0.0004"/>
 		<blockontop blockname="jz_TruckTrash" prob="0.0004"/>
 		<blockontop blockname="jz_MetalTrash" prob="0.0004"/>
-		<blockontop blockname="jz_GoreDecorRandomHelper" prob="0.001" rotatemax="3"/>
+		<blockontop blockname="jz_GoreDecorRandomHelper" prob="0.0015" rotatemax="3"/>
 		<blockontop blockname="jz_TireMarkRandomHelper" prob="0.003" rotatemax="3"/>
-		<decoration type="block" blockname="treeBrownGrassDiagonal" prob=".005"/>													   
+		<blockontop blockname="treeBrownGrassDiagonal" prob=".01"/>													   
 	</poi>
 	<poi name="Country Road Asphalt" poimapcolor="#2" blockname="terrAsphalt">
 		<decal texture="0" face="0" prob="0.005"/>
@@ -1123,18 +1123,19 @@
 		<blockontop blockname="cntStreetRandomLootHelper" prob="0.001" rotatemax="7"/>
 		<blockontop blockname="carsRandomHelper" prob="0.003" rotatemax="3"/>
 		<blockontop blockname="decoCarTireSmallFlat" rotatemax="3" prob="0.001"/>
-		<blockontop blockname="rock01" prob="0.0007"/>
-		<blockontop blockname="rock02" prob="0.0007"/>
-		<blockontop blockname="rock04" prob="0.0007"/>
-		<blockontop blockname="goreBlockAnimal" prob="0.0004"/>
+		<blockontop blockname="jz_SmallRockRandomHelper" prob="0.0007"/>
+		<blockontop blockname="garbage_decor1" prob="0.0007"/>
+		<blockontop blockname="garbage_decor2" prob="0.0007"/>
+		<blockontop blockname="garbage_decor3" prob="0.0007"/>
+		<blockontop blockname="goreBlockAnimal" prob="0.00015"/>
 		<blockontop blockname="jz_CommercialVehicleRandomHelper" prob="0.001" rotatemax="3"/>
-		<blockontop blockname="jz_MilitaryVehicleRandomHelper" prob="0.001" rotatemax="3"/>
+		<blockontop blockname="jz_MilitaryVehicleRandomHelper" prob="0.0001" rotatemax="3"/>
 		<blockontop blockname="jz_TruckElectricBox" prob="0.0004"/>
 		<blockontop blockname="jz_TruckTrash" prob="0.0004"/>
 		<blockontop blockname="jz_MetalTrash" prob="0.0004"/>
 		<blockontop blockname="jz_GoreDecorRandomHelper" prob="0.001" rotatemax="3"/>
 		<blockontop blockname="jz_TireMarkRandomHelper" prob="0.003" rotatemax="3"/>
-		<decoration type="block" blockname="treeBrownGrassDiagonal" prob=".005"/>		   
+		<blockontop blockname="treeBrownGrassDiagonal" prob=".01"/>		   
 		<!--blockontop blockname="terrOrePotassiumNitrate" prob="0.02" offset="-1"/-->
 	</poi>
 	<poi name="Road Gravel" poimapcolor="#3" blockname="terrGravel">
@@ -1154,17 +1155,23 @@
 		<decal texture="13" face="0" prob="0.005"/>
 		<decal texture="14" face="0" prob="0.005"/>
 		<decal texture="15" face="0" prob="0.005"/>
-		<blockontop blockname="goreBlockAnimal" prob="0.0004"/>
+		<blockontop blockname="goreBlockAnimal" prob="0.00015"/>
 		<blockontop blockname="cntStreetRandomLootHelper" prob="0.001" rotatemax="7"/>
 		<blockontop blockname="carsRandomHelper" prob="0.001" rotatemax="3"/>
 		
-		<blockontop blockname="jz_CommercialVehicleRandomHelper" prob="0.001" rotatemax="3"/>
-		<blockontop blockname="jz_MilitaryVehicleRandomHelper" prob="0.001" rotatemax="3"/>
+		<blockontop blockname="jz_SmallRockRandomHelper" prob="0.0007"/>
+		<blockontop blockname="garbage_decor1" prob="0.0007"/>
+		<blockontop blockname="garbage_decor2" prob="0.0007"/>
+		<blockontop blockname="garbage_decor3" prob="0.0007"/>
+		
+		
+		<blockontop blockname="jz_CommercialVehicleRandomHelper" prob="0.0001" rotatemax="3"/>
+		<blockontop blockname="jz_MilitaryVehicleRandomHelper" prob="0.0001" rotatemax="3"/>
 		<blockontop blockname="jz_TruckElectricBox" prob="0.0004"/>
 		<blockontop blockname="jz_TruckTrash" prob="0.0004"/>
 		<blockontop blockname="jz_MetalTrash" prob="0.0004"/>
-		<blockontop blockname="jz_GoreDecorRandomHelper" prob="0.001" rotatemax="3"/>
-		<decoration type="block" blockname="treeBrownGrassDiagonal" prob=".005"/>
+		<blockontop blockname="jz_GoreDecorRandomHelper" prob="0.003" rotatemax="3"/>
+		<blockontop blockname="treeBrownGrassDiagonal" prob=".01"/>
 		<!--blockontop blockname="terrOrePotassiumNitrate" prob="0.02" offset="-1"/-->
 	</poi>
 	<!-- LOADED DYNAMICALLY NOW

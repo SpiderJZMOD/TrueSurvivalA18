@@ -365,7 +365,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceMetalPipe" count="20"/>
 </recipe>
 
-<recipe name="trapSpikesWoodDmg0" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
+<recipe name="jz_TrapWoodenSpikeStarter" count="1" craft_time="5" craft_exp_gain="5" >
 	<ingredient name="jz_Stick" count="20"/>
 </recipe>
 
@@ -449,6 +449,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 
 <recipe name="woodCatwalkBlockVariantHelper" count="1" craft_time="5" craft_exp_gain="5" >
 	<ingredient name="jz_Plank" count="8"/>
+	<ingredient name="resourceNail" count="3"/>
 </recipe>
 
 <recipe name="woodFenceRailingTrellisSheetBlockVariantHelper" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">

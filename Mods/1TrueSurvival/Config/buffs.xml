@@ -3030,7 +3030,7 @@
 		</effect_group>
 	</buff>
 
-	<buff name="buffStatusHungry01" remove_on_death="false" name_key="buffStatusHungry01Name" description_key="You are starting to get hungry" tooltip_key="buffStatusHungry01Tooltip" icon="ui_game_symbol_jz_hunger" icon_color="255,128,0">
+	<buff name="buffStatusHungry01" remove_on_death="false" name_key="buffStatusHungry01Name" description_key="You are starting to get hungry" tooltip_key="MMMMMM Food" icon="ui_game_symbol_jz_hunger" icon_color="255,128,0">
 		<damage_type value="Starvation"/>
 		<stack_type value="ignore"/>
 		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
@@ -3046,7 +3046,7 @@
 		</effect_group>
 	</buff>
 
-	<buff name="buffStatusHungry02" remove_on_death="false" name_key="buffStatusHungry02Name" description_key="You are starting to get very hungry, get to hungry and you will start to lose Health" tooltip_key="buffStatusHungry02Tooltip" icon="ui_game_symbol_jz_hunger" icon_color="255,0,0" icon_blink="true">
+	<buff name="buffStatusHungry02" remove_on_death="false" name_key="buffStatusHungry02Name" description_key="You are starting to get very hungry, get to hungry and you will start to lose Health" tooltip_key="Your starving" icon="ui_game_symbol_jz_hunger" icon_color="255,0,0" icon_blink="true">
 		<damage_type value="Starvation"/>
 		<damage_source value="Internal"/>
 		<stack_type value="ignore"/>
@@ -3076,7 +3076,7 @@
 		</effect_group>
 	</buff>
 
-	<buff name="buffStatusThirsty01" remove_on_death="false" name_key="buffStatusThirsty01Name" description_key="You are starting to get thirsty" tooltip_key="buffStatusThirsty01Tooltip" icon="ui_game_symbol_water" icon_color="255,128,0">
+	<buff name="buffStatusThirsty01" remove_on_death="false" name_key="buffStatusThirsty01Name" description_key="You are starting to get thirsty" tooltip_key="Could use a drink" icon="ui_game_symbol_water" icon_color="255,128,0">
 		<damage_type value="Dehydration"/>
 		<stack_type value="ignore"/>
 		<effect_group>
@@ -3086,7 +3086,7 @@
 		</effect_group>
 	</buff>
 
-	<buff name="buffStatusThirsty02" remove_on_death="false" name_key="buffStatusThirsty02Name" description_key="You are very thirsty, get too thirsty and you will lose 1 Health every 5 sec" tooltip_key="buffStatusThirsty02Tooltip" icon="ui_game_symbol_water" icon_color="255,0,0" icon_blink="true">
+	<buff name="buffStatusThirsty02" remove_on_death="false" name_key="buffStatusThirsty02Name" description_key="You are very thirsty, get too thirsty and you will lose 1 Health every 5 sec" tooltip_key="So Thirsty" icon="ui_game_symbol_water" icon_color="255,0,0" icon_blink="true">
 		<damage_type value="Dehydration"/>
 		<damage_source value="Internal"/>
 		<stack_type value="ignore"/>
@@ -5368,7 +5368,7 @@ icon="ui_game_symbol_pack_mule"
 		<display_value value="jz_PlayerFoodStat"/><display_value_key value="{0:0}%"/>
 	</buff>
 	
-	<buff name="jz_BuffFoodStuffed" remove_on_death="false" name_key="jz_BuffFoodStuffedName" description_key="jz_BuffFoodStuffedDesc" icon="ui_game_symbol_stuffed" >
+	<buff name="jz_BuffFoodStuffed" remove_on_death="false" name_key="Stuffed" description_key="You've eaten to much and are 30% slower" icon="ui_game_symbol_stuffed" >
 		<stack_type value="ignore"/>
 		<update_rate value="1"/>
 		<duration value="0"/>
@@ -5436,7 +5436,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	<!-- JZMOD NATURAL HEALING --> 
-    <buff name="jz_BuffNaturalHealing" hidden="false" remove_on_death="true" name_key="Natural Healing" description_key="You will natural heal while full with your HEalthy Diet Buff" icon="ui_game_symbol_cozyBed" >
+    <buff name="jz_BuffNaturalHealing" hidden="false" remove_on_death="true" name_key="Natural Healing" description_key="You will natural heal while full with your HEalthy Diet Buff" icon="ui_game_symbol_stomach" >
 		<stack_type value="ignore"/>
 		<duration value="0"/>
 		<effect_group>

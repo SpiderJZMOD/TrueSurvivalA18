@@ -2045,25 +2045,25 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,0,1" tags="jz_Plank"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_WoodBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_WoodBuildingSkillLv" operation="LT" value="3"/>
 			<requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="jz_WoodBuildingXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_WoodBuildingSkillLv" operation="LT" value="3"/>
-			<requirement name="CVarCompare" cvar="jz_WoodBuildingXP" operation="GTE" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_WoodBuildingSkillLv" operation="LT" value="2"/>
+			<requirement name="CVarCompare" cvar="jz_WoodBuildingXP" operation="Equals" value="50"/>
 			<requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_WoodBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up Mining!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_WoodBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up Wood Building!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_WoodBuildingSkillLv" operation="LT" value="4"/>
-			<requirement name="CVarCompare" cvar="jz_WoodBuildingXP" operation="GTE" value="6"/>
+			<requirement name="CVarCompare" cvar="jz_WoodBuildingSkillLv" operation="LT" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_WoodBuildingXP" operation="Equals" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_WoodBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up Mining!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_WoodBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up Wood Building!"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_WoodBuildingSkillRank1Desc" long_desc_key="jz_WoodBuildingSkillRank1LongDesc"/>
@@ -2079,33 +2079,33 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3,4" value="0,0,0,1" tags="jz_Bricks"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="LT" value="5"/>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="LT" value="4"/>
 			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="jz_StoneBuildingXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="Equals" value="1"/>
-			<requirement name="CVarCompare" cvar="jz_StoneBuildingXP" operation="GTE" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="LT" value="2"/>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingXP" operation="Equals" value="50"/>
 			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_StoneBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone building Skill!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_StoneBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="Equals" value="2"/>
-			<requirement name="CVarCompare" cvar="jz_StoneBuildingXP" operation="GTE" value="6"/>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="LT" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingXP" operation="Equals" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_StoneBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone building Skill!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_StoneBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="Equals" value="3"/>
-			<requirement name="CVarCompare" cvar="jz_StoneBuildingXP" operation="GTE" value="9"/>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_StoneBuildingXP" operation="Equals" value="150"/>
 			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_StoneBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone building Skill!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_StoneBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone Building Skill!"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_StoneBuildingSkillRank1Desc" long_desc_key="jz_StoneBuildingSkillRank1LongDesc"/>
@@ -2121,25 +2121,25 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,0,1" tags="jz_IronSheetMetal"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_IronBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_IronBuildingSkillLv" operation="LT" value="3"/>
 			<requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="jz_IronBuildingXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_IronBuildingSkillLv" operation="LT" value="3"/>
-			<requirement name="CVarCompare" cvar="jz_IronBuildingXP" operation="GTE" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_IronBuildingSkillLv" operation="LT" value="2"/>
+			<requirement name="CVarCompare" cvar="jz_IronBuildingXP" operation="Equals" value="50"/>
 			<requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_IronBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Iron building Skill!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_IronBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Iron Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_IronBuildingSkillLv" operation="LT" value="4"/>
-			<requirement name="CVarCompare" cvar="jz_IronBuildingXP" operation="GTE" value="6"/>
+			<requirement name="CVarCompare" cvar="jz_IronBuildingSkillLv" operation="LT" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_IronBuildingXP" operation="Equals" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_IronBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Iron building Skill!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_IronBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Iron Building Skill!"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_IronBuildingSkillRank1Desc" long_desc_key="jz_IronBuildingSkillRank1LongDesc"/>
@@ -2154,25 +2154,25 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,0,1" tags="resourceConcreteMix"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingSkillLv" operation="LT" value="3"/>
 			<requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="jz_ConcreteBuildingXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingSkillLv" operation="LT" value="3"/>
-			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingXP" operation="GTE" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingSkillLv" operation="LT" value="2"/>
+			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingXP" operation="Equals" value="50"/>
 			<requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_ConcreteBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Concrete building Skill!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_ConcreteBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Concrete Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingSkillLv" operation="LT" value="4"/>
-			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingXP" operation="GTE" value="6"/>
+			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingSkillLv" operation="LT" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingXP" operation="Equals" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_ConcreteBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Concrete building Skill!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_ConcreteBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Concrete Building Skill!"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_ConcreteBuildingSkillRank1Desc" long_desc_key="jz_ConcreteBuildingSkillRank1LongDesc"/>
@@ -2187,25 +2187,25 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2,3" value="0,0,1" tags="jz_SteelSheetMetal"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_SteelBuildingSkillLv" operation="LT" value="4"/>
+			<requirement name="CVarCompare" cvar="jz_SteelBuildingSkillLv" operation="LT" value="3"/>
 			<requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="jz_SteelBuildingXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_SteelBuildingSkillLv" operation="LT" value="3"/>
-			<requirement name="CVarCompare" cvar="jz_SteelBuildingXP" operation="GTE" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_SteelBuildingSkillLv" operation="LT" value="2"/>
+			<requirement name="CVarCompare" cvar="jz_SteelBuildingXP" operation="Equals" value="50"/>
 			<requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_SteelBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Steel Building Skill!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_SteelBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Steel Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="jz_SteelBuildingSkillLv" operation="LT" value="4"/>
-			<requirement name="CVarCompare" cvar="jz_SteelBuildingXP" operation="GTE" value="6"/>
+			<requirement name="CVarCompare" cvar="jz_SteelBuildingSkillLv" operation="LT" value="3"/>
+			<requirement name="CVarCompare" cvar="jz_SteelBuildingXP" operation="Equals" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="jz_SteelBuildingSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Steel Building Skill!"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="jz_SteelBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Steel Building Skill!"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_SteelBuildingSkillRank1Desc" long_desc_key="jz_SteelBuildingSkillRank1LongDesc"/>
