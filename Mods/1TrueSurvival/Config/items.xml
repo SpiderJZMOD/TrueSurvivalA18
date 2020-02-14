@@ -1063,7 +1063,7 @@
 
 	<effect_group name="meleeToolKnifeBone">
 	
-	<!-- Testing  <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffSnakeBite"/> -->
+	<!-- Testing  <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffZombieBiteTrigger"/>-->
 		
 		<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
@@ -3374,7 +3374,7 @@
 </item>
 
 <item name="gunDoubleBarrelShotgun"> <!-- T2 shotguns -->
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,stock,bottomAttachments,attStrength,perkBoomstick,doubleBarrel,canHaveCosmetic,jz_DBShotgunSkillTag"/>
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,stock,bottomAttachments,doubleBarrel,canHaveCosmetic,jz_DBShotgunSkillTag"/>
 	<property name="DisplayType" value="rangedGun"/>
 	<property name="HoldType" value="56"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/DoubleBarrelShotgun/doubleBarrelShotgunPrefab.prefab"/>
@@ -3395,7 +3395,7 @@
 	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
 	<property name="LightValue" value=".45"/>
 	<property name="EconomicValue" value="500"/>
-	<property name="UnlockedBy" value="perkBoomstick,gunDoubleBarrelShotgunSchematic"/>
+	<property name="UnlockedBy" value="gunDoubleBarrelShotgunSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3590,7 +3590,7 @@
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="LightValue" value=".45"/>
 	<property name="EconomicValue" value="500"/>
-	<property name="UnlockedBy" value="perkDeadEye,gunHuntingRifleSchematic"/>
+	<property name="UnlockedBy" value="gunHuntingRifleSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -5636,7 +5636,6 @@
 	<property name="DisplayType" value="ammoBulletHP"/>
 	<property name="EconomicValue" value="14"/>
 	<property name="DescriptionKey" value="ammoHPGroupDesc"/>
-	<property name="UnlockedBy" value="perkPistolPeteHPAmmo"/>
 	<effect_group name="ammo9mmBulletHP" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="41.6"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="3"/>
@@ -5661,7 +5660,6 @@
 	<property name="DisplayType" value="ammoBulletAP"/>
 	<property name="EconomicValue" value="14"/>
 	<property name="DescriptionKey" value="ammoAPGroupDesc"/>
-	<property name="UnlockedBy" value="perkPistolPeteAPAmmo"/>
 	<effect_group name="ammo9mmBulletAP" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="32"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="8"/>
@@ -5713,7 +5711,6 @@
 	<property name="DisplayType" value="ammoBulletHP"/>
 	<property name="EconomicValue" value="15"/>
 	<property name="DescriptionKey" value="ammoHPGroupDesc"/>
-	<property name="UnlockedBy" value="perkEnforcerHPAmmo"/>
 	<effect_group name="ammo44MagnumBulletHP" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="84.5"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="6"/>
@@ -5741,7 +5738,6 @@
 	<property name="DisplayType" value="ammoBulletAP"/>
 	<property name="EconomicValue" value="15"/>
 	<property name="DescriptionKey" value="ammoAPGroupDesc"/>
-	<property name="UnlockedBy" value="perkEnforcerAPAmmo"/>
 	<effect_group name="ammo44MagnumBulletAP" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="80"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="14"/>
@@ -5789,7 +5785,6 @@
 	<property name="DisplayType" value="ammoBulletHP"/>
 	<property name="EconomicValue" value="16"/>
 	<property name="DescriptionKey" value="ammoHPGroupDesc"/>
-	<property name="UnlockedBy" value="perkSniperHPAmmo"/>
 	<effect_group name="ammo762mmBulletHP" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="65"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="4"/>
@@ -5812,7 +5807,6 @@
 	<property name="DisplayType" value="ammoBulletAP"/>
 	<property name="EconomicValue" value="16"/>
 	<property name="DescriptionKey" value="ammoAPGroupDesc"/>
-	<property name="UnlockedBy" value="perkSniperAPAmmo"/>
 	<effect_group name="ammo762mmBulletAP" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="50"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="9"/>
@@ -5882,7 +5876,6 @@
 	<property name="Stacknumber" value="150"/> <!-- STK ammo low -->
 	<property name="EconomicValue" value="20"/>
 	<property name="Group" value="Ammo/Weapons"/>
-	<property name="UnlockedBy" value="perkShotgunMessiahSlugs"/>
 	<effect_group name="ammoShotgunSlug" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="80"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="80"/>
@@ -5919,7 +5912,6 @@
 	<property name="Stacknumber" value="150"/> <!-- STK ammo low -->
 	<property name="EconomicValue" value="20"/>
 	<property name="Group" value="Ammo/Weapons"/>
-	<property name="UnlockedBy" value="perkShotgunMessiahBreachingSlugs"/>
 	<effect_group name="ammoShotgunBreachingSlug" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="80"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="80"/>
@@ -6196,7 +6188,6 @@
 	<property name="EconomicValue" value="57"/>
 	<property name="EconomicBundleSize" value="5"/>
 	<property name="StickyOffset" value=".5"/>
-	<property name="UnlockedBy" value="perkRangersAPAmmo"/>
 	<effect_group name="ammoArrowSteelAP" tiered="false"> <!-- ammoArrowSteelAP -->
 		<passive_effect name="EntityDamage" operation="base_set" value="31"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="5"/>
@@ -6241,7 +6232,6 @@
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="Damage_type" value="Heat"/>
 	<property name="StickyOffset" value=".7"/>
-	<property name="UnlockedBy" value="perkRangersFlamingArrows"/>
 	<property class="Action1">
 		<property name="Gravity" value="-5"/>
 		<property name="DamageBonus.wood" value="2"/>
@@ -7862,7 +7852,7 @@ add knockdown resist to armor
 	<property name="Group" value="Clothing"/>
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="EconomicValue" value="250"/>
-	<property name="UnlockedBy" value="perkLightArmor,armorLeatherSetSchematic"/>
+	<property name="UnlockedBy" value="armorLeatherSetSchematic"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
@@ -8382,7 +8372,7 @@ add knockdown resist to armor
 	<property name="Group" value="Clothing"/>
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="EconomicValue" value="500"/>
-	<property name="UnlockedBy" value="perkHeavyArmor,armorIronSetSchematic"/>
+	<property name="UnlockedBy" value="armorIronSetSchematic"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
@@ -11913,7 +11903,7 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="toolAnvil"/>
 	<property name="Unlocks" value="toolAnvil"/>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolAnvil" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_Anvil" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -15210,7 +15200,7 @@ perkNightStalkerSilentNight
 	<property name="SellableToTrader" value="true"/>
 	<property name="EconomicValue" value="100"/>
 	<property name="Group" value="Tools/Traps"/>
-	<property name="UnlockedBy" value="perkGreatHeistComplete,perkLockPicking"/>
+	<property name="UnlockedBy" value="perkGreatHeistComplete"/>
 	<property name="PickupJournalEntry" value="lockPickingTip"/>
 </item>
 
@@ -18451,7 +18441,7 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="SellableToTrader" value="false" />
-	<property name="UnlockedBy" value="jz_HandCraftedFireArms"/>
+	<property name="UnlockedBy" value="jz_SchematicCraftedRevolver"/>
 	<property name="ShowQuality" value="true"/>
 	<property name="DescriptionKey" value="jz_CraftedFirearmDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_CraftedRevolver" />
@@ -18675,6 +18665,7 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="CustomIcon" value="ui_game_symbol_CraftedRevolverStock" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
+	<property name="UnlockedBy" value="jz_SchematicCraftedRevolver"/>
 </item>
 
 <item name="jz_PartsCraftedRevolverBarrel">
@@ -18685,6 +18676,7 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Ammo/Weapons" />
     <property name="CustomIcon" value="ui_game_symbol_CraftedRevolverBarrel" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
+	<property name="UnlockedBy" value="jz_SchematicCraftedRevolver"/>
 </item>
 
 <item name="jz_PartsOldRevolverCylinder">
@@ -19287,7 +19279,7 @@ perkNightStalkerSilentNight
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value=".5"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Magazine_items" value="ammo9mmBulletBall"/>
+		<property name="Magazine_items" value="ammo762mmBulletBall"/>
 		<property name="Reload_time" value="2.75"/>
 		<property name="Sound_start" value="sniperrifle_fire"/>
 		<property name="Sound_repeat" value=""/>
@@ -19646,7 +19638,7 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_PoliceBaton">
-	<property name="Tags" value="blunt,club,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attStrength,perkPummelPete,canHaveCosmetic,jz_BluntSkillTag"/>
+	<property name="Tags" value="blunt,club,melee,grunting,light,weapon,meleeWeapon,jz_BluntSkillTag"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="Group" value="Ammo/Weapons,Basics"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZBaton.unity3d?BatonPrefab" />
@@ -19743,7 +19735,7 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_Crowbar">
-	<property name="Tags" value="blunt,melee,grunting,light,tool,canHaveCosmetic"/>
+	<property name="Tags" value="blunt,melee,grunting,light,tool"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="HoldType" value="18"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZCrowbar.unity3d?CrowbarPrefab" />
@@ -19752,60 +19744,61 @@ perkNightStalkerSilentNight
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="metaldestroy"/>
-	<property name="EconomicValue" value="350"/>
-	<property name="UnlockedBy" value="jz_ScrewdriverSchematic"/>
-	<property name="ShowQuality" value="true"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="UnlockedBy" value="jz_CrowbarSchematic"/>
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
 		<property name="Sound_start" value="swoosh"/>
-		<property name="ToolCategory.ToolCrowbar" value="1" param1="1"/>
-		<property name="Sound_harvesting" value="wrench_harvest"/>
-		<property name="Particle_harvesting" value="true" param1="metal"/>
-
-		<property name="UseGrazingHits" value="true"/>
-		<property name="GrazeStart" value=".25"/>
-		<property name="GrazeEnd" value=".3"/>
-		<property name="SwingDegrees" value="50"/>
-		<property name="SwingAngle" value="180"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
 	</property>
-	<effect_group name="meleeToolWrench">
-		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
-		<passive_effect name="BlockRange" operation="base_set" value="3"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="18"/> <!-- meleeToolWrench -->
-		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+	<property class="Action1">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="UsePowerAttackAnimation" value="true"/>
+	</property>
+	<effect_group name="meleeToolShovelStone">
+		<passive_effect name="MaxRange" operation="base_set" value="2.8"/>
+		<passive_effect name="BlockRange" operation="base_set" value="4"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="12"/> <!-- meleeToolShovelStone -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
-		<passive_effect name="BlockDamage" operation="base_set" value="38.5"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="base_set" value="38.4"/>
 		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="terrGravel"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>	
-
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
-		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="salvageHarvest"/>
-		<passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="200,682" tier="1,6" />
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value=".3" tags="terrGravel"/>
+		
+		<passive_effect name="HarvestCount" operation="base_add" value="1" tags="ToolCrowbar"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="0" tags="allHarvest"/>
+		
+		<passive_effect name="StaminaLoss" operation="base_set" value="13.8" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="75,200" tier="1,6" />
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
 		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 		<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
 	</effect_group>
 	<effect_group name="Power Attack">
-		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="StaminaLoss" operation="base_add" value="25.2" tags="secondary"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="27.6" tags="secondary"/>
 	</effect_group>
 	<property name="Group" value="Tools/Traps"/>
+	<property name="PickupJournalEntry" value="miningTip"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
-	<property name="DescriptionKey" value="screwdriverDesc" />
 </item>
 
 <item name="jz_Screwdriver">
@@ -19819,7 +19812,7 @@ perkNightStalkerSilentNight
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="metaldestroy"/>
 	<property name="EconomicValue" value="350"/>
-	<property name="UnlockedBy" value="jz_ScrewdriverSchematic"/>
+	<property name="UnlockedBy" value="jz_SchematicScrewdriver"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
@@ -19857,13 +19850,13 @@ perkNightStalkerSilentNight
 		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
-		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="salvageHarvest"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="200,682" tier="1,6" />
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
-		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0" />
 		<display_value name="dBlockRepairAmount" value="400"/>
+		
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="ToolScrewdriver"/>
 		
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
@@ -20039,7 +20032,7 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="jz_WelderTool">
-<property name="Tags" value="blunt,melee,grunting,light,tool,jz_SteelBuildingTag"/>
+	<property name="Tags" value="blunt,melee,grunting,light,tool,jz_SteelBuildingTag"/>
 	<property name="DisplayType" value="meleeRepairTool"/>
 	<property name="HoldType" value="29"/>
 	<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
@@ -20049,7 +20042,7 @@ perkNightStalkerSilentNight
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="metaldestroy"/>
 	<property name="EconomicValue" value="350"/>
-	<property name="UnlockedBy" value="jz_ScrewdriverSchematic"/>
+	<property name="UnlockedBy" value="jz_SchematicWelder"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
@@ -23611,7 +23604,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="DescriptionKey" value="MREDesc" />
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="60"/><display_value name="TSFullness" value="60"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="40"/><display_value name="TSFullness" value="40"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="3"/><display_value name="TSHydration" value="3"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="99"/><display_value name="TSStamina" value="-99"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="12">
@@ -23633,7 +23626,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="DescriptionKey" value="MREDesc" />
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="60"/><display_value name="TSFullness" value="60"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="50"/><display_value name="TSFullness" value="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/><display_value name="TSHydration" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="120"/><display_value name="TSStamina" value="-120"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="20">
@@ -23655,7 +23648,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_mreLarge" />
 	<property name="DisplayType" value="jz_FoodFGVPWellness"/>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="90"/><display_value name="TSFullness" value="90"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="60"/><display_value name="TSFullness" value="60"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="5"/><display_value name="TSHydration" value="5"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="180"/><display_value name="TSStamina" value="-180"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="30">
@@ -24710,6 +24703,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DescriptionKey" value="jz_BrainMatterDesc" />
 	<property name="Material" value="Mprotein" />
     <property name="Weight" value="1" />
+	<property name="Spoilable" value="true" />
+    <property name="ShowQuality" value="false"/>
+    <property name="SpoiledItem" value="foodRottingFlesh" />
+    <property name="TickPerLoss" value="270" />
+    <property name="SpoilageMax" value="1000" />
+    <property name="SpoilagePerTick" value="1" />
 </item>
 
 <item name="jz_CuredLeather">
@@ -25789,6 +25788,30 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <!-- JZMOD SCHEMATICS -->
+<item name="jz_SchematicWelder">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="thrownAmmoMolotovCocktail"/>
+	<property name="Unlocks" value="jz_WelderTool"/>
+    <property name="DescriptionKey" value="jz_SchematicMolotovCocktailDesc"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_WelderTool" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicScrewdriver">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="thrownAmmoMolotovCocktail"/>
+	<property name="Unlocks" value="jz_Screwdriver"/>
+    <property name="DescriptionKey" value="jz_SchematicMolotovCocktailDesc"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_Screwdriver" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
 <item name="jz_SchematicMolotovCocktail">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>

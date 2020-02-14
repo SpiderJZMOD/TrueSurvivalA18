@@ -801,18 +801,18 @@
 			<decoration type="block" blockname="rock04" prob=".005" rotatemax="3"/>
 			<decoration type="block" blockname="cntBirdnest" prob="0.001"/>
 			<decoration type="block" blockname="jz_CreepyEye" prob="0.0001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy15" prob="0.0001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy25" prob="0.001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy14" prob="0.001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy11" prob="0.001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy08" prob="0.001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy04" prob="0.001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy04Short" prob="0.001" rotatemax="3"/>
+			<decoration type="block" blockname="jz_Creepy15" prob="0.0001" rotatemax="3"/><!--Glowing Pod-->
+			<decoration type="block" blockname="jz_Creepy25" prob="0.006" rotatemax="3"/>
+			<decoration type="block" blockname="jz_Creepy14" prob="0.01" rotatemax="3"/>
+			<decoration type="block" blockname="jz_Creepy11" prob="0.01" rotatemax="3"/>
+			<decoration type="block" blockname="jz_Creepy08" prob="0.001" rotatemax="3"/><!-- Pod-->
+			<decoration type="block" blockname="jz_Creepy04" prob="0.005" rotatemax="3"/>
+			<decoration type="block" blockname="jz_Creepy04Short" prob="0.009" rotatemax="3"/>
 			<decoration type="block" blockname="jz_Creepy10" prob="0.001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy09" prob="0.001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy18" prob="0.001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy07Short" prob="0.001" rotatemax="3"/>
-			<decoration type="block" blockname="jz_Creepy07" prob="0.001" rotatemax="3"/>
+			<decoration type="block" blockname="jz_Creepy09" prob="0.005" rotatemax="3"/><!--Pod w/Arms-->
+			<decoration type="block" blockname="jz_Creepy18" prob="0.006" rotatemax="3"/>
+			<decoration type="block" blockname="jz_Creepy07Short" prob="0.009" rotatemax="3"/>
+			<decoration type="block" blockname="jz_Creepy07" prob="0.005" rotatemax="3"/>
 			<decoration type="block" blockname="jz_Creepy02" prob="0.001" rotatemax="3"/>
 			<decoration type="block" blockname="jz_CreepyTree" prob="0.006" rotatemax="3"/>
 			<decoration type="block" blockname="jz_CreepyTree2" prob="0.006" rotatemax="3"/>
@@ -1094,6 +1094,7 @@
 		<blockontop blockname="decoCarTireSmallFlat" rotatemax="3" prob="0.001"/>
 		<blockontop blockname="cinderBlocks03" rotatemax="3" prob="0.0007"/>
 		<blockontop blockname="goreBlockAnimal" prob="0.00015"/>
+		<blockontop blockname="jz_SmallRockRandomHelper" prob="0.001"/>
 		<blockontop blockname="jz_CommercialVehicleRandomHelper" prob="0.001" rotatemax="3"/>
 		<blockontop blockname="jz_MilitaryVehicleRandomHelper" prob="0.0001" rotatemax="3"/>
 		<blockontop blockname="jz_TruckElectricBox" prob="0.0004"/>
@@ -1101,7 +1102,7 @@
 		<blockontop blockname="jz_MetalTrash" prob="0.0004"/>
 		<blockontop blockname="jz_GoreDecorRandomHelper" prob="0.0015" rotatemax="3"/>
 		<blockontop blockname="jz_TireMarkRandomHelper" prob="0.003" rotatemax="3"/>
-		<blockontop blockname="treeBrownGrassDiagonal" prob=".01"/>													   
+		<blockontop blockname="treeBrownGrassDiagonal" prob=".03"/>													   
 	</poi>
 	<poi name="Country Road Asphalt" poimapcolor="#2" blockname="terrAsphalt">
 		<decal texture="0" face="0" prob="0.005"/>
@@ -1123,7 +1124,7 @@
 		<blockontop blockname="cntStreetRandomLootHelper" prob="0.001" rotatemax="7"/>
 		<blockontop blockname="carsRandomHelper" prob="0.003" rotatemax="3"/>
 		<blockontop blockname="decoCarTireSmallFlat" rotatemax="3" prob="0.001"/>
-		<blockontop blockname="jz_SmallRockRandomHelper" prob="0.0007"/>
+		<blockontop blockname="jz_SmallRockRandomHelper" prob="0.001"/>
 		<blockontop blockname="garbage_decor1" prob="0.0007"/>
 		<blockontop blockname="garbage_decor2" prob="0.0007"/>
 		<blockontop blockname="garbage_decor3" prob="0.0007"/>
@@ -1135,7 +1136,7 @@
 		<blockontop blockname="jz_MetalTrash" prob="0.0004"/>
 		<blockontop blockname="jz_GoreDecorRandomHelper" prob="0.001" rotatemax="3"/>
 		<blockontop blockname="jz_TireMarkRandomHelper" prob="0.003" rotatemax="3"/>
-		<blockontop blockname="treeBrownGrassDiagonal" prob=".01"/>		   
+		<blockontop blockname="treeBrownGrassDiagonal" prob=".03"/>		   
 		<!--blockontop blockname="terrOrePotassiumNitrate" prob="0.02" offset="-1"/-->
 	</poi>
 	<poi name="Road Gravel" poimapcolor="#3" blockname="terrGravel">
@@ -1159,7 +1160,7 @@
 		<blockontop blockname="cntStreetRandomLootHelper" prob="0.001" rotatemax="7"/>
 		<blockontop blockname="carsRandomHelper" prob="0.001" rotatemax="3"/>
 		
-		<blockontop blockname="jz_SmallRockRandomHelper" prob="0.0007"/>
+		<blockontop blockname="jz_SmallRockRandomHelper" prob="0.001"/>
 		<blockontop blockname="garbage_decor1" prob="0.0007"/>
 		<blockontop blockname="garbage_decor2" prob="0.0007"/>
 		<blockontop blockname="garbage_decor3" prob="0.0007"/>
@@ -1171,7 +1172,7 @@
 		<blockontop blockname="jz_TruckTrash" prob="0.0004"/>
 		<blockontop blockname="jz_MetalTrash" prob="0.0004"/>
 		<blockontop blockname="jz_GoreDecorRandomHelper" prob="0.003" rotatemax="3"/>
-		<blockontop blockname="treeBrownGrassDiagonal" prob=".01"/>
+		<blockontop blockname="treeBrownGrassDiagonal" prob=".03"/>
 		<!--blockontop blockname="terrOrePotassiumNitrate" prob="0.02" offset="-1"/-->
 	</poi>
 	<!-- LOADED DYNAMICALLY NOW

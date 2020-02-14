@@ -398,7 +398,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="medicalBandage" count="1" />
 </recipe>
 
-<recipe name="medicalSplint" count="1" craft_time="10" craft_exp_gain="10" tags="learnable">
+<recipe name="medicalSplint" count="1" craft_time="10" craft_exp_gain="10" >
 	<ingredient name="resourceCloth" count="2"/>
 	<ingredient name="jz_Stick" count="4"/>
 	<ingredient name="jz_FiberRope" count="4"/>
@@ -801,15 +801,15 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="drinkJarEmpty" count="1"/>
 </recipe>
 
-<recipe name="jz_DrinkDirtyOuncesOfWater" count="16" craft_area="campfire" craft_tool="toolCookingPot" craft_time="4" craft_exp_gain="0" >
+<recipe name="jz_DrinkDirtyOuncesOfWater" count="16" craft_area="campfire" craft_tool="toolCookingPot" craft_time="10" craft_exp_gain="0" >
 	<ingredient name="resourceSnowBall" count="5"/>
 </recipe>
 
-<recipe name="jz_DrinkCleanOuncesOfWater" count="16" craft_area="campfire" craft_tool="toolCookingPot" craft_time="4" craft_exp_gain="0" >
+<recipe name="jz_DrinkCleanOuncesOfWater" count="16" craft_area="campfire" craft_tool="toolCookingPot" craft_time="10" craft_exp_gain="0" >
 	<ingredient name="jz_DrinkDirtyOuncesOfWater" count="16"/>
 </recipe>
 
-<recipe name="jz_DrinkCleanOuncesOfWater" count="16" craft_area="campfire" craft_tool="toolCookingPot" craft_time="4" craft_exp_gain="0" >
+<recipe name="jz_DrinkCleanOuncesOfWater" count="16" craft_area="campfire" craft_tool="toolCookingPot" craft_time="10" craft_exp_gain="0" >
 	<ingredient name="jz_DrinkDrityDrinkOfWater" count="1"/>
 </recipe>
 
@@ -2293,7 +2293,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="vehicleBicyclePlaceable" count="1" craft_time="30" >
-	<ingredient name="vehicleWheels" count="2"/>
+	<ingredient name="jz_BikeWheels" count="2"/>
 	<ingredient name="vehicleBicycleChassis" count="1"/>
 	<ingredient name="vehicleBicycleHandlebars" count="1"/>
 	<ingredient name="resourceMechanicalParts" count="1"/>
@@ -2340,7 +2340,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="vehicleMinibikePlaceable" count="1" craft_time="90" craft_area="workbench" >
-	<ingredient name="vehicleWheels" count="2"/>
+	<ingredient name="jz_BikeWheels" count="2"/>
 	<ingredient name="vehicleMinibikeChassis" count="1"/>
 	<ingredient name="vehicleMinibikeHandlebars" count="1"/>
 	<ingredient name="smallEngine" count="1"/>

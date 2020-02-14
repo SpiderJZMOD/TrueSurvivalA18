@@ -3939,7 +3939,17 @@
 		</panel>
 	</window>
 
-	
+	<window name="windowToolsAnvil" width="228" height="121" panel="Right">
+		<panel style="header.panel">
+			<sprite style="header.icon" sprite="ui_game_symbol_fork" />
+			<label style="header.name" text="TOOLS" text_key="xuiTools" />
+		</panel>
+		<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true" on_press="true">
+			<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" allow_sort_order="false" required_tools="tools,tools,tools" required_tools_only="false">
+				<required_item_stack name="0" />
+			</grid>
+		</rect>
+	</window>
 	
 </set>
 </configs> 

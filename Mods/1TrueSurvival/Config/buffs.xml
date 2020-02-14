@@ -266,11 +266,6 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="_biomeradiation"/>
 			-->
 
-			<!-- set max bleeding stacks that a player can apply -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$maxBleedCounter" operation="set" value="1">
-				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="GTE" value="1"/></triggered_effect>
-			
-
 			<!-- Encumbrance from inventory slots
 			This is not tied to the POSITION of the slot you use but the total number of slots used / unlocked. -->
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffEncumberedInv">
@@ -1119,9 +1114,9 @@
 				<requirement name="NotHasBuff" buff="buffInjuryBleeding"/>
 			</triggered_effect>
 
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="bleedCounter" operation="add" value="1">
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="bleedCounter" operation="add" value="2">
 				<!-- Limit the amount of bleeding stacks that enemies can put on. -->
-				<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2"/>
+				<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="10"/>
 			</triggered_effect>
 
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleeding">
@@ -1146,7 +1141,6 @@
 			
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$bleedAmount" operation="set" value="@bleedCounter"/>
 			
-			<passive_effect name="HealthMaxModifierOT" operation="base_subtract" value="@$bleedAmount"/>
 			<passive_effect name="HealthChangeOT" operation="base_subtract" value="@$bleedAmount"/>
 
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="bleedCounter" operation="set" value="0"/>
@@ -2358,9 +2352,6 @@
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegSprained">
 				<requirement name="PlayerLevel" operation="LT" value="11"/></triggered_effect>
 
-			<passive_effect name="HealthMaxModifierOT" operation="base_add" value="1">
-				<requirement name="StatComparePercModMaxToMax" stat="Health" operation="LTE" value="@$NearDeathRegen"/>
-			</passive_effect>
 			<passive_effect name="HealthChangeOT" operation="base_add" value="1">
 				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LTE" value="@$NearDeathRegen"/>
 			</passive_effect>
@@ -2691,7 +2682,7 @@
 
 			<passive_effect name="StaminaChangeOT" operation="base_subtract" value="3"/>
 
-			<passive_effect name="HealthMaxModifierOT" operation="base_subtract" value=".05"/>
+			<!-- JZMOD REDO <passive_effect name="HealthMaxModifierOT" operation="base_subtract" value=".05"/>-->
 			<passive_effect name="HealthChangeOT" operation="base_subtract" value=".01"/>
 			<passive_effect name="StaminaMaxModifierOT" operation="base_subtract" value=".1"/><!--Tiredness-->
 
@@ -3056,7 +3047,7 @@
 		<effect_group>
 			<passive_effect name="HealthChangeOT" operation="base_subtract" value=".00416"/> <!-- 15 p h -->
 			<passive_effect name="StaminaChangeOT" operation="perc_subtract" value=".1"/>
-			<passive_effect name="HealthMaxModifierOT" operation="base_subtract" value="0.05"/>
+			<!-- JZMOD REDO <passive_effect name="HealthMaxModifierOT" operation="base_subtract" value="0.05"/>-->
 		</effect_group>
 
 		<effect_group>
@@ -5137,11 +5128,12 @@ icon="ui_game_symbol_pack_mule"
 		<stack_type value="ignore"/>
 		<duration value=".1"/>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleeding"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffZombieBite">		
-				<requirement name="HasBuff" buff="buffInjuryStunned01"/> 
-				<requirement name="NotHasBuff" buff="jz_BuffZombieBiteTrigger"/>
-				<requirement name="NotHasBuff" buff="jz_BuffZombieBite"/></triggered_effect>
+			<requirement name="HasBuff" buff="buffInjuryStunned01"/> 
+			<requirement name="NotHasBuff" buff="jz_BuffZombieBiteTrigger"/>
+			<requirement name="NotHasBuff" buff="jz_BuffZombieBite"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="bleedCounter" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleeding"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffZombieBite"/>		
 		</effect_group>			
 	</buff>
 		
@@ -5154,6 +5146,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingBiteWound"/>	
 			
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" cvar="jz_PlayerHealthDrain" operation="add" value="1"/>
@@ -5599,5 +5592,6 @@ icon="ui_game_symbol_pack_mule"
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffThrobbingPainScreenRestart"/>
 		</effect_group>
 	</buff>
+
 </set>
 </configs> 

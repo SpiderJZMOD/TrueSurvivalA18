@@ -403,7 +403,7 @@
 			<window name="craftingInfoPanel" />
 			<window name="windowCraftingQueue" />
 			<window name="windowToolsArmorTable" />
-			<window name="lowerwindowOutput" />
+			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
 		<window_group name="workstation_jz_MortarAndPestle" controller="XUiC_WorkstationWindowGroup">
@@ -427,14 +427,22 @@
 			<window name="windowCraftingList" />
 			<window name="craftingInfoPanel" />
 			<window name="windowCraftingQueue" />
-			<window name="lowerwindowOutput" />
+			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
 		<window_group name="workstation_jz_MethaneProducer" controller="XUiC_WorkstationWindowGroup">
 			<window name="windowCraftingList" />
 			<window name="craftingInfoPanel" />
 			<window name="windowCraftingQueue" />
-			<window name="lowerwindowOutput" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_jz_Anvil" controller="XUiC_WorkstationWindowGroup">
+			<window name="windowCraftingList" />
+			<window name="craftingInfoPanel" />
+			<window name="windowCraftingQueue" />
+			 <window name="windowToolsAnvil" />
+			<window name="windowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
 	</ruleset>
