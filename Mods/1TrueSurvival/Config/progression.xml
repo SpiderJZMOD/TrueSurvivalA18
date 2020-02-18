@@ -1590,7 +1590,7 @@
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunPistol,jz_GunOil,meleeStunBaton,jz_WeaponRepairKit"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunPistol,jz_GunOil,jz_PoliceBaton,jz_WeaponRepairKit"/>
 		
 			<effect_description level="1" desc_key="jz_PoliceOfficerDesc" long_desc_key="jz_PoliceOfficerDesc"/>
 		</effect_group>
@@ -1650,7 +1650,7 @@
 	<!-- Mason -->
 	<perk name="jz_Mason" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mason" desc_key="jz_MasonDesc" icon="ui_game_symbol_brick">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MasonHammer,flagstoneBlockVariantHelper,brickBlockVariantHelper,jz_Bricks,resourceCobblestones"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="flagstoneBlockVariantHelper,brickBlockVariantHelper,jz_Bricks,resourceCobblestones"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MasonTag"/>
 			<effect_description level="1" desc_key="jz_MasonDesc" long_desc_key="jz_MasonDesc"/>
 		</effect_group>
@@ -1701,7 +1701,7 @@
 	<!-- Mechanic --> 
 	<perk name="jz_Mechanic" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mechanic" desc_key="jz_MechanicDesc" icon="ui_game_symbol_service">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="smallEngine,jz_LargeEngine,vehicleMinibikePlaceable,vehicleBicyclePlaceable,vehicleMotorcyclePlaceable,vehicle4x4TruckPlaceable,vehicleGyrocopterPlaceable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="smallEngine,jz_LargeEngine,vehicleMinibikePlaceable,vehicleBicyclePlaceable,vehicleMotorcyclePlaceable,vehicle4x4TruckPlaceable,vehicleGyrocopterPlaceable,meleeToolAuger,meleeToolChainsaw"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MechanicTag"/>
 			<effect_description level="1" desc_key="jz_MechanicDesc" long_desc_key="jz_MechanicDesc"/>
 		</effect_group>
@@ -1709,7 +1709,7 @@
 	<!-- Doctor -->
 	<perk name="jz_Doctor" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Doctor" desc_key="jz_DoctorDesc" icon="ui_game_symbol_steroids">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalFirstAidBandage,jz_MedicalStimulant,jz_MedicalSutureKit,jz_MedicalAntiVenom,drugPainkillers,drugSteroids,drugAntibiotics,jz_MedicalSanitizingBandage"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalFirstAidBandage,jz_MedicalStimulant,jz_MedicalSutureKit,jz_MedicalAntiVenom,drugPainkillers,drugSteroids,drugAntibiotics,jz_MedicalSanitizingBandage,medicalFirstAidKit"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_DoctorTag"/>
 			<effect_description level="1" desc_key="jz_DoctorDesc" long_desc_key="jz_DoctorDesc"/>
 		</effect_group>

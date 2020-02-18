@@ -392,6 +392,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="medicalBandage" count="1" />
 </recipe>
 
+<recipe name="medicalFirstAidKit" count="1" craft_time="10" craft_exp_gain="15" tags="learnable">
+	<ingredient name="drinkJarGrainAlcohol" count="1" />
+    <ingredient name="medicalAloeCream" count="1"/>
+    <ingredient name="medicalBandage" count="2"/>
+    <ingredient name="medicalBloodBag" count="1"/>
+</recipe>
+
 <recipe name="medicalSplint" count="1" craft_time="10" craft_exp_gain="10" >
 	<ingredient name="resourceCloth" count="2"/>
 	<ingredient name="jz_Stick" count="4"/>
@@ -802,6 +809,11 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
 	<ingredient name="jz_DrinkCleanOuncesOfWater" count="16"/>
 	<ingredient name="drinkJarEmpty" count="1"/>
+</recipe>
+
+<recipe name="jz_FoodBread" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="4" craft_exp_gain="5" >
+	<ingredient name="jz_FoodFlour" count="1"/>
+    <ingredient name="jz_DrinkCleanOuncesOfWater" count="4"/>
 </recipe>
 
 <recipe name="jz_FoodCanBeefCooked" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="4" craft_exp_gain="5" >
@@ -3933,7 +3945,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="medicalFirstAidBandageSchematic" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
-	<ingredient name="thrownDynamite" count="12"/>
+	<ingredient name="medicalFirstAidBandage" count="12"/>
 	<ingredient name="jz_BlankSkillBook" count="1"/>
 </recipe>
 
