@@ -1294,7 +1294,7 @@ The overall plan for loot distribution:
 
 <lootgroup name="molds" >
 	<item name="jz_MoldAxeHead"  prob="7.69" />
-	<item name="jz_MoldPickAxeHead"  prob="7.69" />
+	<item name="jz_MoldIronPickAxeHead"  prob="7.69" />
 	<item name="jz_MoldShovelHead"  prob="7.69" />
 	<item name="jz_MoldSmallKnifeBlade"  prob="7.69" />
 	<item name="jz_MoldLargeKnifeBlade"  prob="7.69" />
@@ -1915,7 +1915,7 @@ The overall plan for loot distribution:
 	<item name="woodFrameBlockVariantHelper" count="5,50" prob="11.11" />
 	<item name="flagstoneBlockVariantHelper" count="5,50" prob="11.11" />
 	<item name="brickBlockVariantHelper" count="5,50" prob="11.11" />
-	<item name="jz_SteelBlockVariantHelper" count="5,50" prob="11.11" />
+	<item name="jz_SteelFrameVariantHelper" count="5,50" prob="11.11" />
 </lootgroup>
 	
 <lootgroup name="rareTools">
@@ -1998,7 +1998,7 @@ The overall plan for loot distribution:
 	<item name="medicalBloodBag" count="1,4" prob="10" />
 	<item name="jz_MedicalAntiVenom" prob="10" />
 	<item name="jz_MedicalAntivirialMeds" count="1,6" prob="10" />
-	<item name="jz_MedicalSutures" prob="10" />
+	<item name="medicalFirstAidKit" prob="10" />
 	<item name="medicalBloodDrawKit" prob="10" />
 	<item name="medicalPlasterCast" prob="10" />
 </lootgroup>
@@ -2934,7 +2934,15 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="groupTreasureMaps" prob="1" />
 </lootgroup>
 
-
+<lootgroup name="BugOutBag" count="all">
+	<item name="medicalBandage" count="1" />
+	<item name="candle" count="1" />
+	<item name="drugPainkillers" count="1" />
+	<item name="jz_FoodMRESmall" count="1" />
+	<item name="jz_DrinkCleanOuncesOfWater" count="32" />
+	<item name="jz_QIDeadWalkieTalkie" count="1" />
+	<item name="jz_OldKnife" count="1" />
+</lootgroup>
 
 
 <!--
@@ -4432,15 +4440,14 @@ treasureTemplate
 
 <!-- generic zombie loot-->
 <lootcontainer id="307" count="1,2" size="4,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
-	<item group="junkPersonal" prob="25" />
+	<item group="junkPersonal" prob="30" />
 	<item group="groupApparelClothes" prob="20" />
 	<item group="rottenFood" prob="6" />
-	<item group="groupApparelHazmat"  prob="3" />
 	<item group="groupQuestChallenge"  prob="1" />
 	<item name="thrownAmmoPipeBomb" count="1,2" prob="2" />
 	<item group="groupTreasureMaps"  prob="1" />
 	<item name="apparelFacialPiercings" prob="5" />
-	<item group="T1BookList" prob="6" />
+	<item group="T1BookList" prob="7" />
     <item group="empty" prob="25" />
 </lootcontainer>
 
@@ -4517,10 +4524,9 @@ treasureTemplate
 	<item group="junkPersonal" prob="33" />
 	<item group="lumberjacks" prob="15" />
 	<item group="warmClothes" prob="15" />
-	<item group="groupApparelHazmat"  prob="2" />
 	<item group="rareOres" prob="8" />
-    <item name="jz_ProfessionPage" prob="1" />
-    <item group="skillBookChance" prob="1" />
+    <item name="jz_ProfessionPage" prob="2" />
+    <item group="skillBookChance" prob="2" />
     <item group="empty" prob="25" />
 </lootcontainer>
 
@@ -4560,7 +4566,7 @@ treasureTemplate
 <lootcontainer id="317" count="0,2" size="3,3" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
 	<item name="resourceCoal" count="5,15" />
 </lootcontainer>
-
+<!-- Mini Bike -->
 <lootcontainer id="318" count="1" size="4,4" destroy_on_close="true" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
 	<item name="vehicleMinibikePlaceable" prob="100" />
 </lootcontainer>
@@ -4569,6 +4575,9 @@ treasureTemplate
 	<item name="vehicleBicyclePlaceable" prob="100" />
 </lootcontainer>
 
+<lootcontainer id="320" count="1" size="5,5" destroy_on_close="true" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
+	<item group="BugOutBag" count="1" prob="100" />
+</lootcontainer>
 
 
 

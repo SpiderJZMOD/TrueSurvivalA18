@@ -269,7 +269,7 @@
         </passive_effect>
 
 	</effect_group>
-   
+	
     <effect_group>
 		<requirement name="PlayerLevel" operation="LT" value="300"/>
 			<passive_effect name="ExpDeficitPerDeathPercentage" operation="base_set" value=".25"/>
@@ -311,7 +311,6 @@
 	<property name="EntityType" value="Zombie"/> <!-- This one decides for scoring -->
 	<property name="Tags" value="entity,zombie,walker"/>  <!-- this property DOES NOT inherit on extends and target_tags cannot be AND connected -->
 	<!-- Mesh and class properties -->
-	<!-- JZMOD DMT <property name="RandomSize" value="true" />-->
 	<property name="Mesh" value="Zombies/zombieStandardBoeRagdoll"/>
 	<property name="AvatarController" value="AvatarZombie01Controller"/>
 	<property name="ModelType" value="Standard"/>
@@ -392,8 +391,8 @@
 	<property name="SurfaceCategory" value="organic"/> <!-- determines the particle effect played on hit -->
 
 	<property name="DismemberMultiplierHead" value="1"/>
-	<property name="DismemberMultiplierArms" value="1"/>
-	<property name="DismemberMultiplierLegs" value="1"/>
+	<property name="DismemberMultiplierArms" value="100"/>
+	<property name="DismemberMultiplierLegs" value="100"/>
 	<property name="LegCrippleScale" value="2"/> <!-- Scales chance to cripple (percent of health that a hit does is the chance) -->
 	<property name="LegCrawlerThreshold" value="0"/> <!-- at like .175 nearly every zombie knocked down from a leg hit turns into a crawler -->
 	<property name="KnockdownProneDamageThreshold" value="0.5"/>
@@ -472,7 +471,7 @@
 	<property name="WalkType" value="2"/>
 	<property name="Mass" value="210"/>
 
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 
 	<!-- Gameplay -->
@@ -563,6 +562,7 @@
 	<property name="Mesh" value="Zombies/zombieStandardBoeRagdoll"/>
 	<property name="AvatarController" value="AvatarZombie01Controller"/>
 	<property name="ModelType" value="Standard"/>
+	<property name="RandomWalkTypes" value="1,2,3,5,6,7" /><!-- JZMOD SPHEREII CORE-->
 	<property name="WalkType" value="2"/>
 	<property name="RootMotion" value="true"/>
 	<property name="HasDeathAnim" value="true"/>
@@ -583,7 +583,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -705,7 +705,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -760,7 +760,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -831,7 +831,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -901,7 +901,7 @@
 	<property name="ReplaceMaterial2" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -950,7 +950,7 @@
 	<property name="Tags" value="entity,zombie,walker,feral"/>
 	<property name="Mesh" value="Zombies/zombieStandardLabRagdoll"/>
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="HandItem" value="meleeHandZombieFeral"/>
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
@@ -1030,7 +1030,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1096,7 +1096,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1158,7 +1158,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1213,7 +1213,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1268,7 +1268,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1326,7 +1326,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="HandItem" value="meleeHandZombie02Feral"/>
 
@@ -1365,7 +1365,7 @@
 	<property name="ReplaceMaterial2" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1434,7 +1434,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1468,8 +1468,8 @@
 	<property name="SoundSense" value="Enemies/Spider_Zombie/spidersense"/>
 
 	<property name="DismemberMultiplierHead" value="0"/>
-	<property name="DismemberMultiplierArms" value="0"/>
-	<property name="DismemberMultiplierLegs" value="0"/>
+	<property name="DismemberMultiplierArms" value="100"/>
+	<property name="DismemberMultiplierLegs" value="100"/>
 	<property name="LegCrawlerThreshold" value="0"/>
 	<property name="LegCrippleThreshold" value="0"/>
 	<property name="KnockdownProneDamageThreshold" value="0"/>
@@ -1506,7 +1506,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 	<property name="JumpMaxDistance" value="11, 13"/>
@@ -1614,7 +1614,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1677,7 +1677,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1763,7 +1763,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value="0"/><!-- Feral Cop -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="0"/><!-- Feral Cop -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1862,7 +1862,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -1932,7 +1932,7 @@
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -2049,7 +2049,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -2115,7 +2115,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -2169,7 +2169,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -2228,7 +2228,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -2299,7 +2299,7 @@
 	<property name="ReplaceMaterial2" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 
@@ -2337,7 +2337,7 @@
 	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 
 	<!-- Gameplay -->
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value="70"/><property name="DismemberMultiplierLegs" value="50"/><!-- Feral -->
 	<property name="PainResistPerHit" value=".25"/><!-- Feral -->
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 

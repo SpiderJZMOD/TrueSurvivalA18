@@ -426,9 +426,9 @@
 	<property name="DisplayType" value="blockTerrain"/>
 	<property name="DescriptionKey" value="terrainBlockGroupDesc"/>	
 	<!--JZMOD ANY-->
-	<drop event="Harvest" name="resourceScrapIron" count="105" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourceIronFragment" count="100" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
-	<drop event="Fall" name="resourceScrapIron" count="30" prob="0.4" stick_chance="0"/>	
+	<drop event="Fall" name="resourceIronFragment" count="30" prob="0.4" stick_chance="0"/>	
 </block>
 
 <block name="terrOreLead">
@@ -770,7 +770,7 @@ group desc for stuff like metal siding
 
 <block name="woodFrameMaster">
 	<property name="Extends" value="woodWeakNoUpgradeMaster"/>
-	<property name="Tags" value="jz_WoodBuilding"/>
+	<property name="Tags" value="jz_WoodBuilding,jz_IronBuilding"/>
 	<property name="MaxDamage" value="50"/>
 	<property name="Shape" value="New"/>
 	<property name="LightOpacity" value="0"/>
@@ -886,7 +886,7 @@ group desc for stuff like metal siding
 
 <block name="rWoodMetalMaster">
 	<property name="Group" value="Building,advBuilding"/>
-	<property name="Tags" value="wood,jz_WoodBuilding"/>
+	<property name="Tags" value="wood,jz_WoodBuilding,jz_IronBuilding"/>
 	<property name="DescriptionKey" value="rWoodMetalGroupDesc"/>
 	<property name="Material" value="MwoodMetal"/>
 	<property name="PassThroughDamage" value="true"/>
@@ -896,8 +896,8 @@ group desc for stuff like metal siding
 	<property class="RepairItems"> <property name="resourceScrapIron" value="10"/> </property>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="scrapIronMaster"/>
-		<property name="Item" value="resourceScrapIron"/>
-		<property name="ItemCount" value="40"/>
+		<property name="Item" value="jz_IronSheetMetal"/>
+		<property name="ItemCount" value="10"/>
 		<property name="UpgradeHitCount" value="4"/>
 	</property>
 	<property name="FilterTags" value="fbuilding,fwood"/>
@@ -1030,7 +1030,7 @@ group desc for stuff like metal siding
 <block name="rebarFrameMaster">
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="DescriptionKey" value="rebarFrameGroupDesc"/>
-	<property name="Tags" value="jz_ConcreteBuilding"/>
+	<property name="Tags" value="jz_ConcreteBuilding,jz_IronBuilding"/>
 	<property name="Material" value="Mmetal_rebar"/>
 	<property name="Shape" value="New"/>
 	<property name="LightOpacity" value="0"/>
@@ -1200,6 +1200,7 @@ group desc for stuff like metal siding
 
 <block name="steelMaster">
 	<property name="Group" value="Building,advBuilding"/>
+	<property name="Tags" value="jz_SteelBuilding"/>
 	<property name="DescriptionKey" value="steelBlockGroupDesc"/>
 	<property name="Material" value="Msteel"/>
 	<!-- <property name="FallDamage" value="1.2"/> Nah, that would be evil, right? -->
@@ -1228,6 +1229,7 @@ group desc for stuff like metal siding
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="DescriptionKey" value="stainlessSteelBlockGroupDesc"/>
 	<property name="DisplayType" value="blockHardened"/>
+	<property name="Tags" value="jz_SteelBuilding"/>
 	<property name="Material" value="MstainlessSteel"/>
 	<property name="PassThroughDamage" value="true"/>
 	<property name="Texture" value="191"/>
@@ -1382,6 +1384,7 @@ group desc for stuff like metal siding
 <block name="corrugatedMetalNoUpgradeMaster">
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="DescriptionKey" value="scrapIronGroupDesc"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Material" value="Mmetal"/> <!-- 300 HP -->
 	<property name="Texture" value="194"/>
 	<!-- <property name="ImposterExchange" value="imposterBlock" param1="57"/> -->
@@ -2276,6 +2279,7 @@ group desc for stuff like metal siding
 
 <block name="woodStairs50">
 	<property name="Material" value="Mwood_regular"/>
+	<property name="Tags" value="jz_WoodBuilding"/>
 	<property name="Shape" value="New"/>
 	<property name="Model" value="stairs_filled_quarter_vertical_uv"/>
 	<property name="SortOrder2" value="0590"/> <!-- SortShape -->
@@ -3511,7 +3515,7 @@ group desc for stuff like metal siding
 
 <block name="burntWoodBlock1">
 	<property name="Extends" value="woodMaster"/>
-	<property name="Tags" value="coalBurnedDmg"/>
+	<property name="Tags" value="coalBurnedDmg,jz_WoodBuilding"/>
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="siding_burnt01"/>
@@ -11274,7 +11278,7 @@ group desc for stuff like metal siding
 	<property name="Extends" value="rWoodMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="SortOrder2" value="0050"/> <!-- SortShape -->
-	<property class="UpgradeBlock"> <property name="ToBlock" value="cobblestoneBlock"/> </property>
+	<property class="UpgradeBlock"> <property name="ToBlock" value="rWoodMetalBlock"/> </property>
 	<property name="DowngradeBlock" value="woodBlock"/>
 </block>
 
@@ -12057,6 +12061,7 @@ NOT the TextureNumber.
 <block name="ladderWood">
 	<!--<property name="DisplayType" value="blockShootThrough"/>-->
 	<property name="Class" value="Ladder"/>
+	<property name="Tags" value="jz_WoodBuilding"/>
 	<property name="Material" value="Mwood_ladders"/>
 	<property name="Shape" value="New"/>
 	<property name="LightOpacity" value="0"/>
@@ -12089,6 +12094,7 @@ NOT the TextureNumber.
 	<property name="MaxDamage" value="500"/>
 	<property name="Class" value="Ladder"/>
 	<property name="Shape" value="New"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="LightOpacity" value="0"/>
 	<property name="Model" value="ladder_round"/>
 	<property name="Texture" value="446"/>
@@ -14782,6 +14788,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal_thin"/>
 	<property name="Shape" value="New"/>
 	<property name="LightOpacity" value="0"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Model" value="pipe_thin"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="Texture" value="519"/>
@@ -14812,6 +14819,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal"/>
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="LightOpacity" value="0"/>
 	<property name="Model" value="Industrial/control_panel_duct" param1="main_mesh"/>
 	<property name="Place" value="TowardsPlacerInverted"/>
@@ -15094,6 +15102,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal"/>
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="Industrial/control_panel_base_01" param1="main_mesh"/>
 	<property name="Place" value="TowardsPlacerInverted"/>
@@ -16670,6 +16679,7 @@ NOT the TextureNumber.
 
 <block name="cntCabinetBottomFiller">
 	<property name="Shape" value="New"/>
+	<property name="Tags" value="jz_WoodBuilding,jz_IronBuilding"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="counter"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="IsDecoration" value="true"/>
@@ -16746,6 +16756,7 @@ NOT the TextureNumber.
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="LootList" value="5"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="resourceScrapIron" count="1,3" prob="1" tag="allHarvest"/>
 	<drop event="Harvest" name="toolCookingGrill" count="1" prob="0.1" tag="allHarvest"/>
@@ -16775,6 +16786,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal"/>
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
+	<property name="Tags" value="jz_WoodBuilding,jz_IronBuilding"/>
 	<property name="Model" value="counter_sink"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="IsDecoration" value="true"/>
 	<property name="Texture" value="373,261,262,345,345,345"/> <!-- 373/374=sink, 82=cabinetWood -->
@@ -16918,6 +16930,7 @@ NOT the TextureNumber.
 	<property name="Path" value="solid"/>
 	<property name="Model" value="counter_sink"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="IsDecoration" value="true"/>
+	<property name="Tags" value="jz_WoodBuilding,jz_IronBuilding"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="Texture" value="374,78,79,84,84,84"/> <!-- 373/374=sink, 84=cabinetWood -->
 	<!-- rev 27018 --> <property name="UseGlobalUV" value="Local"/>
@@ -17002,6 +17015,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Class" value="Loot"/>
 	<property name="Material" value="Mmetal_weak"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
 	<property name="Path" value="solid"/>
@@ -17067,6 +17081,7 @@ NOT the TextureNumber.
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="ImposterExchange" value="imposterBlock" param1="144"/>
 	<property name="Path" value="solid"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="CustomIcon" value="cntGasGrillClosed"/> <property name="CustomIconTint" value="ff8080"/>
 	<property class="RepairItems"> <property name="resourceForgedIron" value="2"/> <property name="resourceMechanicalParts" value="1"/> </property>
@@ -17121,6 +17136,7 @@ NOT the TextureNumber.
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#Entities/LootContainers?Grill_Simple_ClosedPrefab.prefab"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Path" value="solid"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="CustomIcon" value="cntCharcoalGrillClosed"/> <property name="CustomIconTint" value="ff8080"/>
 	<property class="RepairItems"> <property name="resourceForgedIron" value="2"/> <property name="resourceMechanicalParts" value="1"/> </property>
@@ -17185,6 +17201,7 @@ NOT the TextureNumber.
 	<property name="Material" value="MmetalNoGlue"/>
 	<property name="MaxDamage" value="200"/>
 	<property name="StabilitySupport" value="false"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
@@ -17310,6 +17327,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="Class" value="Loot"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="LootList" value="47"/>
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
@@ -17497,6 +17515,7 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Plumbing/utility_sinkPrefab"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="DisplayType" value="blockMulti"/>
 	<property name="MultiBlockDim" value="1,2,1"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Path" value="solid"/>
 	<property name="EconomicValue" value="60"/> <!-- disassemble value -->
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
@@ -17521,6 +17540,7 @@ NOT the TextureNumber.
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#Entities/LootContainers?wallHungSinkPrefab.prefab"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Path" value="solid"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="ImposterExclude" value="true"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
@@ -17540,6 +17560,7 @@ NOT the TextureNumber.
 
 <block name="cntWashingMachine">
 	<property name="Class" value="Loot"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="cube"/> <property name="Place" value="TowardsPlacerInverted"/>
@@ -17584,6 +17605,7 @@ NOT the TextureNumber.
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#Entities/LootContainers?washerOpenPrefab.prefab"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Path" value="solid"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="IsDecoration" value="true"/>
 	<property name="ImposterExchange" value="imposterBlock" param1="176"/>
 	<property class="RepairItems">
@@ -17696,6 +17718,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal_thin"/>
 	<property name="StabilitySupport" value="false"/>
 	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Model" value="Entities/Plumbing/faucet02Prefab"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="Weight" value="24"/>
@@ -17726,6 +17749,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mbrass"/>
 	<property name="MeltTimePerUnit" value=".4"/>
 	<property name="Weight" value="63"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="StabilitySupport" value="false"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plumbing/faucet_brass02Prefab"/> <property name="Place" value="TowardsPlacerInverted"/>
@@ -17759,6 +17783,7 @@ NOT the TextureNumber.
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plumbing/shower_headPrefab"/> <property name="HandleFace" value="South"/>
 	<property name="ImposterDontBlock" value="true"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="Weight" value="24"/>
@@ -17781,6 +17806,7 @@ NOT the TextureNumber.
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
 	<property name="Path" value="solid"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Model" value="Plumbing/toilet01" param1="main_mesh"/> <property name="Place" value="TowardsPlacer"/>
 	<property name="ImposterExchange" value="imposterCTREighth" param1="98"/>
 	<property name="IsTerrainDecoration" value="true"/>
@@ -17824,6 +17850,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="corrugatedMetalNoUpgradeMaster" param1="SortOrder1,SortOrder2"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="CustomIcon" value="radiatorHouse01"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Material" value="Miron_scrap"/>
 	<property name="MaxDamage" value="200"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -17857,6 +17884,7 @@ NOT the TextureNumber.
 	<property name="Path" value="solid"/>
 	<property name="Model" value="counter"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="IsDecoration" value="true"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="Texture" value="191,191,60,191,191,191"/>
 	<property name="LootList" value="46"/>
@@ -18188,6 +18216,7 @@ NOT the TextureNumber.
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#Entities/LootContainers?tiltTruckEmptyPrefab.prefab"/>
 	<property name="Path" value="solid"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="IsDecoration" value="true"/>
 	<property name="ImposterExchange" value="imposterBlock" param1="143"/>
 	<property class="RepairItems">
@@ -18309,6 +18338,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal_thin"/>
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="Industrial/gas_pump" param1="main_mesh"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="DisplayType" value="blockMulti"/>
@@ -19306,6 +19336,7 @@ NOT the TextureNumber.
 	<property name="Shape" value="Ext3dModel"/>
 	<property name="Texture" value="282"/>
 	<property name="Mesh" value="models"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="Furniture/office_chair01" param1="main_mesh"/>
 	<property name="IsTerrainDecoration" value="true"/>
@@ -19893,6 +19924,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal"/>
 	<property name="StabilitySupport" value="false"/>
 	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="Entities/Appliances/stationary_bikePrefab"/>
 	<property name="DisplayType" value="blockMulti"/>
@@ -19920,6 +19952,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal"/>
 	<property name="StabilitySupport" value="false"/>
 	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="Entities/Appliances/treadmillPrefab"/>
 	<property name="DisplayType" value="blockMulti"/>
@@ -20013,6 +20046,7 @@ NOT the TextureNumber.
 <block name="bed01">
 	<property name="DescriptionKey" value="bedGroupDesc"/>
 	<property name="Class" value="SleepingBag"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Material" value="Mmetal_weak"/>
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
@@ -20043,6 +20077,7 @@ NOT the TextureNumber.
 
 <block name="bed01Frame">
 	<property name="Material" value="Mmetal_weak"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
@@ -20064,6 +20099,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="bedGroupDesc"/>
 	<property name="Class" value="SleepingBag"/>
 	<property name="Material" value="Mfurniture"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
 	<property name="Model" value="Furniture/bed02" param1="main_mesh"/>
@@ -20130,6 +20166,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal_weak"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Path" value="solid"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Model" value="Entities/Furniture/gurneyPrefab" param1="main_mesh"/>
 	<property name="ModelOffset" value="0,.5,.5"/>										   
 	<property name="IsTerrainDecoration" value="true"/>
@@ -20340,6 +20377,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Dev"/>
 	<property name="DisplayInfo" value="Name"/>
 	<property name="Material" value="Mmetal"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#Entities/LootContainers?filecabinet_short_closedPrefab.prefab"/>
 	<property name="Place" value="TowardsPlacerInverted"/>
@@ -20597,6 +20635,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="jz_Plank" count="1,3" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
 	<!--JZMOD CROWBAR-->
 	<drop event="Harvest" name="cntCoffin" count="1" prob="1" tag="ToolCrowbar"/>
 </block>
@@ -20651,6 +20690,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal"/>
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 	<property name="Model" value="Entities/Plumbing/clawFootTubPrefab"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="ModelOffset" value="0,0,0"/>										 
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturHardRecover"/>
@@ -20783,6 +20823,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="#Entities/LootContainers?shopping_cart_emptyPrefab.prefab"/>
@@ -20806,6 +20847,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Class" value="Loot"/>
 	<property name="Material" value="Mmetal"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Path" value="solid"/>
@@ -20873,6 +20915,7 @@ NOT the TextureNumber.
 <block name="cntToolBoxOpen">
 	<property name="Extends" value="decoEntityMetalMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#Entities/LootContainers?metalToolBoxEmptyPrefab.prefab"/>
 	<property name="AllowAllRotations" value="true"/>
@@ -20944,6 +20987,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Material" value="Mplastics"/>
 	<property name="StabilitySupport" value="false"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#Entities/LootContainers?utilityCartEmptyPrefab.prefab"/>
 	<property name="Path" value="solid"/>
@@ -21083,6 +21127,7 @@ NOT the TextureNumber.
 <block name="cntVendingMachine2Broken"> <!-- beverages vending machine -->
 	<property name="CreativeMode" value="Player"/>
 	<property name="Group" value="Science"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="DescriptionKey" value="cntVendingMachineGroupDesc"/>
 	<property name="CustomIcon" value="cntVendingMachine2Broken"/>
 	<property name="DisplayType" value="blockHardenedMulti"/>
@@ -21189,6 +21234,7 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockHardened"/>
 	<property name="Material" value="Mcloth"/>
 	<property name="LightOpacity" value="0"/>
+	<property name="MaxDamage" value="100"/>
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -21776,7 +21822,7 @@ NOT the TextureNumber.
 	<property name="Material" value="MoreStone"/>
 	<property name="Model" value="Entities/Resources/oreIronBoulderPrefab"/>
 	<property name="DescriptionKey" value="oreBoulderGroupDesc"/>
-	<drop event="Harvest" name="resourceRockSmall" count="14" tag="allHarvest" />
+	<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest" />
 </block>
 
 <block name="oreIronBoulder">
@@ -21784,32 +21830,32 @@ NOT the TextureNumber.
 	<property name="Tags" value="ore"/>
 	<property name="Material" value="MoreMetal"/>
 	<property name="Model" value="Entities/Resources/oreIronBoulderPrefab"/>
-	<drop event="Harvest" name="resourceIronFragment" count="21" tag="allHarvest" />
+	<drop event="Harvest" name="resourceIronFragment" count="21" tag="oreWoodHarvest" />
 </block>
 
 <block name="oreLeadBoulder">
 	<property name="Extends" value="oreBoulderMaster"/>
 	<property name="Material" value="MoreMetal"/>
 	<property name="Model" value="Entities/Resources/oreLeadBoulderPrefab"/>
-	<drop event="Harvest" name="resourceScrapLead" count="50" tag="allHarvest" />
+	<drop event="Harvest" name="resourceScrapLead" count="50" tag="oreWoodHarvest" />
 </block>
 
 <block name="oreCoalBoulder">
 	<property name="Extends" value="oreBoulderMaster"/>
 	<property name="Model" value="Entities/Resources/oreCoalBoulderPrefab"/>
-	<drop event="Harvest" name="resourceCoal" count="50" tag="allHarvest" />
+	<drop event="Harvest" name="resourceCoal" count="50" tag="oreWoodHarvest" />
 </block>
 
 <block name="orePotassiumNitrateBoulder">
 	<property name="Extends" value="oreBoulderMaster"/>
 	<property name="Model" value="Entities/Resources/oreNitrateBoulderPrefab"/>
-	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="50" tag="allHarvest" />
+	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="50" tag="oreWoodHarvest" />
 </block>
 
 <block name="oreShaleBoulder">
 	<property name="Extends" value="oreBoulderMaster"/>
 	<property name="Model" value="Entities/Resources/oreShaleBoulderPrefab"/>
-	<drop event="Harvest" name="resourceOilShale" count="50" tag="allHarvest" />
+	<drop event="Harvest" name="resourceOilShale" count="50" tag="oreWoodHarvest" />
 </block>
 
 <!-- not used in prefabs
@@ -21965,6 +22011,7 @@ NOT the TextureNumber.
 <block name="poleTop01">
 	<property name="Material" value="Mmetal"/>
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
 	<property name="Model" value="Industrial/pole_top01" param1="main_mesh"/>
@@ -21979,6 +22026,7 @@ NOT the TextureNumber.
 
 <block name="airConditioner">
 	<property name="Material" value="Mmetal"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="Entities/Appliances/ac_unitPrefab"/> <property name="HandleFace" value="Bottom"/>
@@ -21986,11 +22034,12 @@ NOT the TextureNumber.
 	<property name="EconomicValue" value="450"/> <!-- disassemble value -->
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 	<!--JZMOD ANY-->
-	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="ToolWrench"/>
 	<drop event="Harvest" name="resourceElectricParts" count="0,5" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceScrapIron" count="1,10" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceScrapIron" count="1,15" tag="allHarvest"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<drop event="Destroy" count="0"/>
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceRadiator" count="1" prob="0.7" tag="ToolWrench" />
 	<drop event="Harvest" name="resourceMechanicalParts" count="0,4" tag="ToolWrench" />
@@ -22005,17 +22054,19 @@ NOT the TextureNumber.
 	<property name="Material" value="Mmetal"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Path" value="solid"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Model" value="Entities/Appliances/vent_fanPrefab"/>
 	<property name="HandleFace" value="Bottom"/>
 	<property name="ImposterExchange" value="imposterPlate" param1="168"/>
 	<property name="EconomicValue" value="450"/> <!-- disassemble value -->
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 	<!--JZMOD ANY-->
-	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="ToolWrench"/>
 	<drop event="Harvest" name="resourceElectricParts" count="0,5" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceMetalPipe" count="1,5" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceScrapIron" count="1,15" tag="allHarvest"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<drop event="Destroy" count="0"/>
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceMechanicalParts" count="0,4" tag="ToolWrench" />
 	<!--JZMOD SCREWDRIVER-->
@@ -22030,7 +22081,7 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Appliances/vent_fan_doublePrefab"/>
 	<property name="MultiBlockDim" value="2,1,1"/>
 	<!--JZMOD ANY-->
-	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="ToolWrench"/>
 	<drop event="Harvest" name="resourceElectricParts" count="0,5" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceMetalPipe" count="1,5" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceScrapIron" count="1,15" tag="allHarvest"/>
@@ -22062,6 +22113,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceScrapIron" count="5" prob="1" tag="allHarvest"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<drop event="Destroy" count="0"/>
 	<!--JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="ToolScrewDriver" /> <!-- HV: mounted fluorescent lamp -->
 	<!--JZMOD CROWBAR-->
@@ -22074,6 +22126,7 @@ NOT the TextureNumber.
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
 	<!--JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="ToolScrewDriver" /> <!-- HV: mounted fluorescent lamp -->
 	<!--JZMOD CROWBAR-->
@@ -22190,6 +22243,7 @@ NOT the TextureNumber.
 
 <block name="decoHoistHook">
 	<property name="Extends" value="decoHoistChain"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Model" value="Entities/Industrial/hoistHookPrefab"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="ToolWrench" />
@@ -22548,6 +22602,7 @@ NOT the TextureNumber.
 <block name="workbench">
 	<property name="Class" value="Workstation"/>
 	<property name="Material" value="Mmetal"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="MaxDamage" value="800"/>
 	<property name="StabilitySupport" value="false"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -22640,6 +22695,7 @@ NOT the TextureNumber.
 	<property name="Class" value="Workstation"/>
 	<property name="Material" value="Miron_scrap"/>
 	<property name="MaxDamage" value="800"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="StabilitySupport" value="true"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Path" value="solid"/>
@@ -22693,6 +22749,7 @@ NOT the TextureNumber.
 <block name="cntCollapsedCementMixer">
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Class" value="Loot"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="LootList" value="93"/>
 	<property name="CustomIcon" value="cementMixer"/>
 	<property name="Material" value="Miron_scrap"/>
@@ -22726,6 +22783,7 @@ NOT the TextureNumber.
 <block name="chemistryStation">
 	<property name="Class" value="Campfire"/>
 	<property name="Material" value="Miron_scrap"/>
+	<property name="Tags" value="jz_WoodBuilding,jz_IronBuilding"/>
 	<property name="MaxDamage" value="800"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="ParticleName" value="chemistryStation"/>
@@ -22788,6 +22846,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="94"/>
+	<property name="Tags" value="jz_WoodBuilding,jz_IronBuilding"/>
 	<property name="CustomIcon" value="chemistryStation"/>
 	<property name="Material" value="Miron_scrap"/>
 	<property name="MaxDamage" value="500"/>
@@ -23072,6 +23131,7 @@ NOT the TextureNumber.
 	<property name="Class" value="CarExplodeLoot"/> <!-- cars explode when destroyed by a tool without harvest settings -->
 	<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
 	<property name="ItemTypeIcon" value="explosion"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="LootList" value="19"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="IsTerrainDecoration" value="true"/>
@@ -23114,6 +23174,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="Class" value="CarExplodeLoot"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="ItemTypeIcon" value="explosion"/>
 	<property name="CustomIcon" value="cntCar03SedanDamage1Master"/>
 	<property name="LootList" value="19"/>
@@ -23166,6 +23227,7 @@ NOT the TextureNumber.
 	<property name="ItemTypeIcon" value="explosion"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Place" value="TowardsPlacer"/>
@@ -23407,6 +23469,7 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockHardenedMulti"/>
 	<property name="Material" value="Mmetal_hard"/>
 	<property name="Class" value="CarExplodeLoot"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="ItemTypeIcon" value="explosion"/>
 	<property name="LootList" value="19"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -23993,16 +24056,6 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Lighting/sconce_1_ShadowPrefab"/>
 </block>
 
-<block name="lanternDecorLight">
-	<property name="Extends" value="porchLight01"/>
-	<property name="Model" value="Entities/Lighting/lanternDecorPrefab"/>
-</block>
-
-<block name="flashlightDecor">
-	<property name="Extends" value="porchLight01"/>
-	<property name="Model" value="Entities/Lighting/flashlightDecorPrefab"/> <property name="HandleFace" value="Bottom"/>
-</block>
-
 <block name="industrialLight02">
 	<property name="Extends" value="porchLight01"/>
 	<property name="Model" value="Entities/Lighting/industrial_light_02Prefab"/> <property name="HandleFace" value="Top"/>
@@ -24318,6 +24371,14 @@ NOT the TextureNumber.
 	<property name="Group" value="Building,advBuilding"/>
 </block>
 
+<block name="lanternDecorLight">
+	<property name="Extends" value="candleTableLight"/>
+</block>
+
+<block name="flashlightDecor">
+	<property name="Extends" value="candleTableLight"/>
+</block>
+
 <block name="wallTorchLightPlayer">
 	<property name="Extends" value="wallTorchLight"/>
 	<property name="Model" value="Entities/Lighting/torch_wall_playerPrefab"/>
@@ -24357,6 +24418,7 @@ NOT the TextureNumber.
 <block name="burningBarrelPlayer">
 	<property name="Material" value="Mmetal_weak" />
 	<property name="CreativeMode" value="Player" />
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="CanPickup" value="true" />
 	<property name="Path" value="solid"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -24492,6 +24554,7 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockElectricalHardened"/>
 	<property name="UnlockedBy" value="generatorbankSchematic"/>
 	<property name="Material" value="Mmetal_medium"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="StabilitySupport" value="false"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
@@ -24530,6 +24593,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="98"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="CustomIcon" value="generatorbank"/>
 	<property name="Material" value="Miron_scrap"/>
 	<property name="MaxDamage" value="500"/>
@@ -24757,6 +24821,7 @@ NOT the TextureNumber.
 	<property name="Class" value="PressurePlate"/>
 	<property name="DisplayType" value="blockElectricalHardened"/>
 	<property name="UnlockedBy" value="pressureplateSchematic"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Material" value="Mmetal_medium"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
@@ -24788,6 +24853,7 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockElectricalHardenedMulti"/>
 	<property name="UnlockedBy" value="pressureplateSchematic"/>
 	<property name="Material" value="Mmetal_hard"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
 	<property name="Model" value="Entities/Electrical/pressure_plate_longPrefab"/> <property name="HandleFace" value="Bottom"/>
@@ -24992,6 +25058,7 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockElectricalHardened"/>
 	<property name="UnlockedBy" value="dartTrapSchematic"/>
 	<property name="Material" value="Mmetal_hard"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
 	<property name="Path" value="solid"/>
@@ -25100,6 +25167,7 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockElectricalHardened"/>
 	<property name="Material" value="Mmetal_medium"/>
 	<property name="Shape" value="ModelEntity"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Mesh" value="models"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="Entities/Traps/AutoTurret/Auto_TurretPrefab"/>
@@ -27588,7 +27656,7 @@ NOT the TextureNumber.
 	<property name="UseGlobalUV" value="L,L,D,D,D,D"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="WindowPlug04"/>
-		<property name="Item" value="resourceScrapIron"/>
+		<property name="Item" value="jz_IronSheetMetal"/>
 		<property name="ItemCount" value="20"/>
 		<property name="UpgradeHitCount" value="4"/>
 	</property>
@@ -27618,7 +27686,7 @@ NOT the TextureNumber.
 	<property class="RepairItems"> <property name="resourceScrapIron" value="40"/> </property>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="rScrapIronWindowPlug06CTRPlate"/>
-		<property name="Item" value="resourceScrapIron"/>
+		<property name="Item" value="jz_IronSheetMetal"/>
 		<property name="ItemCount" value="40"/>
 		<property name="UpgradeHitCount" value="4"/>
 	</property>
@@ -27932,13 +28000,14 @@ NOT the TextureNumber.
 	<!--<property name="BuffsWhenWalkedOn" value="trapDamageZombie"/>-->
 	<property class="RepairItems"> <property name="jz_Plank" value="1"/> </property>
 	<property name="DowngradeBlock" value="trapSpikesDamage1"/>
-	<drop event="Destroy" name="jz_Plank" count="1,3"/>
-	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
 	<property name="Group" value="Tools/Traps"/>
 	<property name="EconomicValue" value="10"/>
 	<property name="EconomicBundleSize" value="50"/>
 	<property name="FilterTags" value="fdecor,ftraps"/>
 	<property name="SortOrder1" value="70g0"/>
+	<!--JZMOD ANY-->
+	<drop event="Destroy" name="jz_Stick" count="1,5"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
 </block>
 
 <block name="trapSpikesDamage1">
@@ -28650,6 +28719,7 @@ NOT the TextureNumber.
 <block name="decoCarMotorFlat">
 	<property name="Extends" value="decoEntityMetalMaster" param1="RepairItems"/>								   
 	<property name="Model" value="#Entities/Vehicles?Car/motorPrefab.prefab"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="MultiBlockDim" value="1,1,2"/><property name="DisplayType" value="blockMulti"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
@@ -29481,6 +29551,7 @@ NOT the TextureNumber.
 <block name="jz_Anvil">
 	<property name="DescriptionKey" value="MortarAndPestle1Desc" />
 	<property name="Material" value="Mstone" />
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZAnvil.unity3d?AnvilPrefab" />
 	<property name="ModelOffset" value="0,0,0" />
@@ -29532,6 +29603,7 @@ NOT the TextureNumber.
 	<property name="Model" value="#@modfolder:Resources/JZMethaneProducer.unity3d?MethaneProducerPrefab" />
 	<property name="Texture" value="284" />
 	<property name="Material" value="Mmetal_thin" />
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Class" value="Campfire" />
 	<property name="Stacknumber" value="1" />
 	<property name="CustomIcon" value="ui_game_symbol_methaneProducer" />
@@ -29656,10 +29728,11 @@ NOT the TextureNumber.
 		<property name="UpgradeHitCount" value="4" />
 	</property>
 	<property name="SellableToTrader" value="false" />
-	<drop event="Destroy" count="0" />
 	<property name="Group" value="Tools/Traps" />
-	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1" />
 	<property name="DescriptionKey" value="setUpASpikeTrapDesc" />
+	<!--JZMOD ANY-->
+	<drop event="Destroy" count="0" />
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1" />
 </block>
 
 <!--JZMOD PROFESSION KITS-->
@@ -29919,7 +29992,7 @@ NOT the TextureNumber.
 
 <block name="jz_FlagstoneFrameMaster">
 	<property name="Group" value="Building,advBuilding"/>
-	<property name="Tags" value="wood"/>
+	<property name="Tags" value="jz_StoneBuilding"/>
 	<property name="DescriptionKey" value="FlagstoneFrameGroupDesc"/>
 	<property name="Material" value="Mwood_weak"/>
 	<property name="CreativeMode" value="None"/>
@@ -29953,8 +30026,9 @@ NOT the TextureNumber.
 </block>
 <block name="jz_BrickFrameMaster">
 	<property name="Group" value="Building,advBuilding"/>
-	<property name="Tags" value="wood"/>
+	<property name="Tags" value="jz_StoneBuilding"/>
 	<property name="DescriptionKey" value="FlagstoneFrameGroupDesc"/>
+	<property name="ItemTypeIcon" value="ui_game_symbol_brick"/>
 	<property name="Material" value="Mwood_weak"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="FuelValue" value="100"/>
@@ -29988,6 +30062,7 @@ NOT the TextureNumber.
 <block name="jz_SteelFrameMaster">
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="Material" value="Msteel"/>
+	<property name="Tags" value="jz_SteelBuilding"/>
 	<property name="Shape" value="New"/>
 	<property name="LightOpacity" value="0"/>
 	<property name="Model" value="cube"/>
@@ -29997,7 +30072,7 @@ NOT the TextureNumber.
 	<property name="ImposterExclude" value="true"/>
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
-	<property name="CanPickup" value="true" param1="jz_SteelFrameBlockVariantHelper"/>
+	<property name="CanPickup" value="true" param1="jz_SteelFrameVariantHelper"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="RepairItems"> <property name="jz_ScrapSteel" value="20"/> </property>
 	<property class="UpgradeBlock">
@@ -30028,6 +30103,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameBlock">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameBlock" />
 	<property name="Mesh" value="opaque"/>
 	<property name="Shape" value="New"/>
 	<property name="Model" value="cube_frame"/>
@@ -30035,29 +30111,28 @@ NOT the TextureNumber.
 	<property name="Path" value="solid"/>
 	<property name="Texture" value="241"/>
 	<property name="Group" value="Building,advBuilding"/>
-	<property name="CustomIcon" value="ui_game_symbol_FlagstoneFrame" />
 	<property class="UpgradeBlock"> <property name="ToBlock" value="flagstoneBlock"/> </property>
 </block>
 
 <block name="jz_FlagstoneFrameRamp">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameRamp" />
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="Mesh" value="opaque"/>
 	<property name="Shape" value="New"/>
 	<property name="Model" value="ramp_frame"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Texture" value="241"/>
-	<property name="CustomIcon" value="ui_game_symbol_FlagstoneFrame" />
 	<property class="UpgradeBlock"> <property name="ToBlock" value="flagstoneRamp"/> </property>
 </block>
 
 <block name="jz_FlagstoneFrameArch">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameArch" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="Arch"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0500"/> <!-- SortShape -->
-	<property name="CustomIcon" value="ui_game_symbol_FlagstoneFrame" />
 	<property class="UpgradeBlock"> <property name="ToBlock" value="flagstoneArch"/> </property>
 </block>
 
@@ -30076,6 +30151,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameCNRFull">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameCNRFull" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="ramp_outside_corner"/>
 	<property name="SortOrder2" value="0210"/> <!-- SortShape -->
@@ -30085,6 +30161,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameCNRInside">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameCNRInside" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="ramp_inside_corner"/>
@@ -30095,6 +30172,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameCNRRampFiller">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameCNRRampFiller" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="ramp_corner_filler"/> <property name="Place" value="TowardsPlacerInverted"/>
@@ -30106,6 +30184,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameGableInvertedHalf">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameGableInvertedHalf" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="gable_inverted_half"/>
@@ -30116,6 +30195,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameGableInvertedQuarter">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameGableInvertedQuarter" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="gable_inverted_quarter"/>
@@ -30126,6 +30206,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameGableInvertedSteep">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameGableInvertedSteep" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="gable_inverted_steep"/>
 	<property name="SortOrder2" value="0420"/> <!-- SortShape -->
@@ -30135,6 +30216,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameGableQuarter">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameGableQuarter" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge_tip_quarter"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
@@ -30146,6 +30228,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameHalf">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameHalf" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="cube_half"/>
 	<property name="SortOrder2" value="0060"/> <!-- SortShape -->
@@ -30155,6 +30238,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameQuarterCNR">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameQuarterCNR" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="quarter_inside_corner"/>
 	<property name="SortOrder2" value="0080"/> <!-- SortShape -->
@@ -30164,6 +30248,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameQuarterCNR3Way">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameQuarterCNR3Way" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="quarter_inside_corner_3way"/>
 	<property name="SortOrder2" value="0090"/> <!-- SortShape -->
@@ -30173,6 +30258,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameQuarterSCtr">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameQuarterSCtr" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="quarter_centered_wall"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
@@ -30184,6 +30270,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameQuarterTeeSCtr">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameQuarterTeeSCtr" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="quarter_t_centered"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0110"/> <!-- SortShape -->
@@ -30193,6 +30280,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameStairs25CornerCNR">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameStairs25CornerCNR" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="stairs_filled_corner"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0560"/> <!-- SortShape -->
@@ -30202,6 +30290,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedge">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedge" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0290"/> <!-- SortShape -->
@@ -30211,6 +30300,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeCNRInsideBottom">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRInsideBottom" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_inside_corner"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0340"/> <!-- SortShape -->
@@ -30220,6 +30310,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeCNRInsideSteepBase">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRInsideSteepBase" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="wedge_inside_corner_top"/>
@@ -30230,6 +30321,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeCNRInsideSteepTop">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRInsideSteepTop" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge_inside_corner_base"/>
 	<property name="SortOrder2" value="0370"/> <!-- SortShape -->
@@ -30239,6 +30331,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeCNRInsideTop">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRInsideTop" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="wedge60_inside_corner_2"/> <property name="Place" value="TowardsPlacerInverted"/>
@@ -30249,6 +30342,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeCNRSteepBase">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRSteepBase" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_tip_corner_base"/>
 	<property name="SortOrder2" value="0320"/> <!-- SortShape -->
@@ -30258,6 +30352,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeCNRSteepTop">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRSteepTop" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_tip_corner_top"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
@@ -30269,6 +30364,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeIncline">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeIncline" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_incline"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0440"/> <!-- SortShape -->
@@ -30278,6 +30374,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeStairs">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeStairs" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/> 
 	<property name="Model" value="wedge_stairs"/> <property name="Place" value="TowardsPlacerInverted"/>
@@ -30297,6 +30394,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeTipCNRFullBottom">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeTipCNRFullBottom" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_tip_corner"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0300"/> <!-- SortShape -->
@@ -30307,6 +30405,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeTipCNRFullTop">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeTipCNRFullTop" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_corner"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0310"/> <!-- SortShape -->
@@ -30316,6 +30415,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFrameWedgeTipStairs">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeTipStairs" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge_tip_stairs"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0570"/> <!-- SortShape -->
@@ -30325,6 +30425,7 @@ NOT the TextureNumber.
 <block name="jz_FlagstoneFramePillar100">
 	<property name="Extends" value="jz_FlagstoneFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRInsideTop" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="Pole1m"/> <!-- needs cutout -->
@@ -30342,10 +30443,16 @@ NOT the TextureNumber.
 	<property name="SelectAlternates" value="true" />
 	<property name="PlaceAltBlockValue" value="jz_FlagstoneFrameBlock,jz_FlagstoneFrameRamp,jz_FlagstoneFrameArch,jz_FlagstoneSlitHalf,jz_FlagstoneFrameCNRFull,jz_FlagstoneFrameCNRInside,flagstoneCNRRamp,jz_FlagstoneFrameCNRRampFiller,flagstoneCTRpole,jz_FlagstoneFrameGableInvertedHalf,jz_FlagstoneFrameGableInvertedQuarter,jz_FlagstoneFrameGableInvertedSteep,jz_FlagstoneFrameGableQuarter,jz_FlagstoneFrameHalf,jz_FlagstoneFramePillar100,flagstonePillar50,flagstonePlate,flagstonePole,flagstonePyramid,jz_FlagstoneFrameQuarterCNR,jz_FlagstoneFrameQuarterCNR3Way,jz_FlagstoneFrameQuarterSCtr,jz_FlagstoneFrameQuarterTeeSCtr,flagstoneStairs25,jz_FlagstoneFrameStairs25CornerCNR,jz_FlagstoneFrameWedge,jz_FlagstoneFrameWedgeCNRInsideBottom,jz_FlagstoneFrameWedgeCNRInsideSteepBase,jz_FlagstoneFrameWedgeCNRInsideSteepTop,jz_FlagstoneFrameWedgeCNRInsideTop,jz_FlagstoneFrameWedgeCNRSteepBase,jz_FlagstoneFrameWedgeCNRSteepTop,jz_FlagstoneFrameWedgeIncline,jz_FlagstoneFrameWedgeStairs,jz_FlagstoneFrameWedgeTip,jz_FlagstoneFrameWedgeTipCNRFullBottom,jz_FlagstoneFrameWedgeTipCNRFullTop,jz_FlagstoneFrameWedgeTipStairs"/>
 </block>
-
+<!--<property name="PlaceAltBlockValue" value="woodFrameBlock,woodFrameRamp,woodFrameArch,woodFrameCNRFull,woodFrameCNRInside,woodFrameCNRRampFiller,woodFrameGableInvertedHalf,woodFrameGableInvertedQuarter,woodFrameGableInvertedSteep,
+woodFrameGableQuarter,woodFrameHalf,woodFrameQuarterCNR,woodFrameQuarterCNR3Way,woodFrameQuarterSCtr,woodFrameQuarterTeeSCtr,woodFrameStairs25CornerCNR,woodFrameWedge,woodFrameWedgeCNRInsideBottom,
+woodFrameWedgeCNRInsideSteepBase,woodFrameWedgeCNRInsideSteepTop,woodFrameWedgeCNRInsideTop,woodFrameWedgeCNRSteepBase,woodFrameWedgeCNRSteepTop,woodFrameWedgeIncline,woodFrameWedgeStairs,woodFrameWedgeTipCNRFullBottom,
+woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
+	-->
 <block name="jz_BrickFrameBlock">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameBlock" />
+	<property name="ItemTypeIcon" value="ui_game_symbol_wood"/>
 	<property name="Mesh" value="opaque"/>
 	<property name="Shape" value="New"/>
 	<property name="Model" value="cube_frame"/>
@@ -30353,35 +30460,35 @@ NOT the TextureNumber.
 	<property name="Path" value="solid"/>
 	<property name="Texture" value="241"/>
 	<property name="Group" value="Building,advBuilding"/>
-	<property name="CustomIcon" value="ui_game_symbol_FlagstoneFrame" />
 	<property class="UpgradeBlock"> <property name="ToBlock" value="brickBlock"/> </property>
 </block>
 
 <block name="jz_BrickFrameRamp">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameRamp" />
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="Mesh" value="opaque"/>
 	<property name="Shape" value="New"/>
 	<property name="Model" value="ramp_frame"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Texture" value="241"/>
-	<property name="CustomIcon" value="ui_game_symbol_FlagstoneFrame" />
 	<property class="UpgradeBlock"> <property name="ToBlock" value="brickRamp"/> </property>
 </block>
 
 <block name="jz_BrickFrameArch">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameArch" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="Arch"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0500"/> <!-- SortShape -->
-	<property name="CustomIcon" value="ui_game_symbol_FlagstoneFrame" />
 	<property class="UpgradeBlock"> <property name="ToBlock" value="brickArch"/> </property>
 </block>
 
 <block name="jz_BrickFrameCNRFull">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameCNRFull" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="ramp_outside_corner"/>
 	<property name="SortOrder2" value="0210"/> <!-- SortShape -->
@@ -30391,6 +30498,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameCNRInside">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameCNRInside" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="ramp_inside_corner"/>
@@ -30401,6 +30509,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameCNRRampFiller">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameCNRRampFiller" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="ramp_corner_filler"/> <property name="Place" value="TowardsPlacerInverted"/>
@@ -30412,6 +30521,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameGableInvertedHalf">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameGableInvertedHalf" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="gable_inverted_half"/>
@@ -30422,6 +30532,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameGableInvertedQuarter">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameGableInvertedQuarter" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="gable_inverted_quarter"/>
@@ -30432,6 +30543,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameGableInvertedSteep">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameGableInvertedSteep" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="gable_inverted_steep"/>
 	<property name="SortOrder2" value="0420"/>
@@ -30441,6 +30553,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameGableQuarter">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameGableQuarter" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge_tip_quarter"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
@@ -30452,6 +30565,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameQuarterCNR">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameQuarterCNR" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="quarter_inside_corner"/>
 	<property name="SortOrder2" value="0080"/>
@@ -30461,6 +30575,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameQuarterCNR3Way">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameQuarterCNR3Way" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="quarter_inside_corner_3way"/>
 	<property name="SortOrder2" value="0090"/> 
@@ -30470,6 +30585,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameQuarterSCtr">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameQuarterSCtr" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="quarter_centered_wall"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
@@ -30481,6 +30597,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameQuarterTeeSCtr">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameQuarterTeeSCtr" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="quarter_t_centered"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0110"/> 
@@ -30490,6 +30607,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameStairs25CornerCNR">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameStairs25CornerCNR" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="stairs_filled_corner"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0560"/>
@@ -30499,6 +30617,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeCNRInsideBottom">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRInsideBottom" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_inside_corner"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0340"/> 
@@ -30508,6 +30627,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeCNRInsideSteepBase">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRInsideSteepBase" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="wedge_inside_corner_top"/>
@@ -30518,6 +30638,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeCNRInsideSteepTop">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRInsideSteepTop" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge_inside_corner_base"/>
 	<property name="SortOrder2" value="0370"/>
@@ -30527,6 +30648,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeCNRInsideTop">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRInsideTop" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="wedge60_inside_corner_2"/> <property name="Place" value="TowardsPlacerInverted"/>
@@ -30537,6 +30659,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeCNRSteepBase">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRSteepBase" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_tip_corner_base"/>
 	<property name="SortOrder2" value="0320"/>
@@ -30546,6 +30669,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeCNRSteepTop">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeCNRSteepTop" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_tip_corner_top"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
@@ -30557,6 +30681,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeIncline">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeIncline" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_incline"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0440"/>
@@ -30566,6 +30691,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeStairs">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeStairs" />
 	<property name="Shape" value="New"/>
 	<property name="Path" value="solid"/>
 	<property name="Model" value="wedge_stairs"/> <property name="Place" value="TowardsPlacerInverted"/>
@@ -30576,6 +30702,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeTipCNRFullBottom">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeTipCNRFullBottom" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_tip_corner"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0300"/>
@@ -30586,6 +30713,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeTipCNRFullTop">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeTipCNRFullTop" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge60_corner"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0310"/> 
@@ -30595,10 +30723,21 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameWedgeTipStairs">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="woodFrameWedgeTipStairs" />
 	<property name="Shape" value="New"/>
 	<property name="Model" value="wedge_tip_stairs"/> <property name="Place" value="TowardsPlacerInverted"/>
 	<property name="SortOrder2" value="0570"/>
 	<property class="UpgradeBlock"> <property name="ToBlock" value="brickWedgeTipStairs"/> </property>
+</block>
+
+<block name="jz_BrickFrameVariantHelper">
+	<property name="Extends" value="brickBlock"/>
+	<property name="CustomIcon" value="brickBlock"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="SelectAlternates" value="true" />
+	<property name="PlaceAltBlockValue" value="jz_BrickFrameWedgeTipStairs,jz_BrickFrameWedgeTipCNRFullTop,jz_BrickFrameWedgeTipCNRFullBottom,jz_BrickFrameWedgeStairs,jz_BrickFrameWedgeIncline,jz_BrickFrameWedgeCNRSteepTop,jz_BrickFrameWedgeCNRSteepBase,jz_BrickFrameWedgeCNRInsideTop,jz_BrickFrameWedgeCNRInsideSteepTop,jz_BrickFrameWedgeCNRInsideSteepBase,jz_BrickFrameWedgeCNRInsideBottom,jz_BrickFrameStairs25CornerCNR,jz_BrickFrameQuarterTeeSCtr,jz_BrickFrameQuarterSCtr,jz_BrickFrameQuarterCNR3Way,jz_BrickFrameQuarterCNR,jz_BrickFrameGableQuarter,jz_BrickFrameGableInvertedSteep,jz_BrickFrameGableInvertedQuarter,jz_BrickFrameGableInvertedHalf,jz_BrickFrameCNRRampFiller,jz_BrickFrameCNRInside,jz_BrickFrameCNRFull,jz_BrickFrameArch,jz_BrickFrameRamp,jz_BrickFrameBlock"/>
 </block>
 
 <block name="jz_SteelFrameBlock">
@@ -30878,7 +31017,7 @@ NOT the TextureNumber.
 	<property class="UpgradeBlock"> <property name="ToBlock" value="steelWedgeTipStairs"/> </property>
 </block>
 
-<block name="jz_SteelBlockVariantHelper">
+<block name="jz_SteelFrameVariantHelper">
 	<property name="Extends" value="jz_SteelFrameMaster"/>
 	<property name="CustomIcon" value="pouredConcreteBlock"/>
 	<property name="CreativeMode" value="Player"/>
@@ -31190,6 +31329,9 @@ NOT the TextureNumber.
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehiclePolice.unity3d?VehiclePolicePrefab" />
+	<property name="ModelOffset" value="0,1,0"/>										 
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="2,2,6"/>	
 	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
 </block>
 
@@ -31437,6 +31579,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="ui_game_symbol_NoIcon"/>
 	<property name="ItemTypeIcon" value="explosion"/>
 	<property name="LootList" value="19"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehicleTank.unity3d?VehicleTankPrefab" />
 	<property name="IsTerrainDecoration" value="true"/>
@@ -31474,6 +31617,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="cntCar03SedanDamage0Master"/> <property name="CustomIconTint" value="ff8080"/>
 	<property name="ItemTypeIcon" value="explosion"/>
 	<property name="Material" value="Mmetal"/>
+	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedTank.unity3d?VehicleWreckedTankPrefab" />
 	<property name="ImposterDontBlock" value="true"/>
@@ -32047,6 +32191,34 @@ NOT the TextureNumber.
 	<drop event="Destroy" name="jz_FoodGrubs" count="1,3" prob=".1"/>
 </block>
 
+<block name="jz_QIBugOutBagLoot">
+	<property name="Class" value="Loot" />
+	<property name="Material" value="MdroppedBackpack" />
+	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="LootContainers/suitcase" param1="main_mesh"/>
+	<property name="IsTerrainDecoration" value="true" />
+	<property name="LootList" value="320" />
+	<property name="CanPickup" value="false" />
+	<drop event="Destroy" count="0" />
+	<drop event="Fall" name="jz_QIBugOutBagLoot" count="1" prob="1" />
+	<property name="CustomIcon" value="cntSuitcase" />
+</block>
+
+<block name="jz_QIBugOutBag">
+	<property name="Material" value="Mglass" />
+	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="LootContainers/suitcase" param1="main_mesh"/>
+	<property name="IsTerrainDecoration" value="true" />
+	<property name="CanPickup" value="true" />
+	<property name="CustomIcon" value="cntSuitcase" />
+	<property name="DescriptionKey" value="jz_QIBugOutBagDesc" />
+	<property name="Group" value="Basics" />
+	<drop event="Destroy" count="0" />
+	<drop event="Fall" name="jz_QIBugOutBag" count="1" prob="1" />
+	<property name="DowngradeBlock" value="jz_QIBugOutBagLoot" />
+</block>
 
 
 

@@ -2,6 +2,9 @@ Key,English
 BLOCK_________________________XML,BLOCK_________________________XML
 jz_CharacterChoiceComputer,Starting Options
 jz_CharacterChoiceComputerDesc,"Immediately place on the ground and use to chose your players starting stats and knowledge."
+jz_QIBugOutBag,"Bug Out Bag"
+jz_QIBugOutBagDesc,"A pre packed bag for when shit hit the fan and you have to flee in a hurry."
+jz_QIBugOutBagLoot,"Bug Out Bag"
 ITEM_________________________XML,ITEM_________________________XML
 jz_ProfessionChoice,Knowledge Point
 jz_ProfessionChoiceDesc,"Use these points to purchase your starting player stats and knowledge. Purchase Negative traits to earn more. Scrap or trash any points you don't want to use."
@@ -636,8 +639,8 @@ jz_FoodFruitSaladSmall,Small Fruit Salad
 jz_DrinkMeadDesc,"A alcoholic beverage made from fermenting honey"
 jz_DrinkMead,Mead
 jz_medicalBandageDesc,"A simple bandage that can be used to stop [f21b10]Bleeding[-] and treat a [f21b10]Small Wound[-]"
-jz_medicalFirstAidBandageDesc,"A bandage and salve that can be used to stop [f21b10]Bleeding[-], treat a [f21b10]Small Wound[-] and a [f21b10]Wound[-]"
-sanitizingBandageDesc,"A bandage and antiseptic that can be used to stop [f21b10]Bleeding[-], treat a [f21b10]Small Wound[-], a [f21b10]Wound[-] and a [f21b10]Sever Wound[-]"
+jz_medicalFirstAidBandageDesc,"A first aid kit that can be used to stop [f21b10]Bleeding[-], treat a [f21b10]Small Wound[-] a [f21b10]Wound[-] a [f21b10]Severe Wound[-] and a [f21b10]Infected Wound[-]."
+sanitizingBandageDesc,"A bandage and antiseptic that can be used to stop [f21b10]Bleeding[-], treat a [f21b10]Small Wound[-], a [f21b10]Wound[-] and a [f21b10]Severe Wound[-]"
 jz_MedicalSanitizingBandage,Sanitizing Bandage
 jz_medicalFirstAidKitSchematic,"An Emergency Medical kit that can be used to stop [f21b10]Bleeding[-], treat a [f21b10]Small Wound[-], a [f21b10]Wound[-], a [f21b10]Sever Wound[-] and a [f21b10]Infected Wound[-]"
 redHotDesc,"A burning red hot pipe that can be used to cauterize a [f21b10]Zombie Bite[-] or [f21b10]Puncher Wound[-]"
@@ -648,6 +651,31 @@ jz_MedicalAntiVenom,Anti Venom
 jz_drugPainkillersDesc,"Commercially made painkillers good for [f21b10]Pain[-] and [f21b10]Swelling[-]"
 sutureKitDesc,"A clean needle and organic thread can be used to stitch up [f21b10]Gashes[-]"
 jz_MedicalSutureKit,Suture Kit
+drugPainkillersDesc,"A common painkiller that can be used to relieve [f21b10]Pain[-]"
+jz_meleeClubBaseballBatDesc,"This club was used in gladiatorial games of the past that were held in huge arenas."
+jz_gunBowPrimitiveDesc"Good for hunting and killing zombies. Uses arrows for ammunition.\nHold reload to use alternate ammo."
+jz_FoodCanBeefCooked,Can Beef Cooked
+jz_FoodCanChickenCooked,Can Chicken Cooked
+jz_FoodCanLambCooked,Can Lamb Cooked
+jz_FoodCanCatfoodCooked,Can Cat Food Cooked
+jz_FoodCanDogfoodCooked,Can Dog Food Cooked
+jz_FoodCanChiliCooked,Can Chili Cooked
+jz_FoodCanTunaCooked,Can Tuna Cooked
+jz_FoodCanShamCooked,Can Sham Cooked
+jz_FoodCanPastaCooked,Can Pasta Cooked
+jz_FoodCanSalmonCooked,Can Salmon Cooked
+jz_FoodCanMisoCooked,Can Miso Cooked
+jz_FoodCanPeasCooked,Can Peas Cooked
+jz_FoodCanPearsCooked,Can Pears Cooked
+jz_FoodCanSoupCooked,Can Soup Cooked
+jz_FoodCanStockCooked,Can Stock Cooked
+flagstoneBlockVariantHelper,Flagstone Frame Block
+jz_QIDeadWalkieTalkieDesc,"A commercial Walkie Talkie, doesn't have very much range and this one is dead"
+jz_QIDeadWalkieTalkie"Walkie Talkie"
+jz_QIGoodWalkieTalkieDesc,"A commercial Walkie Talkie, doesn't have very much range but at lest it has some juice."
+jz_QIGoodWalkieTalkie,"Walkie Talkie"
+jz_CBatterie,"C Battery"
+jz_CBatterieDesc,"A C type battery used to power many things"
 PROGRESSION_________________________XML,PROGRESSION_________________________XML
 jz_ActionSkillDesc,"Improve these skills by using or killing with the given skill item. You can also purchase these points to improve"
 jz_CraftingSkillsDesc,"Improve these skills by crafting the stated item"
@@ -701,7 +729,7 @@ jz_ChemistDesc,"All the knowledge needed to become a Chemist.\nStarts with Paink
 jz_TraitFastDriverDesc,"10% Higher max speed while driving all vehicles"
 jz_TraitWakefulDesc,"20% Faster Fatigue recovery"
 jz_TraitGracefulDesc,"10% less noise while moving"
-jz_TraitDexterousDesc,"10% Faster Crafting\n10% Faster Lockpicking"
+jz_TraitDexterousDesc,"10% Faster Crafting\n10% Faster Lock picking"
 jz_TraitIronGutDesc,"15% Less Chance to get food illness"
 jz_TraitOutdoorsmanDesc,"10% Less effect from weather"
 jz_TraitFitDesc,"5% Less Stamina used w/Melee\n5% Faster Stamina recovery\n5% Less Stamina used while Encumbered"
@@ -726,6 +754,50 @@ jz_TraitHemophobicDesc,"20% Less Healing from Medical Items\n[f21b10]REFUNDS 4 K
 jz_TraitThinSkinnedDesc,"10% More chance to get Injured from Attackers\n[f21b10]REFUNDS 4 Knowledge Points[-]"
 jz_TraitWeakDesc,"10% More Stamina used w/Melee\n10% More Stamina used while Encumbered\n[f21b10]REFUNDS 4 Knowledge Points[-]"
 Quest_________________________XML,Quest_________________________XML
+jzquest_Starting,Getting Started
+jzquest_StartingDesc,"Place your Starting Option picker on the ground to receive your Knowledge Points."
+jzquest_StoryLinePt1,"1 The Get Away!"
+jzquest_StoryLinePt1Sub,"Set Up Camp"
+jzquest_StoryLinePt1Desc,"You barley made it out of there alive. Another camp torn to shreds by a unstoppable Horde. So many killed...so many screams... No time to dwell on it now, you were able to grab a Bug Out Bag but its not safe to go through it here not if you want to live. Find or make a safe place to set up camp and go through your bag." 
+jzquest_StoryLinePt2,"1 Take a Breather"
+jzquest_StoryLinePt2Sub,"Find Your Walkie"
+jzquest_StoryLinePt2Desc,"Take a look and see if your Bug Out Bag has anything useful like a Walkie Talkie."
+jzquest_StoryLinePt3,"1 Back To Work"
+jzquest_StoryLinePt3Sub,"Find some Batteries"
+jzquest_StoryLinePt3Desc,"Well you found a Walkie but its dead. You will need to find some good batteries to get the Walkie working if you ever want to find any other survivors."
+jzquest_StoryLinePt4,"1 Reaching Out"
+jzquest_StoryLinePt4Sub,"Walkie Communication"
+jzquest_StoryLinePt4Desc,"You snap the batteries in and it crackles to life. As you flip through the channels you start to hear conversation broken up with static. The batteries wont last long so you press the button " 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 jzquest_RefundQuestName,Starting Refund Quest
 jzquest_RefundDesc,"This quest is used to return Knowledge Points when choosing your players Traits in the beginning of the game. After choosing your players Traits and Profession it is safe to abandon this quest."
 jzquest_StoneaxeCrafting,Stoneaxe Crafting
@@ -745,8 +817,8 @@ jzquest_CarBatteryCrafting,Car Battery Crafting
 jzquest_BoneKnifeCrafting,Bone Shiv Crafting
 jzquest_HuntingKnifeCrafting,Hunting Knife Crafting
 jzquest_MacheteCrafting,Machete Crafting
-jzquest_WoodenClubCrafting,Wooden Club
-jzquest_IronClubCrafting,Iron Club
+jzquest_WoodenClubCrafting,Wooden Club Crafting
+jzquest_IronClubCrafting,Iron Club Crafting
 jzquest_StunBatonCrafting,Stun Baton Crafting
 jzquest_StoneSpearCrafting,Stone Spear Crafting
 jzquest_IronSpearCrafting,Iron Spear Crafting
@@ -774,9 +846,10 @@ jzquest_CompoundBowCrafting,Compound Bow Crafting
 jzquest_IronCrossbowCrafting,Iron Crossbow Crafting
 jzquest_CompoundCrossbowCrafting,Compound Crossbow Crafting
 jzquest_JunkTurretCrafting,Junk Turret Crafting
-jzquest_Lv1Crafting_description,"Craft the given amount of this item to increase the quality level you can craft of it to Level 2"
-jzquest_Lv2Crafting_description,"Craft the given amount of this item to increase the quality level you can craft of it to Level 3"
-jzquest_Lv3Crafting_description,"Craft the given amount of this item to increase the quality level you can craft of it to Level 4"
-jzquest_Lv4Crafting_description,"Craft the given amount of this item to increase the quality level you can craft of it to Level 5"
-jzquest_Lv5Crafting_description,"Craft the given amount of this item to increase the quality level you can craft of it to Level 6"
+jzquest_Lv1Crafting_description,"Craft this amount to increase the quality level you can craft to Level 2"
+jzquest_Lv2Crafting_description,"Craft this amount to increase the quality level you can craft to Level 3"
+jzquest_Lv3Crafting_description,"Craft this amount to increase the quality level you can craft to Level 4"
+jzquest_Lv4Crafting_description,"Craft this amount to increase the quality level you can craft to Level 5"
+jzquest_Lv5Crafting_description,"Craft this amount to increase the quality level you can craft to Level 6"
+xuiFood,Fatigue
 

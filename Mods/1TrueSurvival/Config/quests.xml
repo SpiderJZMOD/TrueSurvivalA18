@@ -1,21 +1,19 @@
 <configs>
 <set xpath="/quests">
-<quest id="quest_BasicSurvival1">
+	<quest id="quest_BasicSurvival1">
 		<property name="group_name_key" value="quest_BasicSurvival" />
-		<property name="name_key" value="quest_BasicSurvival1" />
-		<property name="subtitle_key" value="quest_BasicSurvival1_subtitle" />
-		<property name="description_key" value="quest_BasicSurvival1_description" />
+		<property name="name_key" value="jzquest_Starting" />
+		<property name="subtitle_key" value="jzquest_Starting" />
+		<property name="description_key" value="jzquest_StartingDesc" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
 		<property name="offer_key" value="quest_BasicSurvival_offer" />
 		<property name="shareable" value="false" />
-
 		<action type="ShowTip" value="tutorialTipQuest02" />
 		<action type="TrackQuest" />
-
 		<objective type="BlockPlace" id="jz_CharacterChoiceComputer" value="1" phase="1" />
-		
+
 		<reward type="Item" id="jz_ProfessionChoice" value="5" />
 		<reward type="Item" id="jz_DrinkCleanOuncesOfWater" value="16" />
 		<reward type="Item" id="jz_TatteredShirt" value="1" />
@@ -23,6 +21,7 @@
 		<reward type="Item" id="jz_TatteredShoes" value="1" />
 		<reward type="Item" id="keystoneBlock" value="1" />
 		<reward type="Exp" value="100" />
+		<reward type="Quest" id="jzquest_StoryLinePt1" />
 		<reward type="Quest" id="jzquest_SlowDriverRefund" />
 		<reward type="Quest" id="jzquest_SleepyRefund" />
 		<reward type="Quest" id="jzquest_ClumsyRefund" />
@@ -89,10 +88,67 @@
 		<reward type="Quest" id="jzquest_IronArmorCraftingLv1" />
 		<reward type="Quest" id="jzquest_SteelArmorCraftingLv1" />
 		</quest>
-	
-<!--  ****************************************************************************TRUE SURVIVAL********************************************** -->
-<!-- JZMOD CRAFTING SKILLS -->
-<quest id="jzquest_SlowDriverRefund">
+
+	<!--  ****************************************************************************TRUE SURVIVAL********************************************** -->
+	<!-- JZMOD STORY LINE -->
+	<quest id="jzquest_StoryLinePt1">
+		<property name="name_key" value="jzquest_StoryLinePt1" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt1Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt1Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+			<objective type="BlockPlace" id="bedroll" value="1" phase="1" />
+			<objective type="BlockPlace" id="jz_StorageSack" value="1" phase="1" />
+			<objective type="BlockPlace" id="campfire" value="1" phase="1" />
+		
+		<reward type="Item" id="jz_QIBugOutBag" value="1" />
+		<reward type="Quest" id="jzquest_StoryLinePt2" />
+	</quest>
+	<quest id="jzquest_StoryLinePt2">
+		<property name="name_key" value="jzquest_StoryLinePt2" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt2Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt2Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+			<objective type="FetchKeep" id="jz_QIDeadWalkieTalkie" value="1" phase="1"/>
+		
+		<reward type="Recipe" id="jz_QIGoodWalkieTalkie" />
+		<reward type="Quest" id="jzquest_StoryLinePt3" />
+	</quest>
+	<quest id="jzquest_StoryLinePt3">
+		<property name="name_key" value="jzquest_StoryLinePt3" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt3Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt3Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_QIGoodWalkieTalkie" />
+			<property name="count" value="1" />
+		</objective>
+		
+		<reward type="Quest" id="jzquest_StoryLinePt4" />
+	</quest>
+	<quest id="jzquest_StoryLinePt4">
+		<property name="name_key" value="jzquest_StoryLinePt4" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt4Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt4Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+			<objective type="FetchKeep" id="jz_TraitRefundSlowDriver" value="1" phase="1"/>
+		
+		<reward type="Item" id="jz_QIBugOutBag" value="1" />
+	</quest>
+	<!-- JZMOD CRAFTING SKILLS -->
+	<quest id="jzquest_SlowDriverRefund">
 		<property name="name_key" value="jzquest_RefundQuestName" />
 		<property name="subtitle_key" value="jzquest_RefundQuestName" />
 		<property name="description_key" value="jzquest_RefundDesc" />

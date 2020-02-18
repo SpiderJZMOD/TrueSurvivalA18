@@ -427,10 +427,10 @@
 				<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="LT" value="1"/>
 				<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="LT" value="1"/>
 			</requirements>
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 0 Decrease:">
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 0 Decrease:">
 					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition">
-					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>-->
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="0">
 					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="1"/></triggered_effect>
 		</effect_group>
@@ -441,10 +441,10 @@
 				<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="LT" value="2"/>
 				<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="LT" value="2"/>
 			</requirements>
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 1 Decrease:">
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 1 Decrease:">
 					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition">
-					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>-->
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="1">	
 					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="2"/></triggered_effect>
 		</effect_group>
@@ -455,10 +455,10 @@
 				<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="LT" value="3"/>
 				<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="LT" value="3"/>
 			</requirements>
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 2 Decrease:">
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 2 Decrease:">
 					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition">
-					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>
+					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>-->
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="2">	
 					<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="GTE" value="3"/></triggered_effect>
 		</effect_group>
@@ -470,8 +470,8 @@
 			<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="GTE" value="1"/>
 			<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="LT" value="1"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="1"/>	
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 1 Increase:"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 1 Increase:"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>-->
 		</effect_group>
 		<effect_group name="Nutrition Level 2 Increase">
 			<requirement name="NotHasBuff" buff="jz_BuffBalancedDiet"/>
@@ -481,8 +481,8 @@
 			<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="GTE" value="2"/>
 			<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="LT" value="2"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="2"/>	
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 2 Increase:"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 2 Increase:"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>-->
 		</effect_group>
 		<effect_group name="Nutrition Level 3 Increase">
 			<requirement name="NotHasBuff" buff="jz_BuffHealthyDiet"/>
@@ -491,8 +491,8 @@
 			<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="GTE" value="3"/>
 			<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="GTE" value="3"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarNutrition" operation="set" value="3"/>	
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 3 Increase:"/>	
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>			
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Nutrition Level 3 Increase:"/>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>	-->		
 		</effect_group>
 		<effect_group name="Malnourished Activation">
 			<requirement name="CVarCompare" cvar="jzCvarNutrition" operation="Equals" value="0"/>
@@ -502,8 +502,8 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBalancedDiet"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffHealthyDiet"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffGoodDiet"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Malnourished Activation:"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Malnourished Activation:"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarNutrition"/>-->
 		</effect_group>
 		<!-- JZMOD NUTRITION BUFF ACTIVATION -->
 		<effect_group name="Nutrition Level 1 Activation">
@@ -3180,8 +3180,8 @@
 		<effect_group name="Food Stat Fader">
 			<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GTE" value="1"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="-1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Food Level =, @jz_PlayerFoodStat"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerFoodStat"/>
+			<!--	<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Food Level =, @jz_PlayerFoodStat"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerFoodStat"/>-->
 		</effect_group>
 	</buff>
 	
@@ -3475,26 +3475,26 @@
 		<effect_group name="Protein Vitamin Fader ">
 			<requirement name="CVarCompare" cvar="jz_PlayerProteinVitamin" operation="GTE" value="0.1"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value="-0.1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Protein Vitamin Level, console message"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerProteinVitamin"/>
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Protein Vitamin Level, console message"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerProteinVitamin"/>-->
 		</effect_group>
 		<effect_group name="Grain Vitamin Fader ">
 			<requirement name="CVarCompare" cvar="jz_PlayerGrainVitamin" operation="GTE" value="0.1"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value="-0.1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Grain Vitamin Level, console message"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerGrainVitamin"/>
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Grain Vitamin Level, console message"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerGrainVitamin"/>-->
 		</effect_group>
 		<effect_group name="Fruit Vitamin Fader ">
 			<requirement name="CVarCompare" cvar="jz_PlayerFruitVitamin" operation="GTE" value="0.1"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFruitVitamin" operation="add" value="-0.1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Fruit Vitamin Level, console message"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerFruitVitamin"/>
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Fruit Vitamin Level, console message"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerFruitVitamin"/>-->
 		</effect_group>
 		<effect_group name="Veggie Vitamin Fader ">
 			<requirement name="CVarCompare" cvar="jz_PlayerVeggieVitamin" operation="GTE" value="0.1"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value="-0.1"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Veggie Vitamin Level, console message"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerVeggieVitamin"/>
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="LogMessage" message="Veggie Vitamin Level, console message"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jz_PlayerVeggieVitamin"/>-->
 		</effect_group>
 		<effect_group name="Fader Remover">
 			<requirement name="CVarCompare" cvar="jz_PlayerVeggieVitamin" operation="LT" value="0.1"/>
@@ -4700,9 +4700,9 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundSystem"/>
 			<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffScratchFader">
-				<requirement name="NotHasBuff" buff="jz_BuffScratchFader"/></triggered_effect>-->
+				<requirement name="NotHasBuff" buff="jz_BuffScratchFader"/></triggered_effect>
 			
-			<triggered_effect trigger="onSelfBuffFinish" action="CVarLogValue" cvar="jzCvarScratchCount"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="CVarLogValue" cvar="jzCvarScratchCount"/>-->
 		</effect_group>
 	</buff>
 	
@@ -4712,7 +4712,7 @@ icon="ui_game_symbol_pack_mule"
 		<duration value="0"/>
 		<effect_group name="Scratch Count Fader and Buff Remover">
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="-1"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarScratchCount"/>
+			<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="jzCvarScratchCount"/>-->
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffWoundSystem">
 				<requirement name="CVarCompare" cvar="jzCvarScratchCount" operation="LTE" value="0"/></triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffScratchFader">
@@ -4924,7 +4924,10 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>	
 			
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWound"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffBruised"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingOne"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingTwo"/>
 		</effect_group>	
 		<effect_group>
 			<passive_effect name="Mobility" operation="perc_subtract" value="0.09"/>
@@ -4973,6 +4976,9 @@ icon="ui_game_symbol_pack_mule"
 			
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDeadlyWound"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingThree"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingFour"/>
 		</effect_group>	
 		<effect_group>
 			<passive_effect name="Mobility" operation="perc_subtract" value="0.12"/>
@@ -5042,7 +5048,10 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>	
 			
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWound"/>				
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWound"/>		
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingFive"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageThree"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingSix"/>			
 		</effect_group>	
 		<effect_group>
 			<passive_effect name="Mobility" operation="perc_subtract" value="0.15"/>
@@ -5066,6 +5075,16 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
+	<buff name="jz_BuffTendingEight" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Try not to get hurt so it will heal." icon="ui_game_symbol_bandaged" >
+		<stack_type value="ignore"/>
+		<duration value="1800"/><!--1800-->
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDowngradingWound"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="21"/>
+		</effect_group>
+	</buff>
+	
 	<buff name="jz_BuffDirtyInfectedWound" remove_on_death="false" name_key="Dirty Bandaged" description_key="Dieing" icon="ui_game_symbol_infectedWound" >
 		<stack_type value="ignore"/>
 		<update_rate value="1"/>
@@ -5079,19 +5098,11 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="add" value="20"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>	
 			
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="jz_BuffTendingSeven"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="jz_BuffTendingSeven"/>	
 		</effect_group>	
 	</buff>
 	
-	<buff name="jz_BuffTendingEight" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Try not to get hurt so it will heal." icon="ui_game_symbol_bandaged" >
-		<stack_type value="ignore"/>
-		<duration value="1800"/><!--1800-->
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem"/>
-			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDowngradingWound"/>
-			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="21"/>
-		</effect_group>
-	</buff>
+	
 	<!-- JZMOD BURN WOUND -->
 	<buff name="jz_BuffBurnWound" remove_on_death="false" name_key="jz_BuffBurnWoundName" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Make sure to change it when it gets dirty so it does not get infected." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
