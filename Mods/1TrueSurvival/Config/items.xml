@@ -9371,9 +9371,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
-		<passive_effect name="HealthLoss" operation="perc_add" value="-.025">
-			<requirement name="ProgressionLevel" progression_name="perkBatterUpGear" operation="Equals" value="1"/>
-		</passive_effect>
 	</effect_group>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="apparelBallCap" operation="set" value="1"/>
@@ -10561,9 +10558,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
-		<passive_effect name="HealthLoss" operation="perc_add" value="-.025">
-			<requirement name="ProgressionLevel" progression_name="perkBatterUpGear" operation="Equals" value="1"/>
-		</passive_effect>
 	</effect_group>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="apparelCoatJacketLetterZU" operation="set" value="1"/>
@@ -14464,15 +14458,11 @@ perkNightStalkerSilentNight
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
 		<property name="Use_time" value="..."/>
-		<property name="Gain_health" value="-50"/>
+		<property name="Gain_health" value="-200"/>
 		<property name="Sound_start" value="player_eating"/>
 	</property>
 	<property name="Group" value="Resources"/>
-
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="add" value="1000"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInternalBleeding"/>
-	</effect_group>
+	
 </item>
 
 <item name="resourceIronFragment">
@@ -16662,9 +16652,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerDamage" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookEnforcerApparel">
@@ -16678,9 +16668,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerApparel" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookEnforcerPunks">
@@ -16694,9 +16684,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerPunks" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookEnforcerIntimidation">
@@ -16710,9 +16700,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerIntimidation" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookEnforcerAPAmmo">
@@ -16726,9 +16716,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerAPAmmo" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookEnforcerHPAmmo">
@@ -16742,9 +16732,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerHPAmmo" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookEnforcerCriminalPursuit">
@@ -16758,9 +16748,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerCriminalPursuit" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkEnforcerComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillEnforcer" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 
@@ -16892,9 +16882,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistSafes" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookGreatHeistGems">
@@ -16908,9 +16898,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistGems" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookGreatHeistTimedCharge">
@@ -16924,9 +16914,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistTimedCharge" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookGreatHeistClaimed">
@@ -16940,9 +16930,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistClaimed" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookGreatHeistAdrenalineFall">
@@ -16956,9 +16946,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistAdrenalineFall" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookGreatHeistSprintSneak">
@@ -16972,9 +16962,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistSprintSneak" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 <item name="bookGreatHeistMotionDetection">
@@ -16988,9 +16978,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistMotionDetection" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreatHeistComplete" level="-1">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
-			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="7"/></triggered_effect>
+			<requirement name="PerksUnlocked" skill_name="skillGreatHeist" operation="GTE" value="5"/></triggered_effect>
 	</effect_group>
 </item>
 
@@ -19107,51 +19097,6 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<!--JZMOD ARMOR SKILL ITEMS-->
-<item name="jz_ClothArmorInspection">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mcloth" />
-	<property name="Weight" value="20" />
-	<property name="Group" value="Clothing" />
-	<property name="DescriptionKey" value="jz_ClothArmorInspectionDesc" />
-	<property name="CustomIcon" value="resourcePaper" />
-</item>
-
-<item name="jz_LeatherArmorInspection">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mleather" />
-	<property name="Weight" value="20" />
-	<property name="Group" value="Clothing" />
-	<property name="DescriptionKey" value="jz_LeatherArmorInspectionDesc" />
-	<property name="CustomIcon" value="resourcePaper" />
-</item>
-
-<item name="jz_ScrapArmorInspection">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="20" />
-	<property name="Group" value="Clothing" />
-	<property name="DescriptionKey" value="jz_ScrapArmorInspectionDesc" />
-	<property name="CustomIcon" value="resourcePaper" />
-</item>
-
-<item name="jz_IronArmorInspection">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="20" />
-	<property name="Group" value="Clothing" />
-	<property name="DescriptionKey" value="jz_IronArmorInspectionDesc" />
-	<property name="CustomIcon" value="resourcePaper" />
-</item>
-
-<item name="jz_SteelArmorInspection">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Msteel" />
-	<property name="Weight" value="20" />
-	<property name="Group" value="Clothing" />
-	<property name="DescriptionKey" value="jz_SteelArmorInspectionDesc" />
-	<property name="CustomIcon" value="resourcePaper" />
-</item>
 <!--JZMOD STARTING CLOTHES-->
 <item name="jz_TatteredShirt">
 	<property name="Tags" value="upperbody,chest,clothing"/>
@@ -28194,7 +28139,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 </item>
 
-<item name="jz_MeleeTableLEgSpiked"> 
+<item name="jz_MeleeTableLegSpiked"> 
 	<property name="Tags" value="blunt,club,melee,grunting,light,weapon,meleeWeapon,jz_BluntSkillTag"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="Group" value="Ammo/Weapons,Basics"/>

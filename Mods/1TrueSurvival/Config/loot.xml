@@ -1679,11 +1679,9 @@ The overall plan for loot distribution:
 	<item name="bookBatterUpMaintenance"/>
 	<item name="bookBatterUpConditioning"/>
 	<item name="bookEnforcerAPAmmo"/>
-	<item name="bookEnforcerApparel"/>
 	<item name="bookEnforcerCriminalPursuit"/>
 	<item name="bookEnforcerHPAmmo"/>
 	<item name="bookEnforcerDamage"/>
-	<item name="bookEnforcerIntimidation"/>
 	<item name="bookEnforcerPunks"/>
 	<item name="bookFiremansAlmanacSpeed"/>
 	<item name="bookFiremansAlmanacAxes"/>
@@ -1692,10 +1690,8 @@ The overall plan for loot distribution:
 	<item name="bookFiremansAlmanacHarvest"/>
 	<item name="bookFiremansAlmanacHeat"/>
 	<item name="bookFiremansAlmanacMolotov"/>
-	<item name="bookGreatHeistAdrenalineFall"/>
 	<item name="bookGreatHeistTimedCharge"/>
 	<item name="bookGreatHeistClaimed"/>
-	<item name="bookGreatHeistGems"/>
 	<item name="bookGreatHeistMotionDetection"/>
 	<item name="bookGreatHeistSafes"/>
 	<item name="bookGreatHeistSprintSneak"/>
@@ -1706,13 +1702,6 @@ The overall plan for loot distribution:
 	<item name="bookHuntingJournalVultures"/>
 	<item name="bookHuntingJournalWolves"/>
 	<item name="bookHuntingJournalSelfDefense"/>
-	<item name="bookLuckyLooterAmmunition"/>
-	<item name="bookLuckyLooterBooks"/>
-	<item name="bookLuckyLooterBrass"/>
-	<item name="bookLuckyLooterDukes"/>
-	<item name="bookLuckyLooterFood"/>
-	<item name="bookLuckyLooterLead"/>
-	<item name="bookLuckyLooterMedical"/>
 	<item name="bookNeedleAndThreadDesertWear"/>
 	<item name="bookNeedleAndThreadDusters"/>
 	<item name="bookNeedleAndThreadFootwear"/>
@@ -1755,13 +1744,6 @@ The overall plan for loot distribution:
 	<item name="bookUrbanCombatLandMines"/>
 	<item name="bookUrbanCombatLanding"/>
 	<item name="bookUrbanCombatSneaking"/>
-	<item name="bookWasteTreasuresAcid"/>
-	<item name="bookWasteTreasuresCloth"/>
-	<item name="bookWasteTreasuresCoffins"/>
-	<item name="bookWasteTreasuresDoors"/>
-	<item name="bookWasteTreasuresHoney"/>
-	<item name="bookWasteTreasuresSinks"/>
-	<item name="bookWasteTreasuresWater"/>
 </lootgroup>
 
 <lootgroup name="T1BookList" >
@@ -3076,7 +3058,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item name="drinkCanEmpty" count="1,2" prob="8" />
 	<item name="resourceMetalPipe" count="1,2" prob="8" />
 	<item name="meleeToolWrench" prob="7" />
-	<item name="resourceAcid" count="1,2" prob="6" />
+	<item name="resourceAcid" count="1,2" prob="5" />
 	<item name="resourcePotassiumNitratePowder" count="2,6"  prob="6" />
 	<item group="T1FarmingBooks" prob="6" />
 	<item group="T2FarmingBooks" prob="6" />
@@ -3086,6 +3068,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="tools" count="1,2" prob="7" />
 	<item name="jz_Screwdriver" prob="7" />
 	<item name="meleeToolClawHammer" prob="7" />
+	<item name="jz_MeleePipe" prob="1" />
 </lootcontainer>
 
 <!-- backpack, place where people stash things, -->
@@ -3095,7 +3078,9 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- garbage, cntTrashPile -->
 <lootcontainer id="10" count="0,2" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
-	<item group="junk"/>
+	<item group="junk" prob="96" />
+	<item name="jz_MeleePipe" prob="2" />
+	<item name="jz_MeleeRebar" prob="2" />
 </lootcontainer>
 
 <!-- wallSafe / deskSafe -->
@@ -3341,10 +3326,11 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <!-- Bath tub filled with... don't ask. -->
 <lootcontainer id="37" count="1,2" size="6,3" destroy_on_close="false" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
-	<item name="foodRottingFlesh" prob="25"/>
+	<item name="foodRottingFlesh" prob="24"/>
 	<item name="resourceBone" count="10,25" prob="25"/>
-	<item name="resourceBulletCasing" prob="5" />
+	<item name="resourceBulletCasing" prob="4" />
 	<item group="junk" prob="45" />
+	<item name="jz_MeleePipe" prob="2" />
 </lootcontainer>
 
 <!-- Shamway Manager's Safe -->

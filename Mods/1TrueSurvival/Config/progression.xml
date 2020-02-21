@@ -28,7 +28,10 @@
 			<requirement name="CVarCompare" cvar="jz_ExposivesXP" operation="Equals" value="0"/>
 			<requirement name="CVarCompare" cvar="jz_JunkTurretXP" operation="Equals" value="0"/>
 			
-			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_WellnessLv" operation="set" value="20"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_WellnessLv" operation="set" value="20">
+					<requirement name="NotHasBuff" buff="jz_BuffNotNew"/></triggered_effect>
+			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" buff="jz_BuffNotNew" >
+					<requirement name="NotHasBuff" buff="jz_BuffNotNew"/></triggered_effect>	
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_SkillLvMult" operation="set" value="1.015"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillLvAdd" operation="set" value="25"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="jz_MiningSkillNextLvTotal" operation="set" value="25"/>
@@ -118,12 +121,12 @@
 <skills min_level="1" max_level="1">
 	<skill name="skillFiremansAlmanac" parent="attBooks" name_key="perkFiremansAlmanac0Name" desc_key="perkFiremansAlmanac0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_fire"><effect_group/></skill>
 	<skill name="skillGreatHeist" parent="attBooks" name_key="perkGreatHeist0Name" desc_key="perkGreatHeist0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_safe"><effect_group/></skill>
-	<skill name="skillLuckyLooter" parent="attBooks" name_key="perkLuckyLooter0Name" desc_key="perkLuckyLooter0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_shopping_cart"><effect_group/></skill>
+	<!--<skill name="skillLuckyLooter" parent="attBooks" name_key="perkLuckyLooter0Name" desc_key="perkLuckyLooter0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_shopping_cart"><effect_group/></skill>-->
 	<skill name="skillNeedleAndThread" parent="attBooks" name_key="perkNeedleAndThread0Name" desc_key="perkNeedleAndThread0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_light_armor"><effect_group/></skill>
 	<skill name="skillNightStalker" parent="attBooks" name_key="perkNightStalker0Name" desc_key="perkNightStalker0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_sneak_attack"><effect_group/></skill>
 	<skill name="skillEnforcer" parent="attBooks" name_key="perkEnforcer0Name" desc_key="perkEnforcer0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_gunslinger"><effect_group/></skill>
 	<skill name="skillBatterUp" parent="attBooks" name_key="perkBatterUp0Name" desc_key="perkBatterUp0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_club"><effect_group/></skill>
-	<skill name="skillWasteTreasures" parent="attBooks" name_key="perkWasteTreasures0Name" desc_key="perkWasteTreasures0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_treasure"><effect_group/></skill>
+	<!--<skill name="skillWasteTreasures" parent="attBooks" name_key="perkWasteTreasures0Name" desc_key="perkWasteTreasures0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_treasure"><effect_group/></skill>-->
 	<skill name="skillHuntingJournal" parent="attBooks" name_key="perkHuntingJournal0Name" desc_key="perkHuntingJournal0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_armor_leather"><effect_group/></skill>
 	<skill name="skillArtOfMining" parent="attBooks" name_key="perkArtOfMining0Name" desc_key="perkArtOfMining0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_mining"><effect_group/></skill>
 	<skill name="skillArchery" parent="attBooks" name_key="perkRangers0Name" desc_key="perkRangers0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_archery"><effect_group/></skill>
@@ -1272,11 +1275,11 @@
 			<effect_description level="5" desc_key="jz_SteelKnucklesCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
-	<!--  ClothArmorCrafting-->
-	<perk name="jz_ClothArmorCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Cloth Armor Crafting" desc_key="jz_ClothArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+	<!--  ClothJacketCrafting-->
+	<perk name="jz_ClothJacketCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Cloth Jacket Crafting" desc_key="jz_ClothArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClothArmorCraftingTag"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ClothArmorCraftingTag"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClothJacketCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ClothJacketCraftingTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_ClothArmorCraftingRank1Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
@@ -1286,11 +1289,67 @@
 			<effect_description level="5" desc_key="jz_ClothArmorCraftingRank5Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
 		</effect_group>
 	</perk>
-	<!-- LeatherArmorCrafting-->
-	<perk name="jz_LeatherArmorCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Leather Armor Crafting" desc_key="jz_LeatherArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+	<!--  ClothHatCrafting-->
+	<perk name="jz_ClothHatCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Cloth Hat Crafting" desc_key="jz_ClothArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClothArmorCraftingArmorCraftingTag"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_LeatherArmorCraftingTag"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClothHatCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ClothHatCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_ClothArmorCraftingRank1Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ClothArmorCraftingRank2Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ClothArmorCraftingRank3Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ClothArmorCraftingRank4Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ClothArmorCraftingRank5Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!--  ClothGlovesCrafting-->
+	<perk name="jz_ClothGlovesCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Cloth Gloves Crafting" desc_key="jz_ClothArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClothGlovesCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ClothGlovesCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_ClothArmorCraftingRank1Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ClothArmorCraftingRank2Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ClothArmorCraftingRank3Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ClothArmorCraftingRank4Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ClothArmorCraftingRank5Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!--  ClothPantsCrafting-->
+	<perk name="jz_ClothPantsCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Cloth Pants Crafting" desc_key="jz_ClothArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClothPantsCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ClothPantsCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_ClothArmorCraftingRank1Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ClothArmorCraftingRank2Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ClothArmorCraftingRank3Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ClothArmorCraftingRank4Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ClothArmorCraftingRank5Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!--  ClothBootsCrafting-->
+	<perk name="jz_ClothBootsCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Cloth Boots Crafting" desc_key="jz_ClothArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ClothBootsCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ClothBootsCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_ClothArmorCraftingRank1Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ClothArmorCraftingRank2Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ClothArmorCraftingRank3Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ClothArmorCraftingRank4Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ClothArmorCraftingRank5Desc" long_desc_key="jz_ClothArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!-- LeatherHoodCrafting-->
+	<perk name="jz_LeatherHoodCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Leather Hood Crafting" desc_key="jz_LeatherArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_LeatherHoodCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_LeatherHoodCraftingTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_LeatherArmorCraftingRank1Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
@@ -1300,11 +1359,67 @@
 			<effect_description level="5" desc_key="jz_LeatherArmorCraftingRank5Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
 		</effect_group>
 	</perk>
-	<!-- ScrapArmorCrafting-->
-	<perk name="jz_ScrapArmorCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Scrap Iron Armor Crafting" desc_key="jz_ScrapArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+	<!-- LeatherChestCrafting-->
+	<perk name="jz_LeatherChestCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Leather Chest Crafting" desc_key="jz_LeatherArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ScrapArmorCraftingTag"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ScrapArmorCraftingTag"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_LeatherChestCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_LeatherChestCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_LeatherArmorCraftingRank1Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_LeatherArmorCraftingRank2Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_LeatherArmorCraftingRank3Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_LeatherArmorCraftingRank4Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_LeatherArmorCraftingRank5Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!-- LeatherGlovesCrafting-->
+	<perk name="jz_LeatherGlovesCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Leather Gloves Crafting" desc_key="jz_LeatherArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_LeatherGlovesCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_LeatherGlovesCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_LeatherArmorCraftingRank1Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_LeatherArmorCraftingRank2Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_LeatherArmorCraftingRank3Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_LeatherArmorCraftingRank4Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_LeatherArmorCraftingRank5Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!-- LeatherPantsCrafting-->
+	<perk name="jz_LeatherPantsCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Leather Pants Crafting" desc_key="jz_LeatherArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_LeatherPantsCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_LeatherPantsCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_LeatherArmorCraftingRank1Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_LeatherArmorCraftingRank2Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_LeatherArmorCraftingRank3Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_LeatherArmorCraftingRank4Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_LeatherArmorCraftingRank5Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!-- LeatherBootsCrafting-->
+	<perk name="jz_LeatherBootsCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Leather Boots Crafting" desc_key="jz_LeatherArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_LeatherBootsCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_LeatherBootsCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_LeatherArmorCraftingRank1Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_LeatherArmorCraftingRank2Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_LeatherArmorCraftingRank3Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_LeatherArmorCraftingRank4Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_LeatherArmorCraftingRank5Desc" long_desc_key="jz_LeatherArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!-- ScrapHelmetCrafting-->
+	<perk name="jz_ScrapHelmetCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Scrap Iron Helmet Crafting" desc_key="jz_ScrapArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ScrapHelmetCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ScrapHelmetCraftingTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_ScrapArmorCraftingRank1Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
@@ -1314,11 +1429,67 @@
 			<effect_description level="5" desc_key="jz_ScrapArmorCraftingRank5Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
 		</effect_group>
 	</perk>
-	<!-- IronArmorCrafting-->
-	<perk name="jz_IronArmorCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Armor Crafting" desc_key="jz_IronArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+	<!-- ScrapChestCrafting-->
+	<perk name="jz_ScrapChestCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Scrap Iron Chest Crafting" desc_key="jz_ScrapArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronArmorCraftingTag"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_IronArmorCraftingTag"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ScrapChestCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ScrapChestCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_ScrapArmorCraftingRank1Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ScrapArmorCraftingRank2Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ScrapArmorCraftingRank3Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ScrapArmorCraftingRank4Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ScrapArmorCraftingRank5Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!-- ScrapGlovesCrafting-->
+	<perk name="jz_ScrapGlovesCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Scrap Iron Gloves Crafting" desc_key="jz_ScrapArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ScrapGlovesCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ScrapGlovesCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_ScrapArmorCraftingRank1Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ScrapArmorCraftingRank2Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ScrapArmorCraftingRank3Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ScrapArmorCraftingRank4Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ScrapArmorCraftingRank5Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!-- ScrapLegsCrafting-->
+	<perk name="jz_ScrapLegsCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Scrap Iron Legs Crafting" desc_key="jz_ScrapArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ScrapLegsCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ScrapLegsCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_ScrapArmorCraftingRank1Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ScrapArmorCraftingRank2Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ScrapArmorCraftingRank3Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ScrapArmorCraftingRank4Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ScrapArmorCraftingRank5Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!-- ScrapBootsCrafting-->
+	<perk name="jz_ScrapBootsCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Scrap Iron Boots Crafting" desc_key="jz_ScrapArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_ScrapBootsCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_ScrapBootsCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_ScrapArmorCraftingRank1Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="2" desc_key="jz_ScrapArmorCraftingRank2Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="3" desc_key="jz_ScrapArmorCraftingRank3Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="4" desc_key="jz_ScrapArmorCraftingRank4Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+			<effect_description level="5" desc_key="jz_ScrapArmorCraftingRank5Desc" long_desc_key="jz_ScrapArmorCraftingDesc"/>
+		</effect_group>
+	</perk>
+	<!-- IronHelmetCrafting-->
+	<perk name="jz_IronHelmetCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Helmet Crafting" desc_key="jz_IronArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronHelmetCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_IronHelmetCraftingTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_IronArmorCraftingRank1Desc" long_desc_key="jz_IronArmorCraftingRank1LongDesc"/>
@@ -1328,11 +1499,123 @@
 			<effect_description level="5" desc_key="jz_IronArmorCraftingRank5Desc" long_desc_key="jz_IronArmorCraftingRank5LongDesc"/>
 		</effect_group>
 	</perk>
-	<!-- SteelArmorCrafting-->
-	<perk name="jz_SteelArmorCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Armor Crafting" desc_key="jz_SteelArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+	<!-- IronChestCrafting-->
+	<perk name="jz_IronChestCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Chest Crafting" desc_key="jz_IronArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelArmorCraftingTag"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_SteelArmorCraftingTag"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronChestCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_IronChestCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_IronArmorCraftingRank1Desc" long_desc_key="jz_IronArmorCraftingRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_IronArmorCraftingRank2Desc" long_desc_key="jz_IronArmorCraftingRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_IronArmorCraftingRank3Desc" long_desc_key="jz_IronArmorCraftingRank3LongDesc"/>
+			<effect_description level="4" desc_key="jz_IronArmorCraftingRank4Desc" long_desc_key="jz_IronArmorCraftingRank4LongDesc"/>
+			<effect_description level="5" desc_key="jz_IronArmorCraftingRank5Desc" long_desc_key="jz_IronArmorCraftingRank5LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- IronGlovesCrafting-->
+	<perk name="jz_IronGlovesCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Gloves Crafting" desc_key="jz_IronArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronGlovesCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_IronGlovesCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_IronArmorCraftingRank1Desc" long_desc_key="jz_IronArmorCraftingRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_IronArmorCraftingRank2Desc" long_desc_key="jz_IronArmorCraftingRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_IronArmorCraftingRank3Desc" long_desc_key="jz_IronArmorCraftingRank3LongDesc"/>
+			<effect_description level="4" desc_key="jz_IronArmorCraftingRank4Desc" long_desc_key="jz_IronArmorCraftingRank4LongDesc"/>
+			<effect_description level="5" desc_key="jz_IronArmorCraftingRank5Desc" long_desc_key="jz_IronArmorCraftingRank5LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- IronLegsCrafting-->
+	<perk name="jz_IronLegsCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Legs Crafting" desc_key="jz_IronArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronLegsCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_IronLegsCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_IronArmorCraftingRank1Desc" long_desc_key="jz_IronArmorCraftingRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_IronArmorCraftingRank2Desc" long_desc_key="jz_IronArmorCraftingRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_IronArmorCraftingRank3Desc" long_desc_key="jz_IronArmorCraftingRank3LongDesc"/>
+			<effect_description level="4" desc_key="jz_IronArmorCraftingRank4Desc" long_desc_key="jz_IronArmorCraftingRank4LongDesc"/>
+			<effect_description level="5" desc_key="jz_IronArmorCraftingRank5Desc" long_desc_key="jz_IronArmorCraftingRank5LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- IronBootsCrafting-->
+	<perk name="jz_IronBootsCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Iron Boots Crafting" desc_key="jz_IronArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_IronBootsCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_IronBootsCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_IronArmorCraftingRank1Desc" long_desc_key="jz_IronArmorCraftingRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_IronArmorCraftingRank2Desc" long_desc_key="jz_IronArmorCraftingRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_IronArmorCraftingRank3Desc" long_desc_key="jz_IronArmorCraftingRank3LongDesc"/>
+			<effect_description level="4" desc_key="jz_IronArmorCraftingRank4Desc" long_desc_key="jz_IronArmorCraftingRank4LongDesc"/>
+			<effect_description level="5" desc_key="jz_IronArmorCraftingRank5Desc" long_desc_key="jz_IronArmorCraftingRank5LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- SteelHelmetCrafting-->
+	<perk name="jz_SteelHelmetCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Helmet Crafting" desc_key="jz_SteelArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelHelmetCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_SteelHelmetCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_SteelArmorCraftingRank1Desc" long_desc_key="jz_SteelArmorCraftingRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_SteelArmorCraftingRank2Desc" long_desc_key="jz_SteelArmorCraftingRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_SteelArmorCraftingRank3Desc" long_desc_key="jz_SteelArmorCraftingRank3LongDesc"/>
+			<effect_description level="4" desc_key="jz_SteelArmorCraftingRank4Desc" long_desc_key="jz_SteelArmorCraftingRank4LongDesc"/>
+			<effect_description level="5" desc_key="jz_SteelArmorCraftingRank5Desc" long_desc_key="jz_SteelArmorCraftingRank5LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- SteelChestCrafting-->
+	<perk name="jz_SteelChestCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Chest Crafting" desc_key="jz_SteelArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelChestCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_SteelChestCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_SteelArmorCraftingRank1Desc" long_desc_key="jz_SteelArmorCraftingRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_SteelArmorCraftingRank2Desc" long_desc_key="jz_SteelArmorCraftingRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_SteelArmorCraftingRank3Desc" long_desc_key="jz_SteelArmorCraftingRank3LongDesc"/>
+			<effect_description level="4" desc_key="jz_SteelArmorCraftingRank4Desc" long_desc_key="jz_SteelArmorCraftingRank4LongDesc"/>
+			<effect_description level="5" desc_key="jz_SteelArmorCraftingRank5Desc" long_desc_key="jz_SteelArmorCraftingRank5LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- SteelGlovesCrafting-->
+	<perk name="jz_SteelGlovesCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Gloves Crafting" desc_key="jz_SteelArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelGlovesCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_SteelGlovesCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_SteelArmorCraftingRank1Desc" long_desc_key="jz_SteelArmorCraftingRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_SteelArmorCraftingRank2Desc" long_desc_key="jz_SteelArmorCraftingRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_SteelArmorCraftingRank3Desc" long_desc_key="jz_SteelArmorCraftingRank3LongDesc"/>
+			<effect_description level="4" desc_key="jz_SteelArmorCraftingRank4Desc" long_desc_key="jz_SteelArmorCraftingRank4LongDesc"/>
+			<effect_description level="5" desc_key="jz_SteelArmorCraftingRank5Desc" long_desc_key="jz_SteelArmorCraftingRank5LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- SteelLegsCrafting-->
+	<perk name="jz_SteelLegsCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Legs Crafting" desc_key="jz_SteelArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelLegsCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_SteelLegsCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_SteelArmorCraftingRank1Desc" long_desc_key="jz_SteelArmorCraftingRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_SteelArmorCraftingRank2Desc" long_desc_key="jz_SteelArmorCraftingRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_SteelArmorCraftingRank3Desc" long_desc_key="jz_SteelArmorCraftingRank3LongDesc"/>
+			<effect_description level="4" desc_key="jz_SteelArmorCraftingRank4Desc" long_desc_key="jz_SteelArmorCraftingRank4LongDesc"/>
+			<effect_description level="5" desc_key="jz_SteelArmorCraftingRank5Desc" long_desc_key="jz_SteelArmorCraftingRank5LongDesc"/>
+		</effect_group>
+	</perk>
+	<!-- SteelBootsCrafting-->
+	<perk name="jz_SteelBootsCrafting" parent="CraftingSkills" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Steel Boots Crafting" desc_key="jz_SteelArmorCraftingDesc" icon="ui_game_symbol_armor_iron">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_SteelBootsCraftingTag"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,2,3,4,5" value="-0.1,-0.2,-0.3,-0.4,-0.5" tags="jz_SteelBootsCraftingTag"/>
 		</effect_group>
 		<effect_group>
 			<effect_description level="1" desc_key="jz_SteelArmorCraftingRank1Desc" long_desc_key="jz_SteelArmorCraftingRank1LongDesc"/>
@@ -2590,7 +2873,7 @@
 	</perk>
 
 	<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-
+<!--
 	<perk name="perkLuckyLooterDukes" parent="skillLuckyLooter" max_level="1" base_skill_point_cost="0" desc_key="perkLuckyLooterDukesDesc" long_desc_key="perkLuckyLooterDukesLongDesc">
 		<effect_group>
 			<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".2" tags="dukes"/>
@@ -2631,7 +2914,7 @@
 			<passive_effect name="LootDropProb" operation="perc_add" level="1" value=".2"/>
 		</effect_group>
 	</perk>
-
+-->
 	<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
 	<perk name="perkEnforcerDamage" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="perkEnforcerDamageDesc" long_desc_key="perkEnforcerDamageLongDesc">
@@ -2640,10 +2923,10 @@
 				<passive_effect name="EntityDamage" operation="perc_add" level="1" value="0.1"/>
 		</effect_group>
 	</perk>
-	<perk name="perkEnforcerApparel" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="perkEnforcerApparelDesc" long_desc_key="perkEnforcerApparelLongDesc">
-		<!-- effect is on suitPants/suitJacket -->
+	<!--<perk name="perkEnforcerApparel" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="perkEnforcerApparelDesc" long_desc_key="perkEnforcerApparelLongDesc">
+		 effect is on suitPants/suitJacket 
 		<effect_group></effect_group>
-	</perk>
+	</perk>-->
 	<perk name="perkEnforcerPunks" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="perkEnforcerPunksDesc" long_desc_key="perkEnforcerPunksLongDesc">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="revolver"/>
@@ -2651,13 +2934,13 @@
 				<passive_effect name="EntityDamage" operation="perc_add" level="1" value="1"/>
 		</effect_group>
 	</perk>
-	<perk name="perkEnforcerIntimidation" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="perkEnforcerIntimidationDesc" long_desc_key="perkEnforcerIntimidationLongDesc">
+	<!--<perk name="perkEnforcerIntimidation" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" desc_key="perkEnforcerIntimidationDesc" long_desc_key="perkEnforcerIntimidationLongDesc">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="revolver"/>
 				<passive_effect name="BarteringBuying" operation="base_add" level="1" value="0.05"/>
 				<passive_effect name="BarteringSelling" operation="base_add" level="1" value="0.05"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 	<perk name="perkEnforcerAPAmmo" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" name_key="bookEnforcerAPAmmo" desc_key="perkEnforcerAPAmmoDesc" long_desc_key="perkEnforcerAPAmmoLongDesc">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo44MagnumBulletAP"/>
@@ -2689,11 +2972,11 @@
 		</effect_group>
 	</perk>
 	<perk name="perkBatterUpGear" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" name_key="bookBatterUpGear" desc_key="perkBatterUpGearDesc" long_desc_key="perkBatterUpGearLongDesc">
-		<!-- effect is on ballCap/jacketLetter -->
+		<!--effect is on ballCap/jacketLetter -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelBallCap,apparelCoatJacketLetterZU"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 	<perk name="perkBatterUpSlowPitch" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" desc_key="perkBatterUpSlowPitchDesc" long_desc_key="perkBatterUpSlowPitchLongDesc">
 		<effect_group>
 			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffBatterUpSlowDown">
@@ -2744,11 +3027,11 @@
 			<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".1" tags="safes"/>
 		</effect_group>
 	</perk>
-	<perk name="perkGreatHeistGems" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="perkGreatHeistGemsDesc" long_desc_key="perkGreatHeistGemsLongDesc">
+	<!--<perk name="perkGreatHeistGems" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="perkGreatHeistGemsDesc" long_desc_key="perkGreatHeistGemsLongDesc">
 		<effect_group>
 			<passive_effect name="LootQuantity" operation="perc_add" level="1" value=".1" tags="gems"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 	<perk name="perkGreatHeistTimedCharge" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" name_key="bookGreatHeistTimedCharge" desc_key="perkGreatHeistTimedChargeDesc" long_desc_key="perkGreatHeistTimedChargeLongDesc">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="thrownTimedCharge"/>
@@ -2759,11 +3042,11 @@
 			<passive_effect name="LandClaimDamageModifier" operation="perc_subtract" level="1" value="0.2" />
 		</effect_group>
 	</perk>
-	<perk name="perkGreatHeistAdrenalineFall" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="perkGreatHeistAdrenalineFallDesc" long_desc_key="perkGreatHeistAdrenalineFallLongDesc">
+	<!--<perk name="perkGreatHeistAdrenalineFall" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="perkGreatHeistAdrenalineFallDesc" long_desc_key="perkGreatHeistAdrenalineFallLongDesc">
 		<effect_group>
-			<!-- effect is in  buffPlayerFallingDamage -->
+			 effect is in  buffPlayerFallingDamage 
 		</effect_group>
-	</perk>
+	</perk>-->
 	<perk name="perkGreatHeistSprintSneak" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" desc_key="perkGreatHeistSprintSneakDesc" long_desc_key="perkGreatHeistSprintSneakLongDesc">
 		<effect_group>
 			<!-- effect is in  entityclasses.xml -->
@@ -2784,7 +3067,7 @@
 	</perk>
 
 	<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
-
+<!--
 	<perk name="perkWasteTreasuresHoney" parent="skillWasteTreasures" max_level="1" base_skill_point_cost="0" desc_key="perkWasteTreasuresHoneyDesc" long_desc_key="perkWasteTreasuresHoneyLongDesc">
 		<effect_group>
 				<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="WasteTreasuresHoneyHarvest"/>
@@ -2825,7 +3108,7 @@
 			<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="WasteTreasuresCompleteHarvest"/>
 		</effect_group>
 	</perk>
-
+-->
 	<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
 
 	<perk name="perkHuntingJournalBears" parent="skillHuntingJournal" max_level="1" base_skill_point_cost="0" desc_key="perkHuntingJournalBearsDesc" long_desc_key="perkHuntingJournalBearsLongDesc">

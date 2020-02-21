@@ -1358,10 +1358,6 @@
 		</effect_group>
 
 		<effect_group>
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="1" tags="jz_StoneaxeCrafting"/>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-
 			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.15"/>
 			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.15"/>
 			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.15"/>
@@ -1399,10 +1395,6 @@
 		</effect_group>
 
 		<effect_group>
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="1" tags="jz_StoneaxeCrafting"/>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-
 			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.5"/>
 			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.5"/>
 			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.5"/>
@@ -1481,10 +1473,6 @@
 		<duration value="300"/>
 		<requirement name="NotHasBuff" buff="buffArmBroken"/>
 		<effect_group>
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="1" tags="jz_StoneaxeCrafting"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-
 			<passive_effect name="AttacksPerMinute" operation="perc_subtract" value="0.2,0" duration="0,300"/>
 			<passive_effect name="RoundsPerMinute" operation="perc_subtract" value="0.2,0" duration="0,300"/>
 			<passive_effect name="StaminaLoss" operation="perc_add" value="0.2,0" duration="0,300" tags="melee,ranged"/>
@@ -1501,10 +1489,6 @@
 		<update_rate value="5"/>
 
 		<effect_group>
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="2,0" duration="0,3600" tags="jz_StoneaxeCrafting"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-
 			<passive_effect name="AttacksPerMinute" operation="perc_subtract" value="0.7,0" duration="0,3600"/>
 			<passive_effect name="RoundsPerMinute" operation="perc_subtract" value="0.7,0" duration="0,3600"/>
 			<passive_effect name="StaminaLoss" operation="perc_add" value="0.8,0" duration="0,3600" tags="melee,ranged"/>
@@ -1771,10 +1755,6 @@
 		<duration value="3600"/>
 		<update_rate value="2.5"/>
 		<effect_group>
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="2" tags="jz_StoneaxeCrafting"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffInjuryStunned01">
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="@$illnessChance"/>
 			</triggered_effect>
@@ -2171,20 +2151,6 @@
 			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_torch_wall"/>
 			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_torch_wall"/>
 		</effect_group>
-<!--
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="forge_fire_die">
-				<requirement name="HoldingItemHasTags" tags="melee"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" target="other" buff="buffBurningWeapon"/>
-				<requirement name="!HoldingItemHasTags" tags="melee"/>
-			</triggered_effect>
-
-			<requirement name="HoldingItemHasTags" tags="melee"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
-			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
--->
 	</buff>
 
 	<buff name="buffRadiation03" name_key="buffRadiation03Name" description_key="buffRadiation03Desc" tooltip_key="buffRadiation03Tooltip" icon="ui_game_symbol_radiation" icon_color="255,0,0" icon_blink="true">
@@ -2235,24 +2201,9 @@
 
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffNearDeathTrauma"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffNearDeathRegen"/>
+			<!--<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffNearDeathRegen"/>-->
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="jz_BuffConsequences"/>
 
-			<!--
-			<requirement name="PlayerLevel" operation="GT" value="5"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaCounter" operation="set" value="1800">
-				<requirement name="NotHasBuff" buff="buffNearDeathTrauma"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaCounter" operation="add" value="1800"/>
-			-->
-			<!--
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaCounter" operation="set" value="3600"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaReduction" operation="set" value="@$NearDeathTraumaCounter"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaReduction" operation="divide" value="40"/>
-
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffNearDeathProtection"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffNearDeathTrauma"/>
-			-->
 		</effect_group>
 	</buff>
 
@@ -2265,18 +2216,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffNearDeathTrauma">
 				<requirement name="CVarCompare" cvar="_expdeficit" operation="LT" value="1"/>
 			</triggered_effect>
-			<!-- Added: Custom read-only variable "_difficulty"
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffNearDeathTraumaCalculate"/>
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$NearDeathTraumaCounter" operation="subtract" value="@$NearDeathTraumaReduction"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffNearDeathTraumaCalculate"/>
-
-			<passive_effect name="AttributeLevel" operation="base_subtract" value="@$NearDeathTraumaEffect"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-
-			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$NearDeathTraumaCounter" operation="set" value="0"/>
-			-->
+		
 		</effect_group>
 	</buff>
 
@@ -2295,24 +2235,6 @@
 				<requirement name="CVarCompare" cvar="$NearDeathTraumaCounter" operation="LT" value="1800"/>
 			</triggered_effect>
 
-			<!--
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaEffect" operation="set" value="1">
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaEffect" operation="set" value="2">
-				<requirement name="CVarCompare" cvar="$NearDeathTraumaCounter" operation="GT" value="1800"/>
-				<requirement name="CVarCompare" cvar="$NearDeathTraumaCounter" operation="LTE" value="3600"/>
-				<requirement name="PlayerLevel" operation="GTE" value="20"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaEffect" operation="set" value="3">
-				<requirement name="CVarCompare" cvar="$NearDeathTraumaCounter" operation="GT" value="3600"/>
-				<requirement name="CVarCompare" cvar="$NearDeathTraumaCounter" operation="LTE" value="5400"/>
-				<requirement name="PlayerLevel" operation="GTE" value="40"/>
-			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathTraumaEffect" operation="set" value="4">
-				<requirement name="CVarCompare" cvar="$NearDeathTraumaCounter" operation="GT" value="5400"/>
-				<requirement name="PlayerLevel" operation="GTE" value="60"/>
-			</triggered_effect>
-			-->
 		</effect_group>
 	</buff>
 
@@ -2325,42 +2247,8 @@
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathRegen" operation="set" value=".9"/>
 
-			<!--<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathRegen" operation="set" value=".95">
-				<requirement name="PlayerLevel" operation="LT" value="4"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathRegen" operation="set" value=".9">
-				<requirement name="PlayerLevel" operation="Equals" value="4"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathRegen" operation="set" value=".8">
-				<requirement name="PlayerLevel" operation="Equals" value="5"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathRegen" operation="set" value=".7">
-				<requirement name="PlayerLevel" operation="Equals" value="6"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathRegen" operation="set" value=".6">
-				<requirement name="PlayerLevel" operation="Equals" value="7"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathRegen" operation="set" value=".5">
-				<requirement name="PlayerLevel" operation="Equals" value="8"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathRegen" operation="set" value=".4">
-				<requirement name="PlayerLevel" operation="Equals" value="9"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$NearDeathRegen" operation="set" value=".3">
-				<requirement name="PlayerLevel" operation="GT" value="9"/></triggered_effect>
-
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffNearDeathRegen">
-				<requirement name="PlayerLevel" operation="GTE" value="10"/></triggered_effect> -->
-
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$NearDeathRegen" operation="set" value="0"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveAllNegativeBuffs">
-				<requirement name="PlayerLevel" operation="LT" value="6"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegSprained">
-				<requirement name="PlayerLevel" operation="LT" value="11"/></triggered_effect>
-
-			<passive_effect name="HealthChangeOT" operation="base_add" value="1">
-				<requirement name="StatComparePercCurrentToMax" stat="health" operation="LTE" value="@$NearDeathRegen"/>
-			</passive_effect>
-			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="1"><!--Fatigue-->
-				<requirement name="StatComparePercModMaxToMax" stat="Stamina" operation="LTE" value="@$NearDeathRegen"/>
-			</passive_effect>
-			<passive_effect name="WaterChangeOT" operation="base_add" value="1">
-				<requirement name="StatComparePercCurrentToMax" stat="Water" operation="LTE" value="@$NearDeathRegen"/>
-			</passive_effect>
+	
 		</effect_group>
 
 		<effect_group>
@@ -2676,10 +2564,6 @@
 		<stack_type value="ignore"/>
 		<duration value="300"/>
 		<effect_group>
-			<!--<passive_effect name="AttributeLevel" operation="base_subtract" value="2" tags="jz_StoneaxeCrafting"/>-->
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
-
 			<passive_effect name="StaminaChangeOT" operation="base_subtract" value="3"/>
 
 			<!-- JZMOD REDO <passive_effect name="HealthMaxModifierOT" operation="base_subtract" value=".05"/>-->
@@ -3237,7 +3121,7 @@
 		<duration value="0"/>
 		<effect_group>
 			<requirement name="CVarCompare" target="self" cvar="jz_PlayerHealthDrain" operation="GTE" value="0"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="Health" operation="subtract" value=".5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value=".5"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="subtract" value=".5"/>
 		</effect_group>
 
@@ -5603,6 +5487,47 @@ icon="ui_game_symbol_pack_mule"
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffThrobbingPainScreenRestart"/>
 		</effect_group>
 	</buff>
+<!--JZMOD DEATH PENALTY -->
+<buff name="jz_BuffConsequences" hidden="true" remove_on_death="true">
+		<stack_type value="ignore"/>
+		<duration value=".5"/>
+		<effect_group>
+		<!--Health-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="set" value="60">
+				<requirement name="PlayerLevel" operation="LTE" value="10"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="set" value="40">
+				<requirement name="PlayerLevel" operation="GTE" value="11"/>
+				<requirement name="PlayerLevel" operation="LTE" value="20"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="health" operation="set" value="30">
+				<requirement name="PlayerLevel" operation="GTE" value="21"/></triggered_effect>
+			<!--Wellness-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="3">
+				<requirement name="PlayerLevel" operation="LTE" value="5"/>	</triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="6">
+				<requirement name="PlayerLevel" operation="GTE" value="6"/>
+				<requirement name="PlayerLevel" operation="LTE" value="10"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="9">
+				<requirement name="PlayerLevel" operation="GTE" value="11"/>
+				<requirement name="PlayerLevel" operation="LTE" value="20"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="10">
+				<requirement name="PlayerLevel" operation="GTE" value="21"/></triggered_effect>
+			<!--Fatigue-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="set" value="50">
+				<requirement name="StatComparePercModMaxToMax" stat="Stamina" operation="LTE" value="0.4"/></triggered_effect>
+			<!--Thirst-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Water" operation="set" value="20">
+				<requirement name="StatComparePercCurrentToMax" stat="Water" operation="LTE" value="0.1"/></triggered_effect>
+			<!--Hunger-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="set" value="20">
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LTE" value="10"/></triggered_effect>
+				
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
+		</effect_group>
+	</buff>
 
+	<buff name="jz_BuffNotNew" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="0"/>
+	</buff>
 </set>
 </configs> 

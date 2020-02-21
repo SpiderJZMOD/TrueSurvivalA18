@@ -82,11 +82,37 @@
 		<reward type="Quest" id="jzquest_IronCrossbowCraftingLv1" />
 		<reward type="Quest" id="jzquest_CompoundCrossbowCraftingLv1" />
 		<reward type="Quest" id="jzquest_JunkTurretCraftingLv1" />
-		<reward type="Quest" id="jzquest_ClothArmorCraftingLv1" />
-		<reward type="Quest" id="jzquest_LeatherArmorCraftingLv1" />
-		<reward type="Quest" id="jzquest_ScrapArmorCraftingLv1" />
-		<reward type="Quest" id="jzquest_IronArmorCraftingLv1" />
-		<reward type="Quest" id="jzquest_SteelArmorCraftingLv1" />
+		
+		<reward type="Quest" id="jzquest_ClothJacketCraftingLv1" />
+		<reward type="Quest" id="jzquest_ClothGlovesCraftingLv1" />
+		<reward type="Quest" id="jzquest_ClothHatCraftingLv1" />
+		<reward type="Quest" id="jzquest_ClothPantsCraftingLv1" />
+		<reward type="Quest" id="jzquest_ClothBootsCraftingLv1" />
+		
+		<reward type="Quest" id="jzquest_LeatherHoodCraftingLv1" />
+		<reward type="Quest" id="jzquest_LeatherChestCraftingLv1" />
+		<reward type="Quest" id="jzquest_LeatherGlovesCraftingLv1" />
+		<reward type="Quest" id="jzquest_LeatherPantsCraftingLv1" />
+		<reward type="Quest" id="jzquest_LeatherBootsCraftingLv1" />
+		
+		<reward type="Quest" id="jzquest_ScrapHelmetCraftingLv1" />
+		<reward type="Quest" id="jzquest_ScrapChestCraftingLv1" />
+		<reward type="Quest" id="jzquest_ScrapGlovesCraftingLv1" />
+		<reward type="Quest" id="jzquest_ScrapLegsCraftingLv1" />
+		<reward type="Quest" id="jzquest_ScrapBootsCraftingLv1" />
+		
+		<reward type="Quest" id="jzquest_IronHelmetCraftingLv1" />
+		<reward type="Quest" id="jzquest_IronChestCraftingLv1" />
+		<reward type="Quest" id="jzquest_IronGlovesCraftingLv1" />
+		<reward type="Quest" id="jzquest_IronLegsCraftingLv1" />
+		<reward type="Quest" id="jzquest_IronBootsCraftingLv1" />
+		
+		<reward type="Quest" id="jzquest_SteelHelmetCraftingLv1" />
+		<reward type="Quest" id="jzquest_SteelChestCraftingLv1" />
+		<reward type="Quest" id="jzquest_SteelGlovesCraftingLv1" />
+		<reward type="Quest" id="jzquest_SteelLegsCraftingLv1" />
+		<reward type="Quest" id="jzquest_SteelBootsCraftingLv1" />
+		
 		</quest>
 
 	<!--  ****************************************************************************TRUE SURVIVAL********************************************** -->
@@ -4063,28 +4089,26 @@
 		<reward type="Skill" id="jz_JunkTurretCrafting" value="1" />
 	</quest>
 	
-<!--ClothArmorCrafting -->
-	<quest id="jzquest_ClothArmorCraftingLv1">
-		<property name="name_key" value="jzquest_ClothArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv1Crafting_subtitle" />
+	<!-- Cloth Armor Jacket -->
+	<quest id="jzquest_ClothJacketCraftingLv1">
+		<property name="name_key" value="jzquest_ClothJacketCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothJacketCrafting" />
 		<property name="description_key" value="jzquest_Lv1Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
-
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClothArmorInspection" />
-			<property name="count" value="5" /><!--25-->
+			<property name="item" value="armorClothJacket" />
+			<property name="count" value="3" /><!--3-->
 		</objective>
-		
-		<reward type="Skill" id="jz_ClothArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_ClothArmorCraftingLv2" />
+		<reward type="Skill" id="jz_ClothJacketCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothJacketCraftingLv2" />
     </quest>
-	<quest id="jzquest_ClothArmorCraftingLv2">
-		<property name="name_key" value="jzquest_ClothArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv2Crafting_subtitle" />
+	<quest id="jzquest_ClothJacketCraftingLv2">
+		<property name="name_key" value="jzquest_ClothJacketCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothJacketCrafting" />
 		<property name="description_key" value="jzquest_Lv2Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4092,15 +4116,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClothArmorInspection" />
-			<property name="count" value="10" /><!--50-->
+			<property name="item" value="armorClothJacket" />
+			<property name="count" value="5" /><!--5-->
 		</objective>
-		<reward type="Skill" id="jz_ClothArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_ClothArmorCraftingLv3" />
+		<reward type="Skill" id="jz_ClothJacketCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothJacketCraftingLv3" />
     </quest>
-	<quest id="jzquest_ClothArmorCraftingLv3">
-		<property name="name_key" value="jzquest_ClothArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv3Crafting_subtitle" />
+	<quest id="jzquest_ClothJacketCraftingLv3">
+		<property name="name_key" value="jzquest_ClothJacketCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothJacketCrafting" />
 		<property name="description_key" value="jzquest_Lv3Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4108,15 +4132,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClothArmorInspection" />
-			<property name="count" value="20" /><!--100-->
+			<property name="item" value="armorClothJacket" />
+			<property name="count" value="10" /><!--10-->
 		</objective>
-		<reward type="Skill" id="jz_ClothArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_ClothArmorCraftingLv4" />
+		<reward type="Skill" id="jz_ClothJacketCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothJacketCraftingLv4" />
     </quest>
-	<quest id="jzquest_ClothArmorCraftingLv4">
-		<property name="name_key" value="jzquest_ClothArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv4Crafting_subtitle" />
+	<quest id="jzquest_ClothJacketCraftingLv4">
+		<property name="name_key" value="jzquest_ClothJacketCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothJacketCrafting" />
 		<property name="description_key" value="jzquest_Lv4Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4124,15 +4148,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClothArmorInspection" />
-			<property name="count" value="40" /><!--200-->
+			<property name="item" value="armorClothJacket" />
+			<property name="count" value="15" /><!--15-->
 		</objective>
-		<reward type="Skill" id="jz_ClothArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_ClothArmorCraftingLv5Pt1" />
+		<reward type="Skill" id="jz_ClothJacketCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothJacketCraftingLv5" />
     </quest>
-	<quest id="jzquest_ClothArmorCraftingLv5Pt1">
-		<property name="name_key" value="jzquest_ClothArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv5Crafting_subtitle" />
+	<quest id="jzquest_ClothJacketCraftingLv5">
+		<property name="name_key" value="jzquest_ClothJacketCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothJacketCrafting" />
 		<property name="description_key" value="jzquest_Lv5Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4140,34 +4164,31 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ClothArmorInspection" />
-			<property name="count" value="50" /><!--250-->
+			<property name="item" value="armorClothJacket" />
+			<property name="count" value="20" /><!--20-->
 		</objective>
-		<reward type="Skill" id="jz_ClothArmorCrafting" value="1" />
+		<reward type="Skill" id="jz_ClothJacketCrafting" value="1" />	
 	</quest>
-	
-	<!--LeatherArmorCrafting -->
-	<quest id="jzquest_LeatherArmorCraftingLv1">
-		<property name="name_key" value="jzquest_LeatherArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv1Crafting_subtitle" />
+	<!-- Cloth Armor Hat -->
+	<quest id="jzquest_ClothHatCraftingLv1">
+		<property name="name_key" value="jzquest_ClothHatCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothHatCrafting" />
 		<property name="description_key" value="jzquest_Lv1Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
-
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_LeatherArmorInspection" />
-			<property name="count" value="5" /><!--25-->
+			<property name="item" value="armorClothHat" />
+			<property name="count" value="3" /><!--25-->
 		</objective>
-		
-		<reward type="Skill" id="jz_LeatherArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_LeatherArmorCraftingLv2" />
+		<reward type="Skill" id="jz_ClothHatCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothHatCraftingLv2" />
     </quest>
-	<quest id="jzquest_LeatherArmorCraftingLv2">
-		<property name="name_key" value="jzquest_LeatherArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv2Crafting_subtitle" />
+	<quest id="jzquest_ClothHatCraftingLv2">
+		<property name="name_key" value="jzquest_ClothHatCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothHatCrafting" />
 		<property name="description_key" value="jzquest_Lv2Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4175,15 +4196,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_LeatherArmorInspection" />
-			<property name="count" value="10" /><!--50-->
+			<property name="item" value="armorClothHat" />
+			<property name="count" value="5" /><!--50-->
 		</objective>
-		<reward type="Skill" id="jz_LeatherArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_LeatherArmorCraftingLv3" />
+		<reward type="Skill" id="jz_ClothHatCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothHatCraftingLv3" />
     </quest>
-	<quest id="jzquest_LeatherArmorCraftingLv3">
-		<property name="name_key" value="jzquest_LeatherArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv3Crafting_subtitle" />
+	<quest id="jzquest_ClothHatCraftingLv3">
+		<property name="name_key" value="jzquest_ClothHatCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothHatCrafting" />
 		<property name="description_key" value="jzquest_Lv3Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4191,15 +4212,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_LeatherArmorInspection" />
-			<property name="count" value="20" /><!--100-->
+			<property name="item" value="armorClothHat" />
+			<property name="count" value="10" /><!--100-->
 		</objective>
-		<reward type="Skill" id="jz_LeatherArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_LeatherArmorCraftingLv4" />
+		<reward type="Skill" id="jz_ClothHatCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothHatCraftingLv4" />
     </quest>
-	<quest id="jzquest_LeatherArmorCraftingLv4">
-		<property name="name_key" value="jzquest_LeatherArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv4Crafting_subtitle" />
+	<quest id="jzquest_ClothHatCraftingLv4">
+		<property name="name_key" value="jzquest_ClothHatCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothHatCrafting" />
 		<property name="description_key" value="jzquest_Lv4Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4207,15 +4228,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_LeatherArmorInspection" />
-			<property name="count" value="40" /><!--200-->
+			<property name="item" value="armorClothHat" />
+			<property name="count" value="15" /><!--200-->
 		</objective>
-		<reward type="Skill" id="jz_LeatherArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_LeatherArmorCraftingLv5Pt1" />
+		<reward type="Skill" id="jz_ClothHatCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothHatCraftingLv5" />
     </quest>
-	<quest id="jzquest_LeatherArmorCraftingLv5Pt1">
-		<property name="name_key" value="jzquest_LeatherArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv5Crafting_subtitle" />
+	<quest id="jzquest_ClothHatCraftingLv5">
+		<property name="name_key" value="jzquest_ClothHatCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothHatCrafting" />
 		<property name="description_key" value="jzquest_Lv5Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4223,34 +4244,31 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_LeatherArmorInspection" />
-			<property name="count" value="50" /><!--250-->
+			<property name="item" value="armorClothHat" />
+			<property name="count" value="20" /><!--250-->
 		</objective>
-		<reward type="Skill" id="jz_LeatherArmorCrafting" value="1" />	
+		<reward type="Skill" id="jz_ClothHatCrafting" value="1" />	
 	</quest>
-	
-	<!--ScrapArmorCrafting -->
-	<quest id="jzquest_ScrapArmorCraftingLv1">
-		<property name="name_key" value="jzquest_ScrapArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv1Crafting_subtitle" />
+	<!-- Cloth Armor Gloves -->
+	<quest id="jzquest_ClothGlovesCraftingLv1">
+		<property name="name_key" value="jzquest_ClothGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothGlovesCrafting" />
 		<property name="description_key" value="jzquest_Lv1Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
-
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ScrapArmorInspection" />
-			<property name="count" value="5" /><!--25-->
+			<property name="item" value="armorClothGloves" />
+			<property name="count" value="3" /><!--25-->
 		</objective>
-		
-		<reward type="Skill" id="jz_ScrapArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_ScrapArmorCraftingLv2" />
+		<reward type="Skill" id="jz_ClothGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothGlovesCraftingLv2" />
     </quest>
-	<quest id="jzquest_ScrapArmorCraftingLv2">
-		<property name="name_key" value="jzquest_ScrapArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv2Crafting_subtitle" />
+	<quest id="jzquest_ClothGlovesCraftingLv2">
+		<property name="name_key" value="jzquest_ClothGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothGlovesCrafting" />
 		<property name="description_key" value="jzquest_Lv2Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4258,15 +4276,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ScrapArmorInspection" />
-			<property name="count" value="10" /><!--50-->
+			<property name="item" value="armorClothGloves" />
+			<property name="count" value="5" /><!--50-->
 		</objective>
-		<reward type="Skill" id="jz_ScrapArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_ScrapArmorCraftingLv3" />
+		<reward type="Skill" id="jz_ClothGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothGlovesCraftingLv3" />
     </quest>
-	<quest id="jzquest_ScrapArmorCraftingLv3">
-		<property name="name_key" value="jzquest_ScrapArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv3Crafting_subtitle" />
+	<quest id="jzquest_ClothGlovesCraftingLv3">
+		<property name="name_key" value="jzquest_ClothGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothGlovesCrafting" />
 		<property name="description_key" value="jzquest_Lv3Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4274,15 +4292,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ScrapArmorInspection" />
-			<property name="count" value="20" /><!--100-->
+			<property name="item" value="armorClothGloves" />
+			<property name="count" value="10" /><!--100-->
 		</objective>
-		<reward type="Skill" id="jz_ScrapArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_ScrapArmorCraftingLv4" />
+		<reward type="Skill" id="jz_ClothGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothGlovesCraftingLv4" />
     </quest>
-	<quest id="jzquest_ScrapArmorCraftingLv4">
-		<property name="name_key" value="jzquest_ScrapArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv4Crafting_subtitle" />
+	<quest id="jzquest_ClothGlovesCraftingLv4">
+		<property name="name_key" value="jzquest_ClothGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothGlovesCrafting" />
 		<property name="description_key" value="jzquest_Lv4Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4290,15 +4308,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ScrapArmorInspection" />
-			<property name="count" value="40" /><!--200-->
+			<property name="item" value="armorClothGloves" />
+			<property name="count" value="15" /><!--200-->
 		</objective>
-		<reward type="Skill" id="jz_ScrapArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_ScrapArmorCraftingLv5Pt1" />
+		<reward type="Skill" id="jz_ClothGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothGlovesCraftingLv5" />
     </quest>
-	<quest id="jzquest_ScrapArmorCraftingLv5Pt1">
-		<property name="name_key" value="jzquest_ScrapArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv5Crafting_subtitle" />
+	<quest id="jzquest_ClothGlovesCraftingLv5">
+		<property name="name_key" value="jzquest_ClothGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothGlovesCrafting" />
 		<property name="description_key" value="jzquest_Lv5Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4306,34 +4324,31 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_ScrapArmorInspection" />
-			<property name="count" value="50" /><!--250-->
+			<property name="item" value="armorClothGloves" />
+			<property name="count" value="20" /><!--250-->
 		</objective>
-		<reward type="Skill" id="jz_ScrapArmorCrafting" value="1" />
+		<reward type="Skill" id="jz_ClothGlovesCrafting" value="1" />	
 	</quest>
-	
-	<!--IronArmorCrafting -->
-	<quest id="jzquest_IronArmorCraftingLv1">
-		<property name="name_key" value="jzquest_IronArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv1Crafting_subtitle" />
+	<!--Cloth Armor Pants -->
+	<quest id="jzquest_ClothPantsCraftingLv1">
+		<property name="name_key" value="jzquest_ClothPantsCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothPantsCrafting" />
 		<property name="description_key" value="jzquest_Lv1Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
-
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_IronArmorInspection" />
-			<property name="count" value="5" /><!--25-->
+			<property name="item" value="armorClothPants" />
+			<property name="count" value="3" /><!--25-->
 		</objective>
-		
-		<reward type="Skill" id="jz_IronArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_IronArmorCraftingLv2" />
+		<reward type="Skill" id="jz_ClothPantsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothPantsCraftingLv2" />
     </quest>
-	<quest id="jzquest_IronArmorCraftingLv2">
-		<property name="name_key" value="jzquest_IronArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv2Crafting_subtitle" />
+	<quest id="jzquest_ClothPantsCraftingLv2">
+		<property name="name_key" value="jzquest_ClothPantsCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothPantsCrafting" />
 		<property name="description_key" value="jzquest_Lv2Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4341,15 +4356,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_IronArmorInspection" />
-			<property name="count" value="10" /><!--50-->
+			<property name="item" value="armorClothPants" />
+			<property name="count" value="5" /><!--50-->
 		</objective>
-		<reward type="Skill" id="jz_IronArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_IronArmorCraftingLv3" />
+		<reward type="Skill" id="jz_ClothPantsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothPantsCraftingLv3" />
     </quest>
-	<quest id="jzquest_IronArmorCraftingLv3">
-		<property name="name_key" value="jzquest_IronArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv3Crafting_subtitle" />
+	<quest id="jzquest_ClothPantsCraftingLv3">
+		<property name="name_key" value="jzquest_ClothPantsCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothPantsCrafting" />
 		<property name="description_key" value="jzquest_Lv3Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4357,15 +4372,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_IronArmorInspection" />
-			<property name="count" value="20" /><!--100-->
+			<property name="item" value="armorClothPants" />
+			<property name="count" value="10" /><!--100-->
 		</objective>
-		<reward type="Skill" id="jz_IronArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_IronArmorCraftingLv4" />
+		<reward type="Skill" id="jz_ClothPantsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothPantsCraftingLv4" />
     </quest>
-	<quest id="jzquest_IronArmorCraftingLv4">
-		<property name="name_key" value="jzquest_IronArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv4Crafting_subtitle" />
+	<quest id="jzquest_ClothPantsCraftingLv4">
+		<property name="name_key" value="jzquest_ClothPantsCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothPantsCrafting" />
 		<property name="description_key" value="jzquest_Lv4Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4373,15 +4388,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_IronArmorInspection" />
-			<property name="count" value="40" /><!--200-->
+			<property name="item" value="armorClothPants" />
+			<property name="count" value="15" /><!--200-->
 		</objective>
-		<reward type="Skill" id="jz_IronArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_IronArmorCraftingLv5Pt1" />
+		<reward type="Skill" id="jz_ClothPantsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothPantsCraftingLv5" />
     </quest>
-	<quest id="jzquest_IronArmorCraftingLv5Pt1">
-		<property name="name_key" value="jzquest_IronArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv5Crafting_subtitle" />
+	<quest id="jzquest_ClothPantsCraftingLv5">
+		<property name="name_key" value="jzquest_ClothPantsCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothPantsCrafting" />
 		<property name="description_key" value="jzquest_Lv5Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4389,34 +4404,31 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_IronArmorInspection" />
-			<property name="count" value="50" /><!--250-->
+			<property name="item" value="armorClothPants" />
+			<property name="count" value="20" /><!--250-->
 		</objective>
-		<reward type="Skill" id="jz_IronArmorCrafting" value="1" />	
+		<reward type="Skill" id="jz_ClothPantsCrafting" value="1" />	
 	</quest>
-	
-	<!--SteelArmorCrafting -->
-	<quest id="jzquest_SteelArmorCraftingLv1">
-		<property name="name_key" value="jzquest_SteelArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv1Crafting_subtitle" />
+	<!-- Cloth Armor Boots-->
+	<quest id="jzquest_ClothBootsCraftingLv1">
+		<property name="name_key" value="jzquest_ClothBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothBootsCrafting" />
 		<property name="description_key" value="jzquest_Lv1Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
-
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_SteelArmorInspection" />
-			<property name="count" value="5" /><!--25-->
+			<property name="item" value="armorClothBoots" />
+			<property name="count" value="3" /><!--25-->
 		</objective>
-		
-		<reward type="Skill" id="jz_SteelArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_SteelArmorCraftingLv2" />
+		<reward type="Skill" id="jz_ClothBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothBootsCraftingLv2" />
     </quest>
-	<quest id="jzquest_SteelArmorCraftingLv2">
-		<property name="name_key" value="jzquest_SteelArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv2Crafting_subtitle" />
+	<quest id="jzquest_ClothBootsCraftingLv2">
+		<property name="name_key" value="jzquest_ClothBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothBootsCrafting" />
 		<property name="description_key" value="jzquest_Lv2Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4424,15 +4436,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_SteelArmorInspection" />
-			<property name="count" value="10" /><!--50-->
+			<property name="item" value="armorClothBoots" />
+			<property name="count" value="5" /><!--50-->
 		</objective>
-		<reward type="Skill" id="jz_SteelArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_SteelArmorCraftingLv3" />
+		<reward type="Skill" id="jz_ClothBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothBootsCraftingLv3" />
     </quest>
-	<quest id="jzquest_SteelArmorCraftingLv3">
-		<property name="name_key" value="jzquest_SteelArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv3Crafting_subtitle" />
+	<quest id="jzquest_ClothBootsCraftingLv3">
+		<property name="name_key" value="jzquest_ClothBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothBootsCrafting" />
 		<property name="description_key" value="jzquest_Lv3Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4440,15 +4452,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_SteelArmorInspection" />
-			<property name="count" value="20" /><!--100-->
+			<property name="item" value="armorClothBoots" />
+			<property name="count" value="10" /><!--100-->
 		</objective>
-		<reward type="Skill" id="jz_SteelArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_SteelArmorCraftingLv4" />
+		<reward type="Skill" id="jz_ClothBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothBootsCraftingLv4" />
     </quest>
-	<quest id="jzquest_SteelArmorCraftingLv4">
-		<property name="name_key" value="jzquest_SteelArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv4Crafting_subtitle" />
+	<quest id="jzquest_ClothBootsCraftingLv4">
+		<property name="name_key" value="jzquest_ClothBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothBootsCrafting" />
 		<property name="description_key" value="jzquest_Lv4Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4456,15 +4468,15 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_SteelArmorInspection" />
-			<property name="count" value="40" /><!--200-->
+			<property name="item" value="armorClothBoots" />
+			<property name="count" value="15" /><!--200-->
 		</objective>
-		<reward type="Skill" id="jz_SteelArmorCrafting" value="1" />
-		<reward type="Quest" id="jzquest_SteelArmorCraftingLv5Pt1" />
+		<reward type="Skill" id="jz_ClothBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ClothBootsCraftingLv5" />
     </quest>
-	<quest id="jzquest_SteelArmorCraftingLv5Pt1">
-		<property name="name_key" value="jzquest_SteelArmorCrafting" />
-		<property name="subtitle_key" value="jzquest_Lv5Crafting_subtitle" />
+	<quest id="jzquest_ClothBootsCraftingLv5">
+		<property name="name_key" value="jzquest_ClothBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_ClothBootsCrafting" />
 		<property name="description_key" value="jzquest_Lv5Crafting_description" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
@@ -4472,10 +4484,1610 @@
 		<property name="shareable" value="false" />
 		<objective type="Craft">
 			<property name="phase" value="1" />
-			<property name="item" value="jz_SteelArmorInspection" />
-			<property name="count" value="50" /><!--250-->
+			<property name="item" value="armorClothBoots" />
+			<property name="count" value="20" /><!--250-->
 		</objective>
-		<reward type="Skill" id="jz_SteelArmorCrafting" value="1" />		
+		<reward type="Skill" id="jz_ClothBootsCrafting" value="1" />	
+	</quest>
+	<!--Leather Armor Hood-->
+	<quest id="jzquest_LeatherHoodCraftingLv1">
+		<property name="name_key" value="jzquest_LeatherHoodCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherHoodCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherHood" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherHoodCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherHoodCraftingLv2" />
+    </quest>
+	<quest id="jzquest_LeatherHoodCraftingLv2">
+		<property name="name_key" value="jzquest_LeatherHoodCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherHoodCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherHood" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherHoodCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherHoodCraftingLv3" />
+    </quest>
+	<quest id="jzquest_LeatherHoodCraftingLv3">
+		<property name="name_key" value="jzquest_LeatherHoodCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherHoodCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherHood" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherHoodCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherHoodCraftingLv4" />
+    </quest>
+	<quest id="jzquest_LeatherHoodCraftingLv4">
+		<property name="name_key" value="jzquest_LeatherHoodCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherHoodCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherHood" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherHoodCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherHoodCraftingLv5Pt1" />
+    </quest>
+	<quest id="jzquest_LeatherHoodCraftingLv5Pt1">
+		<property name="name_key" value="jzquest_LeatherHoodCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherHoodCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherHood" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherHoodCrafting" value="1" />	
+	</quest>
+	<!-- Leather Armor Chest -->
+	<quest id="jzquest_LeatherChestCraftingLv1">
+		<property name="name_key" value="jzquest_LeatherChestCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherChestCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherChest" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherChestCraftingLv2" />
+    </quest>
+	<quest id="jzquest_LeatherChestCraftingLv2">
+		<property name="name_key" value="jzquest_LeatherChestCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherChestCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherChest" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherChestCraftingLv3" />
+    </quest>
+	<quest id="jzquest_LeatherChestCraftingLv3">
+		<property name="name_key" value="jzquest_LeatherChestCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherChestCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherChest" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherChestCraftingLv4" />
+    </quest>
+	<quest id="jzquest_LeatherChestCraftingLv4">
+		<property name="name_key" value="jzquest_LeatherChestCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherChestCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherChest" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherChestCraftingLv5" />
+    </quest>
+	<quest id="jzquest_LeatherChestCraftingLv5">
+		<property name="name_key" value="jzquest_LeatherChestCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherChestCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherChest" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherChestCrafting" value="1" />	
+	</quest>
+	<!--Leather Armor Gloves-->
+	<quest id="jzquest_LeatherGlovesCraftingLv1">
+		<property name="name_key" value="jzquest_LeatherGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherGloves" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherGlovesCraftingLv2" />
+    </quest>
+	<quest id="jzquest_LeatherGlovesCraftingLv2">
+		<property name="name_key" value="jzquest_LeatherGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherGloves" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherGlovesCraftingLv3" />
+    </quest>
+	<quest id="jzquest_LeatherGlovesCraftingLv3">
+		<property name="name_key" value="jzquest_LeatherGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherGloves" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherGlovesCraftingLv4" />
+    </quest>
+	<quest id="jzquest_LeatherGlovesCraftingLv4">
+		<property name="name_key" value="jzquest_LeatherGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherGloves" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherGlovesCraftingLv5" />
+    </quest>
+	<quest id="jzquest_LeatherGlovesCraftingLv5">
+		<property name="name_key" value="jzquest_LeatherGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherGloves" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherGlovesCrafting" value="1" />	
+	</quest>
+	<!-- Leather Armor Pants-->
+	<quest id="jzquest_LeatherPantsCraftingLv1">
+		<property name="name_key" value="jzquest_LeatherPantsCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherPantsCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherPants" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherPantsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherPantsCraftingLv2" />
+    </quest>
+	<quest id="jzquest_LeatherPantsCraftingLv2">
+		<property name="name_key" value="jzquest_LeatherPantsCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherPantsCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherPants" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherPantsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherPantsCraftingLv3" />
+    </quest>
+	<quest id="jzquest_LeatherPantsCraftingLv3">
+		<property name="name_key" value="jzquest_LeatherPantsCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherPantsCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherPants" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherPantsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherPantsCraftingLv4" />
+    </quest>
+	<quest id="jzquest_LeatherPantsCraftingLv4">
+		<property name="name_key" value="jzquest_LeatherPantsCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherPantsCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherPants" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherPantsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherPantsCraftingLv5" />
+    </quest>
+	<quest id="jzquest_LeatherPantsCraftingLv5">
+		<property name="name_key" value="jzquest_LeatherPantsCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherPantsCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherPants" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherPantsCrafting" value="1" />	
+	</quest>
+	<!-- Leather Armor Boots-->
+	<quest id="jzquest_LeatherBootsCraftingLv1">
+		<property name="name_key" value="jzquest_LeatherBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherBoots" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherBootsCraftingLv2" />
+    </quest>
+	<quest id="jzquest_LeatherBootsCraftingLv2">
+		<property name="name_key" value="jzquest_LeatherBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherBoots" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherBootsCraftingLv3" />
+    </quest>
+	<quest id="jzquest_LeatherBootsCraftingLv3">
+		<property name="name_key" value="jzquest_LeatherBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherBoots" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherBootsCraftingLv4" />
+    </quest>
+	<quest id="jzquest_LeatherBootsCraftingLv4">
+		<property name="name_key" value="jzquest_LeatherBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherBoots" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_LeatherBootsCraftingLv5" />
+    </quest>
+	<quest id="jzquest_LeatherBootsCraftingLv5">
+		<property name="name_key" value="jzquest_LeatherBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_LeatherBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorLeatherBoots" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_LeatherBootsCrafting" value="1" />	
+	</quest>
+	<!--Scrap Armor Helmet -->
+	<quest id="jzquest_ScrapHelmetCraftingLv1">
+		<property name="name_key" value="jzquest_ScrapHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapHelmet" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapHelmetCraftingLv2" />
+    </quest>
+	<quest id="jzquest_ScrapHelmetCraftingLv2">
+		<property name="name_key" value="jzquest_ScrapHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapHelmet" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapHelmetCraftingLv3" />
+    </quest>
+	<quest id="jzquest_ScrapHelmetCraftingLv3">
+		<property name="name_key" value="jzquest_ScrapHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapHelmet" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapHelmetCraftingLv4" />
+    </quest>
+	<quest id="jzquest_ScrapHelmetCraftingLv4">
+		<property name="name_key" value="jzquest_ScrapHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapHelmet" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapHelmetCraftingLv5" />
+    </quest>
+	<quest id="jzquest_ScrapHelmetCraftingLv5">
+		<property name="name_key" value="jzquest_ScrapHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapHelmet" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapHelmetCrafting" value="1" />	
+	</quest>
+	<!-- Scrap Armor Chest -->
+	<quest id="jzquest_ScrapChestCraftingLv1">
+		<property name="name_key" value="jzquest_ScrapChestCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapChestCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapChest" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapChestCraftingLv2" />
+    </quest>
+	<quest id="jzquest_ScrapChestCraftingLv2">
+		<property name="name_key" value="jzquest_ScrapChestCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapChestCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapChest" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapChestCraftingLv3" />
+    </quest>
+	<quest id="jzquest_ScrapChestCraftingLv3">
+		<property name="name_key" value="jzquest_ScrapChestCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapChestCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapChest" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapChestCraftingLv4" />
+    </quest>
+	<quest id="jzquest_ScrapChestCraftingLv4">
+		<property name="name_key" value="jzquest_ScrapChestCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapChestCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapChest" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapChestCraftingLv5" />
+    </quest>
+	<quest id="jzquest_ScrapChestCraftingLv5">
+		<property name="name_key" value="jzquest_ScrapChestCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapChestCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapChest" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapChestCrafting" value="1" />	
+	</quest>
+	<!--Scrap Armor Gloves -->
+	<quest id="jzquest_ScrapGlovesCraftingLv1">
+		<property name="name_key" value="jzquest_ScrapGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapGloves" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapGlovesCraftingLv2" />
+    </quest>
+	<quest id="jzquest_ScrapGlovesCraftingLv2">
+		<property name="name_key" value="jzquest_ScrapGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapGloves" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapGlovesCraftingLv3" />
+    </quest>
+	<quest id="jzquest_ScrapGlovesCraftingLv3">
+		<property name="name_key" value="jzquest_ScrapGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapGloves" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapGlovesCraftingLv4" />
+    </quest>
+	<quest id="jzquest_ScrapGlovesCraftingLv4">
+		<property name="name_key" value="jzquest_ScrapGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapGloves" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapGlovesCraftingLv5" />
+    </quest>
+	<quest id="jzquest_ScrapGlovesCraftingLv5">
+		<property name="name_key" value="jzquest_ScrapGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapGloves" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapGlovesCrafting" value="1" />	
+	</quest>
+	<!--Scrap Armor Legs-->
+	<quest id="jzquest_ScrapLegsCraftingLv1">
+		<property name="name_key" value="jzquest_ScrapLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapLegs" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapLegsCraftingLv2" />
+    </quest>
+	<quest id="jzquest_ScrapLegsCraftingLv2">
+		<property name="name_key" value="jzquest_ScrapLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapLegs" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapLegsCraftingLv3" />
+    </quest>
+	<quest id="jzquest_ScrapLegsCraftingLv3">
+		<property name="name_key" value="jzquest_ScrapLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapLegs" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapLegsCraftingLv4" />
+    </quest>
+	<quest id="jzquest_ScrapLegsCraftingLv4">
+		<property name="name_key" value="jzquest_ScrapLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapLegs" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapLegsCraftingLv5" />
+    </quest>
+	<quest id="jzquest_ScrapLegsCraftingLv5">
+		<property name="name_key" value="jzquest_ScrapLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapLegs" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapLegsCrafting" value="1" />	
+	</quest>
+	<!--Scrap Armor Boots -->
+	<quest id="jzquest_ScrapBootsCraftingLv1">
+		<property name="name_key" value="jzquest_ScrapBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapBoots" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapBootsCraftingLv2" />
+    </quest>
+	<quest id="jzquest_ScrapBootsCraftingLv2">
+		<property name="name_key" value="jzquest_ScrapBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapBoots" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapBootsCraftingLv3" />
+    </quest>
+	<quest id="jzquest_ScrapBootsCraftingLv3">
+		<property name="name_key" value="jzquest_ScrapBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapBoots" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapBootsCraftingLv4" />
+    </quest>
+	<quest id="jzquest_ScrapBootsCraftingLv4">
+		<property name="name_key" value="jzquest_ScrapBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapBoots" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_ScrapBootsCraftingLv5" />
+    </quest>
+	<quest id="jzquest_ScrapBootsCraftingLv5">
+		<property name="name_key" value="jzquest_ScrapBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_ScrapBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorScrapBoots" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_ScrapBootsCrafting" value="1" />	
+	</quest>
+	<!--Iron Armor Helmet-->
+	<quest id="jzquest_IronHelmetCraftingLv1">
+		<property name="name_key" value="jzquest_IronHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_IronHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronHelmet" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_IronHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronHelmetCraftingLv2" />
+    </quest>
+	<quest id="jzquest_IronHelmetCraftingLv2">
+		<property name="name_key" value="jzquest_IronHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_IronHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronHelmet" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_IronHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronHelmetCraftingLv3" />
+    </quest>
+	<quest id="jzquest_IronHelmetCraftingLv3">
+		<property name="name_key" value="jzquest_IronHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_IronHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronHelmet" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_IronHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronHelmetCraftingLv4" />
+    </quest>
+	<quest id="jzquest_IronHelmetCraftingLv4">
+		<property name="name_key" value="jzquest_IronHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_IronHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronHelmet" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_IronHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronHelmetCraftingLv5" />
+    </quest>
+	<quest id="jzquest_IronHelmetCraftingLv5">
+		<property name="name_key" value="jzquest_IronHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_IronHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronHelmet" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_IronHelmetCrafting" value="1" />	
+	</quest>
+	<!--Iron Armor Chest-->
+	<quest id="jzquest_IronChestCraftingLv1">
+		<property name="name_key" value="jzquest_IronChestCrafting" />
+		<property name="subtitle_key" value="jzquest_IronChestCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronChest" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_IronChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronChestCraftingLv2" />
+    </quest>
+	<quest id="jzquest_IronChestCraftingLv2">
+		<property name="name_key" value="jzquest_IronChestCrafting" />
+		<property name="subtitle_key" value="jzquest_IronChestCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronChest" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_IronChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronChestCraftingLv3" />
+    </quest>
+	<quest id="jzquest_IronChestCraftingLv3">
+		<property name="name_key" value="jzquest_IronChestCrafting" />
+		<property name="subtitle_key" value="jzquest_IronChestCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronChest" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_IronChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronChestCraftingLv4" />
+    </quest>
+	<quest id="jzquest_IronChestCraftingLv4">
+		<property name="name_key" value="jzquest_IronChestCrafting" />
+		<property name="subtitle_key" value="jzquest_IronChestCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronChest" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_IronChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronChestCraftingLv5" />
+    </quest>
+	<quest id="jzquest_IronChestCraftingLv5">
+		<property name="name_key" value="jzquest_IronChestCrafting" />
+		<property name="subtitle_key" value="jzquest_IronChestCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronChest" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_IronChestCrafting" value="1" />	
+	</quest>
+	<!--Iron Armor Gloves-->
+	<quest id="jzquest_IronGlovesCraftingLv1">
+		<property name="name_key" value="jzquest_IronGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_IronGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronGloves" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_IronGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronGlovesCraftingLv2" />
+    </quest>
+	<quest id="jzquest_IronGlovesCraftingLv2">
+		<property name="name_key" value="jzquest_IronGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_IronGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronGloves" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_IronGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronGlovesCraftingLv3" />
+    </quest>
+	<quest id="jzquest_IronGlovesCraftingLv3">
+		<property name="name_key" value="jzquest_IronGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_IronGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronGloves" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_IronGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronGlovesCraftingLv4" />
+    </quest>
+	<quest id="jzquest_IronGlovesCraftingLv4">
+		<property name="name_key" value="jzquest_IronGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_IronGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronGloves" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_IronGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronGlovesCraftingLv5" />
+    </quest>
+	<quest id="jzquest_IronGlovesCraftingLv5">
+		<property name="name_key" value="jzquest_IronGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_IronGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronGloves" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_IronGlovesCrafting" value="1" />	
+	</quest>
+	<!--Iron Armor Legs-->
+	<quest id="jzquest_IronLegsCraftingLv1">
+		<property name="name_key" value="jzquest_IronLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_IronLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronLegs" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_IronLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronLegsCraftingLv2" />
+    </quest>
+	<quest id="jzquest_IronLegsCraftingLv2">
+		<property name="name_key" value="jzquest_IronLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_IronLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronLegs" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_IronLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronLegsCraftingLv3" />
+    </quest>
+	<quest id="jzquest_IronLegsCraftingLv3">
+		<property name="name_key" value="jzquest_IronLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_IronLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronLegs" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_IronLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronLegsCraftingLv4" />
+    </quest>
+	<quest id="jzquest_IronLegsCraftingLv4">
+		<property name="name_key" value="jzquest_IronLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_IronLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronLegs" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_IronLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronLegsCraftingLv5" />
+    </quest>
+	<quest id="jzquest_IronLegsCraftingLv5">
+		<property name="name_key" value="jzquest_IronLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_IronLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronLegs" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_IronLegsCrafting" value="1" />	
+	</quest>
+	<!--Iron Armor Boots-->
+	<quest id="jzquest_IronBootsCraftingLv1">
+		<property name="name_key" value="jzquest_IronBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_IronBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronBoots" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_IronBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronBootsCraftingLv2" />
+    </quest>
+	<quest id="jzquest_IronBootsCraftingLv2">
+		<property name="name_key" value="jzquest_IronBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_IronBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronBoots" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_IronBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronBootsCraftingLv3" />
+    </quest>
+	<quest id="jzquest_IronBootsCraftingLv3">
+		<property name="name_key" value="jzquest_IronBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_IronBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronBoots" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_IronBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronBootsCraftingLv4" />
+    </quest>
+	<quest id="jzquest_IronBootsCraftingLv4">
+		<property name="name_key" value="jzquest_IronBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_IronBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronBoots" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_IronBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_IronBootsCraftingLv5" />
+    </quest>
+	<quest id="jzquest_IronBootsCraftingLv5">
+		<property name="name_key" value="jzquest_IronBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_IronBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorIronBoots" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_IronBootsCrafting" value="1" />	
+	</quest>
+	<!--Steel Armor Helmet-->
+	<quest id="jzquest_SteelHelmetCraftingLv1">
+		<property name="name_key" value="jzquest_SteelHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelHelmet" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_SteelHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelHelmetCraftingLv2" />
+    </quest>
+	<quest id="jzquest_SteelHelmetCraftingLv2">
+		<property name="name_key" value="jzquest_SteelHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelHelmet" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_SteelHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelHelmetCraftingLv3" />
+    </quest>
+	<quest id="jzquest_SteelHelmetCraftingLv3">
+		<property name="name_key" value="jzquest_SteelHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelHelmet" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_SteelHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelHelmetCraftingLv4" />
+    </quest>
+	<quest id="jzquest_SteelHelmetCraftingLv4">
+		<property name="name_key" value="jzquest_SteelHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelHelmet" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_SteelHelmetCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelHelmetCraftingLv5" />
+    </quest>
+	<quest id="jzquest_SteelHelmetCraftingLv5">
+		<property name="name_key" value="jzquest_SteelHelmetCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelHelmetCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelHelmet" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_SteelHelmetCrafting" value="1" />	
+	</quest>
+	<!--Steel Armor Chest-->
+	<quest id="jzquest_SteelChestCraftingLv1">
+		<property name="name_key" value="jzquest_SteelChestCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelChestCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelChest" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_SteelChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelChestCraftingLv2" />
+    </quest>
+	<quest id="jzquest_SteelChestCraftingLv2">
+		<property name="name_key" value="jzquest_SteelChestCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelChestCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelChest" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_SteelChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelChestCraftingLv3" />
+    </quest>
+	<quest id="jzquest_SteelChestCraftingLv3">
+		<property name="name_key" value="jzquest_SteelChestCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelChestCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelChest" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_SteelChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelChestCraftingLv4" />
+    </quest>
+	<quest id="jzquest_SteelChestCraftingLv4">
+		<property name="name_key" value="jzquest_SteelChestCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelChestCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelChest" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_SteelChestCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelChestCraftingLv5" />
+    </quest>
+	<quest id="jzquest_SteelChestCraftingLv5">
+		<property name="name_key" value="jzquest_SteelChestCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelChestCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelChest" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_SteelChestCrafting" value="1" />	
+	</quest>
+	<!--Steel Armor Gloves-->
+	<quest id="jzquest_SteelGlovesCraftingLv1">
+		<property name="name_key" value="jzquest_SteelGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelGloves" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_SteelGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelGlovesCraftingLv2" />
+    </quest>
+	<quest id="jzquest_SteelGlovesCraftingLv2">
+		<property name="name_key" value="jzquest_SteelGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelGloves" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_SteelGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelGlovesCraftingLv3" />
+    </quest>
+	<quest id="jzquest_SteelGlovesCraftingLv3">
+		<property name="name_key" value="jzquest_SteelGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelGloves" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_SteelGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelGlovesCraftingLv4" />
+    </quest>
+	<quest id="jzquest_SteelGlovesCraftingLv4">
+		<property name="name_key" value="jzquest_SteelGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelGloves" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_SteelGlovesCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelGlovesCraftingLv5" />
+    </quest>
+	<quest id="jzquest_SteelGlovesCraftingLv5">
+		<property name="name_key" value="jzquest_SteelGlovesCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelGlovesCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelGloves" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_SteelGlovesCrafting" value="1" />	
+	</quest>
+	<!--Steel Armor Legs-->
+	<quest id="jzquest_SteelLegsCraftingLv1">
+		<property name="name_key" value="jzquest_SteelLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelLegs" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_SteelLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelLegsCraftingLv2" />
+    </quest>
+	<quest id="jzquest_SteelLegsCraftingLv2">
+		<property name="name_key" value="jzquest_SteelLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelLegs" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_SteelLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelLegsCraftingLv3" />
+    </quest>
+	<quest id="jzquest_SteelLegsCraftingLv3">
+		<property name="name_key" value="jzquest_SteelLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelLegs" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_SteelLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelLegsCraftingLv4" />
+    </quest>
+	<quest id="jzquest_SteelLegsCraftingLv4">
+		<property name="name_key" value="jzquest_SteelLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelLegs" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_SteelLegsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelLegsCraftingLv5" />
+    </quest>
+	<quest id="jzquest_SteelLegsCraftingLv5">
+		<property name="name_key" value="jzquest_SteelLegsCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelLegsCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelLegs" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_SteelLegsCrafting" value="1" />	
+	</quest>
+	<!--Steel Armor Boots-->
+	<quest id="jzquest_SteelBootsCraftingLv1">
+		<property name="name_key" value="jzquest_SteelBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelBoots" />
+			<property name="count" value="3" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_SteelBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelBootsCraftingLv2" />
+    </quest>
+	<quest id="jzquest_SteelBootsCraftingLv2">
+		<property name="name_key" value="jzquest_SteelBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelBoots" />
+			<property name="count" value="5" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_SteelBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelBootsCraftingLv3" />
+    </quest>
+	<quest id="jzquest_SteelBootsCraftingLv3">
+		<property name="name_key" value="jzquest_SteelBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelBoots" />
+			<property name="count" value="10" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_SteelBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelBootsCraftingLv4" />
+    </quest>
+	<quest id="jzquest_SteelBootsCraftingLv4">
+		<property name="name_key" value="jzquest_SteelBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelBoots" />
+			<property name="count" value="15" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_SteelBootsCrafting" value="1" />
+		<reward type="Quest" id="jzquest_SteelBootsCraftingLv5" />
+    </quest>
+	<quest id="jzquest_SteelBootsCraftingLv5">
+		<property name="name_key" value="jzquest_SteelBootsCrafting" />
+		<property name="subtitle_key" value="jzquest_SteelBootsCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="armorSteelBoots" />
+			<property name="count" value="20" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_SteelBootsCrafting" value="1" />	
 	</quest>
 	
 	<!-- CHALLENGES -->

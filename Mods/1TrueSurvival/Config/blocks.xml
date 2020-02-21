@@ -19252,6 +19252,7 @@ NOT the TextureNumber.
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="jz_Plank" count="2,5" tag="allHarvest"/>
+	<drop event="Harvest" name="jz_MeleeTableLeg" count="1,4" tag="allHarvest"/>
 </block>
 
 <block name="rScrapIronTable">
@@ -29358,7 +29359,7 @@ NOT the TextureNumber.
 	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment" />
 	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)" />
     <property class="Workstation">
-	<property name="CraftingAreaRecipes" value="prepTable" />
+		<property name="CraftingAreaRecipes" value="prepTable" />
 		<property name="Modules" value="tools,output,material_input,fuel" />
 		<property name="InputMaterials" value="fruit,grain,veggie,protein" />
 	</property>
@@ -30443,11 +30444,7 @@ NOT the TextureNumber.
 	<property name="SelectAlternates" value="true" />
 	<property name="PlaceAltBlockValue" value="jz_FlagstoneFrameBlock,jz_FlagstoneFrameRamp,jz_FlagstoneFrameArch,jz_FlagstoneSlitHalf,jz_FlagstoneFrameCNRFull,jz_FlagstoneFrameCNRInside,flagstoneCNRRamp,jz_FlagstoneFrameCNRRampFiller,flagstoneCTRpole,jz_FlagstoneFrameGableInvertedHalf,jz_FlagstoneFrameGableInvertedQuarter,jz_FlagstoneFrameGableInvertedSteep,jz_FlagstoneFrameGableQuarter,jz_FlagstoneFrameHalf,jz_FlagstoneFramePillar100,flagstonePillar50,flagstonePlate,flagstonePole,flagstonePyramid,jz_FlagstoneFrameQuarterCNR,jz_FlagstoneFrameQuarterCNR3Way,jz_FlagstoneFrameQuarterSCtr,jz_FlagstoneFrameQuarterTeeSCtr,flagstoneStairs25,jz_FlagstoneFrameStairs25CornerCNR,jz_FlagstoneFrameWedge,jz_FlagstoneFrameWedgeCNRInsideBottom,jz_FlagstoneFrameWedgeCNRInsideSteepBase,jz_FlagstoneFrameWedgeCNRInsideSteepTop,jz_FlagstoneFrameWedgeCNRInsideTop,jz_FlagstoneFrameWedgeCNRSteepBase,jz_FlagstoneFrameWedgeCNRSteepTop,jz_FlagstoneFrameWedgeIncline,jz_FlagstoneFrameWedgeStairs,jz_FlagstoneFrameWedgeTip,jz_FlagstoneFrameWedgeTipCNRFullBottom,jz_FlagstoneFrameWedgeTipCNRFullTop,jz_FlagstoneFrameWedgeTipStairs"/>
 </block>
-<!--<property name="PlaceAltBlockValue" value="woodFrameBlock,woodFrameRamp,woodFrameArch,woodFrameCNRFull,woodFrameCNRInside,woodFrameCNRRampFiller,woodFrameGableInvertedHalf,woodFrameGableInvertedQuarter,woodFrameGableInvertedSteep,
-woodFrameGableQuarter,woodFrameHalf,woodFrameQuarterCNR,woodFrameQuarterCNR3Way,woodFrameQuarterSCtr,woodFrameQuarterTeeSCtr,woodFrameStairs25CornerCNR,woodFrameWedge,woodFrameWedgeCNRInsideBottom,
-woodFrameWedgeCNRInsideSteepBase,woodFrameWedgeCNRInsideSteepTop,woodFrameWedgeCNRInsideTop,woodFrameWedgeCNRSteepBase,woodFrameWedgeCNRSteepTop,woodFrameWedgeIncline,woodFrameWedgeStairs,woodFrameWedgeTipCNRFullBottom,
-woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
-	-->
+
 <block name="jz_BrickFrameBlock">
 	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CreativeMode" value="Player"/>
@@ -31101,13 +31098,6 @@ woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
 	<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
 	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
 	<property name="FilterTags" value="fdecor,fother"/>
-	<property name="PlaceAltBlockValue" value="jz_GoreBlockHumanBonesA,jz_GoreBlockHumanBones2,jz_GoreBlockHumanBones3,jz_GoreBlockHumanBones4,jz_GoreBlockHumanBones5,jz_GoreBlockHumanBones6,jz_GoreBlockHumanBones7,jz_GoreBlockHumanBones8,jz_GoreBlockHumanBones9,jz_GoreBlockHumanBones10"/> 
-</block>
-
-<block name="jz_GoreBlockHumanBonesA">
-	<property name="Extends" value="jz_GoreBlockHumanBones"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile1.unity3d?GoreBonePile1Prefab" />
 </block>
 
 <block name="jz_GoreBlockHumanBones2">
@@ -31163,6 +31153,16 @@ woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile10.unity3d?GoreBonePile10Prefab" />
 </block>
+
+<block name="jz_GoreBlockHumanBonesVariantHelper">
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
+	<property name="CustomIcon" value="pouredConcreteBlock"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>
+	<property name="ItemTypeIcon" value="all_blocks"/>
+	<property name="SelectAlternates" value="true" />
+	<property name="PlaceAltBlockValue" value="jz_GoreBlockHumanBonesA,jz_GoreBlockHumanBones2,jz_GoreBlockHumanBones3,jz_GoreBlockHumanBones4,jz_GoreBlockHumanBones5,jz_GoreBlockHumanBones6,jz_GoreBlockHumanBones7,jz_GoreBlockHumanBones8,jz_GoreBlockHumanBones9,jz_GoreBlockHumanBones10"/> 
+</block> 
 
 <block name="jz_GasTank">
 	<property name="CustomIcon" value="toolCookingPot"/>
@@ -31721,13 +31721,11 @@ woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
 	<property name="Model" value="#@modfolder:Resources/JZCreepy04.unity3d?Creepy04Prefab" />
 	<property name="MultiBlockDim" value="2,9,2"/>
 	<property name="BigDecorationRadius" value="5"/>
-	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
 	<property name="ImposterExclude" value="true"/>
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CanPlayersSpawnOn" value="false"/>
-	<!--<property name="IsTerrainDecoration" value="true"/>
-	<property name="IsDistantDecoration" value="true"/>--> 
 	<property name="OnlySimpleRotations" value="true"/>
 	<property name="ParticleOnDeath" value="treeGib_burnt"/>
 	<property name="FilterTags" value="foutdoor,ftrees"/>
@@ -31745,6 +31743,7 @@ woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
 	<property name="Extends" value="jz_MasterMutatedDecor"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZCreepy04Short.unity3d?Creepy04ShortPrefab" />
+	<property name="CanDecorateOnSlopes" value="true"/>
 </block>
 
 <block name="jz_Creepy02">
@@ -31757,6 +31756,7 @@ woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
 	<property name="Extends" value="jz_MasterMutatedDecor"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZCreepy07.unity3d?Creepy07Prefab" />
+	<property name="CanDecorateOnSlopes" value="true"/>
 </block>
 
 <block name="jz_Creepy07Short">
@@ -31806,12 +31806,14 @@ woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
 	<property name="Extends" value="jz_MasterMutatedDecor"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZCreepy18.unity3d?Creepy18Prefab" />
+	<property name="CanDecorateOnSlopes" value="true"/>
 </block>
 
 <block name="jz_Creepy25">
 	<property name="Extends" value="jz_MasterMutatedDecor"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZCreepy25.unity3d?Creepy25Prefab" />
+	<property name="CanDecorateOnSlopes" value="true"/>
 </block>
 
 <block name="jz_CreepyEye">
@@ -32009,10 +32011,12 @@ woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
 	<property name="Model" value="#@modfolder:Resources/JZLog1.unity3d?Log1Prefab" />
 	<property name="ModelOffset" value="0,.5,0"/>
 	<property name="CanDecorateOnSlopes" value="false"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="IsTerrainDecoration" value="true"/>
+	<property name="MultiBlockDim" value="5,1,1"/>
 	<property name="BigDecorationRadius" value="3"/>
-	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
+	<property name="IsPlant" value="true"/>
 	<property name="FilterTags" value="foutdoor,ftrees"/>
 	<property name="SortOrder1" value="a0d0"/>
 	<!--JZMOD ANY-->
@@ -32024,171 +32028,65 @@ woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
 </block>
 
 <block name="jz_DeadTreeDecor2">
-	<property name="Material" value="MtreeWoodSmall"/>
-	<property name="Path" value="solid"/>
-	<property name="Shape" value="ModelEntity"/>
+	<property name="Extends" value="jz_DeadTreeDecor1"/>
 	<property name="Model" value="#@modfolder:Resources/JZLog2.unity3d?Log2Prefab" />
-	<property name="ModelOffset" value="0,.5,0"/>
-	<property name="CanDecorateOnSlopes" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="BigDecorationRadius" value="3"/>
-	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
-	<property name="FilterTags" value="foutdoor,ftrees"/>
-	<property name="SortOrder1" value="a0d0"/>
-	<!--JZMOD ANY-->
-	<drop event="Destroy" name="jz_Stick" count="5,20"/>
-	<drop event="Destroy" name="jz_WoodBranch" count="2,10"/>
-	<drop event="Destroy" name="jz_LogSmall" count="1,2"/>
-	<drop event="Destroy" name="jz_HoneyComb" count="1,6" prob=".1"/>
-	<drop event="Destroy" name="jz_FoodGrubs" count="1,3" prob=".1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="MultiBlockDim" value="3,1,1"/>
 </block>
 
 <block name="jz_DeadTreeDecor3">
-	<property name="Material" value="MtreeWoodSmall"/>
-	<property name="Path" value="solid"/>
-	<property name="Shape" value="ModelEntity"/>
+	<property name="Extends" value="jz_DeadTreeDecor1"/>
 	<property name="Model" value="#@modfolder:Resources/JZLog3.unity3d?Log3Prefab" />
-	<property name="ModelOffset" value="0,.5,0"/>
-	<property name="CanDecorateOnSlopes" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
 	<property name="BigDecorationRadius" value="3"/>
-	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
-	<property name="FilterTags" value="foutdoor,ftrees"/>
-	<property name="SortOrder1" value="a0d0"/>
-	<!--JZMOD ANY-->
-	<drop event="Destroy" name="jz_Stick" count="5,20"/>
-	<drop event="Destroy" name="jz_WoodBranch" count="2,10"/>
-	<drop event="Destroy" name="jz_LogSmall" count="1,2"/>
-	<drop event="Destroy" name="jz_HoneyComb" count="1,6" prob=".1"/>
-	<drop event="Destroy" name="jz_FoodGrubs" count="1,3" prob=".1"/>
+	<property name="MultiBlockDim" value="4,1,1"/>
 </block>
 
 <block name="jz_DeadTreeDecor4">
-	<property name="Material" value="MtreeWoodSmall"/>
-	<property name="Path" value="solid"/>
-	<property name="Shape" value="ModelEntity"/>
+	<property name="Extends" value="jz_DeadTreeDecor1"/>
 	<property name="Model" value="#@modfolder:Resources/JZLog4.unity3d?Log4Prefab" />
-	<property name="ModelOffset" value="0,.5,0"/>
-	<property name="CanDecorateOnSlopes" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="BigDecorationRadius" value="3"/>
-	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
-	<property name="FilterTags" value="foutdoor,ftrees"/>
-	<property name="SortOrder1" value="a0d0"/>
-	<!--JZMOD ANY-->
-	<drop event="Destroy" name="jz_Stick" count="5,20"/>
-	<drop event="Destroy" name="jz_WoodBranch" count="2,10"/>
-	<drop event="Destroy" name="jz_LogSmall" count="1,2"/>
-	<drop event="Destroy" name="jz_HoneyComb" count="1,6" prob=".1"/>
-	<drop event="Destroy" name="jz_FoodGrubs" count="1,3" prob=".1"/>
+	<property name="BigDecorationRadius" value="1"/>
+	<property name="MultiBlockDim" value="1,1,1"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
 </block>
 
-<block name="jz_DeadTreeDecor5">
-	<property name="Material" value="MtreeWoodSmall"/>
-	<property name="Path" value="solid"/>
-	<property name="Shape" value="ModelEntity"/>
+<block name="jz_DeadTreeDecor5"><!-- JZMOD BROKEN NEEDS HITBOX -->
+	<property name="Extends" value="jz_DeadTreeDecor1"/>
 	<property name="Model" value="#@modfolder:Resources/JZLog5.unity3d?Log5Prefab" />
-	<property name="ModelOffset" value="0,.5,0"/>
-	<property name="CanDecorateOnSlopes" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="BigDecorationRadius" value="3"/>
-	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
-	<property name="FilterTags" value="foutdoor,ftrees"/>
-	<property name="SortOrder1" value="a0d0"/>
-	<!--JZMOD ANY-->
-	<drop event="Destroy" name="jz_Stick" count="5,20"/>
-	<drop event="Destroy" name="jz_WoodBranch" count="2,10"/>
-	<drop event="Destroy" name="jz_LogSmall" count="1,2"/>
-	<drop event="Destroy" name="jz_HoneyComb" count="1,6" prob=".1"/>
-	<drop event="Destroy" name="jz_FoodGrubs" count="1,3" prob=".1"/>
+	<property name="BigDecorationRadius" value="1"/>
+	<property name="MultiBlockDim" value="1,1,1"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
 </block>
 
 <block name="jz_DeadTreeDecor6">
-	<property name="Material" value="MtreeWoodSmall"/>
-	<property name="Path" value="solid"/>
-	<property name="Shape" value="ModelEntity"/>
+	<property name="Extends" value="jz_DeadTreeDecor1"/>
 	<property name="Model" value="#@modfolder:Resources/JZLog6.unity3d?Log6Prefab" />
-	<property name="ModelOffset" value="0,.5,0"/>
-	<property name="CanDecorateOnSlopes" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="BigDecorationRadius" value="3"/>
-	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
-	<property name="FilterTags" value="foutdoor,ftrees"/>
-	<property name="SortOrder1" value="a0d0"/>
-	<!--JZMOD ANY-->
-	<drop event="Destroy" name="jz_Stick" count="5,20"/>
-	<drop event="Destroy" name="jz_WoodBranch" count="2,10"/>
-	<drop event="Destroy" name="jz_LogSmall" count="1,2"/>
-	<drop event="Destroy" name="jz_HoneyComb" count="1,6" prob=".1"/>
-	<drop event="Destroy" name="jz_FoodGrubs" count="1,3" prob=".1"/>
+	<property name="BigDecorationRadius" value="1"/>
+	<property name="MultiBlockDim" value="1,1,1"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
 </block>
 
-<block name="jz_DeadTreeDecor7"><!-- JZMOD BROKEN NEEDS FIXN -->
-	<property name="Material" value="MtreeWoodSmall"/>
-	<property name="Path" value="solid"/>
-	<property name="Shape" value="ModelEntity"/>
+<block name="jz_DeadTreeDecor7">
+	<property name="Extends" value="jz_DeadTreeDecor1"/>
 	<property name="Model" value="#@modfolder:Resources/JZLog7.unity3d?Log7Prefab" />
-	<property name="ModelOffset" value="0,.5,0"/>
-	<property name="CanDecorateOnSlopes" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="BigDecorationRadius" value="3"/>
-	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
-	<property name="FilterTags" value="foutdoor,ftrees"/>
-	<property name="SortOrder1" value="a0d0"/>
-	<!--JZMOD ANY-->
-	<drop event="Destroy" name="jz_Stick" count="5,20"/>
-	<drop event="Destroy" name="jz_WoodBranch" count="2,10"/>
-	<drop event="Destroy" name="jz_LogSmall" count="1,2"/>
-	<drop event="Destroy" name="jz_HoneyComb" count="1,6" prob=".1"/>
-	<drop event="Destroy" name="jz_FoodGrubs" count="1,3" prob=".1"/>
+	<property name="BigDecorationRadius" value="1"/>
+	<property name="MultiBlockDim" value="1,1,1"/>
+	<property name="CanDecorateOnSlopes" value="true"/>
 </block>
 
 <block name="jz_DeadTreeDecor8">
-	<property name="Material" value="MtreeWoodSmall"/>
-	<property name="Path" value="solid"/>
-	<property name="Shape" value="ModelEntity"/>
+	<property name="Extends" value="jz_DeadTreeDecor1"/>
 	<property name="Model" value="#@modfolder:Resources/JZLog8.unity3d?Log8Prefab" />
-	<property name="ModelOffset" value="0,.5,0"/>
-	<property name="CanDecorateOnSlopes" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
 	<property name="BigDecorationRadius" value="3"/>
-	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
-	<property name="FilterTags" value="foutdoor,ftrees"/>
-	<property name="SortOrder1" value="a0d0"/>
-	<!--JZMOD ANY-->
-	<drop event="Destroy" name="jz_Stick" count="5,20"/>
-	<drop event="Destroy" name="jz_WoodBranch" count="2,10"/>
-	<drop event="Destroy" name="jz_LogSmall" count="1,2"/>
-	<drop event="Destroy" name="jz_HoneyComb" count="1,6" prob=".1"/>
-	<drop event="Destroy" name="jz_FoodGrubs" count="1,3" prob=".1"/>
+	<property name="MultiBlockDim" value="4,1,1"/>
 </block>
 
 <block name="jz_DeadTreeDecor9">
-	<property name="Material" value="MtreeWoodSmall"/>
-	<property name="Path" value="solid"/>
-	<property name="Shape" value="ModelEntity"/>
+	<property name="Extends" value="jz_DeadTreeDecor1"/>
 	<property name="Model" value="#@modfolder:Resources/JZLog9.unity3d?Log9Prefab" />
-	<property name="ModelOffset" value="0,.5,0"/>
-	<property name="CanDecorateOnSlopes" value="false"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="IsTerrainDecoration" value="true"/>
 	<property name="BigDecorationRadius" value="3"/>
-	<property name="IsPlant" value="true"/> <!-- it shall never be placed on rocks -->
-	<property name="FilterTags" value="foutdoor,ftrees"/>
-	<property name="SortOrder1" value="a0d0"/>
-	<!--JZMOD ANY-->
-	<drop event="Destroy" name="jz_Stick" count="5,20"/>
-	<drop event="Destroy" name="jz_WoodBranch" count="2,10"/>
-	<drop event="Destroy" name="jz_LogSmall" count="1,2"/>
-	<drop event="Destroy" name="jz_HoneyComb" count="1,6" prob=".1"/>
-	<drop event="Destroy" name="jz_FoodGrubs" count="1,3" prob=".1"/>
+	<property name="MultiBlockDim" value="7,1,1"/>
 </block>
 
 <block name="jz_QIBugOutBagLoot">
@@ -32220,14 +32118,238 @@ woodFrameWedgeTipCNRFullTop,woodFrameWedgeTipStairs"/>
 	<property name="DowngradeBlock" value="jz_QIBugOutBagLoot" />
 </block>
 
+<!--JZMOD CHILLIS -->
+<block name="jz_PlantedChillis1">
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="CreativeMode" value="Player"/>
+	<!--<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>-->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedChillis2"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="jz_PlantedChillis1" count="1"/>
+</block>
 
+<block name="jz_PlantedChillis2">
+	<property name="Extends" value="cropsGrowingMaster"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmChillisMid.unity3d?FarmChillisMidPrefab" />
+	<property name="PlantGrowing.Next" value="jz_PlantedChillis3HarvestPlayer"/>
+	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
+</block>
 
+<block name="jz_PlantedChillis3Harvest">
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmChillisGrown.unity3d?FarmChillisGrownPrefab" />
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/>
+</block>
 
+<block name="jz_PlantedChillisHarvestRandomHelper">
+	<property name="Extends" value="jz_PlantedChillis3Harvest" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="jz_PlantedChillis3Harvest"/> <property name="CustomIconTint" value="ff8080"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
+</block>
 
+<block name="jz_PlantedChillis3HarvestPlayer">
+	<property name="Extends" value="jz_PlantedChillis3Harvest"/>
+	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="CreativeMode" value="Dev"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
+	<property name="DowngradeBlock" value="jz_PlantedChillis1"/>
+</block>
+<!--JZMOD CUCUMBER-->
+<block name="jz_PlantedCucumber1">
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="CreativeMode" value="Player"/>
+	<!--<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>-->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedCucumber2"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="jz_PlantedCucumber1" count="1"/>
+</block>
 
+<block name="jz_PlantedCucumber2">
+	<property name="Extends" value="cropsGrowingMaster"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
+	<property name="PlantGrowing.Next" value="jz_PlantedCucumber3HarvestPlayer"/>
+	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
+</block>
 
+<block name="jz_PlantedCucumber3Harvest">
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/>
+</block>
 
+<block name="jz_PlantedCucumberHarvestRandomHelper">
+	<property name="Extends" value="jz_PlantedCucumber3Harvest" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="jz_PlantedCucumber3Harvest"/> <property name="CustomIconTint" value="ff8080"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
+</block>
 
+<block name="jz_PlantedCucumber3HarvestPlayer">
+	<property name="Extends" value="jz_PlantedCucumber3Harvest"/>
+	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="CreativeMode" value="Dev"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
+	<property name="DowngradeBlock" value="jz_PlantedCucumber1"/>
+</block>
+<!--JZMOD EGG PLANT-->
+<block name="jz_PlantedEggPlant1">
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="CreativeMode" value="Player"/>
+	<!--<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>-->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedEggPlant2"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="jz_PlantedEggPlant1" count="1"/>
+</block>
+
+<block name="jz_PlantedEggPlant2">
+	<property name="Extends" value="cropsGrowingMaster"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property name="PlantGrowing.Next" value="jz_PlantedEggPlant3HarvestPlayer"/>
+	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
+</block>
+
+<block name="jz_PlantedEggPlant3Harvest">
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantGrown.unity3d?FarmEggPlantGrownPrefab" />
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/>
+</block>
+
+<block name="jz_PlantedEggPlantHarvestRandomHelper">
+	<property name="Extends" value="jz_PlantedEggPlant3Harvest" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="jz_PlantedEggPlant3Harvest"/> <property name="CustomIconTint" value="ff8080"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
+</block>
+
+<block name="jz_PlantedEggPlant3HarvestPlayer">
+	<property name="Extends" value="jz_PlantedEggPlant3Harvest"/>
+	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="CreativeMode" value="Dev"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
+	<property name="DowngradeBlock" value="jz_PlantedEggPlant1"/>
+</block>
+<!--JZMOD LEEK-->
+<block name="jz_PlantedLeek1">
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="CreativeMode" value="Player"/>
+	<!--<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>-->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedLeek2"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="jz_PlantedLeek1" count="1"/>
+</block>
+
+<block name="jz_PlantedLeek2">
+	<property name="Extends" value="cropsGrowingMaster"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmLeekMid.unity3d?FarmLeekMidPrefab" />
+	<property name="ModelOffset" value="0,.5,0"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedLeek3HarvestPlayer"/>
+	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
+</block>
+
+<block name="jz_PlantedLeek3Harvest">
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmLeekGrown.unity3d?FarmLeekGrownPrefab" />
+	<property name="ModelOffset" value="0,-.1,0"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/>
+</block>
+
+<block name="jz_PlantedLeekHarvestRandomHelper">
+	<property name="Extends" value="jz_PlantedLeek3Harvest" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="jz_PlantedLeek3Harvest"/> <property name="CustomIconTint" value="ff8080"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
+</block>
+
+<block name="jz_PlantedLeek3HarvestPlayer">
+	<property name="Extends" value="jz_PlantedLeek3Harvest"/>
+	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="CreativeMode" value="Dev"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
+	<property name="DowngradeBlock" value="jz_PlantedLeek1"/>
+</block>
+<!--JZMOD CARROT-->
+<block name="jz_PlantedCarrot1">
+	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+	<property name="CreativeMode" value="Player"/>
+	<!--<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>-->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedCarrot2"/>
+	<property name="Group" value="Food/Cooking"/>
+	<drop event="Destroy" name="jz_PlantedCarrot1" count="1"/>
+</block>
+
+<block name="jz_PlantedCarrot2">
+	<property name="Extends" value="cropsGrowingMaster"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property name="PlantGrowing.Next" value="jz_PlantedCarrot3HarvestPlayer"/>
+	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
+</block>
+
+<block name="jz_PlantedCarrot3Harvest">
+	<property name="Extends" value="cropsHarvestableMaster"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCarrotGrown.unity3d?CarrotGrownPrefab" />
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/>
+</block>
+
+<block name="jz_PlantedCarrotHarvestRandomHelper">
+	<property name="Extends" value="jz_PlantedCarrot3Harvest" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="jz_PlantedCarrot3Harvest"/> <property name="CustomIconTint" value="ff8080"/>
+	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+	<property name="DisplayInfo" value="Name"/>
+	<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
+</block>
+
+<block name="jz_PlantedCarrot3HarvestPlayer">
+	<property name="Extends" value="jz_PlantedCarrot3Harvest"/>
+	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="CreativeMode" value="Dev"/>
+	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
+	<property name="DowngradeBlock" value="jz_PlantedCarrot1"/>
+</block>
 
 
 
