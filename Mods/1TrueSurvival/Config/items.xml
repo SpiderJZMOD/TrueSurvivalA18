@@ -11019,6 +11019,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value=".2"/><display_value name="TSGrain" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value=".2"/><display_value name="TSProtein" value=".2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="1"/><display_value name="TSWellness" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugVitamins"/>
 	</effect_group>

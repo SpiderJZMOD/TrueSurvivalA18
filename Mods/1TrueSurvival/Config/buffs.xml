@@ -825,7 +825,6 @@
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerGrainVitamin" operation="add" value="4"/><!--GrainVitamin-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerProteinVitamin" operation="add" value="4"/><!--ProteinVitamin-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="add" value="100"/><!--Food-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodAmountAdd" operation="add" value="99"/><!--Tiredness-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_WellnessLv" operation="add" value="80"/><!--Wellness-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="80"/><!--Health-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="48"/><!--Hydration-->
@@ -2528,13 +2527,13 @@
 	<buff name="buffIllFoodPoisoning01" remove_on_death="false" name_key="buffIllFoodPoisoning01Name" description_key="buffIllFoodPoisoning01Desc" tooltip_key="buffIllFoodPoisoning01Tooltip" icon="ui_game_symbol_food_poisoning" icon_color="255,128,0">
 		<damage_type value="Disease"/>
 		<stack_type value="ignore"/>
-		<duration value="5"/>
+		<duration value="300"/>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Water" operation="add" value="-20"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="set" value="3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPuking01"/>
 			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="player#vomit"/>
 
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="set" value="0"/>
@@ -2542,8 +2541,7 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealHealth">
 					<requirement name="CVarCompare" cvar="medicalHealthAmount" operation="LTE" value="0"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealStaminaMax"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealWaterMax"/>
+		
 		</effect_group>
 	</buff>
 
@@ -3012,7 +3010,6 @@
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffDoingHealingWrong"/><!-- display "Dude, you are doing it wrong!" message -->
 		</effect_group>
 		<effect_group>
-			<requirement name="NotHasBuff" buff="buffIllFoodPoisoning01"/>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffHealHealth">
 					<requirement name="CVarCompare" target="self" cvar="foodHealthAmount" operation="GT" value="0"/></triggered_effect>
 				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="buffHealHealth">
@@ -3154,6 +3151,11 @@
 		<duration value="0"/>
 		<effect_group>
 			<requirement name="CVarCompare" target="self" cvar="FoodGainSuspend" operation="Equals" value="0"/>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPuking01">
+				<requirement name="HasBuff" buff="buffIllFoodPoisoning01"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="GTE" value="60"/>
+			</triggered_effect>
 			
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="jz_BuffPlayerFoodNotificationOC">
 				<requirement name="NotHasBuff" buff="jz_BuffPlayerFoodNotification"/>
@@ -3545,14 +3547,14 @@
 		<duration value="4"/>
 		<update_rate value="2"/>
 		<effect_group>
-			<passive_effect name="StaminaMaxModifierOT" operation="base_add" value="-12.5"/><!--Tiredness-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="water" operation="subtract" value="50"/>
 			<passive_effect name="WalkSpeed" operation="perc_add" duration="0,4" value="-.9,-.7"/>
 			<passive_effect name="RunSpeed" operation="perc_add" duration="0,4" value="-.9,-.7"/>
 			<passive_effect name="CrouchSpeed" operation="perc_add" duration="0,4" value="-.9,-.7"/>
-
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmount" operation="set" value="1">
-				<requirement name="CVarCompare" cvar="$foodAmount" operation="GT" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_PlayerAwakeDrain" operation="add" value="8"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Water" operation="subtract" value="25"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerFoodStat" operation="set" value="10">
+				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="GT" value="10"/>
 			</triggered_effect>
 
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="0.4" fade=".8" effect_name="Drunk"/>
