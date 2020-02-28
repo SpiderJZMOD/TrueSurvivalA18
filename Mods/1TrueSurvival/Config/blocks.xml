@@ -19251,6 +19251,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<!--JZMOD ANY-->
+	<drop event="Destroy" count="0"/>
 	<drop event="Harvest" name="jz_Plank" count="2,5" tag="allHarvest"/>
 	<drop event="Harvest" name="jz_MeleeTableLeg" count="1,4" tag="allHarvest"/>
 </block>
@@ -19326,6 +19327,7 @@ NOT the TextureNumber.
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
     <drop event="Harvest" name="resourceScrapIron" count="5,10" tag="allHarvest"/>
     <drop event="Harvest" name="jz_Plank" count="2,5" tag="allHarvest"/>
+	<drop event="Destroy" count="0"/>
 	<!--JZMOD CROWBAR-->		
 	<drop event="Harvest" name="decoPicnicTable" count="1" prob="1" tag="ToolCrowbar"/>
 </block>
@@ -29678,6 +29680,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="ui_game_symbol_narrowLog"/>
 	<property name="LightOpacity" value="0"/>
 	<property name="UseGlobalUV" value="Local"/>
+	<property name="FuelValue" value="100"/>
 	<property name="ImposterDontBlock" value="true"/>
 	<property name="ImposterExchange" value="imposterDontBlockCTRQuarter" param1="67"/>
 </block>
@@ -31244,6 +31247,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesBulldozer">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31262,6 +31266,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesForkLift">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31271,6 +31276,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesGarbageTruck">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31325,6 +31331,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesPolice">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="LootList" value="321" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31362,6 +31369,7 @@ NOT the TextureNumber.
 	<property name="Model" value="#@modfolder:Resources/JZVehicleTaxi.unity3d?VehicleTaxiPrefab" />
 	<property name="DowngradeBlock" value="cntCar03SedanDamage1v01"/>
 </block>
+
 <block name="jz_VehiclesTowTruck">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
 	<property name="CreativeMode" value="Player"/>
@@ -31373,6 +31381,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesTractor">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="LootList" value="325" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31430,6 +31439,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehicleOpen18Wheeler">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31439,6 +31449,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesCementTruck">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31448,6 +31459,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesCoolerTrailer">
 	<property name="Extends" value="cntCar03SedanDamage2Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31457,6 +31469,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesFlatBed">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31466,6 +31479,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesBigRigRed">
 	<property name="Extends" value="cntCar03SedanDamage0Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31475,6 +31489,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesWreckedBigRigCab">
 	<property name="Extends" value="cntCar03SedanDamage2Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31483,6 +31498,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesWreckedRigTrailer">
 	<property name="Extends" value="cntCar03SedanDamage2Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31491,6 +31507,7 @@ NOT the TextureNumber.
 
 <block name="jz_VehiclesWreckedTanker">
 	<property name="Extends" value="cntCar03SedanDamage2Master"/>
+	<property name="LootList" value="326" />
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIconTint" value="5050d0"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -31572,14 +31589,37 @@ NOT the TextureNumber.
 	<drop event="Destroy" name="resourceScrapIron" count="1,15"/>
 </block>
 
+<block name="jz_MasterMilitaryVehicleLocked">
+	<property name="Class" value="SecureLoot"/>
+	<property name="Material" value="Msteel"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZVehicleTank.unity3d?VehicleTankPrefab" />
+	<property name="LootList" value="323"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Place" value="TowardsPlacer"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="3,3,7"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="ShowModelOnFall" value="false"/>
+	<property name="PassThroughDamage" value="true"/>
+	<property name="DowngradeBlock" value="jz_MasterMilitaryVehicle1"/>
+		<property name="LockPickItem" value="resourceLockPick"/>
+		<property name="LockPickTime" value="30"/>
+		<property name="LockPickBreakChance" value="0.75"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapSteelPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="FilterTags" value="floot"/>
+</block>
+
 <block name="jz_MasterMilitaryVehicle1"><!-- Good Car -->
 	<property name="CreativeMode" value="Player"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="Class" value="CarExplodeLoot"/> <!-- cars explode when destroyed by a tool without harvest settings -->
+	<property name="Material" value="Msteel"/>
+	<property name="Class" value="CarExplodeLoot"/> 
 	<property name="CustomIcon" value="ui_game_symbol_NoIcon"/>
 	<property name="ItemTypeIcon" value="explosion"/>
-	<property name="LootList" value="19"/>
-	<property name="Tags" value="jz_IronBuilding"/>
+	<property name="LootList" value="323"/>
+	<property name="Tags" value="ToolWrench"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehicleTank.unity3d?VehicleTankPrefab" />
 	<property name="IsTerrainDecoration" value="true"/>
@@ -31613,11 +31653,12 @@ NOT the TextureNumber.
 
 <block name="jz_MasterMilitaryVehicle2"> <!-- car wreck -->
 	<property name="CreativeMode" value="Player"/>
-	<property name="Class" value="CarExplode"/>
+	<property name="Class" value="CarExplodeLoot"/>
 	<property name="CustomIcon" value="cntCar03SedanDamage0Master"/> <property name="CustomIconTint" value="ff8080"/>
 	<property name="ItemTypeIcon" value="explosion"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="Tags" value="jz_IronBuilding"/>
+	<property name="LootList" value="324"/>
+	<property name="Material" value="Msteel"/>
+	<property name="Tags" value="ToolWrench"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZVehicleWreckedTank.unity3d?VehicleWreckedTankPrefab" />
 	<property name="ImposterDontBlock" value="true"/>

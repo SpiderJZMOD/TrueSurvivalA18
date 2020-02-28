@@ -748,6 +748,9 @@
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$illnessChance" operation="set" value="20">
 				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="Equals" value="1"/> </triggered_effect>
 			<!-- JZMOD IRONGUT/WEAKSTOMACH : food poisoning / dysentery resistence -->
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="0">
+				<requirement name="ProgressionLevel" progression_name="jz_TraitIronGut" operation="Equals" value="1"/>
+				<requirement name="ProgressionLevel" progression_name="jz_TraitWeakStomach" operation="Equals" value="1"/> </triggered_effect>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="-15">
 				<requirement name="ProgressionLevel" progression_name="jz_TraitIronGut" operation="Equals" value="1"/></triggered_effect>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="15">
@@ -761,11 +764,6 @@
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="multiply" value="@$MetabolismResist"/>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="1" operation="divide" value="@$MetabolismDuration"/>
-			<!-- perkPhysician update -->
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="healthPerkIncrease" operation="set" value="2">
-				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="Equals" value="1"/></triggered_effect>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="medicPerkIncrease" operation="set" value="1">
-				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="Equals" value="1"/></triggered_effect>
 			<!-- Gymnast update -->
 			<!-- 1m = .01414 -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$parkourBonus" operation="set" value="0">
@@ -776,6 +774,9 @@
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="fatigueBonus" operation="set" value="1">
 				<requirement name="ProgressionLevel" progression_name="jz_TraitWakeful" operation="Equals" value="0"/>
 				<requirement name="ProgressionLevel" progression_name="jz_TraitSleepy" operation="Equals" value="0"/> </triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="fatigueBonus" operation="set" value="1">
+				<requirement name="ProgressionLevel" progression_name="jz_TraitWakeful" operation="Equals" value="1"/>
+				<requirement name="ProgressionLevel" progression_name="jz_TraitSleepy" operation="Equals" value="1"/> </triggered_effect>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="fatigueBonus" operation="set" value=".8">
 				<requirement name="ProgressionLevel" progression_name="jz_TraitWakeful" operation="Equals" value="1"/> </triggered_effect>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="fatigueBonus" operation="set" value="1.2">
@@ -3066,7 +3067,7 @@
 		</effect_group>
 	</buff>
 	
-	<buff name="buffHealHealth" name_key="buffHealHealthName" description_key="buffHealHealthDesc" icon="ui_game_symbol_add">
+	<buff name="buffHealHealth" name_key="buffHealHealthName" description_key="buffHealHealthDesc" icon="ui_game_symbol_healing_factor">
 		<stack_type value="ignore"/>
 		<update_rate value="1"/>
 		<effect_group>
@@ -3306,7 +3307,7 @@
 		</effect_group>
 	</buff>
 	<!-- FATIGUE RECOVERY-->
-	<buff name="buffHealStaminaMax" name_key="buffHealStaminaMaxName" hidden="true">
+	<buff name="buffHealStaminaMax" hidden="true">
 		<stack_type value="ignore"/>
 		
 		<update_rate value="1">
@@ -5273,56 +5274,287 @@ icon="ui_game_symbol_pack_mule"
 				<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LT" value="101"/></triggered_effect>	
 		</effect_group>
 	</buff>
-	
-	<buff name="jz_BuffCanOpener" hidden="true" remove_on_death="true">
+	<!-- FATIGUE RECOVERY TRIGGERS-->
+	<buff name="jz_BuffRestingMeleeCancellation" hidden="true" remove_on_death="true">  
 		<stack_type value="ignore"/>
+		<duration value="10"/>
+	</buff>
+	<!-- HARD FURNITURE -->
+	<buff name="jz_BuffFurniturHardRecover" hidden="true" remove_on_death="true"> 
+		<stack_type value="ignore"/>
+		
+		<duration value=".5">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+		<duration value=".4">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+		<duration value=".6">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+			
+		<effect_group>
+			<requirement name="!IsStatAtMax" stat="maxstamina"/>
+			<requirement name="NotHasBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<requirement name="NotHasBuff" buff="jz_BuffCloseToZombie"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffFurniturHardRecoverWorking"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffFurniturHardRecoverWorking" hidden="false" remove_on_death="true" name_key="Resting" description_key="You are resting on uncomfortable furniture. You are refilling your Fatigue Bar very slowly" icon="ui_game_symbol_seats" >
+		<stack_type value="replace"/>
 		<duration value="0"/>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="foodCanStock"/>
+			<requirement name="!IsStatAtMax" stat="maxstamina"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="0.2" />
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="!IsStatAtMax" stat="maxstamina"/>
+			<requirement name="CVarCompare" cvar=".jz_PlayerResting" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="-1"/>
+		</effect_group>
+		<effect_group>
+			<requirements compare_type="or">
+				<requirement name="IsStatAtMax" stat="maxstamina"/>
+                <requirement name="CVarCompare" cvar=".jz_PlayerResting" operation="LT" value="1"/>
+            </requirements>	
+				<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="jz_BuffFurniturHardRecoverWorking" />
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffFurniturHardRecoverWorking"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="jz_BuffFurniturHardRecoverWorking"/>
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="jz_BuffRestingMeleeCancellation"/>
 		</effect_group>
 	</buff>
-	<!-- FATIGUE RECOVERY TRIGGERS-->
-	<buff name="jz_BuffFurniturHardRecover" hidden="false" remove_on_death="true" name_key="Resting" description_key="You are resting on uncomfortable furniture. You are refilling your Fatigue Bar very slowly" icon="ui_game_symbol_seats" >
+	<!-- SOFT FURNITURE -->
+	<buff name="jz_BuffFurniturSoftRecover" hidden="true" remove_on_death="true"> 
 		<stack_type value="ignore"/>
-		<duration value="5"/>
+		
+		<duration value=".5">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+		<duration value=".4">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+		<duration value=".6">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+			
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			<requirement name="!IsStatAtMax" stat="maxstamina"/>
+			<requirement name="NotHasBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<requirement name="NotHasBuff" buff="jz_BuffCloseToZombie"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffFurniturSoftRecoverWorking"/>
 		</effect_group>
 	</buff>
-	<buff name="jz_BuffFurniturSoftRecover" hidden="false" remove_on_death="true" name_key="Resting Comfortably" description_key="You are resting on comfortable furniture. You are refilling your Fatigue Bar slowly" icon="ui_game_symbol_seats" >
-		<stack_type value="ignore"/>
-		<duration value="5"/>
+	
+	<buff name="jz_BuffFurniturSoftRecoverWorking" hidden="false" remove_on_death="true" name_key="Resting Comfortably" description_key="You are resting on comfortable furniture. You are refilling your Fatigue Bar slowly" icon="ui_game_symbol_seats" >
+		<stack_type value="replace"/>
+		<duration value="0"/>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="2"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			<requirement name="!IsStatAtMax" stat="maxstamina"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="0.2" />
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="!IsStatAtMax" stat="maxstamina"/>
+			<requirement name="CVarCompare" cvar=".jz_PlayerResting" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value="2"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="-2"/>
+		</effect_group>
+		<effect_group>
+			<requirements compare_type="or">
+				<requirement name="IsStatAtMax" stat="maxstamina"/>
+                <requirement name="CVarCompare" cvar=".jz_PlayerResting" operation="LT" value="1"/>
+            </requirements>	
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffFurniturSoftRecoverWorking" />
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffFurniturSoftRecoverWorking"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="jz_BuffFurniturSoftRecoverWorking"/>
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
 		</effect_group>
 	</buff>
-	<buff name="jz_BuffBedSmRecover" hidden="false" remove_on_death="true" name_key="Sleeping Recovery" tooltip_key="zzzzZZZZzzzz" description_key="You are recovering in a uncomfortable bed. You are refilling your Fatigue Bar and Healing very slowly" icon="ui_game_symbol_cozyBed" >
+	<!-- LEVEL 1 BEDS -->
+	<buff name="jz_BuffBedSmRecover" hidden="true" remove_on_death="true"> 
 		<stack_type value="ignore"/>
-		<duration value="5"/>
+		
+		<duration value=".5">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+		<duration value=".4">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+		<duration value=".6">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+			
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="3"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			<requirement name="!IsStatAtMax" stat="maxstamina"/>
+			<requirement name="NotHasBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<requirement name="NotHasBuff" buff="jz_BuffCloseToZombie"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffBedSmRecoverWorking"/>
 		</effect_group>
 	</buff>
-	<buff name="jz_BuffBedMedRecover" hidden="false" remove_on_death="true" name_key="Bed Recovery" tooltip_key="zzzzZZZZzzzz" description_key="You are recovering in a comfortable bed. You are refilling your Fatigue Bar and Healing slowly" icon="ui_game_symbol_cozyBed" >
-		<stack_type value="ignore"/>
-		<duration value="5"/>
+	
+	<buff name="jz_BuffBedSmRecoverWorking" hidden="false" remove_on_death="true" name_key="Sleeping Recovery" tooltip_key="zzzzZZZZzzzz" description_key="You are recovering in a uncomfortable bed. You are refilling your Fatigue Bar and Healing very slowly" icon="ui_game_symbol_cozyBed" >
+		<stack_type value="replace"/>
+		<duration value="0"/>
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="4"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="2"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			<requirements compare_type="or">
+				<requirement name="!IsStatAtMax" stat="maxstamina"/>
+				<requirement name="!IsStatAtMax" stat="Health"/>
+			</requirements>	
+				<passive_effect name="CraftingTime" operation="perc_add" value="0.2" />
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="3"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar=".jz_PlayerResting" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value="3">
+					<requirement name="!IsStatAtMax" stat="maxstamina"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyStats" stat="health" operation="add" value="1">
+					<requirement name="!IsStatAtMax" stat="Health"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="-3"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="IsStatAtMax" stat="maxstamina"/>
+			<requirement name="IsStatAtMax" stat="Health"/>
+           		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBedSmRecoverWorking" />
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar=".jz_PlayerResting" operation="LT" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBedSmRecoverWorking" />
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffBedSmRecoverWorking"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="jz_BuffBedSmRecoverWorking"/>
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
 		</effect_group>
 	</buff>
-	<buff name="jz_BuffBedLrgRecover" hidden="false" remove_on_death="true" name_key="Very Comfortable Bed" tooltip_key="zzzzZZZZzzzz" description_key="You are recovering in a very comfortable bed. You are refilling your Fatigue Bar and Healing" icon="ui_game_symbol_cozyBed" >
+	<!-- LEVEL 2 BEDS -->
+	<buff name="jz_BuffBedMedRecover" hidden="true" remove_on_death="true"> 
 		<stack_type value="ignore"/>
-		<duration value="5"/>
+		
+		<duration value=".5">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+		<duration value=".4">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+		<duration value=".6">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+			
 		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerAwakeAdd" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="4"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			<requirement name="!IsStatAtMax" stat="maxstamina"/>
+			<requirement name="NotHasBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<requirement name="NotHasBuff" buff="jz_BuffCloseToZombie"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffBedMedRecoverWorking"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffBedMedRecoverWorking" hidden="false" remove_on_death="true" name_key="Bed Recovery" tooltip_key="zzzzZZZZzzzz" description_key="You are recovering in a comfortable bed. You are refilling your Fatigue Bar and Healing slowly" icon="ui_game_symbol_cozyBed" >
+		<stack_type value="replace"/>
+		<duration value="0"/>
+		<effect_group>
+			<requirements compare_type="or">
+				<requirement name="!IsStatAtMax" stat="maxstamina"/>
+				<requirement name="!IsStatAtMax" stat="Health"/>
+			</requirements>	
+				<passive_effect name="CraftingTime" operation="perc_add" value="0.2" />
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="3"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar=".jz_PlayerResting" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value="4">
+					<requirement name="!IsStatAtMax" stat="maxstamina"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyStats" stat="health" operation="add" value="2">
+					<requirement name="!IsStatAtMax" stat="Health"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="-4"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="IsStatAtMax" stat="maxstamina"/>
+			<requirement name="IsStatAtMax" stat="Health"/>
+           		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBedMedRecoverWorking" />
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar=".jz_PlayerResting" operation="LT" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBedMedRecoverWorking" />
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffBedMedRecoverWorking"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="jz_BuffBedMedRecoverWorking"/>
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	<!-- LEVEL 3 BEDS -->
+	<buff name="jz_BuffBedLrgRecover" hidden="true" remove_on_death="true"> 
+		<stack_type value="ignore"/>
+		
+		<duration value=".5">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+		<duration value=".4">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+		<duration value=".6">
+			<requirement name="CVarCompare" cvar="fatigueBonus" operation="Equals" value="1"/></duration>
+			
+		<effect_group>
+			<requirement name="!IsStatAtMax" stat="maxstamina"/>
+			<requirement name="NotHasBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<requirement name="NotHasBuff" buff="jz_BuffCloseToZombie"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffBedLrgRecoverWorking"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffBedLrgRecoverWorking" hidden="false" remove_on_death="true" name_key="Very Comfortable Bed" tooltip_key="zzzzZZZZzzzz" description_key="You are recovering in a very comfortable bed. You are refilling your Fatigue Bar and Healing" icon="ui_game_symbol_cozyBed" >
+		<stack_type value="replace"/>
+		<duration value="0"/>
+		<effect_group>
+			<requirements compare_type="or">
+				<requirement name="!IsStatAtMax" stat="maxstamina"/>
+				<requirement name="!IsStatAtMax" stat="Health"/>
+			</requirements>	
+				<passive_effect name="CraftingTime" operation="perc_add" value="0.2" />
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="3"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar=".jz_PlayerResting" operation="GTE" value="1"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value="5">
+					<requirement name="!IsStatAtMax" stat="maxstamina"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyStats" stat="health" operation="add" value="3">
+					<requirement name="!IsStatAtMax" stat="Health"/></triggered_effect>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".jz_PlayerResting" operation="add" value="-5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="IsStatAtMax" stat="maxstamina"/>
+			<requirement name="IsStatAtMax" stat="Health"/>
+           		<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBedLrgRecoverWorking" />
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="CVarCompare" cvar=".jz_PlayerResting" operation="LT" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffBedLrgRecoverWorking" />
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffBedLrgRecoverWorking"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="jz_BuffBedLrgRecoverWorking"/>
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="jz_BuffRestingMeleeCancellation"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".jz_PlayerResting" operation="set" value="0"/>
 		</effect_group>
 	</buff>
 	<!-- JZMOD NATURAL HEALING --> 
@@ -5343,7 +5575,23 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="jz_BuffNaturalHealing" />
 		</effect_group>
 	</buff>
-    
+    <!-- CLOSE TO ZOMBIE SYSTEM -->
+	<buff name="jz_BuffZombiePing" hidden="true" remove_on_death="true"> 
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="jz_BuffCloseToZombie">
+					<requirement name="EntityTagCompare" target="other" tags="player"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffCloseToZombie" hidden="false" remove_on_death="true" name_key="Z Close Test" description_key="test test" icon="ui_game_symbol_animal_tracker" ><!--hidden="true" remove_on_death="true">  -->
+		<stack_type value="ignore"/>
+		<duration value="20"/>
+	</buff>
+	
 	<buff name="buffAnimalTracker" name_key="buffAnimalTrackerName" description_key="buffAnimalTrackerDesc" icon="ui_game_symbol_animal_tracker">
 		<duration value="0"/>
 		<update_rate value=".5"/>

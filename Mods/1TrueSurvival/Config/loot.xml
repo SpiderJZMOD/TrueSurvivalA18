@@ -1603,6 +1603,8 @@ The overall plan for loot distribution:
 	<item name="vehicleBicycleChassisSchematic"/>
 	<item name="vehicleBicycleHandlebarsSchematic"/>
 	<item name="modArmorAdvancedMuffledConnectorsSchematic"/>
+	<item name="jz_SchematicHerbalCream"/>
+	<item name="jz_SchematicAloeCream"/>
 	<!--<item name="modArmorWaterPurifierSchematic"/> jzmod remove -->
 	<item name="modArmorCustomizedFittingsSchematic"/>
 	<item name="modMeleeBunkerBusterSchematic"/>
@@ -4556,22 +4558,75 @@ treasureTemplate
 <lootcontainer id="318" count="1" size="4,4" destroy_on_close="true" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
 	<item name="vehicleMinibikePlaceable" prob="100" />
 </lootcontainer>
-
+<!-- Bicycle-->
 <lootcontainer id="319" count="1" size="4,4" destroy_on_close="true" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
 	<item name="vehicleBicyclePlaceable" prob="100" />
 </lootcontainer>
-
+<!-- BugOutBag-->
 <lootcontainer id="320" count="1" size="5,5" destroy_on_close="true" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
 	<item group="BugOutBag" count="1" prob="100" />
 </lootcontainer>
-
-
-
-
-
-
-
-
+<!--Police Vehicles-->
+<lootcontainer id="321" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
+	<item group="automotive+tools+junk" prob="35" />
+	<item group="weaponsCommonParts" prob="10" />
+	<item name="meleeStunBaton" prob="11" />
+	<item name="jz_PoliceBaton" prob="11" />
+	<item name="ammo9mmBulletBall" count="3,40" prob="11"/>	
+	<item name="ammoShotgunShell" count="3,12" prob="11"/>								
+	<item name="ammo762mmBulletBall" count="3,25" prob="11"/>			
+</lootcontainer>
+<!-- Medical Vehicles-->
+<lootcontainer id="322" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
+	<item group="automotive+tools+junk" prob="45" />
+	<item group="medicine" prob="45" />
+	<item group="rareMedicine" prob="5" />
+	<item name="medicalPlasterCastSchematic" prob="2.5" />
+	<item name="medicalBloodDrawKitSchematic" prob="2.5" />
+</lootcontainer>
+<!-- Military Vehicles-->
+<lootcontainer id="323" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
+	<item group="automotive+tools+junk" prob="30" />
+	<item group="weaponsMilitaryParts" count="1,2" prob="15" />
+	<item group="groupAmmoAdvanced" count="1,2" prob="15" />
+	<item group="militaryArmor" count="1,2" prob="15" />
+	<item group="groupAmmoSmall" count="1,3" prob="15" />
+	<item name="jz_ProfessionPage" prob="5" />
+	<item group="T3BookList" prob="15" />
+	<item group="T3WeaponBooks" prob="15" />
+    <item group="skillBookChance"  prob="5" />
+</lootcontainer>
+<!-- Military Crashes-->
+<lootcontainer id="324" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
+	<item group="automotive+tools+junk" prob="30" />
+	<item group="groupAmmoAdvanced" count="1,2" prob="15" />
+	<item group="militaryArmor" count="1,2" prob="15" />
+	<item group="groupAmmoSmall" count="1,3" prob="15" />
+	<item name="jz_ProfessionPage" prob="5" />
+</lootcontainer>
+<!-- Farming Vehicles-->
+<lootcontainer id="325" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
+	<item group="automotive+tools+junk" prob="15" />
+	<item group="sportingGoods" prob="15" />
+	<item group="seeds" prob="15" />
+	<item group="FarmingBookChance" prob="5" />
+    <item group="farmCrops" loot_prob_template="goodFoodTemplate" />
+	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
+</lootcontainer>
+<!-- Construction Vehicles-->
+<lootcontainer id="326" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
+	<item group="automotive+tools+junk" prob="65" />
+	<item group="tools" prob="10" />
+	<item group="workingStiffs" prob="10" />
+	<item group="VariantFrameBlocks" prob="10" />
+	<item group="resources" prob="10" />
+	<item group="skillBookChance"  prob="5" />
+</lootcontainer>
+<!-- Garbage Vehicles-->
+<lootcontainer id="327" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
+	<item group="automotive+tools+junk" prob="50" />
+	<item group="rottenFood" prob="50" />
+</lootcontainer>
 
 
 

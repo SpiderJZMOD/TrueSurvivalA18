@@ -383,11 +383,11 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="meleeToolKnifeBone" count="10"/>
 </recipe>
 
-<recipe name="medicalAloeCream" count="1" craft_exp_gain="5" craft_time="10" tags="learnable">
+<recipe name="medicalAloeCream" count="1" craft_exp_gain="5" craft_time="10" >
 	<ingredient name="resourceCropAloeLeaf" count="5"/>
 </recipe>
 
-<recipe name="jz_MedicalHerbalCream" count="1" craft_time="10" craft_exp_gain="10" tags="learnable">
+<recipe name="jz_MedicalHerbalCream" count="1" craft_time="10" craft_exp_gain="10" >
 	<ingredient name="resourceCropGoldenrodPlant" count="1" />
 	<ingredient name="jz_ZincPowder" count="5" />
 	<ingredient name="forestFlower" count="1" />
@@ -397,22 +397,22 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCloth" count="3"/>
 </recipe>
 
-<recipe name="medicalFirstAidBandage" count="1" craft_exp_gain="10" craft_time="10" tags="learnable">
+<recipe name="medicalFirstAidBandage" count="1" craft_exp_gain="10" craft_time="10" >
 	<ingredient name="medicalAloeCream" count="1"/>
 	<ingredient name="medicalBandage" count="1"/>
 </recipe>
 
-<recipe name="medicalFirstAidBandage" count="1" craft_exp_gain="10" craft_time="10" tags="learnable">
+<recipe name="medicalFirstAidBandage" count="1" craft_exp_gain="10" craft_time="10" >
 	<ingredient name="jz_MedicalHerbalCream" count="1"/>
 	<ingredient name="medicalBandage" count="1"/>
 </recipe>
 
-<recipe name="jz_MedicalSanitizingBandage" count="1" craft_time="10" craft_exp_gain="15" tags="learnable">
+<recipe name="jz_MedicalSanitizingBandage" count="1" craft_time="10" craft_exp_gain="15" >
 	<ingredient name="drinkJarGrainAlcohol" count="1" />
 	<ingredient name="medicalBandage" count="1" />
 </recipe>
 
-<recipe name="medicalFirstAidKit" count="1" craft_time="10" craft_exp_gain="15" tags="learnable">
+<recipe name="medicalFirstAidKit" count="1" craft_time="10" craft_exp_gain="15" >
 	<ingredient name="drinkJarGrainAlcohol" count="1" />
     <ingredient name="medicalAloeCream" count="1"/>
     <ingredient name="medicalBandage" count="2"/>
@@ -425,7 +425,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_FiberRope" count="4"/>
 </recipe>
 
-<recipe name="jz_MedicalSutureKit" count="1" craft_time="5" craft_exp_gain="15" tags="learnable">
+<recipe name="jz_MedicalSutureKit" count="1" craft_time="5" craft_exp_gain="15" >
 	<ingredient name="jz_CuredSinew" count="1" />
 	<ingredient name="jz_SewingNeedle" count="1" />
 </recipe>
@@ -635,62 +635,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 
 <recipe name="jz_FoodFruitSaladLarge" count="1" craft_time="7" craft_exp_gain="8" >
 	<ingredient name="jz_FoodServingFruit" count="4" />
-</recipe>
-
-<recipe name="foodCanChicken" count="1" craft_time="3" craft_exp_gain="4">
-	<ingredient name="jz_CanChicken" count="2" />
-</recipe>
-
-<recipe name="foodCanLamb" count="1" craft_time="5" craft_exp_gain="6">
-	<ingredient name="jz_CanLamb" count="3" />
-</recipe>
-
-<recipe name="foodCanCatfood" count="1" craft_time="7" craft_exp_gain="8">
-	<ingredient name="jz_CanCatfood" count="4" />
-</recipe>
-
-<recipe name="foodCanDogfood" count="1" craft_time="3" craft_exp_gain="4" >
-	<ingredient name="jz_CanDogfood" count="2" />
-</recipe>
-
-<recipe name="foodCanChili" count="1" craft_time="5" craft_exp_gain="6" >
-	<ingredient name="jz_CanChili" count="3" />
-</recipe>
-
-<recipe name="foodCanTuna" count="1" craft_time="7" craft_exp_gain="8" >
-	<ingredient name="jz_CanTuna" count="4" />
-</recipe>
-
-<recipe name="foodCanSham" count="1" craft_time="3" craft_exp_gain="4">
-	<ingredient name="jz_CanSham" count="2" />
-</recipe>
-
-<recipe name="foodCanPasta" count="1" craft_time="5" craft_exp_gain="6">
-	<ingredient name="jz_CanPasta" count="3" />
-</recipe>
-
-<recipe name="foodCanSalmon" count="1" craft_time="7" craft_exp_gain="8">
-	<ingredient name="jz_CanSalmon" count="4" />
-</recipe>
-
-<recipe name="foodCanMiso" count="1" craft_time="3" craft_exp_gain="4" >
-	<ingredient name="jz_CanMiso" count="2" />
-</recipe>
-
-<recipe name="foodCanPeas" count="1" craft_time="5" craft_exp_gain="6" >
-	<ingredient name="jz_CanPeas" count="3" />
-</recipe>
-
-<recipe name="foodCanPears" count="1" craft_time="7" craft_exp_gain="8" >
-	<ingredient name="jz_CanPears" count="4" />
-</recipe>
-
-<recipe name="foodCanSoup" count="1" craft_time="3" craft_exp_gain="4">
-	<ingredient name="jz_CanSoup" count="2" />
-</recipe>
-
-<recipe name="foodCanStock" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
-	<ingredient name="jz_CanStock" count="1" />
 </recipe>
 
 <recipe name="mineCookingPot" count="1" craft_time="4" craft_exp_gain="5" tags="learnable" >
@@ -2713,7 +2657,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCropAloeLeaf" count="4"/>
 </recipe>
 
-<recipe name="medicalPlasterCast" count="1" craft_time="10" craft_exp_gain="5" craft_area="jz_MortarAndPestle" >
+<recipe name="medicalPlasterCast" count="1" craft_time="10" craft_exp_gain="5" craft_area="jz_MortarAndPestle" tags="learnable">
 	<ingredient name="resourceCloth" count="5"/>
 	<ingredient name="foodCornMeal" count="2"/>
 	<ingredient name="jz_FoodFlour" count="2"/>
@@ -2737,13 +2681,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCropGoldenrodPlant" count="1" />
 </recipe>
 
-<recipe name="jz_MedicalHerbalCream" count="1" craft_area="jz_MortarAndPestle"  craft_time="10">
+<recipe name="jz_MedicalHerbalCream" count="1" craft_area="jz_MortarAndPestle"  craft_time="10" tags="learnable">
 	<ingredient name="resourceCropGoldenrodPlant" count="1" />
 	<ingredient name="jz_ZincPowder" count="2" />
 	<ingredient name="forestFlower" count="1" />
 </recipe>
 
-<recipe name="jz_MedicalPurificationTablets" count="1" craft_area="jz_MortarAndPestle"  >
+<recipe name="jz_MedicalPurificationTablets" count="1" craft_area="jz_MortarAndPestle" tags="learnable">
 	<ingredient name="jz_ZincPowder" count="3" />
 	<ingredient name="resourceCoal" count="1" />
 	<ingredient name="resourceCropGoldenrodPlant" count="1" />
@@ -3862,16 +3806,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 
 <recipe name="thrownDynamiteSchematic" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
 	<ingredient name="thrownDynamite" count="6"/>
-	<ingredient name="jz_BlankSkillBook" count="1"/>
-</recipe>
-
-<recipe name="medicalFirstAidBandageSchematic" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
-	<ingredient name="medicalFirstAidBandage" count="12"/>
-	<ingredient name="jz_BlankSkillBook" count="1"/>
-</recipe>
-
-<recipe name="medicalFirstAidKitSchematic" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
-	<ingredient name="medicalFirstAidKit" count="12"/>
 	<ingredient name="jz_BlankSkillBook" count="1"/>
 </recipe>
 

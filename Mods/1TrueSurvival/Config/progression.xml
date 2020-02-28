@@ -1854,7 +1854,7 @@
 				<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".2"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalFirstAidBandage,thrownAmmoMolotovCocktail"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,thrownAmmoMolotovCocktail"/>
 			<passive_effect name="StaminaMax" operation="perc_add" level="1" value=".05"/>
 			
 			<effect_description level="1" desc_key="jz_FireFighterDesc" long_desc_key="jz_FireFighterDesc"/>
@@ -1992,7 +1992,7 @@
 	<!-- Doctor -->
 	<perk name="jz_Doctor" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Doctor" desc_key="jz_DoctorDesc" icon="ui_game_symbol_steroids">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,medicalFirstAidBandage,jz_MedicalStimulant,jz_MedicalSutureKit,jz_MedicalAntiVenom,drugPainkillers,drugSteroids,drugAntibiotics,jz_MedicalSanitizingBandage,medicalFirstAidKit"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,jz_MedicalStimulant,jz_MedicalAntiVenom,drugPainkillers,drugSteroids,drugAntibiotics"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_DoctorTag"/>
 			<effect_description level="1" desc_key="jz_DoctorDesc" long_desc_key="jz_DoctorDesc"/>
 		</effect_group>
