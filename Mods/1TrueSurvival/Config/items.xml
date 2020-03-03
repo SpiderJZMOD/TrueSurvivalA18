@@ -2987,7 +2987,7 @@
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="LightValue" value=".45"/>
 	<property name="EconomicValue" value="500"/>
-	<property name="UnlockedBy" value="gunPistolSchematic"/>
+	<property name="UnlockedBy" value="gunPistolSchematic,SP_PistolSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3088,7 +3088,7 @@
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="LightValue" value=".45"/>
 	<property name="EconomicValue" value="1000"/>
-	<property name="UnlockedBy" value="gun44MagnumSchematic"/>
+	<property name="UnlockedBy" value="gun44MagnumSchematic,SP_44MagnumSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3190,7 +3190,7 @@
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="LightValue" value=".45"/>
 	<property name="EconomicValue" value="1000"/>
-	<property name="UnlockedBy" value="gunSMG5Schematic"/>
+	<property name="UnlockedBy" value="gunSMG5Schematic,SP_SMG5Schematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3295,7 +3295,7 @@
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="EconomicValue" value="250"/>
 	<property name="ShowQuality" value="true"/>
-	<property name="UnlockedBy" value="jz_SchematicBlunderbuss"/>
+	<property name="UnlockedBy" value="jz_SchematicBlunderbuss,SP_BlunderbussSchematic"/>
 	<property class="Action0">
 		<property name="Class" value="Ranged"/>
 		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
@@ -3394,7 +3394,7 @@
 	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
 	<property name="LightValue" value=".45"/>
 	<property name="EconomicValue" value="500"/>
-	<property name="UnlockedBy" value="gunDoubleBarrelShotgunSchematic"/>
+	<property name="UnlockedBy" value="gunDoubleBarrelShotgunSchematic,SP_DoubleBarrelShotgunSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3489,7 +3489,7 @@
 	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
 	<property name="LightValue" value=".45"/>
 	<property name="EconomicValue" value="1000"/>
-	<property name="UnlockedBy" value="gunPumpShotgunSchematic"/>
+	<property name="UnlockedBy" value="gunPumpShotgunSchematic,SP_PumpShotgunSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3589,7 +3589,7 @@
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="LightValue" value=".45"/>
 	<property name="EconomicValue" value="500"/>
-	<property name="UnlockedBy" value="gunHuntingRifleSchematic"/>
+	<property name="UnlockedBy" value="gunHuntingRifleSchematic,SP_HuntingRifleSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3691,7 +3691,7 @@
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="LightValue" value=".45"/>
 	<property name="EconomicValue" value="1000"/>
-	<property name="UnlockedBy" value="gunMR10Schematic"/>
+	<property name="UnlockedBy" value="gunMR10Schematic,SP_MR10Schematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -3795,7 +3795,7 @@
 
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="EconomicValue" value="500"/>
-	<property name="UnlockedBy" value="gunAK47Schematic"/>
+	<property name="UnlockedBy" value="gunAK47Schematic,SP_AK47Schematic"/>
 	<property name="ShowQuality" value="true"/>
 	<property name="Group" value="Ammo/Weapons"/>
 
@@ -3983,7 +3983,7 @@
 
 	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
 	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
-
+    <property name="UnlockedBy" value="gunAK47Schematic"/>
 	<property name="RepairTools" value="jz_WeaponRepairKit"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 
@@ -4095,7 +4095,7 @@
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="EconomicValue" value="1000"/>
-	<property name="UnlockedBy" value="gunRocketLauncherSchematic"/>
+	<property name="UnlockedBy" value="gunRocketLauncherSchematic,SP_RocketLauncherSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -4378,7 +4378,7 @@
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
-	<property name="UnlockedBy" value="gunBowCompoundSchematic"/>
+	<property name="UnlockedBy" value="gunBowCompoundSchematic,SP_BowCompoundSchematic"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="Catapult"/>
@@ -4550,7 +4550,7 @@
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
-	<property name="UnlockedBy" value="gunCrossbowCompoundSchematic"/>
+	<property name="UnlockedBy" value="gunCrossbowCompoundSchematic,SP_CrossbowCompoundSchematic"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="Launcher"/>
@@ -4627,7 +4627,7 @@
 	<property name="EconomicValue" value="500"/>
 	<property name="SellableToTrader" value="true"/>
 	<property name="RequiredPower" value="15"/>
-	<property name="UnlockedBy" value="gunJunkTurretSchematic"/>
+	<property name="UnlockedBy" value="gunJunkTurretSchematic,SP_JunkTurretSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -6126,7 +6126,7 @@
 	<property name="Stacknumber" value="20"/>
 	<property name="EconomicValue" value="250"/>
 	<property name="Group" value="Ammo/Weapons"/>
-	<property name="UnlockedBy" value="gunRocketLauncherSchematic"/>
+	<property name="UnlockedBy" value="gunRocketLauncherSchematic,SP_RocketLauncherSchematic"/>
 	<property class="Action1">
 		<property name="Class" value="Projectile"/>
 		<property name="Explosion.ParticleIndex" value="4"/> <!-- which Prefab/particle is used -->
@@ -11784,6 +11784,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunPistol" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_PistolSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11799,6 +11800,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gun44Magnum" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_44MagnumSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11814,6 +11816,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunDoubleBarrelShotgun" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_DoubleBarrelShotgunSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11829,6 +11832,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunPumpShotgun" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_PumpShotgunSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11844,6 +11848,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunSMG5" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SMG5Schematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11859,6 +11864,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunAK47" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_AK47Schematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11874,6 +11880,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunHuntingRifle" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_HuntingRifleSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11889,6 +11896,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunMR10" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MR10Schematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11908,6 +11916,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoRocketFrag" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceRocketTip" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="resourceRocketCasing" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_RocketLauncherSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11923,6 +11932,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunJunkTurret" operation="set" value="1"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_JunkTurretSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -15290,7 +15300,6 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="resourceRocketTip">
-	<property name="UnlockedBy" value="gunRocketLauncherSchematic"/>
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -15298,10 +15307,10 @@ perkNightStalkerSilentNight
 	<property name="Stacknumber" value="500"/> <!-- STK resource -->
 	<property name="EconomicValue" value="50"/>
 	<property name="Group" value="Ammo/Weapons"/>
+    <property name="UnlockedBy" value="gunRocketLauncherSchematic,SP_RocketLauncherSchematic"/>
 </item>
 
 <item name="resourceRocketCasing">
-	<property name="UnlockedBy" value="gunRocketLauncherSchematic"/>
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -15309,6 +15318,7 @@ perkNightStalkerSilentNight
 	<property name="Stacknumber" value="50"/> <!-- STK resource -->
 	<property name="EconomicValue" value="77"/>
 	<property name="Group" value="Ammo/Weapons"/>
+    <property name="UnlockedBy" value="gunRocketLauncherSchematic,SP_RocketLauncherSchematic"/>
 </item>
 
 <item name="resourceRepairKit">

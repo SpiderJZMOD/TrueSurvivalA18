@@ -2434,17 +2434,94 @@
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_CrossbowIronSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Compound Bow" desc_key="SP_CrossbowIronSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_CrossbowIronSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Crossbow" desc_key="SP_CrossbowIronSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunCrossbowIron,jz_PartsCrossbowStock,jz_PartsCrossbowLimb"/>
 			<effect_description level="1" desc_key="SP_CrossbowIronSchematicDesc" long_desc_key="SP_CrossbowIronSchematicDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_CrossbowCompoundSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Compound Bow" desc_key="SP_CrossbowCompoundSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_CrossbowCompoundSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Compound Crossbow" desc_key="SP_CrossbowCompoundSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunCrossbowCompound"/>
 			<effect_description level="1" desc_key="SP_CrossbowCompoundSchematicDesc" long_desc_key="SP_CrossbowCompoundSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_PistolSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Pistol" desc_key="SP_PistolSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunPistol"/>
+			<effect_description level="1" desc_key="SP_PistolSchematicDesc" long_desc_key="SP_PistolSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_44MagnumSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="44 Magnum" desc_key="SP_44MagnumSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gun44Magnum"/>
+			<effect_description level="1" desc_key="SP_44MagnumSchematicDesc" long_desc_key="SP_44MagnumSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_DoubleBarrelShotgunSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Double Barrel Shotgun" desc_key="SP_DoubleBarrelShotgunSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunDoubleBarrelShotgun"/>
+			<effect_description level="1" desc_key="SP_DoubleBarrelShotgunSchematicDesc" long_desc_key="SP_DoubleBarrelShotgunSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_PumpShotgunSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Pump Shotgun" desc_key="SP_PumpShotgunSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunPumpShotgun"/>
+			<effect_description level="1" desc_key="SP_PumpShotgunSchematicDesc" long_desc_key="SP_PumpShotgunSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_BlunderbussSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Pump Shotgun" desc_key="SP_BlunderbussSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunPumpShotgun"/>
+			<effect_description level="1" desc_key="SP_BlunderbussSchematicDesc" long_desc_key="SP_BlunderbussSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_SMG5Schematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="SMG5" desc_key="SP_SMG5SchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunSMG5"/>
+			<effect_description level="1" desc_key="SP_SMG5SchematicDesc" long_desc_key="SP_SMG5SchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_AK47Schematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="AK47" desc_key="SP_AK47SchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunAK47"/>
+			<effect_description level="1" desc_key="SP_AK47SchematicDesc" long_desc_key="SP_AK47SchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_HuntingRifleSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Hunting Rifle" desc_key="SP_HuntingRifleSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
+			<effect_description level="1" desc_key="SP_HuntingRifleSchematicDesc" long_desc_key="SP_HuntingRifleSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_MR10Schematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="MR10" desc_key="SP_MR10SchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunMR10"/>
+			<effect_description level="1" desc_key="SP_MR10SchematicDesc" long_desc_key="SP_MR10SchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_RocketLauncherSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Rocket Launcher" desc_key="SP_RocketLauncherSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunRocketLauncher,ammoRocketHE,ammoRocketFrag,resourceRocketTip"/>
+			<effect_description level="1" desc_key="SP_RocketLauncherSchematicDesc" long_desc_key="SP_RocketLauncherSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_JunkTurretSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Junk Turret" desc_key="SP_JunkTurretSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunJunkTurret"/>
+			<effect_description level="1" desc_key="SP_JunkTurretSchematicDesc" long_desc_key="SP_JunkTurretSchematicDesc"/>
 		</effect_group>
 	</perk>
 	<!-- ******************************************************************  JZMOD OTHER SKILLS  ******************************************************************************** -->

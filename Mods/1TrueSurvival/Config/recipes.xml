@@ -1443,7 +1443,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_MilitaryGunParts" count="1"/>
 </recipe>
 
-<recipe name="gunJunkTurret" count="1" craft_area="workbench" tags="jz_JunkTurretCraftingTag">
+<recipe name="gunJunkTurret" count="1" craft_area="workbench" tags="learnable,jz_JunkTurretCraftingTag">
 	<ingredient name="gunJunkTurretParts" count="4"/>
 	<ingredient name="resourceForgedIron" count="40"/>
 	<ingredient name="resourceDuctTape" count="10"/>
