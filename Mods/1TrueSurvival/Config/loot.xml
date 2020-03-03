@@ -544,27 +544,23 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="WoodenBowParts" >
-	<item name="jz_PartsWoodenBowHandle" prob="33" />
-	<item name="jz_PartsWoodenBowCams" prob="34" />
-	<item name="jz_PartsWoodenBowCord" prob="33" />
+	<item name="jz_PartsWoodenBowHandle" prob="50" />
+	<item name="jz_PartsWoodenBowCams" prob="50" />
 </lootgroup>
 
 <lootgroup name="CrossbowParts" >
-	<item name="jz_PartsCrossbowStock" prob="33" />
-	<item name="jz_PartsCrossbowLimb" prob="34" />
-	<item name="jz_PartsCrossbowReciver" prob="33" />
+	<item name="jz_PartsCrossbowStock" prob="50" />
+	<item name="jz_PartsCrossbowLimb" prob="50" />
 </lootgroup>
 
 <lootgroup name="CompoundBowParts" >
-	<item name="jz_PartsCompoundBowHandle" prob="33" />
-	<item name="jz_PartsCompoundBowCams" prob="34" />
-	<item name="jz_PartsCompoundBowCord" prob="33" />
+	<item name="jz_PartsCompoundBowHandle" prob="50" />
+	<item name="jz_PartsCompoundBowCams" prob="50" />
 </lootgroup>
 
 <lootgroup name="CompoundCrossbowParts" >
-	<item name="jz_PartsCompoundCrossbowStock" prob="33" />
-	<item name="jz_PartsCompoundCrossbowCord" prob="34" />
-	<item name="jz_PartsCompoundCrossbowCams" prob="33" />
+	<item name="jz_PartsCompoundCrossbowStock" prob="50" />
+	<item name="jz_PartsCompoundCrossbowCams" prob="50" />
 </lootgroup>
 
 <lootgroup name="pistolWeaponParts" >
@@ -634,10 +630,12 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="weaponsArcheryParts">
-	<item group="WoodenBowParts" prob="30" />
-	<item group="CrossbowParts" prob="30" />
-	<item group="CompoundBowParts" prob="20" />
-	<item group="CompoundCrossbowParts" prob="20" />
+	<item group="WoodenBowParts" prob="15" />
+	<item group="CrossbowParts" prob="15" />
+	<item group="CompoundBowParts" prob="15" />
+	<item group="CompoundCrossbowParts" count="1,10" prob="15" />
+	<item group="jz_CuredSinew" prob="20" />
+	<item group="jz_BasicGunParts" prob="20" />
 </lootgroup>
 
 <lootgroup name="weaponsCommonParts">
@@ -914,11 +912,11 @@ The overall plan for loot distribution:
 <lootgroup name="ironJunk" >
 	<item name="jz_IronSoldier" prob="7.69" />
 	<item name="jz_IronPaperClips" count="1,6" prob="7.69" />
-	<item name="jz_IronWeight" prob="7.69" />
+	<item name="jz_SteelWeight" prob="7.69" />
 	<item name="jz_IronHinge" prob="7.69" />
     <item name="resourceTrophy3" prob="7.69" />
 	<item name="jz_IronHairSpray" prob="7.69" />
-	<item name="jz_IronScissors" prob="7.69" />
+	<item name="jz_SteelScissors" prob="7.69" />
     <item name="apparelFacialPiercings" prob="7.69" />
     <item name="drinkCanEmpty" prob="7.69" />
     <item name="resourceHubcap" prob="7.69" />
@@ -1063,7 +1061,7 @@ The overall plan for loot distribution:
 	<item name="jz_TechBrokenIPod"  prob="1.81" />
 	<item name="jz_IronSoldier" prob="1.81" />
 	<item name="jz_IronPaperClips" count="1,6" prob="1.81" />
-	<item name="jz_IronScissors" prob="1.81" />
+	<item name="jz_SteelScissors" prob="1.81" />
     <item name="apparelFacialPiercings" prob="1.81" />
     <item name="drinkCanEmpty" prob="1.81" />
     <item name="jz_WoodSoldier" prob="1.81" />
@@ -1452,6 +1450,7 @@ The overall plan for loot distribution:
 	<item name="jz_SchematicCraftedRevolver" prob="33" />
 	<item name="jz_SchematicCraftedRifle" prob="33" />
 	<item name="jz_SchematicBlunderbuss" prob="34" />
+	<item name="jz_SchematicStoneSpear"/>
 </lootgroup>
 
 <lootgroup name="T2WeaponBooks" >
@@ -3042,7 +3041,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item group="medicine" prob="25" />
 	<item name="jz_GlassCompact" prob="6.81" />
 	<item name="jz_IronHairSpray" prob="6.81" />
-	<item name="jz_IronScissors" prob="6.81" />
+	<item name="jz_SteelScissors" prob="6.81" />
     <item name="apparelFacialPiercings" prob="6.81" />
 	<item name="jz_PlasticHairBrush" prob="6.9" />
 	<item name="jz_RubberCondom" prob="6.81" />
@@ -3243,7 +3242,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item name="jz_TechBrokenLapTop" prob="1.6"/>
 	<item name="jz_TechBrokenIPod" prob="1.6"/>
 	<item name="jz_IronPaperClips" prob="1.6"/>
-	<item name="jz_IronScissors" prob="1.6"/>
+	<item name="jz_SteelScissors" prob="1.6"/>
 	<item name="resourceCandyTin" prob="1.6"/>
 	<item name="jz_StonePaperWeight" prob="1.6"/>
 	<item name="jz_StoneCrackedAshTray" prob="1.6"/>
@@ -4027,7 +4026,7 @@ treasureTemplate
 	<item group="medicine" prob="85"/>
 	<item name="jz_RubberBands" count="1,6" prob="1"/>
 	<item name="jz_GlassEye" prob="1"/>
-	<item name="jz_IronScissors" prob="1"/>
+	<item name="jz_SteelScissors" prob="1"/>
 	<item name="jz_ClothRags" count="1,3" prob="1"/>
 	<item name="jz_RubberCondom" count="1,3" prob="1"/>
 	<item name="drugHerbalAntibioticsSchematic" prob="1"/>
@@ -4126,7 +4125,7 @@ treasureTemplate
 <!-- cntUtilityCartFull-->
 <lootcontainer id="117" count="1,2" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate">
 	<item name="resourceDoorKnob" count="1,2" prob="5.5"/>
-	<item name="jz_IronScissors" count="1,2" prob="5.5"/>
+	<item name="jz_SteelScissors" count="1,2" prob="5.5"/>
 	<item name="jz_PaperToilet" count="1,2" prob="5.5"/>
 	<item name="jz_PaperMatches" count="1,2" prob="5.5"/>
 	<item name="jz_GlassPerfume" count="1,2" prob="5.5"/>

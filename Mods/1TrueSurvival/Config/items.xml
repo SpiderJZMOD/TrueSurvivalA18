@@ -740,7 +740,7 @@
 	<property name="Group" value="Tools/Traps"/>
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="EconomicValue" value="1500"/>
-	<property name="UnlockedBy" value="meleeToolChainsawSchematic"/>
+	<property name="UnlockedBy" value="meleeToolChainsawSchematic,SP_ChainsawSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -834,7 +834,7 @@
 	<property name="Group" value="Tools/Traps"/>
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="EconomicValue" value="1500"/>
-	<property name="UnlockedBy" value="meleeToolAugerSchematic"/>
+	<property name="UnlockedBy" value="meleeToolAugerSchematic,SP_AugerSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -933,8 +933,7 @@
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sound_start" value="swoosh"/>
-		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
-		<property name="ToolCategory.ToolWrench" value="1" param1="1"/>
+		<property name="ToolCategory.Disassemble" value="1" param1="1"/>
 		<property name="Sound_harvesting" value="wrench_harvest"/>
 		<property name="Particle_harvesting" value="true" param1="metal"/>
 
@@ -1062,7 +1061,7 @@
 	</property>
 
 	<effect_group name="meleeToolKnifeBone">
-	<!-- Testing --> <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value="-10"/>
+	<!-- Testing  <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="stamina" value_type="modifiedmax" operation="add" value="-10"/>-->
 		
 		<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
@@ -1113,7 +1112,7 @@
 	<property name="EconomicValue" value="0"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
-	<property name="UnlockedBy" value="meleeToolKnifeIronSchematic"/>
+	<property name="UnlockedBy" value="meleeToolKnifeIronSchematic,SP_KnifeIronSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -1305,7 +1304,7 @@
 	<property name="SoundDestroy" value="wooddestroy1"/>
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
-	<property name="UnlockedBy" value="meleeToolKnifeMacheteSchematic"/>
+	<property name="UnlockedBy" value="meleeToolKnifeMacheteSchematic,SP_KnifeMacheteSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -1768,7 +1767,7 @@
 	<property name="SoundDestroy" value="wooddestroy1"/>
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
-	<property name="UnlockedBy" value="meleeStunBatonSchematic"/>
+	<property name="UnlockedBy" value="meleeStunBatonSchematic,SP_StunBatonSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -1918,6 +1917,7 @@
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="UnlockedBy" value="jz_SchematicStoneSpear,SP_SpearStoneSchematic"/>
 	<property name="FuelValue" value="75"/>
 	<property name="EconomicValue" value="175"/>
 	<property name="EconomicBundleSize" value="1"/>
@@ -2016,7 +2016,7 @@
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="EconomicValue" value="350"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="UnlockedBy" value="meleeThrownSpearIronSchematic"/>
+	<property name="UnlockedBy" value="meleeThrownSpearIronSchematic,SP_SpearIronSchematic"/>
 
 	<property class="Action1">
 		<property name="Gravity" value="-6"/>
@@ -2070,7 +2070,7 @@
 	<property name="Material" value="MmeleeThrownSpearSteel"/><property name="Weight" value="6"/>
 	<property name="StickyMaterial" value="#Other/Items?Weapons/Melee/Spear/Materials/spearIron_sticky.mat"/>
 	<property name="EconomicValue" value="700"/>
-	<property name="UnlockedBy" value="meleeThrownSpearSteelSchematic"/>
+	<property name="UnlockedBy" value="meleeThrownSpearSteelSchematic,SP_SpearSteelSchematic"/>
 
 	<effect_group name="meleeThrownSpearSteel">
 		<passive_effect name="MaxRange" operation="base_set" value="3.2"/>
@@ -2223,7 +2223,7 @@
 	<property name="FuelValue" value="250"/>
 	<property name="EconomicValue" value="350"/>
 	<property name="Group" value="Ammo/Weapons"/>
-	<property name="UnlockedBy" value="meleeToolSledgehammerIronSchematic"/>
+	<property name="UnlockedBy" value="meleeToolSledgehammerIronSchematic,SP_SledgehammerIronSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -2318,7 +2318,7 @@
 	<property name="FuelValue" value="250"/>
 	<property name="EconomicValue" value="700"/>
 	<property name="Group" value="Ammo/Weapons"/>
-	<property name="UnlockedBy" value="meleeToolSledgehammerSteelSchematic"/>
+	<property name="UnlockedBy" value="meleeToolSledgehammerSteelSchematic,SP_SledgehammerSteelSchematic"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -2495,7 +2495,7 @@
 	<!-- <property name="FuelValue" value="0"/> -->
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="EconomicValue" value="350"/>
-	<property name="UnlockedBy" value="meleeKnucklesIronSchematic"/>
+	<property name="UnlockedBy" value="meleeKnucklesIronSchematic,SP_KnucklesIronSchematic"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
@@ -2566,7 +2566,7 @@
 	<property name="Extends" value="meleeKnucklesIron"/>
 	<property name="Material" value="MmeleeKnucklesSteelParts"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knuckles/knucklesSpiked_Prefab.prefab"/>
-	<property name="UnlockedBy" value="meleeKnucklesSteelSchematic"/>
+	<property name="UnlockedBy" value="meleeKnucklesSteelSchematic,SP_KnucklesSteelSchematic"/>
 
 	<effect_group name="meleeKnucklesSteel">
 		<passive_effect name="EntityDamage" operation="base_set" value="18.1"/>
@@ -4280,7 +4280,7 @@
 	<property name="CrosshairUpAfterShot" value="false"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
-	<property name="UnlockedBy" value="gunBowWoodenSchematic"/>
+	<property name="UnlockedBy" value="gunBowWoodenSchematic,SP_BowWoodenSchematic"/>
 	<property name="ShowQuality" value="true"/>
 	<property name="Group" value="Ammo/Weapons"/>
 	<property class="Action0">
@@ -4466,7 +4466,7 @@
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
-	<property name="UnlockedBy" value="gunCrossbowIronSchematic"/>
+	<property name="UnlockedBy" value="gunCrossbowIronSchematic,SP_CrossbowIronSchematic"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="Launcher"/>
@@ -4855,6 +4855,16 @@
 		<passive_effect name="MaxRange" operation="base_set" value="1.4"/>
 		<passive_effect name="EntityDamage" operation="base_set" value="10"/> <!-- this passive is ignored so using the old notation! -->
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffInfectionCatch"/>
@@ -4896,6 +4906,16 @@
 			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
 		</triggered_effect>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".03" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInfectionCatch"/>
@@ -4938,6 +4958,16 @@
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="MaxRange" operation="base_set" value="1.4"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffBurningZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".08" tags="buffInjuryBleedingZombie"/>
@@ -4982,6 +5012,16 @@
 			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
 		</triggered_effect>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".15" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffBurningZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
@@ -5025,6 +5065,17 @@
 		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
 		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
 		<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="buffInfectionCatch"/>
@@ -5165,7 +5216,16 @@
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="MaxRange" operation="base_set" value="1.4"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".85" tags="buffInfectionCatch"/>
@@ -5184,6 +5244,16 @@
 	<effect_group name="meleeHandZombieStrong" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.1" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".65" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".4" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".65" tags="buffInfectionCatch"/>
@@ -5202,6 +5272,16 @@
 	<effect_group name="meleeHandZombieStrong" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".2" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="buffInfectionCatch"/>
@@ -5294,6 +5374,16 @@
 	<effect_group name="meleeHandZombieHazMat" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.4" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInfectionCatch"/>
@@ -5330,6 +5420,16 @@
 	<effect_group name="meleeHandZombieWorker" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInfectionCatch"/>
@@ -5365,6 +5465,16 @@
 	<effect_group name="meleeHandZombieFootballPlayer" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.4" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInfectionCatch"/>
@@ -5400,6 +5510,16 @@
 	<effect_group name="meleeHandZombieStripper" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.4" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="jzSteel"/>
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInfectionCatch"/>
@@ -11361,12 +11481,15 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="3"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="meleeToolSledgehammerIron"/>
-	<property name="Unlocks" value="meleeToolSledgehammerIron"/>
+	<property name="Unlocks" value="meleeToolSledgehammerIron,jz_MoldSledgeHead,jz_SledgeHead"/>
 	<property class="Action0">
 		<requirement name="CVarCompare" cvar="meleeToolSledgehammerIron" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolSledgehammerIron" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldSledgeHead" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_SledgeHead" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SledgehammerIronSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11382,6 +11505,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolSledgehammerSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SledgehammerSteelSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11390,12 +11514,15 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="meleeToolKnifeIron"/>
-	<property name="Unlocks" value="meleeToolKnifeIron"/>
+	<property name="Unlocks" value="meleeToolKnifeIron,jz_MoldSmallKnifeBlade,jz_SmallKnifeBlade"/>
 	<property class="Action0">
 		<requirement name="CVarCompare" cvar="meleeToolKnifeIron" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolKnifeIron" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldSmallKnifeBlade" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_SmallKnifeBlade" operation="set" value="1"/>		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_KnifeIronSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11405,12 +11532,15 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="4"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="meleeToolKnifeMachete"/>
-	<property name="Unlocks" value="meleeToolKnifeMachete"/>
+	<property name="Unlocks" value="meleeToolKnifeMachete,jz_MoldLargeKnifeBlade,jz_LargeKnifeBlade"/>
 	<property class="Action0">
 		<requirement name="CVarCompare" cvar="meleeToolKnifeMachete" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolKnifeMachete" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldLargeKnifeBlade" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_LargeKnifeBlade" operation="set" value="1"/>		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_KnifeMacheteSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11426,6 +11556,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeStunBaton" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_StunBatonSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11461,12 +11592,14 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="meleeToolWrench"/>
-	<property name="Unlocks" value="meleeToolWrench"/>
+	<property name="Unlocks" value="meleeToolWrench,jz_MoldWrench"/>
 	<property class="Action0">
 		<requirement name="CVarCompare" cvar="meleeToolWrench" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolWrench" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_MoldWrench" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_WrenchSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11496,6 +11629,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolAuger" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_KnifeMacheteSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11511,6 +11645,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeToolChainsaw" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_KnifeMacheteSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11526,6 +11661,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeThrownSpearIron" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SpearIronSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11541,6 +11677,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeThrownSpearSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SpearSteelSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -11550,12 +11687,13 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="3"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="meleeKnucklesIron"/>
-	<property name="Unlocks" value="meleeKnucklesIron"/>
+	<property name="Unlocks" value="meleeKnucklesIron,jz_MoldBrassKnuckles"/>
 	<property class="Action0">
 		<requirement name="CVarCompare" cvar="meleeKnucklesIron" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeKnucklesIron" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_KnucklesIronSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12353,7 +12491,7 @@ perkNightStalkerSilentNight
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="metalReinforcedWoodDrawBridge"/>
 	<property name="DescriptionKey" value="poweredDoorsSchematicDesc"/>
-	<property name="Unlocks" value="vaultDoor03_Powered"/>
+	<property name="Unlocks" value="vaultDoor03_Powered,vaultDoor03_Powered,vaultHatch_v3_Powered,garageDoorIndustrial_Powered,metalReinforcedWoodDrawBridgePowered"/>
 	<property class="Action0">
 		<requirement name="CVarCompare" cvar="garageDoorMetal_v1Powered" operation="LT" value="1"/>
 	</property>
@@ -12361,9 +12499,9 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="garageDoorMetal_v1Powered" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vaultDoor03_Powered" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vaultHatch_v3_Powered" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="garageDoorHousePlayer_Powered" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="garageDoorIndustrial_Powered" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="metalReinforcedWoodDrawBridgePowered" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_PoweredDoorsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -19535,15 +19673,6 @@ perkNightStalkerSilentNight
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
-<item name="jz_PartsWoodenBowCord">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="WoodenBowPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsWoodenBowCord" />
-	<property name="Material" value="Morganic" />
-	<property name="Group" value="Ammo/Weapons" />
-	<property name="ItemTypeIcon" value="gunsmithing"/>
-</item>
-
 <item name="jz_PartsCrossbowStock">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="CrossbowPartsDesc" />
@@ -19551,6 +19680,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCrossbowStock" />
+	<property name="UnlockedBy" value="gunCrossbowIronSchematic,SP_CrossbowIronSchematic"/>
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
@@ -19561,18 +19691,9 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
     <property name="CustomIcon" value="ui_game_symbol_jz_PartsCrossbowLimb" />
+	<property name="UnlockedBy" value="gunCrossbowIronSchematic,SP_CrossbowIronSchematic"/>
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
-
-<item name="jz_PartsCrossbowReciver">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="CrossbowPartsDesc" />
-    <property name="CustomIcon" value="ui_game_symbol_jz_PartsCrossbowReciver" />
-   	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="10" />
-	<property name="Group" value="Ammo/Weapons" />
-	<property name="ItemTypeIcon" value="gunsmithing"/>
-</item> 
 
 <item name="jz_PartsCompoundBowHandle">
 	<property name="Extends" value="jz_MasterItem" />
@@ -19594,32 +19715,12 @@ perkNightStalkerSilentNight
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
-<item name="jz_PartsCompoundBowCord">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="CompoundBowPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundBowCord" />
-	<property name="Material" value="Morganic" />
-	<property name="Weight" value="20" />
-    <property name="Group" value="Ammo/Weapons" />
-	<property name="ItemTypeIcon" value="gunsmithing"/>
-</item>
-
 <item name="jz_PartsCompoundCrossbowStock">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="CompoundCrossbowPartsDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundCrossbowStock" />
 	<property name="Material" value="Mplastics" />
 	<property name="Weight" value="30" />
-	<property name="Group" value="Ammo/Weapons" />
-	<property name="ItemTypeIcon" value="gunsmithing"/>
-</item>
-
-<item name="jz_PartsCompoundCrossbowCord">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="DescriptionKey" value="CompoundCrossbowPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundBowCord" />
-	<property name="Material" value="Mplastics" />
-	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
@@ -20620,7 +20721,8 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Ammo/Weapons,Basics"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZBaton.unity3d?BatonPrefab" />
 	<property name="HoldType" value="2"/>
-	<property name="Material" value="Mwood"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Weight" value="15"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -20797,7 +20899,6 @@ perkNightStalkerSilentNight
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sound_start" value="swoosh"/>
-		<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
 		<property name="ToolCategory.Disassemble" value="1" param1="1"/>
 		<property name="Sound_harvesting" value="wrench_harvest"/>
 		<property name="Particle_harvesting" value="true" param1="metal"/>
@@ -20818,17 +20919,17 @@ perkNightStalkerSilentNight
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
 	
-	<effect_group name="meleeToolWrench">
-		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+	<effect_group name="ToolScrewdriver">
+	<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
 		<passive_effect name="BlockRange" operation="base_set" value="3"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="18"/> <!-- meleeToolWrench -->
+		<passive_effect name="EntityDamage" operation="base_set" value="5"/> <!-- meleeToolWrench -->
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
-		<passive_effect name="BlockDamage" operation="base_set" value="5.5"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="38.5"/>
 		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
 		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
-
+		
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="200,682" tier="1,6" />
@@ -20838,9 +20939,16 @@ perkNightStalkerSilentNight
 		
 		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="ToolScrewdriver"/>
 		
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="100" tags="ToolScrewdriver"/>
 	</effect_group>
 	<effect_group name="Power Attack">
 		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
@@ -20901,13 +21009,11 @@ perkNightStalkerSilentNight
 		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
 		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
-		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
-		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="salvageHarvest"/>
-		<passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="60"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="12" tags="primary"/>
 		<passive_effect name="DegradationMax" operation="base_set" value="200,682" tier="1,6" />
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
-		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<display_value name="dBlockRepairAmount" value="400"/>
 		
 		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="ToolMasonHammer"/>
@@ -20922,11 +21028,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="jz_StoneBuilding"/>
 		
-	</effect_group>
-	<effect_group name="Power Attack">
-		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="StaminaLoss" operation="base_add" value="25.2" tags="secondary"/>
 	</effect_group>
 	<property name="Group" value="Tools/Traps"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
@@ -21000,11 +21101,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="jz_ConcreteBuilding"/>
 		
 	</effect_group>
-	<effect_group name="Power Attack">
-		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="StaminaLoss" operation="base_add" value="25.2" tags="secondary"/>
-	</effect_group>
 	<property name="Group" value="Tools/Traps"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
@@ -21075,11 +21171,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="jz_SteelBuilding"/>
 		
-	</effect_group>
-	<effect_group name="Power Attack">
-		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
-		<passive_effect name="StaminaLoss" operation="base_add" value="25.2" tags="secondary"/>
 	</effect_group>
 	<property name="Group" value="Tools/Traps"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
@@ -22996,7 +23087,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <item name="foodCornMeal">
-	<property name="Extends" value="jz_MasterFood" />
+	<property name="Extends" value="jz_MasterItem" />
 	<property name="Material" value="Mgrain"/>
 	<property name="Weight" value="3"/>
 	<property name="Stacknumber" value="30" />
@@ -23500,7 +23591,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="drinkCanMegaCrush">
 	<property name="Extends" value="drinkJarRedTea"/>
 	<property name="DisplayType" value="waterMegaCrush"/>
-	<property name="EconomicValue" value="240"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="UnlockedBy" value="jz_FitnessInstructor,jz_Chemist"/>
 	<property class="Action0">
 		<requirement name="!IsStatAtMax" stat="water"/>
 	</property>
@@ -23774,10 +23866,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<property name="Delay" value=".35"/>
 		<property name="Sound_start" value="bucketbail_water"/>
 	</property>
-	<property class="Action1"> <!-- UseAction -->
+	<!--<property class="Action1">
 		<property name="Class" value="ExchangeItem"/>
 		<property name="Delay" value=".35"/>
-		<property name="Change_item_to" value="bucketRiverWater"/>
+		<property name="Change_item_to" value="bucketRiverWater,bucketEmpty"/>
 		<property name="Do_block_action" value="deplete3"/>
 		<property name="Focused_blockname_1" value="water"/>
 		<property name="Focused_blockname_2" value="waterMoving"/>
@@ -23785,7 +23877,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<property name="Focused_blockname_4" value="waterMovingBucket"/>
 		<property name="Focused_blockname_5" value="terrWaterPOI"/>
 		<property name="Sound_start" value="bucketfill_water"/>
-	</property>
+	</property>-->
 	<property name="Group" value="Tools/Traps"/>
 </item>
 
@@ -25868,6 +25960,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="HoldType" value="45" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_knifeBladeMold" />
+	<property name="UnlockedBy" value="meleeToolKnifeIronSchematic,SP_KnifeIronSchematic"/>
     <property name="Group" value="Science" />
 </item>
 
@@ -25877,6 +25970,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DescriptionKey" value="jz_MoldDDesc" />
 	<property name="Stacknumber" value="1" />
     <property name="CustomIcon" value="ui_game_symbol_knifeBladeMold" />
+	<property name="UnlockedBy" value="meleeToolKnifeMacheteSchematic,SP_KnifeMacheteSchematic"/>
     <property name="Group" value="Science" />
 </item>
 
@@ -25914,6 +26008,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="CustomIcon" value="ui_game_symbol_sledgeHeadMold" />
     <property name="Group" value="Science" />
     <property name="DescriptionKey" value="jz_MoldDDesc" />
+	<property name="UnlockedBy" value="meleeToolSledgehammerIronSchematic,SP_SledgehammerIronSchematic"/>
 </item>
     
 <item name="jz_MoldShovelHead">
@@ -25933,6 +26028,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
     <property name="CustomIcon" value="ui_game_symbol_brassKnucklesMold" />
     <property name="Group" value="Science" />
     <property name="DescriptionKey" value="jz_MoldDDesc" />
+	<property name="UnlockedBy" value="meleeKnucklesIronSchematic,SP_KnucklesIronSchematic"/>
 </item>
     
 <item name="jz_MoldAxeHead">
@@ -26372,13 +26468,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIconTint" value="662909" />
 </item>
 
-<item name="jz_BowString">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="RepairAmount" value="300" />
-	<property name="DescriptionKey" value="bowStringDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_bowString" />
-</item>
-
 <item name="jz_CuredSinew">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="CuredSinewDesc" />
@@ -26417,6 +26506,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="50" />
 	<property name="DescriptionKey" value="jz_SmallKnifeBladeDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_smallKnifeBlade" />
+	<property name="UnlockedBy" value="meleeToolKnifeIronSchematic,SP_KnifeIronSchematic"/>
 </item>
 
 <item name="jz_LargeKnifeBlade">
@@ -26425,6 +26515,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="100" />
 	<property name="DescriptionKey" value="jz_LargeKnifeBladeDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_largeKnifeBlade" />
+	<property name="UnlockedBy" value="meleeToolKnifeMacheteSchematic,SP_KnifeMacheteSchematic"/>
 </item>
 
 <item name="jz_IronPickaxeHead">
@@ -26581,6 +26672,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="100" />
 	<property name="DescriptionKey" value="ironSledgeHeadDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_ironSledgeHead" />
+	<property name="UnlockedBy" value="meleeToolSledgehammerIronSchematic,SP_SledgehammerIronSchematic"/>
 </item>
 
 <item name="jz_Plank">
@@ -26610,13 +26702,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <!-- JZMOD JUNK -->
-<item name="jz_IronScissors">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="Material" value="Mmetal" />
-	<property name="CustomIcon" value="ui_game_symbol_ironScissors" />
-    <property name="DescriptionKey" value="jz_IronJunkDesc" />
-	<property name="Weight" value="1" />
-</item>
 
 <item name="jz_IronSoldier">
 	<property name="Extends" value="jz_MasterItem" />
@@ -26632,14 +26717,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DescriptionKey" value="jz_IronJunkDesc" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="1" />
-</item>
-
-<item name="jz_IronWeight">
-	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_ironWeight" />
-	<property name="DescriptionKey" value="jz_IronJunkDesc" />
-	<property name="Material" value="Mmetal" />
-	<property name="Weight" value="60" />
 </item>
 
 <item name="jz_IronHinge">
@@ -27146,6 +27223,22 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DescriptionKey" value="jz_RubberJunkDesc" />
 </item>
 
+<item name="jz_SteelScissors">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="Material" value="Msteel" />
+	<property name="CustomIcon" value="ui_game_symbol_ironScissors" />
+    <property name="DescriptionKey" value="jz_IronJunkDesc" />
+	<property name="Weight" value="1" />
+</item>
+
+<item name="jz_SteelWeight">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="CustomIcon" value="ui_game_symbol_ironWeight" />
+	<property name="DescriptionKey" value="jz_IronJunkDesc" />
+	<property name="Material" value="Msteel" />
+	<property name="Weight" value="60" />
+</item>
+
 <item name="jz_SteelHinge">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_steelHinge" />
@@ -27237,6 +27330,21 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <!-- JZMOD SCHEMATICS -->
+<item name="jz_SchematicStoneSpear">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="meleeThrownSpearStone"/>
+	<property name="Unlocks" value="meleeThrownSpearStone"/>
+    <property name="DescriptionKey" value="jz_SchematicStoneSpearDesc"/>
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="meleeThrownSpearStone" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeThrownSpearStone" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
 <item name="jz_SchematicWelder">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
@@ -27288,13 +27396,14 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="3"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="gunBlunderbuss"/>
-	<property name="Unlocks" value="gunBlunderbuss"/>
+	<property name="Unlocks" value="gunBlunderbuss,ammoBlunderbuss"/>
     <property name="DescriptionKey" value="jz_SchematicBlunderbussDesc"/>
 	<property class="Action0">
 		<requirement name="CVarCompare" cvar="gunBlunderbuss" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunBlunderbuss" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoBlunderbuss" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>

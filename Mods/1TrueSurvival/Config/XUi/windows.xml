@@ -238,9 +238,9 @@
 	<!--#$-IGS END.-$#-->
 		<rect depth="0" pos="96,0" width="303" controller="CraftingQueue">
 			<!-- <sprite name="background" color="[black]" type="sliced" pos="0,-10" /> -->
-			<grid name="queue" rows="1" cols="4" pos="3,-13" cell_width="75" cell_height="75" repeat_content="true">
+			<grid name="queue" rows="1" cols="5" pos="-85,-13" cell_width="75" cell_height="75" repeat_content="true">
 				<recipe_stack name="0"/>
-			</grid>
+			</grid><!--pos="3,-13"-->
 		</rect>
 	</window>
 

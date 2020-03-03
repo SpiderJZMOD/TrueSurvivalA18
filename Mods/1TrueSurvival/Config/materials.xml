@@ -1084,6 +1084,7 @@
 	<property name="MaxDamage" value="500"/>
 	<property name="Experience" value="2"/>
 </material>
+
 <material id="MstoneNoGlue">
 	<property name="damage_category" value="stone"/>
 	<property name="surface_category" value="stone"/>
@@ -1093,6 +1094,18 @@
 	<property name="stability_glue" value="0"/>
 	<property name="Mass" type="int" value="1"/>
 	<property name="MaxDamage" value="500"/>
+	<property name="Experience" value="2"/>
+</material>
+
+<material id="MwoodNoGlue">
+	<property name="damage_category" value="wood"/>
+	<property name="surface_category" value="wood"/>
+	<property name="forge_category" value="wood"/>
+	<property name="Hardness" type="float" value="1"/>
+	<property name="stepsound" value="wood"/>
+	<property name="stability_glue" value="0"/>
+	<property name="Mass" type="int" value="1"/>
+	<property name="MaxDamage" value="200"/>
 	<property name="Experience" value="2"/>
 </material>
 

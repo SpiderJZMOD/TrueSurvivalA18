@@ -110,6 +110,11 @@
 			<effect_description level="1" desc_key="jz_NegativeTraitsDesc" long_desc_key="jz_NegativeTraitsDesc"/>
 		</effect_group>
 		</attribute>
+	<attribute name="Schematics" name_key="Schematics" desc_key="jz_SchematicsDesc" icon="ui_game_symbol_book_read" >
+		<effect_group>
+			<effect_description level="1" desc_key="jz_SchematicsDesc" long_desc_key="jz_SchematicsLongDesc"/>
+		</effect_group>
+		</attribute>
 	<attribute name="Miscellaneous" name_key="Miscellaneous" desc_key="jz_OtherDesc" icon="ui_game_symbol_bundle" >
 		<effect_group>
 			<effect_description level="1" desc_key="jz_OtherDesc" long_desc_key="jz_OtherLongDesc"/>
@@ -292,7 +297,7 @@
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_UnarmedSkillNextLvTotal" operation="add" value="@jz_UnarmedSkillLvAdd"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="jz_UnarmedSkillLv" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your Boxing skill!"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your Brawling skill!"/>
 		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_UnarmedXP" operation="add" value="@jz_UnarmedSkillLvAdd"/>
@@ -300,7 +305,7 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_UnarmedSkillNextLvTotal" operation="add" value="@jz_UnarmedSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_UnarmedSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Boxing skill!"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Brawling skill!"/>
 		</effect_group>
 	</perk>
 	<!--BluntSkill-->
@@ -2285,7 +2290,7 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitHemophobic" parent="NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Hemophobic" desc_key="jz_TraitHemophobicDesc" icon="ui_game_symbol_mining">
-		<!--20% less healing from first aid XXXXXXXX TO DO NEEDS CHANGING XXXXXXXXXXXXXX-->
+		<!--20% less healing from first aid -->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitHemophobicDesc" long_desc_key="jz_TraitHemophobicDesc"/>
 		</effect_group>
@@ -2315,6 +2320,134 @@
 			<effect_description level="1" desc_key="jz_TraitWeakDesc" long_desc_key="jz_TraitWeakDesc"/>
 		</effect_group>
 	</perk>
+	<!-- ******************************************************************  JZMOD SCHEMATICS  ******************************************************************************** -->
+	
+	<perk name="SP_PoweredDoorsSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Powered Doors and Bridges" desc_key="SP_PoweredDoorsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="garageDoorMetal_v1Powered,vaultDoor03_Powered,vaultHatch_v3_Powered,garageDoorIndustrial_Powered,metalReinforcedWoodDrawBridgePowered"/>
+			<effect_description level="1" desc_key="SP_PoweredDoorsSchematicDesc" long_desc_key="SP_PoweredDoorsSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SledgehammerIronSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Sledgehammer" desc_key="SP_SledgehammerIronSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolSledgehammerIron,jz_MoldSledgeHead,jz_SledgeHead"/>
+			<effect_description level="1" desc_key="SP_SledgehammerIronSchematicDesc" long_desc_key="SP_SledgehammerIronSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SledgehammerSteelSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Sledgehammer" desc_key="SP_SledgehammerSteelSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolSledgehammerSteel"/>
+			<effect_description level="1" desc_key="SP_SledgehammerSteelSchematicDesc" long_desc_key="SP_SledgehammerSteelSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_KnifeIronSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Hunting Knife" desc_key="SP_KnifeIronSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolKnifeIron,jz_MoldSmallKnifeBlade,jz_SmallKnifeBlade"/>
+			<effect_description level="1" desc_key="SP_KnifeIronSchematicDesc" long_desc_key="SP_KnifeIronSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_KnifeMacheteSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Machete" desc_key="SP_KnifeMacheteSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolKnifeMachete,jz_MoldLargeKnifeBlade,jz_LargeKnifeBlade"/>
+			<effect_description level="1" desc_key="SP_KnifeMacheteSchematicDesc" long_desc_key="SP_KnifeMacheteSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_StunBatonSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Stun Baton" desc_key="SP_StunBatonSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeStunBaton"/>
+			<effect_description level="1" desc_key="SP_StunBatonSchematicDesc" long_desc_key="SP_StunBatonSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_WrenchSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Wrench" desc_key="SP_WrenchSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolWrench,jz_MoldWrench"/>
+			<effect_description level="1" desc_key="SP_WrenchSchematicDesc" long_desc_key="SP_WrenchSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_AugerSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Auger" desc_key="SP_AugerSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolAuger"/>
+			<effect_description level="1" desc_key="SP_AugerSchematicDesc" long_desc_key="SP_AugerSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ChainsawSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Chainsaw" desc_key="SP_ChainsawSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolChainsaw"/>
+			<effect_description level="1" desc_key="SP_ChainsawSchematicDesc" long_desc_key="SP_ChainsawSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SpearStoneSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Stone Spear" desc_key="SP_SpearStoneSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeThrownSpearStone"/>
+			<effect_description level="1" desc_key="SP_SpearStoneSchematicDesc" long_desc_key="SP_SpearStoneSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SpearIronSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Spear" desc_key="SP_SpearIronSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeThrownSpearIron"/>
+			<effect_description level="1" desc_key="SP_SpearIronSchematicDesc" long_desc_key="SP_SpearIronSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SpearSteelSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Spear" desc_key="SP_SpearSteelSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeThrownSpearSteel"/>
+			<effect_description level="1" desc_key="SP_SpearSteelSchematicDesc" long_desc_key="SP_SpearSteelSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_KnucklesIronSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Brass Knuckles" desc_key="SP_KnucklesIronSchematic" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeKnucklesIron,jz_MoldBrassKnuckles"/>
+			<effect_description level="1" desc_key="SP_KnucklesIronSchematic" long_desc_key="SP_KnucklesIronSchematic"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_KnucklesSteelSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Knuckles" desc_key="SP_KnucklesSteelSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeKnucklesSteel"/>
+			<effect_description level="1" desc_key="SP_KnucklesSteelSchematicDesc" long_desc_key="SP_KnucklesSteelSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_BowWoodenSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Wooden Bow" desc_key="SP_BowWoodenSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunBowWooden"/>
+			<effect_description level="1" desc_key="SP_BowWoodenSchematicDesc" long_desc_key="SP_BowWoodenSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_BowCompoundSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Compound Bow" desc_key="SP_BowCompoundSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunBowCompound"/>
+			<effect_description level="1" desc_key="SP_BowCompoundSchematicDesc" long_desc_key="SP_BowCompoundSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_CrossbowIronSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Compound Bow" desc_key="SP_CrossbowIronSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunCrossbowIron,jz_PartsCrossbowStock,jz_PartsCrossbowLimb"/>
+			<effect_description level="1" desc_key="SP_CrossbowIronSchematicDesc" long_desc_key="SP_CrossbowIronSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_CrossbowCompoundSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Compound Bow" desc_key="SP_CrossbowCompoundSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunCrossbowCompound"/>
+			<effect_description level="1" desc_key="SP_CrossbowCompoundSchematicDesc" long_desc_key="SP_CrossbowCompoundSchematicDesc"/>
+		</effect_group>
+	</perk>
+	<!-- ******************************************************************  JZMOD OTHER SKILLS  ******************************************************************************** -->
 	<!--JZMOD HEAD SHOTS ONLY - PVP FRIENDLY -->
 	<perk name="_HeadShotSystem" parent="Miscellaneous" min_level="1" max_level="1" base_skill_point_cost="0" cost_multiplier_per_level="1" name_key="Head Shots for Zombies" desc_key="All player damage is increased only on zombie heads and decreased only on zombies bodies" icon="ui_game_symbol_head_shot">
 		<effect_group>	
