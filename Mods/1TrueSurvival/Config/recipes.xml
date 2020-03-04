@@ -1325,13 +1325,12 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="cementMixer" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="25" tags="learnable">
-	<ingredient name="resourceSpring" count="4"/>
 	<ingredient name="smallEngine" count="1"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceElectricParts" count="4"/>
 	<ingredient name="cntTrash_can01" count="1" />
 	<ingredient name="resourceMetalPipe" count="15"/>
-	<ingredient name="jz_FanBelt" count="5" />
+	<ingredient name="jz_FanBelt" count="3" />
 </recipe>
 
 <recipe name="chemistryStation" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" craft_time="4" craft_exp_gain="25" tags="learnable">
@@ -2154,11 +2153,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceElectricParts" count="1"/>
 </recipe>
 
-<recipe name="tableSaw" count="1" craft_area="workbench" >
+<recipe name="tableSaw" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="300" tags="learnable" >
 	<ingredient name="resourceForgedIron" count="25"/>
 	<ingredient name="resourceMechanicalParts" count="20"/>
 	<ingredient name="resourceElectricParts" count="10"/>
 	<ingredient name="resourceSpring" count="4"/>
+	<ingredient name="jz_HandSaw" count="1"/>
+	<ingredient name="jz_NutAndBolt" count="10"/>
 </recipe>
 
 <recipe name="resourceMechanicalParts" count="1" craft_area="workbench" craft_tool="toolAndDieSet" craft_time="4" craft_exp_gain="2" tags="learnable" >
@@ -2183,14 +2184,16 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="thrownGrenade" count="1" craft_area="workbench" >
 	<ingredient name="resourceMechanicalParts" count="1"/>
 	<ingredient name="resourceGunPowder" count="14"/>
-	<ingredient name="resourceForgedIron" count="4"/>
+	<ingredient name="resourceBuckshot" count="10"/>
+	<ingredient name="resourceForgedIron" count="1"/>
 	<ingredient name="resourceSpring" count="1"/>
 </recipe>
 
 <recipe name="thrownGrenadeContact" count="1" craft_area="workbench" >
 	<ingredient name="resourceMechanicalParts" count="2"/>
 	<ingredient name="resourceGunPowder" count="14"/>
-	<ingredient name="resourceForgedIron" count="4"/>
+	<ingredient name="resourceBuckshot" count="10"/>
+	<ingredient name="resourceForgedIron" count="1"/>
 	<ingredient name="resourceSpring" count="1"/>
 </recipe>
 
@@ -2203,9 +2206,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="thrownDynamite" count="1" craft_area="workbench" >
-	<ingredient name="resourceYuccaFibers" count="1"/>
-	<ingredient name="resourceGunPowder" count="20"/>
-	<ingredient name="resourceDuctTape" count="2"/>
+	<ingredient name="jz_FiberRope" count="1"/>
+	<ingredient name="jz_Nitroglycerin" count="5"/>
+	<ingredient name="resourceGunPowder" count="5"/>
+	<ingredient name="resourceDuctTape" count="1"/>
 	<ingredient name="resourcePaper" count="10"/>
 </recipe>
 
@@ -2363,7 +2367,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="carBattery" count="1"/>
 </recipe>
 
-<recipe name="toolForgeCrucible" count="1" craft_area="workbench" >
+<recipe name="toolForgeCrucible" count="1" craft_area="workbench" tags="learnable">
 	<ingredient name="resourceForgedIron" count="100"/>
 	<ingredient name="resourceMechanicalParts" count="20"/>
 	<ingredient name="resourceRockSmall" count="1200"/>
@@ -3299,9 +3303,9 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="unit_clay" count="30"/>
 </recipe>
 
-<recipe name="jz_Anvil" count="1" material_based="true" craft_area="forge" >
+<recipe name="jz_Anvil" count="1" material_based="true" craft_area="forge" craft_time="60" craft_exp_gain="300" tags="learnable" >
 	<ingredient name="unit_iron" count="1200"/>
-	<ingredient name="unit_clay" count="100"/>
+	<ingredient name="unit_clay" count="500"/>
 </recipe>
 
 <recipe name="toolCookingGrill" count="1" material_based="true" craft_area="forge" >
@@ -3823,16 +3827,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 
 <recipe name="medicalPlasterCastSchematic" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
 	<ingredient name="medicalPlasterCast" count="12"/>
-	<ingredient name="jz_BlankSkillBook" count="1"/>
-</recipe>
-
-<recipe name="medicalBloodDrawKitSchematic" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
-	<ingredient name="medicalBloodDrawKit" count="12"/>
-	<ingredient name="jz_BlankSkillBook" count="1"/>
-</recipe>
-
-<recipe name="toolBellowsSchematic" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
-	<ingredient name="toolBellows" count="3"/>
 	<ingredient name="jz_BlankSkillBook" count="1"/>
 </recipe>
 

@@ -2462,6 +2462,13 @@
 		</effect_group>
 	</perk>
     
+	 <perk name="SP_BlunderbussSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Pump Shotgun" desc_key="SP_BlunderbussSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunPumpShotgun"/>
+			<effect_description level="1" desc_key="SP_BlunderbussSchematicDesc" long_desc_key="SP_BlunderbussSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
     <perk name="SP_DoubleBarrelShotgunSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Double Barrel Shotgun" desc_key="SP_DoubleBarrelShotgunSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunDoubleBarrelShotgun"/>
@@ -2475,14 +2482,7 @@
 			<effect_description level="1" desc_key="SP_PumpShotgunSchematicDesc" long_desc_key="SP_PumpShotgunSchematicDesc"/>
 		</effect_group>
 	</perk>
-    
-    <perk name="SP_BlunderbussSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Pump Shotgun" desc_key="SP_BlunderbussSchematicDesc" icon="ui_game_symbol_fire">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunPumpShotgun"/>
-			<effect_description level="1" desc_key="SP_BlunderbussSchematicDesc" long_desc_key="SP_BlunderbussSchematicDesc"/>
-		</effect_group>
-	</perk>
-    
+        
     <perk name="SP_SMG5Schematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="SMG5" desc_key="SP_SMG5SchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunSMG5"/>
@@ -2510,6 +2510,18 @@
 			<effect_description level="1" desc_key="SP_MR10SchematicDesc" long_desc_key="SP_MR10SchematicDesc"/>
 		</effect_group>
 	</perk>
+	 <perk name="SP_M60Schematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="M60" desc_key="SP_M60SchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunM60"/>
+			<effect_description level="1" desc_key="SP_M60SchematicDesc" long_desc_key="SP_M60SchematicDesc"/>
+		</effect_group>
+	</perk>
+	 <perk name="SP_TacticalARSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="MR10" desc_key="SP_TacticalARSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunTacticalAR"/>
+			<effect_description level="1" desc_key="SP_TacticalARSchematicDesc" long_desc_key="SP_TacticalARSchematicDesc"/>
+		</effect_group>
+	</perk>
     
     <perk name="SP_RocketLauncherSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Rocket Launcher" desc_key="SP_RocketLauncherSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
@@ -2522,6 +2534,342 @@
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunJunkTurret"/>
 			<effect_description level="1" desc_key="SP_JunkTurretSchematicDesc" long_desc_key="SP_JunkTurretSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MolotovCocktailSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Molotov Cocktail" desc_key="SP_MolotovCocktailSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="thrownAmmoMolotovCocktail"/>
+			<effect_description level="1" desc_key="SP_MolotovCocktailSchematicDesc" long_desc_key="SP_MolotovCocktailSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_PipeBombSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Pipe Bomb" desc_key="SP_PipeBombSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="thrownAmmoPipeBomb"/>
+			<effect_description level="1" desc_key="SP_PipeBombSchematicDesc" long_desc_key="SP_PipeBombSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GrenadeContactSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Contact Grenade" desc_key="SP_GrenadeContactSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="thrownGrenadeContact"/>
+			<effect_description level="1" desc_key="SP_GrenadeContactSchematicDesc" long_desc_key="SP_GrenadeContactSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GrenadeSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Grenade" desc_key="SP_GrenadeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="thrownGrenade"/>
+			<effect_description level="1" desc_key="SP_GrenadeSchematicDesc" long_desc_key="SP_GrenadeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_DynamiteSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Dynamite" desc_key="SP_DynamiteSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="thrownDynamite"/>
+			<effect_description level="1" desc_key="SP_DynamiteSchematicDesc" long_desc_key="SP_DynamiteSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_TimedChargeSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Dynamite" desc_key="SP_TimedChargeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="thrownTimedCharge"/>
+			<effect_description level="1" desc_key="SP_TimedChargeSchematicDesc" long_desc_key="SP_TimedChargeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_PlasterCastSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Plaster Cast" desc_key="SP_PlasterCastSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalPlasterCast"/>
+			<effect_description level="1" desc_key="SP_PlasterCastSchematicDesc" long_desc_key="SP_PlasterCastSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_ForgeCrucibleSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Forge Crucible" desc_key="SP_ForgeCrucibleSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="toolForgeCrucible"/>
+			<effect_description level="1" desc_key="SP_ForgeCrucibleSchematicDesc" long_desc_key="SP_ForgeCrucibleSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_AnvilSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_AnvilSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_Anvil"/>
+			<effect_description level="1" desc_key="SP_AnvilSchematicDesc" long_desc_key="SP_AnvilSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_CementMixerSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_CementMixerSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="cementMixer"/>
+			<effect_description level="1" desc_key="SP_CementMixerSchematicDesc" long_desc_key="SP_CementMixerSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_WorkbenchSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_WorkbenchSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="workbench"/>
+			<effect_description level="1" desc_key="SP_WorkbenchSchematicDesc" long_desc_key="SP_WorkbenchSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ForgeSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_ForgeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="forge"/>
+			<effect_description level="1" desc_key="SP_ForgeSchematicDesc" long_desc_key="SP_ForgeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_TableSawSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_TableSawSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="tableSaw"/>
+			<effect_description level="1" desc_key="SP_TableSawSchematicDesc" long_desc_key="SP_TableSawSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ChemistryStationSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_ChemistryStationSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="chemistryStation"/>
+			<effect_description level="1" desc_key="SP_ChemistryStationSchematicDesc" long_desc_key="SP_ChemistryStationSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_BicycleChassisSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_BicycleChassisSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleBicycleChassis"/>
+			<effect_description level="1" desc_key="SP_BicycleChassisSchematicDesc" long_desc_key="SP_BicycleChassisSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_BicycleHandlebarsSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_BicycleHandlebarsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleBicycleHandlebars"/>
+			<effect_description level="1" desc_key="SP_BicycleHandlebarsSchematicDesc" long_desc_key="SP_BicycleHandlebarsSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MinibikeChassisSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_MinibikeChassisSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleMinibikeChassis"/>
+			<effect_description level="1" desc_key="SP_MinibikeChassisSchematicDesc" long_desc_key="SP_MinibikeChassisSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MinibikeHandlebarsSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_MinibikeHandlebarsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleMinibikeHandlebars"/>
+			<effect_description level="1" desc_key="SP_MinibikeHandlebarsSchematicDesc" long_desc_key="SP_MinibikeHandlebarsSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MotorcycleChassisSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_MotorcycleChassisSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleMotorcycleChassis"/>
+			<effect_description level="1" desc_key="SP_MotorcycleChassisSchematicDesc" long_desc_key="SP_MotorcycleChassisSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MotorcycleHandlebarsSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_MotorcycleHandlebarsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleMotorcycleHandlebars"/>
+			<effect_description level="1" desc_key="SP_MotorcycleHandlebarsSchematicDesc" long_desc_key="SP_MotorcycleHandlebarsSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_4x4TruckChassisSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_4x4TruckChassisSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicle4x4TruckChassis"/>
+			<effect_description level="1" desc_key="SP_4x4TruckChassisSchematicDesc" long_desc_key="SP_4x4TruckChassisSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_4x4TruckAccessoriesSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_4x4TruckAccessoriesSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicle4x4TruckAccessories"/>
+			<effect_description level="1" desc_key="SP_4x4TruckAccessoriesSchematicDesc" long_desc_key="SP_4x4TruckAccessoriesSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GyroCopterChassisSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_GyroCopterChassisSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleGyroCopterChassis"/>
+			<effect_description level="1" desc_key="SP_GyroCopterChassisSchematicDesc" long_desc_key="SP_GyroCopterChassisSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GyroCopterAccessoriesSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_GyroCopterAccessoriesSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleGyroCopterAccessories"/>
+			<effect_description level="1" desc_key="SP_GyroCopterAccessoriesSchematicDesc" long_desc_key="SP_GyroCopterAccessoriesSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GeneratorbankSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_GeneratorbankSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="generatorbank"/>
+			<effect_description level="1" desc_key="SP_GeneratorbankSchematicDesc" long_desc_key="SP_GeneratorbankSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_PressureplateSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_PressureplateSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="pressureplate"/>
+			<effect_description level="1" desc_key="SP_PressureplateSchematicDesc" long_desc_key="SP_PressureplateSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_BladeTrapSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_BladeTrapSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="bladeTrap"/>
+			<effect_description level="1" desc_key="SP_BladeTrapSchematicDesc" long_desc_key="SP_BladeTrapSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_DartTrapSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_DartTrapSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="dartTrap"/>
+			<effect_description level="1" desc_key="SP_DartTrapSchematicDesc" long_desc_key="SP_DartTrapSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ShotgunTurretSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_ShotgunTurretSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="shotgunTurret"/>
+			<effect_description level="1" desc_key="SP_ShotgunTurretSchematicDesc" long_desc_key="SP_ShotgunTurretSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_AutoTurretSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_AutoTurretSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="autoTurret"/>
+			<effect_description level="1" desc_key="SP_AutoTurretSchematicDesc" long_desc_key="SP_AutoTurretSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ElectricfencepostSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_ElectricfencepostSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="electricfencepost"/>
+			<effect_description level="1" desc_key="SP_ElectricfencepostSchematicDesc" long_desc_key="SP_ElectricfencepostSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MotionsensorSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_MotionsensorSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="motionsensor"/>
+			<effect_description level="1" desc_key="SP_MotionsensorSchematicDesc" long_desc_key="SP_MotionsensorSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SpeakerSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_SpeakerSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="speaker"/>
+			<effect_description level="1" desc_key="SP_SpeakerSchematicDesc" long_desc_key="SP_SpeakerSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SpotlightPlayerSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_SpotlightPlayerSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="spotlightPlayer"/>
+			<effect_description level="1" desc_key="SP_SpotlightPlayerSchematicDesc" long_desc_key="SP_SpotlightPlayerSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SwitchSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_SwitchSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="switch"/>
+			<effect_description level="1" desc_key="SP_SwitchSchematicDesc" long_desc_key="SP_SwitchSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ElectrictimerrelaySchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_ElectrictimerrelaySchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="electrictimerrelay"/>
+			<effect_description level="1" desc_key="SP_ElectrictimerrelaySchematicDesc" long_desc_key="SP_ElectrictimerrelaySchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_CraftedRevolverSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_CraftedRevolverSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_CraftedRevolver"/>
+			<effect_description level="1" desc_key="SP_CraftedRevolverSchematicDesc" long_desc_key="SP_CraftedRevolverSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_CraftedRifleSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_CraftedRifleSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_CraftedRifle"/>
+			<effect_description level="1" desc_key="SP_CraftedRifleSchematicDesc" long_desc_key="SP_CraftedRifleSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_IronPickaxeSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_IronPickaxeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolPickaxeIron"/>
+			<effect_description level="1" desc_key="SP_IronPickaxeSchematicDesc" long_desc_key="SP_IronPickaxeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_IronFireaxeSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_IronFireaxeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolFireaxeIron"/>
+			<effect_description level="1" desc_key="SP_IronFireaxeSchematicDesc" long_desc_key="SP_IronFireaxeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_IronShovelSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_IronShovelSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolShovelIron"/>
+			<effect_description level="1" desc_key="SP_IronShovelSchematicDesc" long_desc_key="SP_IronShovelSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ClawHammerSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_ClawHammerSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolClawHammer"/>
+			<effect_description level="1" desc_key="SP_ClawHammerSchematicDesc" long_desc_key="SP_ClawHammerSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SteelPickaxeSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_SteelPickaxeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolPickaxeSteel"/>
+			<effect_description level="1" desc_key="SP_SteelPickaxeSchematicDesc" long_desc_key="SP_SteelPickaxeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SteelFireaxeSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_SteelFireaxeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolFireaxeSteel"/>
+			<effect_description level="1" desc_key="SP_SteelFireaxeSchematicDesc" long_desc_key="SP_SteelFireaxeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SteelShovelSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_SteelShovelSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolShovelSteel"/>
+			<effect_description level="1" desc_key="SP_SteelShovelSchematicDesc" long_desc_key="SP_SteelShovelSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_LargeEngineSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_LargeEngineSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_LargeEngine"/>
+			<effect_description level="1" desc_key="SP_LargeEngineSchematicDesc" long_desc_key="SP_LargeEngineSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ChemistryStationSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_ChemistryStationSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="chemistryStation"/>
+			<effect_description level="1" desc_key="SP_ChemistryStationSchematicDesc" long_desc_key="SP_ChemistryStationSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ChemistryStationSchematic" parent="Schematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anvil" desc_key="SP_ChemistryStationSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="chemistryStation"/>
+			<effect_description level="1" desc_key="SP_ChemistryStationSchematicDesc" long_desc_key="SP_ChemistryStationSchematicDesc"/>
 		</effect_group>
 	</perk>
 	<!-- ******************************************************************  JZMOD OTHER SKILLS  ******************************************************************************** -->

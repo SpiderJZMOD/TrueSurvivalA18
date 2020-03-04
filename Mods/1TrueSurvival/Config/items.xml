@@ -3983,7 +3983,7 @@
 
 	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
 	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
-    <property name="UnlockedBy" value="gunAK47Schematic"/>
+    <property name="UnlockedBy" value="jz_SchematicM60,SP_M60Schematic"/>
 	<property name="RepairTools" value="jz_WeaponRepairKit"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 
@@ -7076,7 +7076,7 @@
 	<property name="Explosion.BlastPower" value="75"/> <!-- (int,100) how far ragdolls and such are flung -->
 	<property name="FuseTime" value="4"/> <!-- End: Needed for  time in sec, max 6 -->
 	<property name="StickPercent" value=".4"/>
-	<property name="UnlockedBy" value="thrownAmmoPipeBombSchematic"/>
+	<property name="UnlockedBy" value="thrownAmmoPipeBombSchematic,SP_PipeBombSchematic"/>
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="ActivationTransformToHide" value="Sparks"/>
 	<property class="Action0">
@@ -7125,7 +7125,7 @@
 	<property name="FusePrimeOnActivate" value="true"/>
 	<property name="ExplodeOnHit" value="true"/>
 	<property name="StickPercent" value=".5"/>
-	<property name="UnlockedBy" value="thrownGrenadeContactSchematic"/>
+	<property name="UnlockedBy" value="thrownGrenadeContactSchematic,SP_GrenadeContactSchematic"/>
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="SoundUnholster" value="grenade_unholster"/>
 	<property class="Action0">
@@ -7205,7 +7205,7 @@ add knockdown resist to armor
 <item name="thrownGrenade"> <!-- T2 demolitions (perk 3) -->
 	<property name="Extends" value="thrownGrenadeContact" param1="ExplodeOnHit"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Grenade/GrenadePrefab.prefab"/>
-	<property name="UnlockedBy" value="thrownGrenadeSchematic"/>
+	<property name="UnlockedBy" value="thrownGrenadeSchematic,SP_GrenadeSchematic"/>
 	<property name="DisplayType" value="ammoGrenade"/>
 	<property name="FuseTime" value="3"/>
 	<property name="StickPercent" value=".3"/>
@@ -7243,7 +7243,7 @@ add knockdown resist to armor
 	<property name="FuseStartOnDrop" value="true"/>
 	<property name="FuseTime" value="4"/> <!-- End: Needed for  time in sec, max 6 -->
 	<property name="StickPercent" value="1"/>
-	<property name="UnlockedBy" value="bookGreatHeistTimedCharge"/>
+	<property name="UnlockedBy" value="bookGreatHeistTimedCharge,SP_TimedChargeSchematic"/>
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="SoundUnholster" value="charge_unholster"/>
 	<property name="SoundStick" value="charge_stick"/>
@@ -7284,7 +7284,7 @@ add knockdown resist to armor
 	<!--<property name="Explosion.DamageBonus.stone" value="0"/><property name="Explosion.DamageBonus.metal" value="0"/><property name="Explosion.DamageBonus.earth" value="0"/><property name="Explosion.DamageBonus.cloth" value="5"/><property name="Explosion.DamageBonus.wood" value="0"/><property name="Explosion.DamageBonus.water" value="0"/>-->
 	<property name="FuseTime" value="4"/> <!-- End: Needed for  time in sec, max 6 -->
 	<property name="StickPercent" value=".2"/>
-	<property name="UnlockedBy" value="thrownDynamiteSchematic"/>
+	<property name="UnlockedBy" value="thrownDynamiteSchematic,SP_DynamiteSchematic"/>
 	<property name="Group" value="Ammo/Weapons"/>
 	<property class="Action0">
 		<property name="Class" value="ThrowAway"/>
@@ -12042,6 +12042,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="thrownAmmoPipeBomb" operation="set" value="1"/>
+		 <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_PipeBombSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12057,6 +12058,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="thrownGrenadeContact" operation="set" value="1"/>
+		 <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GrenadeContactSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12072,6 +12074,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="thrownGrenade" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GrenadeSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12087,6 +12090,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="thrownDynamite" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_DynamiteSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12148,6 +12152,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalPlasterCast" operation="set" value="1"/>
+		 <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_JunkTurretSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12163,6 +12168,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalBloodDrawKit" operation="set" value="1"/>
+		 <triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_JunkTurretSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12191,6 +12197,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolForgeCrucible" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ForgeCrucibleSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12205,6 +12212,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_Anvil" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_AnvilSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12220,6 +12228,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="cementMixer" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CementMixerSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12235,6 +12244,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="workbench" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_WorkbenchSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12250,6 +12260,8 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="forge" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="toolBellows" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ForgeSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12265,6 +12277,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="tableSaw" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_TableSawSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12280,6 +12293,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="chemistryStation" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ChemistryStationSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -15739,7 +15753,7 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="toolBellows">
-	<property name="UnlockedBy" value="toolBellowsSchematic"/>
+	<property name="UnlockedBy" value="forgeSchematic,SP_ForgeSchematic"/>
 	<property name="HoldType" value="45"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -27414,6 +27428,40 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunBlunderbuss" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="ammoBlunderbuss" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicM60">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="3"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="gunM60"/>
+	<property name="Unlocks" value="gunM60"/>
+    <property name="DescriptionKey" value="jz_SchematicM60Desc"/>
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="gunM60" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunM60" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_M60Schematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicTacticalAR">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="3"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="gunTacticalAR"/>
+	<property name="Unlocks" value="gunTacticalAR"/>
+    <property name="DescriptionKey" value="jz_SchematicTacticalARDesc"/>
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="gunTacticalAR" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="gunTacticalAR" operation="set" value="1"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_TacticalARSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
