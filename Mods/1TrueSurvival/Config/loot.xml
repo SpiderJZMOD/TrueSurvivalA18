@@ -635,7 +635,7 @@ The overall plan for loot distribution:
 	<item group="CompoundBowParts" prob="15" />
 	<item group="CompoundCrossbowParts" count="1,10" prob="15" />
 	<item name="jz_CuredSinew" prob="20" />
-	<item group="jz_BasicGunParts" prob="20" />
+	<item name="jz_BasicGunParts" prob="20" />
 </lootgroup>
 
 <lootgroup name="weaponsCommonParts">
@@ -1577,18 +1577,12 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="schematicsVehicle" >
-	<item name="vehicleBicycleChassisSchematic"/>
+	<item name="jz_SchematicBicycle"/>
 	<item name="vehicleBicycleHandlebarsSchematic"/>
-	<item name="vehicleBicycleChassisSchematic"/>
-	<item name="vehicleBicycleHandlebarsSchematic"/>
-	<item name="vehicleMinibikeChassisSchematic"/>
-	<item name="vehicleMinibikeHandlebarsSchematic"/>
-	<item name="vehicleMotorcycleChassisSchematic"/>
-	<item name="vehicleMotorcycleHandlebarsSchematic"/>
-	<item name="vehicle4x4TruckChassisSchematic"/>
-	<item name="vehicle4x4TruckAccessoriesSchematic"/>
-	<item name="vehicleGyroCopterChassisSchematic"/>
-	<item name="vehicleGyroCopterAccessoriesSchematic"/>
+	<item name="jz_SchematicMiniBike"/>
+	<item name="jz_SchematicMotorcycle"/>
+	<item name="jz_Schematic4x4Truck"/>
+	<item name="jz_SchematicGyroCopter"/>
 </lootgroup>
 
 <lootgroup name="T1Schematics" >
@@ -1598,7 +1592,7 @@ The overall plan for loot distribution:
 	<item name="workbenchSchematic"/>
 	<item name="forgeSchematic"/>
 	<item name="tableSawSchematic"/>
-	<item name="vehicleBicycleChassisSchematic"/>
+	<item name="jz_SchematicBicycle"/>
 	<item name="vehicleBicycleHandlebarsSchematic"/>
 	<item name="modArmorAdvancedMuffledConnectorsSchematic"/>
 	<item name="jz_SchematicHerbalCream"/>
@@ -1621,10 +1615,8 @@ The overall plan for loot distribution:
 	<item name="medicalPlasterCastSchematic"/>
 	<item name="cementMixerSchematic"/>
 	<item name="chemistryStationSchematic"/>
-	<item name="vehicleMinibikeChassisSchematic"/>
-	<item name="vehicleMinibikeHandlebarsSchematic"/>
-	<item name="vehicleMotorcycleChassisSchematic"/>
-	<item name="vehicleMotorcycleHandlebarsSchematic"/>
+	<item name="jz_SchematicMiniBike"/>
+	<item name="jz_SchematicMotorcycle"/>
 </lootgroup>
 
 <lootgroup name="T3Schematics" >
@@ -1639,10 +1631,8 @@ The overall plan for loot distribution:
 	<item name="resourceMilitaryFiberSchematic"/>
 	<item name="armorSteelSetSchematic"/>
 	<item name="gunToolNailgunSchematic"/>
-	<item name="vehicle4x4TruckChassisSchematic"/>
-	<item name="vehicle4x4TruckAccessoriesSchematic"/>
-	<item name="vehicleGyroCopterChassisSchematic"/>
-	<item name="vehicleGyroCopterAccessoriesSchematic"/>
+	<item name="jz_Schematic4x4Truck"/>
+	<item name="jz_SchematicGyroCopter"/>
 	<item name="ammoGasCanSchematic"/>
 	<item name="resourceOilSchematic"/>
 	<item name="drugHerbalAntibioticsSchematic"/>
