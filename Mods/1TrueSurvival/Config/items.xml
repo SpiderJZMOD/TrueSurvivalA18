@@ -27282,10 +27282,94 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <!-- JZMOD SCHEMATICS -->
+<item name="jz_SchematicBearStew">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_FoodBearStew"/>
+	<property name="DescriptionKey" value="jz_SchematicBearStewDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_BearStewSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BearStewSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCandyTinMine">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="mineCandyTin"/>
+	<property name="DescriptionKey" value="jz_SchematicCandyTinMineDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_CandyTinMineSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CandyTinMineSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicHubcapMine">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="mineHubcap"/>
+	<property name="DescriptionKey" value="jz_SchematicHubcapMineDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_HubcapMineSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_HubcapMineSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicAirFilterMine">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="mineAirFilter"/>
+    <property name="DescriptionKey" value="jz_SchematicAirFilterMineDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_AirFilterMineSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_AirFilterMineSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicScrapPlateMine">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="rScrapIronPlateMine"/>
+    <property name="DescriptionKey" value="jz_SchematicScrapPlateMineDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_ScrapPlateMineSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ScrapPlateMineSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCookingPotMine">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="mineCookingPot"/>
+    <property name="DescriptionKey" value="jz_SchematicCookingPotMineDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_CookingPotMineSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CookingPotMineSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
 <item name="jz_SchematicFarmPlot">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="meleeThrownSpearStone"/>
+	<property name="CustomIcon" value="farmPlotBlock"/>
 	<property name="Unlocks" value="meleeThrownSpearStone"/>
     <property name="DescriptionKey" value="jz_SchematicStoneSpearDesc"/>
 	<property class="Action0">

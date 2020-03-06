@@ -2004,7 +2004,7 @@
 	<!-- Electrician -->
 	<perk name="jz_Electrician" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Electrician" desc_key="jz_ElectricianDesc" icon="ui_game_symbol_electric_power">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="generatorbank,pressureplate,batterybank,ceilingLight01_player,electrictimerrelay,electricwirerelay,motionsensor,speaker,switch,electricfencepost,spotlightPlayer,meleeStunBaton"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceElectricParts,generatorbank,pressureplate,batterybank,ceilingLight01_player,electrictimerrelay,electricwirerelay,motionsensor,speaker,switch,electricfencepost,spotlightPlayer,meleeStunBaton"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ElectricianTag"/>
 			<effect_description level="1" desc_key="jz_ElectricianDesc" long_desc_key="jz_ElectricianDesc"/>
 		</effect_group>
@@ -2020,7 +2020,7 @@
 	<!-- Mechanic --> 
 	<perk name="jz_Mechanic" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mechanic" desc_key="jz_MechanicDesc" icon="ui_game_symbol_service">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="smallEngine,jz_LargeEngine,vehicleMinibikePlaceable,vehicleBicyclePlaceable,vehicleMotorcyclePlaceable,vehicle4x4TruckPlaceable,vehicleGyrocopterPlaceable,meleeToolAuger,meleeToolChainsaw"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceMechanicalParts,smallEngine,jz_LargeEngine,vehicleMinibikePlaceable,vehicleBicyclePlaceable,vehicleMotorcyclePlaceable,vehicle4x4TruckPlaceable,vehicleGyrocopterPlaceable,meleeToolAuger,meleeToolChainsaw"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MechanicTag"/>
 			<effect_description level="1" desc_key="jz_MechanicDesc" long_desc_key="jz_MechanicDesc"/>
 		</effect_group>
@@ -2044,7 +2044,7 @@
 	<!-- Chemist -->
 	<perk name="jz_Chemist" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Chemist" desc_key="jz_ChemistDesc" icon="ui_game_symbol_chemistry">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkCanMegaCrush,jz_MedicalStimulant,resourceAcid,resourceOilShaleBundle,resourceGunPowder,jz_MedicalPurificationTablets"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkJarBlackStrapCoffee,drinkCanMegaCrush,jz_MedicalStimulant,resourceAcid,resourceOilShaleBundle,resourceGunPowder,jz_MedicalPurificationTablets"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ChemistTag"/>
 			<effect_description level="1" desc_key="jz_ChemistDesc" long_desc_key="jz_ChemistDesc"/>
 		</effect_group>
@@ -2353,7 +2353,42 @@
 	</perk>
 	<!-- ******************************************************************  JZMOD SCHEMATICS  ******************************************************************************** -->
 	<!-- AMMO AND EXPLOSIVES -->
-	<perk name="SP_MolotovCocktailSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Molotov Cocktail" desc_key="SP_MolotovCocktailSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_CandyTinMineSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Candy Tin Mine" desc_key="SP_CandyTinMineSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="mineCandyTin"/>
+			<effect_description level="1" desc_key="SP_CandyTinMineSchematicDesc" long_desc_key="SP_CandyTinMineSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_HubcapMineSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Hubcap Mine" desc_key="SP_HubcapMineSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="mineHubcap"/>
+			<effect_description level="1" desc_key="SP_HubcapMineSchematicDesc" long_desc_key="SP_HubcapMineSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_AirFilterMineSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Contact Grenade" desc_key="SP_AirFilterMineSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="mineAirFilter"/>
+			<effect_description level="1" desc_key="SP_AirFilterMineSchematicDesc" long_desc_key="SP_AirFilterMineSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ScrapPlateMineSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Grenade" desc_key="SP_ScrapPlateMineSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="rScrapIronPlateMine"/>
+			<effect_description level="1" desc_key="SP_ScrapPlateMineSchematicDesc" long_desc_key="SP_ScrapPlateMineSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+   	<perk name="SP_CookingPotMineSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Grenade" desc_key="SP_CookingPotMineSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="mineCookingPot"/>
+			<effect_description level="1" desc_key="SP_CookingPotMineSchematicDesc" long_desc_key="SP_CookingPotMineSchematicDesc"/>
+		</effect_group>
+	</perk>
+          
+    <perk name="SP_MolotovCocktailSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Molotov Cocktail" desc_key="SP_MolotovCocktailSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="thrownAmmoMolotovCocktail"/>
 			<effect_description level="1" desc_key="SP_MolotovCocktailSchematicDesc" long_desc_key="SP_MolotovCocktailSchematicDesc"/>
@@ -2717,6 +2752,13 @@
 		</effect_group>
 	</perk>
 	<!--FOOD-->
+    <perk name="SP_BearStewSchematic" parent="jz_FoodRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Kabobs" desc_key="SP_BearStewSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FoodBearStew"/>
+			<effect_description level="1" desc_key="SP_BearStewSchematicDesc" long_desc_key="SP_BearStewSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
 	<perk name="SP_KabobSchematic" parent="jz_FoodRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Kabobs" desc_key="SP_KabobSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FoodKabobSmall,jz_FoodKabobMedium,jz_FoodKabobLarge"/>
@@ -3119,7 +3161,7 @@
 	
 	<perk name="SP_SteelPickaxeSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Pickaxe" desc_key="SP_SteelPickaxeSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolPickaxeSteel,jz_MoldIronPickAxeHead,jz_SteelPickaxeHead"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolPickaxeSteel,jz_MoldSteelPickAxeHead,jz_SteelPickaxeHead"/>
 			<effect_description level="1" desc_key="SP_SteelPickaxeSchematicDesc" long_desc_key="SP_SteelPickaxeSchematicDesc"/>
 		</effect_group>
 	</perk>
@@ -3234,7 +3276,7 @@
 	<perk name="jz_WoodBuildingSkill" parent="Miscellaneous" min_level="0" max_level="3" base_skill_point_cost="0" name_key="Wood Building" desc_key="jz_WoodBuildingSkillDesc" icon="ui_game_symbol_wood">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,1,1,1" tags="woodFrameBlockVariantHelper"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,1,1" tags="meleeToolClawHammer"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,1,1" tags="meleeToolClawHammer,jz_MoldHammerHead,jz_HammerHead"/>"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,0,1" tags="jz_Plank"/>
 		</effect_group>
 		<effect_group>
@@ -3329,7 +3371,7 @@
 	<perk name="jz_IronBuildingSkill" parent="Miscellaneous" min_level="0" max_level="3" base_skill_point_cost="0" name_key="Iron Building" desc_key="jz_IronBuildingSkillDesc" icon="ui_game_symbol_forge">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,1,1,1" tags="scrapIronFrameBlockVariantHelper"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,1,1" tags="meleeToolWrench"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,1,1" tags="meleeToolWrench,jz_MoldWrench"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,0,1" tags="jz_IronSheetMetal"/>
 		</effect_group>
 		<effect_group>

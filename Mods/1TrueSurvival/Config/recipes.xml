@@ -230,22 +230,22 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_Stick" count="5"/>
 </recipe>
 
-<recipe name="jz_MeleePlank" count="1" craft_time="30" craft_exp_gain="20">
+<recipe name="jz_MeleePlank" count="1" craft_time="30" craft_exp_gain="20" tags="jz_WoodenClubCraftingTag"> 
 	<ingredient name="jz_Plank" count="1"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 </recipe>
 
-<recipe name="jz_MeleePlankSpiked" count="1" craft_time="30" craft_exp_gain="20">
+<recipe name="jz_MeleePlankSpiked" count="1" craft_time="30" craft_exp_gain="20" tags="jz_WoodenClubCraftingTag"> 
 	<ingredient name="jz_MeleePlank" count="1"/>
 	<ingredient name="resourceNail" count="10"/>
 </recipe>
 
-<recipe name="jz_MeleeTableLegSpiked" count="1" craft_time="30" craft_exp_gain="20">
+<recipe name="jz_MeleeTableLegSpiked" count="1" craft_time="30" craft_exp_gain="20" tags="jz_WoodenClubCraftingTag"> 
 	<ingredient name="jz_MeleeTableLeg" count="1"/>
 	<ingredient name="resourceNail" count="10"/>
 </recipe>
 
-<recipe name="jz_MeleeBranchSpiked" count="1" craft_time="30" craft_exp_gain="20">
+<recipe name="jz_MeleeBranchSpiked" count="1" craft_time="30" craft_exp_gain="20" tags="jz_WoodenClubCraftingTag"> 
 	<ingredient name="jz_WoodBranch" count="1"/>
 	<ingredient name="resourceNail" count="10"/>
 </recipe>
@@ -2105,6 +2105,30 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceScrapIron" count="30"/>
 	<ingredient name="resourceGunPowder" count="8"/>
 	<ingredient name="resourceDuctTape" count="1"/>
+</recipe>
+
+<recipe name="mineCandyTin" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable" >
+	<ingredient name="resourceCandyTin" count="1"/>
+    <ingredient name="resourceNail" count="10"/>
+	<ingredient name="resourceGunPowder" count="5"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+</recipe>
+
+<recipe name="mineHubcap" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="4" craft_exp_gain="5" tags="learnable" >
+	<ingredient name="resourceHubcap" count="2"/>
+    <ingredient name="resourceNail" count="20"/>
+	<ingredient name="resourceGunPowder" count="8"/>
+	<ingredient name="jz_NutAndBolt" count="3"/>
+    <ingredient name="resourceSpring" count="1"/>
+</recipe>
+
+<recipe name="mineAirFilter" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="4" craft_exp_gain="5" tags="learnable" >
+	<ingredient name="resourceAirFilter" count="1"/>
+    <ingredient name="resourceNail" count="20"/>
+    <ingredient name="resourceScrapIron" count="2"/>
+	<ingredient name="resourceGunPowder" count="15"/>
+	<ingredient name="jz_NutAndBolt" count="4"/>
+    <ingredient name="resourceSpring" count="1"/>
 </recipe>
 
 <recipe name="resourceElectricParts" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="4" craft_exp_gain="5" tags="learnable" >
