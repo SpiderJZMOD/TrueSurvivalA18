@@ -1884,13 +1884,17 @@
 	
 	<!-- ******************************************************************  Professions  ******************************************************************************** -->
 	<!-- Fire Fighter -->
-	<perk name="jz_FireFighter" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fire Fighter" desc_key="jz_FireFighterDesc" icon="ui_game_symbol_fire">
+	<perk name="jz_FireFighter" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="1" name_key="Fire Fighter" desc_key="jz_FireFighterDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_FireFighterTag"/>
 				<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".2"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,thrownAmmoMolotovCocktail"/>
+			<requirement name="ProgressionLevel" progression_name="jz_FireFighter" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_AloeCreamSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_AloeCreamSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MolotovCocktailSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_MolotovCocktailSchematic" operation="LT" value="1"/></triggered_effect>
 			<passive_effect name="StaminaMax" operation="perc_add" level="1" value=".05"/>
 			
 			<effect_description level="1" desc_key="jz_FireFighterDesc" long_desc_key="jz_FireFighterDesc"/>
@@ -1909,15 +1913,31 @@
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunPistol,jz_GunOil,jz_PoliceBaton,jz_WeaponRepairKit"/>
-		
+			<requirement name="ProgressionLevel" progression_name="jz_PoliceOfficer" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PistolSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_PistolSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_GunOilSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_GunOilSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PoliceBatonSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_PoliceBatonSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_WeaponRepairKitSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_WeaponRepairKitSchematic" operation="LT" value="1"/></triggered_effect>
+					
 			<effect_description level="1" desc_key="jz_PoliceOfficerDesc" long_desc_key="jz_PoliceOfficerDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Park Ranger -->
 	<perk name="jz_ParkRanger" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Park Ranger" desc_key="jz_ParkRangerDesc" icon="ui_game_symbol_tree">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugHerbalAntibiotics,meleeThrownSpearStone,meleeThrownSpearIron,meleeThrownSpearSteel"/>
+			<requirement name="ProgressionLevel" progression_name="jz_ParkRanger" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_HerbalAntibioticsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_HerbalAntibioticsSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SpearStoneSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SpearStoneSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SpearIronSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SpearIronSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SpearSteelSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SpearSteelSchematic" operation="LT" value="1"/></triggered_effect>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_PrimitativeCraftingTag"/>
 			
 			<effect_description level="1" desc_key="jz_ParkRangerDesc" long_desc_key="jz_ParkRangerDesc"/>
@@ -1931,15 +1951,66 @@
 				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-.1" tags="secondary"/>
 		</effect_group>	
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MoldBrassKnuckles,meleeKnucklesIron,meleeKnucklesLeather,drinkJarBeer,jz_DrinkMead,drinkJarGrainAlcohol"/>
-		
+			<requirement name="ProgressionLevel" progression_name="jz_Bouncer" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_KnucklesIronSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_KnucklesIronSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_KnucklesIronSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_KnucklesIronSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BeerSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BeerSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MeadSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_MeadSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_GrainAlcoholSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_GrainAlcoholSchematic" operation="LT" value="1"/></triggered_effect>
+			
 			<effect_description level="1" desc_key="jz_BouncerDesc" long_desc_key="jz_BouncerDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Chef -->
 	<perk name="jz_Chef" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Chef" desc_key="jz_ChefDesc" icon="ui_game_symbol_cookware">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="foodCornBread,foodMeatStew,jz_FoodVenisonSteakAndPotato,foodHoboStew,foodBlueberryPie,foodPumpkinPie,foodPumpkinBread,foodBaconAndEggs,foodVegetableStew,jz_FoodBearStew,jz_FoodCarrotCake,jz_FoodBread,jz_FoodFlour,foodCornMeal,jz_FoodBrainShnitzel,jz_FoodGoodMealMediumFG,jz_FoodGoodMealMediumVG,jz_FoodGoodMealMediumVF,jz_FoodGoodMealLargeFG,jz_FoodGoodMealLargeVG,jz_FoodGoodMealLargeVF,jz_FoodHealthyMealMedium,jz_FoodHealthyMealLarge,jz_FoodGlazedMeatSmall,jz_FoodGlazedMeatMedium,jz_FoodGlazedMeatLarge,jz_FoodKabobSmall,jz_FoodKabobMedium,jz_FoodKabobLarge,jz_FoodMeatPieSmall,jz_FoodMeatPieMedium,jz_FoodMeatPieLarge"/>
+			<requirement name="ProgressionLevel" progression_name="jz_Chef" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CornBreadSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CornBreadSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MeatStewSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_MeatStewSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_VenisonAndPotatoSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_VenisonAndPotatoSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_HoboStewSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_HoboStewSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BlueberryPieSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BlueberryPieSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PumpkinPieSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_PumpkinPieSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PumpkinBreadSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_PumpkinBreadSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BaconAndEggsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BaconAndEggsSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_VegetableStewSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_VegetableStewSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BearStewSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BearStewSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CarrotCakeSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CarrotCakeSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BreadSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BreadSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BrainSchnitzelSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BrainSchnitzelSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_GoodMealsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_GoodMealsSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_HealthyMealsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_HealthyMealsSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_GlazedMeatsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_GlazedMeatsSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_KabobSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_KabobSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MeatPiesSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_MeatPiesSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_FriedEggOmeletSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_FriedEggOmeletSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ApplePieSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_ApplePieSchematic" operation="LT" value="1"/></triggered_effect>
+			
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ChefTag"/>
 			<effect_description level="1" desc_key="jz_ChefRank1Desc" long_desc_key="jz_ChefLongDesc"/>
 		</effect_group>
@@ -1950,18 +2021,25 @@
 			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
 				<passive_effect name="NoiseMultiplier" operation="perc_add" level="1" value="-.1"/>
 				<passive_effect name="CrouchSpeed" operation="perc_add" level="1" value=".1"/>
-			</effect_group>
-			<effect_group>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_LockPickSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_Burglar" operation="GTE" value="1"/>
+				<requirement name="ProgressionLevel" progression_name="SP_LockPickSchematic" operation="LT" value="1"/></triggered_effect>
+			
 			<passive_effect name="ScavengingTime" operation="perc_add" level="1" value="-.2"/>
 			<passive_effect name="TreasureRadius" operation="base_subtract" level="1" value="6"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceLockPick"/>
 			<effect_description level="1" desc_key="jz_BurglarDesc" long_desc_key="jz_BurglarDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Carpenter -->
 	<perk name="jz_Carpenter" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Carpenter" desc_key="jz_CarpenterDesc" icon="ui_game_symbol_hammer">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="woodFrameBlockVariantHelper,jz_Plank"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PlankSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_Carpenter" operation="GTE" value="1"/>
+				<requirement name="ProgressionLevel" progression_name="SP_PlankSchematic" operation="LT" value="1"/></triggered_effect>
+						
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="woodFrameBlockVariantHelper"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_WorkBenchTag,jz_TablesawTag"/>
 			<effect_description level="1" desc_key="jz_CarpenterRank1Desc" long_desc_key="jz_CarpenterLongDesc"/>
 		</effect_group>
@@ -1969,7 +2047,13 @@
 	<!-- Mason -->
 	<perk name="jz_Mason" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mason" desc_key="jz_MasonDesc" icon="ui_game_symbol_brick">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="flagstoneBlockVariantHelper,brickBlockVariantHelper,jz_Bricks,resourceCobblestones"/>
+			<requirement name="ProgressionLevel" progression_name="jz_Mason" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BricksSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BricksSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CobblestoneSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CobblestoneSchematic" operation="LT" value="1"/></triggered_effect>
+				
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="flagstoneBlockVariantHelper,brickBlockVariantHelper"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MasonTag"/>
 			<effect_description level="1" desc_key="jz_MasonDesc" long_desc_key="jz_MasonDesc"/>
 		</effect_group>
@@ -1987,24 +2071,72 @@
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FoodGrubs,jz_WeaponRepairKit,gunBlunderbuss,ammoBlunderbuss,gunAK47,thrownAmmoPipeBomb,mineCookingPot"/>
+			<requirement name="ProgressionLevel" progression_name="jz_Soldier" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BlunderbussSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BlunderbussSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_AK47Schematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_AK47Schematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PipeBombSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_PipeBombSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CookingPotMineSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CookingPotMineSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_WeaponRepairKitSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_WeaponRepairKitSchematic" operation="LT" value="1"/></triggered_effect>
+				
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FoodGrubs"/>
 			<effect_description level="1" desc_key="jz_SoldierDesc" long_desc_key="jz_SoldierDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Fitness Instructor -->
 	<perk name="jz_FitnessInstructor" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fitness Instructor" desc_key="jz_FitnessInstructorDesc" icon="ui_game_symbol_club">
 		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="jz_FitnessInstructor" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_GoldenRodTeaSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_GoldenRodTeaSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_RedTeaSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_RedTeaSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_WellnessJuiceSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_WellnessJuiceSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MegaCrushSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_MegaCrushSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_VitaminsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_VitaminsSchematic" operation="LT" value="1"/></triggered_effect>
 			<passive_effect name="RunSpeed" operation="perc_add" level="1" value=".1"/>
 			<passive_effect name="WalkSpeed" operation="perc_add" level="1" value=".1"/>
 			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="0.05" tags="running"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkJarGoldenRodTea,drinkJarRedTea,drinkCanMegaCrush,jz_DrinkWellnessJuice,drugVitamins"/>
 			<effect_description level="1" desc_key="jz_FitnessInstructorDesc" long_desc_key="jz_FitnessInstructorDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Electrician -->
 	<perk name="jz_Electrician" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Electrician" desc_key="jz_ElectricianDesc" icon="ui_game_symbol_electric_power">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceElectricParts,generatorbank,pressureplate,batterybank,ceilingLight01_player,electrictimerrelay,electricwirerelay,motionsensor,speaker,switch,electricfencepost,spotlightPlayer,meleeStunBaton"/>
+			<requirement name="ProgressionLevel" progression_name="jz_Electrician" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_GeneratorbankSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_GeneratorbankSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PressureplateSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_PressureplateSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BatterybankSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BatterybankSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ElectrictimerrelaySchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_ElectrictimerrelaySchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MotionsensorSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_MotionsensorSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SpeakerSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SpeakerSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SwitchSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SwitchSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ElectricfencepostSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_ElectricfencepostSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SpotlightPlayerSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SpotlightPlayerSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_StunBatonSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_StunBatonSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CeilingLightSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CeilingLightSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ElectricWirerelaySchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_ElectricWirerelaySchematic" operation="LT" value="1"/></triggered_effect>
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceElectricParts"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ElectricianTag"/>
 			<effect_description level="1" desc_key="jz_ElectricianDesc" long_desc_key="jz_ElectricianDesc"/>
 		</effect_group>
@@ -2012,7 +2144,12 @@
 	<!-- Metal Worker -->
 	<perk name="jz_MetalWorker" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Metal Worker" desc_key="jz_MetalWorkerDesc" icon="ui_game_symbol_wrench">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="scrapIronFrameBlockVariantHelper,jz_IronSheetMetal"/>
+			<requirement name="ProgressionLevel" progression_name="jz_MetalWorker" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_IronSheetMetalSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_IronSheetMetalSchematic" operation="LT" value="1"/></triggered_effect>
+
+			
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="scrapIronFrameBlockVariantHelper"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ForgeTag"/>
 			<effect_description level="1" desc_key="jz_MetalWorkerDesc" long_desc_key="jz_MetalWorkerDesc"/>
 		</effect_group>
@@ -2020,7 +2157,25 @@
 	<!-- Mechanic --> 
 	<perk name="jz_Mechanic" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mechanic" desc_key="jz_MechanicDesc" icon="ui_game_symbol_service">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceMechanicalParts,smallEngine,jz_LargeEngine,vehicleMinibikePlaceable,vehicleBicyclePlaceable,vehicleMotorcyclePlaceable,vehicle4x4TruckPlaceable,vehicleGyrocopterPlaceable,meleeToolAuger,meleeToolChainsaw"/>
+			<requirement name="ProgressionLevel" progression_name="jz_Mechanic" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SmallEngineSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SmallEngineSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_LargeEngineSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_LargeEngineSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MinibikeSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_MinibikeSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BicycleSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BicycleSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_4x4TruckSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_4x4TruckSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_GyroCopterSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SpeakerSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_AugerSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_AugerSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ChainsawSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_ChainsawSchematic" operation="LT" value="1"/></triggered_effect>
+							
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceMechanicalParts"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_MechanicTag"/>
 			<effect_description level="1" desc_key="jz_MechanicDesc" long_desc_key="jz_MechanicDesc"/>
 		</effect_group>
@@ -2028,15 +2183,48 @@
 	<!-- Doctor -->
 	<perk name="jz_Doctor" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Doctor" desc_key="jz_DoctorDesc" icon="ui_game_symbol_steroids">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalAloeCream,jz_MedicalStimulant,jz_MedicalAntiVenom,drugPainkillers,drugSteroids,drugAntibiotics"/>
+			<requirement name="ProgressionLevel" progression_name="jz_Doctor" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_AloeCreamSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_AloeCreamSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_AntibioticsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_AntibioticsSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_AntiVenomSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_AntiVenomSchematic" operation="LT" value="1"/></triggered_effect>
+							
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugPainkillers,drugSteroids"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_DoctorTag"/>
 			<effect_description level="1" desc_key="jz_DoctorDesc" long_desc_key="jz_DoctorDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Farmer -->
 	<perk name="jz_Farmer" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Farmer" desc_key="jz_FarmerDesc" icon="ui_game_symbol_crops">
-	<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="plantedPotato1,plantedCoffee1,plantedCorn1,plantedBlueberry1,plantedCotton1,plantedGoldenrod1,plantedAloe1,plantedMushroom1,plantedYucca1,plantedChrysanthemum1,plantedPumpkin1"/>
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="jz_Farmer" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PotatoSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_PotatoSeedSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CoffeeSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CoffeeSeedSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CornSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CornSeedSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CottonSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CottonSeedSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_GoldenrodSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_GoldenrodSeedSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_AloeSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_AloeSeedSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MushroomSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_MushroomSeedSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_YuccaSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_YuccaSeedSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ChrysanthemumSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_ChrysanthemumSeedSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PumpkinSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_PumpkinSeedSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_FarmPlotSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_FarmPlotSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BlueberrySeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BlueberrySeedSchematic" operation="LT" value="1"/></triggered_effect>
+				
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_FarmerTag"/>
 			<effect_description level="1" desc_key="jz_FarmerDesc" long_desc_key="jz_FarmerDesc"/>
 		</effect_group>
@@ -2044,7 +2232,17 @@
 	<!-- Chemist -->
 	<perk name="jz_Chemist" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Chemist" desc_key="jz_ChemistDesc" icon="ui_game_symbol_chemistry">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkJarBlackStrapCoffee,drinkCanMegaCrush,jz_MedicalStimulant,resourceAcid,resourceOilShaleBundle,resourceGunPowder,jz_MedicalPurificationTablets"/>
+			<requirement name="ProgressionLevel" progression_name="jz_Chemist" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MegaCrushSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_MegaCrushSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BlackStrapCoffeeSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BlackStrapCoffeeSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_GunPowderSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_GunPowderSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PurificationTabletsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_PurificationTabletsSchematic" operation="LT" value="1"/></triggered_effect>
+				
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MedicalStimulant,resourceAcid"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ChemistTag"/>
 			<effect_description level="1" desc_key="jz_ChemistDesc" long_desc_key="jz_ChemistDesc"/>
 		</effect_group>
@@ -2102,7 +2300,6 @@
 				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="-0.05" tags="secondary"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_OutOfShapeTraitRefundTag"/>
 			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="0.05">
 				<requirement name="HasBuff" buff="buffEncumberedInv"/></passive_effect>
 		</effect_group>
@@ -2140,7 +2337,12 @@
 	<perk name="jz_TraitAmateurMechanic" parent="PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="20" name_key="Amateur Mechanic" desc_key="jz_TraitAmateurMechanicDesc" icon="ui_game_symbol_minibike">
 		<!--20% More resources from harvesting vehicles, starts with Bicycle and Mini Bike recipes -->
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleBicyclePlaceable,vehicleMinibikePlaceable"/>
+			<requirement name="ProgressionLevel" progression_name="jz_TraitAmateurMechanic" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MinibikeSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_MinibikeSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BicycleSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BicycleSchematic" operation="LT" value="1"/></triggered_effect>
+			
 			<passive_effect name="HarvestCount" operation="perc_add" level="1" value=".2" tags="MechanicHarvestTag"/>
 		</effect_group>
 		
@@ -2149,9 +2351,6 @@
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitHunter" parent="PositiveTraits" min_level="0" max_level="1" base_skill_point_cost="20" name_key="Hunter" desc_key="jz_TraitHunterDesc" icon="ui_game_symbol_animal_tracker">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunHuntingRifle"/>
-		</effect_group>
 		<!--Can track Deer and pigs XXXXXXXX TO DO XXXXXXXXXXXXXX-->
 		<effect_group>
 			<effect_description level="1" desc_key="jz_TraitHunterDesc" long_desc_key="jz_TraitHunterDesc"/>
@@ -2343,7 +2542,6 @@
 				<passive_effect name="StaminaLoss" operation="perc_add" level="1" value="0.1" tags="secondary"/>
 		</effect_group>
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_WeakTraitRefundTag"/>
 			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1" value="-.1">
 				<requirement name="HasBuff" buff="buffEncumberedInv"/></passive_effect>
 		</effect_group>
@@ -2374,14 +2572,14 @@
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_ScrapPlateMineSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Grenade" desc_key="SP_ScrapPlateMineSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_ScrapPlateMineSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Scrap Plate Mine" desc_key="SP_ScrapPlateMineSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="rScrapIronPlateMine"/>
 			<effect_description level="1" desc_key="SP_ScrapPlateMineSchematicDesc" long_desc_key="SP_ScrapPlateMineSchematicDesc"/>
 		</effect_group>
 	</perk>
     
-   	<perk name="SP_CookingPotMineSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Grenade" desc_key="SP_CookingPotMineSchematicDesc" icon="ui_game_symbol_fire">
+   	<perk name="SP_CookingPotMineSchematic" parent="jz_AmmoExplosiveSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Cooking Pot Mine" desc_key="SP_CookingPotMineSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="mineCookingPot"/>
 			<effect_description level="1" desc_key="SP_CookingPotMineSchematicDesc" long_desc_key="SP_CookingPotMineSchematicDesc"/>
@@ -2486,6 +2684,69 @@
 		</effect_group>
 	</perk>
 	<!--CRAFTING-->
+	<perk name="SP_PurificationTabletsSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Purification Tablets" desc_key="SP_PurificationTabletsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_PurificationTablets"/>
+			<effect_description level="1" desc_key="SP_PurificationTabletsSchematicDesc" long_desc_key="SP_PurificationTabletsSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunPowderSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Powder" desc_key="SP_GunPowderSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceGunPowder"/>
+			<effect_description level="1" desc_key="SP_GunPowderSchematicDesc" long_desc_key="SP_GunPowderSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_WeaponRepairKitSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Weapon Repair Kit" desc_key="SP_WeaponRepairKitSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_WeaponRepairKit"/>
+			<effect_description level="1" desc_key="SP_WeaponRepairKitSchematicDesc" long_desc_key="SP_WeaponRepairKitSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_IronSheetMetalSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Sheet Metal" desc_key="SP_IronSheetMetalSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_IronSheetMetal"/>
+			<effect_description level="1" desc_key="SP_IronSheetMetalSchematicDesc" long_desc_key="SP_IronSheetMetalSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SteelSheetMetalSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Sheet Metal" desc_key="SP_SteelSheetMetalSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_SteelSheetMetal"/>
+			<effect_description level="1" desc_key="SP_SteelSheetMetalSchematicDesc" long_desc_key="SP_SteelSheetMetalSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_CobblestoneSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Cobblestones" desc_key="SP_CobblestoneSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceCobblestones"/>
+			<effect_description level="1" desc_key="SP_CobblestoneSchematicDesc" long_desc_key="SP_CobblestoneSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ConcreteMixSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Concrete Mix" desc_key="SP_ConcreteMixSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceConcreteMix"/>
+			<effect_description level="1" desc_key="SP_ConcreteMixSchematicDesc" long_desc_key="SP_ConcreteMixSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_BricksSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Bricks" desc_key="SP_BricksSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_Bricks"/>
+			<effect_description level="1" desc_key="SP_BricksSchematicDesc" long_desc_key="SP_BricksSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_PlankSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Planks" desc_key="SP_PlankSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_Plank"/>
+			<effect_description level="1" desc_key="SP_PlankSchematicDesc" long_desc_key="SP_PlankSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
 	<perk name="SP_ForgeCrucibleSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Forge Crucible" desc_key="SP_ForgeCrucibleSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="toolForgeCrucible"/>
@@ -2497,6 +2758,13 @@
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleBicycleHandlebars"/>
 			<effect_description level="1" desc_key="SP_BicycleHandlebarsSchematicDesc" long_desc_key="SP_BicycleHandlebarsSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SmallEngineSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Small Engine" desc_key="SP_SmallEngineSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="smallEngine"/>
+			<effect_description level="1" desc_key="SP_SmallEngineSchematicDesc" long_desc_key="SP_SmallEngineSchematicDesc"/>
 		</effect_group>
 	</perk>
 	
@@ -2527,7 +2795,29 @@
 			<effect_description level="1" desc_key="SP_OilSchematicDesc" long_desc_key="SP_OilSchematicDesc"/>
 		</effect_group>
 	</perk>
+	
+	<perk name="SP_GunOilSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Oil" desc_key="SP_jz_GunOilSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="toolForgeCrucible"/>
+			<effect_description level="1" desc_key="SP_jz_GunOilSchematicDesc" long_desc_key="SP_jz_GunOilSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
 	<!-- DRINK -->
+	<perk name="SP_BlackStrapCoffeeSchematic" parent="jz_DrinkRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Black Strap Coffee" desc_key="SP_BlackStrapCoffeeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkJarBlackStrapCoffee"/>
+			<effect_description level="1" desc_key="SP_BlackStrapCoffeeSchematicDesc" long_desc_key="SP_BlackStrapCoffeeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MegaCrushSchematic" parent="jz_DrinkRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mega Crush" desc_key="SP_MegaCrushSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkCanMegaCrush"/>
+			<effect_description level="1" desc_key="SP_MegaCrushSchematicDesc" long_desc_key="SP_MegaCrushSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
 	<perk name="SP_MeadSchematic" parent="jz_DrinkRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mead" desc_key="SP_MeadSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_DrinkMead"/>
@@ -2535,7 +2825,7 @@
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_WellnessJuiceSchematic" parent="jz_DrinkRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Wellness" desc_key="SP_WellnessJuiceSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_WellnessJuiceSchematic" parent="jz_DrinkRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Wellness Juice" desc_key="SP_WellnessJuiceSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_DrinkWellnessJuice"/>
 			<effect_description level="1" desc_key="SP_WellnessJuiceSchematicDesc" long_desc_key="SP_WellnessJuiceSchematicDesc"/>
@@ -2570,6 +2860,13 @@
 		</effect_group>
 	</perk>
 
+	<perk name="SP_BlueberrySeedSchematic" parent="jz_FarmingRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Blueberry Seed" desc_key="SP_BlueberrySeedSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="plantedBlueberry1"/>
+			<effect_description level="1" desc_key="SP_BlueberrySeedSchematicDesc" long_desc_key="SP_BlueberrySeedSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
 	<perk name="SP_PumpkinSeedSchematic" parent="jz_FarmingRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Pumpkin Seed" desc_key="SP_PumpkinSeedSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="plantedPumpkin1"/>
@@ -2752,7 +3049,7 @@
 		</effect_group>
 	</perk>
 	<!--FOOD-->
-    <perk name="SP_BearStewSchematic" parent="jz_FoodRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Kabobs" desc_key="SP_BearStewSchematicDesc" icon="ui_game_symbol_fire">
+    <perk name="SP_BearStewSchematic" parent="jz_FoodRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Bear Stew" desc_key="SP_BearStewSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FoodBearStew"/>
 			<effect_description level="1" desc_key="SP_BearStewSchematicDesc" long_desc_key="SP_BearStewSchematicDesc"/>
@@ -2892,6 +3189,20 @@
 		</effect_group>
 	</perk>
 	<!--MEDICAL-->
+	<perk name="SP_AntiVenomSchematic" parent="jz_MedicalRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anti Venom" desc_key="SP_AntiVenomSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MedicalAntiVenom"/>
+			<effect_description level="1" desc_key="SP_AntiVenomSchematicDesc" long_desc_key="SP_AntiVenomSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_VitaminsSchematic" parent="jz_MedicalRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Vitamins" desc_key="SP_VitaminsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugVitamins"/>
+			<effect_description level="1" desc_key="SP_VitaminsSchematicDesc" long_desc_key="SP_VitaminsSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
 	<perk name="SP_PlasterCastSchematic" parent="jz_MedicalRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Plaster Cast" desc_key="SP_PlasterCastSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="medicalPlasterCast"/>
@@ -2941,6 +3252,13 @@
 		</effect_group>
 	</perk>
 	
+	<perk name="SP_PoliceBatonSchematic" parent="jz_MeleeSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Police Baton" desc_key="SP_PoliceBatonSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_PoliceBaton"/>
+			<effect_description level="1" desc_key="SP_PoliceBatonSchematicDesc" long_desc_key="SP_PoliceBatonSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
 	<perk name="SP_StunBatonSchematic" parent="jz_MeleeSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Stun Baton" desc_key="SP_StunBatonSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeStunBaton"/>
@@ -2982,7 +3300,370 @@
 			<effect_description level="1" desc_key="SP_KnucklesSteelSchematicDesc" long_desc_key="SP_KnucklesSteelSchematicDesc"/>
 		</effect_group>
 	</perk>
+	
+	<perk name="SP_SledgehammerIronSchematic" parent="jz_MeleeSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Sledgehammer" desc_key="SP_SledgehammerIronSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolSledgehammerIron,jz_MoldSledgeHead,jz_SledgeHead"/>
+			<effect_description level="1" desc_key="SP_SledgehammerIronSchematicDesc" long_desc_key="SP_SledgehammerIronSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_SledgehammerSteelSchematic" parent="jz_MeleeSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Sledgehammer" desc_key="SP_SledgehammerSteelSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolSledgehammerSteel"/>
+			<effect_description level="1" desc_key="SP_SledgehammerSteelSchematicDesc" long_desc_key="SP_SledgehammerSteelSchematicDesc"/>
+		</effect_group>
+	</perk>
 	<!--MODS-->
+	<perk name="SP_ArmorStoragePocketSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Storage Pocket" desc_key="SP_ArmorStoragePocketSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorStoragePocket"/>
+			<effect_description level="1" desc_key="SP_ArmorStoragePocketSchematicDesc" long_desc_key="SP_ArmorStoragePocketSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorDoubleStoragePocketSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Double Storage Pocket" desc_key="SP_ArmorDoubleStoragePocketSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorDoubleStoragePocket"/>
+			<effect_description level="1" desc_key="SP_ArmorDoubleStoragePocketSchematicDesc" long_desc_key="SP_ArmorDoubleStoragePocketSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorTripleStoragePocketSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Triple Storage Pocket" desc_key="SP_ArmorTripleStoragePocketSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorTripleStoragePocket"/>
+			<effect_description level="1" desc_key="SP_ArmorTripleStoragePocketSchematicDesc" long_desc_key="SP_ArmorTripleStoragePocketSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorHelmetLightSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Helmet Light" desc_key="SP_ArmorHelmetLightSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorHelmetLight"/>
+			<effect_description level="1" desc_key="SP_ArmorHelmetLightSchematicDesc" long_desc_key="SP_ArmorHelmetLightSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorInsulatedLinerSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Insulated Liner" desc_key="SP_ArmorInsulatedLinerSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorInsulatedLiner"/>
+			<effect_description level="1" desc_key="SP_ArmorInsulatedLinerSchematicDesc" long_desc_key="SP_ArmorInsulatedLinerSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorCoolingMeshSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Cooling Mesh" desc_key="SP_ArmorCoolingMeshSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorCoolingMesh"/>
+			<effect_description level="1" desc_key="SP_ArmorCoolingMeshSchematicDesc" long_desc_key="SP_ArmorCoolingMeshSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorImprovedFittingsSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Improved Fittings" desc_key="SP_ArmorImprovedFittingsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorImprovedFittings"/>
+			<effect_description level="1" desc_key="SP_ArmorImprovedFittingsSchematicDesc" long_desc_key="SP_ArmorImprovedFittingsSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorCustomizedFittingsSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Customized Fittings" desc_key="SP_ArmorCustomizedFittingsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorCustomizedFittings"/>
+			<effect_description level="1" desc_key="SP_ArmorCustomizedFittingsSchematicDesc" long_desc_key="SP_ArmorCustomizedFittingsSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorBandolierSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Bandolier" desc_key="SP_ArmorBandolierSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorBandolier"/>
+			<effect_description level="1" desc_key="SP_ArmorBandolierSchematicDesc" long_desc_key="SP_ArmorBandolierSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorPlatingBasicSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Plating Basic" desc_key="SP_ArmorPlatingBasicSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorPlatingBasic"/>
+			<effect_description level="1" desc_key="SP_ArmorPlatingBasicSchematicDesc" long_desc_key="SP_ArmorPlatingBasicSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorPlatingReinforcedSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Plating Reinforced" desc_key="SP_ArmorPlatingReinforcedSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorPlatingReinforced"/>
+			<effect_description level="1" desc_key="SP_ArmorPlatingReinforcedSchematicDesc" long_desc_key="SP_ArmorPlatingReinforcedSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_ArmorMuffledConnectorsSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Muffled Connectors" desc_key="SP_ArmorMuffledConnectorsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorMuffledConnectors"/>
+			<effect_description level="1" desc_key="SP_ArmorMuffledConnectorsSchematicDesc" long_desc_key="SP_ArmorMuffledConnectorsSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ArmorAdvancedMuffledConnectorsSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Advanced Muffled Connectors" desc_key="SP_ArmorAdvancedMuffledConnectorsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorAdvancedMuffledConnectors"/>
+			<effect_description level="1" desc_key="SP_ArmorAdvancedMuffledConnectorsSchematicDesc" long_desc_key="SP_ArmorAdvancedMuffledConnectorsSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_ArmorImpactBracingSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Armor Impact Bracing" desc_key="SP_ArmorImpactBracingSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modArmorImpactBracing"/>
+			<effect_description level="1" desc_key="SP_ArmorImpactBracingSchematicDesc" long_desc_key="SP_ArmorImpactBracingSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MeleeTemperedBladeSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Tempered Blade" desc_key="SP_MeleeTemperedBladeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeTemperedBlade"/>
+			<effect_description level="1" desc_key="SP_MeleeTemperedBladeSchematicDesc" long_desc_key="SP_MeleeTemperedBladeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MeleeSerratedBladeSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Serrated Blade" desc_key="SP_MeleeSerratedBladeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeSerratedBlade"/>
+			<effect_description level="1" desc_key="SP_MeleeSerratedBladeSchematicDesc" long_desc_key="SP_MeleeSerratedBladeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MeleeClubBarbedWireSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Club Barbed Wire" desc_key="SP_MeleeClubBarbedWireSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeClubBarbedWire"/>
+			<effect_description level="1" desc_key="SP_MeleeClubBarbedWireSchematicDesc" long_desc_key="SP_MeleeClubBarbedWireSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MeleeClubMetalSpikesSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Club Metal Spikes" desc_key="SP_MeleeClubMetalSpikesSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeClubMetalSpikes"/>
+			<effect_description level="1" desc_key="SP_MeleeClubMetalSpikesSchematicDesc" long_desc_key="SP_MeleeClubMetalSpikesSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MeleeWeightedHeadSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Weighted Head" desc_key="SP_MeleeWeightedHeadSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeWeightedHead"/>
+			<effect_description level="1" desc_key="SP_MeleeWeightedHeadSchematicDesc" long_desc_key="SP_MeleeWeightedHeadSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MeleeStructuralBraceSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Structural Brace" desc_key="SP_MeleeStructuralBraceSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeStructuralBrace"/>
+			<effect_description level="1" desc_key="SP_MeleeStructuralBraceSchematicDesc" long_desc_key="SP_MeleeStructuralBraceSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MeleeErgonomicGripSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Ergonomic Grip" desc_key="SP_MeleeErgonomicGripSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeErgonomicGrip"/>
+			<effect_description level="1" desc_key="SP_MeleeErgonomicGripSchematicDesc" long_desc_key="SP_MeleeErgonomicGripSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MeleeGraveDiggerSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Grave Digger" desc_key="SP_MeleeGraveDiggerSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeGraveDigger"/>
+			<effect_description level="1" desc_key="SP_MeleeGraveDiggerSchematicDesc" long_desc_key="SP_MeleeGraveDiggerSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MeleeWoodSplitterSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Wood Splitter" desc_key="SP_MeleeWoodSplitterSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeWoodSplitter"/>
+			<effect_description level="1" desc_key="SP_MeleeWoodSplitterSchematicDesc" long_desc_key="SP_MeleeWoodSplitterSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+		<perk name="SP_MeleeBunkerBusterSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Bunker Buster" desc_key="SP_MeleeBunkerBusterSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeBunkerBuster"/>
+			<effect_description level="1" desc_key="SP_MeleeBunkerBusterSchematicDesc" long_desc_key="SP_MeleeBunkerBusterSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_MeleeIronBreakerSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Melee Iron Breaker" desc_key="SP_MeleeIronBreakerSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modMeleeIronBreaker"/>
+			<effect_description level="1" desc_key="SP_MeleeIronBreakerSchematicDesc" long_desc_key="SP_MeleeIronBreakerSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_FuelTankSmallSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fuel Tank Small" desc_key="SP_FuelTankSmallSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modFuelTankSmall"/>
+			<effect_description level="1" desc_key="SP_FuelTankSmallSchematicDesc" long_desc_key="SP_FuelTankSmallSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_FuelTankLargeSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fuel Tank Large" desc_key="SP_FuelTankLargeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modFuelTankLarge"/>
+			<effect_description level="1" desc_key="SP_FuelTankLargeSchematicDesc" long_desc_key="SP_FuelTankLargeSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_GunBowArrowRestSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Bow Arrow Rest" desc_key="SP_GunBowArrowRestSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunBowArrowRest"/>
+			<effect_description level="1" desc_key="SP_GunBowArrowRestSchematicDesc" long_desc_key="SP_GunBowArrowRestSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunBowPolymerStringSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Bow PolymerString" desc_key="SP_GunBowPolymerStringSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunBowPolymerString"/>
+			<effect_description level="1" desc_key="SP_GunBowPolymerStringSchematicDesc" long_desc_key="SP_GunBowPolymerStringSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunFlashlightSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Flashlight" desc_key="SP_GunFlashlightSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunFlashlight"/>
+			<effect_description level="1" desc_key="SP_GunFlashlightSchematicDesc" long_desc_key="SP_GunFlashlightSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunScopeSmallSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Scope Small" desc_key="SP_GunScopeSmallSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunScopeSmall"/>
+			<effect_description level="1" desc_key="SP_GunScopeSmallSchematicDesc" long_desc_key="SP_GunScopeSmallSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_GunScopeMediumSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Scope Medium" desc_key="SP_GunScopeMediumSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunScopeMedium"/>
+			<effect_description level="1" desc_key="SP_GunScopeMediumSchematicDesc" long_desc_key="SP_GunScopeMediumSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_GunScopeLargeSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Scope Large" desc_key="SP_GunScopeLargeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunScopeLarge"/>
+			<effect_description level="1" desc_key="SP_GunScopeLargeSchematicDesc" long_desc_key="SP_GunScopeLargeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunReflexSightSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Reflex Sight" desc_key="SP_GunReflexSightSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunReflexSight"/>
+			<effect_description level="1" desc_key="SP_GunReflexSightSchematicDesc" long_desc_key="SP_GunReflexSightSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunLaserSightSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Laser Sight" desc_key="SP_GunLaserSightSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunLaserSight"/>
+			<effect_description level="1" desc_key="SP_GunLaserSightSchematicDesc" long_desc_key="SP_GunLaserSightSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_GunBarrelExtenderSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Barrel Extender" desc_key="SP_GunBarrelExtenderSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunBarrelExtender"/>
+			<effect_description level="1" desc_key="SP_GunBarrelExtenderSchematicDesc" long_desc_key="SP_GunBarrelExtenderSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunMuzzleBrakeSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Muzzle Brake" desc_key="SP_GunMuzzleBrakeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunMuzzleBrake"/>
+			<effect_description level="1" desc_key="SP_GunMuzzleBrakeSchematicDesc" long_desc_key="SP_GunMuzzleBrakeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunTriggerGroupSemiSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Trigger Group Semi" desc_key="SP_GunTriggerGroupSemiSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunTriggerGroupSemi"/>
+			<effect_description level="1" desc_key="SP_GunTriggerGroupSemiSchematicDesc" long_desc_key="SP_GunTriggerGroupSemiSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunTriggerGroupBurst3Schematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Trigger Group Burst" desc_key="SP_GunTriggerGroupBurst3SchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunTriggerGroupBurst3"/>
+			<effect_description level="1" desc_key="SP_GunTriggerGroupBurst3SchematicDesc" long_desc_key="SP_GunTriggerGroupBurst3SchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunTriggerGroupAutomaticSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Trigger Group Automatic" desc_key="SP_GunTriggerGroupAutomaticSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunTriggerGroupAutomatic"/>
+			<effect_description level="1" desc_key="SP_GunTriggerGroupAutomaticSchematicDesc" long_desc_key="SP_GunTriggerGroupAutomaticSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_GunBipodSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Bipod" desc_key="SP_GunBipodSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunBipod"/>
+			<effect_description level="1" desc_key="SP_GunBipodSchematicDesc" long_desc_key="SP_GunBipodSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunForegripSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Foregrip" desc_key="SP_GunForegripSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunForegrip"/>
+			<effect_description level="1" desc_key="SP_GunForegripSchematicDesc" long_desc_key="SP_GunForegripSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunRetractingStockSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Retracting Stock" desc_key="SP_GunRetractingStockSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunRetractingStock"/>
+			<effect_description level="1" desc_key="SP_GunRetractingStockSchematicDesc" long_desc_key="SP_GunRetractingStockSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunDuckbillSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Duckbill" desc_key="SP_GunDuckbillSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunDuckbill"/>
+			<effect_description level="1" desc_key="SP_GunDuckbillSchematicDesc" long_desc_key="SP_GunDuckbillSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunChokeSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Choke" desc_key="SP_GunChokeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunChoke"/>
+			<effect_description level="1" desc_key="SP_GunChokeSchematicDesc" long_desc_key="SP_GunChokeSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunMagazineExtenderSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Magazine Extender" desc_key="SP_GunMagazineExtenderSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunMagazineExtender"/>
+			<effect_description level="1" desc_key="SP_GunMagazineExtenderSchematicDesc" long_desc_key="SP_GunMagazineExtenderSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ShotgunSawedOffBarrelSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Sawed Off Shotgun" desc_key="SP_ShotgunSawedOffBarrelSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modShotgunSawedOffBarrel"/>
+			<effect_description level="1" desc_key="SP_ShotgunSawedOffBarrelSchematicDesc" long_desc_key="SP_ShotgunSawedOffBarrelSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunCrippleEmSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Cripplem" desc_key="SP_GunCrippleEmSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunCrippleEm"/>
+			<effect_description level="1" desc_key="SP_GunCrippleEmSchematicDesc" long_desc_key="SP_GunCrippleEmSchematicDesc"/>
+		</effect_group>
+	</perk>
+		
+	<perk name="SP_GunRodAndSpringSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Rod and Spring" desc_key="SP_GunRodAndSpringSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunRodAndSpring"/>
+			<effect_description level="1" desc_key="SP_GunRodAndSpringSchematicDesc" long_desc_key="SP_GunRodAndSpringSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_GunSoundSuppressorSilencerSchematic" parent="jz_ModSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Sound Suppressor Silencer" desc_key="SP_GunSoundSuppressorSilencerSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunSoundSuppressorSilencer"/>
+			<effect_description level="1" desc_key="SP_GunSoundSuppressorSilencerSchematicDesc" long_desc_key="SP_GunSoundSuppressorSilencerSchematicDesc"/>
+		</effect_group>
+	</perk>
 	<!--POWERED-->
 	<perk name="SP_PoweredDoorsSchematic" parent="jz_PoweredSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Powered Doors and Bridges" desc_key="SP_PoweredDoorsSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
@@ -3068,6 +3749,20 @@
 		</effect_group>
 	</perk>
 	
+	<perk name="SP_ElectricWirerelaySchematic" parent="jz_PoweredSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Electricwire Relay" desc_key="SP_ElectrictimerrelaySchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="electricwirerelay"/>
+			<effect_description level="1" desc_key="SP_ElectricWirerelaySchematicDesc" long_desc_key="SP_ElectricWirerelaySchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_CeilingLightSchematic" parent="jz_PoweredSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Ceiling Light" desc_key="SP_CeilingLightSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ceilingLight01_player"/>
+			<effect_description level="1" desc_key="SP_CeilingLightSchematicDesc" long_desc_key="SP_CeilingLightSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
 	<perk name="SP_ElectrictimerrelaySchematic" parent="jz_PoweredSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Electrictimerrelay" desc_key="SP_ElectrictimerrelaySchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="electrictimerrelay"/>
@@ -3082,17 +3777,17 @@
 		</effect_group>
 	</perk>
 	<!--TOOL-->
-	<perk name="SP_SledgehammerIronSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Sledgehammer" desc_key="SP_SledgehammerIronSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_MasonHammerSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Mason Hammer" desc_key="SP_MasonHammerSchematic" icon="ui_game_symbol_fire">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolSledgehammerIron,jz_MoldSledgeHead,jz_SledgeHead"/>
-			<effect_description level="1" desc_key="SP_SledgehammerIronSchematicDesc" long_desc_key="SP_SledgehammerIronSchematicDesc"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MasonHammer"/>
+			<effect_description level="1" desc_key="SP_MasonHammerSchematicDesc" long_desc_key="SP_MasonHammerSchematicDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_SledgehammerSteelSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Sledgehammer" desc_key="SP_SledgehammerSteelSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_ClawHammerSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Claw Hammer" desc_key="SP_ClawHammerSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolSledgehammerSteel"/>
-			<effect_description level="1" desc_key="SP_SledgehammerSteelSchematicDesc" long_desc_key="SP_SledgehammerSteelSchematicDesc"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolClawHammer,jz_MoldHammerHead,jz_HammerHead"/>
+			<effect_description level="1" desc_key="SP_ClawHammerSchematicDesc" long_desc_key="SP_ClawHammerSchematicDesc"/>
 		</effect_group>
 	</perk>
 	
@@ -3102,18 +3797,25 @@
 			<effect_description level="1" desc_key="SP_WrenchSchematicDesc" long_desc_key="SP_WrenchSchematicDesc"/>
 		</effect_group>
 	</perk>
-		
-	<perk name="SP_AugerSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Auger" desc_key="SP_AugerSchematicDesc" icon="ui_game_symbol_fire">
+	
+	<perk name="SP_ConcreteSledgeSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Concrete Sledge" desc_key="SP_ConcreteSledgeSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolAuger"/>
-			<effect_description level="1" desc_key="SP_AugerSchematicDesc" long_desc_key="SP_AugerSchematicDesc"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_ConcreteSledge"/>
+			<effect_description level="1" desc_key="SP_ConcreteSledgeSchematicDesc" long_desc_key="SP_ConcreteSledgeSchematicDesc"/>
+		</effect_group>
+	</perk>	
+	
+	<perk name="SP_WelderSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Welder" desc_key="SP_WelderSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_WelderTool"/>
+			<effect_description level="1" desc_key="SP_WelderSchematicDesc" long_desc_key="SP_WelderSchematicDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_ChainsawSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Chainsaw" desc_key="SP_ChainsawSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_ScrewdriverSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Screwdriver" desc_key="SP_ScrewdriverSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolChainsaw"/>
-			<effect_description level="1" desc_key="SP_ChainsawSchematicDesc" long_desc_key="SP_ChainsawSchematicDesc"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_Screwdriver,jz_MoldScrewdriverHead"/>
+			<effect_description level="1" desc_key="SP_ScrewdriverSchematicDesc" long_desc_key="SP_ScrewdriverSchematicDesc"/>
 		</effect_group>
 	</perk>
 	
@@ -3138,27 +3840,6 @@
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_ClawHammerSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Claw Hammer" desc_key="SP_ClawHammerSchematicDesc" icon="ui_game_symbol_fire">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolClawHammer,jz_MoldHammerHead,jz_HammerHead"/>
-			<effect_description level="1" desc_key="SP_ClawHammerSchematicDesc" long_desc_key="SP_ClawHammerSchematicDesc"/>
-		</effect_group>
-	</perk>
-	
-	<perk name="SP_WelderSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Welder" desc_key="SP_WelderSchematicDesc" icon="ui_game_symbol_fire">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_WelderTool"/>
-			<effect_description level="1" desc_key="SP_WelderSchematicDesc" long_desc_key="SP_WelderSchematicDesc"/>
-		</effect_group>
-	</perk>
-	
-	<perk name="SP_ScrewdriverSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Screwdriver" desc_key="SP_ScrewdriverSchematicDesc" icon="ui_game_symbol_fire">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_Screwdriver,jz_MoldScrewdriverHead"/>
-			<effect_description level="1" desc_key="SP_ScrewdriverSchematicDesc" long_desc_key="SP_ScrewdriverSchematicDesc"/>
-		</effect_group>
-	</perk>
-	
 	<perk name="SP_SteelPickaxeSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Pickaxe" desc_key="SP_SteelPickaxeSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolPickaxeSteel,jz_MoldSteelPickAxeHead,jz_SteelPickaxeHead"/>
@@ -3179,6 +3860,27 @@
 			<effect_description level="1" desc_key="SP_SteelShovelSchematicDesc" long_desc_key="SP_SteelShovelSchematicDesc"/>
 		</effect_group>
 	</perk>
+	
+	<perk name="SP_AugerSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Auger" desc_key="SP_AugerSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolAuger"/>
+			<effect_description level="1" desc_key="SP_AugerSchematicDesc" long_desc_key="SP_AugerSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_ChainsawSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Chainsaw" desc_key="SP_ChainsawSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeToolChainsaw"/>
+			<effect_description level="1" desc_key="SP_ChainsawSchematicDesc" long_desc_key="SP_ChainsawSchematicDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="SP_LockPickSchematic" parent="jz_ToolSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Lock Pick" desc_key="SP_LockPickSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceLockPick"/>
+			<effect_description level="1" desc_key="SP_LockPickSchematicDesc" long_desc_key="SP_LockPickSchematicDesc"/>
+		</effect_group>
+	</perk>
 	<!--VEHICALS-->
 	<perk name="SP_BicycleSchematic" parent="jz_VehicalSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Bicycle" desc_key="SP_BicycleSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
@@ -3189,7 +3891,7 @@
 	
 	<perk name="SP_MinibikeSchematic" parent="jz_VehicalSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Minibike" desc_key="SP_MinibikeSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleMinibikeChassis,vehicleBicycleHandlebars,vehicleBicyclePlaceable"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vehicleMinibikeChassis,vehicleMinibikeHandlebars,vehicleMinibikePlaceable"/>
 			<effect_description level="1" desc_key="SP_MinibikeSchematicDesc" long_desc_key="SP_MinibikeSchematicDesc"/>
 		</effect_group>
 	</perk>
@@ -3276,8 +3978,13 @@
 	<perk name="jz_WoodBuildingSkill" parent="Miscellaneous" min_level="0" max_level="3" base_skill_point_cost="0" name_key="Wood Building" desc_key="jz_WoodBuildingSkillDesc" icon="ui_game_symbol_wood">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,1,1,1" tags="woodFrameBlockVariantHelper"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,1,1" tags="meleeToolClawHammer,jz_MoldHammerHead,jz_HammerHead"/>"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,0,1" tags="jz_Plank"/>
+			
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ClawHammerSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_WoodBuildingSkill" operation="GTE" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="SP_ClawHammerSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PlankSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_WoodBuildingSkill" operation="GTE" value="3"/>
+				<requirement name="ProgressionLevel" progression_name="SP_PlankSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_WoodBuildingSkillLv" operation="LT" value="3"/>
@@ -3319,9 +4026,15 @@
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3,4" value="0,1,1,1,1" tags="flagstoneBlockVariantHelper"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3,4" value="0,1,1,1,1" tags="jz_BrickFrameVariantHelper"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3,4" value="0,0,1,1,1" tags="jz_MasonHammer"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3,4" value="0,0,0,1,1" tags="resourceCobblestones"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3,4" value="0,0,0,0,1" tags="jz_Bricks"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_MasonHammerSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_StoneBuildingSkill" operation="GTE" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="SP_MasonHammerSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CobblestoneSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_StoneBuildingSkill" operation="GTE" value="3"/>
+				<requirement name="ProgressionLevel" progression_name="SP_CobblestoneSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BricksSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_StoneBuildingSkill" operation="GTE" value="4"/>
+				<requirement name="ProgressionLevel" progression_name="SP_BricksSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_StoneBuildingSkillLv" operation="LT" value="4"/>
@@ -3371,8 +4084,12 @@
 	<perk name="jz_IronBuildingSkill" parent="Miscellaneous" min_level="0" max_level="3" base_skill_point_cost="0" name_key="Iron Building" desc_key="jz_IronBuildingSkillDesc" icon="ui_game_symbol_forge">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,1,1,1" tags="scrapIronFrameBlockVariantHelper"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,1,1" tags="meleeToolWrench,jz_MoldWrench"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,0,1" tags="jz_IronSheetMetal"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_WrenchSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_IronBuildingSkill" operation="GTE" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="SP_WrenchSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_IronSheetMetalSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_IronBuildingSkill" operation="GTE" value="3"/>
+				<requirement name="ProgressionLevel" progression_name="SP_IronSheetMetalSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_IronBuildingSkillLv" operation="LT" value="3"/>
@@ -3413,8 +4130,12 @@
 	<perk name="jz_ConcreteBuildingSkill" parent="Miscellaneous" min_level="0" max_level="3" base_skill_point_cost="0" name_key="Concrete Building" desc_key="jz_ConcreteBuildingSkillDesc" icon="ui_game_symbol_cement">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,1,1,1" tags="rebarFrameBlockVariantHelper"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,1,1" tags="jz_ConcreteSledge"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,0,1" tags="resourceConcreteMix"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ConcreteSledgeSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_ConcreteBuildingSkill" operation="GTE" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="SP_ConcreteSledgeSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ConcreteMixSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_ConcreteBuildingSkill" operation="GTE" value="3"/>
+				<requirement name="ProgressionLevel" progression_name="SP_ConcreteMixSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_ConcreteBuildingSkillLv" operation="LT" value="3"/>
@@ -3455,8 +4176,12 @@
 	<perk name="jz_SteelBuildingSkill" parent="Miscellaneous" min_level="0" max_level="3" base_skill_point_cost="0" name_key="Steel Building" desc_key="jz_SteelBuildingSkillDesc" icon="ui_game_symbol_ibeam">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,1,1,1" tags="jz_SteelFrameVariantHelper"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,1,1" tags="jz_WelderTool"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="0,1,2,3" value="0,0,0,1" tags="jz_SteelSheetMetal"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_WelderSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_SteelBuildingSkill" operation="GTE" value="2"/>
+				<requirement name="ProgressionLevel" progression_name="SP_WelderSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SteelSheetMetalSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_SteelBuildingSkill" operation="GTE" value="3"/>
+				<requirement name="ProgressionLevel" progression_name="SP_SteelSheetMetalSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
 			<requirement name="CVarCompare" cvar="jz_SteelBuildingSkillLv" operation="LT" value="3"/>
@@ -4002,7 +4727,9 @@
 	</perk>
 	<perk name="perkGreatHeistComplete" parent="skillGreatHeist" max_level="1" base_skill_point_cost="0" name_key="perkGreatHeistCompleteName" desc_key="perkGreatHeistCompleteDesc" long_desc_key="perkGreatHeistCompleteLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceLockPick"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_LockPickSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="perkGreatHeistComplete" operation="GTE" value="1"/>
+				<requirement name="ProgressionLevel" progression_name="SP_LockPickSchematic" operation="LT" value="1"/></triggered_effect>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceLockPickBundle"/>
 			<passive_effect name="LockPickTime" operation="perc_subtract" level="1" value=".167"/>
 			<passive_effect name="LockPickBreakChance" operation="perc_subtract" level="1" value=".1"/>
@@ -4493,7 +5220,9 @@
 	</perk>
 	<perk name="perkAutoWeaponsMachineGuns" parent="skillAutoWeapons" max_level="1" base_skill_point_cost="0" name_key="bookAutoWeaponsMachineGuns" desc_key="perkAutoWeaponsMachineGunsDesc" long_desc_key="perkAutoWeaponsMachineGunsLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunM60"/>
+			<requirement name="ProgressionLevel" progression_name="perkAutoWeaponsMachineGuns" operation="GTE" value="1"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_M60Schematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_M60Schematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 	</perk>
 	<perk name="perkAutoWeaponsComplete" parent="skillAutoWeapons" max_level="1" base_skill_point_cost="0" desc_key="perkAutoWeaponsCompleteDesc" long_desc_key="perkAutoWeaponsCompleteLongDesc">

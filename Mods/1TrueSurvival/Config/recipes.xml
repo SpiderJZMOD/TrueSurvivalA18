@@ -2677,15 +2677,15 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceRockSmall" count="1"/>
 </recipe>
 
-<recipe name="jz_FoodFlour" count="1" craft_area="jz_StoneMill" tags="learnable">
+<recipe name="jz_FoodFlour" count="1" craft_area="jz_StoneMill" >
 	<ingredient name="jz_FoodServingGrain" count="1" />
 </recipe>
 
-<recipe name="jz_BoneMeal" count="1" craft_area="jz_StoneMill" tags="learnable">
+<recipe name="jz_BoneMeal" count="1" craft_area="jz_StoneMill" >
 	<ingredient name="resourceBone" count="3" />
 </recipe>
 
-<recipe name="jz_BoneMeal" count="1" craft_area="jz_StoneMill" tags="learnable">
+<recipe name="jz_BoneMeal" count="1" craft_area="jz_StoneMill">
 	<ingredient name="meleeToolKnifeBone" count="4" />
 </recipe>
 <!-- Mortar & Pestle Crafted ******************************************************************************************************************************************************* -->
@@ -2731,7 +2731,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="forestFlower" count="1" />
 </recipe>
 
-<recipe name="jz_MedicalPurificationTablets" count="1" craft_area="jz_MortarAndPestle" tags="learnable">
+<recipe name="jz_PurificationTablets" count="1" craft_area="jz_MortarAndPestle" tags="learnable">
 	<ingredient name="jz_ZincPowder" count="3" />
 	<ingredient name="resourceCoal" count="1" />
 	<ingredient name="resourceCropGoldenrodPlant" count="1" />

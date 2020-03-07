@@ -757,9 +757,7 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="modMeleeT2">
-	<item name="modMeleeClubBurningShaft" prob="25" />
 	<item name="modMeleeClubBarbedWire" prob="25" />
-	<!--<item name="modMeleeFortifyingGrip"/> jzmod remove -->
 	<item name="modMeleeBunkerBuster" prob="25" />
 	<item name="modFuelTankLarge" prob="25" />
 </lootgroup>
@@ -779,8 +777,6 @@ The overall plan for loot distribution:
 
 <lootgroup name="modGunMeleeT3">
 	<item group="modMeleeT3" prob="50" />
-	<item name="modGunMeleeRadRemover" prob="50"/>
-	<!--<item name="modGunMeleeBlessedMetal"/>-->
 </lootgroup>
 
 <lootgroup name="modArmorCosmetics">
@@ -796,7 +792,6 @@ The overall plan for loot distribution:
 	<item name="modGunFlashlight" prob="10" />
 	<item name="modGunForegrip" prob="10" />
 	<item name="modGunMagazineExtender" prob="10" />
-	<!--<item name="modGunMeleeTheHunter"/> jzmod remove -->
 	<item name="modGunMuzzleBrake" prob="10" />
 	<item name="modGunScopeSmall" prob="10" />
 	<item name="modGunTriggerGroupSemi" prob="10" />
@@ -835,7 +830,6 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="modArmorT2">
-	<!--<item name="modArmorWaterPurifier"/> jzmod remove -->
 	<item name="modArmorImpactBracing" prob="20" />
 	<item name="modArmorPlatingReinforced" prob="20" />
 	<item name="modArmorMuffledConnectors" prob="20" />
@@ -1523,11 +1517,9 @@ The overall plan for loot distribution:
 	<item name="modMeleeSerratedBladeSchematic"/>
 	<item name="modMeleeClubBarbedWireSchematic"/>
 	<item name="modMeleeClubMetalSpikesSchematic"/>
-	<item name="modMeleeClubBurningShaftSchematic"/>
 	<item name="modMeleeWeightedHeadSchematic"/>
 	<item name="modMeleeStructuralBraceSchematic"/>
 	<item name="modMeleeErgonomicGripSchematic"/>
-	<!--<item name="modMeleeFortifyingGripSchematic"/> jzmod remove-->
 	<item name="modMeleeGraveDiggerSchematic"/>
 	<item name="modMeleeWoodSplitterSchematic"/>
 	<item name="modGunBowArrowRestSchematic"/>
@@ -1555,7 +1547,6 @@ The overall plan for loot distribution:
 	<item name="modGunCrippleEmSchematic"/>
 	<item name="modFuelTankSmallSchematic"/>
 	<item name="modFuelTankLargeSchematic"/>
-	<!--<item name="modGunMeleeTheHunterSchematic"/> jzmod remove -->
 </lootgroup>
 
 <lootgroup name="T3ModBook" >
@@ -1565,11 +1556,9 @@ The overall plan for loot distribution:
 	<item name="modGunTriggerGroupBurst3Schematic"/>
 	<item name="modGunSoundSuppressorSilencerSchematic"/>
 	<item name="modGunTriggerGroupAutomaticSchematic"/>
-	<item name="modGunMeleeRadRemoverSchematic"/>
 	<item name="modArmorPlatingReinforcedSchematic"/>
 	<item name="modArmorTripleStoragePocketSchematic"/>
 	<item name="modArmorAdvancedMuffledConnectorsSchematic"/>
-	<!--<item name="modArmorWaterPurifierSchematic"/> jzmod remove -->
 	<item name="modArmorCustomizedFittingsSchematic"/>
 	<item name="modMeleeBunkerBusterSchematic"/>
 	<item name="modMeleeIronBreakerSchematic"/>
@@ -1597,7 +1586,6 @@ The overall plan for loot distribution:
 	<item name="modArmorAdvancedMuffledConnectorsSchematic"/>
 	<item name="jz_SchematicHerbalCream"/>
 	<item name="jz_SchematicAloeCream"/>
-	<!--<item name="modArmorWaterPurifierSchematic"/> jzmod remove -->
 	<item name="modArmorCustomizedFittingsSchematic"/>
 	<item name="modMeleeBunkerBusterSchematic"/>
 	<item name="modMeleeIronBreakerSchematic"/>
@@ -1985,7 +1973,7 @@ The overall plan for loot distribution:
 	<item name="jz_MedicalSanitizingBandage" prob="9" />
 	<item name="medicalAloeCream" count="1,4" prob="8" />
 	<item name="jz_MedicalStimulant" count="1,6" prob="8" />
-	<item name="jz_MedicalPurificationTablets" count="1,4" prob="8" />
+	<item name="jz_PurificationTablets" count="1,4" prob="8" />
 	<item group="rareMedicine" prob="8" />
 </lootgroup>
 
@@ -2107,7 +2095,7 @@ The overall plan for loot distribution:
 
 <lootgroup name="airdropChemist" count="all">
 	<item name="jz_MixedChemicals" count="3,6" />
-	<item name="jz_MedicalPurificationTablets" count="1,2" />
+	<item name="jz_PurificationTablets" count="1,2" />
 	<item name="toolBeaker" />
 	<item name="foodCanBeef" />
 	<item name="jz_DrinkCleanOuncesOfWater" count="5" />
@@ -2224,7 +2212,7 @@ The overall plan for loot distribution:
 
 <lootgroup name="airdropPark" count="all">
 	<item name="drugHerbalAntibiotics" />
-	<item name="jz_MedicalPurificationTablets" count="5" />
+	<item name="jz_PurificationTablets" count="5" />
 	<item name="drugPainkillers" />
 	<item name="foodCanBeef" count="5" />
 	<item name="jz_DrinkCleanOuncesOfWater" count="5" />

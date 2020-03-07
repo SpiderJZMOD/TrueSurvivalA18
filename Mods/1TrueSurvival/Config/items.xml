@@ -11687,10 +11687,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="meleeKnucklesSteel"/>
 	<property name="Unlocks" value="meleeKnucklesSteel"/>
 	<property class="Action0">
-		<requirement name="ProgressionLevel" progression_name="meleeKnucklesSteel" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_KnucklesSteelSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="meleeKnucklesSteel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_KnucklesSteelSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12627,10 +12627,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunBarrelExtender"/>
 	<property name="Unlocks" value="modGunBarrelExtender"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunBarrelExtender" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunBarrelExtenderSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunBarrelExtender" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunBarrelExtenderSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12641,10 +12641,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunMuzzleBrake"/>
 	<property name="Unlocks" value="modGunMuzzleBrake"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunMuzzleBrake" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunMuzzleBrakeSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunMuzzleBrake" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunMuzzleBrakeSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12655,10 +12655,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunSoundSuppressorSilencer"/>
 	<property name="Unlocks" value="modGunSoundSuppressorSilencer"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunSoundSuppressorSilencer" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunSoundSuppressorSilencerSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunSoundSuppressorSilencer" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunSoundSuppressorSilencerSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12669,10 +12669,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunLaserSight"/>
 	<property name="Unlocks" value="modGunLaserSight"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunLaserSight" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunLaserSightSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunLaserSight" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunLaserSightSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12683,10 +12683,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunFlashlight"/>
 	<property name="Unlocks" value="modGunFlashlight"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunFlashlight" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunFlashlightSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunFlashlight" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunFlashlightSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12697,10 +12697,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunScopeSmall"/>
 	<property name="Unlocks" value="modGunScopeSmall"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunScopeSmall" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunScopeSmallSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunScopeSmall" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunScopeSmallSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12711,10 +12711,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunScopeMedium"/>
 	<property name="Unlocks" value="modGunScopeMedium"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunScopeMedium" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunScopeMediumSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunScopeMedium" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunScopeMediumSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12725,10 +12725,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunScopeLarge"/>
 	<property name="Unlocks" value="modGunScopeLarge"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunScopeLarge" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunScopeLargeSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunScopeLarge" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunScopeLargeSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12739,10 +12739,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunReflexSight"/>
 	<property name="Unlocks" value="modGunReflexSight"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunReflexSight" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunReflexSightSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunReflexSight" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunReflexSightSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12753,10 +12753,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunTriggerGroupSemi"/>
 	<property name="Unlocks" value="modGunTriggerGroupSemi"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunTriggerGroupSemi" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunTriggerGroupSemiSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunTriggerGroupSemi" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunTriggerGroupSemiSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12767,10 +12767,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunTriggerGroupBurst"/>
 	<property name="Unlocks" value="modGunTriggerGroupBurst3"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunTriggerGroupBurst3" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunTriggerGroupBurst3Schematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunTriggerGroupBurst3" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunTriggerGroupBurst3Schematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12781,10 +12781,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunTriggerGroupAutomatic"/>
 	<property name="Unlocks" value="modGunTriggerGroupAutomatic"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunTriggerGroupAutomatic" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunTriggerGroupAutomaticSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunTriggerGroupAutomatic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunTriggerGroupAutomaticSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12795,10 +12795,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunRodAndSpring"/>
 	<property name="Unlocks" value="modGunRodAndSpring"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunRodAndSpring" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunRodAndSpringSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunRodAndSpring" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunRodAndSpringSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12809,10 +12809,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunBipod"/>
 	<property name="Unlocks" value="modGunBipod"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunBipod" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunBipodSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunBipod" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunBipodSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12823,10 +12823,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunForegrip"/>
 	<property name="Unlocks" value="modGunForegrip"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunForegrip" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunForegripSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunForegrip" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunForegripSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12837,10 +12837,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunRetractingStock"/>
 	<property name="Unlocks" value="modGunRetractingStock"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunRetractingStock" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunRetractingStockSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunRetractingStock" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunRetractingStockSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12851,10 +12851,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunDuckbill"/>
 	<property name="Unlocks" value="modGunDuckbill"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunDuckbill" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunDuckbillSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunDuckbill" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunDuckbillSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12865,10 +12865,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunChoke"/>
 	<property name="Unlocks" value="modGunChoke"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunChoke" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunChokeSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunChoke" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunChokeSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12879,10 +12879,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunMagazineExtender"/>
 	<property name="Unlocks" value="modGunMagazineExtender"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunMagazineExtender" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunMagazineExtenderSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunMagazineExtender" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunMagazineExtenderSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12893,10 +12893,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modShotgunSawedOffBarrel"/>
 	<property name="Unlocks" value="modShotgunSawedOffBarrel"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modShotgunSawedOffBarrel" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ShotgunSawedOffBarrelSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modShotgunSawedOffBarrel" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ShotgunSawedOffBarrelSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12907,10 +12907,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunCrippleEm"/>
 	<property name="Unlocks" value="modGunCrippleEm"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunCrippleEm" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunCrippleEmSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunCrippleEm" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunCrippleEmSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12921,10 +12921,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunBowPolymerString"/>
 	<property name="Unlocks" value="modGunBowPolymerString"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunBowPolymerString" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunBowPolymerStringSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunBowPolymerString" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunBowPolymerStringSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -12935,29 +12935,30 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modGunBowArrowRest"/>
 	<property name="Unlocks" value="modGunBowArrowRest"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunBowArrowRest" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_GunBowArrowRestSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunBowArrowRest" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunBowArrowRestSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
-<item name="modGunMeleeTheHunterSchematic">
+<item name="modGunMeleeTheHunterSchematic"><!--JZMOD REMOVE-->
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="modGunMeleeTheHunter"/>
 	<property name="Unlocks" value="modGunMeleeTheHunter"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modGunMeleeTheHunter" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ElectrictimerrelaySchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ElectrictimerrelaySchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modGunMeleeTheHunter" operation="set" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
-<item name="modGunMeleeRadRemoverSchematic">
+<item name="modGunMeleeRadRemoverSchematic"><!--JZMOD REMOVE-->
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="modGunMeleeRadRemover"/>
@@ -12971,7 +12972,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="modGunMeleeBlessedMetalSchematic">
+<item name="modGunMeleeBlessedMetalSchematic"><!--JZMOD REMOVE-->
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="modGunMeleeBlessedMetal"/>
@@ -12991,10 +12992,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeTemperedBlade"/>
 	<property name="Unlocks" value="modMeleeTemperedBlade"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeTemperedBlade" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeTemperedBladeSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeTemperedBlade" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeTemperedBladeSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13005,10 +13006,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeSerratedBlade"/>
 	<property name="Unlocks" value="modMeleeSerratedBlade"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeSerratedBlade" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeSerratedBladeSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeSerratedBlade" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeSerratedBladeSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13019,10 +13020,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeWeightedHead"/>
 	<property name="Unlocks" value="modMeleeWeightedHead"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeWeightedHead" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeWeightedHeadSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeWeightedHead" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeWeightedHeadSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13033,10 +13034,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeStructuralBrace"/>
 	<property name="Unlocks" value="modMeleeStructuralBrace"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeStructuralBrace" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeStructuralBraceSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeStructuralBrace" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeStructuralBraceSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13047,15 +13048,15 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeErgonomicGrip"/>
 	<property name="Unlocks" value="modMeleeErgonomicGrip"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeErgonomicGrip" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeErgonomicGripSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeErgonomicGrip" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeErgonomicGripSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
-<item name="modMeleeFortifyingGripSchematic">
+<item name="modMeleeFortifyingGripSchematic"><!--JZMOD REMOVE-->
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="modMeleeFortifyingGrip"/>
@@ -13075,10 +13076,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeClubBarbedWire"/>
 	<property name="Unlocks" value="modMeleeClubBarbedWire"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeClubBarbedWire" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeClubBarbedWireSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeClubBarbedWire" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeClubBarbedWireSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13089,10 +13090,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeClubMetalSpikes"/>
 	<property name="Unlocks" value="modMeleeClubMetalSpikes"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeClubMetalSpikes" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeClubMetalSpikesSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeClubMetalSpikes" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeClubMetalSpikesSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13114,10 +13115,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeGraveDigger"/>
 	<property name="Unlocks" value="modMeleeGraveDigger"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeGraveDigger" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeGraveDiggerSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeGraveDigger" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeGraveDiggerSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13128,10 +13129,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeBunkerBuster"/>
 	<property name="Unlocks" value="modMeleeBunkerBuster"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeBunkerBuster" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeBunkerBusterSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeBunkerBuster" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeBunkerBusterSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13142,10 +13143,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeIronBreaker"/>
 	<property name="Unlocks" value="modMeleeIronBreaker"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeIronBreaker" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeIronBreakerSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeIronBreaker" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeIronBreakerSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13156,15 +13157,15 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modMeleeWoodSplitter"/>
 	<property name="Unlocks" value="modMeleeWoodSplitter"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modMeleeWoodSplitter" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_MeleeWoodSplitterSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMeleeWoodSplitter" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MeleeWoodSplitterSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
-<item name="modMeleeClubBurningShaftSchematic">
+<item name="modMeleeClubBurningShaftSchematic"><!--JZMOD REMOVE-->
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="modMeleeClubBurningShaft"/>
@@ -13184,10 +13185,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorInsulatedLiner"/>
 	<property name="Unlocks" value="modArmorInsulatedLiner"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorInsulatedLiner" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorInsulatedLinerSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorInsulatedLiner" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorInsulatedLinerSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13198,10 +13199,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorCoolingMesh"/>
 	<property name="Unlocks" value="modArmorCoolingMesh"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorCoolingMesh" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorCoolingMeshSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorCoolingMesh" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorCoolingMeshSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13212,10 +13213,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorImprovedFittings"/>
 	<property name="Unlocks" value="modArmorImprovedFittings"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorImprovedFittings" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorImprovedFittingsSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorImprovedFittings" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorImprovedFittingsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13226,10 +13227,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorCustomizedFittings"/>
 	<property name="Unlocks" value="modArmorCustomizedFittings"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorCustomizedFittings" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorCustomizedFittingsSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorCustomizedFittings" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorCustomizedFittingsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13240,10 +13241,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorPlatingBasic"/>
 	<property name="Unlocks" value="modArmorPlatingBasic"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorPlatingBasic" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorPlatingBasicSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorPlatingBasic" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorPlatingBasicSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13254,10 +13255,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorPlatingReinforced"/>
 	<property name="Unlocks" value="modArmorPlatingReinforced"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorPlatingReinforced" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorPlatingReinforcedSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorPlatingReinforced" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorPlatingReinforcedSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13268,10 +13269,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorStoragePocket"/>
 	<property name="Unlocks" value="modArmorStoragePocket"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorStoragePocket" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorStoragePocketSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorStoragePocket" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorStoragePocketSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13282,10 +13283,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorDoubleStoragePocket"/>
 	<property name="Unlocks" value="modArmorDoubleStoragePocket"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorDoubleStoragePocket" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorDoubleStoragePocketSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorDoubleStoragePocket" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorDoubleStoragePocketSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13296,10 +13297,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorTripleStoragePocket"/>
 	<property name="Unlocks" value="modArmorTripleStoragePocket"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorTripleStoragePocket" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorTripleStoragePocketSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorTripleStoragePocket" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorTripleStoragePocketSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13310,10 +13311,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorMuffledConnectors"/>
 	<property name="Unlocks" value="modArmorMuffledConnectors"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorMuffledConnectors" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorMuffledConnectorsSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorMuffledConnectors" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorMuffledConnectorsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13324,10 +13325,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorAdvancedMuffledConnectors"/>
 	<property name="Unlocks" value="modArmorAdvancedMuffledConnectors"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorAdvancedMuffledConnectors" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorAdvancedMuffledConnectorsSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorAdvancedMuffledConnectors" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorAdvancedMuffledConnectorsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13338,10 +13339,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorImpactBracing"/>
 	<property name="Unlocks" value="modArmorImpactBracing"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorImpactBracing" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorImpactBracingSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorImpactBracing" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorImpactBracingSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13352,15 +13353,15 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorBandolier"/>
 	<property name="Unlocks" value="modArmorBandolier"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorBandolier" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorBandolierSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorBandolier" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorBandolierSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
-<item name="modArmorWaterPurifierSchematic">
+<item name="modArmorWaterPurifierSchematic"><!--JZMOD REMOVE-->
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="modArmorWaterPurifier"/>
@@ -13380,10 +13381,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modArmorHelmetLight"/>
 	<property name="Unlocks" value="modArmorHelmetLight"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modArmorHelmetLight" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_ArmorHelmetLightSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modArmorHelmetLight" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmorHelmetLightSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13394,10 +13395,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modFuelTankSmall"/>
 	<property name="Unlocks" value="modFuelTankSmall"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modFuelTankSmall" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_FuelTankSmallSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modFuelTankSmall" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_FuelTankSmallSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13408,10 +13409,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="modFuelTankLarge"/>
 	<property name="Unlocks" value="modFuelTankLarge"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="modFuelTankLarge" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_FuelTankLargeSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modFuelTankLarge" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_FuelTankLargeSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13927,10 +13928,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Unlocks" value="plantedBlueberry1"/>
 	<property class="Action0">
-	<requirement name="ProgressionLevel" progression_name="SP_BlueberryPieSchematic" operation="LT" value="1"/>
+	<requirement name="ProgressionLevel" progression_name="SP_BlueberrySeedSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BlueberryPieSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BlueberrySeedSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -21429,7 +21430,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_MedicalPurificationTablets">
+<item name="jz_PurificationTablets">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Meshfile" value="Items/Health/painkillersPrefab" />
 	<property name="HoldType" value="16" />
@@ -27282,6 +27283,286 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <!-- JZMOD SCHEMATICS -->
+<item name="jz_SchematicSteelSheetMetal">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
+	<property name="DescriptionKey" value="jz_SchematicSteelSheetMetalDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_SteelSheetMetalSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SteelSheetMetalSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicConcreteMix">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="resourceConcreteMix"/>
+	<property name="DescriptionKey" value="jz_SchematicConcreteMixDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_ConcreteMixSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ConcreteMixSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicConcreteSledge">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_ConcreteSledge"/>
+	<property name="DescriptionKey" value="jz_SchematicConcreteSledgeDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_ConcreteSledgeSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ConcreteSledgeSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicMasonHammer">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_MasonHammer"/>
+	<property name="DescriptionKey" value="jz_SchematicMasonHammerDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_MasonHammerSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MasonHammerSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicPurificationTablets">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_PurificationTablets"/>
+	<property name="DescriptionKey" value="jz_SchematicPurificationTabletsDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_PurificationTabletsSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_PurificationTabletsSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicGunPowder">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="resourceGunPowder"/>
+	<property name="DescriptionKey" value="jz_SchematicGunPowderDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_GunPowderSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunPowderSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicBlackStrapCoffee">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="drinkJarBlackStrapCoffee"/>
+	<property name="DescriptionKey" value="jz_SchematicBlackStrapCoffeeDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_BlackStrapCoffeeSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BlackStrapCoffeeSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicAntiVenom">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_MedicalAntiVenom"/>
+	<property name="DescriptionKey" value="jz_SchematicAntiVenomDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_AntiVenomSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_AntiVenomSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicIronSheetMetal">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_IronSheetMetal"/>
+	<property name="DescriptionKey" value="jz_SchematicIronSheetMetalDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_IronSheetMetalSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_IronSheetMetalSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCeilingLight">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="ceilingLight01_player"/>
+	<property name="DescriptionKey" value="jz_SchematicCeilingLightDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_CeilingLightSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CeilingLightSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicWirerelay">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="electricwirerelay"/>
+	<property name="DescriptionKey" value="jz_SchematicWirerelayDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_ElectricWirerelaySchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ElectricWirerelaySchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicMegaCrush">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="drinkCanMegaCrush"/>
+	<property name="DescriptionKey" value="jz_SchematicMegaCrushDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_MegaCrushSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_MegaCrushSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicVitamins">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="drugVitamins"/>
+	<property name="DescriptionKey" value="jz_SchematicVitaminsDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_VitaminsSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_VitaminsSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicWeaponRepairKit">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_WeaponRepairKit"/>
+	<property name="DescriptionKey" value="jz_SchematicWeaponRepairKitDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_WeaponRepairKitSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_WeaponRepairKitSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCobblestone">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="resourceCobblestones"/>
+	<property name="DescriptionKey" value="jz_SchematicCobblestoneDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_CobblestoneSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CobblestoneSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicBricks">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_Bricks"/>
+	<property name="DescriptionKey" value="jz_SchematicBricksDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_BricksSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BricksSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicPlank">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_Plank"/>
+	<property name="DescriptionKey" value="jz_SchematicPlankDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_PlankSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_PlankSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicLockPick">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="resourceLockPick"/>
+	<property name="DescriptionKey" value="jz_SchematicGunOilDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_LockPickSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_LockPickSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicGunOil">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_FoodBearStew"/>
+	<property name="DescriptionKey" value="jz_SchematicGunOilDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_GunOilSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GunOilSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicPoliceBaton">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_FoodBearStew"/>
+	<property name="DescriptionKey" value="jz_SchematicPoliceBatonDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_PoliceBatonSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_PoliceBatonSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
 <item name="jz_SchematicBearStew">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
