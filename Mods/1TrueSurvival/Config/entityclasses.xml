@@ -3071,7 +3071,7 @@
 		<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
 	</effect_group>
 </entity_class>
-
+	
 <entity_class name="animalMountainLion" extends="animalDireWolf">
 	<property name="Tags" value="entity,animal,hostile,mountainlion,perkAT03"/>
 	<property name="MapIcon" value="ui_game_symbol_tracking_mountain_lion"/>
@@ -3131,6 +3131,119 @@
 	<drop event="Harvest" name="resourceBone" tag="SmallPredHunter" count="1" />
     <drop event="Harvest" name="jz_AnimalBladder" tag="SmallPredHunter" count="1" prob="0.3" />
 	
+</entity_class>
+
+<entity_class name="animalRabbitHostile" extends="animalTemplateHostile">
+	<property name="Tags" value="entity,animal,rabbit,hostile,zombie,perkAT01"/>
+	<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
+	<property name="PhysicsBody" value="rabbit"/>
+	<property name="Mass" value="12"/>
+	<property name="Weight" value="10"/>
+	<property name="Prefab" value="/Entities/Animals/Rabbit/RABBIT"/>
+	<property name="SoundHurt" value="Animals/rabbitpain"/>
+	<property name="SoundDeath" value="Animals/rabbitdeath"/>
+	<property name="SoundAlert" value="Enemies/Zombie_Dogs/zombiedogalert" />
+	<property name="SwimOffset" value="2"/>
+	<property name="HasRagdoll" value="false"/>
+
+	<property name="AITask-1" value="Leap" />
+	<property name="AITask-2" value="Swim"/>
+	<property name="AITask-3" value="BreakBlock"/>
+	<property name="AITask-4" value="Territorial"/>
+	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,30,EntityPlayer,15,EntityZombie,20"/>
+	<property name="AITask-6" value="ApproachSpot"/>
+	<property name="AITask-7" value="Look"/>
+	<property name="AITask-8" value="Wander"/>
+	<property name="AITask-9" value=""/>
+	<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityPlayer"/>
+	<property name="AITarget-2" value="BlockingTargetTask"/>
+	<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
+	<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,0"/>
+	<property name="AITarget-5" value=""/>
+
+	<!-- Gameplay -->
+	<property name="HandItem" value="jz_HandRabbitAttack" />
+	<property name="MoveSpeed" value=".7"/>
+	<property name="MoveSpeedAggro" value="2.1, 2.3"/>
+	<property name="JumpDelay" value=".1"/>
+	<property name="JumpMaxDistance" value="6, 9"/>
+	<property name="CanClimbLadders" value="true"/>
+	<property name="ExperienceGain" value="50"/>
+	<property name="DeadBodyHitPoints" value="175"/>
+	<drop event="Harvest" name="foodRottingFlesh" count="0" tool_category="Butcher"/>
+	<!-- JZMOD Harvest For Beginner -->
+	<drop event="Destroy" name="foodRottingFlesh" count="4" />
+	<drop event="Destroy" name="resourceBone"  count="1" />
+    <!--JZMOD Butcher-->
+    <drop event="Harvest" name="foodRottingFlesh" tag="SmallGameButcher" count="4" />
+	<drop event="Harvest" name="jz_AnimalHide" tag="SmallGameButcher" count="1" />
+	<drop event="Harvest" name="resourceBone" tag="SmallGameButcher" count="1"  />
+    <!--JZMOD Hunter-->
+    <drop event="Harvest" name="foodRottingFlesh" tag="SmallGameHunter" count="4"/>
+    <drop event="Harvest" name="jz_AnimalHide" tag="SmallGameHunter" count="2"/>
+	<drop event="Harvest" name="resourceBone" tag="SmallGameHunter" count="1" />
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="10"/>
+		<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+	</effect_group>
+</entity_class>
+	
+<entity_class name="animalChickenHostile" extends="animalTemplateHostile" >
+	<property name="Tags" value="entity,animal,chicken,hostile,zombie,perkAT01"/>
+	<property name="MapIcon" value="ui_game_symbol_tracking_chicken"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_chicken"/>
+	<property name="Mesh" value="Animals/CHICKEN/chickenPrefab"/>
+	<property name="PhysicsBody" value="chicken"/>
+	<property name="Mass" value="15"/>
+	<property name="Weight" value="10"/>
+	<property name="SoundHurt" value="Animals/Chicken/chickenpain"/>
+	<property name="SoundDeath" value="Animals/Chicken/chickendeath"/>
+	<property name="SoundAlert" value="Enemies/Zombie_Dogs/zombiedogalert" />
+	<property name="SwimOffset" value="2"/>
+	<property name="HasRagdoll" value="false"/>
+	<property name="HasDeathAnim" value="false"/>
+
+	<property name="AITask-1" value="Leap" />
+	<property name="AITask-2" value="Swim"/>
+	<property name="AITask-3" value="BreakBlock"/>
+	<property name="AITask-4" value="Territorial"/>
+	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,30,EntityPlayer,15,EntityZombie,20"/>
+	<property name="AITask-6" value="ApproachSpot"/>
+	<property name="AITask-7" value="Look"/>
+	<property name="AITask-8" value="Wander"/>
+	<property name="AITask-9" value=""/>
+	<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityPlayer"/>
+	<property name="AITarget-2" value="BlockingTargetTask"/>
+	<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
+	<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,0"/>
+	<property name="AITarget-5" value=""/>
+	<!-- Gameplay -->
+	<property name="HandItem" value="jz_HandRabbitAttack" />
+	<property name="MoveSpeed" value=".7"/>
+	<property name="MoveSpeedAggro" value="2.1, 2.3"/>
+	<property name="JumpDelay" value=".1"/>
+	<property name="JumpMaxDistance" value="6, 9"/>
+	<property name="CanClimbLadders" value="true"/>
+	<property name="ExperienceGain" value="50"/>
+	<property name="DeadBodyHitPoints" value="175"/>
+
+	<drop event="Harvest" name="foodRottingFlesh" count="0" tool_category="Butcher"/>
+	<!-- JZMOD Harvest For Beginner -->
+	<drop event="Destroy" name="foodRottingFlesh" count="2" />
+	<drop event="Destroy" name="resourceFeather" count="5" />
+	<!--JZMOD Butcher-->
+    <drop event="Harvest" name="foodRottingFlesh" tag="SmallGameButcher" count="3" />
+	<drop event="Harvest" name="resourceFeather" tag="SmallGameButcher" count="5" />
+    <!--JZMOD Hunter-->
+    <drop event="Harvest" name="foodRottingFlesh" tag="SmallGameHunter" count="3"/>
+    <drop event="Harvest" name="resourceFeather" tag="SmallGameHunter" count="5"/>
+		
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="10"/>
+		<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+	</effect_group>
 </entity_class>
 
 <entity_class name="animalZombieVulture" extends="animalTemplateHostile">

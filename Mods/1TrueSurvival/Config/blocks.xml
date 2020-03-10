@@ -19408,6 +19408,7 @@ NOT the TextureNumber.
 
 <block name="woodChair1">
 	<property name="Extends" value="woodWeakNoUpgradeMaster" param1="DescriptionKey"/>
+	<property name="Texture" value="22"/>
 	<property name="Material" value="MwoodNoGlue"/>
 	<property name="Stacknumber" value="1"/>
 	<property name="MaxDamage" value="50"/>
@@ -24448,7 +24449,6 @@ NOT the TextureNumber.
 
 <block name="wallTorchLight">
 	<property name="CreativeMode" value="Dev"/>
-	<property name="Class" value="Light"/>
 	<property name="Material" value="Mpaper"/>
 	<property name="MaxDamage" value="1"/>
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
@@ -24456,12 +24456,10 @@ NOT the TextureNumber.
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
 	<property name="Model" value="Entities/Lighting/torch_wallPrefab"/>
-	<!--property name="ParticleName" value="torch_wall"/-->
 	<property name="Place" value="Torch"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 	<property name="CanPickup" value="true" param1="meleeToolTorch"/>
-	<property class="RepairItems"> <property name="jz_Plank" value="1"/> </property>
 	<drop event="Destroy" name="meleeToolTorch" count="1"/>
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="DescriptionKey" value="torchGroupDesc"/>
@@ -24490,7 +24488,6 @@ NOT the TextureNumber.
 
 <block name="candleWallLight">
 	<property name="CreativeMode" value="Dev"/>
-	<property name="Class" value="Light"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Material" value="Mpaper"/>
 	<property name="MaxDamage" value="1"/>
@@ -24528,15 +24525,14 @@ NOT the TextureNumber.
 
 <block name="wallTorchLightPlayer">
 	<property name="Extends" value="wallTorchLight"/>
-	<property name="Model" value="Entities/Lighting/torch_wall_playerPrefab"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="Entities/Lighting/torch_wallPrefab"/>
 	<property name="StabilitySupport" value="false"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="wallTorchLight"/>
 	<property name="Stacknumber" value="50"/>
-	<property name="Class" value="TorchHeatMap"/> <!-- HeatMapFrequency is not used. 1 min realtime updates that scale to match world time rate -->									 
-	<property name="HeatMapStrength" value="1"/>
-	<property name="HeatMapTime" value="4000"/> <!-- 1000 per world hour. str1, t6000, f5 = 2.5; str1, t9000, f5 = 4; str4.05, t12000, f15 = 4.05-8.1; -->
-	<property name="DescriptionKey" value="torchPlayerGroupDesc"/>
+<property name="DescriptionKey" value="torchPlayerGroupDesc"/>
 </block>
 
 
@@ -28322,7 +28318,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fdecor,ftraps"/>
 	<property name="SortOrder1" value="70g0"/>
 	<drop event="Fall" count="0" prob="0"/>
-	<property name="ShowModelOnFall" value="false"/>
+	<property name="ShowModelOnFall" value="true"/>
 </block>
 
 <block name="looseBoardsTrapPlate1x1">
@@ -28356,7 +28352,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fdecor,ftraps,fconstruction,fdestruction"/>
 	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
 	<drop event="Fall" count="0" prob="0"/>
-	<property name="ShowModelOnFall" value="false"/>
+	<property name="ShowModelOnFall" value="true"/>
 </block>
 
 <block name="trapGlassBusinessCTRSheet1x1">
@@ -28386,7 +28382,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fdecor,fwindows,ftraps"/>
 	<property name="SortOrder1" value="70g0"/>
 	<drop event="Fall" count="0" prob="0"/>
-	<property name="ShowModelOnFall" value="false"/>
+	<property name="ShowModelOnFall" value="true"/>
 </block>
 
 <block name="trapGlassBusinessSheet1x1">
@@ -29495,7 +29491,25 @@ NOT the TextureNumber.
 </block>
 -->
 <!-- **************************************************************** TRUE SURVIVAL BLOCKS ********************************************************* -->
-<!-- JZMOD WORKBENCHES -->
+<!-- JZMOD WORKSTATIONS -->
+<block name="wallTorchPlayer">
+	<property name="Extends" value="wallTorchLight"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CanPickup" value="false"/>
+	<property name="CustomIcon" value="wallTorchLight"/>
+	<property name="Stacknumber" value="50"/>
+	
+	<property name="HeatMapStrength" value="1"/>
+	<property name="HeatMapTime" value="4000"/> <!-- 1000 per world hour. str1, t6000, f5 = 2.5; str1, t9000, f5 = 4; str4.05, t12000, f15 = 4.05-8.1; -->
+	<property name="ParticleName" value="torch_wall" />
+	<property name="ParticleOffset" value="0.5,0.8,0.1" />
+	<property name="ActiveRadiusEffects" value="+heatSource(2)" />
+	<property name="Class" value="Campfire" />
+	<property class="Workstation">
+		<property name="Modules" value="fuel" />
+	</property>
+</block>
+
 <block name="jz_CharacterChoiceComputer">
 	<property name="Class" value="Campfire"/>
 	<property name="Material" value="MstoneNoGlue"/>
@@ -29936,9 +29950,9 @@ NOT the TextureNumber.
 <block name="jz_SuppliesSoldier">
 	<property name="Class" value="Loot" />
 	<property name="Material" value="MdroppedBackpack" />
-	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
-	<property name="Model" value="LootContainers/suitcase" param1="main_mesh"/>
+	<property name="Model" value="#Entities/LootContainers?luggageMediumClosedPrefab.prefab"/>
 	<property name="IsTerrainDecoration" value="true" />
 	<property name="LootList" value="212" />
 	<property name="CanPickup" value="false" />
@@ -29949,9 +29963,9 @@ NOT the TextureNumber.
 
 <block name="jz_ProfessionSoldier">
 	<property name="Material" value="Mglass" />
-	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
-	<property name="Model" value="LootContainers/suitcase" param1="main_mesh"/>
+	<property name="Model" value="#Entities/LootContainers?luggageMediumClosedPrefab.prefab"/>
 	<property name="IsTerrainDecoration" value="true" />
 	<property name="CanPickup" value="true" />
 	<property name="CustomIcon" value="cntSuitcase" />
@@ -31344,7 +31358,7 @@ NOT the TextureNumber.
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile9.unity3d?GoreBonePile9Prefab" />
 </block>
 
-<block name="jz_GoreBlockHumanBones10">
+<block name="jz_GoreBlockHumanBonesA">
 	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile10.unity3d?GoreBonePile10Prefab" />
@@ -32326,9 +32340,9 @@ NOT the TextureNumber.
 <block name="jz_QIBugOutBagLoot">
 	<property name="Class" value="Loot" />
 	<property name="Material" value="MdroppedBackpack" />
-	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
-	<property name="Model" value="LootContainers/suitcase" param1="main_mesh"/>
+	<property name="Model" value="#Entities/LootContainers?luggageMediumClosedPrefab.prefab"/>
 	<property name="IsTerrainDecoration" value="true" />
 	<property name="LootList" value="320" />
 	<property name="CanPickup" value="false" />
@@ -32339,9 +32353,9 @@ NOT the TextureNumber.
 
 <block name="jz_QIBugOutBag">
 	<property name="Material" value="Mglass" />
-	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
-	<property name="Model" value="LootContainers/suitcase" param1="main_mesh"/>
+	<property name="Model" value="#Entities/LootContainers?luggageMediumClosedPrefab.prefab"/>
 	<property name="IsTerrainDecoration" value="true" />
 	<property name="CanPickup" value="true" />
 	<property name="CustomIcon" value="cntSuitcase" />
@@ -32542,38 +32556,92 @@ NOT the TextureNumber.
 <block name="jz_PlantedCarrot1">
 	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
-	<!--<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>-->
+	<property name="UnlockedBy" value="SP_CarrotSeedSchematic,jz_SchematicCarrotSeed"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
-	<property name="PlantGrowing.Next" value="jz_PlantedCarrot2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedCarrotLv1Random"/>
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="jz_PlantedCarrot1" count="1"/>
+</block>
+
+<block name="jz_PlantedCarrotLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedCarrot1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCarrot1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCarrot1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCarrot2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
 </block>
 
 <block name="jz_PlantedCarrot2">
 	<property name="Extends" value="cropsGrowingMaster"/>
 	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property name="PlantGrowing.Next" value="jz_PlantedCarrotLv2Random"/>
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
+</block>
+
+<block name="jz_PlantedCarrotLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedCarrot2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCarrot2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCarrot2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
-	<property name="PlantGrowing.Next" value="jz_PlantedCarrot3HarvestPlayer"/>
-	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCarrot3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
 </block>
 
 <block name="jz_PlantedCarrot3Harvest">
 	<property name="Extends" value="cropsHarvestableMaster"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZCarrotGrown.unity3d?CarrotGrownPrefab" />
-	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/>
-</block>
-
-<block name="jz_PlantedCarrotHarvestRandomHelper">
-	<property name="Extends" value="jz_PlantedCarrot3Harvest" param1="MultiBlockDim"/>
-	<property name="CreativeMode" value="Dev"/>
-	<property name="CustomIcon" value="jz_PlantedCarrot3Harvest"/> <property name="CustomIconTint" value="ff8080"/>
-	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
-	<property name="DisplayInfo" value="Name"/>
-	<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
+	<drop event="Harvest" name="jz_FoodCarrot" count="1" tag="wildCropsHarvest"/>
 </block>
 
 <block name="jz_PlantedCarrot3HarvestPlayer">
@@ -32581,8 +32649,28 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
-	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
-	<property name="DowngradeBlock" value="jz_PlantedCarrot1"/>
+	<drop event="Harvest" name="jz_FoodCarrot" count="1" tag="cropHarvest"/>
+</block>
+
+<block name="jz_SateliteQuestItem">
+	<property name="Tags" value="ToolScrewdriver,jz_IronBuilding"/>
+	<property name="Material" value="Mplastics"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZSatelite.unity3d?SatelitePrefab" />
+	<property name="CreativeMode" value="Dev"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="CustomIcon" value="ui_game_symbol_NoIcon"/>
+	<property name="MaxDamage" value="2000"/>
+	<property name="CanPickup" value="false" />
+	<property name="DowngradeBlock" value="jz_SateliteQuestItem"/>
+	<!--JZMOD ANY-->
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0" stick_chance="0"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<!--JZMOD WRENCH-->
+	<drop event="Harvest" name="jz_QISateliteRadio" count="1" prob="1" tag="ToolWrench" />
+	<!--JZMOD SCREWDRIVER-->
+	<drop event="Harvest" name="jz_QISateliteRadio" count="1"  prob="1" tag="ToolScrewdriver"/>
 </block>
 
 
@@ -32609,12 +32697,7 @@ NOT the TextureNumber.
 
 
 
-
-
-
-
-
-
+<!-- SPHEREII CORE CONTROLER -->
 <block name="ConfigFeatureBlock">
       <property name="Extends" value="terrDesertGround"/>
 

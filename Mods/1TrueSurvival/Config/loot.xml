@@ -1113,6 +1113,8 @@ The overall plan for loot distribution:
 	<item name="switchSchematic" prob="7.14" />
 	<item name="batterybankSchematic" prob="7.16" />
 	<item name="electrictimerrelaySchematic" prob="7.14" />
+	<item name="jz_SchematicWirerelay" prob="7.14" />
+	<item name="jz_SchematicCeilingLight" prob="7.14" />
 </lootgroup>
 
 <lootgroup name="electricalDevices">
@@ -1194,7 +1196,7 @@ The overall plan for loot distribution:
 	<item name="jz_FoodStrawberry" count="1,3" prob="10" />
 	<item name="jz_FoodCarrot" prob="10" />
 	<item name="jz_FoodApple" prob="10" />
-	<item name="jz_FoodTomato" prob="10" />
+	<item name="jz_FoodEggPlant" prob="10" />
 </lootgroup>
 
 <lootgroup name="drinks">
@@ -1438,6 +1440,7 @@ The overall plan for loot distribution:
 	<item name="foodPumpkinCheesecakeSchematic"/>
 	<item name="jz_SchematicBrainShnitzel"/>
 	<item name="jz_FoodVenisonSteakAndPotato"/>
+	<item name="jz_SchematicBearStew"/>
 </lootgroup>
 
 <lootgroup name="T1WeaponBooks" >
@@ -1445,6 +1448,9 @@ The overall plan for loot distribution:
 	<item name="jz_SchematicCraftedRifle" prob="33" />
 	<item name="jz_SchematicBlunderbuss" prob="34" />
 	<item name="jz_SchematicStoneSpear"/>
+	<item name="jz_SchematicCandyTinMine"/>
+	<item name="jz_SchematicCookingPotMine"/>
+	<item name="jz_SchematicMolotovCocktail"/>
 </lootgroup>
 
 <lootgroup name="T2WeaponBooks" >
@@ -1459,6 +1465,8 @@ The overall plan for loot distribution:
 	<item name="thrownAmmoPipeBombSchematic"/>
 	<item name="jz_SchematicMolotovCocktail"/>
 	<item name="meleeStunBatonSchematic"/>
+	<item name="jz_SchematicHubcapMine"/>
+	<item name="jz_SchematicAirFilterMine"/>
 </lootgroup>
 
 <lootgroup name="T3WeaponBooks" >
@@ -1477,6 +1485,9 @@ The overall plan for loot distribution:
 	<item name="meleeToolKnifeMacheteSchematic"/>
 	<item name="meleeKnucklesSteelSchematic"/>
 	<item name="meleeThrownSpearSteelSchematic"/>
+	<item name="jz_SchematicScrapPlateMine"/>
+	<item name="jz_SchematicM60"/>
+	<item name="jz_SchematicTacticalAR"/>
 </lootgroup>
 
 <lootgroup name="T1FarmingBooks" >
@@ -1485,6 +1496,8 @@ The overall plan for loot distribution:
 	<item name="plantedCotton1Schematic"/>
 	<item name="plantedPotato1Schematic"/>
 	<item name="plantedPumpkin1Schematic"/>
+	<item name="jz_SchematicCucumberSeed"/>
+	<item name="jz_SchematicLeekSeed"/>
 </lootgroup>
 
 <lootgroup name="T2FarmingBooks" >
@@ -1492,12 +1505,16 @@ The overall plan for loot distribution:
 	<item name="plantedGoldenrod1Schematic"/>
 	<item name="plantedMushroom1Schematic"/>
 	<item name="plantedYucca1Schematic"/>
+	<item name="jz_SchematicdEggPlantSeed"/>
+	<item name="jz_SchematicCarrotSeed"/>
+	<item name="jz_SchematicFarmPlot"/>
 </lootgroup>
 
 <lootgroup name="T3FarmingBooks" >
 	<item name="plantedAloe1Schematic"/>
 	<item name="plantedCoffee1Schematic"/>
 	<item name="plantedHop1Schematic"/>
+	<item name="jz_SchematicChilliSeed"/>
 </lootgroup>
 
 <lootgroup name="FarmingBookChance" >
@@ -1583,13 +1600,13 @@ The overall plan for loot distribution:
 	<item name="tableSawSchematic"/>
 	<item name="jz_SchematicBicycle"/>
 	<item name="vehicleBicycleHandlebarsSchematic"/>
-	<item name="modArmorAdvancedMuffledConnectorsSchematic"/>
 	<item name="jz_SchematicHerbalCream"/>
 	<item name="jz_SchematicAloeCream"/>
-	<item name="modArmorCustomizedFittingsSchematic"/>
-	<item name="modMeleeBunkerBusterSchematic"/>
-	<item name="modMeleeIronBreakerSchematic"/>
-	<item name="modArmorImpactBracingSchematic"/>
+	<item name="jz_SchematicAntiVenom"/>
+	<item name="jz_SchematicWeaponRepairKit"/>
+	<item name="jz_SchematicCobblestone"/>
+	<item name="jz_SchematicBricks"/>
+	<item name="jz_SchematicPlank"/>
 </lootgroup>
 
 <lootgroup name="T2Schematics" >
@@ -1599,12 +1616,17 @@ The overall plan for loot distribution:
 	<item name="jz_SchematicIronShovel"/>
 	<item name="jz_SchematicClawHammer"/>
 	<item name="meleeToolWrenchSchematic"/>
-	<item name="medicalFirstAidBandageSchematic"/>
 	<item name="medicalPlasterCastSchematic"/>
+	<item name="armorIronSetSchematic"/>
 	<item name="cementMixerSchematic"/>
 	<item name="chemistryStationSchematic"/>
 	<item name="jz_SchematicMiniBike"/>
 	<item name="jz_SchematicMotorcycle"/>
+	<item name="jz_SchematicMasonHammer"/>
+	<item name="jz_SchematicGunPowder"/>
+	<item name="jz_SchematicIronSheetMetal"/>
+	<item name="jz_SchematicScrewdriver"/>
+	<item name="jz_SchematicLargeEngine"/>
 </lootgroup>
 
 <lootgroup name="T3Schematics" >
@@ -1624,6 +1646,11 @@ The overall plan for loot distribution:
 	<item name="ammoGasCanSchematic"/>
 	<item name="resourceOilSchematic"/>
 	<item name="drugHerbalAntibioticsSchematic"/>
+	<item name="jz_SchematicSteelSheetMetal"/>
+	<item name="jz_SchematicConcreteMix"/>
+	<item name="jz_SchematicConcreteSledge"/>
+	<item name="jz_SchematicLockPick"/>
+	<item name="jz_SchematicWelder"/>
 </lootgroup>
 
 <lootgroup name="PerkBook" >
@@ -2644,7 +2671,6 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 
 <lootgroup name="groupQuestSchematics">
 	<item name="drugHerbalAntibioticsSchematic" loot_prob_template="GradeBLoot"/>
-	<item name="foodCanShamSchematic" prob="1.0"/>
 	<item group="PerkBook" prob="20"/>
 	<item group="skillBookChance" prob="20"/>
 </lootgroup>
@@ -2788,6 +2814,7 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <lootgroup name="fireman" count="all">
 	<item name="jz_ProfessionFireFighterBook" />
 	<item name="bookFiremansAlmanacAxes" />
+	<item name="bookFiremansAlmanacEquipment" />
 	<item name="qc_Fireman" />
 </lootgroup>
 

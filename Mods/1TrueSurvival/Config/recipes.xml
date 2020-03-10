@@ -116,7 +116,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceFeather" count="80"/>
 </recipe>
 
-<recipe name="ammoCrossbowBoltSteelAP" count="1" craft_time="1" craft_exp_gain="0" tags="learnable" >
+<recipe name="ammoCrossbowBoltSteelAP" count="1" craft_time="1" craft_exp_gain="0" >
 	<ingredient name="resourceArrowHeadSteelAP" count="1"/>
 	<ingredient name="resourceMetalPipe" count="1"/>
 	<ingredient name="resourceFeather" count="2"/>
@@ -1202,7 +1202,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceDuctTape" count="60"/>
 </recipe>
 
-<recipe name="ammoArrowIron" count="1" craft_area="workbench" craft_time="1" craft_exp_gain="0" tags="learnable" >
+<recipe name="ammoArrowIron" count="1" craft_area="workbench" craft_time="1" craft_exp_gain="0" >
 	<ingredient name="resourceArrowHeadIron" count="1"/>
 	<ingredient name="jz_Stick" count="1"/>
 	<ingredient name="resourceFeather" count="1"/>
@@ -1214,7 +1214,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceFeather" count="80"/>
 </recipe>
 
-<recipe name="ammoArrowSteelAP" count="1" craft_area="workbench" craft_time="1" craft_exp_gain="0" tags="learnable" >
+<recipe name="ammoArrowSteelAP" count="1" craft_area="workbench" craft_time="1" craft_exp_gain="0" >
 	<ingredient name="resourceArrowHeadSteelAP" count="1"/>
 	<ingredient name="resourceScrapPolymers" count="2"/>
 </recipe>
@@ -1423,6 +1423,138 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceForgedIron" count="10"/>
 	<ingredient name="resourceMechanicalParts" count="10"/>
 	<ingredient name="resourceElectricParts" count="14"/>
+</recipe>
+
+<recipe name="jz_PartsPistolGrip" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunPistol" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsPistolFrame" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunPistol" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsPistolBarrel" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunPistol" count="1"/>
+</recipe>
+	
+<recipe name="jz_Parts44MagnumCylinder" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gun44Magnum" count="1"/>
+</recipe>
+
+<recipe name="jz_Parts44MagnumFrame" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gun44Magnum" count="1"/>
+</recipe>
+
+<recipe name="jz_Parts44MagnumGrip" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gun44Magnum" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsDoubleBarrelBarrel" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunDoubleBarrelShotgun" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsDoubleBarrelStock" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunDoubleBarrelShotgun" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsDoubleBarrelReceiver" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunDoubleBarrelShotgun" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsPumpShotgunBarrel" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunPumpShotgun" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsPumpShotgunReciver" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunPumpShotgun" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsPumpShotgunStock" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunPumpShotgun" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsSMG5Barrel" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunSMG5" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsSMG5Receiver" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunSMG5" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsSMG5Grip" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunSMG5" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsAK47Stock" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunAK47" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsAK47Receiver" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunAK47" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsAK47Barrel" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunAK47" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsHuntingRifleBarrel" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunHuntingRifle" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsHuntingRifleStock" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunHuntingRifle" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsHuntingRifleReceiver" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunHuntingRifle" count="1"/>
+</recipe>
+	
+<recipe name="jz_PartsSniperRifleBarrel" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunMR10" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsSniperRifleStock" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunMR10" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsSniperRifleReceiver" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunMR10" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsM60Barrel" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunM60" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsM60Stock" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunM60" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsM60Receiver" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunM60" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsARBarrel" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunTacticalAR" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsARReceiver" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunTacticalAR" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsARStock" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunTacticalAR" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsRocketLauncherBarrel" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunRocketLauncher" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsRocketLauncherStock" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunRocketLauncher" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsRocketLauncherParts" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag">
+	<ingredient name="gunRocketLauncher" count="1"/>
 </recipe>
 
 <recipe name="gun44Magnum" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_44MagCraftingTag">
@@ -2529,7 +2661,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="jz_DrinkWellnessJuice" count="1" craft_area="chemistryStation" craft_tool="toolBeaker" craft_time="120" >
 	<ingredient name="jz_FoodCarrot" count="5" />
 	<ingredient name="jz_FoodApple" count="5" />
-	<ingredient name="jz_FoodTomato" count="5" />
+	<ingredient name="jz_FoodEggPlant" count="5" />
 	<ingredient name="foodCropBlueberries" count="5" />
 	<ingredient name="jz_DrinkCleanOuncesOfWater" count="16" />
 </recipe>
@@ -3155,64 +3287,84 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <!-- Drying Rack Crafted ******************************************************************************************************************************************************* -->
-<recipe name="plantedAloe1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="resourceCropAloeLeaf" count="5"/>
+<recipe name="plantedAloe1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourceCropAloeLeaf" count="1"/>
 </recipe>
 
-<recipe name="plantedBlueberry1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="foodCropBlueberries" count="5"/>
+<recipe name="plantedBlueberry1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="foodCropBlueberries" count="1"/>
 </recipe>
 
-<recipe name="plantedChrysanthemum1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="resourceCropChrysanthemumPlant" count="5"/>
+<recipe name="plantedChrysanthemum1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
 </recipe>
 
-<recipe name="plantedCoffee1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="resourceCropCoffeeBeans" count="5"/>
+<recipe name="plantedCoffee1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourceCropCoffeeBeans" count="1"/>
 </recipe>
 
-<recipe name="plantedCorn1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="foodCropCorn" count="5"/>
+<recipe name="plantedCorn1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="foodCropCorn" count="1"/>
 </recipe>
 
-<recipe name="plantedCotton1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="resourceCropCottonPlant" count="5"/>
+<recipe name="plantedCotton1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourceCropCottonPlant" count="1"/>
 </recipe>
 
-<recipe name="plantedGoldenrod1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="resourceCropGoldenrodPlant" count="5"/>
+<recipe name="plantedGoldenrod1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourceCropGoldenrodPlant" count="1"/>
 </recipe>
 
-<recipe name="plantedGraceCorn1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="foodCropGraceCorn" count="5"/>
+<recipe name="plantedGraceCorn1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="foodCropGraceCorn" count="3"/>
 </recipe>
 
-<recipe name="plantedHop1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="resourceCropHopsFlower" count="5"/>
+<recipe name="plantedHop1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourceCropHopsFlower" count="3"/>
 </recipe>
 
-<recipe name="plantedMushroom1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="foodCropMushrooms" count="5"/>
-	<ingredient name="resourceClayLump" count="2"/>
+<recipe name="plantedMushroom1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="foodCropMushrooms" count="1"/>
+	<ingredient name="resourceClayLump" count="1"/>
 </recipe>
 
-<recipe name="plantedPotato1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="foodCropPotato" count="5"/>
+<recipe name="plantedPotato1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="foodCropPotato" count="1"/>
 </recipe>
 
-<recipe name="plantedYucca1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="foodCropYuccaFruit" count="5"/>
+<recipe name="plantedYucca1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="foodCropYuccaFruit" count="1"/>
 </recipe>
 
-<recipe name="plantedPumpkin1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="foodCropPumpkin" count="5"/>
+<recipe name="plantedPumpkin1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="foodCropPumpkin" count="1"/>
 </recipe>
 
-<recipe name="plantedtreeGrassSeed1" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="resourceYuccaFibers" count="5"/>
+<recipe name="jz_PlantedChillis1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="jz_FoodChilli" count="1"/>
 </recipe>
 
-<recipe name="jz_FireWood" count="1" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0">
+<recipe name="jz_PlantedCucumber1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="jz_FoodCucumber" count="1"/>
+</recipe>
+
+<recipe name="jz_PlantedEggPlant1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="jz_FoodEggPlant" count="1"/>
+</recipe>
+
+<recipe name="jz_PlantedLeek1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="jz_FoodLeek" count="1"/>
+</recipe>
+
+<recipe name="jz_PlantedCarrot1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="jz_FoodCarrot" count="1"/>
+</recipe>
+
+<recipe name="plantedtreeGrassSeed1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourceYuccaFibers" count="1"/>
+</recipe>
+
+<recipe name="jz_FireWood" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0">
 	<ingredient name="jz_Plank" count="5" />
 	<ingredient name="resourceAnimalFat" count="1" />
 </recipe>

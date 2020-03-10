@@ -149,7 +149,7 @@
 		<property name="Repair_amount" value="400"/>
 		<property name="Upgrade_hit_offset" value="-2"/>
 		<property name="Sound_start" value="repair_block"/>
-		<property name="Allowed_upgrade_items" value="jz_Plank,resourceScrapIron"/>
+		<property name="Allowed_upgrade_items" value="jz_Plank,resourceScrapIron,jz_DrinkDirtyOuncesOfWater,jz_Insecticide"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
 	<effect_group name="meleeToolClawHammer">
@@ -2777,7 +2777,7 @@
 	</property>
 	<property class="Action1">
 		<property name="Class" value="PlaceAsBlock"/>
-		<property name="Blockname" value="wallTorchLightPlayer"/>
+		<property name="Blockname" value="wallTorchPlayer"/>
 	</property>
 	<property name="Group" value="Basics,Building,advBuilding"/>
 	<property name="LightValue" value=".35"/>
@@ -24037,7 +24037,38 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 </item>
 
-<item name="jz_FoodTomato">
+<item name="jz_FoodLeek">
+	<property name="Extends" value="jz_MasterFood" />
+    <property name="CustomIcon" value="ui_game_symbol_leek" />
+	<property name="Material" value="Mveggie" />
+	<property name="Weight" value="1" />
+	<property name="DescriptionKey" value="leekDesc" />
+	<property name="DisplayType" value="jz_FoodVeggie"/>
+	<property name="Spoilable" value="true" />
+    <property name="ShowQuality" value="false"/>
+    <property name="SpoiledItem" value="jz_MoldyVeggies" />
+    <property name="TickPerLoss" value="270" />
+    <property name="SpoilageMax" value="1000" />
+    <property name="SpoilagePerTick" value="1" />
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LT" value="120"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="3"/><display_value name="TSFullness" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+
+<item name="jz_FoodEggPlant">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="Material" value="Mveggie" />
 	<property name="Weight" value="1" />
@@ -24059,6 +24090,68 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="10"/><display_value name="TSStamina" value="-10"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="2">
 			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+
+<item name="jz_FoodCucumber">
+	<property name="Extends" value="jz_MasterFood" />
+    <property name="CustomIcon" value="ui_game_symbol_Cucumber" />
+	<property name="Material" value="Mveggie" />
+	<property name="Weight" value="1" />
+	<property name="DescriptionKey" value="cucumberDesc" />
+	<property name="DisplayType" value="jz_FoodVeggie"/>
+	<property name="Spoilable" value="true" />
+    <property name="ShowQuality" value="false"/>
+    <property name="SpoiledItem" value="jz_MoldyVeggies" />
+    <property name="TickPerLoss" value="270" />
+    <property name="SpoilageMax" value="1000" />
+    <property name="SpoilagePerTick" value="1" />
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LT" value="120"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="3"/><display_value name="TSFullness" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
+			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+
+<item name="jz_FoodChilli">
+	<property name="Extends" value="jz_MasterFood" />
+    <property name="CustomIcon" value="ui_game_symbol_Chilli" />
+	<property name="Material" value="Mveggie" />
+	<property name="Weight" value="1" />
+	<property name="DescriptionKey" value="chilliDesc" />
+	<property name="DisplayType" value="jz_FoodVeggie"/>
+	<property name="Spoilable" value="true" />
+    <property name="ShowQuality" value="false"/>
+    <property name="SpoiledItem" value="jz_MoldyVeggies" />
+    <property name="TickPerLoss" value="270" />
+    <property name="SpoilageMax" value="1000" />
+    <property name="SpoilagePerTick" value="1" />
+	<property class="Action0">
+		<requirement name="CVarCompare" cvar="jz_PlayerFoodStat" operation="LT" value="120"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="3"/><display_value name="TSFullness" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/><display_value name="TSStamina" value="-6"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="1">
+			<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/></triggered_effect><display_value name="TSHealth" value="1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerVeggieVitamin" operation="add" value=".2"/><display_value name="TSVeggie" value=".2"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="20"/><display_value name="dFoodPoisoningRisk" value=".20"/> 
@@ -25723,29 +25816,33 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 </item>
 
-<item name="handBuck"><!--Buck-->
-	<property name="Extends" value="meleeHandMaster" />
-	<property name="CreativeMode" value="None" />
+<item name="jz_HandBuck"><!--Buck-->
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
-		<property name="Delay" value="1" />
-		<property name="Range" value="2.75" />
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="20"/>
+			<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
-	<effect_group name="Base Effects">
+	<effect_group name="Base Effects" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="25" tags="primary"/>
-		<passive_effect name="BlockDamage" operation="base_set" value="50" tags="primary"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="metal"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="glass"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="cloth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="steel"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.5" tags="buffInjuryBleeding"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratchTick"/>
+		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="10"/> 
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.1" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
 	</effect_group>
 </item>
-
+	
 <item name="jz_HandSnake"><!--Snake-->
 	<property name="Extends" value="meleeHandMaster" />
 	<property name="CreativeMode" value="None" />
@@ -25770,27 +25867,29 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <item name="jz_HandRabbitAttack">
-    <property name="Extends" value="meleeHandMaster" />
-	<property name="CreativeMode" value="None" />
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
-		<property name="Class" value="Melee" />
-		<property name="Delay" value="0.8" />
-		<property name="Range" value="1.0" />
+		<property name="DamageEntity" value="2"/>
+		<property name="DamageBlock" value="1"/>
+		<property name="Buff" value="jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
-	<effect_group name="Base Effects">
+	<effect_group name="Base Effects" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="1" tags="primary"/>
-		<passive_effect name="BlockDamage" operation="base_set" value="5" tags="primary"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="metal"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="glass"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="cloth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="steel"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.50" tags="jz_BuffScratchTick"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.02" tags="jz_BuffZombieGrab"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="0.01" tags="buffInjuryBleeding"/>
+		<passive_effect name="MaxRange" operation="base_set" value="1"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffZombieBiteTrigger"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffInfectionCatch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
 	</effect_group>
 </item>
 
@@ -27283,6 +27382,76 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <!-- JZMOD SCHEMATICS -->
+<item name="jz_SchematicChilliSeed">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
+	<property name="DescriptionKey" value="jz_SchematicChilliSeedDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_ChilliSeedSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ChilliSeedSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCucumberSeed">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
+	<property name="DescriptionKey" value="jz_SchematicCucumberSeedDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_CucumberSeedSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CucumberSeedSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicdEggPlantSeed">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
+	<property name="DescriptionKey" value="jz_SchematicdEggPlantSeedDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_EggPlantSeedSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_EggPlantSeedSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicLeekSeed">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
+	<property name="DescriptionKey" value="jz_SchematicLeekSeedDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_LeekSeedSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_LeekSeedSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCarrotSeed">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
+	<property name="DescriptionKey" value="jz_SchematicCarrotSeedDesc"/>
+	<property class="Action0">
+		<requirement name="ProgressionLevel" progression_name="SP_CarrotSeedSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CarrotSeedSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
 <item name="jz_SchematicSteelSheetMetal">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
@@ -29027,8 +29196,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 </item>
 
-
-
 <item name="jz_QIDeadWalkieTalkie">
 	<property name="Extends" value="jz_MasterItem"/>
 	<property name="Stacknumber" value="1" />
@@ -29056,9 +29223,93 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="DescriptionKey" value="jz_CBatterieDesc"/>
 </item>
 
+<item name="jz_QISateliteRadio">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="jz_SateliteRadio"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
 
+<item name="jz_Insecticide">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="128" />
+	<property name="CustomIcon" value="jz_Insecticide"/>
+	<property name="DescriptionKey" value="jz_InsecticideDesc"/>
+</item>
 
+<item name="jz_FarmingWateringCan">
+	<property name="Tags" value="light,tool"/>
+	<property name="DisplayType" value="meleeRepairTool"/>
+	<property name="HoldType" value="29"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZWateringCan.unity3d?WateringCanPrefab" />
+	<property name="Material" value="Mmetal"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="metaldestroy"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="UnlockedBy" value="meleeToolWrenchSchematic"/>
+	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value=".5"/>
+		<property name="Repair_amount" value="1"/>
+		<property name="Upgrade_hit_offset" value="0"/>
+		<property name="Sound_start" value="repair_block"/>
+		<property name="Allowed_upgrade_items" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="UsePowerAttackAnimation" value="false"/>
+	</property>
+	<property class="Action1"> 
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value=".5"/>
+		<property name="Repair_amount" value="1"/>
+		<property name="Upgrade_hit_offset" value="0"/>
+		<property name="Sound_start" value="repair_block"/>
+		<property name="Allowed_upgrade_items" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="UsePowerAttackAnimation" value="false"/>
+	</property>
+	
+	<effect_group name="meleeToolWrench">
+		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="5"/> <!-- meleeToolWrench -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
+		<passive_effect name="BlockDamage" operation="base_set" value="38.5"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<display_value name="dBlockRepairAmount" value="400"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="salvageHarvest"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="16.8" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="100,600" tier="1,6" />
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" />
+		<passive_effect name="ModSlots" operation="base_set" value="0" />
+		
+		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="ToolWrench"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="100" tags="jz_IronBuilding"/>
+		
+	</effect_group>
+	<effect_group name="Power Attack">
+		<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+		<passive_effect name="StaminaLoss" operation="base_add" value="25.2" tags="secondary"/>
+	</effect_group>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+</item>
 
 </set>
 </configs> 

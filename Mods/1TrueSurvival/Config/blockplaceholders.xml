@@ -921,7 +921,7 @@
 		<block name="jz_GoreBlockHumanBones7" prob="10" />
 		<block name="jz_GoreBlockHumanBones8" prob="10" />
 		<block name="jz_GoreBlockHumanBones9" prob="10" />
-		<block name="jz_GoreBlockHumanBones10" prob="10" />
+		<block name="jz_GoreBlockHumanBonesA" prob="10" />
 	</placeholder>
 
 	<placeholder name="jz_SmallRockRandomHelper">
@@ -942,9 +942,16 @@
 		<block name="cinderBlocks03" prob="6.6" />
 	</placeholder>
 
-
-
-
+	<placeholder name="jz_PlantedCarrotLv1Random">
+		<block name="jz_PlantedCarrot1Infested" prob=".10"/>
+		<block name="jz_PlantedCarrot1Dry" prob=".70"/>
+		<block name="jz_PlantedCarrot2" prob=".20"/>
+	</placeholder>
+		<placeholder name="jz_PlantedCarrotLv2Random">
+		<block name="jz_PlantedCarrot2Infested" prob=".10"/>
+		<block name="jz_PlantedCarrot2Dry" prob=".70"/>
+		<block name="jz_PlantedCarrot3HarvestPlayer" prob=".20"/>
+	</placeholder>
 
 	<!-- You CAN now use an air block and create random non-blocks.
 		The downside is that there will be no error message if a NAMED block is not found (misspelled),
