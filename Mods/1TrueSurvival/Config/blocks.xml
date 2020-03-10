@@ -32370,38 +32370,92 @@ NOT the TextureNumber.
 <block name="jz_PlantedChillis1">
 	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
-	<!--<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>-->
+	<property name="UnlockedBy" value="SP_ChillisSeedSchematic,jz_SchematicChillisSeed"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
-	<property name="PlantGrowing.Next" value="jz_PlantedChillis2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedChillisLv1Random"/>
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="jz_PlantedChillis1" count="1"/>
+</block>
+
+<block name="jz_PlantedChillisLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedChillis1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedChillis1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedChillis1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedChillis2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
 </block>
 
 <block name="jz_PlantedChillis2">
 	<property name="Extends" value="cropsGrowingMaster"/>
 	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property name="PlantGrowing.Next" value="jz_PlantedChillisLv2Random"/>
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
+</block>
+
+<block name="jz_PlantedEggPlantLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedEggPlant2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedChillis2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedChillis2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmChillisMid.unity3d?FarmChillisMidPrefab" />
-	<property name="PlantGrowing.Next" value="jz_PlantedChillis3HarvestPlayer"/>
-	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedChillis3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
 </block>
 
 <block name="jz_PlantedChillis3Harvest">
 	<property name="Extends" value="cropsHarvestableMaster"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmChillisGrown.unity3d?FarmChillisGrownPrefab" />
-	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/>
-</block>
-
-<block name="jz_PlantedChillisHarvestRandomHelper">
-	<property name="Extends" value="jz_PlantedChillis3Harvest" param1="MultiBlockDim"/>
-	<property name="CreativeMode" value="Dev"/>
-	<property name="CustomIcon" value="jz_PlantedChillis3Harvest"/> <property name="CustomIconTint" value="ff8080"/>
-	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
-	<property name="DisplayInfo" value="Name"/>
-	<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantGrown.unity3d?FarmEggPlantGrownPrefab" />
+	<drop event="Harvest" name="jz_FoodChillis" count="1" tag="wildCropsHarvest"/>
 </block>
 
 <block name="jz_PlantedChillis3HarvestPlayer">
@@ -32409,91 +32463,189 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
-	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
-	<property name="DowngradeBlock" value="jz_PlantedChillis1"/>
+	<drop event="Harvest" name="jz_FoodChillis" count="1" tag="cropHarvest"/>
 </block>
 <!--JZMOD CUCUMBER-->
 <block name="jz_PlantedCucumber1">
 	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
-	<!--<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>-->
+	<property name="UnlockedBy" value="SP_CucumberSeedSchematic,jz_SchematicCucumberSeed"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
-	<property name="PlantGrowing.Next" value="jz_PlantedCucumber2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedCucumberLv1Random"/>
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="jz_PlantedCucumber1" count="1"/>
+</block>
+
+<block name="jz_PlantedCucumberLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedCucumber1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberMid.unity3d?FarmCucumberMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCucumber1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCucumber1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberMid.unity3d?FarmCucumberMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCucumber2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
 </block>
 
 <block name="jz_PlantedCucumber2">
 	<property name="Extends" value="cropsGrowingMaster"/>
 	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberMid.unity3d?FarmCucumberMidPrefab" />
+	<property name="PlantGrowing.Next" value="jz_PlantedCucumberLv2Random"/>
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
+</block>
+
+<block name="jz_PlantedCucumberLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedCucumber2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberMid.unity3d?FarmCucumberMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCucumber2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCucumber2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
-	<property name="PlantGrowing.Next" value="jz_PlantedCucumber3HarvestPlayer"/>
-	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberMid.unity3d?FarmCucumberMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCucumber3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
 </block>
 
 <block name="jz_PlantedCucumber3Harvest">
 	<property name="Extends" value="cropsHarvestableMaster"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
-	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/>
-</block>
-
-<block name="jz_PlantedCucumberHarvestRandomHelper">
-	<property name="Extends" value="jz_PlantedCucumber3Harvest" param1="MultiBlockDim"/>
-	<property name="CreativeMode" value="Dev"/>
-	<property name="CustomIcon" value="jz_PlantedCucumber3Harvest"/> <property name="CustomIconTint" value="ff8080"/>
-	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
-	<property name="DisplayInfo" value="Name"/>
-	<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
-</block>
-
-<block name="jz_PlantedCucumber3HarvestPlayer">
-	<property name="Extends" value="jz_PlantedCucumber3Harvest"/>
-	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
-	<property name="CustomIcon" value="plantedBlueberry1"/>
-	<property name="CreativeMode" value="Dev"/>
-	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
-	<property name="DowngradeBlock" value="jz_PlantedCucumber1"/>
+	<drop event="Harvest" name="jz_FoodCucumber" count="1" tag="wildCropsHarvest"/>
 </block>
 <!--JZMOD EGG PLANT-->
 <block name="jz_PlantedEggPlant1">
 	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
-	<!--<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>-->
+	<property name="UnlockedBy" value="SP_EggPlantSeedSchematic,jz_SchematicEggPlantSeed"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
-	<property name="PlantGrowing.Next" value="jz_PlantedEggPlant2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedEggPlantLv1Random"/>
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="jz_PlantedEggPlant1" count="1"/>
+</block>
+
+<block name="jz_PlantedEggPlantLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedEggPlant1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedEggPlant1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedEggPlant1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedEggPlant2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
 </block>
 
 <block name="jz_PlantedEggPlant2">
 	<property name="Extends" value="cropsGrowingMaster"/>
 	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property name="PlantGrowing.Next" value="jz_PlantedEggPlantLv2Random"/>
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
+</block>
+
+<block name="jz_PlantedEggPlantLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedEggPlant2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedEggPlant2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedEggPlant2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
-	<property name="PlantGrowing.Next" value="jz_PlantedEggPlant3HarvestPlayer"/>
-	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedEggPlant3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
 </block>
 
 <block name="jz_PlantedEggPlant3Harvest">
 	<property name="Extends" value="cropsHarvestableMaster"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantGrown.unity3d?FarmEggPlantGrownPrefab" />
-	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/>
-</block>
-
-<block name="jz_PlantedEggPlantHarvestRandomHelper">
-	<property name="Extends" value="jz_PlantedEggPlant3Harvest" param1="MultiBlockDim"/>
-	<property name="CreativeMode" value="Dev"/>
-	<property name="CustomIcon" value="jz_PlantedEggPlant3Harvest"/> <property name="CustomIconTint" value="ff8080"/>
-	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
-	<property name="DisplayInfo" value="Name"/>
-	<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
+	<drop event="Harvest" name="jz_FoodEggPlant" count="1" tag="wildCropsHarvest"/>
 </block>
 
 <block name="jz_PlantedEggPlant3HarvestPlayer">
@@ -32501,47 +32653,98 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
-	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
-	<property name="DowngradeBlock" value="jz_PlantedEggPlant1"/>
+	<drop event="Harvest" name="jz_FoodEggPlant" count="1" tag="cropHarvest"/>
 </block>
 <!--JZMOD LEEK-->
 <block name="jz_PlantedLeek1">
 	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
-	<!--<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>-->
+	<property name="UnlockedBy" value="SP_LeekSeedSchematic,jz_SchematicLeekSeed"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
-	<property name="PlantGrowing.Next" value="jz_PlantedLeek2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedLeekLv1Random"/>
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="jz_PlantedLeek1" count="1"/>
+</block>
+
+<block name="jz_PlantedLeekLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedLeek1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedLeek1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedLeek1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedLeek2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
 </block>
 
 <block name="jz_PlantedLeek2">
 	<property name="Extends" value="cropsGrowingMaster"/>
 	<property name="CreativeMode" value="Dev"/>
-	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZFarmLeekMid.unity3d?FarmLeekMidPrefab" />
-	<property name="ModelOffset" value="0,.5,0"/>
-	<property name="PlantGrowing.Next" value="jz_PlantedLeek3HarvestPlayer"/>
-	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedLeekLv2Random"/>
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
+</block>
+
+<block name="jz_PlantedLeekLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedLeek2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedLeek2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedLeek2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedLeek3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
 </block>
 
 <block name="jz_PlantedLeek3Harvest">
 	<property name="Extends" value="cropsHarvestableMaster"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZFarmLeekGrown.unity3d?FarmLeekGrownPrefab" />
-	<property name="ModelOffset" value="0,-.1,0"/>
-	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="wildCropsHarvest"/>
-</block>
-
-<block name="jz_PlantedLeekHarvestRandomHelper">
-	<property name="Extends" value="jz_PlantedLeek3Harvest" param1="MultiBlockDim"/>
-	<property name="CreativeMode" value="Dev"/>
-	<property name="CustomIcon" value="jz_PlantedLeek3Harvest"/> <property name="CustomIconTint" value="ff8080"/>
-	<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
-	<property name="DisplayInfo" value="Name"/>
-	<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
+	<drop event="Harvest" name="jz_FoodLeek" count="1" tag="wildCropsHarvest"/>
 </block>
 
 <block name="jz_PlantedLeek3HarvestPlayer">
@@ -32549,8 +32752,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
-	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
-	<property name="DowngradeBlock" value="jz_PlantedLeek1"/>
+	<drop event="Harvest" name="jz_FoodLeek" count="1" tag="cropHarvest"/>
 </block>
 <!--JZMOD CARROT-->
 <block name="jz_PlantedCarrot1">
