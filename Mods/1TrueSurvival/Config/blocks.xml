@@ -14055,7 +14055,7 @@ NOT the TextureNumber.
 	<property name="PlantGrowing.LightLevelGrow" value="0"/>
 	<property name="PlantGrowing.LightLevelStay" value="0"/>
 	<property name="PlantGrowing.FertileLevel" value="0"/>
-	<property name="PlantGrowing.Next" value="plantedMushroom2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedMushroomLv1Random"/>
 	<property name="HarvestOverdamage" value="false"/>
 	<drop event="Destroy" name="plantedMushroom1" count="1"/>
 	<property name="EconomicValue" value="12"/>
@@ -14069,7 +14069,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="plantedMushroom1"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="Model" value="OutdoorDecor/mushroom_growth" param1="main_mesh"/>
-	<property name="PlantGrowing.Next" value="plantedMushroom3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedMushroomLv2Random"/>
 	<property name="Collide" value="melee"/>
 </block>
 
@@ -14110,7 +14110,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mcorn"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/plant_yucca_sproutPrefab"/>
-	<property name="PlantGrowing.Next" value="plantedYucca2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedYuccaLv1Random"/>
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="plantedYucca1" count="1"/>
 </block>
@@ -14120,7 +14120,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="plantedYucca1"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab"/>
-	<property name="PlantGrowing.Next" value="plantedYucca3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedYuccaLv2Random"/>
 	<drop event="Destroy" name="plantedYucca1" count="1"/>
 </block>
 
@@ -14199,7 +14199,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="UnlockedBy" value="plantedCoffee1Schematic"/>
 	<property name="Texture" value="393"/>
-	<property name="PlantGrowing.Next" value="plantedCoffee2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedCoffeeLv1Random"/>
 	<property name="CraftingIngredientTime" value="5"/>
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="plantedCoffee1" count="1"/>
@@ -14210,7 +14210,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="plantedCoffee1"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="Texture" value="394"/>
-	<property name="PlantGrowing.Next" value="plantedCoffee3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedCoffeeLv2Random"/>
 	<drop event="Destroy" name="plantedCoffee1" count="1"/>
 </block>
 
@@ -14243,7 +14243,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="UnlockedBy" value="plantedGoldenrod1Schematic"/>
 	<property name="Texture" value="401"/>
-	<property name="PlantGrowing.Next" value="plantedGoldenrod2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedGoldenrodLv1Random"/>
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="plantedGoldenrod1" count="1"/>
 </block>
@@ -14253,7 +14253,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<property name="CustomIcon" value="plantedGoldenrod1"/>
 	<property name="Texture" value="402"/>
-	<property name="PlantGrowing.Next" value="plantedGoldenrod3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedGoldenrodLv2Random"/>
 	<drop event="Destroy" name="plantedGoldenrod1" count="1"/>
 </block>
 
@@ -14289,7 +14289,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mcorn"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/plant_aloe1_Prefab"/>
-	<property name="PlantGrowing.Next" value="plantedAloe2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedAloeLv1Random"/>
 	<property name="Group" value="Food/Cooking,Science"/>
 	<drop event="Destroy" name="plantedAloe1" count="1"/>
 </block>
@@ -14299,7 +14299,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<property name="CustomIcon" value="plantedAloe1"/>
 	<property name="Model" value="Entities/Plants/plant_aloe2_Prefab"/>
-	<property name="PlantGrowing.Next" value="plantedAloe3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedAloeLv2Random"/>
 	<drop event="Destroy" name="plantedAloe1" count="1"/>
 </block>
 
@@ -14336,7 +14336,7 @@ NOT the TextureNumber.
 	<property name="UnlockedBy" value="plantedBlueberry1Schematic"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
-	<property name="PlantGrowing.Next" value="plantedBlueberry2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedBlueberryLv1Random"/>
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
 </block>
@@ -14347,7 +14347,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
-	<property name="PlantGrowing.Next" value="plantedBlueberry3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedBlueberryLv2Random"/>
 	<drop event="Destroy" name="plantedBlueberry1" count="1"/>
 </block>
 
@@ -14382,7 +14382,7 @@ NOT the TextureNumber.
 	<property name="UnlockedBy" value="plantedPotato1Schematic"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
-	<property name="PlantGrowing.Next" value="plantedPotato2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedPotatoLv1Random"/>
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="plantedPotato1" count="1"/>
 </block>
@@ -14393,7 +14393,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="plantedPotato1"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
-	<property name="PlantGrowing.Next" value="plantedPotato3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedPotatoLv2Random"/>
 	<drop event="Destroy" name="plantedPotato1" count="1"/>
 </block>
 
@@ -14427,7 +14427,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="UnlockedBy" value="plantedChrysanthemum1Schematic"/>
 	<property name="Texture" value="550"/>
-	<property name="PlantGrowing.Next" value="plantedChrysanthemum2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedChrysanthemumLv1Random"/>
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="plantedChrysanthemum1" count="1"/>
 </block>
@@ -14437,7 +14437,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<property name="CustomIcon" value="plantedChrysanthemum1"/>
 	<property name="Texture" value="551"/>
-	<property name="PlantGrowing.Next" value="plantedChrysanthemum3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedChrysanthemumLv2Random"/>
 	<drop event="Destroy" name="plantedChrysanthemum1" count="1"/>
 </block>
 
@@ -14476,7 +14476,7 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,3,1"/>
 	<property name="Texture" value="529"/>
 	<property name="Place" value="Door"/>
-	<property name="PlantGrowing.Next" value="plantedCorn2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedCornLv1Random"/>
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="plantedCorn1" count="1"/>
 </block>
@@ -14489,7 +14489,7 @@ NOT the TextureNumber.
 	<property name="Mesh" value="cutoutmoveable"/>
 	<property name="MultiBlockDim" value="1,3,1"/>
 	<property name="Texture" value="529"/>
-	<property name="PlantGrowing.Next" value="plantedCorn3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedCornLv2Random"/>
 	<drop event="Destroy" name="plantedCorn1" count="1"/>
 </block>
 
@@ -14614,7 +14614,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="UnlockedBy" value="plantedHop1Schematic"/>
 	<property name="Texture" value="447"/>
-	<property name="PlantGrowing.Next" value="plantedHop2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedHopLv1Random"/>
 	<property name="EconomicValue" value="250"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
@@ -14627,7 +14627,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<property name="CustomIcon" value="plantedHop1"/>
 	<property name="Texture" value="448"/>
-	<property name="PlantGrowing.Next" value="plantedHop3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedHopLv2Random"/>
 	<drop event="Destroy" name="plantedHop1" count="1"/>
 </block>
 
@@ -14697,7 +14697,7 @@ NOT the TextureNumber.
 	<property name="Material" value="Mcorn"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/pumpkinSproutPrefab"/>
-	<property name="PlantGrowing.Next" value="plantedPumpkin2"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedPumpkinLv1Random"/>
 	<property name="Group" value="Food/Cooking"/>
 	<drop event="Destroy" name="plantedPumpkin1" count="1"/>
 </block>
@@ -14707,7 +14707,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="plantedPumpkin1"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="Model" value="Entities/Plants/pumpkinGrowthPrefab"/>
-	<property name="PlantGrowing.Next" value="plantedPumpkin3HarvestPlayer"/>
+	<property name="PlantGrowing.Next" value="jz_PlantedPumpkinLv2Random"/>
 	<drop event="Destroy" name="plantedPumpkin1" count="1"/>
 </block>
 
@@ -32365,6 +32365,758 @@ NOT the TextureNumber.
 	<drop event="Fall" name="jz_QIBugOutBag" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_QIBugOutBagLoot" />
 </block>
+<!--JZMOD ALOE -->
+<block name="jz_PlantedChrysanthemumLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedChrysanthemum1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="550"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedChrysanthemum1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedChrysanthemum1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="550"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedChrysanthemum2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedChrysanthemumLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedChrysanthemum2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="551"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedChrysanthemum2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedChrysanthemum2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Texture" value="551"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedChrysanthemum3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+<!--JZMOD ALOE -->
+<block name="jz_PlantedAloeLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedAloe1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_aloe1_Prefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedAloe1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedAloe1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_aloe1_Prefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedAloe2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedAloeLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedAloe2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Model" value="Entities/Plants/plant_aloe2_Prefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedAloe2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedAloe2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Model" value="Entities/Plants/plant_aloe2_Prefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedAloe3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+<!--JZMOD COFFEE -->
+<block name="jz_PlantedCoffeeLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedCoffee1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="393"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCoffee1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCoffee1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="393"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedCoffee2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCoffeeLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedCoffee2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="394"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCoffee2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCoffee2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Texture" value="394"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedCoffee3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+<!--JZMOD CORN -->
+<block name="jz_PlantedCornLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedCorn1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="New"/>
+	<property name="Model" value="corn_sprout_shape"/>
+	<property name="Mesh" value="cutoutmoveable"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="Texture" value="529"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCorn1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCorn1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="New"/>
+	<property name="Model" value="corn_sprout_shape"/>
+	<property name="Mesh" value="cutoutmoveable"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="Texture" value="529"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedCorn2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCornLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedCorn2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="New"/>
+	<property name="Model" value="corn_growth_shape"/>
+	<property name="Mesh" value="cutoutmoveable"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="Texture" value="529"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCorn2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCorn2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="New"/>
+	<property name="Model" value="corn_growth_shape"/>
+	<property name="Mesh" value="cutoutmoveable"/>
+	<property name="MultiBlockDim" value="1,3,1"/>
+	<property name="Texture" value="529"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedCorn3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+<!--JZMOD COTTON -->
+<block name="jz_PlantedCottonLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedCotton1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="401"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCotton1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCotton1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="401"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedCotton2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCottonLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedCotton2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="402"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedCotton2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedCotton2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Texture" value="402"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedCotton3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+<!--JZMOD GOLDENROD -->
+<block name="jz_PlantedGoldenrodLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedGoldenrod1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="401"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedGoldenrod1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedGoldenrod1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="401"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedGoldenrod2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedGoldenrodLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedGoldenrod2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="402"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedGoldenrod2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedGoldenrod2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Texture" value="402"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedGoldenrod3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+<!--JZMOD HOPS -->
+<block name="jz_PlantedHopLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedHop1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="447"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedHop1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedHop1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="447"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedHop2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedHopLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedHop2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Texture" value="448"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedHop2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedHop2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Texture" value="448"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedHop3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+<!--JZMOD MUSHROOM -->
+<block name="jz_PlantedMushroomLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedMushroom1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="OutdoorDecor/mushroom_sprout" param1="main_mesh"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedMushroom1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedMushroom1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="OutdoorDecor/mushroom_sprout" param1="main_mesh"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedMushroom2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedMushroomLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedMushroom2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="OutdoorDecor/mushroom_growth" param1="main_mesh"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedMushroom2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedMushroom2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="OutdoorDecor/mushroom_growth" param1="main_mesh"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedMushroom3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+<!--JZMOD POTATO -->
+<block name="jz_PlantedPotatoLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedPotato1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_yucca_sproutPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedPotato1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedPotato1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_yucca_sproutPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedPotato2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedPotatoLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedPotato2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedPotato2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedPotato2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedPotato3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+<!--JZMOD YUCCA -->
+<block name="jz_PlantedYuccaLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedYucca1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_yucca_sproutPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedYucca1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedYucca1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_yucca_sproutPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedYucca2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedYuccaLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedYucca2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedYucca2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedYucca2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedYucca3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<!--JZMOD PUMPKIN -->
+<block name="jz_PlantedPumpkinLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedPumpkin1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/pumpkinSproutPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedPumpkin1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedPumpkin1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/pumpkinSproutPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedPumpkin2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedPumpkinLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedPumpkin2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/pumpkinGrowthPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedPumpkin2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedPumpkin2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/pumpkinGrowthPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedPumpkin3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<!--JZMOD BLUEBERRY -->
+<block name="jz_PlantedBlueberryLv1Random" >
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedBlueberry1Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedBlueberry1Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedBlueberry1Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="plantedBlueberry2"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedBlueberryLv2Random">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+</block>
+
+<block name="jz_PlantedBlueberry2Infested">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedChillis2Dry"/>
+		<property name="Item" value="jz_Insecticide"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
+
+<block name="jz_PlantedBlueberry2Dry">
+	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="jz_PlantedChillis3HarvestPlayer"/>
+		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
+		<property name="ItemCount" value="3"/>
+		<property name="UpgradeHitCount" value="1"/>
+	</property>
+</block>
 
 <!--JZMOD CHILLIS -->
 <block name="jz_PlantedChillis1">
@@ -32388,7 +33140,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmChillisMid.unity3d?FarmChillisMidPrefab" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedChillis1Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -32401,7 +33153,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmChillisMid.unity3d?FarmChillisMidPrefab" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedChillis2"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -32414,21 +33166,21 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsGrowingMaster"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmChillisMid.unity3d?FarmChillisMidPrefab" />
 	<property name="PlantGrowing.Next" value="jz_PlantedChillisLv2Random"/>
 	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
 </block>
 
-<block name="jz_PlantedEggPlantLv2Random">
+<block name="jz_PlantedChillisLv2Random">
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 </block>
 
-<block name="jz_PlantedEggPlant2Infested">
+<block name="jz_PlantedChillis2Infested">
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmChillisMid.unity3d?FarmChillisMidPrefab" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedChillis2Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -32442,7 +33194,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Dev"/>
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmChillisMid.unity3d?FarmChillisMidPrefab" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedChillis3HarvestPlayer"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -32454,7 +33206,7 @@ NOT the TextureNumber.
 <block name="jz_PlantedChillis3Harvest">
 	<property name="Extends" value="cropsHarvestableMaster"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantGrown.unity3d?FarmEggPlantGrownPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmChillisGrown.unity3d?FarmChillisGrownPrefab" />
 	<drop event="Harvest" name="jz_FoodChillis" count="1" tag="wildCropsHarvest"/>
 </block>
 
@@ -32487,7 +33239,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberMid.unity3d?FarmCucumberMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedCucumber1Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -32500,7 +33252,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberMid.unity3d?FarmCucumberMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedCucumber2"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -32513,7 +33265,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsGrowingMaster"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberMid.unity3d?FarmCucumberMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
 	<property name="PlantGrowing.Next" value="jz_PlantedCucumberLv2Random"/>
 	<property name="PlantGrowing.GrowthRate" value="2.0"/> 
 </block>
@@ -32527,7 +33279,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberMid.unity3d?FarmCucumberMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedCucumber2Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -32541,7 +33293,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Dev"/>
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberMid.unity3d?FarmCucumberMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedCucumber3HarvestPlayer"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -32555,6 +33307,14 @@ NOT the TextureNumber.
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
 	<drop event="Harvest" name="jz_FoodCucumber" count="1" tag="wildCropsHarvest"/>
+</block>
+
+<block name="jz_PlantedCucumber3HarvestPlayer">
+	<property name="Extends" value="jz_PlantedCucumber3Harvest"/>
+	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
+	<property name="CustomIcon" value="plantedBlueberry1"/>
+	<property name="CreativeMode" value="Dev"/>
+	<drop event="Harvest" name="jz_FoodCucumber" count="1" tag="cropHarvest"/>
 </block>
 <!--JZMOD EGG PLANT-->
 <block name="jz_PlantedEggPlant1">
