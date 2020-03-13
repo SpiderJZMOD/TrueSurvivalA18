@@ -4303,7 +4303,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="jz_HandParasiteLongClaw" />
+	<property name="HandItem" value="jz_HandParasiteFat" />
 	<property name="MoveSpeed" value="0.2"/>
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> 
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4339,7 +4339,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="false" />
 	<property name="PhysicsBody" value="vulture" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteInsect" />
 	<property name="MoveSpeed" value="0.2"/> 
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/>
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4365,13 +4365,13 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="ParasiteHybrid" extends="zombieTemplateMale" ><!-- Mutated Soldier need to be bigger-->
+<entity_class name="ParasiteHybrid" extends="zombieTemplateMale" ><!-- Mutated Soldier -->
 	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?HybridDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteHybrid" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4406,7 +4406,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteMantis" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4549,7 +4549,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteHorror" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4859,7 +4859,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteHorned" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4888,13 +4888,44 @@ Kinda sorta works but is buggy and we don't have time for that.
 	</effect_group>				
 </entity_class>
 
-<entity_class name="ParasiteNasty" extends="zombieFatCop" ><!-- Scorpion Boss Spits -->
+<entity_class name="ParasiteNastyRanged" extends="zombieFatCop" ><!-- Scorpion Boss Spits -->
 	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?NastyDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
 	<property name="RightHandJointName" value="Muzzle" />
+    <property name="HandItem" value="jz_HandParasiteHorned" />
+	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
+	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
+	<property name="MoveSpeedPanic" value="0.85"/>
+	<property name="PainResistPerHit" value=".01"/>
+	<property name="MaxViewAngle" value="250"/>
+	<property name="Weight" value="250"/>
+	<property name="AttackTimeoutDay" value="2.2"/> <!-- should total to 3.0 -->
+	<property name="AttackTimeoutNight" value="1.7"/>
+	<property name="CanClimbLadders" value="true"/>
+	<property name="CanClimbVertical" value="false"/>
+	<property name="SightRange" value="50"/> 
+	<property name="AttackIndexes" value="2" />
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="700"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+		<passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/>
+		<passive_effect name="HealthChangeOT" operation="base_set" value="1.3"/>
+		<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+	</effect_group>				
+</entity_class>
+
+<entity_class name="ParasiteNastyTank" extends="zombieTemplateMale" ><!-- Scorpion Boss Spits -->
+	<property name="Tags" value="entity,zombie,parasite"/>
+	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?NastyDark" /> 
+	<property name="AvatarController" value="MecanimSDX, Mods" />
+	<property name="RootMotion" value="false" />
+	<property name="HasRagdoll" value="true" />
+	<property name="RightHandJointName" value="Muzzle" />
+    <property name="HandItem" value="jz_HandParasiteNastyTank" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>

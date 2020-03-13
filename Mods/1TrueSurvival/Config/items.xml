@@ -26153,10 +26153,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property class="Action0">
 		<property name="DamageEntity" value="10"/>
 		<property name="DamageBlock" value="5"/>
-		<property name="Range" value="2.2"/>
-		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+		<property name="Range" value="1.4"/>
+		<property name="Buff" value="buffInfectionCatch,jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffPunctured,jz_BuffScratch"/>
 	</property>
-	<effect_group name="meleeHandZombie01" tiered="false">
+	<effect_group name="ParasiteFat" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2"/>
 		
@@ -26170,9 +26170,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
 		
+        <passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffInfectionCatch"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffPunctured"/>
+        <passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
 	</effect_group>
 </item>
 
@@ -26180,28 +26182,27 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="meleeHandMaster"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
-		<property name="DamageEntity" value="10"/>
-		<property name="DamageBlock" value="5"/>
-		<property name="Range" value="2.2"/>
-		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+		<property name="DamageEntity" value="8"/>
+		<property name="DamageBlock" value="500"/>
+		<property name="Range" value="2.4"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffScratch"/>
 	</property>
-	<effect_group name="meleeHandZombie01" tiered="false">
+	<effect_group name="ParasiteHorned" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
 		
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="100" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="jzSteel"/>
 		
-		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+       <passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
 	</effect_group>
 </item>
 
@@ -26211,10 +26212,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property class="Action0">
 		<property name="DamageEntity" value="10"/>
 		<property name="DamageBlock" value="5"/>
-		<property name="Range" value="2.2"/>
-		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+		<property name="Range" value="1.6"/>
+		<property name="Buff" value="buffInfectionCatch,jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffParasiteBite,jz_BuffScratch"/>
 	</property>
-	<effect_group name="meleeHandZombie01" tiered="false">
+	<effect_group name="ParasiteHorror" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2"/>
 		
@@ -26228,9 +26229,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
 		
-		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+         <passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="buffInfectionCatch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="jz_BuffParasiteInfection"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+        <passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="jz_BuffParasiteBite"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
 	</effect_group>
 </item>
 
@@ -26240,10 +26243,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property class="Action0">
 		<property name="DamageEntity" value="10"/>
 		<property name="DamageBlock" value="5"/>
-		<property name="Range" value="2.2"/>
-		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+		<property name="Range" value="1.4"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffGash,jz_BuffScratch"/>
 	</property>
-	<effect_group name="meleeHandZombie01" tiered="false">
+	<effect_group name="ParasiteHybrid" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2"/>
 		
@@ -26259,7 +26262,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="jz_BuffGash"/>
+        <passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
 	</effect_group>
 </item>
 
@@ -26267,12 +26271,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="meleeHandMaster"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
-		<property name="DamageEntity" value="10"/>
-		<property name="DamageBlock" value="5"/>
-		<property name="Range" value="2.2"/>
-		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+		<property name="DamageEntity" value="8"/>
+		<property name="DamageBlock" value="3"/>
+		<property name="Range" value="1.5"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,jz_BuffThrobbingPain,jz_BuffPoisionSting,jz_BuffPunctured,jz_BuffScratch"/>
 	</property>
-	<effect_group name="meleeHandZombie01" tiered="false">
+	<effect_group name="ParasiteInsect" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2"/>
 		
@@ -26286,9 +26290,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
 		
-		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+        <passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffThrobbingPain"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffPoisionSting"/>
+        <passive_effect name="BuffProcChance" operation="base_set" value=".2" tags="jz_BuffPunctured"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
 	</effect_group>
 </item>
 
@@ -26298,10 +26304,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property class="Action0">
 		<property name="DamageEntity" value="10"/>
 		<property name="DamageBlock" value="5"/>
-		<property name="Range" value="2.2"/>
-		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+		<property name="Range" value="1.6"/>
+		<property name="Buff" value="buffInfectionCatch,jz_BuffParasiteInfection,jz_BuffGored,jz_BuffPunctured,buffInjuryBleedingZombie,jz_BuffScratch"/>
 	</property>
-	<effect_group name="meleeHandZombie01" tiered="false">
+	<effect_group name="ParasiteMantis" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2"/>
 		
@@ -26315,9 +26321,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
 		
-		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+         <passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="buffInfectionCatch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="jz_BuffGored"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="jz_BuffPunctured"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
 	</effect_group>
 </item>
 
@@ -26326,11 +26335,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="None"/>
 	<property class="Action0">
 		<property name="DamageEntity" value="10"/>
-		<property name="DamageBlock" value="5"/>
-		<property name="Range" value="2.2"/>
-		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+		<property name="DamageBlock" value="800"/>
+		<property name="Range" value="2.5"/>
+		<property name="Buff" value="jz_BuffPoisionSting,jz_BuffGash,jz_BuffGored,jz_BuffPunctured,buffInjuryBleedingZombie,jz_BuffScratch"/>
 	</property>
-	<effect_group name="meleeHandZombie01" tiered="false">
+	<effect_group name="ParasiteNastyTank" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="BlockRange" operation="base_set" value="2"/>
 		
@@ -26344,9 +26353,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
 		
-		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+        <passive_effect name="BuffProcChance" operation="base_set" value=".3" tags="jz_BuffPoisionSting"/>
+        <passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="jz_BuffGash"/>
+        <passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="jz_BuffGored"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="jz_BuffPunctured"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
 	</effect_group>
 </item>
 
