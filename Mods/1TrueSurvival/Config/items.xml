@@ -4848,11 +4848,11 @@
 	<property class="Action0">
 		<property name="DamageEntity" value="8"/>
 		<property name="DamageBlock" value="8"/>
+		<property name="Range" value="1.4"/>
 		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombie01" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="MaxRange" operation="base_set" value="1.4"/>
 		<passive_effect name="EntityDamage" operation="base_set" value="10"/> <!-- this passive is ignored so using the old notation! -->
 		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
@@ -4895,13 +4895,12 @@
 	<property name="CreativeMode" value="None"/>
 	<property name="HoldType" value="24"/>
 	<property class="Action0">
+		<property name="Range" value="1.3"/>
 		<property name="Delay" value="2.0"/> <!-- obsolete if rounds per minute exists -->
 		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombie02" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="MaxRange" operation="base_set" value="1.3"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="30"/>  A16 2 -->
 		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker,player" buff="buffLegSprained">
 			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
@@ -4952,12 +4951,12 @@
 		<property name="Sphere" value=".4"/>
 		<property name="DamageEntity" value="9"/>
 		<property name="DamageBlock" value="8"/>
+		<property name="Range" value="1.4"/>
 		<property name="Buff" value="buffBurningZombie,buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombieBurning" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="MaxRange" operation="base_set" value="1.4"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+	
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="terrGravel"/>
@@ -5001,13 +5000,12 @@
 	<property class="Action0">
 		<property name="DamageEntity" value="20"/>
 		<property name="DamageBlock" value="24"/>
+		<property name="Range" value="1.3"/>
 		<property name="Delay" value="2.0"/> <!-- obsolete if rounds per minute exists -->
 		<property name="Buff" value="buffBurningZombie,buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandZombieBurningCrawler" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="MaxRange" operation="base_set" value="1.3"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="30"/>  A16 2 -->
 		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker,player" buff="buffLegSprained">
 			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
@@ -5210,12 +5208,12 @@
 		<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
 		<property name="DamageEntity" value="7"/>
 		<property name="DamageBlock" value="14"/>
+		<property name="Range" value="1.4"/>
 		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandAnimalZombieDog" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="MaxRange" operation="base_set" value="1.4"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
+	
 		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="terrGravel"/>
@@ -5334,12 +5332,12 @@
 		<property name="Range" value="3.6"/>
 		<property name="DamageEntity" value="40"/>
 		<property name="DamageBlock" value="80"/>
+		<property name="Range" value="1.4"/>
 		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
 	</property>
 	<effect_group name="meleeHandAnimalZombieBear" tiered="false">
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="MaxRange" operation="base_set" value="1.4"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="40"/>  A16 1.5 -->
+		
 		<passive_effect name="BuffProcChance" operation="base_set" value=".8" tags="jz_BuffZombieBiteTrigger"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="buffInjuryBleedingZombie"/>
 		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="buffInfectionCatch"/>
@@ -25683,6 +25681,878 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 </item>
 
 <!--JZMOD ATTACKS-->
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="7"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="2.5"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="80"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2.6"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffZombieBiteTrigger"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffInfectionCatch"/>
+		
+		<effect_group name="Special Move">
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="self" buff="jz_BuffDash"/>
+		
+		
+<item name="meleeHandZombieCop"><!-- JZMOD SPITTER ACID -->
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="Degradation" value="99999" param1="true"/>
+	<property class="Action0">
+		<property name="Range" value="1.75"/>
+		<property name="DamageEntity" value="16"/>
+		<property name="DamageBlock" value="100"/>
+		<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,buffInjuryStunned01"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Vomit"/>
+		<property name="Hitmask_override" value="Arrow"/>
+		<property name="Delay" value=".3"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Range" value="200"/>
+		<property name="Infinite_ammo" value="true"/>
+		<property name="Magazine_items" value="ammoProjectileZombieVomit"/>
+		<property name="Sound_warning" value="hulkvomitwarning"/>
+		<property name="Sound_start" value="hulkvomitattack"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value=""/>
+		<property name="Sound_reload" value=""/>
+		<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombieCop" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+		<passive_effect name="MaxRange" operation="base_set" value="100"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
+		<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="jz_BuffZombieBiteTrigger"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="buffInfectionCatch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".60" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="ammoProjectileZombieVomit">
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="DamageEntity" value="8"/>
+		<property name="DamageBlock" value="120"/>
+		<property name="Explosion.ParticleIndex" value="7"/>
+		<property name="Velocity" value="18"/>
+		<property name="FlyTime" value="2"/>
+		<property name="LifeTime" value="4"/>
+		<property name="CollisionRadius" value=".5"/>
+		<property name="DamageBonus.earth" value="0"/>
+		<property name="Buff" value="jz_BuffAcidSpit"/>
+	</property>
+	<effect_group name="ammoProjectileZombieVomit" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffAcidSpit"/>
+	</effect_group>
+</item>
+
+<item name="meleeHandZombieCopFeral">
+	<property name="Extends" value="meleeHandZombieCop"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="32"/>
+		<property name="DamageBlock" value="200"/>
+	</property>
+	<property class="Action1"> <!-- Fire action -->
+		<property name="Magazine_items" value="ammoProjectileZombieVomitFeral"/>
+	</property>
+	<effect_group name="meleeHandZombieCopFeral" tiered="false">
+		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="3"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="10"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="jz_BuffZombieBiteTrigger"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".08" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="buffInfectionCatch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="ammoProjectileZombieVomitFeral">
+	<property name="Extends" value="ammoProjectileZombieVomit"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action1">
+		<property name="DamageEntity" value="16"/>
+		<property name="DamageBlock" value="240"/>
+		<property name="Velocity" value="18"/>
+		<property name="FlyTime" value="2"/>
+		<property name="LifeTime" value="4"/>
+		<property name="Explosion.ParticleIndex" value="7"/>
+		<property name="Explosion.RadiusBlocks" value="2"/>
+		<property name="Explosion.RadiusEntities" value="1"/>
+		<property name="Explosion.DamageBonus.water" value="0"/>
+		<property name="Explosion.DamageBonus.earth" value="0"/>
+	</property>
+	<effect_group name="ammoProjectileZombieVomitFeral" tiered="false">
+		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInfectionCatch"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="105"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="1"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffAcidSpit"/>
+	</effect_group>
+</item>
+
+<item name="meleeHandZombieCopRadiated">
+	<property name="Extends" value="meleeHandZombieCopFeral"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action1">
+		<property name="Magazine_items" value="ammoProjectileZombieVomitRadiated"/>
+	</property>
+	<effect_group name="meleeHandZombieCopRadiated" tiered="false">
+		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="75"/>  A16 .8 -->
+		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="6"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="10"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="40"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".35" tags="jz_BuffZombieBiteTrigger"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="buffInfectionCatch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".75" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="ammoProjectileZombieVomitRadiated">
+	<property name="Extends" value="ammoProjectileZombieVomit"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action1">
+		<property name="DamageEntity" value="20"/>
+		<property name="DamageBlock" value="240"/>
+		<property name="Velocity" value="18"/>
+		<property name="FlyTime" value="2"/>
+		<property name="LifeTime" value="4"/>
+		<property name="Explosion.ParticleIndex" value="7"/>
+		<property name="Explosion.RadiusBlocks" value="2"/>
+		<property name="Explosion.RadiusEntities" value="1"/>
+		<property name="Explosion.DamageBonus.water" value="0"/>
+		<property name="Explosion.DamageBonus.earth" value="0"/>
+	</property>
+	<effect_group name="ammoProjectileZombieVomitRadiated" tiered="false">
+		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".40" tags="buffInfectionCatch"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="145"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="1"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffAcidSpit"/>
+	</effect_group>
+</item>
+	
+<item name="jz_HandParasiteLongClaw">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="ParasiteLongClaw" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteAlien">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffKnockDown,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="ParasiteAlien" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffKnockDown"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteBug">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="8"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="1.4"/>
+		<property name="Buff" value="jz_BuffParasiteLeaches,jz_BuffGash,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="ParasiteBug" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".5" tags="jz_BuffParasiteLeaches"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffGash"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteCreepy">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="15"/>
+		<property name="DamageBlock" value="10"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="buffInfectionCatch,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="ParasiteCreepy" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="buffInfectionCatch"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteDaemon">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="5"/>
+		<property name="DamageBlock" value="500"/>
+		<property name="Range" value="1.4"/>
+		<property name="Buff" value="jz_BuffScratch"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="10.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Consume" value="false" />
+	</property>
+	<effect_group name="ParasiteDaemon" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="100" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
+	</effect_group>
+	<effect_group name="Special Move">
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="self" buff="jz_BuffDash"/>
+	</effect_group>
+</item>
+	
+<item name="jz_HandParasiteDevourer">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="1.4"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,jz_BuffGored,jz_BuffPunctured,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="ParasiteDevourer" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="jz_BuffGored"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".1" tags="jz_BuffPunctured"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteExterminator">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="8"/>
+		<property name="DamageBlock" value="500"/>
+		<property name="Range" value="1.4"/>
+		<property name="Buff" value="jz_BuffScratch"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Vomit"/>
+		<property name="Hitmask_override" value="Arrow"/>
+		<property name="Delay" value=".3"/> 
+		<property name="Range" value="200"/>
+		<property name="Infinite_ammo" value="true"/>
+		<property name="Magazine_items" value="jz_AmmoProjectileExterminator"/>
+		<property name="Sound_warning" value="hulkvomitwarning"/>
+		<property name="Sound_start" value="hulkvomitattack"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value=""/>
+		<property name="Sound_reload" value=""/>
+		<property name="Buff" value="jz_BuffAcidSpit"/>
+	</property>
+	<effect_group name="ParasiteExterminator" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
+		
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+		<passive_effect name="MaxRange" operation="base_set" value="3"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
+		<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="100" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_AmmoProjectileExterminator">
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="DamageEntity" value="3"/>
+		<property name="DamageBlock" value="500"/>
+		<property name="Velocity" value="1"/>
+		<property name="FlyTime" value="1"/>
+		<property name="LifeTime" value="4"/>
+		<property name="CollisionRadius" value=".5"/>
+		<property name="Explosion.ParticleIndex" value="7"/>
+		<property name="Explosion.RadiusBlocks" value="4"/>
+		<property name="Explosion.RadiusEntities" value="1"/>
+		<property name="Buff" value="jz_BuffAcidSpit"/>
+	</property>
+	<effect_group name="ProjectileExterminator" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="100" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="100" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="5" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffAcidSpit"/>
+	</effect_group>
+</item>
+
+
+<item name="jz_HandParasiteFat">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteHorned">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteHorror">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteHybrid">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteInsect">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteMantis">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteNastyTank">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteNastyRanged">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasitePangolin">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteRipper">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteShell">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteSlider">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteSlug">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
+<item name="jz_HandParasiteSpider">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="10"/>
+		<property name="DamageBlock" value="5"/>
+		<property name="Range" value="2.2"/>
+		<property name="Buff" value="jz_BuffParasiteInfection,buffInjuryBleedingZombie,jz_BuffScratch"/>
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="BlockRange" operation="base_set" value="2"/>
+		
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
+		
+		<passive_effect name="BuffProcChance" operation="base_set" value=".10" tags="jz_BuffParasiteInfection"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
+		<passive_effect name="BuffProcChance" operation="base_set" value=".50" tags="jz_BuffScratch"/>
+	</effect_group>
+</item>
+
 <item name="jz_HandFattyZombie"><!--Moe-->
 	<property name="Extends" value="meleeHandZombieCop" />
 	<property name="CreativeMode" value="None" />
@@ -25776,7 +26646,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<passive_effect name="BuffProcChance" operation="base_set" value="0.40" tags="jz_BuffZombieGrab"/>
 	</effect_group>
 	<effect_group name="Special Move">
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="self" buff="jz_BuffBruteCharge"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="self" buff="jz_BuffDash"/>
 	</effect_group>
 </item>
 
@@ -25813,56 +26683,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</effect_group>
 	<effect_group name="Special Move">
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="self" buff="jz_BuffSuicideBomber"/>
-	</effect_group>
-</item>
-
-<item name="jz_HandBuck"><!--Buck-->
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="10"/>
-		<property name="DamageBlock" value="20"/>
-			<property name="Buff" value="buffInjuryBleedingZombie,jz_BuffZombieBiteTrigger,buffInfectionCatch,jz_BuffScratch"/>
-	</property>
-	<effect_group name="Base Effects" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="MaxRange" operation="base_set" value="1.5"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="10"/> 
-		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="organic"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.1" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="terrGravel"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="1" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="jzSteel"/>
-		
-		<passive_effect name="BuffProcChance" operation="base_set" value=".05" tags="buffInjuryBleedingZombie"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratch"/>
-	</effect_group>
-</item>
-	
-<item name="jz_HandSnake"><!--Snake-->
-	<property name="Extends" value="meleeHandMaster" />
-	<property name="CreativeMode" value="None" />
-	<property class="Action0">
-		<property name="DamageEntity" value="5" />
-		<property name="DamageBlock" value="20" />
-	</property>
-	<effect_group name="Base Effects">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="5" tags="primary"/>
-		<passive_effect name="BlockDamage" operation="base_set" value="5" tags="primary"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="metal"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="glass"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="cloth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="steel"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffScratchTick"/>
-		<passive_effect name="BuffProcChance" operation="base_set" value="1" tags="jz_BuffSnakePoisoning"/>
 	</effect_group>
 </item>
 

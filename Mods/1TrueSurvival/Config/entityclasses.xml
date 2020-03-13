@@ -374,7 +374,6 @@
 	</property>
 
 	<property name="RandomWalkTypes" value="1,2,3,5,6,7" />
-	<property name="WalkType" value="7"/>
 	<property name="SoundRandomTime" value="60.0"/> <!-- It will play the roam every 60/30 seconds -->
 	<property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
 	<property name="SoundAlertTime" value="25.0"/> <!-- It will play the roam every 25/12.5 seconds-->
@@ -4265,18 +4264,23 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="Weight" value="250"/>
+	
+	<property name="HandItem" value="jz_HandParasiteLongClaw" />
 	<property name="MoveSpeed" value="0.2"/> 
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> 
-	<property name="MoveSpeedPanic" value="0.85"/>
+	<property name="MoveSpeedPanic" value="1"/>
+	<property name="MoveSpeedAggro" value=".5, 1.5"/>
+	<property name="JumpMaxDistance" value="11, 13"/>
+	
 	<property name="PainResistPerHit" value=".01"/>
 	<property name="MaxViewAngle" value="250"/>
-	<property name="Weight" value="250"/>
-	<property name="AttackTimeoutDay" value="2.2"/> 
-	<property name="AttackTimeoutNight" value="1.7"/>
-	<property name="CanClimbLadders" value="true"/>
-	<property name="CanClimbVertical" value="false"/>
 	<property name="SightRange" value="50"/> 
+	<property name="AttackTimeoutDay" value="2"/> 
+	<property name="AttackTimeoutNight" value="1"/>
+	<property name="CanClimbLadders" value="false"/>
+	<property name="CanClimbVertical" value="false"/>
+	
 	<property name="AttackIndexes" value="2" />
 	<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
 	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
@@ -4299,7 +4303,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteLongClaw" />
 	<property name="MoveSpeed" value="0.2"/>
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> 
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4580,7 +4584,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteCreepy" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4650,7 +4654,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteBug" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4685,7 +4689,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteAlien" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4720,7 +4724,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteExterminator" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4755,7 +4759,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="RightHandJointName" value="Muzzle" />
+	<property name="HandItem" value="jz_HandParasiteExterminator" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4784,7 +4788,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteDevourer" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
 	<property name="MoveSpeedPanic" value="0.85"/>
@@ -4819,7 +4823,7 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
-	<property name="HandItem" value="meleeHandZombieFeral" />
+	<property name="HandItem" value="jz_HandParasiteDaemon" />
 	<property name="RightHandJointName" value="Muzzle" />
 	<property name="MoveSpeed" value="0.2"/> <!-- just shambling around -->
 	<property name="MoveSpeedAggro" value="0.3, 1.0"/> <!-- chasing a target min/max (like day or night)-->
