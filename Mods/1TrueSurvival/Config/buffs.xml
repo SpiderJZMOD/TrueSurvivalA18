@@ -5028,51 +5028,6 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="11"/>			
 		</effect_group>	
 	</buff>
-	<!-- JZMOD BITE WOUND -->
-	<buff name="jz_BuffZombieBiteTrigger" hidden="true" remove_on_death="false">
-		<stack_type value="ignore"/>
-		<duration value=".1"/>
-		<effect_group>
-			<requirement name="HasBuff" buff="buffInjuryStunned01"/> 
-			<requirement name="NotHasBuff" buff="jz_BuffZombieBiteTrigger"/>
-			<requirement name="NotHasBuff" buff="jz_BuffZombieBite"/>
-				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="bleedCounter" operation="add" value="3"/>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleeding"/>
-				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffZombieBite"/>		
-		</effect_group>			
-	</buff>
-		
-	<buff name="jz_BuffZombieBite" remove_on_death="false" name_key="Zombie Bite" description_key="You were bitten. You must cauterize with a [f21b10]Hot Pipe[-] the bite soon or you will catch the Z virus." icon="ui_game_symbol_bite" >
-		<stack_type value="ignore"/>
-		<update_rate value="30"/>
-		<duration value="3600"/>
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingBiteWound"/>	
-			
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" cvar="jz_PlayerHealthDrain" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
-			
-			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="26"/>		
-		</effect_group>	
-		<effect_group>		
-			<passive_effect name="HypothermalResist" operation="base_add" value="-10"/>
-		</effect_group>
-	</buff>
-	
-	<buff name="jz_BuffTendingBiteWound" remove_on_death="false" name_key="Cauterized Bite" description_key="The bite is cauterized but will leave a wound that will need tending" icon="ui_game_symbol_bandaged" >
-		<stack_type value="replace"/>
-		<duration value="900"/>
-		<effect_group>
-			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="21"/>
-			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem" />						
-		</effect_group>	
-	</buff>
 	
 	<!-- JZMOD SNAKE BITE -->
 	<buff name="jz_BuffSnakeBite" remove_on_death="false" name_key="Snake Bite" tooltip_key="Ow! That Hurts!" description_key="A snake bit and poisoned you. You will need to find or make some Anti-Venom or you will get very ill. Anti-Venom can be crafted on the Campfire with a Venom Gland from a poisonous animal." icon="ui_game_symbol_snakeBuff" >
@@ -5722,8 +5677,8 @@ icon="ui_game_symbol_pack_mule"
 				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffThrobbingPainScreenRestart"/>
 		</effect_group>
 	</buff>
-<!--JZMOD DEATH PENALTY -->
-<buff name="jz_BuffConsequences" hidden="true" remove_on_death="true">
+    <!--JZMOD DEATH PENALTY -->
+    <buff name="jz_BuffConsequences" hidden="true" remove_on_death="true">
 		<stack_type value="ignore"/>
 		<duration value=".5"/>
 		<effect_group>
@@ -5763,6 +5718,174 @@ icon="ui_game_symbol_pack_mule"
 	<buff name="jz_BuffNotNew" hidden="true" remove_on_death="false">
 		<stack_type value="ignore"/>
 		<duration value="0"/>
+	</buff>
+    
+    <buff name="jz_BuffAcidSpit" remove_on_death="false" name_key="Acid Spit" description_key="jz_BuffAcidSpitDesc" icon="ui_game_symbol_AcidSpit" >
+		<stack_type value="duration"/>
+        <duration value="30"/>
+		<update_rate value="1"/>
+        <effect_group>
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+            <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+       </effect_group>
+    </buff>
+    
+     <buff name="jz_BuffStickySpit" remove_on_death="false" name_key="Sticky Spit" description_key="jz_BuffStickySpitDesc" icon="ui_game_symbol_StickySpit" >
+		<stack_type value="duration"/>
+        <duration value="30"/>
+		<update_rate value="1"/>
+        <effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.99"/>
+            <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+       </effect_group>
+    </buff>
+    
+    <buff name="jz_BuffSmellySpit" remove_on_death="false" name_key="Smelly Spit" description_key="jz_BuffSmellySpitDesc" icon="ui_game_symbol_SmellySpit" >
+		<stack_type value="duration"/>
+        <duration value="30"/>
+		<update_rate value="1"/>
+        <effect_group>
+            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
+            <triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="open_apache_artifact_chest"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+       </effect_group>
+    </buff>
+    
+    <buff name="jz_BuffDeepCut" remove_on_death="false" name_key="Deep Cut" description_key="jz_BuffDeepCutDesc" icon="ui_game_symbol_SmellySpit" >
+		<stack_type value="ignore"/>
+        <duration value="0"/>
+		<update_rate value="30"/>
+        <effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.05"/>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
+            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+       </effect_group>
+    </buff>
+    
+    <buff name="jz_BuffGash" remove_on_death="false" name_key="Nasty Gash" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed\n-1 Stamina every 3 sec\n-1 Health every 15 sec\n+25 Core Temp" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<update_rate value="25"/>
+		<duration value="0"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.08"/>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
+            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+		</effect_group>
+	</buff>
+    
+    <buff name="jz_BuffPuncture" remove_on_death="false" name_key="Puncture Wound" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed\n-1 Stamina every 3 sec\n-1 Health every 15 sec\n+25 Core Temp" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<update_rate value="20"/>
+		<duration value="0"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.1"/>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
+            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
+            <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+		</effect_group>
+	</buff>
+    
+    <buff name="jz_BuffGored" remove_on_death="false" name_key="Gored" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed\n-1 Stamina every 3 sec\n-1 Health every 15 sec\n+25 Core Temp" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<update_rate value="20"/>
+		<duration value="0"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.15"/>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
+            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
+            <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="2"/>
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+		</effect_group>
+	</buff>
+    
+    <buff name="jz_BuffAnimalBite" remove_on_death="false" name_key="Animal Bite" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed\n-1 Stamina every 3 sec\n-1 Health every 15 sec\n+25 Core Temp" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<update_rate value="30"/>
+		<duration value="0"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.05"/>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
+            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
+            <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+		</effect_group>
+	</buff>
+    
+    <buff name="jz_BuffZombieBite" remove_on_death="false" name_key="Animal Bite" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed\n-1 Stamina every 3 sec\n-1 Health every 15 sec\n+25 Core Temp" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<update_rate value="25"/>
+		<duration value="0"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.1"/>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
+            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
+            <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="2"/>
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+		</effect_group>
+	</buff>
+    
+    	<!-- JZMOD BITE WOUND -->
+	<buff name="jz_BuffZombieBiteTrigger" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value=".1"/>
+		<effect_group>
+			<requirement name="HasBuff" buff="buffInjuryStunned01"/> 
+			<requirement name="NotHasBuff" buff="jz_BuffZombieBiteTrigger"/>
+			<requirement name="NotHasBuff" buff="jz_BuffZombieBite"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="bleedCounter" operation="add" value="3"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleeding"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffZombieBite"/>		
+		</effect_group>			
+	</buff>
+		
+	<buff name="jz_BuffZombieBite" remove_on_death="false" name_key="Zombie Bite" description_key="You were bitten. You must cauterize with a [f21b10]Hot Pipe[-] the bite soon or you will catch the Z virus." icon="ui_game_symbol_bite" >
+		<stack_type value="ignore"/>
+		<update_rate value="30"/>
+		<duration value="3600"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>		
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingBiteWound"/>	
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" cvar="jz_PlayerStaminaDrain" operation="add" value="6"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" cvar="jz_PlayerHealthDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
+			
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="26"/>		
+		</effect_group>	
+		<effect_group>		
+			<passive_effect name="HypothermalResist" operation="base_add" value="-10"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="jz_BuffTendingBiteWound" remove_on_death="false" name_key="Cauterized Bite" description_key="The bite is cauterized but will leave a wound that will need tending" icon="ui_game_symbol_bandaged" >
+		<stack_type value="replace"/>
+		<duration value="900"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="set" value="21"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffWoundSystem" />						
+		</effect_group>	
+	</buff>
+    
+    <buff name="jz_BuffParasiteBite" remove_on_death="false" name_key="Parasite Bite" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed\n-1 Stamina every 3 sec\n-1 Health every 15 sec\n+25 Core Temp" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<update_rate value="20"/>
+		<duration value="0"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.15"/>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
+            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
+            <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="3"/>
+            <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+		</effect_group>
 	</buff>
 </set>
 </configs> 
