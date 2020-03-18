@@ -10836,11 +10836,8 @@ perkNightStalkerSilentNight
 		<property name="Sound_start" value="player_ointment"/>
 	</property>
 
-	<effect_group tiered="false"> <!-- aloeCream -->
-		<!-- used on self -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingBurnWound">
-			<requirement name="HasBuff" buff="jz_BuffBurnWound"/></triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffBurnWound"/>
+	<effect_group tiered="false" name="JZMOD WOUND SYSTEM">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffAloe"/>
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="5"/>
 	</effect_group>
 </item>
@@ -10871,20 +10868,9 @@ perkNightStalkerSilentNight
 		<property name="Sound_start" value="player_bandage"/>
 	</property>
 	<effect_group tiered="false" name="JZMOD WOUND SYSTEM">
-		<!-- SMALL WOUND -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingOne">
-			<requirement name="HasBuff" buff="jz_BuffSmallWound"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingTwo">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffSmallWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="10"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
-	</effect_group>
-	<effect_group tiered="false" name="BLEEDING">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffBandage"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="jz_BuffBandage"/>
+        <triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="5"/>
 	</effect_group>
 </item>
 
@@ -10896,25 +10882,9 @@ perkNightStalkerSilentNight
 	<property name="Stacknumber" value="5"/>
 	<property name="CraftingIngredientExp" value="2"/>
 	<effect_group tiered="false" name="JZMOD WOUND SYSTEM">
-		<!-- SMALL WOUND -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingOne">
-			<requirement name="HasBuff" buff="jz_BuffSmallWound"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingTwo">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffSmallWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
-		<!-- WOUND -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingThree">
-			<requirement name="HasBuff" buff="jz_BuffWound"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingFour">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageTwo"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="15"/>
-	</effect_group>
-	<effect_group tiered="false" name="BLEEDING">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffMedicalBandage"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="jz_BuffMedicalBandage"/>
+        <triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="15"/>
 	</effect_group>
 </item>
 
@@ -21303,9 +21273,11 @@ perkNightStalkerSilentNight
 		<property name="Sound_start" value="UseActions/player_bandage" />
 		<property name="Create_item" value="jz_SewingNeedle" />
 	</property>
-	<effect_group tiered="false">
+	<effect_group tiered="false" name="JZMOD WOUND SYSTEM">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffSuture"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="jz_BuffSuture"/>
+        
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerHealthDrain" operation="add" value="5"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffGash"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound"  sound="player#painlg"/>
 	</effect_group>
@@ -21322,32 +21294,9 @@ perkNightStalkerSilentNight
 		<property name="Create_item" value="drinkJarEmpty" />
 	</property>
 	<effect_group tiered="false" name="JZMOD WOUND SYSTEM">
-		<!-- SMALL WOUND -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingOne">
-			<requirement name="HasBuff" buff="jz_BuffSmallWound"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingTwo">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffSmallWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
-		<!-- WOUND -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingThree">
-			<requirement name="HasBuff" buff="jz_BuffWound"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingFour">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageTwo"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
-		<!-- SEVERE WOUND -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingFive">
-			<requirement name="HasBuff" buff="jz_BuffSevereWound"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingSix">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageThree"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffSevereWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageThree"/>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="20"/>
-	</effect_group>
-	<effect_group tiered="false" name="BLEEDING">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffSaniBandage"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="jz_BuffSaniBandage"/>
+        <triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="20"/>
 	</effect_group>
 </item>
 

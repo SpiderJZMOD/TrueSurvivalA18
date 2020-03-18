@@ -4717,7 +4717,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>		
 	</buff>
 	
-	<buff name="jz_BuffSmallWound" remove_on_death="false" name_key="Small Wound" tooltip_key="Ouch! You've been wounded" description_key="You’ve gotten a small wound. Treat it with a bandage and be sure to change it when it gets dirty.\n-4 Stamina every 5 sec\n-1 Health every 25 sec\n-7% Mobility" icon="ui_game_symbol_smallWound" >
+	<buff name="jz_BuffSmallWound" remove_on_death="false" name_key="Small Wound" tooltip_key="Ouch! You've been wounded" description_key="You've gotten a small wound. Treat it with a bandage and be sure to change it when it gets dirty.\n-4 Stamina every 5 sec\n-1 Health every 25 sec\n-7% Mobility" icon="ui_game_symbol_smallWound" >
 		<stack_type value="ignore"/>
 		<update_rate value="25"/>
 		<duration value="0"/>
@@ -5752,8 +5752,8 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
        </effect_group>
     </buff>
-    
-    <buff name="jz_BuffDeepCut" remove_on_death="false" name_key="Deep Cut" description_key="jz_BuffDeepCutDesc" icon="ui_game_symbol_SmellySpit" >
+    <!-- JZMOD DEEP CUT -->
+    <buff name="jz_BuffDeepCut" remove_on_death="false" name_key="Deep Cut" description_key="Thats a Deep Cut it's going to need stitches to heal\n-5% Mobility\n-1HP per 30sec" icon="ui_game_symbol_SmellySpit" >
 		<stack_type value="ignore"/>
         <duration value="0"/>
 		<update_rate value="30"/>
@@ -5762,10 +5762,22 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
             <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+            
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDeepCutStitched"/>
        </effect_group>
     </buff>
     
-    <buff name="jz_BuffGash" remove_on_death="false" name_key="Nasty Gash" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed\n-1 Stamina every 3 sec\n-1 Health every 15 sec\n+25 Core Temp" icon="ui_game_symbol_gash">
+    <buff name="jz_BuffDeepCutStitched" remove_on_death="false" name_key="Deep Cut Stitched Up" tooltip_key="What a Scar" description_key="Should leave a nice scar but its going to need bandaging if you don't want it to get worse.\n-2% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_SmellySpit" >
+		<stack_type value="ignore"/>
+        <duration value="900"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.02"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="5"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+        </effect_group>
+    </buff>
+    <!-- JZMOD GASH -->
+    <buff name="jz_BuffGash" remove_on_death="false" name_key="Nasty Gash" tooltip_key="Thats going to need Stitches" description_key="You have a large Gash. You will need to use a Suture Kit to stitch it closed\n-8% Mobility\n-1HP per 20sec" icon="ui_game_symbol_gash">
 		<stack_type value="ignore"/>
 		<update_rate value="25"/>
 		<duration value="0"/>
@@ -5774,10 +5786,43 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
             <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
-		</effect_group>
+            
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashStitchedUp"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashBandaged"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashDirtyBandaged"/>
+      	</effect_group>
 	</buff>
     
-    <buff name="jz_BuffPuncture" remove_on_death="false" name_key="Puncture Wound" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed\n-1 Stamina every 3 sec\n-1 Health every 15 sec\n+25 Core Temp" icon="ui_game_symbol_gash">
+    <buff name="jz_BuffGashStitchedUp" remove_on_death="false" name_key="Gash Stitched Up" tooltip_key="What a Scar" description_key="Should leave a nice scar but its going to need bandaging if you don't want it to get worse.\n-4% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="900"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.04"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="10"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+    	</effect_group>
+	</buff>
+    
+    <buff name="jz_BuffGashBandaged" remove_on_death="false" name_key="Bandaged Gash" tooltip_key="Feels Better" description_key="Your Gash is bandaged up and healing. It will need to be changed when it gets dirty\n-2% Mobility" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+        <duration value="1800"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.02"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffGashDirtyBandaged"/>
+        </effect_group>
+	</buff>
+    
+     <buff name="jz_BuffGashDirtyBandaged" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="Its Starting to Smell" description_key="Your bandage has gotten dirty and needs changing. If you don't do it soon it will get worse\n-3% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="900"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.03"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="5"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+		</effect_group>
+	</buff>
+    <!-- JZMOD PUNCTURED -->
+    <buff name="jz_BuffPuncture" remove_on_death="false" name_key="Puncture Wound" tooltip_key="Ah! A Hole!" description_key="You have a deep Puncture Wound. Your going to need to sanitize and pack the hole with a bandage\n-10% Mobility\n-1HP per 20sec\n-1 Wellness" icon="ui_game_symbol_gash">
 		<stack_type value="ignore"/>
 		<update_rate value="20"/>
 		<duration value="0"/>
@@ -5785,12 +5830,76 @@ icon="ui_game_symbol_pack_mule"
             <passive_effect name="Mobility" operation="perc_subtract" value="0.1"/>
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
             <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
-            <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+            <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="jz_WellnessLv" operation="subtract" value="1"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+            
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffPunctureBandagedSani" />
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedA" />
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffPunctureBandageMedic" />
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedB" />
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffPunctureBandage" />
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedC" />
 		</effect_group>
 	</buff>
     
-    <buff name="jz_BuffGored" remove_on_death="false" name_key="Gored" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed\n-1 Stamina every 3 sec\n-1 Health every 15 sec\n+25 Core Temp" icon="ui_game_symbol_gash">
+    <buff name="jz_BuffPunctureBandagedSani" remove_on_death="false" name_key="Bandaged Puncture Wound" tooltip_key="Pack it tight" description_key="Your Puncture Wound is healing well but it will need at lest a Medical Bandage to continue healing after this bandage gets dirty\n-5% Mobility" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="1800"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.5"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDirtyPunctureBandagedA"/>
+		</effect_group>
+	</buff>
+    
+    <buff name="jz_BuffDirtyPunctureBandagedA" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="Its Starting to Smell" description_key="Your bandage has gotten dirty and needs to be changed. You will need at lest a Medical Bandage for it to continue healing\n-7% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="900"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.07"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="10"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+		</effect_group>
+	</buff>
+    
+    <buff name="jz_BuffPunctureBandageMedic" remove_on_death="false" name_key="Bandaged Puncture Wound" tooltip_key="Pack it tight" description_key="Your Puncture Wound is healing well but it will need to be re bandaged to continue healing after this bandage gets dirty\n-2% Mobility" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="1800"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.02"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDirtyPunctureBandagedB"/>
+		</effect_group>
+	</buff>
+    
+    <buff name="jz_BuffDirtyPunctureBandagedB" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="Its Starting to Smell" description_key="Your bandage has gotten dirty and needs to be changed. You will need to re bandaged it for it to continue healing\n-3% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="900"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.03"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="5"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+        </effect_group>
+	</buff>
+    
+    <buff name="jz_BuffPunctureBandage" remove_on_death="false" name_key="Bandaged Puncture Wound" tooltip_key="Pack it tight" description_key="Your Puncture Wound is healing well but it will need to be re bandaged to continue healing after this bandage gets dirty\n-1% Mobility" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="1800"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.01"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDirtyPunctureBandagedC"/>
+		</effect_group>
+	</buff>
+    
+    <buff name="jz_BuffDirtyPunctureBandagedC" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="Its Starting to Smell" description_key="Your bandage has gotten dirty and needs to be changed. You will need to re bandaged it for it to continue healing\n-2% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="900"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.02"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="3"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+        </effect_group>
+	</buff>
+    <!-- JZMOD GORED -->
+    <buff name="jz_BuffGored" remove_on_death="false" name_key="Gored" tooltip_key="Thats going to need Stitches" description_key="You have been gored. You will need to use a suture kit to stitch it closed\-15% Mobility\n-1HP per 20sec\n-2 Wellness" icon="ui_game_symbol_gash">
 		<stack_type value="ignore"/>
 		<update_rate value="20"/>
 		<duration value="0"/>
@@ -5800,7 +5909,77 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
             <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="2"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
+            
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffPunctureBandagedSani" />
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedA" />
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffPunctureBandageMedic" />
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedB" />
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffPunctureBandage" />
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedC" />
 		</effect_group>
+	</buff>
+    
+    <buff name="jz_BuffGoredStitchedUp" remove_on_death="false" name_key="Stitched Up Gore Wound" tooltip_key="What a Scar" description_key="Should leave a nice scar but its going to need at lest a Sanitizing Bandaging if you don't want it to get worse.\n-8% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="900"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.08"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="15"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+       </effect_group>
+	</buff>
+    
+    <buff name="jz_BuffGoredBandageSani" remove_on_death="false" name_key="Bandaged Gore Wound" tooltip_key="Feeling better" description_key="Your Gore Wound is healing well but it will need at lest a Medical Bandage to continue healing after this bandage gets dirty\n-4% Mobility" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="1800"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.04"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffGoredDirtyBandangeA" />
+        </effect_group>
+	</buff>
+    
+    <buff name="jz_BuffGoredDirtyBandangeA" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="What a Scar" description_key="Your bandage has gotten dirty and needs to be changed. You will need at lest a Medical Bandage for it to continue healing\n-6% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="900"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.06"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="10"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+       </effect_group>
+	</buff>
+    
+     <buff name="jz_BuffGoredBandageMedic" remove_on_death="false" name_key="Bandaged Gore Wound" tooltip_key="Feeling better" description_key="Your Gore Wound is healing well but it will need at lest a Medical Bandage to continue healing after this bandage gets dirty\n-2% Mobility" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="1800"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.02"/>
+             <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffGoredDirtyBandangeA" />
+        </effect_group>
+	</buff>
+    <buff name="jz_BuffGoredDirtyBandangeB" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="What a Scar" description_key="Your bandage has gotten dirty and needs to be changed. You will need to re bandaged it for it to continue healing\n-3% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="900"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.3"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="5"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+       </effect_group>
+	</buff>
+     <buff name="jz_BuffGoredBandage" remove_on_death="false" name_key="Bandaged Gore Wound" tooltip_key="Feeling better" description_key="Your Gore Wound is healing well but it will need to re bandaged to continue healing after this bandage gets dirty\n-1% Mobility" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="1800"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.01"/>
+        </effect_group>
+	</buff>
+    <buff name="jz_BuffGoredDirtyBandangeC" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="What a Scar" description_key="Your bandage has gotten dirty and needs to be changed. You will need to re bandaged it for it to finish healing\n-2% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+		<stack_type value="ignore"/>
+		<duration value="900"/>
+		<effect_group>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.02"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="jzCvarScratchCount" operation="add" value="3"/>
+            <triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" target="self" cvar="jz_WellnessLv" operation="subtract" value="1"/>
+       </effect_group>
 	</buff>
     
     <buff name="jz_BuffAnimalBite" remove_on_death="false" name_key="Animal Bite" tooltip_key="Thats going to need Stitches" description_key="You have a large gash in your skin. You will need to use a suture kit to stitch it closed\n-1 Stamina every 3 sec\n-1 Health every 15 sec\n+25 Core Temp" icon="ui_game_symbol_gash">
@@ -5887,5 +6066,203 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
 		</effect_group>
 	</buff>
+    
+    <buff name="jz_BuffAloe" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1.5"/>
+        <!-- Burn Wound -->
+        <effect_group>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingBurnWound">
+                <requirement name="HasBuff" buff="jz_BuffBurnWound"/></triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffBurnWound"/>
+        </effect_group>
+	</buff>
+    
+    <buff name="jz_BuffBandage" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1.5"/>
+        <effect_group>
+            <!-- SMALL WOUND -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingOne">
+                <requirement name="HasBuff" buff="jz_BuffSmallWound"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingTwo">
+                <requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
+            <!-- BLEEDING -->
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding"/>
+            <!-- DEEP CUT -->
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDeepCutStitched"/>
+            <!-- GASH -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffGashBandaged">
+                <requirement name="HasBuff" buff="jz_BuffGashStitchedUp"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashStitchedUp"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashDirtyBandaged"/>
+            <!-- PUNCTURE -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffPunctureBandage">
+                <requirement name="HasBuff" buff="jz_BuffDirtyPunctureBandagedB"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedB"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedC"/>
+        </effect_group>
+	</buff>
+    
+    <buff name="jz_BuffMedicalBandage" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1.5"/>
+        <effect_group>
+             <!-- SMALL WOUND -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingOne">
+                <requirement name="HasBuff" buff="jz_BuffSmallWound"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingTwo">
+                <requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
+            <!-- WOUND -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingThree">
+                <requirement name="HasBuff" buff="jz_BuffWound"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingFour">
+                <requirement name="HasBuff" buff="jz_BuffDirtyBandageTwo"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
+            <!-- BLEEDING -->
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding"/>
+            <!-- DEEP CUT -->
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDeepCutStitched"/>
+             <!-- GASH -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffGashBandaged">
+                <requirement name="HasBuff" buff="jz_BuffGashStitchedUp"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashStitchedUp"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashDirtyBandaged"/>
+            <!-- PUNCTURE -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffPunctureBandageMedic">
+                <requirement name="HasBuff" buff="jz_BuffDirtyPunctureBandagedA"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffPunctureBandage">
+                <requirement name="HasBuff" buff="jz_BuffDirtyPunctureBandagedB"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedA"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedB"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedC"/>
+        </effect_group>
+	</buff>
+    
+    <buff name="jz_BuffSaniBandage" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1.5"/>
+        <effect_group>
+            <!-- SMALL WOUND -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingOne">
+                <requirement name="HasBuff" buff="jz_BuffSmallWound"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingTwo">
+                <requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
+            <!-- WOUND -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingThree">
+                <requirement name="HasBuff" buff="jz_BuffWound"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingFour">
+                <requirement name="HasBuff" buff="jz_BuffDirtyBandageTwo"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
+            <!-- SEVERE WOUND -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingFive">
+                <requirement name="HasBuff" buff="jz_BuffSevereWound"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingSix">
+                <requirement name="HasBuff" buff="jz_BuffDirtyBandageThree"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageThree"/>
+             <!-- BLEEDING -->
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding"/>
+            <!-- DEEP CUT -->
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDeepCutStitched"/>
+            <!-- GASH -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffGashBandaged">
+                <requirement name="HasBuff" buff="jz_BuffGashStitchedUp"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashStitchedUp"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashDirtyBandaged"/>
+            <!-- PUNCTURE -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffPunctureBandagedSani">
+                <requirement name="HasBuff" buff="jz_BuffPuncture"/> </triggered_effect>
+             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffPunctureBandageMedic">
+                <requirement name="HasBuff" buff="jz_BuffDirtyPunctureBandagedA"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffPunctureBandage">
+                <requirement name="HasBuff" buff="jz_BuffDirtyPunctureBandagedB"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffPuncture"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedA"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedB"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedC"/>
+        </effect_group>
+	</buff>
+    
+    <buff name="jz_BuffFirstAidKit" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1.5"/>
+        <effect_group>
+            <!-- SMALL WOUND -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingOne">
+                <requirement name="HasBuff" buff="jz_BuffSmallWound"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingTwo">
+                <requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
+            <!-- WOUND -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingThree">
+                <requirement name="HasBuff" buff="jz_BuffWound"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingFour">
+                <requirement name="HasBuff" buff="jz_BuffDirtyBandageTwo"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
+            <!-- SEVERE WOUND -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingFive">
+                <requirement name="HasBuff" buff="jz_BuffSevereWound"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingSix">
+                <requirement name="HasBuff" buff="jz_BuffDirtyBandageThree"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageThree"/>
+            <!-- INFECTED WOUND -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingSeven">
+                <requirement name="HasBuff" buff="jz_BuffInfectedWound"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingEight">
+                <requirement name="HasBuff" buff="jz_BuffDirtyBandageFour"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffInfectedWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyInfectedWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageFour"/>
+            <!-- BLEEDING -->
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding"/>
+            <!-- DEEP CUT -->
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDeepCutStitched"/>
+            <!-- GASH -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffGashBandaged">
+                <requirement name="HasBuff" buff="jz_BuffGashStitchedUp"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashStitchedUp"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashDirtyBandaged"/>
+            <!-- PUNCTURE -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffPunctureBandagedSani">
+                <requirement name="HasBuff" buff="jz_BuffPuncture"/> </triggered_effect>
+             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffPunctureBandageMedic">
+                <requirement name="HasBuff" buff="jz_BuffDirtyPunctureBandagedA"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffPunctureBandage">
+                <requirement name="HasBuff" buff="jz_BuffDirtyPunctureBandagedB"/> </triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffPuncture"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedA"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedB"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyPunctureBandagedC"/>
+        </effect_group>
+	</buff>
+    
+     <buff name="jz_BuffSuture" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1.5"/>
+        <effect_group>
+            <!-- DEEP CUT -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffDeepCutStitched">
+                <requirement name="HasBuff" buff="jz_BuffDeepCut"/></triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDeepCut"/>
+            <!-- GASH -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffGashStitchedUp">
+                <requirement name="HasBuff" buff="jz_BuffGash"/></triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGash"/>
+           
+        </effect_group>
+	</buff>
+    
 </set>
 </configs> 
