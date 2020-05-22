@@ -140,7 +140,7 @@
 	<skill name="jz_AmmoSchematics" parent="Schematics" name_key="Ammo Schematics" icon="ui_game_symbol_fire"><effect_group/></skill>
 	<skill name="jz_ArcherySchematics" parent="Schematics" name_key="Archery Schematics" icon="ui_game_symbol_fire"><effect_group/></skill>
 	<skill name="jz_ArmorSchematics" parent="Schematics" name_key="Armor Schematics" icon="ui_game_symbol_fire"><effect_group/></skill>
-	<skill name="jz_CraftingSchematics" parent="Schematics" name_key="Drink Recipes" icon="ui_game_symbol_fire"><effect_group/></skill>
+	<skill name="jz_CraftingSchematics" parent="Schematics" name_key="Crafting Recipes" icon="ui_game_symbol_fire"><effect_group/></skill>
 	<skill name="jz_DrinkRecipes" parent="Schematics" name_key="Drink Recipes" icon="ui_game_symbol_fire"><effect_group/></skill>
 	<skill name="jz_ExplosiveSchematics" parent="Schematics" name_key="Explosive Schematics" icon="ui_game_symbol_fire"><effect_group/></skill>
 	<skill name="jz_FarmingRecipes" parent="Schematics" name_key="Farming Schematics" icon="ui_game_symbol_fire"><effect_group/></skill>
@@ -3122,7 +3122,7 @@
 		</effect_group>
 	</perk>
     
-	 <perk name="SP_BlunderbussSchematic" parent="jz_FirearmSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Pump Shotgun" desc_key="SP_BlunderbussSchematicDesc" icon="ui_game_symbol_fire">
+	 <perk name="SP_BlunderbussSchematic" parent="jz_FirearmSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Blunderbuss" desc_key="SP_BlunderbussSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunBlunderbuss,ammoBlunderbuss"/>
 			<effect_description level="1" desc_key="SP_BlunderbussSchematicDesc" long_desc_key="SP_BlunderbussSchematicDesc"/>

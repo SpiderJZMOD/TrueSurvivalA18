@@ -29676,14 +29676,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Group" value="Ammo/Weapons,Basics"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZRebar2Melee.unity3d?Rebar2MeleePrefab" />
 	<property name="HoldType" value="2"/>
-	<property name="Material" value="Mwood"/>
+	<property name="Material" value="Mmetal"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
-	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="SoundDestroy" value="metaldestroy1"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="EconomicValue" value="0"/>
-	<property name="FuelValue" value="1"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -29697,10 +29696,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<property name="SwingDegrees" value="65"/>
 		<property name="SwingAngle" value="180"/>
 		<property class="HitSounds">
-			<property name="Override0" value="organic" param1="woodhitorganic"/>
+			<property name="Override0" value="organic" param1="metalsolidhitorganic"/>
 		</property>
 		<property class="GrazeSounds">
-			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
 		</property>
 	</property>
 
@@ -29766,11 +29765,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Material" value="Mmetal"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
-	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="SoundDestroy" value="metaldestroy1"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="EconomicValue" value="0"/>
-	<property name="FuelValue" value="1"/>
 	<property name="ShowQuality" value="true"/>
 
 	<property class="Action0">
@@ -29784,10 +29782,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<property name="SwingDegrees" value="65"/>
 		<property name="SwingAngle" value="180"/>
 		<property class="HitSounds">
-			<property name="Override0" value="organic" param1="woodhitorganic"/>
+			<property name="Override0" value="organic" param1="metalsolidhitorganic"/>
 		</property>
 		<property class="GrazeSounds">
-			<property name="Override0" value="organic" param1="woodgrazeorganic"/>
+			<property name="Override0" value="organic" param1="metalgrazeorganic"/>
 		</property>
 	</property>
 
