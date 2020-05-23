@@ -19403,7 +19403,7 @@ perkNightStalkerSilentNight
 <item name="jz_CraftedRifle">
 	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,stock,canHaveCosmetic,jz_HuntingRifleSkillTag"/>
 	<property name="DisplayType" value="rangedGun"/>
-	<property name="CustomIcon" value="ui_game_symbol_craftedRifle" />
+	<property name="CustomIcon" value="craftedRifle" />
 	<property name="HoldType" value="30"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab"/>
 	<property name="Material" value="MRifleParts"/> <property name="Weight" value="4"/>
@@ -19599,7 +19599,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCrossbowStock" />
+	<property name="CustomIcon" value="ui_game_symbol_crossbowStock" />
 	<property name="UnlockedBy" value="gunCrossbowIronSchematic,SP_CrossbowIronSchematic"/>
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
@@ -19610,7 +19610,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
-    <property name="CustomIcon" value="ui_game_symbol_jz_PartsCrossbowLimb" />
+    <property name="CustomIcon" value="ui_game_symbol_crossbowLimb" />
 	<property name="UnlockedBy" value="gunCrossbowIronSchematic,SP_CrossbowIronSchematic"/>
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
@@ -19628,7 +19628,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsCompoundBowCams">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="CompoundBowPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundBowCams" />
+	<property name="CustomIcon" value="CompoundCrossbowCams" />
 	<property name="Material" value="Mplastics" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19638,7 +19638,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsCompoundCrossbowStock">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="CompoundCrossbowPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundCrossbowStock" />
+	<property name="CustomIcon" value="CompoundCrossbowStock" />
 	<property name="Material" value="Mplastics" />
 	<property name="Weight" value="30" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19648,7 +19648,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsCompoundCrossbowCams">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="CompoundCrossbowPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsCompoundCrossbowCams" />
+	<property name="CustomIcon" value="CompoundCrossbowCams" />
 	<property name="Material" value="Morganic" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
@@ -19661,7 +19661,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsPistolBarrel" />
+	<property name="CustomIcon" value="Pistol_barrel" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
@@ -19671,14 +19671,14 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
-    <property name="CustomIcon" value="ui_game_symbol_jz_PartsPistolFrame" />
+    <property name="CustomIcon" value="Pistol_triggerHousing" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_PartsPistolGrip">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="PistolPartsDesc" />
-    <property name="CustomIcon" value="ui_game_symbol_jz_PartsPistolGrip" />
+    <property name="CustomIcon" value="PistolGrip" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="5" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19688,7 +19688,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsPumpShotgunBarrel">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="PumpShotgunPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsPumpShotgunBarrel" />
+	<property name="CustomIcon" value="PumpShotgun_barrel" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19698,7 +19698,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsPumpShotgunReciver">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="PumpShotgunPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsPumpShotgunReciver" />
+	<property name="CustomIcon" value="PumpShotgun_triggerHousing" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19748,7 +19748,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsHuntingRifleBarrel">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="HuntingRiflePartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsHuntingRifleBarrel" />
+	<property name="CustomIcon" value="HuntingRifleBarrel" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19758,7 +19758,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsHuntingRifleStock">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="HuntingRiflePartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsHuntingRifleStock" />
+	<property name="CustomIcon" value="HuntingRifleStock" />
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19768,7 +19768,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsHuntingRifleReceiver">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="HuntingRiflePartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsHuntingRifleReceiver" />
+	<property name="CustomIcon" value="HuntingRifleBolt" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
@@ -19781,7 +19781,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="5" />
 	<property name="Group" value="Ammo/Weapons" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_Parts44MagnumCylinder" />
+	<property name="CustomIcon" value="44MagnumCylinder" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
@@ -19791,14 +19791,14 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
-    <property name="CustomIcon" value="ui_game_symbol_jz_Parts44MagnumFrame" />
+    <property name="CustomIcon" value="44MagnumFrame" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
 <item name="jz_Parts44MagnumGrip">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="MagnumPartsDesc" />
-    <property name="CustomIcon" value="ui_game_symbol_jz_Parts44MagnumGrip" />
+    <property name="CustomIcon" value="44MagnumGrip" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19808,7 +19808,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsSMG5Barrel">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="SMG5PartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSMG5Barrel" />
+	<property name="CustomIcon" value="Mp5_barrel" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19818,7 +19818,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsSMG5Receiver">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="SMG5PartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSMG5Receiver" />
+	<property name="CustomIcon" value="Mp5_triggerHousing" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19828,7 +19828,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsSMG5Grip">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="SMG5PartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSMG5Grip" />
+	<property name="CustomIcon" value="Mp5_stock" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19868,7 +19868,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsAK47Stock">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="AK47PartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsAK47Stock" />
+	<property name="CustomIcon" value="Ak47Stock" />
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19888,7 +19888,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsAK47Barrel">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="AK47PartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsAK47Barrel" />
+	<property name="CustomIcon" value="Ak47Barrel" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
@@ -19898,7 +19898,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsSniperRifleBarrel">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="SniperPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSniperRifleBarrel" />
+	<property name="CustomIcon" value="SniperRifle_barrel_1" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="30" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19908,7 +19908,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsSniperRifleStock">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="SniperPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSniperRifleStock" />
+	<property name="CustomIcon" value="SniperRifle_stock" />
 	<property name="Material" value="Mplastics" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19918,7 +19918,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsSniperRifleReceiver">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="SniperPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsSniperRifleReceiver" />
+	<property name="CustomIcon" value="SniperRifle_triggerHousing" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
     <property name="Group" value="Ammo/Weapons" />
@@ -19958,7 +19958,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsRocketLauncherBarrel">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="RocketLauncherPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsRocketLauncherBarrel" />
+	<property name="CustomIcon" value="RocketLauncherBarrel" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="20" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19968,7 +19968,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsRocketLauncherStock">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="RocketLauncherPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsRocketLauncherStock" />
+	<property name="CustomIcon" value="RocketLauncherStock" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19978,7 +19978,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsRocketLauncherParts">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="RocketLauncherPartsDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_PartsRocketLauncherParts" />
+	<property name="CustomIcon" value="RocketLauncherParts" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -19991,7 +19991,7 @@ perkNightStalkerSilentNight
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
-	<property name="CustomIcon" value="ui_game_symbol_jz_BasicGunParts" />
+	<property name="CustomIcon" value="Parts44Magnum_parts" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
@@ -20002,7 +20002,7 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="Msteel" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
-    <property name="CustomIcon" value="ui_game_symbol_jz_MilitaryGunParts" />
+    <property name="CustomIcon" value="Ak47Parts" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
 
@@ -20107,6 +20107,7 @@ perkNightStalkerSilentNight
 	<property name="DisplayType" value="rangedGun"/>
 	<property name="HoldType" value="30"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab"/>
+    <property name="CustomIcon" value="OldRifle" />
 	<property name="Material" value="Mmetal"/> 
 	<property name="Weight" value="20"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
@@ -20638,6 +20639,7 @@ perkNightStalkerSilentNight
 <item name="jz_PoliceBaton">
 	<property name="Tags" value="blunt,club,melee,grunting,light,weapon,meleeWeapon,jz_BluntSkillTag"/>
 	<property name="DisplayType" value="melee"/>
+    <property name="CustomIcon" value="PoliceBaton" />
 	<property name="Group" value="Ammo/Weapons,Basics"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZBaton.unity3d?BatonPrefab" />
 	<property name="HoldType" value="2"/>
@@ -20746,6 +20748,7 @@ perkNightStalkerSilentNight
 	<property name="EconomicValue" value="0"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
+    <property name="CustomIcon" value="ui_game_symbol_crowbar" />
 	<property name="ShowQuality" value="true"/>
 	<property name="UnlockedBy" value="jz_CrowbarSchematic"/>
 	<property class="Action0">
@@ -21038,6 +21041,7 @@ perkNightStalkerSilentNight
 	<property name="EconomicValue" value="350"/>
 	<property name="UnlockedBy" value="jz_SchematicWelder"/>
 	<property name="ShowQuality" value="true"/>
+    <property name="CustomIcon" value="ui_game_symbol_welder" />
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sound_start" value="swoosh"/>
@@ -21256,8 +21260,7 @@ perkNightStalkerSilentNight
 <item name="jz_MedicalHerbalCream">
 	<property name="Extends" value="medicalAloeCream" />
 	<property name="UnlockedBy" value="jz_SchematicHerbalCream"/>
-	<property name="CustomIcon" value="medicalAloeCream" />
-	<property name="CustomIconTint" value="7c5706" />
+	<property name="CustomIcon" value="creamherbal" />
 </item>
 
 <item name="jz_MedicalSutureKit">
@@ -21391,8 +21394,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="Meshfile" value="Items/Health/painkillersPrefab" />
 	<property name="HoldType" value="16" />
-	<property name="CustomIcon" value="antibiotics" />
-	<property name="CustomIconTint" value="25e008" />
+	<property name="CustomIcon" value="ui_game_symbol_superPill" />
 	<property name="Group" value="Science" />
 	<property name="DescriptionKey" value="AntivirialDesc" />
 	<property class="Action0">
