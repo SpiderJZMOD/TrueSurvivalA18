@@ -21722,6 +21722,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="decoEntityPolymerMaster" param1="RepairItems"/>
 	<property name="Material" value="Mrubble"/>
 	<property name="MaxDamage" value="100"/>
+    <property name="CanPickup" value="true" />
 	<property name="Model" value="Entities/OutdoorDecor/cowSkullPrefab"/> <property name="HandleFace" value="Bottom"/>
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 	<drop event="Harvest" name="resourceBone" count="1,4" tag="allHarvest"/>
@@ -30205,7 +30206,7 @@ NOT the TextureNumber.
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="Tags" value="jz_StoneBuilding"/>
 	<property name="DescriptionKey" value="FlagstoneFrameGroupDesc"/>
-	<property name="Material" value="Mwood_weak"/>
+	<property name="Material" value="MwoodNoGlue"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="FuelValue" value="100"/>
 	<property name="MaxDamage" value="50"/>
@@ -30240,7 +30241,7 @@ NOT the TextureNumber.
 	<property name="Tags" value="jz_StoneBuilding"/>
 	<property name="DescriptionKey" value="FlagstoneFrameGroupDesc"/>
 	<property name="ItemTypeIcon" value="ui_game_symbol_brick"/>
-	<property name="Material" value="Mwood_weak"/>
+	<property name="Material" value="MwoodNoGlue"/>
 	<property name="CreativeMode" value="None"/>
 	<property name="FuelValue" value="100"/>
 	<property name="MaxDamage" value="50"/>

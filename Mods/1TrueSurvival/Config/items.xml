@@ -11094,6 +11094,7 @@ perkNightStalkerSilentNight
 	<property name="EconomicValue" value="80"/>
 	<property name="Stacknumber" value="10"/> <!-- STK loot -->
 	<property name="Group" value="Science,CFChemicals,Medical"/>
+    <property name="DescriptionKey" value="jz_drugVitaminsDesc"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
@@ -20291,6 +20292,7 @@ perkNightStalkerSilentNight
 	<property name="HoldType" value="36"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZMeleeSteakKnife.unity3d?MeleeSteakKnifePrefab" />
 	<property name="Material" value="Mmetal"/>
+    <property name="Weight" value="6"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="FuelValue" value="100"/>
@@ -20386,6 +20388,7 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#@modfolder:Resources/JZMeleeChefsKnife.unity3d?MeleeChefsKnifePrefab" />
 	<property name="CustomIcon" value="ui_game_symbol_chefKnife" />
 	<property name="Material" value="Mmetal"/>
+    <property name="Weight" value="6"/>
 	<property name="RepairTools" value="jz_CantRepair" />
 	<property name="DescriptionKey" value="jz_ChefKnifeDesc" />
 	<property name="DegradationBreaksAfter" value="true"/>
@@ -20471,6 +20474,7 @@ perkNightStalkerSilentNight
 	<property name="HoldType" value="17"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Axe/fireaxePrefab.prefab"/>
 	<property name="Material" value="Mmetal"/>
+    <property name="Weight" value="10"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -21500,7 +21504,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="waterDysentery"/>
 	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="128"/>
 	<property name="EconomicValue" value="0"/>
@@ -21564,7 +21568,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="water"/>
 	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
 	<property name="Material" value="Mglass"/>
 	<property name="Stacknumber" value="128"/> 
 	<property name="EconomicValue" value="40"/>
@@ -23457,7 +23461,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="HoldType" value="3"/>
 	<property name="DisplayType" value="drinkYuccaSmoothie"/>
 	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
 	<property name="Stacknumber" value="10"/> 
 	<property name="UnlockedBy" value="drinkFruitJuiceSmoothieSchematic"/>
 	<property class="Action0">
@@ -24171,7 +24175,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 
 <item name="jz_DrinkWellnessJuice"><!-- Base Spoilage Drink -->
 	<property name="Extends" value="jz_MasterFood" />
-	<property name="Meshfile" value="Items/Food/coffeePrefab" />
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
 	<property name="CustomIcon" value="ui_game_symbol_wellnessJuice" />
 	<property name="DescriptionKey" value="wellnessJuiceDesc" />
 	<property name="UnlockedBy" value="jz_SchematicWellnessJuice"/>
@@ -24207,9 +24212,9 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 
 <item name="jz_DrinkFruitJuice">
 	<property name="Extends" value="jz_MasterFood" />
-	<property name="Meshfile" value="Items/Food/coffeePrefab" />
-	<property name="CustomIcon" value="ui_game_symbol_carrotJuice" />
-	<property name="CustomIconTint" value="e0060a" />
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="CustomIcon" value="ui_game_symbol_FruitJuice" />
 	<property name="DescriptionKey" value="fruitJuiceDesc" />
     <property name="HoldType" value="3" />
 	<property name="Stacknumber" value="15" />
@@ -24239,9 +24244,9 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 
 <item name="jz_DrinkVeggieJuice">
 	<property name="Extends" value="jz_MasterFood" />
-	<property name="Meshfile" value="Items/Food/coffeePrefab" />
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
 	<property name="CustomIcon" value="ui_game_symbol_carrotJuice" />
-	<property name="CustomIconTint" value="e0060a" />
 	<property name="DescriptionKey" value="veggieJuiceDesc" />
     <property name="HoldType" value="3" />
 	<property name="Stacknumber" value="15" />
@@ -24326,7 +24331,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_FoodFlour">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_flour" />
-	<property name="Weight" value="1" />
+    <property name="Material" value="Mgrain"/>
+	<property name="Weight" value="3"/>
 	<property name="Group" value="food/Cooking" />
 	<property name="DescriptionKey" value="flourDesc" />
 </item>
@@ -25261,8 +25267,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_FoodDeadRat">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="DescriptionKey" value="deadRatDesc" />
-	<property name="Material" value="MbioMass" />
-	<property name="Weight" value="1" />
+	<property name="Material" value="Mprotein" />
+	<property name="Weight" value="5" />
 	<property name="Stacknumber" value="5000" />
 	<property name="CustomIcon" value="ui_game_symbol_deadRat" />
 	<property name="DisplayType" value="jz_FoodBad"/>
@@ -27026,6 +27032,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="leather" />
 	<property name="CustomIconTint" value="edf4b0" />
 	<property name="DescriptionKey" value="jz_AnimalHideDesc" />
+    <property name="Spoilable" value="true" />
+    <property name="ShowQuality" value="false"/>
+    <property name="SpoiledItem" value="foodRottingFlesh" />
+    <property name="TickPerLoss" value="270" />
+    <property name="SpoilageMax" value="1000" />
+    <property name="SpoilagePerTick" value="1" />
 </item>
 
 <item name="jz_BrainMatter">
@@ -27391,7 +27403,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="ui_game_symbol_fireWood" />
 	<property name="DescriptionKey" value="fireWoodDesc" />
     <property name="Material" value="Mwood" />
-	<property name="FuelValue" value="125" />
+	<property name="FuelValue" value="350" />
 </item>
 
 <item name="jz_ScrapWire">
