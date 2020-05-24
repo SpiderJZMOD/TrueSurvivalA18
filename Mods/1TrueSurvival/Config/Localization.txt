@@ -754,42 +754,60 @@ jz_TraitHemophobicDesc,"20% Less Healing from Medical Items\n[f21b10]REFUNDS 4 K
 jz_TraitThinSkinnedDesc,"10% More chance to get Injured from Attackers\n[f21b10]REFUNDS 4 Knowledge Points[-]"
 jz_TraitWeakDesc,"10% More Stamina used w/Melee\n10% More Stamina used while Encumbered\n[f21b10]REFUNDS 4 Knowledge Points[-]"
 Quest_________________________XML,Quest_________________________XML
+tutorialTipQuest01_title,"True Survival"
+tutorialTipQuest01,"To begin place your 'Start Here' starting item on the ground to choose your characters stats and ability's for this play through. You will start with 5 Knowledge Points that can be used to craft Negative and Positive Traits, and Professions. Purchasing Negative traits will reward more Knowledge Points. Any combination can be chosen but these options do not stack. Positive Traits can also be purchased with Skill Points acquired during leveling and Professions can be acquired by collecting Profession Pages found in loot\nStarting Suggestion- Craft and read enough Negative Traits to acquire the amount of Knowledge Points you need for the Profession you want." 
 jzquest_Starting,Getting Started
-jzquest_StartingDesc,"Place your Starting Option picker on the ground to receive your Knowledge Points."
-jzquest_StoryLinePt1,"1 The Get Away!"
+jzquest_StoryLinePt1,"1 Storyline Quest Pt1: The Get Away!"
 jzquest_StoryLinePt1Sub,"Set Up Camp"
-jzquest_StoryLinePt1Desc,"You barley made it out of there alive. Another camp torn to shreds by a unstoppable Horde. So many killed...so many screams... No time to dwell on it now, you were able to grab a Bug Out Bag but its not safe to go through it here not if you want to live. Find or make a safe place to set up camp and go through your bag." 
-jzquest_StoryLinePt2,"1 Take a Breather"
+jzquest_StoryLinePt1Desc,"You barley made it out of there alive. Another camp torn to shreds by a unstoppable Horde. So many killed...so many screams... No time to dwell on it now, you were able to grab a Bug Out Bag but its not safe to go through it here, not if you want to live. Find or make a safe place to set up camp and go through your bag." 
+jzquest_StoryLinePt2,"1 Storyline Quest Pt2: Take a Breather"
 jzquest_StoryLinePt2Sub,"Find Your Walkie"
 jzquest_StoryLinePt2Desc,"Take a look and see if your Bug Out Bag has anything useful like a Walkie Talkie."
-jzquest_StoryLinePt3,"1 Back To Work"
+jzquest_StoryLinePt3,"1 Storyline Quest Pt3: Back To Work"
 jzquest_StoryLinePt3Sub,"Find some Batteries"
-jzquest_StoryLinePt3Desc,"Well you found a Walkie but its dead. You will need to find some good batteries to get the Walkie working if you ever want to find any other survivors."
-jzquest_StoryLinePt4,"1 Reaching Out"
+jzquest_StoryLinePt3Desc,"Well you found a Walkie but its dead. You will need to find some good C Batteries to get the Walkie working if you ever want to find any of the survivors from your camp."
+jzquest_StoryLinePt4,"1 Storyline Quest Pt4: Reaching Out"
 jzquest_StoryLinePt4Sub,"Walkie Communication"
-jzquest_StoryLinePt4Desc,"You snap the batteries in and it crackles to life. As you flip through the channels you start to hear conversation broken up with static. The batteries wont last long so you press the button " 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+jzquest_StoryLinePt4Desc,"You snap the batteries in and it crackles to life. As you flip through the channels you start to hear conversation broken up by static. You speak into the Walkie and a familiar female voice answers back. You can't believe it, it's the Doctor from your camp! You tell her you got away ok and ask how she is doing. She explains while running from the camp she ran into a Military Convoy that was headed to the CDC Headquarters and they offered her safety. As you listen you begin to notice the connection is getting weak and relies that the convoy must be moving out of range of the Walkie's. You tell the Doc you are losing her signal and a man gets on the line and tells you of a Radio Station in the Forest the convoy passed named Z103.4 Nav Radio, it should have the equipment to turn your Walkie into a Sat Phone and extend its range. He the tells you that 88.7 is the frequency you can reach them at at the CDC." 
+jzquest_StoryLinePt5,"1 Storyline Quest Pt5: Finding a Station"
+jzquest_StoryLinePt5Sub,"Crafting a Sat Phone"
+jzquest_StoryLinePt5Desc,"Now that you have the parts travel back to your base camp and craft and place the Sat Phone." 
+jzquest_StoryLinePt6,"1 Storyline Quest Pt6: Going Home"
+jzquest_StoryLinePt6Sub,"Collecting Gear"
+jzquest_StoryLinePt6Desc,"You dial in the frequency the man gave you and try to reach the Doctor. She lets you know that they arrived safely at the CDC but as they were traveling they saw a large Horde thats about to pass the CDC and heading your way. She says that she saw something strange in the Horde but not sure what it was. The Doc says the CDC has sub levels and that everyone is going underground till the Horde passes. She's asked you to get some tissue samples from the strange creatures she saw moving with the Horde. To do so you will need the Tissue Extractor from her old Med Bay at your old camp. She tells you to contact her after you have the samples" 
+jzquest_StoryLinePt7,"1 Storyline Quest Pt7: A Pound of Flesh"
+jzquest_StoryLinePt7Sub,"Collecting and Testing Samples"
+jzquest_StoryLinePt7Desc,"Now that you have the Extractor use it on dead Mutated Creatures during the Bloodmoon to gather Mutated Tissue Samples for the Doctor" 
+jzquest_StoryLinePt8,"1 Storyline Quest Pt8: Reporting In"
+jzquest_StoryLinePt8Sub,"Report the results"
+jzquest_StoryLinePt8Desc,"Report your success to the Doc" 
+jzquest_StoryLinePt9,"1 Storyline Quest Pt9: The Hospital"
+jzquest_StoryLinePt9Sub,"Test the Samples"
+jzquest_StoryLinePt9Desc,"You let the Doctor know you have the samples and she explains to you how to test the samples in the local Hospitals Lab. Travel there and find the Laboratory to test the samples. Then report back your findings." 
+jzquest_StoryLinePt10,"1 Storyline Quest Pt10: Reporting In"
+jzquest_StoryLinePt10Sub,"Report the results"
+jzquest_StoryLinePt10Desc,"Report your success to the Doc" 
+jzquest_StoryLinePt11,"1 Storyline Quest Pt11: A Strange Growth"
+jzquest_StoryLinePt11Sub,"Collect the samples"
+jzquest_StoryLinePt11Desc,"After you read her the results she sounds surprised of the findings and leaves for a few minutes to talk to the other scientist. When she returns she tells you the findings have created more questions than answers and more information is needed to explain them. The Doc tells you the Military informed her they saw some unusual plant growths near their original base and she ask you to travel the to burnt out section of the city and get some samples to test at the Hospital. Report back your findings" 
+jzquest_StoryLinePt12,"1 Storyline Quest Pt12: Reporting In"
+jzquest_StoryLinePt12Sub,"Report the results"
+jzquest_StoryLinePt12Desc,"Report your success to the Doc" 
+jzquest_StoryLinePt13,"1 Storyline Quest Pt13: Red Skies at Night"
+jzquest_StoryLinePt13Sub,"Gather more samples "
+jzquest_StoryLinePt13Desc,"When you get in touch with the Doctor to tell her about the findings you notice she sounds like she is getting sick. She says that the flu is spreading through the CDC and many are sick but that the doctors have it under control. She lets you know their scouts have spotted another large horde coming their way and they will be locking up underground until it passes. The Doc tells you the Scientist have an idea but need fresh samples from the mutant creatures in the Hordes to test it. Collect some Mutated Tissue Samples and contact her after the Horde has passes." 
+jzquest_StoryLinePt14,"1 Storyline Quest Pt14: Reporting In"
+jzquest_StoryLinePt14Sub,"Report back"
+jzquest_StoryLinePt14Desc,"Report your success to the Doc" 
+jzquest_StoryLinePt15,"1 Storyline Quest Pt15: Let it Snow"
+jzquest_StoryLinePt15Sub,"Find a Security Card" 
+jzquest_StoryLinePt15Desc,"When you call back to report your success a Soldier tells you that the Doctor is sick with the flu like the others and is resting. He tells you they might have an idea where this all started. He tells you that there is a secret underground Military base in the burnt section that they lost contact with a few days before the zombies started showing up. He lets you know you will need a Security Card to access any of the computers and tells you he has a friend that works there that left to go to a Hunting Lodge in the snow just before the base went dark. He should have a Card" 
+jzquest_StoryLinePt16,"1 Storyline Quest Pt16: Belly of the Beast"
+jzquest_StoryLinePt16Sub,"Learn the Truth" 
+jzquest_StoryLinePt16Desc,"Now that you have the Security Card find the Military base in the Burnt Biome and make your way to the bottom test lab and into the Security Room to use the Security Card and learn what happened there" 
+jzquest_StoryLinePt17,"1 Storyline Quest Pt17: The Beginning"
+jzquest_StoryLinePt17Sub,"Report what you have learned" 
+jzquest_StoryLinePt17Desc,"You click on the last recording. Nights Vail Testing flashes in the upper corner of the screen. You see a group of Scientists gathered around a couch sized machine conducting an experiment. As the machine starts, wind appears to move papers around the room and a small ball of electricity begins to form growing to about the size of a beach ball. The Scientists begin to get animated and you see them trying to yal to each other above the noise of the device. The machine begins to smoke and the electric ball appears to explode.The video goes black then comes back on with the camera on the ground facing the back exit.You see the scientist get to their feet looking in fear in the direction of the machine. As they try to open the exit a grotesque foot lands in front of the camera and then a mutated creature comes into view attacking and killing all the scientist in seconds before another foot steps in front of the camera then the video goes to static. " 
 
 
 

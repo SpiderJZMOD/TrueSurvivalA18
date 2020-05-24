@@ -20164,7 +20164,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
 		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
-		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkDeadEye"/> <!-- random DegMax -->
 		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/> <!-- random APM -->
 		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/> <!-- random WeaponHandling -->
 
@@ -20194,8 +20193,8 @@ perkNightStalkerSilentNight
 		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="50"/>
 		<passive_effect name="WeaponHandling" operation="base_set" value=".65"/>
 
-		<passive_effect name="DegradationMax" operation="base_set" value="170,320" tier="1,6" tags="perkDeadEye"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeadEye"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="100,300" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="4,12" tier="1,6"/>
 	</effect_group>
 </item>
 
@@ -29961,6 +29960,104 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterItem"/>
 	<property name="Stacknumber" value="1" />
 	<property name="CustomIcon" value="jz_SateliteRadio"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QI887Frequency">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QI934Frequency">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QI1065Frequency">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QI865Frequency">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QI9885Frequency">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QI1079Frequency">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QITissueExtractor">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QIMutatedTissueSample">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QIMutatedTissueReport">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QIMutatedFungusSample">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QIMutatedFungusReport">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QIMutatedTissueSample2">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QIMilitarySecurityCard">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
+	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+</item>
+
+<item name="jz_QIMilitarySecurityCardA">
+	<property name="Extends" value="jz_MasterItem"/>
+	<property name="Stacknumber" value="1" />
+	<property name="CustomIcon" value="resourcePaper"/>
 	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
 </item>
 

@@ -33634,9 +33634,83 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="jz_QISateliteRadio" count="1"  prob="1" tag="ToolScrewdriver"/>
 </block>
 
+<block name="jz_QISatRadioStation">
+    <property name="Class" value="Campfire" />
+	<property name="Material" value="Mplastics"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZSatelite.unity3d?SatelitePrefab" />
+	<property name="CanPickup" value="false" />
+	<property name="CustomIcon" value="ui_game_symbol_stoneMill" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="Collide" value="melee,bullet,arrow,rocket" />
+	<property name="IsTerrainDecoration" value="true" />
+	<property name="Stacknumber" value="1" />
+	<property name="HeatMapStrength" value="0" />
+	<property name="HeatMapTime" value="0" />
+	<property name="MaxDamage" value="5000" />
+	<property class="Workstation">
+		<property name="Modules" value="output,input" />
+	</property>
+	<property class="RepairItems">
+		<property name="resourceRockSmall" value="1" />
+	</property>
+	<drop event="Destroy" count="0" />
+	<property name="Group" value="Food/Cooking" />
+	<property name="DescriptionKey" value="jz_QISatRadioStationDesc" />
+	<property name="SellableToTrader" value="false" />
+</block>
 
+<block name="jz_QIHospitalLabStation">
+    <property name="Class" value="Campfire" />
+	<property name="Material" value="Mplastics"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZSatelite.unity3d?SatelitePrefab" />
+	<property name="CanPickup" value="false" />
+	<property name="CustomIcon" value="ui_game_symbol_stoneMill" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="Collide" value="melee,bullet,arrow,rocket" />
+	<property name="IsTerrainDecoration" value="true" />
+	<property name="Stacknumber" value="1" />
+	<property name="HeatMapStrength" value="0" />
+	<property name="HeatMapTime" value="0" />
+	<property name="MaxDamage" value="5000" />
+	<property class="Workstation">
+		<property name="Modules" value="output,input" />
+	</property>
+	<property class="RepairItems">
+		<property name="resourceRockSmall" value="1" />
+	</property>
+	<drop event="Destroy" count="0" />
+	<property name="Group" value="Food/Cooking" />
+	<property name="DescriptionKey" value="jz_QISatRadioStationDesc" />
+	<property name="SellableToTrader" value="false" />
+</block>
 
-
+<block name="jz_QIMilitarySecurityStation">
+    <property name="Class" value="Campfire" />
+	<property name="Material" value="Mplastics"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZSatelite.unity3d?SatelitePrefab" />
+	<property name="CanPickup" value="false" />
+	<property name="CustomIcon" value="ui_game_symbol_stoneMill" />
+	<property name="Place" value="TowardsPlacerInverted" />
+	<property name="Collide" value="melee,bullet,arrow,rocket" />
+	<property name="IsTerrainDecoration" value="true" />
+	<property name="Stacknumber" value="1" />
+	<property name="HeatMapStrength" value="0" />
+	<property name="HeatMapTime" value="0" />
+	<property name="MaxDamage" value="5000" />
+	<property class="Workstation">
+		<property name="Modules" value="output,input" />
+	</property>
+	<property class="RepairItems">
+		<property name="resourceRockSmall" value="1" />
+	</property>
+	<drop event="Destroy" count="0" />
+	<property name="Group" value="Food/Cooking" />
+	<property name="DescriptionKey" value="jz_QISatRadioStationDesc" />
+	<property name="SellableToTrader" value="false" />
+</block>
 
 
 

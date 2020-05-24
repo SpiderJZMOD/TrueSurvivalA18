@@ -4,11 +4,11 @@
 		<property name="group_name_key" value="quest_BasicSurvival" />
 		<property name="name_key" value="jzquest_Starting" />
 		<property name="subtitle_key" value="jzquest_Starting" />
-		<property name="description_key" value="jzquest_StartingDesc" />
+		<property name="description_key" value="tutorialTipQuest01" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
-		<property name="offer_key" value="quest_BasicSurvival_offer" />
+		<property name="offer_key" value="jzquest_Opening" />
 		<property name="shareable" value="false" />
 		<action type="ShowTip" value="tutorialTipQuest02" />
 		<action type="TrackQuest" />
@@ -125,9 +125,10 @@
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
-			<objective type="BlockPlace" id="bedroll" value="1" phase="1" />
-			<objective type="BlockPlace" id="jz_StorageSack" value="1" phase="1" />
-			<objective type="BlockPlace" id="campfire" value="1" phase="1" />
+		
+        <objective type="BlockPlace" id="bedroll" value="1" phase="1" />
+		<objective type="BlockPlace" id="jz_StorageSack" value="1" phase="1" />
+		<objective type="BlockPlace" id="campfire" value="1" phase="1" />
 		
 		<reward type="Item" id="jz_QIBugOutBag" value="1" />
 		<reward type="Quest" id="jzquest_StoryLinePt2" />
@@ -140,7 +141,8 @@
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
-			<objective type="FetchKeep" id="jz_QIDeadWalkieTalkie" value="1" phase="1"/>
+		
+        <objective type="FetchKeep" id="jz_QIDeadWalkieTalkie" value="1" phase="1"/>
 		
 		<reward type="Recipe" id="jz_QIGoodWalkieTalkie" />
 		<reward type="Quest" id="jzquest_StoryLinePt3" />
@@ -153,7 +155,8 @@
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
-		<objective type="Craft">
+		
+        <objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="jz_QIGoodWalkieTalkie" />
 			<property name="count" value="1" />
@@ -169,9 +172,228 @@
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
 		<property name="shareable" value="false" />
-			<objective type="FetchKeep" id="jz_TraitRefundSlowDriver" value="1" phase="1"/>
 		
-		<reward type="Item" id="jz_QIBugOutBag" value="1" />
+        <objective type="FetchKeep" id="jz_QISateliteRadio" value="1" phase="1"/>
+		
+        <reward type="Recipe" id="jz_QISatRadioStation" />
+        <reward type="Recipe" id="jz_QI887Frequency" />
+        <reward type="Quest" id="jzquest_StoryLinePt5" />
+	</quest>
+    <quest id="jzquest_StoryLinePt5">
+		<property name="name_key" value="jzquest_StoryLinePt5" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt5Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt5Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+             
+		<objective type="FetchKeep" id="jz_QISatRadioStation" value="1" phase="1"/>
+        <objective type="BlockPlace" id="jz_QISatRadioStation" value="1" phase="1" />
+        <objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_QI887Frequency" />
+			<property name="count" value="1" />
+		</objective>
+        
+        <reward type="Quest" id="jzquest_StoryLinePt6" />
+	</quest>
+    <quest id="jzquest_StoryLinePt6">
+		<property name="name_key" value="jzquest_StoryLinePt6" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt6Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt6Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+             
+		<objective type="FetchKeep" id="jz_QITissueExtractor" value="1" phase="1"/>
+        
+        <reward type="Recipe" id="jz_QISatRadioStation" />        
+        <reward type="Quest" id="jzquest_StoryLinePt7" />
+	</quest>
+    <quest id="jzquest_StoryLinePt7">
+		<property name="name_key" value="jzquest_StoryLinePt7" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt7Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt7Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+             
+		<objective type="FetchKeep" id="jz_QIMutatedTissueSample" value="10" phase="1"/>
+            
+        <reward type="Recipe" id="jz_QI934Frequency" />       
+        <reward type="Quest" id="jzquest_StoryLinePt8" />
+	</quest>
+    <quest id="jzquest_StoryLinePt8">
+		<property name="name_key" value="jzquest_StoryLinePt8" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt8Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt8Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+             
+		<objective type="Craft">
+            <property name="phase" value="1" />
+            <property name="item" value="jz_QI934Frequency" />
+            <property name="count" value="1" />
+		</objective>
+        
+        <reward type="Recipe" id="jz_QIMutatedTissueReport" />       
+        <reward type="Quest" id="jzquest_StoryLinePt9" />
+	</quest>
+    <quest id="jzquest_StoryLinePt9">
+		<property name="name_key" value="jzquest_StoryLinePt9" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt9Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt9Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+             
+		<objective type="Craft">
+            <property name="phase" value="1" />
+            <property name="item" value="jz_QIMutatedTissueReport" />
+            <property name="count" value="1" />
+        </objective>
+        
+        <reward type="Recipe" id="jz_QI1065Frequency" />       
+        <reward type="Quest" id="jzquest_StoryLinePt10" />
+	</quest>
+     <quest id="jzquest_StoryLinePt10">
+		<property name="name_key" value="jzquest_StoryLinePt10" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt10Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt10Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+            
+        <objective type="Craft">
+            <property name="phase" value="1" />
+            <property name="item" value="jz_QI1065Frequency" />
+            <property name="count" value="1" />
+        </objective>
+        
+        <reward type="Recipe" id="jz_QIMutatedFungusReport" />       
+        <reward type="Quest" id="jzquest_StoryLinePt11" />
+	</quest>
+    <quest id="jzquest_StoryLinePt11">
+		<property name="name_key" value="jzquest_StoryLinePt11" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt11Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt11Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+            
+        <objective type="FetchKeep" id="jz_QIMutatedFungusSample" value="10" phase="1"/>
+        <objective type="Craft">
+            <property name="phase" value="2" />
+            <property name="item" value="jz_QIMutatedFungusReport" />
+            <property name="count" value="1" />
+		</objective>
+       			
+        <reward type="Recipe" id="jz_QI865Frequency" />       
+        <reward type="Quest" id="jzquest_StoryLinePt12" />
+	</quest>
+    <quest id="jzquest_StoryLinePt12">
+		<property name="name_key" value="jzquest_StoryLinePt12" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt12Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt12Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+            
+        <objective type="Craft">
+            <property name="phase" value="1" />
+            <property name="item" value="jz_QI865Frequency" />
+            <property name="count" value="1" />
+		</objective>
+       			
+        <reward type="Quest" id="jzquest_StoryLinePt13" />
+	</quest>
+     <quest id="jzquest_StoryLinePt13">
+		<property name="name_key" value="jzquest_StoryLinePt13" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt13Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt13Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+            
+        <objective type="FetchKeep" id="jz_QIMutatedTissueSample2" value="1" phase="1"/>
+            			
+        <reward type="Recipe" id="jz_QI9885Frequency" />       
+        <reward type="Quest" id="jzquest_StoryLinePt14" />
+	</quest>
+    <quest id="jzquest_StoryLinePt14">
+		<property name="name_key" value="jzquest_StoryLinePt14" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt14Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt14Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+       
+        <objective type="Craft">
+            <property name="phase" value="1" />
+            <property name="item" value="jz_QI9885Frequency" />
+            <property name="count" value="1" />
+		</objective>
+       			
+        <reward type="Quest" id="jzquest_StoryLinePt15" />
+	</quest>
+     <quest id="jzquest_StoryLinePt15">
+		<property name="name_key" value="jzquest_StoryLinePt15" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt15Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt15Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+       
+        <objective type="FetchKeep" id="jz_QIMilitarySecurityCard" value="1" phase="1"/>
+       	
+        <reward type="Recipe" id="jz_QIMilitarySecurityCardA" />    
+        <reward type="Quest" id="jzquest_StoryLinePt16" />
+	</quest>
+    <quest id="jzquest_StoryLinePt16">
+		<property name="name_key" value="jzquest_StoryLinePt16" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt16Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt16Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+       
+        <objective type="Craft">
+            <property name="phase" value="1" />
+            <property name="item" value="jz_QIMilitarySecurityCardA" />
+            <property name="count" value="1" />
+		</objective>
+       	
+        <reward type="Recipe" id="jz_QI1079Frequency" />
+        <reward type="Quest" id="jzquest_StoryLinePt17" />
+	</quest>
+    <quest id="jzquest_StoryLinePt17">
+		<property name="name_key" value="jzquest_StoryLinePt17" />
+		<property name="subtitle_key" value="jzquest_StoryLinePt17Sub" />
+		<property name="description_key" value="jzquest_StoryLinePt17Desc" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+       
+        <objective type="Craft">
+            <property name="phase" value="1" />
+            <property name="item" value="jz_QI1079Frequency" />
+            <property name="count" value="1" />
+		</objective>
+              
 	</quest>
 	<!-- JZMOD CRAFTING SKILLS -->
 	<quest id="jzquest_SlowDriverRefund">

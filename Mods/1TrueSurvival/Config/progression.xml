@@ -1885,7 +1885,7 @@
 	
 	<!-- ******************************************************************  Professions  ******************************************************************************** -->
 	<!-- Fire Fighter -->
-	<perk name="jz_FireFighter" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="1" name_key="Fire Fighter" desc_key="jz_FireFighterDesc" icon="ui_game_symbol_fire">
+	<perk name="jz_FireFighter" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Fire Fighter" desc_key="jz_FireFighterDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<requirement name="HoldingItemHasTags" tags="jz_FireFighterTag"/>
 				<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".2"/>

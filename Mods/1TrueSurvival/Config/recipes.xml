@@ -615,7 +615,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="jz_DrinkVeggieJuice" count="1" craft_time="20" craft_exp_gain="10">
-	<ingredient name="jz_FoodServingFruit" count="15" />
+	<ingredient name="jz_FoodServingVeggie" count="15" />
 </recipe>
 
 <recipe name="jz_DrinkFruitJuice" count="1" craft_time="20" craft_exp_gain="10" >
@@ -653,6 +653,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_FoodServingFruit" count="4" />
 </recipe>
 
+<recipe name="jz_CBatterie" count="2" craft_time="3" craft_exp_gain="0" >
+	<ingredient name="jz_ElectricBlackVibrator" count="1" />
+</recipe>
+
+<recipe name="jz_CBatterie" count="2" craft_time="3" craft_exp_gain="0" >
+	<ingredient name="meleeToolFlashlight02" count="1" />
+</recipe>
 <recipe name="mineCookingPot" count="1" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceScrapIron" count="10"/>
 	<ingredient name="resourceGunPowder" count="20"/>
@@ -2623,6 +2630,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_NutAndBolt" count="2" />
 </recipe>
 
+<recipe name="jz_QISatRadioStation" count="1" craft_area="workbench" craft_tool="jz_Screwdriver" craft_time="30" craft_exp_gain="500" tags="learnable" >
+	<ingredient name="jz_QIGoodWalkieTalkie" count="1"/>
+	<ingredient name="jz_QISateliteRadio" count="1"/>
+	<ingredient name="resourceElectricParts" count="5"/>
+    <ingredient name="resourceTechParts" count="5"/>
+    <ingredient name="jz_ScrapWire" count="5"/>
+</recipe>
 <!-- Chemistry Station Crafted ******************************************************************************************************************************************************* -->
 <recipe name="ammoGasCan" count="10" craft_area="chemistryStation" craft_tool="jz_LabEquipment" craft_time="1" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceOilShale" count="1"/>
@@ -3292,6 +3306,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <!-- Drying Rack Crafted ******************************************************************************************************************************************************* -->
+<recipe name="resourceLeather" count="1" craft_area="jz_DryingRack" craft_time="180" craft_exp_gain="0"  >
+	<ingredient name="jz_CuredLeather" count="1"/>
+</recipe>
+
 <recipe name="plantedAloe1" count="3" craft_area="jz_DryingRack" craft_time="60" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceCropAloeLeaf" count="1"/>
 </recipe>
@@ -4231,5 +4249,36 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_SkillPaper" count="5" />
 	<ingredient name="jz_InkPen" count="1" />
 </recipe>
+<!-- QISatRadio Crafted ******************************************************************************************************************************************************* -->
+<recipe name="jz_QI887Frequency" count="1" craft_area="jz_QISatRadioStation" craft_time="1" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourcePaper" count="1"/>
+</recipe>
+<recipe name="jz_QI934Frequency" count="1" craft_area="jz_QISatRadioStation" craft_time="1" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourcePaper" count="1"/>
+</recipe>
+<recipe name="jz_QI1065Frequency" count="1" craft_area="jz_QISatRadioStation" craft_time="1" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourcePaper" count="1"/>
+</recipe>
+<recipe name="jz_QI865Frequency" count="1" craft_area="jz_QISatRadioStation" craft_time="1" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourcePaper" count="1"/>
+</recipe>
+<recipe name="jz_QI9885Frequency" count="1" craft_area="jz_QISatRadioStation" craft_time="1" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourcePaper" count="1"/>
+</recipe>
+<recipe name="jz_QI1079Frequency" count="1" craft_area="jz_QISatRadioStation" craft_time="1" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="resourcePaper" count="1"/>
+</recipe>
+<!-- QIHospitalLabStation Crafted ******************************************************************************************************************************************************* -->
+<recipe name="jz_QIMutatedTissueReport" count="1" craft_area="jz_QIHospitalLabStation" craft_time="1" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="jz_QIMutatedTissueSample" count="10"/>
+</recipe>
+<recipe name="jz_QIMutatedFungusReport" count="1" craft_area="jz_QIHospitalLabStation" craft_time="1" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="jz_QIMutatedFungusSample" count="10"/>
+</recipe>
+<!-- QIMilitarySecurityStation Crafted ******************************************************************************************************************************************************* -->
+<recipe name="jz_QIMilitarySecurityCardA" count="1" craft_area="jz_QIMilitarySecurityStation" craft_time="1" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="jz_QIMilitarySecurityCard" count="1"/>
+</recipe>
+
 </set>
 </configs> 
