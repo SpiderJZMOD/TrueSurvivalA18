@@ -102,7 +102,7 @@
 		</attribute>
 	<attribute name="PositiveTraits" name_key="Positive Player Traits" desc_key="jz_PosTraitsDesc" icon="ui_game_symbol_add">
 		<effect_group>
-			<effect_description level="1" desc_key="jz_PositiveTraitsDesc" long_desc_key="jz_PositiveTraitsLongDesc"/>
+			<effect_description level="1" desc_key="jz_PosTraitsDesc" long_desc_key="jz_PosTraitsDesc"/>
 		</effect_group>
 		</attribute>
 	<attribute name="NegativeTraits" name_key="Negative Player Traits" desc_key="jz_NegativeTraitsDesc" icon="ui_game_symbol_subtract" >
@@ -112,12 +112,12 @@
 		</attribute>
 	<attribute name="Schematics" name_key="Schematics" desc_key="jz_SchematicsDesc" icon="ui_game_symbol_book_read" >
 		<effect_group>
-			<effect_description level="1" desc_key="jz_SchematicsDesc" long_desc_key="jz_SchematicsLongDesc"/>
+			<effect_description level="1" desc_key="jz_SchematicsDesc" long_desc_key="jz_SchematicsDesc"/>
 		</effect_group>
 		</attribute>
 	<attribute name="Miscellaneous" name_key="Miscellaneous" desc_key="jz_OtherDesc" icon="ui_game_symbol_bundle" >
 		<effect_group>
-			<effect_description level="1" desc_key="jz_OtherDesc" long_desc_key="jz_OtherLongDesc"/>
+			<effect_description level="1" desc_key="jz_OtherDesc" long_desc_key="jz_OtherDesc"/>
 		</effect_group>
 		</attribute>
 	<attribute name="attBooks" name_key="attBooks" desc_key="attBooks" icon="ui_game_symbol_book" />
@@ -2386,12 +2386,12 @@
 		</effect_group>
 	</perk>
 	<!-- ******************************************************************  Negative Traits  ******************************************************************************** -->
-	<perk name="jz_TraitSlowDriver" parent="NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sunday Driver" desc_key="jz_TraitSlowDriverDesc" icon="ui_game_symbol_drive">
+	<perk name="jz_TraitSlowDriver" parent="NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sunday Driver" desc_key="jz_SlowDriverTraitDesc" icon="ui_game_symbol_drive">
 		<!--10% slower driver -->
 		<effect_group>
 			<passive_effect name="VehicleVelocityMaxPer" operation="perc_set" level="1" value=".9"/>
 			<passive_effect name="VehicleVelocityMaxTurboPer" operation="perc_set" level="1" value=".9"/>
-			<effect_description level="1" desc_key="jz_TraitSlowDriverDesc" long_desc_key="jz_TraitSlowDriverLongDesc"/>
+			<effect_description level="1" desc_key="jz_SlowDriverTraitDesc" long_desc_key="jz_TraitSlowDriverLongDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitSleepy" parent="NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sleepy" desc_key="jz_TraitSleepyDesc" icon="ui_game_symbol_stealth">
@@ -2400,13 +2400,13 @@
 			<effect_description level="1" desc_key="jz_TraitSleepyDesc" long_desc_key="jz_TraitSleepyDesc"/>
 		</effect_group>
 	</perk>
-	<perk name="jz_TraitClumsy" parent="NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Clumsy" desc_key="jz_TraitClumsyDesc" icon="ui_game_symbol_mining">
+	<perk name="jz_TraitClumsy" parent="NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Clumsy" desc_key="jz_NegativeTraitClumsyDesc" icon="ui_game_symbol_mining">
 		<!--10% more noise moving -->
 		<effect_group>
 			<passive_effect name="NoiseMultiplier" operation="perc_add" level="1" value=".1" />
 		</effect_group>
 		<effect_group>
-			<effect_description level="1" desc_key="jz_TraitClumsyDesc" long_desc_key="jz_TraitClumsyDesc"/>
+			<effect_description level="1" desc_key="jz_NegativeTraitClumsyDesc" long_desc_key="jz_NegativeTraitClumsyDesc"/>
 		</effect_group>
 	</perk>
 	<perk name="jz_TraitAllThumbs" parent="NegativeTraits" min_level="0" max_level="1" base_skill_point_cost="0" name_key="All Thumbs" desc_key="jz_TraitAllThumbsDesc" icon="ui_game_symbol_mining">
@@ -2554,137 +2554,137 @@
 	</perk>
 	<!-- ******************************************************************  JZMOD SCHEMATICS  ******************************************************************************** -->
 	<!-- AMMO -->
-	<perk name="SP_Ammo9mmBulletBallSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="9mm" desc_key="SP_Ammo9mmBulletBallSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_Ammo9mmBulletBallSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="9mm" desc_key="ammo9mmBulletBallDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo9mmBulletBall"/>
-			<effect_description level="1" desc_key="SP_Ammo9mmBulletBallSchematicDesc" long_desc_key="SP_Ammo9mmBulletBallSchematicDesc"/>
+			<effect_description level="1" desc_key="ammo9mmBulletBallDesc" long_desc_key="ammo9mmBulletBallDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_Ammo9mmBulletHPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="9mm HP" desc_key="SP_Ammo9mmBulletHPSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_Ammo9mmBulletHPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="9mm HP" desc_key="ammo9mmBulletBallDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo9mmBulletHP"/>
-			<effect_description level="1" desc_key="SP_Ammo9mmBulletHPSchematicDesc" long_desc_key="SP_Ammo9mmBulletHPSchematicDesc"/>
+			<effect_description level="1" desc_key="ammo9mmBulletBallDesc" long_desc_key="ammo9mmBulletBallDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_Ammo9mmBulletAPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="9mm AP" desc_key="SP_Ammo9mmBulletAPSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_Ammo9mmBulletAPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="9mm AP" desc_key="ammo9mmBulletBallDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo9mmBulletAP"/>
-			<effect_description level="1" desc_key="SP_Ammo9mmBulletAPSchematicDesc" long_desc_key="SP_Ammo9mmBulletAPSchematicDesc"/>
+			<effect_description level="1" desc_key="ammo9mmBulletBallDesc" long_desc_key="ammo9mmBulletBallDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_Ammo44MagnumBulletBallSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="44mm" desc_key="SP_Ammo44MagnumBulletBallSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_Ammo44MagnumBulletBallSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="44mm" desc_key="ammo44MagnumBulletBallDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo44MagnumBulletBall"/>
-			<effect_description level="1" desc_key="SP_Ammo44MagnumBulletBallSchematicDesc" long_desc_key="SP_Ammo44MagnumBulletBallSchematicDesc"/>
+			<effect_description level="1" desc_key="ammo44MagnumBulletBallDesc" long_desc_key="ammo44MagnumBulletBallDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_Ammo44MagnumBulletHPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="44mm HP" desc_key="SP_Ammo44MagnumBulletHPSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_Ammo44MagnumBulletHPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="44mm HP" desc_key="ammo44MagnumBulletBallDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo44MagnumBulletHP"/>
-			<effect_description level="1" desc_key="SP_Ammo44MagnumBulletHPSchematicDesc" long_desc_key="SP_Ammo44MagnumBulletHPSchematicDesc"/>
+			<effect_description level="1" desc_key="ammo44MagnumBulletBallDesc" long_desc_key="ammo44MagnumBulletBallDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_Ammo44MagnumBulletAPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="44mm AP" desc_key="SP_Ammo44MagnumBulletAPSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_Ammo44MagnumBulletAPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="44mm AP" desc_key="ammo44MagnumBulletBallDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo44MagnumBulletAP"/>
-			<effect_description level="1" desc_key="SP_Ammo44MagnumBulletAPSchematicDesc" long_desc_key="SP_Ammo44MagnumBulletAPSchematicDesc"/>
+			<effect_description level="1" desc_key="ammo44MagnumBulletBallDesc" long_desc_key="ammo44MagnumBulletBallDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_ammo762mmBulletBallSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="762mm" desc_key="SP_ammo762mmBulletBallSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_ammo762mmBulletBallSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="762mm" desc_key="ammo762mmBulletBallDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo762mmBulletBall"/>
-			<effect_description level="1" desc_key="SP_ammo762mmBulletBallSchematicDesc" long_desc_key="SP_ammo762mmBulletBallSchematicDesc"/>
+			<effect_description level="1" desc_key="ammo762mmBulletBallDesc" long_desc_key="ammo762mmBulletBallDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_Ammo762mmBulletHPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="762mm HP " desc_key="SP_Ammo762mmBulletHPSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_Ammo762mmBulletHPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="762mm HP " desc_key="ammo762mmBulletBallDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo762mmBulletHP"/>
-			<effect_description level="1" desc_key="SP_Ammo762mmBulletHPSchematicDesc" long_desc_key="SP_Ammo762mmBulletHPSchematicDesc"/>
+			<effect_description level="1" desc_key="ammo762mmBulletBallDesc" long_desc_key="ammo762mmBulletBallDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_Ammo762mmBulletAPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="762mm AP" desc_key="SP_Ammo762mmBulletAPSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_Ammo762mmBulletAPSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="762mm AP" desc_key="ammo762mmBulletBallDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo762mmBulletAP"/>
-			<effect_description level="1" desc_key="SP_Ammo762mmBulletAPSchematicDesc" long_desc_key="SP_Ammo762mmBulletAPSchematicDesc"/>
+			<effect_description level="1" desc_key="ammo762mmBulletBallDesc" long_desc_key="ammo762mmBulletBallDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_AmmoShotgunShellSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Shotgun Sell" desc_key="SP_AmmoShotgunShellSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_AmmoShotgunShellSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Shotgun Sell" desc_key="ammoShotgunShellDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoShotgunShell"/>
-			<effect_description level="1" desc_key="SP_AmmoShotgunShellSchematicDesc" long_desc_key="SP_AmmoShotgunShellSchematicDesc"/>
+			<effect_description level="1" desc_key="ammoShotgunShellDesc" long_desc_key="ammoShotgunShellDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_AmmoShotgunSlugSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Shotgun Slug" desc_key="SP_AmmoShotgunSlugSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_AmmoShotgunSlugSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Shotgun Slug" desc_key="ammoShotgunSlugDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoShotgunSlug"/>
-			<effect_description level="1" desc_key="SP_AmmoShotgunSlugSchematicDesc" long_desc_key="SP_AmmoShotgunSlugSchematicDesc"/>
+			<effect_description level="1" desc_key="ammoShotgunSlugDesc" long_desc_key="ammoShotgunSlugDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_AmmoShotgunBreachingSlugSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Shotgun Breaching Slug" desc_key="SP_AmmoShotgunBreachingSlugSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_AmmoShotgunBreachingSlugSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Shotgun Breaching Slug" desc_key="ammoShotgunBreachingSlugDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoShotgunBreachingSlug"/>
-			<effect_description level="1" desc_key="SP_AmmoShotgunBreachingSlugSchematicDesc" long_desc_key="SP_AmmoShotgunBreachingSlugSchematicDesc"/>
+			<effect_description level="1" desc_key="ammoShotgunBreachingSlugDesc" long_desc_key="ammoShotgunBreachingSlugDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_AmmoIronArrowSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Arrows" desc_key="SP_AmmoFlamingArrowSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_AmmoIronArrowSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Arrows" desc_key="resourceArrowHeadIronDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceArrowHeadIron"/>
-			<effect_description level="1" desc_key="SP_AmmoFlamingArrowSchematicDesc" long_desc_key="SP_AmmoFlamingArrowSchematicDesc"/>
+			<effect_description level="1" desc_key="resourceArrowHeadIronDesc" long_desc_key="resourceArrowHeadIronDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_AmmoSteelArrowSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Ateel Arrows" desc_key="SP_AmmoExplodingArrowSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_AmmoSteelArrowSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Ateel Arrows" desc_key="resourceArrowHeadSteelAPDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceArrowHeadSteelAP"/>
-			<effect_description level="1" desc_key="SP_AmmoExplodingArrowSchematicDesc" long_desc_key="SP_AmmoExplodingArrowSchematicDesc"/>
+			<effect_description level="1" desc_key="resourceArrowHeadSteelAPDesc" long_desc_key="resourceArrowHeadSteelAPDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_AmmoFlamingArrowSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Flaming Arrows" desc_key="SP_AmmoFlamingArrowSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_AmmoFlamingArrowSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Flaming Arrows" desc_key="ammoArrowFlamingDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoArrowFlaming,ammoCrossbowBoltFlaming"/>
-			<effect_description level="1" desc_key="SP_AmmoFlamingArrowSchematicDesc" long_desc_key="SP_AmmoFlamingArrowSchematicDesc"/>
+			<effect_description level="1" desc_key="ammoArrowFlamingDesc" long_desc_key="ammoArrowFlamingDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_AmmoExplodingArrowSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Exploding Arrows" desc_key="SP_AmmoExplodingArrowSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_AmmoExplodingArrowSchematic" parent="jz_AmmoSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Exploding Arrows" desc_key="ammoArrowExplodingDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoArrowExploding,ammoCrossbowBoltExploding"/>
-			<effect_description level="1" desc_key="SP_AmmoExplodingArrowSchematicDesc" long_desc_key="SP_AmmoExplodingArrowSchematicDesc"/>
+			<effect_description level="1" desc_key="ammoArrowExplodingDesc" long_desc_key="ammoArrowExplodingDesc"/>
 		</effect_group>
 	</perk>
 
 	<!-- ARCHERY -->
-	<perk name="SP_BowWoodenSchematic" parent="jz_ArcherySchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Wooden Bow" desc_key="SP_BowWoodenSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_BowWoodenSchematic" parent="jz_ArcherySchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Wooden Bow" desc_key="gunBowWoodenDesc" icon="ui_game_symbol_fire">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunBowWooden,resourceArrowHeadIron"/>
-			<effect_description level="1" desc_key="SP_BowWoodenSchematicDesc" long_desc_key="SP_BowWoodenSchematicDesc"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunBowWooden"/>
+			<effect_description level="1" desc_key="gunBowWoodenDesc" long_desc_key="gunBowWoodenDesc"/>
 		</effect_group>
 	</perk>
 	
-	<perk name="SP_BowCompoundSchematic" parent="jz_ArcherySchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Compound Bow" desc_key="SP_BowCompoundSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_BowCompoundSchematic" parent="jz_ArcherySchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Compound Bow" desc_key="gunBowCompoundDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunBowCompound"/>
-			<effect_description level="1" desc_key="SP_BowCompoundSchematicDesc" long_desc_key="SP_BowCompoundSchematicDesc"/>
+			<effect_description level="1" desc_key="gunBowCompoundDesc" long_desc_key="gunBowCompoundDesc"/>
 		</effect_group>
 	</perk>
 	
 	<perk name="SP_CrossbowIronSchematic" parent="jz_ArcherySchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Crossbow" desc_key="SP_CrossbowIronSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="gunCrossbowIron,jz_PartsCrossbowStock,jz_PartsCrossbowLimb"/>
-			<effect_description level="1" desc_key="SP_CrossbowIronSchematicDesc" long_desc_key="SP_CrossbowIronSchematicDesc"/>
+			<effect_description level="1" desc_key="gunCrossbowIronDesc" long_desc_key="gunCrossbowIronDesc"/>
 		</effect_group>
 	</perk>
 	
@@ -2695,10 +2695,10 @@
 		</effect_group>
 	</perk>
 	<!-- ARMOR -->
-	<perk name="SP_LeatherSetSchematic" parent="jz_ArmorSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Leather Armor Set" desc_key="SP_LeatherSetSchematicDesc" icon="ui_game_symbol_fire">
+	<perk name="SP_LeatherSetSchematic" parent="jz_ArmorSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Leather Armor Set" desc_key="armorLeatherSetSchematic" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots"/>
-			<effect_description level="1" desc_key="SP_LeatherSetSchematicDesc" long_desc_key="SP_LeatherSetSchematicDesc"/>
+			<effect_description level="1" desc_key="armorLeatherSetSchematic" long_desc_key="armorLeatherSetSchematic"/>
 		</effect_group>
 	</perk>
 	
@@ -4283,7 +4283,7 @@
 			<effect_description level="1" desc_key="jz_StoneBuildingSkillRank1Desc" long_desc_key="jz_StoneBuildingSkillRank1LongDesc"/>
 			<effect_description level="2" desc_key="jz_StoneBuildingSkillRank2Desc" long_desc_key="jz_StoneBuildingSkillRank2LongDesc"/>
 			<effect_description level="3" desc_key="jz_StoneBuildingSkillRank3Desc" long_desc_key="jz_StoneBuildingSkillRank3LongDesc"/>
-			<effect_description level="3" desc_key="jz_StoneBuildingSkillRank4Desc" long_desc_key="jz_StoneBuildingSkillRank4LongDesc"/>
+			<effect_description level="4" desc_key="jz_StoneBuildingSkillRank4Desc" long_desc_key="jz_StoneBuildingSkillRank4LongDesc"/>
 		</effect_group>
 	</perk>
 	<!-- Iron Frame Building-->
@@ -4461,6 +4461,11 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Small Game!"/>
 		</effect_group>
+        <effect_group>
+			<effect_description level="1" desc_key="jz_SmallGameHunterRank1Desc" long_desc_key="jz_SmallGameHunterRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_SmallGameHunterRank2Desc" long_desc_key="jz_SmallGameHunterRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_SmallGameHunterRank3Desc" long_desc_key="jz_SmallGameHunterRank3LongDesc"/>
+		</effect_group>
 	</perk>
     
     <!--Large Game Hunting Skill-->
@@ -4498,6 +4503,11 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_LargeGameSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Large Game!"/>
+		</effect_group>
+        <effect_group>
+			<effect_description level="1" desc_key="jz_LargeGameHunterRank1Desc" long_desc_key="jz_LargeGameHunterRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_LargeGameHunterRank2Desc" long_desc_key="jz_LargeGameHunterRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_LargeGameHunterRank3Desc" long_desc_key="jz_LargeGameHunterRank3LongDesc"/>
 		</effect_group>
 	</perk>
     
@@ -4537,6 +4547,11 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Small Predators!"/>
 		</effect_group>
+        <effect_group>
+			<effect_description level="1" desc_key="jz_SmallPredGameHunterRank1Desc" long_desc_key="jz_SmallPredGameHunterRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_SmallPredGameHunterRank2Desc" long_desc_key="jz_SmallPredGameHunterRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_SmallPredGameHunterRank3Desc" long_desc_key="jz_SmallPredGameHunterRank3LongDesc"/>
+		</effect_group>
 	</perk>
     
     <!--Large Predator Hunting Skill-->
@@ -4574,6 +4589,11 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="jz_LargePredGameSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Large Predators!"/>
+		</effect_group>
+        <effect_group>
+			<effect_description level="1" desc_key="jz_LargePredGameHunterRank1Desc" long_desc_key="jz_LargePredGameHunterRank1LongDesc"/>
+			<effect_description level="2" desc_key="jz_LargePredGameHunterRank2Desc" long_desc_key="jz_LargePredGameHunterRank2LongDesc"/>
+			<effect_description level="3" desc_key="jz_LargePredGameHunterRank3Desc" long_desc_key="jz_LargePredGameHunterRank3LongDesc"/>
 		</effect_group>
 	</perk>
 
