@@ -265,8 +265,40 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_OldRevolver" count="1"/>
 </recipe> 
 
-<recipe name="jz_PartsOldRifleBarrel" count="1" craft_time="15" craft_exp_gain="50">
+<recipe name="jz_OldMilkJub" count="1" craft_time="3" craft_exp_gain="0">
+	<ingredient name="resourceScrapPolymers" count="10"/>
+</recipe> 
+
+<recipe name="jz_PartsCraftedRevolverFrame" count="1" craft_time="30" craft_exp_gain="50">
+	<ingredient name="jz_OldRevolver" count="1"/>
+</recipe> 
+
+<recipe name="jz_PartsCraftedRevolverBarrel" count="1" craft_time="30" craft_exp_gain="50">
+	<ingredient name="jz_OldRevolver" count="1"/>
+</recipe> 
+
+<recipe name="jz_PartsCraftedRevolverBarrel" count="1" craft_time="30" craft_exp_gain="50">
+	<ingredient name="resourceMetalPipe" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsOldRifleBarrel" count="1" craft_time="30" craft_exp_gain="50">
 	<ingredient name="jz_OldRifle" count="1"/>
+</recipe>
+
+<recipe name="jz_PartsOldRifleBarrel" count="1" craft_time="30" craft_exp_gain="50">
+	<ingredient name="jz_SteelPipe" count="1"/>
+</recipe> 
+
+<recipe name="jz_PartsCraftedRifleReceiver" count="1" craft_time="30" craft_exp_gain="50">
+	<ingredient name="jz_OldRifle" count="1"/>
+</recipe> 
+
+<recipe name="jz_PartsCraftedRifleStock" count="1" craft_time="30" craft_exp_gain="50">
+	<ingredient name="jz_OldRifle" count="1"/>
+</recipe> 
+
+<recipe name="jz_PartsCraftedRifleStock" count="1" craft_time="30" craft_exp_gain="50">
+	<ingredient name="jz_Plank" count="1"/>
 </recipe> 
 
 <recipe name="meleeToolKnifeBone" count="1" craft_time="30" craft_exp_gain="5" tags="jz_BoneKnifeCraftingTag">
@@ -790,8 +822,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_DrinkDirtyOuncesOfWater" count="16"/>
 </recipe>
 
-<recipe name="jz_DrinkCleanOuncesOfWater" count="16" craft_area="campfire" craft_tool="toolCookingPot" craft_time="10" craft_exp_gain="0" >
-	<ingredient name="jz_DrinkDrityDrinkOfWater" count="1"/>
+<recipe name="jz_DrinkCleanOuncesOfWater" count="128" craft_area="campfire" craft_tool="toolCookingPot" craft_time="120" craft_exp_gain="0" >
+	<ingredient name="jz_GallonOfDrityRiverWater" count="1"/>
+    <ingredient name="resourceCloth" count="1"/>
+    <ingredient name="resourceCrushedSand" count="1"/>
 </recipe>
 
 <recipe name="jz_Bricks" craft_area="campfire" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
@@ -1259,7 +1293,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 
 <recipe name="ammoBundleArrowIron" count="1" craft_area="workbench" craft_time="1" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="resourceArrowHeadIron" count="80"/>
-	<ingredient name="resourceWood" count="80"/>
+	<ingredient name="jz_Stick" count="80"/>
 	<ingredient name="resourceFeather" count="80"/>
 </recipe>
 
@@ -2423,7 +2457,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="tripwirepost" count="1" craft_area="workbench" >
-	<ingredient name="resourceWood" count="5"/>
+	<ingredient name="jz_Plank" count="5"/>
 	<ingredient name="resourceElectricParts" count="1"/>
 </recipe>
 

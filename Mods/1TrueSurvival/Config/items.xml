@@ -23237,7 +23237,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Weight" value="10"/>
 	<property name="EconomicValue" value="6"/>
 	<property name="CraftingIngredientTime" value="9"/>
-	<property class="Action1"> <!-- UseAction -->
+	<!--<property class="Action1">
 		<property name="Class" value="ExchangeItem"/>
 		<property name="Delay" value="1.0"/>
 		<property name="Change_item_to" value="jz_DrinkDrityDrinkOfWater"/> 
@@ -23248,7 +23248,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<property name="Focused_blockname_4" value="waterMovingBucket"/>
 		<property name="Focused_blockname_5" value="terrWaterPOI"/>
 		<property name="Sound_start" value="bucketfill_water"/>
-	</property>
+	</property>-->
 	<property name="Group" value="Resources"/>
 </item>
 
@@ -30159,5 +30159,40 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
+<item name="jz_OldMilkJub">
+	<property name="HoldType" value="3"/>
+	<property name="Meshfile" value="#Other/Items?Food/emptyJarPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mplastics"/>
+	<property name="Stacknumber" value="1"/> <!-- STK resource -->
+	<property name="EconomicValue" value="0"/>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="ExchangeItem"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Change_item_to" value="jz_GallonOfDrityRiverWater"/> 
+		<property name="Do_block_action" value="deplete1"/>
+		<property name="Focused_blockname_1" value="water"/>
+		<property name="Focused_blockname_2" value="waterMoving"/>
+		<property name="Focused_blockname_3" value="waterStaticBucket"/>
+		<property name="Focused_blockname_4" value="waterMovingBucket"/>
+		<property name="Focused_blockname_5" value="terrWaterPOI"/>
+		<property name="Sound_start" value="bucketfill_water"/>
+	</property>
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="jz_GallonOfDrityRiverWater">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="CustomIcon" value="ui_game_symbol_plasticLegos" />
+	<property name="DescriptionKey" value="jz_PlasticJunkDesc" />
+	<property name="Material" value="Mplastics" />
+	<property name="Stacknumber" value="1" />
+</item>
+
+<item name="jz_CantRepair">
+	<property name="Extends" value="jz_MasterItem" />
+	<property name="CustomIcon" value="NoRepair" />
+    <property name="RepairAmount" value="1" />
+</item>
 </set>
 </configs> 
