@@ -660,6 +660,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="jz_CBatterie" count="2" craft_time="3" craft_exp_gain="0" >
 	<ingredient name="meleeToolFlashlight02" count="1" />
 </recipe>
+
 <recipe name="mineCookingPot" count="1" craft_time="4" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceScrapIron" count="10"/>
 	<ingredient name="resourceGunPowder" count="20"/>
@@ -667,6 +668,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceDuctTape" count="2"/>
 </recipe>
 
+<recipe name="resourceRepairKit" count="1" craft_time="4" craft_exp_gain="5"  >
+	<ingredient name="resourceGlue" count="1"/>
+	<ingredient name="resourceDuctTape" count="1"/>
+</recipe>
 <!-- Campfire Crafted ******************************************************************************************************************************************************* -->
 <recipe name="drugHerbalAntibiotics" count="1" craft_area="campfire" craft_tool="jz_MortarAndPestle" craft_time="4" craft_exp_gain="20" tags="learnable">
 	<ingredient name="foodCropMushrooms" count="3"/>
@@ -2662,7 +2667,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_NutAndBolt" count="2" />
 </recipe>
 
-<recipe name="jz_ArmorTable" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" tags="learnable">
+<recipe name="jz_ArmorTable" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" >
 	<ingredient name="jz_Plank" count="50" />
 	<ingredient name="resourceNail" count="20" />
 </recipe>

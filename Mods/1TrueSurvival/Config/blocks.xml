@@ -30318,6 +30318,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="woodFrameBlock" />
 	<property name="Mesh" value="opaque"/>
 	<property name="Shape" value="New"/>
+    <property name="CanPickup" value="true" param1="jz_FlagstoneFrameBlock"/>
 	<property name="Model" value="cube_frame"/>
 	<property name="SortOrder2" value="0050"/> <!-- SortShape -->
 	<property name="Path" value="solid"/>
@@ -31304,8 +31305,8 @@ NOT the TextureNumber.
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<drop event="Harvest" name="goreBlockHumanBones" count="0" tool_category="Butcher"/>
-	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="2,4" tag="butcherHarvest"/>
-	<drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/>
+	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="1,3" tag="butcherHarvest"/>
+	<drop event="Destroy" name="resourceBone" count="2,6" tag="butcherHarvest"/>
 	<property name="DescriptionKey" value="decorativeBlockGroupDesc"/>
 	<property name="FilterTags" value="fdecor,fother"/>
 </block>

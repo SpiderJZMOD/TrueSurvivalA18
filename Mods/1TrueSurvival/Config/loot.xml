@@ -2931,6 +2931,13 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 	<item name="jz_OldKnife" count="1" />
 </lootgroup>
 
+<lootgroup name="WorkingVehiclePlaceable" >
+	<item name="vehicleMinibikePlaceable" count="50" />
+	<item name="vehicleBicyclePlaceable" count="35" />
+	<item name="vehicleMotorcyclePlaceable" count="10" />
+	<item name="vehicle4x4TruckPlaceable" count="5" />
+</lootgroup>
+
 
 <!--
 	<item group="groupModAllT3" loot_prob_template="GradeCLoot"/>
@@ -3179,7 +3186,8 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <!-- cars-->
 <lootcontainer id="19" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
 	<item group="automotive+tools+junk" prob="30" />
-	<item group="sportingGoods" prob="20" />
+	<item group="sportingGoods" prob="19" />
+    <item group="WorkingVehiclePlaceable" prob="1" />
     <item group="dryfood" loot_prob_template="goodFoodTemplate" />
 	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
 </lootcontainer>
@@ -4568,7 +4576,8 @@ treasureTemplate
 	<item group="automotive+tools+junk" prob="35" />
 	<item group="weaponsCommonParts" prob="10" />
 	<item name="meleeStunBaton" prob="11" />
-	<item name="jz_PoliceBaton" prob="11" />
+	<item name="jz_PoliceBaton" prob="10" />
+    <item group="WorkingVehiclePlaceable" prob="1" />
 	<item name="ammo9mmBulletBall" count="3,40" prob="11"/>	
 	<item name="ammoShotgunShell" count="3,12" prob="11"/>								
 	<item name="ammo762mmBulletBall" count="3,25" prob="11"/>			
@@ -4576,17 +4585,19 @@ treasureTemplate
 <!-- Medical Vehicles-->
 <lootcontainer id="322" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
 	<item group="automotive+tools+junk" prob="45" />
-	<item group="medicine" prob="45" />
+	<item group="medicine" prob="44" />
 	<item group="rareMedicine" prob="5" />
+    <item group="WorkingVehiclePlaceable" prob="1" />
 	<item name="medicalPlasterCastSchematic" prob="2.5" />
 </lootcontainer>
 <!-- Military Vehicles-->
 <lootcontainer id="323" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
-	<item group="automotive+tools+junk" prob="30" />
+	<item group="automotive+tools+junk" prob="29" />
 	<item group="weaponsMilitaryParts" count="1,2" prob="15" />
 	<item group="groupAmmoAdvanced" count="1,2" prob="15" />
 	<item group="militaryArmor" count="1,2" prob="15" />
 	<item group="groupAmmoSmall" count="1,3" prob="15" />
+    <item group="WorkingVehiclePlaceable" prob="1" />
 	<item name="jz_ProfessionPage" prob="5" />
 	<item group="T3BookList" prob="15" />
 	<item group="T3WeaponBooks" prob="15" />
@@ -4603,24 +4614,27 @@ treasureTemplate
 <!-- Farming Vehicles-->
 <lootcontainer id="325" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
 	<item group="automotive+tools+junk" prob="15" />
-	<item group="sportingGoods" prob="15" />
+	<item group="sportingGoods" prob="14" />
 	<item group="seeds" prob="15" />
+    <item group="WorkingVehiclePlaceable" prob="1" />
 	<item group="FarmingBookChance" prob="5" />
     <item group="farmCrops" loot_prob_template="goodFoodTemplate" />
 	<item group="rottenFood" loot_prob_template="badFoodTemplate" />
 </lootcontainer>
 <!-- Construction Vehicles-->
 <lootcontainer id="326" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
-	<item group="automotive+tools+junk" prob="65" />
+	<item group="automotive+tools+junk" prob="64" />
 	<item group="tools" prob="10" />
 	<item group="workingStiffs" prob="10" />
 	<item group="VariantFrameBlocks" prob="10" />
+    <item group="WorkingVehiclePlaceable" prob="1" />
 	<item group="resources" prob="10" />
 	<item group="skillBookChance"  prob="5" />
 </lootcontainer>
 <!-- Garbage Vehicles-->
 <lootcontainer id="327" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
-	<item group="automotive+tools+junk" prob="50" />
+	<item group="automotive+tools+junk" prob="49" />
+    <item group="WorkingVehiclePlaceable" prob="1" />
 	<item group="rottenFood" prob="50" />
 </lootcontainer>
 
