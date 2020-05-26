@@ -4260,9 +4260,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 	
 	<property name="HandItem" value="jz_HandParasiteLongClaw" />
 	<property name="MoveSpeed" value="0.2"/> 
-	<property name="MoveSpeedAggro" value="0.3, 1.0"/> 
 	<property name="MoveSpeedPanic" value="1"/>
-	<property name="MoveSpeedAggro" value=".5, 1.5"/>
+	<property name="MoveSpeedAggro" value=".3, 1.5"/>
 	<property name="JumpMaxDistance" value="11, 13"/>
 	
 	<property name="PainResistPerHit" value=".01"/>
@@ -4288,7 +4287,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteFat" extends="zombieTemplateMale" ><!-- Fat Mutant w/parasite coming out stomach-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?ParaziteFatDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?ParaziteFatDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4352,7 +4352,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteHybrid" extends="zombieTemplateMale" ><!-- Mutated Soldier -->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?HybridDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?HybridDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4382,7 +4383,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteMantis" extends="zombieTemplateMale" ><!-- 4 spider legs and claw Arms Kinda small-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?ParaziteSpiderDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?ParaziteSpiderDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4412,7 +4414,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteSlider" extends="zombieTemplateMale" ><!-- mutant human walks on hands pincher for but /way to small-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?ParaziteSlider" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?ParaziteSlider" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4444,7 +4447,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasitePangolin" extends="zombieTemplateMale" ><!-- Short mutant animal /head buts/ more moves?-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?PangolinDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?PangolinDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4477,7 +4481,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteRipper" extends="zombieTemplateMale" ><!-- dog mutant head buts?-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?RipperDogDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?RipperDogDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4510,7 +4515,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteHorror" extends="zombieTemplateMale" ><!--Scary Bites no eyes-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?HorrorDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?HorrorDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4541,7 +4547,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteCreepy" extends="zombieTemplateMale" ><!-- Mutant Snake w/2 Arms-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?CreepyDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?CreepyDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4573,7 +4580,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteSpider" extends="zombieTemplateMale" ><!-- 4 legs 2 spike arms-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?SpiderDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?SpiderDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4604,7 +4612,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteBug" extends="zombieTemplateMale" ><!-- Blue Water Mutant -->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?BugDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?BugDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4636,7 +4645,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteAlien" extends="zombieTemplateMale" ><!-- Hunch Back/ Long Arms Mutant-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?AlienDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?AlienDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4667,7 +4677,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteShell" extends="zombieTemplateMale" ><!-- muscle mutant w claws too small?-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?ShellDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?ShellDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4698,7 +4709,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteExterminator" extends="zombieFatCop" ><!-- Muscle Mutant spits / should be bigger-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?ExterminatorDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?ExterminatorDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4723,7 +4735,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteDevourer" extends="zombieTemplateMale" ><!-- Predator Mouth Mutant-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?DevourerDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?DevourerDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4738,8 +4751,9 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="AttackTimeoutNight" value="1.7"/>
 	<property name="CanClimbLadders" value="true"/>
 	<property name="CanClimbVertical" value="false"/>
+    <property name="SpawnOnGround" value="true" />
 	<property name="SightRange" value="50"/> 
-	<property name="AttackIndexes" value="2" />
+    <property name="AttackIndexes" value="2" />
 	<property name="SoundRandom" value="Enemies/Spider_Zombie/spiderroam"/>
 	<property name="SoundAlert" value="Enemies/Spider_Zombie/spideralert"/>
 	<property name="SoundAttack" value="Enemies/Spider_Zombie/spiderattack"/>
@@ -4754,7 +4768,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteDaemon" extends="zombieTemplateMale" ><!--Demon Mutant-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?DaemonDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?DaemonDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4786,7 +4801,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteHorned" extends="zombieTemplateMale" ><!--Horned Troll Mutant DROP?-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?HornedDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?HornedDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4817,7 +4833,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteNastyRanged" extends="zombieFatCop" ><!-- Scorpion Boss Spits -->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?NastyDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?NastyDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4843,7 +4860,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteNastyTank" extends="zombieTemplateMale" ><!-- Scorpion Boss Spits -->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?NastyDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters1.unity3d?NastyDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4869,7 +4887,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteSlug" extends="zombieFatCop" ><!-- no eyes all mouth-->
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?SlugDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?SlugDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4897,7 +4916,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 <entity_class name="ParasiteCreepy1" extends="zombieTemplateMale" >
 	<property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?SlugDark" /> 
-	<property name="AvatarController" value="MecanimSDX, Mods" />
+	<property name="Class" value="EntityBandit" />
+    <property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
 	<property name="HandItem" value="jz_HandParasiteHorned" />
@@ -4922,7 +4942,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="ParasiteCreepy2" extends="zombieTemplateMale" >
 	<property name="Tags" value="entity,zombie,parasite"/>
-	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?SlugDark" /> 
+	<property name="Class" value="EntityBandit" />
+    <property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?SlugDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
 	<property name="HasRagdoll" value="true" />
@@ -4947,7 +4968,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 </entity_class>
 
 <entity_class name="ParasiteCreepy3" extends="zombieTemplateMale" >
-	<property name="Tags" value="entity,zombie,parasite"/>
+	<property name="Class" value="EntityBandit" />
+    <property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?SlugDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4973,7 +4995,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 </entity_class>
 
 <entity_class name="ParasiteCreepy4" extends="zombieTemplateMale" >
-	<property name="Tags" value="entity,zombie,parasite"/>
+	<property name="Class" value="EntityBandit" />
+    <property name="Tags" value="entity,zombie,parasite"/>
 	<property name="Mesh" value="#@modfolder:Resources/TSCritters2.unity3d?SlugDark" /> 
 	<property name="AvatarController" value="MecanimSDX, Mods" />
 	<property name="RootMotion" value="false" />
@@ -4999,7 +5022,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 </entity_class>
 	
 <entity_class name="Creepy" extends="zombieTemplateMale">
-	<property name="Tags" value="entity,zombie,normal"/>
+	<property name="Class" value="EntityBandit" />
+    <property name="Tags" value="entity,zombie,normal"/>
 	<property name="Mesh" value="#@modfolder:Resources/Creepyz.unity3d?Creature02"/> 
 	<property name="AvatarController" value="AvatarZombie01Controller"/>
 	<property name="WalkType" value="5"/>
@@ -5016,7 +5040,8 @@ Kinda sorta works but is buggy and we don't have time for that.
 
 <entity_class name="CreepyFeral" extends="Creepy">
 	<property name="Tags" value="entity,zombie,walker,feral"/>
-	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
+	<property name="Class" value="EntityBandit" />
+    <property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 	<property name="PainResistPerHit" value=".25"/>
 	<property name="MoveSpeedAggro" value=".5, 1.35"/>
 	<property name="HandItem" value="meleeHandZombieStrongFeral"/>

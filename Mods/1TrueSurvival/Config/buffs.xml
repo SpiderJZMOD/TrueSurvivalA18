@@ -745,8 +745,7 @@
 		<effect_group>
 			
 			<!-- perkIntrinsicImmunity update; will likely have to overhaul diseases but... not now -->
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$illnessChance" operation="set" value="20">
-				<requirement name="ProgressionLevel" progression_name="attFortitude" operation="Equals" value="1"/> </triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$illnessChance" operation="set" value="20"/>
 			<!-- JZMOD IRONGUT/WEAKSTOMACH : food poisoning / dysentery resistence -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="0">
 				<requirement name="ProgressionLevel" progression_name="jz_TraitIronGut" operation="Equals" value="0"/>
@@ -765,10 +764,7 @@
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="multiply" value="@$MetabolismResist"/>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$DrowningTimerMax" operation="add" value="30"/>
 			<!-- perkSlowMetabolism : buff duration update -->
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value=".1"/>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="multiply" value="@$MetabolismResist"/>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="add" value="1"/>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="1" operation="divide" value="@$MetabolismDuration"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismDuration" operation="set" value="1"/>
 			<!-- Gymnast update -->
 			<!-- 1m = .01414 -->
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$parkourBonus" operation="set" value="0">

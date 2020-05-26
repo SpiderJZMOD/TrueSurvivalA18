@@ -23410,7 +23410,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
 		<requirement name="!IsStatAtMax" stat="water"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/><display_value name="TSHydration" value="25"/>
+           	<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/><display_value name="TSHydration" value="25"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 	</effect_group>
 	<effect_group tiered="false">
@@ -23440,10 +23440,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
 		<requirement name="!IsStatAtMax" stat="water"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/>
-			<display_value name="dStaminaRegen" value=".15"/>
+            <display_value name="dStaminaRegen" value=".15"/>
 			<display_value name="dEfficientDigestion" value=".15"/>
 			<display_value name="dDuration" value="243"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="25"/> <display_value name="TSHydration" value="25"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="add" value="243"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="set" value="723">
 				<requirement name="CVarCompare" cvar="$buffRedTeaDuration" operation="GT" value="723"/></triggered_effect>
@@ -23478,7 +23478,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
 		<requirement name="!IsStatAtMax" stat="water"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="jz_PlayerFoodAdd" operation="add" value="15"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="78"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="78"/> <display_value name="TSHydration" value="78"/>
 			<display_value name="dStaminaRegen" value=".15"/>
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="5">
 				<requirement name="HasBuff" buff="jz_BuffGoodDietTag"/>
@@ -23507,7 +23507,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
 		<requirement name="!IsStatAtMax" stat="water"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/> <display_value name="TSHydration" value="60"/>
 			<display_value name="dStaminaRegen" value=".15"/>
 			<display_value name="dRunSpeed" value=".5"/>
 			<display_value name="dDuration" value="123"/>
@@ -23538,7 +23538,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
 		<requirement name="!IsStatAtMax" stat="water"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="18"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="18"/> <display_value name="TSHydration" value="18"/>
 			<display_value name="dStaminaRegen" value=".25"/>
 			<display_value name="dHypothermalResist" value="5"/>
 			<display_value name="dDuration" value="183"/>
@@ -23562,7 +23562,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="18"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="18"/><display_value name="TSHydration" value="18"/>
 			<display_value name="dStaminaRegen" value=".3"/>
 			<display_value name="dHypothermalResist" value="10"/>
 			<display_value name="dDuration" value="363"/>
