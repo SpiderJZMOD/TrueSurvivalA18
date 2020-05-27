@@ -1091,6 +1091,12 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceClayLump" count="20"/>
 </recipe>
 
+<recipe name="jz_MedicalAntiVenom" count="1" craft_area="campfire" craft_tool="toolCookingPot" craft_time="30" craft_exp_gain="50" >
+	<ingredient name="drinkJarGrainAlcohol" count="1"/>
+    <ingredient name="jz_VenomSack" count="1"/>
+    <ingredient name="jz_DrinkCleanOuncesOfWater" count="4"/>
+</recipe>
+
 <!-- Workbench Crafted ******************************************************************************************************************************************************* -->
 <recipe name="woodHatch1_v1" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" craft_time="5" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="jz_Plank" count="10"/>
