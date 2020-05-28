@@ -4172,11 +4172,11 @@
 			<requirement name="EntityTagCompare" target="other" tags="zombie"/>
 			<requirement name="!EntityTagCompare" target="other" tags="parasite"/>
 			<requirement name="!EntityTagCompare" target="other" tags="animal"/>
-				<!--<passive_effect name="DamageModifier" operation="perc_add" value="2" level="1" tags="head"/>-->
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.2" level="1" tags="head"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="upperbody"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="lowerbody"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="1" level="1" tags="arm"/>
-				<passive_effect name="DismemberChance" operation="base_add" value="1" level="1" tags="leg"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".5" level="1" tags="arm"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".5" level="1" tags="leg"/>
 		</effect_group>
 	</perk>
 	<!-- ******************************************************************  JZMOD BUILDING SKILLS  ******************************************************************************** -->
