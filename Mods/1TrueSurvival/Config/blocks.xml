@@ -31365,6 +31365,12 @@ NOT the TextureNumber.
 	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile10.unity3d?GoreBonePile10Prefab" />
 </block>
 
+<block name="jz_GoreBlockHumanBones10">
+	<property name="Extends" value="jz_GoreBlockHumanBones"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/JZGoreBonePile10.unity3d?GoreBonePile10Prefab" />
+</block>
+
 <block name="jz_GoreBlockHumanBonesVariantHelper">
 	<property name="Extends" value="jz_GoreBlockHumanBones"/>
 	<property name="CustomIcon" value="pouredConcreteBlock"/>
