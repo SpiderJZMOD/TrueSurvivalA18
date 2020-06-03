@@ -137,6 +137,7 @@
 		<property name="Sphere" value=".1"/>
 		<property name="Sound_start" value="swoosh"/>
 		<property name="ToolCategory.ToolClawHammer" value="1" param1="1"/>
+        <property name="ToolCategory.Disassemble" value="0" param1="1"/>
 		<property name="GrazeStart" value=".12"/>
 		<property name="GrazeEnd" value=".3"/>
 		<property name="SwingDegrees" value="45"/>
@@ -934,6 +935,7 @@
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sound_start" value="swoosh"/>
 		<property name="ToolCategory.Disassemble" value="1" param1="1"/>
+        <property name="ToolCategory.ToolWrench" value="1" param1="1"/>
 		<property name="Sound_harvesting" value="wrench_harvest"/>
 		<property name="Particle_harvesting" value="true" param1="metal"/>
 
@@ -13499,10 +13501,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="drinkJarBeer"/>
 	<property name="Unlocks" value="drinkJarBeer"/>
 	<property class="Action0">
-		<requirement name="ProgressionLevel" progression_name="SP_BlueberryPieSchematic" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_BeerSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BlueberryPieSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BeerSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13592,10 +13594,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="drinkJarRedTea"/>
 	<property name="Unlocks" value="drinkJarRedTea"/>
 	<property class="Action0">
-		<requirement name="ProgressionLevel" progression_name="SP_BlueberryPieSchematic" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_RedTeaSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BlueberryPieSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_RedTeaSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -13804,10 +13806,10 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="foodHoboStew"/>
 	<property name="Unlocks" value="foodHoboStew"/>
 	<property class="Action0">
-		<requirement name="ProgressionLevel" progression_name="SP_BlueberryPieSchematic" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_HoboStewSchematic" operation="LT" value="1"/>
 	</property>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BlueberryPieSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_HoboStewSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -20748,7 +20750,7 @@ perkNightStalkerSilentNight
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
-	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="SoundDestroy" value="metaldestroy"/>
 	<property name="EconomicValue" value="0"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
@@ -20759,19 +20761,21 @@ perkNightStalkerSilentNight
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
 		<property name="Sound_start" value="swoosh"/>
-		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="ToolCategory.Disassemble" value="1" param1="1"/>
+        <property name="ToolCategory.ToolCrowbar" value="1" param1="1"/>
 	</property>
 	<property class="Action1">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
 		<property name="Sound_start" value="swoosh"/>
-		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="ToolCategory.Disassemble" value="1" param1="1"/>
+        <property name="ToolCategory.ToolCrowbar" value="1" param1="1"/>
 		<property name="UsePowerAttackAnimation" value="true"/>
 	</property>
 	<effect_group name="meleeToolShovelStone">
 		<passive_effect name="MaxRange" operation="base_set" value="2.8"/>
 		<passive_effect name="BlockRange" operation="base_set" value="4"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="15"/> <!-- meleeToolShovelStone -->
+		<passive_effect name="EntityDamage" operation="base_set" value="15"/> 
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
 		<passive_effect name="BlockDamage" operation="base_set" value="38.4"/>
@@ -20779,15 +20783,15 @@ perkNightStalkerSilentNight
 
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
 		
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="organic"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="cloth"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value=".3" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="jzSteel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="terrGravel"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="50" tags="jz_CrowBarTag"/>
 		
 		<passive_effect name="HarvestCount" operation="base_set" value="1" tags="ToolCrowbar"/>
@@ -20806,7 +20810,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="StaminaLoss" operation="base_add" value="27.6" tags="secondary"/>
 	</effect_group>
 	<property name="Group" value="Tools/Traps"/>
-	<property name="PickupJournalEntry" value="miningTip"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
@@ -20850,7 +20853,7 @@ perkNightStalkerSilentNight
 	<effect_group name="ToolScrewdriver">
 	<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
 		<passive_effect name="BlockRange" operation="base_set" value="3"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="5"/> <!-- meleeToolWrench -->
+		<passive_effect name="EntityDamage" operation="base_set" value="5"/> 
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
@@ -20900,7 +20903,7 @@ perkNightStalkerSilentNight
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="metaldestroy"/>
 	<property name="EconomicValue" value="350"/>
-	<property name="UnlockedBy" value="meleeToolWrenchSchematic"/>
+	<property name="UnlockedBy" value="jz_SchematicMasonHammer"/>
 	<property name="ShowQuality" value="true"/>
     <property name="DescriptionKey" value="jz_MasonHammerDesc" />
 	<property class="Action0">
@@ -20929,7 +20932,7 @@ perkNightStalkerSilentNight
 	<effect_group name="MasonHammer">
 		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
 		<passive_effect name="BlockRange" operation="base_set" value="3"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="5"/> <!-- meleeToolWrench -->
+		<passive_effect name="EntityDamage" operation="base_set" value="5"/> 
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
@@ -20973,7 +20976,7 @@ perkNightStalkerSilentNight
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="metaldestroy"/>
 	<property name="EconomicValue" value="350"/>
-	<property name="UnlockedBy" value="meleeToolWrenchSchematic"/>
+	<property name="UnlockedBy" value="jz_SchematicConcreteSledge"/>
 	<property name="ShowQuality" value="true"/>
     <property name="DescriptionKey" value="jz_ConcreteSledgeDesc" />
 	<property class="Action0">
@@ -21002,7 +21005,7 @@ perkNightStalkerSilentNight
 	<effect_group name="ConcreteSledge">
 		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
 		<passive_effect name="BlockRange" operation="base_set" value="3"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="5"/> <!-- meleeToolWrench -->
+		<passive_effect name="EntityDamage" operation="base_set" value="5"/> 
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
@@ -21074,7 +21077,7 @@ perkNightStalkerSilentNight
 	<effect_group name="meleeToolWrench">
 		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
 		<passive_effect name="BlockRange" operation="base_set" value="3"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="18"/> <!-- meleeToolWrench -->
+		<passive_effect name="EntityDamage" operation="base_set" value="18"/> 
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
@@ -30125,7 +30128,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<effect_group name="meleeToolWrench">
 		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
 		<passive_effect name="BlockRange" operation="base_set" value="3"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="5"/> <!-- meleeToolWrench -->
+		<passive_effect name="EntityDamage" operation="base_set" value="5"/> 
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
 		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
 
