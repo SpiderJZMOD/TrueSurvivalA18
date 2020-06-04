@@ -18301,7 +18301,7 @@ NOT the TextureNumber.
 	<!--JZMOD CROWBAR-->		
 	<drop event="Destroy" name="cntDomedTrashCanEmpty" count="1" prob="1" tool_category="ToolCrowbar"/>	
 </block>
-<!-- JZMOD STOPPED HERE -->
+
 <block name="cntDomedTrashCanFull">
 	<property name="Extends" value="cntDomedTrashCanEmpty"/>
 	<property name="CreativeMode" value="Player"/>
@@ -18309,8 +18309,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="16"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntDomedTrashCanEmpty" count="0" prob="1" tag="ToolCrowbar"/>	
-	<drop event="Harvest" name="cntDomedTrashCanFull" count="1" prob="1" tag="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntDomedTrashCanEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntDomedTrashCanFull" count="1" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cntDomedTrashCanRandomLootHelper">
@@ -18321,8 +18321,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="floot,ffurniture,fdesign"/>
 	<property name="DisplayInfo" value="Name"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntDomedTrashCanEmpty" count="0" prob="1" tag="ToolCrowbar"/>	
-	<drop event="Harvest" name="cntDomedTrashCanRandomLootHelper" count="1" prob="1" tag="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntDomedTrashCanEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cntBruteStyleTrashCanEmpty">
@@ -18344,7 +18343,7 @@ NOT the TextureNumber.
 	<property name="EconomicValue" value="60"/> <!-- disassemble value -->
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<!--JZMOD CROWBAR-->			
-	<drop event="Harvest" name="cntBruteStyleTrashCanEmpty" count="1" prob="1" tag="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntBruteStyleTrashCanEmpty" count="1" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cntBruteStyleTrashCanFull">
@@ -18354,8 +18353,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="10"/>
 	<!--JZMOD CROWBAR-->			
-	<drop event="Harvest" name="cntBruteStyleTrashCanEmpty" count="0" prob="1" tag="ToolCrowbar"/>	
-	<drop event="Harvest" name="cntBruteStyleTrashCanFull" count="1" prob="1" tag="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntBruteStyleTrashCanEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntBruteStyleTrashCanFull" count="1" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cntBruteStyleTrashCanRandomLootHelper">
@@ -18365,6 +18364,8 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="cntGenericRandomLootHelperDesc"/>
 	<property name="FilterTags" value="floot,ffurniture,fdesign"/>
 	<property name="DisplayInfo" value="Name"/>
+    <!--JZMOD CROWBAR-->			
+	<drop event="Destroy" name="cntBruteStyleTrashCanEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cntDumpster">
@@ -18382,7 +18383,7 @@ NOT the TextureNumber.
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="resourceScrapIron" count="20" prob="1" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->			
-	<drop event="Harvest" name="cntBruteStyleTrashCanFull" count="1" prob="1" tag="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntBruteStyleTrashCanFull" count="1" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cntDumpsterFlies">
@@ -18400,7 +18401,7 @@ NOT the TextureNumber.
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="resourceScrapIron" count="20" prob="1" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->			
-	<drop event="Harvest" name="cntBruteStyleTrashCanFull" count="1" prob="1" tag="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntBruteStyleTrashCanFull" count="1" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cntTiltTruckEmpty">
@@ -18422,15 +18423,15 @@ NOT the TextureNumber.
 	<property name="EconomicValue" value="60"/> <!-- disassemble value -->
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<!--JZMOD ANY-->
-	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceScrapPolymers" count="2" tag="allHarvest"/>
 	<drop event="Fall" count="0" stick_chance="0"/>
 	<!--JZMOD WRENCH-->
+    <drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceMetalPipe" count="1,4" tag="ToolWrench" />
-	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tag="ToolWrench" />
+	<drop event="Harvest" name="resourceMechanicalParts" count="1,2" tag="ToolWrench" />
 	<drop event="Harvest" name="resourceScrapPolymers" count="2,4" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->			
-	<drop event="Harvest" name="cntTiltTruckEmpty" count="1" prob="1" tag="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntTiltTruckEmpty" count="1" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cntTiltTruckFull">
@@ -18440,8 +18441,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="10"/>
 	<!--JZMOD CROWBAR-->			
-	<drop event="Harvest" name="cntTiltTruckEmpty" count="0" prob="1" tag="ToolCrowbar"/>	
-	<drop event="Harvest" name="cntTiltTruckFull" count="1" prob="1" tag="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntTiltTruckEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntTiltTruckFull" count="1" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cntTiltTruckFullFlies">
@@ -18451,8 +18452,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="10"/>
 	<!--JZMOD CROWBAR-->			
-	<drop event="Harvest" name="cntTiltTruckEmpty" count="0" prob="1" tag="ToolCrowbar"/>	
-	<drop event="Harvest" name="cntTiltTruckFullFlies" count="1" prob="1" tag="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntTiltTruckEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>	
+	<drop event="Destroy" name="cntTiltTruckFullFlies" count="1" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cntTiltTruckRandomLootHelper">
@@ -18462,6 +18463,8 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="cntGenericRandomLootHelperDesc"/>
 	<property name="FilterTags" value="floot,ffurniture,fdesign"/>
 	<property name="DisplayInfo" value="Name"/>
+    <!--JZMOD CROWBAR-->			
+	<drop event="Destroy" name="cntTiltTruckEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="cable1">
@@ -18479,7 +18482,7 @@ NOT the TextureNumber.
 	<!--JZMOD ANY-->
 	<drop event="Destroy" name="resourceScrapIron" count="1,15" tag="allHarvest"/>	
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cable1" count="1" prob="1" tag="ToolCrowbar"/>	
+	<drop event="Destroy" name="cable1" count="1" prob="1" tool_category="ToolCrowbar"/>	
 </block>
 
 <block name="conduit01">
@@ -18497,25 +18500,25 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Fall" count="0" prob="0"/>
 	<!--JZMOD SCREWDRIVER-->
-	<drop event="Harvest" name="resourceElectricParts" count="0,4" tag="ToolScrewdriver" />
+	<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cable1" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cable1" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="conduit01Curve">
 	<property name="Extends" value="conduit01"/>
 	<property name="Texture" value="527"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cable1" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="conduit01Curve" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cable1" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="conduit01Curve" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="conduit01End">
 	<property name="Extends" value="conduit01"/>
 	<property name="Texture" value="528"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cable1" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="conduit01End" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cable1" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="conduit01End" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="conduit01Corner">
@@ -18523,8 +18526,8 @@ NOT the TextureNumber.
 	<property name="Model" value="decal_corner"/>
 	<property name="Texture" value="526"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cable1" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="conduit01Corner" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cable1" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="conduit01Corner" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntGasPump">
@@ -18552,14 +18555,15 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="0,4" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="allHarvest"/>
+    <drop event="Harvest" name="resourceScrapIron" count="2,10" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceMechanicalParts" count="2,4" tag="ToolWrench" />
 	<!--JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="2,7" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntGasPump" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntGasPump" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntNightstandRandomLootHelper">
@@ -18590,7 +18594,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntNightstandOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntNightstandOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntNightstandClosed">
@@ -18600,8 +18604,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="6"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntNightstandOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntNightstandClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntNightstandOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntNightstandClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntModularClosetClosed">
@@ -18615,9 +18619,12 @@ NOT the TextureNumber.
 	<property name="LootList" value="123"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<property name="FilterTags" value="floot,fdecor,ffurniture"/>
-	<drop event="Destroy" name="jz_Plank" count="1,2"/>
+	<!--JZMOD ANY-->
+	<drop event="Destroy" name="jz_Plank" count="1,3" tag="allHarvest" />
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<drop event="Destroy" count="0"/> 
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntModularClosetClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntModularClosetClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntModularClosetOpen">
@@ -18625,9 +18632,12 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="#Entities/LootContainers?modularClosetEmptyPrefab.prefab"/>
 	<property name="Collide" value="melee,rocket"/>
-	<drop event="Destroy" name="jz_Plank" count="1,2"/>
+	<!--JZMOD ANY-->
+	<drop event="Destroy" name="jz_Plank" count="1,3" tag="allHarvest" />
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<drop event="Destroy" count="0"/> 
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntModularClosetOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntModularClosetOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntModularClosetRandomLootHelper">
@@ -18644,8 +18654,8 @@ NOT the TextureNumber.
 	<property name="Extends" value="cntModularClosetOpen"/>
 	<property name="Model" value="#Entities/LootContainers?modularClosetEndPrefab.prefab"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntModularClosetOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntModularClosetEnd" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntModularClosetOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntModularClosetEnd" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMedicineCabinetFaucetOpen">
@@ -18660,7 +18670,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="floot,fdecor,ffurniture"/>
 	<drop event="Destroy" count="0"/> 
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntMedicineCabinetFaucetOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMedicineCabinetFaucetOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMedicineCabinetFaucetClosed">
@@ -18670,8 +18680,8 @@ NOT the TextureNumber.
 	<property name="LootList" value="7"/>
 	<property name="Model" value="#Entities/LootContainers?medicine_cabinet_closed_faucetPrefab.prefab"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntMedicineCabinetFaucetOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntMedicineCabinetFaucetClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMedicineCabinetFaucetOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMedicineCabinetFaucetClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMedicineCabinetFaucetRandomLootHelper">
@@ -18695,7 +18705,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="floot,fdecor,ffurniture"/>
 	<drop event="Destroy" count="0"/> 
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntMedicineCabinetOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMedicineCabinetOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMedicineCabinetClosed">
@@ -18705,8 +18715,8 @@ NOT the TextureNumber.
 	<property name="LootList" value="7"/>
 	<property name="Model" value="#Entities/LootContainers?medicine_cabinet_closedPrefab.prefab"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntMedicineCabinetOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntMedicineCabinetClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMedicineCabinetOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMedicineCabinetClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMedicineCabinetClosedRandomLootHelper">
@@ -18728,8 +18738,8 @@ NOT the TextureNumber.
 	<property name="LootList" value="106"/>
 	<drop event="Destroy" count="0"/> 
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntNightstandOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntPillCaseClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntNightstandOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntPillCaseClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntPillCaseEmpty">
@@ -18740,8 +18750,8 @@ NOT the TextureNumber.
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 	<drop event="Destroy" name="resourceAcid" prob=".5" count="1" tag="WasteTreasuresAcidHarvest"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntNightstandOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntPillCaseEmpty" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntNightstandOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntPillCaseEmpty" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntPillCaseRandomLootHelper">
@@ -18760,11 +18770,12 @@ NOT the TextureNumber.
 	<property name="Model" value="mirror"/>
 	<property name="Texture" value="241,241,358,241,62,241"/>
 	<property name="UseGlobalUV" value="Local"/>
-	<drop event="Destroy" name="resourceBrokenGlass" count="1,3"/>
-	<drop event="Fall" count="0" prob="0"/>
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
+    <!--JZMOD ANY-->
+    <drop event="Harvest" name="resourceBrokenGlass" count="1,3" tag="allHarvest"/>
+	<drop event="Fall" count="0" prob="0"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="mirror" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="mirror" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="fountain">
@@ -18782,7 +18793,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceScrapIron" count="1,15" tag="allHarvest"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="mirror" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="fountain" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntWallSafe">
@@ -19127,7 +19138,7 @@ NOT the TextureNumber.
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<drop event="Fall" count="0" prob="0"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="pictureFrame" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="pictureFrame" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="pictureFrameFilled">
@@ -19138,8 +19149,8 @@ NOT the TextureNumber.
 	<property name="UseGlobalUV" value="L,L,G,L,L,L"/>
 	<property name="CustomIcon" value="pictureFrame"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="pictureFrame" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="pictureFrameFilled" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="pictureFrame" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="pictureFrameFilled" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="paintingBen">
@@ -19151,13 +19162,15 @@ NOT the TextureNumber.
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="IsDecoration" value="true"/>
 	<property name="ImposterDontBlock" value="true"/>
-	<drop event="Destroy" name="jz_Plank" count="1,2"/>
 	<property name="FilterTags" value="fdecor,fother"/>
 	<property name="SortOrder1" value="7000"/>
 	<property name="SortOrder2" value="0002"/>
 	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
+    <!--JZMOD ANY-->
+    <drop event="Harvest" name="jz_Plank" count="1,3" tag="allHarvest"/>
+	<drop event="Fall" count="0" prob="0"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="paintingBen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingBen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="hiddenSafePaintingBen">
@@ -19173,8 +19186,8 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="Entities/decor/painting_lorienPrefab" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="paintingBen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="paintingLorien" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingBen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingLorien" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="hiddenSafePaintingLorien">
@@ -19190,8 +19203,8 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="Entities/decor/painting_derekPrefab" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="paintingBen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="paintingDerek" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingBen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingDerek" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="hiddenSafePaintingDerek">
@@ -19207,8 +19220,8 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="Entities/decor/painting_noahPrefab" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="paintingBen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="paintingNoah" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingBen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingNoah" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="hiddenSafePaintingNoah">
@@ -19224,8 +19237,8 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="Entities/decor/painting_dukePrefab" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="paintingBen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="paintingDuke" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingBen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingDuke" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="hiddenSafePaintingDuke">
@@ -19241,8 +19254,8 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="Entities/decor/painting_kenPrefab" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="paintingBen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="paintingKen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingBen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="paintingKen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="hiddenSafePaintingKen">
@@ -19277,7 +19290,7 @@ NOT the TextureNumber.
 	<property name="UseGlobalUV" value="G,G,G,L,G,G"/>
 	<property name="Texture" value="241,241,241,340,241,241"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="heatVent" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="heatVent" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="heatVentIndustrial">
@@ -19288,7 +19301,7 @@ NOT the TextureNumber.
 	<property name="UseGlobalUV" value="L"/>
 	<property name="Texture" value="268"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="heatVent" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="heatVentIndustrial" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntWoodDesk01RandomLootHelper">
@@ -19311,8 +19324,9 @@ NOT the TextureNumber.
 	<property name="EconomicBundleSize" value="20"/>
 	<property name="FilterTags" value="floot,ffurniture,fdesign"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
-	<!--JZMOD ANY-->
-	<drop event="Destroy" name="jz_Plank" count="2,6" prob="1"/>
+    <!--JZMOD ANY-->
+	<drop event="Harvest" name="jz_Plank" count="2,6" tag="allHarvest"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 </block>
 
 <block name="cntWoodDesk01Open">
@@ -19324,7 +19338,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntWoodDesk01Open" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntWoodDesk01Open" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntWoodDesk01Closed">
@@ -19334,8 +19348,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="6"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntWoodDesk01Open" count="1" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntWoodDesk01Closed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntWoodDesk01Open" count="1" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntWoodDesk01Closed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMetalDesk02RandomLootHelper">
@@ -19372,7 +19386,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntMetalDesk02Closed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMetalDesk02Closed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMetalDesk02Open">
@@ -19380,8 +19394,8 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="Furniture/desk02_ver2" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntMetalDesk02Closed" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntMetalDesk02Open" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMetalDesk02Closed" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMetalDesk02Open" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="schoolDesk">
@@ -19400,7 +19414,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceScrapIron" count="1,15" tag="allHarvest"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="schoolDesk" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="schoolDesk" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="coffeeTable">
@@ -19418,7 +19432,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 	<drop event="Fall" count="0" prob="0"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="coffeeTable" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="coffeeTable" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="tableDynamic">
@@ -19426,8 +19440,8 @@ NOT the TextureNumber.
 	<property name="Path" value="solid"/>
 	<property name="Model" value="table_dynamic"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="coffeeTable" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="tableDynamic" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="coffeeTable" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="tableDynamic" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="woodTable">
@@ -19509,7 +19523,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="metalTablePillar0.025CTR" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="metalTablePillar0.025CTR" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoPicnicTable">
@@ -19537,7 +19551,7 @@ NOT the TextureNumber.
     <drop event="Harvest" name="jz_Plank" count="2,5" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoPicnicTable" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoPicnicTable" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="officeChair01">
@@ -19662,7 +19676,7 @@ NOT the TextureNumber.
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturHardRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="barStool" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="barStool" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="sectionalPlaidCouchSofaMiddle">
@@ -19687,7 +19701,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Destroy" count="0"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="sectionalPlaidCouchSofaMiddle" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalPlaidCouchSofaMiddle" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="sectionalPlaidCouchSofaCorner">
@@ -19695,8 +19709,8 @@ NOT the TextureNumber.
 	<property name="Model" value="Furniture/sectionalCorner" param1="main_mesh"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturSoftRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="sectionalPlaidCouchSofaMiddle" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="sectionalPlaidCouchSofaCorner" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalPlaidCouchSofaMiddle" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalPlaidCouchSofaCorner" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="sectionalPlaidCouchSofaArm">
@@ -19704,8 +19718,8 @@ NOT the TextureNumber.
 	<property name="Model" value="Furniture/sectionalArm" param1="main_mesh"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturSoftRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="sectionalPlaidCouchSofaMiddle" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="sectionalPlaidCouchSofaArm" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalPlaidCouchSofaMiddle" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalPlaidCouchSofaArm" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="sectionalLeatherCouchSofaArm">
@@ -19729,7 +19743,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="oldCash" count="1,3" prob="0.05" tag="salvageHarvest"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="sectionalLeatherCouchSofaArm" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalLeatherCouchSofaArm" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="sectionalLeatherCouchSofaCorner">
@@ -19738,8 +19752,8 @@ NOT the TextureNumber.
 	<property name="Model" value="Furniture/sectionalCorner2" param1="main_mesh"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturSoftRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="sectionalLeatherCouchSofaArm" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="sectionalLeatherCouchSofaCorner" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalLeatherCouchSofaArm" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalLeatherCouchSofaCorner" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="sectionalLeatherCouchSofaMiddle">
@@ -19748,8 +19762,8 @@ NOT the TextureNumber.
 	<property name="Model" value="Furniture/sectionalMiddle2" param1="main_mesh"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturSoftRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="sectionalLeatherCouchSofaArm" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="sectionalLeatherCouchSofaMiddle" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalLeatherCouchSofaArm" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalLeatherCouchSofaMiddle" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="couchSofa01">
@@ -19764,8 +19778,8 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="jz_Plank" count="6" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceCloth" count="6" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="sectionalPlaidCouchSofaMiddle" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="couchSofa01" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalPlaidCouchSofaMiddle" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="couchSofa01" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="chairCouchSofa01">
@@ -19777,8 +19791,8 @@ NOT the TextureNumber.
 	<property name="ImposterExchange" value="imposterRamp" param1="43"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturSoftRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="sectionalPlaidCouchSofaMiddle" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="chairCouchSofa01" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalPlaidCouchSofaMiddle" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="chairCouchSofa01" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="leatherCouchSofa2">
@@ -19794,8 +19808,8 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="jz_Plank" count="6" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceLeather" count="1,3" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="sectionalLeatherCouchSofaArm" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="leatherCouchSofa2" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalLeatherCouchSofaArm" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="leatherCouchSofa2" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="leatherChairCouchSofa2">
@@ -19807,8 +19821,8 @@ NOT the TextureNumber.
 	<property name="ImposterExchange" value="imposterRamp" param1="43"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturSoftRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="sectionalLeatherCouchSofaArm" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="leatherChairCouchSofa2" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="sectionalLeatherCouchSofaArm" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="leatherChairCouchSofa2" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="pew_segment01">
@@ -19825,7 +19839,7 @@ NOT the TextureNumber.
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturHardRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="pew_segment01" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="pew_segment01" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="pew_segment02">
@@ -19833,8 +19847,8 @@ NOT the TextureNumber.
 	<property name="Model" value="Furniture/pew_segment02" param1="main_mesh"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturHardRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="pew_segment01" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="pew_segment02" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="pew_segment01" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="pew_segment02" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="pew_segment03">
@@ -19842,8 +19856,8 @@ NOT the TextureNumber.
 	<property name="Model" value="Furniture/pew_segment03" param1="main_mesh"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturHardRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="pew_segment01" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="pew_segment03" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="pew_segment01" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="pew_segment03" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="parkBenchA">
@@ -19860,7 +19874,7 @@ NOT the TextureNumber.
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturHardRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="parkBenchA" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="parkBenchA" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="parkBenchB">
@@ -19868,8 +19882,8 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Furniture/parkBenchBPrefab" param1="main_mesh"/>
 	<property name="BuffsWhenWalkedOn" value="jz_BuffFurniturHardRecover"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="parkBenchA" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="parkBenchB" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="parkBenchA" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="parkBenchB" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntWaterCoolerFull">
@@ -19893,7 +19907,7 @@ NOT the TextureNumber.
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<drop event="Destroy" count="0"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntWaterCoolerFull" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntWaterCoolerFull" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntWaterCoolerBottle">
@@ -19911,7 +19925,7 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" count="0"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="cntWaterCoolerBottle" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntWaterCoolerBottle" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="wineBarrel">
@@ -19925,7 +19939,7 @@ NOT the TextureNumber.
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="wineBarrel" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="wineBarrel" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="wineBarrelSet">
@@ -19935,16 +19949,16 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockMulti"/>
 	<property name="MultiBlockDim" value="2,2,1"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="wineBarrel" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="wineBarrelSet" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="wineBarrel" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="wineBarrelSet" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="wineBarrelPlain">
 	<property name="Extends" value="wineBarrel"/>
 	<property name="Model" value="Entities/Decor/BarrelPrefab"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="wineBarrel" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="wineBarrelPlain" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="wineBarrel" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="wineBarrelPlain" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoComputerDeskTopPC">
@@ -19960,7 +19974,7 @@ NOT the TextureNumber.
 	<!-- JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoComputerDeskTopPC" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoComputerDeskTopPC" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoComputerMonitorKeyboardMousePC">
@@ -19969,24 +19983,24 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockMulti"/>
 	<property name="MultiBlockDim" value="2,1,1"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoComputerDeskTopPC" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="decoComputerMonitorKeyboardMousePC" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoComputerDeskTopPC" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="decoComputerMonitorKeyboardMousePC" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoComputerMonitorKeyboardMouse">
 	<property name="Extends" value="decoComputerDeskTopPC"/>
 	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePrefab"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoComputerDeskTopPC" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="decoComputerMonitorKeyboardMouse" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoComputerDeskTopPC" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="decoComputerMonitorKeyboardMouse" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoComputerMonitor">
 	<property name="Extends" value="decoComputerDeskTopPC"/>
 	<property name="Model" value="Entities/Electrical/monitorPrefab"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoComputerDeskTopPC" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="decoComputerMonitor" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoComputerDeskTopPC" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="decoComputerMonitor" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="tv">
@@ -20011,7 +20025,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="ToolScrewdriver" /> <!-- HV: mounted fluorescent lamp -->
 	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="tv" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="tv" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="tv_fallen">
@@ -20019,8 +20033,8 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="tv"/>
 	<property name="Model" value="Furniture/tv_fallen" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="tv" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="tv_fallen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="tv" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="tv_fallen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="tv_large_1">
@@ -20028,8 +20042,8 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="tv"/>
 	<property name="Model" value="Furniture/tv_large_1" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="tv" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="tv_large_1" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="tv" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="tv_large_1" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="tv_large_2">
@@ -20037,8 +20051,8 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="tv"/>
 	<property name="Model" value="Furniture/tv_large_2" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="tv" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="tv_large_2" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="tv" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="tv_large_2" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoPoolTable">
@@ -20055,7 +20069,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="jz_Plank" count="15" tag="allHarvest" />
 	<drop event="Harvest" name="resourceScrapIron" count="4,10" tag="allHarvest" />
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoPoolTable" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoPoolTable" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoReptileTerrarium">
@@ -20077,7 +20091,7 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" count="0" stick_chance="0"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoReptileTerrarium" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoReptileTerrarium" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoClassicDogHouse">
@@ -20088,14 +20102,14 @@ NOT the TextureNumber.
 	<property name="ImposterExchange" value="imposterBlock" param1="25"/>
 	<property class="RepairItems"> <property name="jz_Plank" value="10"/> </property>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoClassicDogHouse" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoClassicDogHouse" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoLargePetCage">
 	<property name="Extends" value="decoEntityPolymerMaster"/>
 	<property name="Model" value="Entities/OutdoorDecor/largePetCagePrefab"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoLargePetCage" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoLargePetCage" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoMetalSlide">
@@ -20109,7 +20123,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fdecor,fother"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoMetalSlide" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoMetalSlide" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoSwingSet">
@@ -20122,7 +20136,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fdecor,fother"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoSwingSet" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoSwingSet" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoBasketBallHoop">
@@ -20134,7 +20148,7 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoBasketBallHoop" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoBasketBallHoop" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoStationaryBike">
@@ -20162,7 +20176,7 @@ NOT the TextureNumber.
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoStationaryBike" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoStationaryBike" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoTreadmill">
@@ -20192,7 +20206,7 @@ NOT the TextureNumber.
 	<!--JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="1,2" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoTreadmill" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoTreadmill" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoWeightBar">
@@ -20217,7 +20231,7 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<!--JZMOD CROWBAR-->		
-	<drop event="Harvest" name="decoWeightBar" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoWeightBar" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoBenchPress">
@@ -20225,8 +20239,8 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Furniture/bench_pressPrefab"/>
 	<property name="MultiBlockDim" value="2,2,2"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="decoWeightBar" count="0" prob="1" tag="ToolCrowbar"/>	
-	<drop event="Harvest" name="decoBenchPress" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoWeightBar" count="0" prob="1" tool_category="ToolCrowbar"/>	
+	<drop event="Destroy" name="decoBenchPress" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="bedroll">
@@ -20631,7 +20645,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntFileCabinetShortOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntFileCabinetShortOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntFileCabinetShortClosed">
@@ -20641,8 +20655,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="44"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntFileCabinetShortOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntFileCabinetShortClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntFileCabinetShortOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntFileCabinetShortClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntFileCabinetTallRandomLootHelper">
@@ -20660,7 +20674,7 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockMulti"/>
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntFileCabinetTallOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntFileCabinetTallOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntFileCabinetTallClosed">
@@ -20671,8 +20685,8 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="ModelOffset" value="0,0,0"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntFileCabinetShortClosed" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntFileCabinetTallClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntFileCabinetShortClosed" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntFileCabinetTallClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersShortOpen">
@@ -20686,7 +20700,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="floot,ffurniture"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntLockersShortOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersShortOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersShortClosed">
@@ -20697,8 +20711,8 @@ NOT the TextureNumber.
 	<property name="LootList" value="43"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntLockersShortOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntLockersShortClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersShortOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersShortClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersShortRandomLootHelper">
@@ -20719,8 +20733,8 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntLockersShortOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntLockersTallOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersShortOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersTallClosed">
@@ -20733,8 +20747,8 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntLockersTallOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntLockersTallClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersTallRandomLootHelper">
@@ -20755,8 +20769,8 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntLockersTallOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntLockersTallDoubleOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallDoubleOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersTallDoubleClosed">
@@ -20767,8 +20781,8 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntLockersTallClosed" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntLockersTallDoubleClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallClosed" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallDoubleClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersTallDoubleRandomLootHelper">
@@ -20789,8 +20803,8 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntLockersTallOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntLockersTallMixOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallMixOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersTallMixClosed">
@@ -20801,8 +20815,8 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntLockersTallClosed" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntLockersTallMixClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallClosed" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallMixClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersTallMixRandomLootHelper">
@@ -20823,8 +20837,8 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntLockersTallOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntLockersTallMixLinkOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallMixLinkOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersTallMixLinkClosed">
@@ -20835,8 +20849,8 @@ NOT the TextureNumber.
 	<property name="MultiBlockDim" value="1,2,1"/>
 	<property name="OnlySimpleRotations" value="true"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntLockersTallClosed" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntLockersTallMixLinkClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallClosed" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntLockersTallMixLinkClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntLockersTallMixLinkRandomLootHelper">
@@ -20865,7 +20879,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="jz_Plank" count="1,3" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntCoffin" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntCoffin" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntBathTubEmpty">
@@ -20891,7 +20905,7 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.1" stick_chance="0.5"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntCoffin" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntCoffin" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntBathTubGore">
@@ -20901,8 +20915,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="37"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntBathTubEmpty" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntBathTubGore" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntBathTubEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntBathTubGore" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntBathTubsRandomLootHelper">
@@ -20933,7 +20947,7 @@ NOT the TextureNumber.
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceMechanicalParts" count="0,2" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="decoClawFootBathTub" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoClawFootBathTub" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntBookcaseEmpty">
@@ -20950,7 +20964,7 @@ NOT the TextureNumber.
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="jz_Plank" count="1,3" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntBookcaseEmpty" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntBookcaseEmpty" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntBookcaseFull">
@@ -20969,7 +20983,7 @@ NOT the TextureNumber.
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="jz_Plank" count="1,3" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntBookcaseFull" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntBookcaseFull" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntBookcaseGoodRandomLootHelper">
@@ -20999,7 +21013,7 @@ NOT the TextureNumber.
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="jz_Plank" count="1,3" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntBookcaseFull" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntBookcaseFull" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntCashRegisterEmpty">
@@ -21025,7 +21039,7 @@ NOT the TextureNumber.
 	<!--JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="1,3" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntCashRegisterEmpty" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntCashRegisterEmpty" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntCashRegister">
@@ -21036,8 +21050,8 @@ NOT the TextureNumber.
 	<property name="Model" value="LootContainers/cash_register" param1="main_mesh"/>
 	<property name="LootList" value="55"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntCashRegisterEmpty" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntCashRegister" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntCashRegisterEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntCashRegister" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntCashRegisterRandomLootHelper">
@@ -21069,7 +21083,7 @@ NOT the TextureNumber.
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntShoppingCartEmpty" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntShoppingCartEmpty" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntShoppingCart">
@@ -21093,7 +21107,7 @@ NOT the TextureNumber.
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntShoppingCart" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntShoppingCart" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntShoppingCartRandomLootHelper">
@@ -21117,7 +21131,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceScrapPolymers" count="5" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntShoppingBasketEmpty" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntShoppingBasketEmpty" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntShoppingBasket">
@@ -21128,8 +21142,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="58"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntShoppingBasketEmpty" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntShoppingBasket" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntShoppingBasketEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntShoppingBasket" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntShoppingBasketRandomLootHelper">
@@ -21156,7 +21170,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<drop event="Harvest" name="resourceMechanicalParts" count="1,2" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntToolBoxOpen" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntToolBoxOpen" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntToolBoxClosed">
@@ -21166,8 +21180,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="124"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntToolBoxOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntToolBoxClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntToolBoxOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntToolBoxClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntToolBoxRandomLootHelper">
@@ -21179,8 +21193,8 @@ NOT the TextureNumber.
 	<property name="DisplayInfo" value="Name"/>
 	<property name="DescriptionKey" value="cntGenericRandomLootHelperDesc"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntToolBoxOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntToolBoxClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntToolBoxOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntToolBoxClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntRollingToolBoxOpen">
@@ -21192,8 +21206,8 @@ NOT the TextureNumber.
 	<!--JZMOD WRENCH -->
 	<drop event="Harvest" name="resourceMechanicalParts" count="2,3" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntToolBoxOpen" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntToolBoxClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntToolBoxOpen" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntToolBoxClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntRollingToolBoxClosed">
@@ -21201,8 +21215,8 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="#Entities/LootContainers?rollingToolChestClosedPrefab.prefab"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntToolBoxClosed" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntRollingToolBoxClosed" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntToolBoxClosed" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntRollingToolBoxClosed" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntRollingToolBoxRandomLootHelper">
@@ -21239,7 +21253,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceMechanicalParts" count="1,3" tag="ToolWrench" />
 	<drop event="Harvest" name="resourceScrapIron" count="2,4" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntUtilityCartEmpty" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntUtilityCartEmpty" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntUtilityCartFull">
@@ -21249,8 +21263,8 @@ NOT the TextureNumber.
 	<property name="Class" value="Loot"/>
 	<property name="LootList" value="117"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntUtilityCartEmpty" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntUtilityCartFull" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntUtilityCartEmpty" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntUtilityCartFull" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntUtilityCartRandomLootHelper">
@@ -21269,8 +21283,8 @@ NOT the TextureNumber.
 	<property name="DisplayType" value="blockMulti"/>
 	<property name="MultiBlockDim" value="2,1,1"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntUtilityCartFull" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntJanitorCartFull" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntUtilityCartFull" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntJanitorCartFull" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="storeShelving01">
@@ -21289,15 +21303,15 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>	
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="storeShelving01" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="storeShelving01" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="storeShelving01Double">
 	<property name="Extends" value="storeShelving01"/>
 	<property name="Model" value="Commercial/store_shelving01_double" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="storeShelving01" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="storeShelving01Double" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="storeShelving01" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="storeShelving01Double" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="storeShelving01Top">
@@ -21305,16 +21319,16 @@ NOT the TextureNumber.
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 	<property name="Model" value="Commercial/store_shelving01_top" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="storeShelving01" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="storeShelving01Top" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="storeShelving01" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="storeShelving01Top" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="storeShelving01TopDouble">
 	<property name="Extends" value="storeShelving01"/>
 	<property name="Model" value="Commercial/store_shelving01_top_double" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="storeShelving01" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="storeShelving01TopDouble" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="storeShelving01" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="storeShelving01TopDouble" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntVendingMachine">
@@ -21350,7 +21364,7 @@ NOT the TextureNumber.
 	<!--JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntVendingMachine2Broken" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntVendingMachine2Broken" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntVendingMachineTrader">
@@ -21386,7 +21400,7 @@ NOT the TextureNumber.
 	<!--JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntVendingMachine2Broken" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntVendingMachine2Broken" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntVendingMachine2Broken"> <!-- beverages vending machine -->
@@ -21422,7 +21436,7 @@ NOT the TextureNumber.
 	<!--JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntVendingMachine2Broken" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntVendingMachine2Broken" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntVendingMachine2">
@@ -21432,8 +21446,8 @@ NOT the TextureNumber.
 	<property name="Class" value="VendingMachine"/>
 	<property name="TraderID" value="4"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntVendingMachine2Broken" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntVendingMachine2" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntVendingMachine2Broken" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntVendingMachine2" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntVendingMachine2RandomLootHelper">
@@ -21463,7 +21477,7 @@ NOT the TextureNumber.
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="resourceScrapIron" count="5" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntMailbox" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMailbox" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMailBox01">
@@ -21471,8 +21485,8 @@ NOT the TextureNumber.
 	<property name="Path" value="solid"/>
 	<property name="Model" value="LootContainers/mailbox01" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntMailbox" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntMailBox01" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMailbox" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMailBox01" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMailBox02">
@@ -21480,8 +21494,8 @@ NOT the TextureNumber.
 	<property name="Path" value="solid"/>
 	<property name="Model" value="LootContainers/mailbox02" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntMailbox" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntMailBox02" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMailbox" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMailBox02" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMailBox03">
@@ -21489,8 +21503,8 @@ NOT the TextureNumber.
 	<property name="Path" value="solid"/>
 	<property name="Model" value="LootContainers/mailbox03" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cntMailbox" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="cntMailBox03" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMailbox" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="cntMailBox03" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntBackpack01">
@@ -21761,7 +21775,7 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.1" stick_chance="0.5"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="birdBathPlanter" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="birdBathPlanter" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntBirdnest">
@@ -21818,15 +21832,15 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.3" stick_chance="1"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="modularFireWoodStackA" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="modularFireWoodStackA" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="modularFireWoodStackB">
 	<property name="Extends" value="modularFireWoodStackA"/>
 	<property name="Model" value="Entities/OutdoorDecor/modularFireWoodStackBPrefab"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="modularFireWoodStackA" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="modularFireWoodStackB" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="modularFireWoodStackA" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="modularFireWoodStackB" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="modularFireWoodStackC">
@@ -21836,8 +21850,8 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/OutdoorDecor/modularFireWoodStackCPrefab"/>
 	<property name="ImposterExchange" value="imposterPyramid" param1="32"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="modularFireWoodStackA" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="modularFireWoodStackC" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="modularFireWoodStackA" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="modularFireWoodStackC" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoWildWestWagon">
@@ -21859,7 +21873,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceCloth" count="6" tag="allHarvest"/>
 	<drop event="Harvest" name="resourceMechanicalParts" count="1,2" prob="0.5" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="decoWildWestWagon" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoWildWestWagon" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoWildWestWagonWheelBack">
@@ -21870,15 +21884,15 @@ NOT the TextureNumber.
 	<!--JZMOD ANY-->
 	<drop event="Harvest" name="jz_Plank" count="4" prob="1" tag="allHarvest"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="decoWildWestWagonWheelBack" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoWildWestWagonWheelBack" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoWildWestWagonWheelFront">
 	<property name="Extends" value="decoWildWestWagonWheelBack"/>
 	<property name="Model" value="Entities/OutdoorDecor/wildWestWagonWheelFrontPrefab"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="decoWildWestWagonWheelBack" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="decoWildWestWagonWheelFront" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="decoWildWestWagonWheelBack" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="decoWildWestWagonWheelFront" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="decoCowSkull">
@@ -22315,7 +22329,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceElectricParts" count="3,7" tag="ToolScrewdriver" />
 	<drop event="Harvest" name="resourceMetalPipe" count="1,5" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="airConditioner" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="airConditioner" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="airConditionVentFan">
@@ -22341,7 +22355,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceElectricParts" count="3,7" tag="ToolScrewdriver" />
 	<drop event="Harvest" name="resourceScrapIron" count="1,10" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="airConditionVentFan" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="airConditionVentFan" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="airConditionVentFanDouble">
@@ -22360,7 +22374,7 @@ NOT the TextureNumber.
 	<drop event="Harvest" name="resourceElectricParts" count="3,7" tag="ToolScrewdriver" />
 	<drop event="Harvest" name="resourceScrapIron" count="1,10" tag="ToolScrewdriver" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="airConditionVentFan" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="airConditionVentFan" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="satelliteDish">
@@ -22387,7 +22401,7 @@ NOT the TextureNumber.
 	<!--JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="ToolScrewdriver" /> <!-- HV: mounted fluorescent lamp -->
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="satelliteDish" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="satelliteDish" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="satelliteDishSmall">
@@ -22400,8 +22414,8 @@ NOT the TextureNumber.
 	<!--JZMOD SCREWDRIVER-->
 	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="ToolScrewdriver" /> <!-- HV: mounted fluorescent lamp -->
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="satelliteDish" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="satelliteDishSmall" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="satelliteDish" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="satelliteDishSmall" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="graveStone01">
@@ -22418,23 +22432,23 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.5" stick_chance="1"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="graveStone01" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone01" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="graveStone02">
 	<property name="Extends" value="graveStone01"/>
 	<property name="Model" value="OutdoorDecor/grave_stone02" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="graveStone01" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="graveStone02" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone01" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone02" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="graveStone03">
 	<property name="Extends" value="graveStone01"/>
 	<property name="Model" value="OutdoorDecor/grave_stone03" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="graveStone01" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="graveStone03" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone01" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone03" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="graveStone04">
@@ -22442,40 +22456,40 @@ NOT the TextureNumber.
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="Model" value="OutdoorDecor/grave_stone04" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="graveStone01" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="graveStone04" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone01" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone04" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="graveStone05">
 	<property name="Extends" value="graveStone04"/>
 	<property name="Model" value="OutdoorDecor/grave_stone05" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="graveStone04" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="graveStone05" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone04" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone05" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="graveStone06">
 	<property name="Extends" value="graveStone04"/>
 	<property name="Model" value="OutdoorDecor/grave_stone06" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="graveStone04" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="graveStone06" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone04" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone06" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="graveStone07">
 	<property name="Extends" value="graveStone04"/>
 	<property name="Model" value="OutdoorDecor/grave_stone07" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="graveStone04" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="graveStone07" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone04" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone07" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="graveStone08">
 	<property name="Extends" value="graveStone04"/>
 	<property name="Model" value="OutdoorDecor/grave_stone08" param1="main_mesh"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="graveStone04" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="graveStone08" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone04" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="graveStone08" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntMunitionsBox"> <!-- military ammo -->
@@ -22780,7 +22794,7 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="campfire" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="campfire" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="forge">
@@ -22837,7 +22851,7 @@ NOT the TextureNumber.
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="forge" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="forge" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntCollapsedForge">
@@ -22927,7 +22941,7 @@ NOT the TextureNumber.
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="workbench" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="workbench" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntCollapsedWorkbench">
@@ -23019,7 +23033,7 @@ NOT the TextureNumber.
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceMechanicalParts" count="4" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cementMixer" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cementMixer" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntCollapsedCementMixer">
@@ -23117,7 +23131,7 @@ NOT the TextureNumber.
 	<!--JZMOD WRENCH-->
 	<drop event="Harvest" name="resourceMetalPipe" count="4" tag="ToolWrench" />
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="chemistryStation" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="chemistryStation" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntCollapsedChemistryStation">
@@ -23177,8 +23191,8 @@ NOT the TextureNumber.
 	<property name="WorkstationJournalTip" value="tableSawTip"/>
 	<property name="WorkstationWindow" value="workstation_workbench"/>
 	<!--JZMOD CROWBAR-->
-	<drop event="Harvest" name="cementMixer" count="0" prob="1" tag="ToolCrowbar"/>
-	<drop event="Harvest" name="tableSaw" count="1" prob="1" tag="ToolCrowbar"/>
+	<drop event="Destroy" name="cementMixer" count="0" prob="1" tool_category="ToolCrowbar"/>
+	<drop event="Destroy" name="tableSaw" count="1" prob="1" tool_category="ToolCrowbar"/>
 </block>
 
 <block name="cntShippingCrateHero">

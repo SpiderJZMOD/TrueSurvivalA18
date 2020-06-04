@@ -2227,7 +2227,15 @@
 				<requirement name="ProgressionLevel" progression_name="SP_FarmPlotSchematic" operation="LT" value="1"/></triggered_effect>
 			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BlueberrySeedSchematic" level="-1">
 				<requirement name="ProgressionLevel" progression_name="SP_BlueberrySeedSchematic" operation="LT" value="1"/></triggered_effect>
-				
+	        <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ChilliSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_ChilliSeedSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CucumberSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CucumberSeedSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_EggPlantSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_EggPlantSeedSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_LeekSeedSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_LeekSeedSchematic" operation="LT" value="1"/></triggered_effect>
+            
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_FarmerTag"/>
 			<effect_description level="1" desc_key="jz_FarmerDesc" long_desc_key="jz_FarmerDesc"/>
 		</effect_group>

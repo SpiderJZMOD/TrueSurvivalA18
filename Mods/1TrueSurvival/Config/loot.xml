@@ -4483,18 +4483,14 @@ treasureTemplate
 <!-- feral zombie loot -->
 <lootcontainer id="311" count="1,2" size="4,4" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
 	<item group="junkPersonal" prob="10" />
-	<item name="resourceBone" count="1,4" prob="3" />
-	<item group="CompoundBowParts" prob="5" />
-    <item group="CompoundCrossbowParts" prob="5" />
-	<item group="weaponsCommonParts" prob="5" />
-    <item group="weaponsMagnumParts" prob="5" />
-	<item group="weaponsMilitaryParts" prob="5" />
-	<item group="militaryArmor" prob="5" />
-	<item group="T1BookList" prob="8" />
-	<item group="T2BookList" prob="7" />
-	<item group="T3BookList" prob="6" />
-    <item name="jz_ProfessionPage" prob="10" />
-	<item group="skillBookChance" prob="1" />
+	<item group="CompoundBowParts" prob="9" />
+    <item group="CompoundCrossbowParts" prob="9" />
+	<item group="weaponsCommonParts" prob="8" />
+    <item group="weaponsMagnumParts" prob="8" />
+	<item group="weaponsMilitaryParts" prob="8" />
+	<item group="militaryArmor" prob="8" />
+	<item name="jz_ProfessionPage" prob="10" />
+	<item group="skillBookChance" prob="5" />
     <item group="empty" prob="25" />
 </lootcontainer>
 
@@ -4537,9 +4533,10 @@ treasureTemplate
 
 <!-- zombie utility worker / construction worker loot -->
 <lootcontainer id="315" count="1,2" size="4,4" destroy_on_close="true" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
-	<item group="junkPersonal" prob="33.33" />
-	<item group="zombieUtilityWorker" prob="33.33" />
-    <item group="empty" prob="33.33" />
+	<item group="junkPersonal" prob="33" />
+	<item group="zombieUtilityWorker" prob="33" />
+    <item group="skillBookChance" prob="1" />
+    <item group="empty" prob="33" />
 </lootcontainer>
 
 <!-- zombieBusinessMan -->
@@ -4549,9 +4546,7 @@ treasureTemplate
 	<item name="oldCash" count="5,20" prob="5" />
 	<item group="groupQuestChallenge"  prob="1" />
 	<item group="groupTreasureMaps"  prob="1" />
-    <item group="T1BookList" prob="10" />
-	<item group="T2BookList" prob="7" />
-	<item group="T3BookList" prob="5" />
+    <item group="skillBookChance" prob="1" />
     <item group="empty" prob="25" />
 </lootcontainer>
 

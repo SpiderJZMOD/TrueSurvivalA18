@@ -26968,8 +26968,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_Stick">
 	<property name="Tags" value="blunt,melee,weapon,meleeWeapon"/>
 	<property name="HoldType" value="2"/>
-	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/JZBranchMelee.unity3d?BranchMeleePrefab" />
+	<property name="DropMeshfile" value="#@modfolder:Resources/JZBranchMelee.unity3d?BranchMeleePrefab"/>
 	<property name="Material" value="Mwood"/>
 	<property name="Weight" value="1" />
 	<property name="Stacknumber" value="5000"/> 
@@ -27645,8 +27645,8 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_WoodBranch">
 	<property name="Tags" value="blunt,melee,weapon,meleeWeapon"/>
 	<property name="HoldType" value="2"/>
-	<property name="Meshfile" value="#@modfolder:Resources/JZBranchMelee.unity3d?BranchMeleePrefab" />
-	<property name="DropMeshfile" value="#@modfolder:Resources/JZBranchMelee.unity3d?BranchMeleePrefab"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Weapons/Melee/Club/Club_Wood_BranchPrefab.prefab"/>
 	<property name="Material" value="Mwood"/>
 	<property name="Stacknumber" value="5000"/> 
 	<property name="FuelValue" value="2"/>
