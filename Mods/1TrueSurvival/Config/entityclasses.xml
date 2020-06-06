@@ -334,14 +334,14 @@
 	<property name="AITask-2" value="DestroyArea"/>
 	<property name="AITask-3" value="Territorial"/>
 	<property name="AITask-4" value="ApproachDistraction"/>
-	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0"/> <!-- class,maxChaseTime (return home) -->
+	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag,0,EntitySurvivor,0"/> <!-- class,maxChaseTime (return home) -->
 	<property name="AITask-6" value="ApproachSpot"/>
 	<property name="AITask-7" value="Look"/>
 	<property name="AITask-8" value="Wander"/>
-	<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityEnemyAnimal,EntityPlayer,EntityAnimalStag,EntityBandit,EntitySurvivor"/>
+	<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityEnemyAnimal,EntityPlayer,EntityAnimalStag,EntitySurvivor"/>
 	<property name="AITarget-2" value="BlockingTargetTask"/>
 	<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
-	<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityNPC,0,0,EntityAnimalStag,0,0,EntityBandit,0,0,EntitySurvivor,0,0"/> <!-- class, hear distance, see dist (checked left to right, 0 dist uses entity default) -->
+	<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityNPC,0,0,EntityAnimalStag,0,0,EntitySurvivor,0,0"/> <!-- class, hear distance, see dist (checked left to right, 0 dist uses entity default) -->
 
 	<!--Classes for AITarget:
 		<property name="Class" value="EntityAnimalRabbit"/> and chicken
@@ -1479,7 +1479,7 @@
 	<property name="AITask-3" value="DestroyArea"/>
 	<property name="AITask-4" value="Territorial"/>
 	<property name="AITask-5" value="ApproachDistraction"/>
-	<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0"/>
+	<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag,0,EntitySurvivor,0"/>
 	<property name="AITask-7" value="ApproachSpot"/>
 	<property name="AITask-8" value="Look"/>
 	<property name="AITask-9" value="Wander"/>
@@ -1708,7 +1708,7 @@
 
 	<property name="AITask-1" value="BreakBlock"/>
 	<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=5"/>
-	<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0"/>
+	<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag,0,EntitySurvivor,0"/>
 	<property name="AITask-4" value="ApproachSpot"/>
 	<property name="AITask-5" value="Look"/>
 	<property name="AITask-6" value="Wander"/>
@@ -1979,7 +1979,7 @@
 
 	<property name="AITask-1" value="BreakBlock"/>
 	<property name="AITask-2" value="DestroyArea"/>
-	<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0"/>
+	<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0,EntityAnimalStag,0,EntitySurvivor,0"/>
 	<property name="AITask-4" value="ApproachSpot"/>
 	<property name="AITask-5" value="Look"/>
 	<property name="AITask-6" value="Wander"/>
@@ -4258,11 +4258,11 @@ Kinda sorta works but is buggy and we don't have time for that.
     <property name="Class" value="EntityBandit" />
 	<property name="HasRagdoll" value="true" />
 	<property name="Weight" value="250"/>
-	
+	<property name="Faction" value="bandits"/>
 	<property name="HandItem" value="jz_HandParasiteLongClaw" />
-	<property name="MoveSpeed" value="0.2"/> 
+	<property name="MoveSpeed" value="0.5"/> 
 	<property name="MoveSpeedPanic" value="1"/>
-	<property name="MoveSpeedAggro" value=".3, 1.5"/>
+	<property name="MoveSpeedAggro" value=".6, 1.5"/>
 	<property name="JumpMaxDistance" value="11, 13"/>
 	
 	<property name="PainResistPerHit" value=".01"/>

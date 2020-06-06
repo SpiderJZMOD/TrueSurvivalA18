@@ -831,7 +831,7 @@
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerFoodStat" operation="add" value="100"/><!--Food-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_WellnessLv" operation="add" value="80"/><!--Wellness-->
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="80"/><!--Health-->
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="48"/><!--Hydration-->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="20"/><!--Hydration-->
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffStatusCheck01"/>
 		</effect_group>
@@ -5800,7 +5800,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
     <!-- JZMOD PUNCTURED -->
-    <buff name="jz_BuffPunctured" remove_on_death="false" name_key="Puncture Wound" tooltip_key="Ah! A Hole!" description_key="You have a deep Puncture Wound. Your going to need to sanitize and pack the hole with a bandage\n-10% Mobility\n-1HP per 20sec\n-1 Wellness" icon="ui_game_symbol_gash">
+    <buff name="jz_BuffPunctured" remove_on_death="false" name_key="Puncture Wound" tooltip_key="Ah! A Hole!" description_key="You have a deep Puncture Wound. Your going to need to sanitize and pack the hole with a bandage\n-10% Mobility\n-1HP per 20sec\n-1 Wellness" icon="ui_game_symbol_puncture">
 		<stack_type value="ignore"/>
 		<update_rate value="20"/>
 		<duration value="0"/>
@@ -5820,16 +5820,16 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
     
-    <buff name="jz_BuffPunctureBandagedSani" remove_on_death="false" name_key="Bandaged Puncture Wound" tooltip_key="Pack it tight" description_key="Your Puncture Wound is healing well but it will need at lest a Medical Bandage to continue healing after this bandage gets dirty\n-5% Mobility" icon="ui_game_symbol_gash">
+    <buff name="jz_BuffPunctureBandagedSani" remove_on_death="false" name_key="Bandaged Puncture Wound" tooltip_key="Pack it tight" description_key="Your Puncture Wound is healing well but it will need at lest a Medical Bandage to continue healing after this bandage gets dirty\n-5% Mobility" icon="ui_game_symbol_bandaged">
 		<stack_type value="ignore"/>
 		<duration value="1800"/>
 		<effect_group>
-            <passive_effect name="Mobility" operation="perc_subtract" value="0.5"/>
+            <passive_effect name="Mobility" operation="perc_subtract" value="0.05"/>
             <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="jz_BuffDirtyPunctureBandagedA"/>
 		</effect_group>
 	</buff>
     
-    <buff name="jz_BuffDirtyPunctureBandagedA" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="Its Starting to Smell" description_key="Your bandage has gotten dirty and needs to be changed. You will need at lest a Medical Bandage for it to continue healing\n-7% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+    <buff name="jz_BuffDirtyPunctureBandagedA" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="Its Starting to Smell" description_key="Your bandage has gotten dirty and needs to be changed. You will need at lest a Medical Bandage for it to continue healing\n-7% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_dirtyBandage">
 		<stack_type value="ignore"/>
 		<duration value="900"/>
 		<effect_group>
@@ -5839,7 +5839,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
     
-    <buff name="jz_BuffPunctureBandageMedic" remove_on_death="false" name_key="Bandaged Puncture Wound" tooltip_key="Pack it tight" description_key="Your Puncture Wound is healing well but it will need to be re bandaged to continue healing after this bandage gets dirty\n-2% Mobility" icon="ui_game_symbol_gash">
+    <buff name="jz_BuffPunctureBandageMedic" remove_on_death="false" name_key="Bandaged Puncture Wound" tooltip_key="Pack it tight" description_key="Your Puncture Wound is healing well but it will need to be re bandaged to continue healing after this bandage gets dirty\n-2% Mobility" icon="ui_game_symbol_bandaged">
 		<stack_type value="ignore"/>
 		<duration value="1800"/>
 		<effect_group>
@@ -5848,7 +5848,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
     
-    <buff name="jz_BuffDirtyPunctureBandagedB" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="Its Starting to Smell" description_key="Your bandage has gotten dirty and needs to be changed. You will need to re bandaged it for it to continue healing\n-3% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+    <buff name="jz_BuffDirtyPunctureBandagedB" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="Its Starting to Smell" description_key="Your bandage has gotten dirty and needs to be changed. You will need to re bandaged it for it to continue healing\n-3% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_dirtyBandage">
 		<stack_type value="ignore"/>
 		<duration value="900"/>
 		<effect_group>
@@ -5858,7 +5858,7 @@ icon="ui_game_symbol_pack_mule"
         </effect_group>
 	</buff>
     
-    <buff name="jz_BuffPunctureBandage" remove_on_death="false" name_key="Bandaged Puncture Wound" tooltip_key="Pack it tight" description_key="Your Puncture Wound is healing well but it will need to be re bandaged to continue healing after this bandage gets dirty\n-1% Mobility" icon="ui_game_symbol_gash">
+    <buff name="jz_BuffPunctureBandage" remove_on_death="false" name_key="Bandaged Puncture Wound" tooltip_key="Pack it tight" description_key="Your Puncture Wound is healing well but it will need to be re bandaged to continue healing after this bandage gets dirty\n-1% Mobility" icon="ui_game_symbol_bandaged">
 		<stack_type value="ignore"/>
 		<duration value="1800"/>
 		<effect_group>
@@ -5867,7 +5867,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
     
-    <buff name="jz_BuffDirtyPunctureBandagedC" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="Its Starting to Smell" description_key="Your bandage has gotten dirty and needs to be changed. You will need to re bandaged it for it to continue healing\n-2% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_gash">
+    <buff name="jz_BuffDirtyPunctureBandagedC" remove_on_death="false" name_key="Dirty Bandage" tooltip_key="Its Starting to Smell" description_key="Your bandage has gotten dirty and needs to be changed. You will need to re bandaged it for it to continue healing\n-2% Mobility\n-1 Wellness if not treated" icon="ui_game_symbol_dirtyBandage">
 		<stack_type value="ignore"/>
 		<duration value="900"/>
 		<effect_group>
