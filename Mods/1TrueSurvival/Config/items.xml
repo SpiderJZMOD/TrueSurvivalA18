@@ -7901,10 +7901,6 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="Gloves"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorClothGloves" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorClothPants">
@@ -7925,10 +7921,6 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="LegArmor"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorClothPants" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorClothBoots">
@@ -7949,10 +7941,6 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorClothBoots" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <!-- Leather Armor -->
@@ -8005,10 +7993,6 @@ add knockdown resist to armor
 		<property name="Mask0" value="Head" param1="inner"/>
 		<property name="Mask1" value="Head" param1="outer"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorLeatherHood" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorLeatherChest">
@@ -8035,10 +8019,6 @@ add knockdown resist to armor
 		<property name="Layer" value="2"/>
 		<property name="UISlot" value="ChestArmor"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorLeatherChest" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorLeatherGloves"> <!-- item name directly referenced in the code -->
@@ -8065,10 +8045,6 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="Gloves"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorLeatherGloves" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorLeatherPants">
@@ -8095,10 +8071,6 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="LegArmor"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorLeatherPants" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorLeatherBoots">
@@ -8126,10 +8098,6 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorLeatherBoots" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <!-- Military Armor -->
@@ -8349,10 +8317,6 @@ add knockdown resist to armor
 		<property name="Mask8" value="Eyes" param1="middle"/>
 		<property name="Mask9" value="Eyes" param1="outer"/>
 	</property>
-<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorScrapHelmet" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorScrapChest">
@@ -8379,10 +8343,6 @@ add knockdown resist to armor
 		<property name="Layer" value="2"/>
 		<property name="UISlot" value="ChestArmor"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorScrapChest" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorScrapGloves">
@@ -8409,10 +8369,6 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="Gloves"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorScrapGloves" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorScrapLegs">
@@ -8439,10 +8395,6 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="LegArmor"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorScrapLegs" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorScrapBoots">
@@ -8469,10 +8421,6 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorScrapBoots" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <!-- Iron Armor (formerly Bandit Armor) -->
@@ -8534,10 +8482,6 @@ add knockdown resist to armor
 		<property name="Mask8" value="Eyes" param1="middle"/>
 		<property name="Mask9" value="Eyes" param1="outer"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorIronHelmet" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorIronChest">
@@ -8564,10 +8508,6 @@ add knockdown resist to armor
 		<property name="Layer" value="2"/>
 		<property name="UISlot" value="ChestArmor"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorIronChest" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorIronGloves">
@@ -8594,10 +8534,6 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Gloves"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorIronGloves" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorIronLegs">
@@ -8624,10 +8560,6 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="LegArmor"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorIronLegs" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorIronBoots">
@@ -8654,10 +8586,6 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorIronBoots" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <!-- Steel Armor (formerly Iron Armor) -->
@@ -8718,10 +8646,6 @@ add knockdown resist to armor
 		<property name="Mask8" value="Eyes" param1="middle"/>
 		<property name="Mask9" value="Eyes" param1="outer"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorSteelHelmet" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorSteelChest"> <!-- item name directly referenced in the code -->
@@ -8749,10 +8673,6 @@ add knockdown resist to armor
 		<property name="Layer" value="2"/>
 		<property name="UISlot" value="ChestArmor"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorSteelChest" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorSteelGloves">
@@ -8780,10 +8700,6 @@ add knockdown resist to armor
 		<property name="Layer" value="0"/>
 		<property name="UISlot" value="Gloves"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorSteelGloves" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorSteelLegs"> <!-- item name directly referenced in the code -->
@@ -8810,10 +8726,6 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="LegArmor"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorSteelLegs" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorSteelBoots">
@@ -8841,10 +8753,6 @@ add knockdown resist to armor
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$armorSteelBoots" operation="set" value="1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="armorMiningHelmet">
@@ -9424,7 +9332,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelCowboyHat" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_CowboyHatSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="gear_cowboyhat"/>
@@ -9445,7 +9353,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="BuffResistance" operation="base_add" value=".092,.114" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".01" tags="buffInjuryBleeding"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelCowboyHat" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CowboyHatSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -9474,7 +9382,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelBallCap" operation="LT" value="1"/>
+        <requirement name="ProgressionLevel" progression_name="SP_BallCapSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="gear_ballcap"/>
@@ -9490,7 +9398,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelBallCap" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BallCapSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -9519,7 +9427,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelSkullCap" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_SkullCapSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="gear_skullcap"/>
@@ -9535,7 +9443,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelSkullCap" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SkullCapSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -9543,7 +9451,7 @@ perkNightStalkerSilentNight
 <item name="apparelPressboyCap">
 	<property name="Extends" value="apparelBallCap" param1="UnlockedBy"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelPressboyCap" operation="LT" value="1"/>
+	 <requirement name="ProgressionLevel" progression_name="SP_PressboyCapSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="gear_pressboy_cap"/>
@@ -9559,7 +9467,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelPressboyCap" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_PressboyCapSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -9825,7 +9733,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelBandana" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_BandanaSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="gear_bandana"/>
@@ -9840,7 +9748,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelBandana" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BandanaSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -9868,7 +9776,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelDenimPants" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_DenimPantsSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_denim_pants"/>
@@ -9885,7 +9793,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelDenimPants" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_DenimPantsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -9894,7 +9802,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="apparelDenimPants" />
 	<property name="UnlockedBy" value="perkNeedleAndThreadLegwear"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelDenimShortsPants" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_DenimShortsPantsSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="base_legs"/>
@@ -9913,7 +9821,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelDenimShortsPants" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_DenimShortsPantsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -9922,7 +9830,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="apparelDenimPants"/>
 	<property name="UnlockedBy" value="perkNeedleAndThreadComplete"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelArmyPants" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_ArmyPantsSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_army_pants"/>
@@ -9938,7 +9846,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="6.8,9.2"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelArmyPants" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmyPantsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -9947,7 +9855,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="apparelDenimPants"/>
 	<!-- <property name="Encumbrance" value=".001"/> -->
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelOveralls" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_OverallsSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_overalls"/>
@@ -9960,7 +9868,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelOveralls" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_OverallsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -9969,7 +9877,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="apparelDenimPants"/>
 	<property name="DisplayType" value="clothing"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelSkirt" operation="LT" value="1"/>
+	 <requirement name="ProgressionLevel" progression_name="SP_SkirtSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="skirt"/>
@@ -9986,7 +9894,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelSkirt" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SkirtSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10001,7 +9909,7 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelLeatherClothesGroupDesc"/>
 	<property name="ShowQuality" value="false"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelGothPants" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_GothPantsSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_goth_pants"/>
@@ -10017,7 +9925,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="6.8,9.2"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelGothPants" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GothPantsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10043,7 +9951,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelWornBoots" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_WornBootsSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="worn_boots"/>
@@ -10057,7 +9965,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelWornBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_WornBootsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10074,7 +9982,7 @@ perkNightStalkerSilentNight
 	<property name="Stacknumber" value="1"/>
 	<property name="ShowQuality" value="false"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelRunningShoesRegular" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_RunningShoesRegularSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="running_shoes"/>
@@ -10087,7 +9995,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelRunningShoesRegular" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_RunningShoesRegularSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10105,7 +10013,7 @@ perkNightStalkerSilentNight
 	<property name="Stacknumber" value="1"/>
 	<property name="ShowQuality" value="false"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelRunningShoesHP" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_RunningShoesHPSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="running_shoes"/>
@@ -10120,7 +10028,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelRunningShoesHP" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_RunningShoesHPSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10135,7 +10043,7 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelLeatherClothesGroupDesc"/>
 	<property name="ShowQuality" value="false"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelCowboyBoots" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_CowboyBootsSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="boot02"/>
@@ -10152,7 +10060,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="BuffResistance" operation="base_add" value=".092,.114" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".01" tags="buffInjuryBleeding"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelCowboyBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CowboyBootsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10160,7 +10068,7 @@ perkNightStalkerSilentNight
 <item name="apparelGothBoots">
 	<property name="Extends" value="apparelCowboyBoots" param1="UnlockedBy"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelGothBoots" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_GothBootsSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="goth_boots"/>
@@ -10177,7 +10085,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="BuffResistance" operation="base_add" value=".092,.114" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".01" tags="buffInjuryBleeding"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelGothBoots" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GothBootsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10204,7 +10112,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelLongShirt" operation="LT" value="1"/>
+		<requirement name="ProgressionLevel" progression_name="SP_LongShirtSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="shirt"/>
@@ -10220,7 +10128,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelLongShirt" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_LongShirtSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10229,7 +10137,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="apparelLongShirt"/>
 	<property name="UnlockedBy" value="perkNeedleAndThreadComplete"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelArmyShirt" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_ArmyShirtSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_army_shirt"/>
@@ -10244,7 +10152,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="6.8,9.2"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelArmyShirt" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmyShirtSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10272,7 +10180,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelSweatshirt" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_SweatshirtSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="sweatshirt"/>
@@ -10288,7 +10196,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelSweatshirt" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SweatshirtSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10296,7 +10204,7 @@ perkNightStalkerSilentNight
 <item name="apparelFlannelShirt">
 	<property name="Extends" value="apparelSweatshirt"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelFlannelShirt" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_FlannelShirtSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="plaid_shirt"/>
@@ -10312,7 +10220,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelFlannelShirt" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_FlannelShirtSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10340,7 +10248,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelTShirtPlain" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_TShirtPlainSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="base_chest"/>
@@ -10358,7 +10266,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelTShirtPlain" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_TShirtPlainSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10367,7 +10275,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="apparelTShirtPlain" param1="UnlockedBy"/>
 	<property name="CustomIcon" value="apparelTShirtZU"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelTShirtZU" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_TShirtZUSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Overlay2" value="unisex_football_logo"/>
@@ -10380,7 +10288,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelTShirtZU" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_TShirtZUSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10407,7 +10315,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelTankTop" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_TankTopSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="base_chest"/>
@@ -10425,7 +10333,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelTankTop" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_TankTopSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10452,7 +10360,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelHoodySweatshirt" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_HoodySweatshirtSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="hoody"/>
@@ -10471,7 +10379,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelHoodySweatshirt" operation="set" value="1"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_HoodySweatshirtSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10496,7 +10404,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelCoatLeatherPoncho" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_CoatLeatherPonchoSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_hide_poncho"/>
@@ -10511,7 +10419,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="10.5,14.3"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelCoatLeatherPoncho" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatLeatherPonchoSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10539,7 +10447,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelCoatLeatherDuster" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_CoatLeatherDusterSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_leather_duster"/>
@@ -10556,7 +10464,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="17.5,22.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelCoatLeatherDuster" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatLeatherDusterSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10584,7 +10492,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelCoatPufferCoat" operation="LT" value="1"/>
+ <requirement name="ProgressionLevel" progression_name="SP_CoatPufferCoatSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="coats_puffer_coat"/>
@@ -10601,7 +10509,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelCoatPufferCoat" operation="set" value="1"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatPufferCoatSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10628,7 +10536,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelCoatJacketGeneric" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_CoatJacketGenericSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="jacket"/>
@@ -10645,7 +10553,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelCoatJacketGeneric" operation="set" value="1"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatJacketGenericSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10656,7 +10564,7 @@ perkNightStalkerSilentNight
 	<property name="DisplayType" value="clothing"/>
 	<property name="UnlockedBy" value="perkBatterUpGear"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelCoatJacketLetterZU" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_CoatJacketLetterZUSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="letter_jacket"/>
@@ -10677,7 +10585,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelCoatJacketLetterZU" operation="set" value="1"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatJacketLetterZUSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10704,7 +10612,7 @@ perkNightStalkerSilentNight
 		<property name="UseAnimation" value="false"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="read_mod"/>
-		<requirement name="CVarCompare" cvar="$apparelSuitPants" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_SuitPantsSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_suit_pants"/>
@@ -10724,7 +10632,7 @@ perkNightStalkerSilentNight
 		</passive_effect>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelSuitPants" operation="set" value="1"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SuitPantsSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10733,7 +10641,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="apparelCoatJacketGeneric"/>
 	<property name="CustomIconTint" value="57,57,57"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelSuitJacket" operation="LT" value="1"/>
+        <requirement name="ProgressionLevel" progression_name="SP_SuitJacketSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_suit_jacket"/>
@@ -10755,7 +10663,7 @@ perkNightStalkerSilentNight
 		</passive_effect>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelSuitJacket" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SuitJacketSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10772,7 +10680,7 @@ perkNightStalkerSilentNight
 	<property name="Encumbrance" value=".02"/>
 	<property name="ShowQuality" value="false"/>
 	<property class="Action0">
-		<requirement name="CVarCompare" cvar="$apparelSuitDressShoes" operation="LT" value="1"/>
+		 <requirement name="ProgressionLevel" progression_name="SP_SuitDressShoesSchematic" operation="LT" value="1"/>
 	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_dress_shoes"/>
@@ -10786,7 +10694,7 @@ perkNightStalkerSilentNight
 		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
 	</effect_group>
 	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$apparelSuitDressShoes" operation="set" value="1"/>
+	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SuitDressShoesSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -10895,7 +10803,6 @@ perkNightStalkerSilentNight
 	<property name="Stacknumber" value="5"/>
 	<property name="UnlockedBy" value="medicalFirstAidKitSchematic"/>
 	<property name="DescriptionKey" value="jz_medicalFirstAidBandageDesc"/>
-
 	<property class="Action0">
 		<!-- <requirement name="StatCompare" stat="health" operation="lte" value="50"/> -->
 		<property name="Sound_start" value="player_firstAidKit"/>
@@ -10903,43 +10810,10 @@ perkNightStalkerSilentNight
 	<property class="Action1">
 		<property name="Sound_start" value="player_firstAidKit"/>
 	</property>
-
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
-		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="300"/>
-	</effect_group>
-
 	<effect_group tiered="false" name="JZMOD WOUND SYSTEM">
-		<!-- SMALL WOUND -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingOne">
-			<requirement name="HasBuff" buff="jz_BuffSmallWound"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingTwo">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffSmallWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
-		<!-- WOUND -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingThree">
-			<requirement name="HasBuff" buff="jz_BuffWound"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingFour">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageTwo"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
-		<!-- SEVERE WOUND -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingFive">
-			<requirement name="HasBuff" buff="jz_BuffSevereWound"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingSix">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageThree"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffSevereWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageThree"/>
-		<!-- INFECTED WOUND -->
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingSeven">
-			<requirement name="HasBuff" buff="jz_BuffInfectedWound"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffTendingEight">
-			<requirement name="HasBuff" buff="jz_BuffDirtyBandageFour"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffInfectedWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyInfectedWound"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="jz_BuffDirtyBandageFour"/>
+        <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffFirstAidKit"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="jz_BuffFirstAidKit"/>
+        <triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="20"/>
 	</effect_group>
 </item>
 
@@ -14653,6 +14527,7 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceLeather"/>
+    <property name="CustomIcon" value="jz_CuredLeather"/>
 	<property name="Weight" value="5"/>
 	<property name="RepairAmount" value="150"/>
 	<property name="Stacknumber" value="250"/> <!-- STK resource -->
@@ -20819,6 +20694,7 @@ perkNightStalkerSilentNight
 	<property name="HoldType" value="36"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZScrewdriver.unity3d?ScrewdriverPrefab" />
 	<property name="Material" value="Mmetal"/>
+    <property name="Weight" value="10" />
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -27062,7 +26938,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_CuredLeather">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="curedLeatherDesc" />
-	<property name="CustomIcon" value="jz_CuredLeather" />
+	<property name="CustomIcon" value="resourceleather" />
 	
 </item>
 
@@ -29791,6 +29667,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Meshfile" value="#@modfolder:Resources/JZLgPipeMelee.unity3d?LgPipeMeleePrefab" />
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mmetal"/>
+    <property name="Weight" value="25" />
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="metaldestroy1"/>

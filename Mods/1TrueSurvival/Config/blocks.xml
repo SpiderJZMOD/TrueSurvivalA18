@@ -30849,6 +30849,7 @@ NOT the TextureNumber.
 	<property name="Path" value="solid"/>
 	<property name="Texture" value="241"/>
 	<property name="Group" value="Building,advBuilding"/>
+    <property name="CanPickup" value="true" param1="jz_BrickFrameBlock"/>
 	<property class="UpgradeBlock"> <property name="ToBlock" value="brickBlock"/> </property>
 </block>
 
@@ -31120,7 +31121,7 @@ NOT the TextureNumber.
 </block>
 
 <block name="jz_BrickFrameVariantHelper">
-	<property name="Extends" value="brickBlock"/>
+	<property name="Extends" value="jz_BrickFrameMaster"/>
 	<property name="CustomIcon" value="ui_game_symbol_brickFrame"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="DescriptionKey" value="blockVariantHelperGroupDesc"/>

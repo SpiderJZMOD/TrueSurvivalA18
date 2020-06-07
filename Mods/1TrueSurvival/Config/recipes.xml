@@ -3177,20 +3177,12 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceCloth" count="1"/>
 </recipe>
 
-<recipe name="apparelSuitJacket" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable">
-	<ingredient name="resourceCloth" count="1"/>
-</recipe>
-
 <recipe name="apparelSuitPants" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable">
 	<ingredient name="resourceCloth" count="25"/>
 </recipe>
 	
 <recipe name="apparelSuitJacket" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable">
 	<ingredient name="resourceCloth" count="20"/>
-</recipe>
-
-<recipe name="apparelSuitPants" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="4" craft_exp_gain="25" tags="learnable">
-	<ingredient name="resourceCloth" count="1"/>
 </recipe>
 
 <recipe name="apparelFlannelShirt" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
@@ -3224,11 +3216,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="apparelDenimShortsPants" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
-	<ingredient name="resourceCloth" count="20"/>
-	<ingredient name="resourceSewingKit" count="1"/>
-</recipe>
-
-<recipe name="apparelGothPants" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="20"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
@@ -3282,9 +3269,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
-<recipe name="apparelCowboyBoots" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
+<recipe name="apparelGothBoots" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceLeather" count="5"/>
 	<ingredient name="resourceScrapPolymers" count="5"/>
+    <ingredient name="resourceScrapIron" count="5"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
@@ -3307,12 +3295,22 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="apparelTankTop" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
-	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceCloth" count="20"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 
 <recipe name="apparelTShirtPlain" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceSewingKit" count="1"/>
+</recipe>
+
+<recipe name="apparelTShirtZU" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
+	<ingredient name="resourceCloth" count="25"/>
+	<ingredient name="resourceSewingKit" count="1"/>
+</recipe>
+
+<recipe name="apparelLongShirt" count="1" craft_area="jz_ArmorTable" craft_tool="jz_SewingNeedle" craft_time="30" craft_exp_gain="5" tags="learnable" >
+	<ingredient name="resourceCloth" count="30"/>
 	<ingredient name="resourceSewingKit" count="1"/>
 </recipe>
 

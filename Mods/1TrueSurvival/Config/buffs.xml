@@ -3608,7 +3608,7 @@
 		<display_value_format value="time"/>
 	</buff>
 	
-	<buff name="buffDrugVitamins" name_key="drugVitamins" description_key="drugVitaminsDesc" icon="ui_game_symbol_pills">
+	<buff name="buffDrugVitamins" name_key="drugVitamins" description_key="jz_drugVitaminsDesc" icon="ui_game_symbol_pills">
 		<stack_type value="ignore"/>
 		<duration value="3600"/>
 		<display_value_format value="time"/>
@@ -4727,6 +4727,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$jz_PlayerHealthDrain" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>	
 			
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffSmallWoundWellness"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffBruised"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffScratchFader"/>
@@ -4736,6 +4737,18 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>		
 	</buff>
 	
+    <buff name="jz_BuffSmallWoundWellness" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+        <update_rate value="150"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>	
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>	
+	</buff>
+    
 	<buff name="jz_BuffTendingOne" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Make sure to change it when it gets dirty so it does not get infected." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="1800"/><!--1800-->
@@ -4814,6 +4827,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$jz_PlayerHealthDrain" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>	
 			
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffWoundWellness"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffBruised"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingOne"/>
@@ -4825,6 +4839,18 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>		
 	</buff>
 	
+    <buff name="jz_BuffWoundWellness" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+        <update_rate value="120"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>	
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>	
+	</buff>
+    
 	<buff name="jz_BuffTendingThree" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Make sure to change it when it gets dirty so it does not get infected." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="1800"/><!--1800-->
@@ -4865,6 +4891,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$jz_PlayerHealthDrain" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>	
 			
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffSevereWoundWellness"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDeadlyWound"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingThree"/>
@@ -4876,6 +4903,18 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>		
 	</buff>
 	
+    <buff name="jz_BuffSevereWoundWellness" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+        <update_rate value="90"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>	
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>	
+	</buff>
+    
 	<buff name="jz_BuffTendingFive" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Make sure to change it when it gets dirty so it does not get infected." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="1800"/><!--1800-->
@@ -4920,6 +4959,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$jz_PlayerHealthDrain" operation="add" value="1"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>	
 			
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffInfectedWoundWellness"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWound"/>		
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffTendingFive"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageThree"/>
@@ -4929,7 +4969,19 @@ icon="ui_game_symbol_pack_mule"
 			<passive_effect name="Mobility" operation="perc_subtract" value="0.15"/>
 		</effect_group>		
 	</buff>
-	
+    
+	<buff name="jz_BuffInfectedWoundWellness" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+        <update_rate value="60"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffProcessConsumables"/>	
+			
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$jz_PlayerHealthMaxDrain" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffProcessConsumables"/>		
+		</effect_group>	
+	</buff>
+    
 	<buff name="jz_BuffTendingSeven" remove_on_death="false" name_key="Bandaged Wound" tooltip_key="Thats better for now" description_key="Your wound is bandaged and healing. Make sure to change it when it gets dirty so it does not get infected." icon="ui_game_symbol_bandaged" >
 		<stack_type value="ignore"/>
 		<duration value="1800"/><!--1800-->
@@ -6205,6 +6257,7 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingTwo">
                 <requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWoundWellness"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
             <!-- BLEEDING -->
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding"/>
@@ -6250,6 +6303,7 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingTwo">
                 <requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWoundWellness"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
             <!-- WOUND -->
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingThree">
@@ -6257,6 +6311,7 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingFour">
                 <requirement name="HasBuff" buff="jz_BuffDirtyBandageTwo"/> </triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWoundWellness"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
             <!-- BLEEDING -->
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding"/>
@@ -6314,6 +6369,7 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingTwo">
                 <requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWoundWellness"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
             <!-- WOUND -->
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingThree">
@@ -6321,6 +6377,7 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingFour">
                 <requirement name="HasBuff" buff="jz_BuffDirtyBandageTwo"/> </triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWoundWellness"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
             <!-- SEVERE WOUND -->
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingFive">
@@ -6328,6 +6385,7 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingSix">
                 <requirement name="HasBuff" buff="jz_BuffDirtyBandageThree"/> </triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWoundWellness"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageThree"/>
              <!-- BLEEDING -->
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding"/>
@@ -6385,6 +6443,7 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingTwo">
                 <requirement name="HasBuff" buff="jz_BuffDirtyBandageOne"/> </triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSmallWoundWellness"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageOne"/>
             <!-- WOUND -->
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingThree">
@@ -6392,6 +6451,7 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingFour">
                 <requirement name="HasBuff" buff="jz_BuffDirtyBandageTwo"/> </triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffWoundWellness"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageTwo"/>
             <!-- SEVERE WOUND -->
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingFive">
@@ -6399,6 +6459,7 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingSix">
                 <requirement name="HasBuff" buff="jz_BuffDirtyBandageThree"/> </triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffSevereWoundWellness"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageThree"/>
             <!-- INFECTED WOUND -->
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingSeven">
@@ -6406,6 +6467,7 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffTendingEight">
                 <requirement name="HasBuff" buff="jz_BuffDirtyBandageFour"/> </triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffInfectedWound"/>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffInfectedWoundWellness"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyInfectedWound"/>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDirtyBandageFour"/>
             <!-- BLEEDING -->

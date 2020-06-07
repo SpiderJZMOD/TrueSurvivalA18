@@ -153,6 +153,7 @@
 	<skill name="jz_ToolSchematics" parent="Schematics" name_key="Tool Schematics" icon="ui_game_symbol_fire"><effect_group/></skill>
 	<skill name="jz_VehicalSchematics" parent="Schematics" name_key="Vehicle Schematics" icon="ui_game_symbol_fire"><effect_group/></skill>
 	<skill name="jz_WorkstationSchematics" parent="Schematics" name_key="Workstation Schematics" icon="ui_game_symbol_fire"><effect_group/></skill>
+	<skill name="jz_ClothingSchematics" parent="Schematics" name_key="Clothing Schematics" icon="ui_game_symbol_fire"><effect_group/></skill>
 	
 	<skill name="skillFiremansAlmanac" parent="attBooks" name_key="perkFiremansAlmanac0Name" desc_key="perkFiremansAlmanac0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_fire"><effect_group/></skill>
 	<skill name="skillGreatHeist" parent="attBooks" name_key="perkGreatHeist0Name" desc_key="perkGreatHeist0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_safe"><effect_group/></skill>
@@ -4172,7 +4173,230 @@
 			<effect_description level="1" desc_key="SP_ChemistryStationSchematicDesc" long_desc_key="SP_ChemistryStationSchematicDesc"/>
 		</effect_group>
 	</perk>
-	
+       
+    <perk name="SP_BandanaSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Bandana" desc_key="SP_BandanaSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelBandana"/>
+			<effect_description level="1" desc_key="SP_BandanaSchematicDesc" long_desc_key="SP_BandanaSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_SuitJacketSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Suit Jacket" desc_key="SP_SuitJacketSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelSuitJacket"/>
+			<effect_description level="1" desc_key="SP_SuitJacketSchematicDesc" long_desc_key="SP_SuitJacketSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_SuitPantsSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Suit Pants" desc_key="SP_SuitPantsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelSuitPants"/>
+			<effect_description level="1" desc_key="SP_SuitPantsSchematicDesc" long_desc_key="SP_SuitPantsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_FlannelShirtSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Flannel Shirt" desc_key="SP_FlannelShirtSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelFlannelShirt"/>
+			<effect_description level="1" desc_key="SP_FlannelShirtSchematicDesc" long_desc_key="SP_FlannelShirtSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_SweatshirtSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Sweatshirt" desc_key="SP_SweatshirtSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelSweatshirt"/>
+			<effect_description level="1" desc_key="SP_SweatshirtSchematicDesc" long_desc_key="SP_SweatshirtSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_PressboyCapSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Pressboy Cap" desc_key="SP_PressboyCapSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelPressboyCap"/>
+			<effect_description level="1" desc_key="SP_PressboyCapSchematicDesc" long_desc_key="SP_PressboyCapSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_BallCapSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Ball Cap" desc_key="SP_BallCapSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelBallCap"/>
+			<effect_description level="1" desc_key="SP_BallCapSchematicDesc" long_desc_key="SP_BallCapSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_SkullCapSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Skull Cap" desc_key="SP_SkullCapSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelSkullCap"/>
+			<effect_description level="1" desc_key="SP_SkullCapSchematicDesc" long_desc_key="SP_SkullCapSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_DenimPantsSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Denim Pants" desc_key="SP_DenimPantsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelDenimPants"/>
+			<effect_description level="1" desc_key="SP_DenimPantsSchematicDesc" long_desc_key="SP_DenimPantsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_DenimShortsPantsSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Denim Shorts" desc_key="SP_DenimShortsPantsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelDenimShortsPants"/>
+			<effect_description level="1" desc_key="SP_DenimShortsPantsSchematicDesc" long_desc_key="SP_DenimShortsPantsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_GothPantsSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Goth Pants" desc_key="SP_GothPantsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelGothPants"/>
+			<effect_description level="1" desc_key="SP_GothPantsSchematicDesc" long_desc_key="SP_GothPantsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_HoodySweatshirtSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Hoody Sweatshirt" desc_key="SP_HoodySweatshirtSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelHoodySweatshirt"/>
+			<effect_description level="1" desc_key="SP_HoodySweatshirtSchematicDesc" long_desc_key="SP_HoodySweatshirtSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_CoatLeatherPonchoSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Leather Poncho" desc_key="SP_CoatLeatherPonchoSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCoatLeatherPoncho"/>
+			<effect_description level="1" desc_key="SP_CoatLeatherPonchoSchematicDesc" long_desc_key="SP_CoatLeatherPonchoSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_OverallsSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Overalls" desc_key="SP_OverallsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelOveralls"/>
+			<effect_description level="1" desc_key="SP_OverallsSchematicDesc" long_desc_key="SP_OverallsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_SkirtSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Skirt" desc_key="SP_SkirtSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelSkirt"/>
+			<effect_description level="1" desc_key="SP_SkirtSchematicDesc" long_desc_key="SP_SkirtSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_WornBootsSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Worn Boots" desc_key="SP_WornBootsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelWornBoots"/>
+			<effect_description level="1" desc_key="SP_WornBootsSchematicDesc" long_desc_key="SP_WornBootsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_RunningShoesRegularSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Running Shoes Regular" desc_key="SP_RunningShoesRegularSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelRunningShoesRegular"/>
+			<effect_description level="1" desc_key="SP_RunningShoesRegularSchematicDesc" long_desc_key="SP_RunningShoesRegularSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_RunningShoesHPSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Running Shoes HP" desc_key="SP_RunningShoesHPSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelRunningShoesHP"/>
+			<effect_description level="1" desc_key="SP_RunningShoesHPSchematicDesc" long_desc_key="SP_RunningShoesHPSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_CowboyBootsSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Cowboy Boots" desc_key="SP_CowboyBootsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCowboyBoots"/>
+			<effect_description level="1" desc_key="SP_CowboyBootsSchematicDesc" long_desc_key="SP_CowboyBootsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_SuitDressShoesSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Suit Dress Shoes" desc_key="SP_SuitDressShoesSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelSuitDressShoes"/>
+			<effect_description level="1" desc_key="SP_SuitDressShoesSchematicDesc" long_desc_key="SP_SuitDressShoesSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_CoatJacketGenericSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Jacket" desc_key="SP_CoatJacketGenericSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCoatJacketGeneric"/>
+			<effect_description level="1" desc_key="SP_CoatJacketGenericSchematicDesc" long_desc_key="SP_CoatJacketGenericSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_CoatJacketLetterZUSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="ZU Jacket" desc_key="SP_CoatJacketLetterZUSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCoatJacketLetterZU"/>
+			<effect_description level="1" desc_key="SP_CoatJacketLetterZUSchematicDesc" long_desc_key="SP_CoatJacketLetterZUSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_TankTopSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Tank Top" desc_key="SP_TankTopSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelTankTop"/>
+			<effect_description level="1" desc_key="SP_TankTopSchematicDesc" long_desc_key="SP_TankTopSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_TShirtPlainSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="T Shirt" desc_key="SP_TShirtPlainSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelTShirtPlain"/>
+			<effect_description level="1" desc_key="SP_TShirtPlainSchematicDesc" long_desc_key="SP_TShirtPlainSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_CowboyHatSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Cowboy Hat" desc_key="SP_CowboyHatSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCowboyHat"/>
+			<effect_description level="1" desc_key="SP_CowboyHatSchematicDesc" long_desc_key="SP_CowboyHatSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_CoatLeatherDusterSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Leather Duster" desc_key="SP_CoatLeatherDusterSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCoatLeatherDuster"/>
+			<effect_description level="1" desc_key="SP_CoatLeatherDusterSchematicDesc" long_desc_key="SP_CoatLeatherDusterSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_CoatPufferCoatSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Puffer Coat" desc_key="SP_CoatPufferCoatSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCoatPufferCoat"/>
+			<effect_description level="1" desc_key="SP_CoatPufferCoatSchematicDesc" long_desc_key="SP_CoatPufferCoatSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_ArmyPantsSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Army Pants" desc_key="SP_ArmyPantsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelArmyPants"/>
+			<effect_description level="1" desc_key="SP_ArmyPantsSchematicDesc" long_desc_key="SP_ArmyPantsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_ArmyShirtSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Army Shirt" desc_key="SP_ArmyShirtSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelArmyShirt"/>
+			<effect_description level="1" desc_key="SP_ArmyShirtSchematicDesc" long_desc_key="SP_ArmyShirtSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_LongShirtSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Long Shirt" desc_key="SP_LongShirtSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelLongShirt"/>
+			<effect_description level="1" desc_key="SP_LongShirtSchematicDesc" long_desc_key="SP_LongShirtSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_GothBootsSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Goth Boots" desc_key="SP_GothBootsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelGothBoots"/>
+			<effect_description level="1" desc_key="SP_GothBootsSchematicDesc" long_desc_key="SP_GothBootsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+	<perk name="SP_TShirtZUSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="ZU T Shirt" desc_key="SP_TShirtZUSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelTShirtZU"/>
+			<effect_description level="1" desc_key="SP_TShirtZUSchematicDesc" long_desc_key="SP_TShirtZUSchematicDesc"/>
+		</effect_group>
+	</perk>
 	<!-- ******************************************************************  JZMOD OTHER SKILLS  ******************************************************************************** -->
 	<!--JZMOD HEAD SHOTS ONLY - PVP FRIENDLY -->
 	<perk name="_HeadShotSystem" parent="Miscellaneous" min_level="1" max_level="1" base_skill_point_cost="0" cost_multiplier_per_level="1" name_key="Head Shots for Zombies" desc_key="All player damage is increased only on zombie heads and decreased only on zombies bodies" icon="ui_game_symbol_head_shot">
@@ -4180,11 +4404,11 @@
 			<requirement name="EntityTagCompare" target="other" tags="zombie"/>
 			<requirement name="!EntityTagCompare" target="other" tags="parasite"/>
 			<requirement name="!EntityTagCompare" target="other" tags="animal"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.2" level="1" tags="head"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.3" level="1" tags="head"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="upperbody"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-100" level="1" tags="lowerbody"/>
-				<passive_effect name="DismemberChance" operation="base_add" value=".5" level="1" tags="arm"/>
-				<passive_effect name="DismemberChance" operation="base_add" value=".5" level="1" tags="leg"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".3" level="1" tags="arm"/>
+				<passive_effect name="DismemberChance" operation="base_add" value=".3" level="1" tags="leg"/>
 		</effect_group>
 	</perk>
 	<!-- ******************************************************************  JZMOD BUILDING SKILLS  ******************************************************************************** -->
@@ -4665,32 +4889,64 @@
 
 	<perk name="perkNeedleAndThreadWinterWear" parent="skillNeedleAndThread" max_level="1" base_skill_point_cost="0" name_key="bookNeedleAndThreadWinterWear" desc_key="perkNeedleAndThreadWinterWearDesc" long_desc_key="perkNeedleAndThreadWinterWearLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelFlannelShirt,apparelSweatshirt,apparelSkullCap"/>
-		</effect_group>
+             <requirement name="ProgressionLevel" progression_name="perkNeedleAndThreadWinterWear" operation="GTE" value="1"/>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_FlannelShirtSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_FlannelShirtSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SweatshirtSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SweatshirtSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SkullCapSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SkullCapSchematic" operation="LT" value="1"/></triggered_effect>
+        </effect_group>
 	</perk>
 	<perk name="perkNeedleAndThreadLegwear" parent="skillNeedleAndThread" max_level="1" base_skill_point_cost="0" name_key="bookNeedleAndThreadLegwear" desc_key="perkNeedleAndThreadLegwearDesc" long_desc_key="perkNeedleAndThreadLegwearLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelDenimPants,apparelOveralls,apparelSkirt"/>
-		</effect_group>
+             <requirement name="ProgressionLevel" progression_name="perkNeedleAndThreadLegwear" operation="GTE" value="1"/>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_DenimPantsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_DenimPantsSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_OverallsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_OverallsSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SkirtSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SkirtSchematic" operation="LT" value="1"/></triggered_effect>
+        </effect_group>
 	</perk>
 	<perk name="perkNeedleAndThreadFootwear" parent="skillNeedleAndThread" max_level="1" base_skill_point_cost="0" name_key="bookNeedleAndThreadFootwear" desc_key="perkNeedleAndThreadFootwearDesc" long_desc_key="perkNeedleAndThreadFootwearLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelWornBoots,apparelRunningShoes,apparelCowboyBoots,apparelSuitDressShoes"/>
+             <requirement name="ProgressionLevel" progression_name="perkNeedleAndThreadFootwear" operation="GTE" value="1"/>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_WornBootsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_WornBootsSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_RunningShoesRegularSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_RunningShoesRegularSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CowboyBootsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CowboyBootsSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SuitDressShoesSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_SuitDressShoesSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 	</perk>
 	<perk name="perkNeedleAndThreadDesertWear" parent="skillNeedleAndThread" max_level="1" base_skill_point_cost="0" name_key="bookNeedleAndThreadDesertWear" desc_key="perkNeedleAndThreadDesertWearDesc" long_desc_key="perkNeedleAndThreadDesertWearLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelTankTop,apparelTShirtPlain,apparelCowboyHat,apparelDenimShortsPants"/>
-		</effect_group>
+            <requirement name="ProgressionLevel" progression_name="perkNeedleAndThreadDesertWear" operation="GTE" value="1"/>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_TankTopSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_TankTopSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_TShirtPlainSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_TShirtPlainSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CowboyHatSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CowboyHatSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_DenimShortsPantsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_DenimShortsPantsSchematic" operation="LT" value="1"/></triggered_effect>
+        </effect_group>
 	</perk>
 	<perk name="perkNeedleAndThreadDusters" parent="skillNeedleAndThread" max_level="1" base_skill_point_cost="0" name_key="bookNeedleAndThreadDusters" desc_key="perkNeedleAndThreadDustersDesc" long_desc_key="perkNeedleAndThreadDustersLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCoatLeatherDuster"/>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CoatLeatherDusterSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="perkNeedleAndThreadDusters" operation="GTE" value="1"/>
+				<requirement name="ProgressionLevel" progression_name="SP_CoatLeatherDusterSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 	</perk>
 	<perk name="perkNeedleAndThreadPufferCoats" parent="skillNeedleAndThread" max_level="1" base_skill_point_cost="0" name_key="bookNeedleAndThreadPufferCoats" desc_key="perkNeedleAndThreadPufferCoatsDesc" long_desc_key="perkNeedleAndThreadPufferCoatsLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCoatPufferCoat"/>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CoatPufferCoatSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="perkNeedleAndThreadPufferCoats" operation="GTE" value="1"/>
+				<requirement name="ProgressionLevel" progression_name="SP_CoatPufferCoatSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 	</perk>
 	<perk name="perkNeedleAndThreadPockets" parent="skillNeedleAndThread" max_level="1" base_skill_point_cost="0" name_key="bookNeedleAndThreadPockets" desc_key="perkNeedleAndThreadPocketsDesc" long_desc_key="perkNeedleAndThreadPocketsLongDesc">
@@ -4700,7 +4956,11 @@
 	</perk>
 	<perk name="perkNeedleAndThreadComplete" parent="skillNeedleAndThread" max_level="1" base_skill_point_cost="0" name_key="perkNeedleAndThreadCompleteName" desc_key="perkNeedleAndThreadCompleteDesc" long_desc_key="perkNeedleAndThreadCompleteLongDesc">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelArmyPants,apparelArmyShirt"/>
+            <requirement name="ProgressionLevel" progression_name="perkNeedleAndThreadComplete" operation="GTE" value="1"/>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ArmyShirtSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_ArmyShirtSchematic" operation="LT" value="1"/></triggered_effect>
+             <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_ArmyPantsSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_ArmyPantsSchematic" operation="LT" value="1"/></triggered_effect>	
 		</effect_group>
 	</perk>
 
@@ -4882,9 +5142,13 @@
 	<perk name="perkBatterUpGear" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" name_key="bookBatterUpGear" desc_key="perkBatterUpGearDesc" long_desc_key="perkBatterUpGearLongDesc">
 		<!--effect is on ballCap/jacketLetter -->
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelBallCap,apparelCoatJacketLetterZU"/>
-		</effect_group>
-	</perk>-->
+            <requirement name="ProgressionLevel" progression_name="perkBatterUpGear" operation="GTE" value="1"/>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BallCapSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_BallCapSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CoatJacketLetterZUSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_CoatJacketLetterZUSchematic" operation="LT" value="1"/></triggered_effect>
+        </effect_group>
+	</perk>
 	<perk name="perkBatterUpSlowPitch" parent="skillBatterUp" max_level="1" base_skill_point_cost="0" desc_key="perkBatterUpSlowPitchDesc" long_desc_key="perkBatterUpSlowPitchLongDesc">
 		<effect_group>
 			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffBatterUpSlowDown">
