@@ -187,19 +187,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_ArcherySkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ArcherySkillTag"/>
+            <requirement name="HoldingItemHasTags" tags="jz_ArcherySkillTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_ArcherySkill" operation="LT" value="100"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_ArcheryXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_ArcheryXP" operation="add" value="1">	
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_ArcherySkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_ArcherySkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_ArcherySkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_ArcheryXP" operation="GTE" value="@$jz_ArcherySkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ArcherySkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_ArcherySkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_ArcherySkillNextLvTotal" operation="add" value="@$jz_ArcherySkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_ArcherySkillLv" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_BladeSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Archery!"/>
 		</effect_group>
@@ -207,7 +207,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ArcheryXP" operation="add" value="@$jz_ArcherySkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ArcherySkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ArcherySkillNextLvTotal" operation="add" value="@$jz_ArcherySkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ArcherySkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Archery!"/>
 		</effect_group>
@@ -222,19 +221,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_PistolSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
+            <requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_PistolSkill" operation="LT" value="100"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_PistolXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_PistolXP" operation="add" value="1">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_PistolSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_PistolSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_PistolXP" operation="GTE" value="@$jz_PistolSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_PistolSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_PistolSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_PistolSkillNextLvTotal" operation="add" value="@$jz_PistolSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_PistolSkillLv" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_PistolSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Pistols!"/>
 		</effect_group>
@@ -242,8 +241,7 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_PistolXP" operation="add" value="@$jz_PistolSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_PistolSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_PistolSkillNextLvTotal" operation="add" value="@$jz_PistolSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_PistolSkillLv" operation="add" value="1"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Pistols!"/>
 		</effect_group>
 	</perk>
@@ -257,27 +255,26 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_44MagSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
+            <requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_44MagSkill" operation="LT" value="100"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_44MagXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_44MagXP" operation="add" value="1">
 				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_44MagSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_44MagSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_44MagXP" operation="GTE" value="@$jz_44MagSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_44MagSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_44MagSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_44MagSkillNextLvTotal" operation="add" value="@$jz_44MagSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_44MagSkillLv" operation="add" value="1"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_44MagSkill" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Magnums!"/>
 		</effect_group>
 		<effect_group>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_44MagXP" operation="add" value="@$jz_44MagSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_44MagSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_44MagSkillNextLvTotal" operation="add" value="@$jz_44MagSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_44MagSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Magnums!"/>
 		</effect_group>
@@ -292,19 +289,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SMG5SkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SMG5SkillTag"/>
+            <requirement name="HoldingItemHasTags" tags="jz_SMG5SkillTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_SMG5Skill" operation="LT" value="100"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_SMG5XP" operation="add" value="5"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_SMG5XP" operation="add" value="1">
-					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_SMG5XP" operation="add" value="1">
+				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SMG5SkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_SMG5SkillTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_SMG5Skill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_SMG5XP" operation="GTE" value="@$jz_SMG5SkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SMG5SkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SMG5SkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SMG5SkillNextLvTotal" operation="add" value="@$jz_SMG5SkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SMG5SkillLv" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_SMG5Skill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with SMGs!"/>
 		</effect_group>
@@ -312,8 +309,7 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SMG5XP" operation="add" value="@$jz_SMG5SkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SMG5SkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SMG5SkillNextLvTotal" operation="add" value="@$jz_SMG5SkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SMG5SkillLv" operation="add" value="1"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with SMGs!"/>
 		</effect_group>
 	</perk>
@@ -327,19 +323,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_BlunderbussSkillLv" operation="LT" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkillTag"/>
+            <requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkillTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_BlunderbussSkill" operation="LT" value="100"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_BlunderbussXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_BlunderbussXP" operation="add" value="1">
 				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_BlunderbussSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_BlunderbussSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_BlunderbussXP" operation="GTE" value="@$jz_BlunderbussSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_BlunderbussSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_BlunderbussSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_BlunderbussSkillNextLvTotal" operation="add" value="@$jz_BlunderbussSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_BlunderbussSkillLv" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_BlunderbussSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a Blunderbuss!"/>
 		</effect_group>
@@ -347,7 +343,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BlunderbussXP" operation="add" value="@$jz_BlunderbussSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BlunderbussSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BlunderbussSkillNextLvTotal" operation="add" value="@$jz_BlunderbussSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BlunderbussSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a Blunderbuss!"/>
 		</effect_group>
@@ -362,19 +357,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_DBShotgunSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkillTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_DBShotgunSkill" operation="LT" value="100"/>
 			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_DBShotgunXP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_DBShotgunXP" operation="add" value="1">
 				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_DBShotgunSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkillTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_DBShotgunSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_DBShotgunXP" operation="GTE" value="@$jz_DBShotgunSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_DBShotgunSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_DBShotgunSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_DBShotgunSkillNextLvTotal" operation="add" value="@$jz_DBShotgunSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_DBShotgunSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_DBShotgunSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a Double Barrel Shotgun!"/>
 		</effect_group>
@@ -382,7 +377,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_DBShotgunXP" operation="add" value="@$jz_DBShotgunSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_DBShotgunSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_DBShotgunSkillNextLvTotal" operation="add" value="@$jz_DBShotgunSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_DBShotgunSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a Double Barrel Shotgun!"/>
 		</effect_group>
@@ -397,19 +391,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_PShotgunSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_PShotgunSkillTag"/>
-			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_PShotgunXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_PShotgunXP" operation="add" value="1">
-				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+            <requirement name="ProgressionLevel" progression_name="jz_PShotgunSkill" operation="LT" value="100"/>
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_PShotgunXP" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_PShotgunXP" operation="add" value="1">
+                    <requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_PShotgunSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_PShotgunSkillTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_PShotgunSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_PShotgunXP" operation="GTE" value="@$jz_PShotgunSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_PShotgunSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_PShotgunSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_PShotgunSkillNextLvTotal" operation="add" value="@$jz_PShotgunSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_PShotgunSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_PShotgunSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a Pump Shotgun!"/>
 		</effect_group>
@@ -417,7 +411,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_PShotgunXP" operation="add" value="@$jz_PShotgunSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_PShotgunSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_PShotgunSkillNextLvTotal" operation="add" value="@$jz_PShotgunSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_PShotgunSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a Pump Shotgun!"/>
 		</effect_group>
@@ -432,19 +425,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_HuntingRifleSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkillTag"/>
-			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_HuntingRifleXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_HuntingRifleXP" operation="add" value="1">
-				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+            <requirement name="ProgressionLevel" progression_name="jz_HuntingRifleSkill" operation="LT" value="100"/>
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_HuntingRifleXP" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_HuntingRifleXP" operation="add" value="1">
+                    <requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_HuntingRifleSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_HuntingRifleSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_HuntingRifleXP" operation="GTE" value="@$jz_HuntingRifleSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_HuntingRifleSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_HuntingRifleSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_HuntingRifleSkillNextLvTotal" operation="add" value="@$jz_HuntingRifleSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_HuntingRifleSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_HuntingRifleSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a Hunting Rifle!"/>
 		</effect_group>
@@ -452,7 +445,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_HuntingRifleXP" operation="add" value="@$jz_HuntingRifleSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_HuntingRifleSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_HuntingRifleSkillNextLvTotal" operation="add" value="@$jz_HuntingRifleSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_HuntingRifleSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a Hunting Rifle!"/>
 		</effect_group>
@@ -467,19 +459,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_MarksmanSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_MarksmanSkillTag"/>
-			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_MarksmanXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_MarksmanXP" operation="add" value="1">
-				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+			<requirement name="ProgressionLevel" progression_name="jz_MarksmanSkill" operation="LT" value="100"/>
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_MarksmanXP" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_MarksmanXP" operation="add" value="1">
+                    <requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_MarksmanSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_MarksmanSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_MarksmanSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_MarksmanXP" operation="GTE" value="@$jz_MarksmanSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_MarksmanSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_MarksmanSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_MarksmanSkillNextLvTotal" operation="add" value="@$jz_MarksmanSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_MarksmanSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_MarksmanSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a Sniper Rifle!"/>
 		</effect_group>
@@ -487,7 +479,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_MarksmanXP" operation="add" value="@$jz_MarksmanSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_MarksmanSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_MarksmanSkillNextLvTotal" operation="add" value="@$jz_MarksmanSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_MarksmanSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a Sniper Rifle!"/>
 		</effect_group>
@@ -502,19 +493,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_AK47SkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_AK47SkillTag"/>
-			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_AK47XP" operation="add" value="5"/>
+			<requirement name="ProgressionLevel" progression_name="jz_AK47Skill" operation="LT" value="100"/>
+            <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_AK47XP" operation="add" value="5"/>
 			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_AK47XP" operation="add" value="1">
 				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_AK47SkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_AK47SkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_AK47Skill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_AK47XP" operation="GTE" value="@$jz_AK47SkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_AK47SkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_AK47SkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_AK47SkillNextLvTotal" operation="add" value="@$jz_AK47SkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_AK47SkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_AK47Skill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a AK47!"/>
 		</effect_group>
@@ -522,7 +513,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AK47XP" operation="add" value="@$jz_AK47SkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AK47SkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AK47SkillNextLvTotal" operation="add" value="@$jz_AK47SkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AK47SkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a AK47!"/>
 		</effect_group>
@@ -537,19 +527,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_M60SkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_M60SkillTag"/>
-			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_M60XP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_M60XP" operation="add" value="1">
-				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+			<requirement name="ProgressionLevel" progression_name="jz_M60Skill" operation="LT" value="100"/>
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_M60XP" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_M60XP" operation="add" value="1">
+                    <requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_M60SkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_M60SkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_M60Skill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_M60XP" operation="GTE" value="@$jz_M60SkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_M60SkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_M60SkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_M60SkillNextLvTotal" operation="add" value="@$jz_M60SkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_M60SkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_M60Skill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with a  M60!"/>
 		</effect_group>
@@ -557,7 +547,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_M60XP" operation="add" value="@$jz_M60SkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_M60SkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_M60SkillNextLvTotal" operation="add" value="@$jz_M60SkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_M60SkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with a M60!"/>
 		</effect_group>
@@ -572,19 +561,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_JunkTurretSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_JunkTurretSkillTag"/>
-			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_JunkTurretXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_JunkTurretXP" operation="add" value="1">
-				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+			<requirement name="ProgressionLevel" progression_name="jz_JunkTurretSkill" operation="LT" value="100"/>
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_JunkTurretXP" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_JunkTurretXP" operation="add" value="1">
+                    <requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_JunkTurretSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_JunkTurretSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_JunkTurretXP" operation="GTE" value="@$jz_JunkTurretSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_JunkTurretSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_JunkTurretSkillNextLvTotal" operation="add" value="@$jz_JunkTurretSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_JunkTurretSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_JunkTurretSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Turrets!"/>
 		</effect_group>
@@ -592,7 +581,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_JunkTurretXP" operation="add" value="@$jz_JunkTurretSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_JunkTurretSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_JunkTurretSkillNextLvTotal" operation="add" value="@$jz_JunkTurretSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_JunkTurretSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Turrets!"/>
 		</effect_group>
@@ -607,19 +595,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_ExposivesSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
-			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_ExposivesXP" operation="add" value="5"/>
-			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_ExposivesXP" operation="add" value="1">
-				<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
+			<requirement name="ProgressionLevel" progression_name="jz_ExposivesSkill" operation="LT" value="100"/>
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_ExposivesXP" operation="add" value="5"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_ExposivesXP" operation="add" value="1">
+                    <requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_ExposivesSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_ExposivesSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_ExposivesXP" operation="GTE" value="@$jz_ExposivesSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ExposivesSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_ExposivesSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_ExposivesSkillNextLvTotal" operation="add" value="@$jz_ExposivesSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_ExposivesSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_ExposivesSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Boom Boom!"/>
 		</effect_group>
@@ -627,8 +615,7 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ExposivesXP" operation="add" value="@$jz_ExposivesSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ExposivesSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ExposivesSkillNextLvTotal" operation="add" value="@$jz_ExposivesSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ExposivesSkillLv" operation="add" value="1"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Boom Boom!"/>
 		</effect_group>
 	</perk>
@@ -642,19 +629,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.30" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_UnarmedSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_UnarmedSkillTag"/>
-				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_UnarmedXP" operation="add" value="5"/>
+            <requirement name="ProgressionLevel" progression_name="jz_UnarmedSkill" operation="LT" value="100"/>			
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_UnarmedXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_UnarmedXP" operation="add" value="1">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_UnarmedSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_UnarmedSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_UnarmedSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_UnarmedXP" operation="GTE" value="@$jz_UnarmedSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_UnarmedSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_UnarmedSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_UnarmedSkillNextLvTotal" operation="add" value="@$jz_UnarmedSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_UnarmedSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_UnarmedSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your Brawling skill!"/>
 		</effect_group>
@@ -662,7 +649,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_UnarmedXP" operation="add" value="@$jz_UnarmedSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_UnarmedSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_UnarmedSkillNextLvTotal" operation="add" value="@$jz_UnarmedSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_UnarmedSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Brawling skill!"/>
 		</effect_group>
@@ -676,19 +662,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.30" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_BluntSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_BluntSkillTag"/>
-				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_BluntXP" operation="add" value="5"/>
+            <requirement name="ProgressionLevel" progression_name="jz_BluntSkill" operation="LT" value="100"/>				
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_BluntXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_BluntXP" operation="add" value="1">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_BluntSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_BluntSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_BluntSkill" operation="LT" value="100"/>	
 			<requirement name="CVarCompare" cvar="$jz_BluntXP" operation="GTE" value="@$jz_BluntSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_BluntSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_BluntSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_BluntSkillNextLvTotal" operation="add" value="@$jz_BluntSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_BluntSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_BluntSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="Blunt Skill level increased"/>
 		</effect_group>
@@ -696,7 +682,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BluntXP" operation="add" value="@$jz_BluntSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BluntSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BluntSkillNextLvTotal" operation="add" value="@$jz_BluntSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BluntSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="Blunt Skill level increased"/>
 		</effect_group>
@@ -710,19 +695,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.30" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SledgeSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_SledgeSkillTag"/>
-				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_SledgeXP" operation="add" value="5"/>
+            <requirement name="ProgressionLevel" progression_name="jz_SledgeSkill" operation="LT" value="100"/>				
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_SledgeXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_SledgeXP" operation="add" value="1">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SledgeSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_SledgeSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_SledgeSkill" operation="LT" value="100"/>		
 			<requirement name="CVarCompare" cvar="$jz_SledgeXP" operation="GTE" value="@$jz_SledgeSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SledgeSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SledgeSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SledgeSkillNextLvTotal" operation="add" value="@$jz_SledgeSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SledgeSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_SledgeSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your Sledge skill!"/>
 		</effect_group>
@@ -730,7 +715,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SledgeXP" operation="add" value="@$jz_SledgeSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SledgeSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SledgeSkillNextLvTotal" operation="add" value="@$jz_SledgeSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SledgeSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Sledge skill!"/>
 		</effect_group>
@@ -744,19 +728,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.30" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_BladeSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_BladeSkillTag"/>
-				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_BladeXP" operation="add" value="5"/>
+            <requirement name="ProgressionLevel" progression_name="jz_BladeSkill" operation="LT" value="100"/>						
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_BladeXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_BladeXP" operation="add" value="1">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_BladeSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_BladeSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_BladeSkill" operation="LT" value="100"/>
 			<requirement name="CVarCompare" cvar="$jz_BladeXP" operation="GTE" value="@$jz_BladeSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_BladeSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_BladeSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_BladeSkillNextLvTotal" operation="add" value="@$jz_BladeSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_BladeSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_BladeSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Blades!"/>
 		</effect_group>
@@ -764,7 +748,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BladeXP" operation="add" value="@$jz_BladeSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BladeSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BladeSkillNextLvTotal" operation="add" value="@$jz_BladeSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_BladeSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Blades!"/>
 		</effect_group>
@@ -781,19 +764,19 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.3" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SpearSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_SpearSkillTag"/>
-				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_SpearXP" operation="add" value="5"/>
+            <requirement name="ProgressionLevel" progression_name="jz_SpearSkill" operation="LT" value="100"/>					
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_SpearXP" operation="add" value="5"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_SpearXP" operation="add" value="1">	
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SpearSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_SpearSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_SpearSkill" operation="LT" value="100"/>	
 			<requirement name="CVarCompare" cvar="$jz_SpearXP" operation="GTE" value="@$jz_SpearSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SpearSkillTag"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SpearSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SpearSkillNextLvTotal" operation="add" value="@$jz_SpearSkillLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SpearSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_SpearSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Spears!"/>
 		</effect_group>
@@ -801,7 +784,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SpearXP" operation="add" value="@$jz_SpearSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SpearSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SpearSkillNextLvTotal" operation="add" value="@$jz_SpearSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SpearSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill with Spears!"/>
 		</effect_group>
@@ -815,17 +797,17 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.2" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_MiningSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_MiningSkillTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="$jz_MiningXP" operation="add" value="1"/>
+            <requirement name="ProgressionLevel" progression_name="jz_MiningSkill" operation="LT" value="100"/>					
+                <triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="$jz_MiningXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_MiningSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_MiningSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_MiningSkill" operation="LT" value="100"/>		
 			<requirement name="CVarCompare" cvar="$jz_MiningXP" operation="GTE" value="@$jz_MiningSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_MiningSkillTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_MiningSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
+                <triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_MiningSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_MiningSkillNextLvTotal" operation="add" value="@$jz_MiningSkillLvAdd"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_MiningSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifySkillSDX, Mods" tag="jz_MiningSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up Mining!"/>
 		</effect_group>
@@ -833,7 +815,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_MiningXP" operation="add" value="@$jz_MiningSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_MiningSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_MiningSkillNextLvTotal" operation="add" value="@$jz_MiningSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_MiningSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up Mining!"/>
 		</effect_group>
@@ -847,17 +828,17 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.2" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_AxeSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_AxeSkillTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="$jz_AxeXP" operation="add" value="1"/>
+            <requirement name="ProgressionLevel" progression_name="jz_AxeSkill" operation="LT" value="100"/>	
+                <triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="$jz_AxeXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_AxeSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_AxeSkillTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_AxeSkill" operation="LT" value="100"/>	
 			<requirement name="CVarCompare" cvar="$jz_AxeXP" operation="GTE" value="@$jz_AxeSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_AxeSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_AxeSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_AxeSkillNextLvTotal" operation="add" value="@$jz_AxeSkillLvAdd"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_AxeSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifySkillSDX, Mods" tag="jz_AxeSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Axe skill!"/>
 		</effect_group>
@@ -865,7 +846,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AxeXP" operation="add" value="@$jz_AxeSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AxeSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AxeSkillNextLvTotal" operation="add" value="@$jz_AxeSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AxeSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Axe skill!"/>
 		</effect_group>
@@ -879,17 +859,17 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.2" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_ChainsawSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_ChainsawSkillTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_ChainsawSkill" operation="LT" value="100"/>	
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="$jz_ChainsawXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_ChainsawSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_ChainsawSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_ChainsawSkill" operation="LT" value="100"/>	
 			<requirement name="CVarCompare" cvar="$jz_ChainsawXP" operation="GTE" value="@$jz_ChainsawSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ChainsawSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_ChainsawSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_ChainsawSkillNextLvTotal" operation="add" value="@$jz_ChainsawSkillLvAdd"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_ChainsawSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifySkillSDX, Mods" tag="jz_ChainsawSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Chainsaw skill!"/>
 		</effect_group>
@@ -897,8 +877,7 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ChainsawXP" operation="add" value="@$jz_ChainsawSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ChainsawSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ChainsawSkillNextLvTotal" operation="add" value="@$jz_ChainsawSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_ChainsawSkillLv" operation="add" value="1"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
+            <triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Chainsaw skill!"/>
 		</effect_group>
 	</perk>
@@ -911,17 +890,17 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="0,0.2" level="1,100" />
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_AugerSkillLv" operation="LT" value="100"/>
 			<requirement name="HoldingItemHasTags" tags="jz_AugerSkillTag"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="$jz_AugerXP" operation="add" value="1"/>
+            <requirement name="ProgressionLevel" progression_name="jz_AugerSkill" operation="LT" value="100"/>				
+                <triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" target="self" cvar="$jz_AugerXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_AugerSkillLv" operation="LT" value="100"/>
+            <requirement name="HoldingItemHasTags" tags="jz_AugerSkillTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_AugerSkill" operation="LT" value="100"/>			
 			<requirement name="CVarCompare" cvar="$jz_AugerXP" operation="GTE" value="@$jz_AugerSkillNextLvTotal"/>
-			<requirement name="HoldingItemHasTags" tags="jz_AugerSkillTag"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_AugerSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_AugerSkillNextLvTotal" operation="add" value="@$jz_AugerSkillLvAdd"/>
-				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="$jz_AugerSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfDestroyedBlock" action="ModifySkillSDX, Mods" tag="jz_AugerSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="You have leveled up your Auger skill!"/>
 		</effect_group>
@@ -929,7 +908,6 @@
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AugerXP" operation="add" value="@$jz_AugerSkillLvAdd"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AugerSkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AugerSkillNextLvTotal" operation="add" value="@$jz_AugerSkillLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_AugerSkillLv" operation="add" value="1"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your Auger skill!"/>
 		</effect_group>
@@ -4425,31 +4403,31 @@
 				<requirement name="ProgressionLevel" progression_name="SP_PlankSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_WoodBuildingSkillLv" operation="LT" value="3"/>
-			<requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="$jz_WoodBuildingXP" operation="add" value="1"/>
+            <requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_WoodBuildingSkill" operation="LT" value="3"/>		
+           		<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="$jz_WoodBuildingXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_WoodBuildingSkillLv" operation="LT" value="1"/>
+            <requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_WoodBuildingSkill" operation="LT" value="1"/>	
 			<requirement name="CVarCompare" cvar="$jz_WoodBuildingXP" operation="Equals" value="50"/>
-			<requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_WoodBuildingSkillLv" operation="add" value="1"/>
+			    <triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_WoodBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up Wood Building!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_WoodBuildingSkillLv" operation="LT" value="2"/>
+            <requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_WoodBuildingSkill" operation="LT" value="2"/>	
 			<requirement name="CVarCompare" cvar="$jz_WoodBuildingXP" operation="Equals" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_WoodBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_WoodBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up Wood Building!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_WoodBuildingSkillLv" operation="LT" value="3"/>
+            <requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_WoodBuildingSkill" operation="LT" value="3"/>	
 			<requirement name="CVarCompare" cvar="$jz_WoodBuildingXP" operation="Equals" value="150"/>
-			<requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_WoodBuildingSkillLv" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_WoodBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up Wood Building!"/>
 		</effect_group>
@@ -4475,39 +4453,39 @@
 				<requirement name="ProgressionLevel" progression_name="SP_BricksSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_StoneBuildingSkillLv" operation="LT" value="4"/>
-			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
+            <requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_StoneBuildingSkill" operation="LT" value="4"/>	
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="$jz_StoneBuildingXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_StoneBuildingSkillLv" operation="LT" value="1"/>
+            <requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_StoneBuildingSkill" operation="LT" value="1"/>	
 			<requirement name="CVarCompare" cvar="$jz_StoneBuildingXP" operation="Equals" value="50"/>
-			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_StoneBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_StoneBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_StoneBuildingSkillLv" operation="LT" value="2"/>
+            <requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_StoneBuildingSkill" operation="LT" value="2"/>	
 			<requirement name="CVarCompare" cvar="$jz_StoneBuildingXP" operation="Equals" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_StoneBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_StoneBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_StoneBuildingSkillLv" operation="LT" value="3"/>
+            <requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_StoneBuildingSkill" operation="LT" value="3"/>	
 			<requirement name="CVarCompare" cvar="$jz_StoneBuildingXP" operation="Equals" value="150"/>
-			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_StoneBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_StoneBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_StoneBuildingSkillLv" operation="LT" value="4"/>
+            <requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_StoneBuildingSkill" operation="LT" value="4"/>	
 			<requirement name="CVarCompare" cvar="$jz_StoneBuildingXP" operation="Equals" value="150"/>
-			<requirement name="HoldingItemHasTags" tags="jz_StoneBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_StoneBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_StoneBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Stone Building Skill!"/>
 		</effect_group>
@@ -4530,31 +4508,31 @@
 				<requirement name="ProgressionLevel" progression_name="SP_IronSheetMetalSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_IronBuildingSkillLv" operation="LT" value="3"/>
-			<requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
+            <requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_IronBuildingSkill" operation="LT" value="3"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="$jz_IronBuildingXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_IronBuildingSkillLv" operation="LT" value="1"/>
+            <requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_IronBuildingSkill" operation="LT" value="1"/>
 			<requirement name="CVarCompare" cvar="$jz_IronBuildingXP" operation="Equals" value="50"/>
-			<requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_IronBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_IronBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Iron Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_IronBuildingSkillLv" operation="LT" value="2"/>
+            <requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_IronBuildingSkill" operation="LT" value="2"/>
 			<requirement name="CVarCompare" cvar="$jz_IronBuildingXP" operation="Equals" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_IronBuildingSkillLv" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_IronBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Iron Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_IronBuildingSkillLv" operation="LT" value="3"/>
+            <requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_IronBuildingSkill" operation="LT" value="3"/>
 			<requirement name="CVarCompare" cvar="$jz_IronBuildingXP" operation="Equals" value="150"/>
-			<requirement name="HoldingItemHasTags" tags="jz_IronBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_IronBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_IronBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Iron Building Skill!"/>
 		</effect_group>
@@ -4576,31 +4554,31 @@
 				<requirement name="ProgressionLevel" progression_name="SP_ConcreteMixSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_ConcreteBuildingSkillLv" operation="LT" value="3"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
+            <requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
+            <requirement name="ProgressionLevel" progression_name="jz_ConcreteBuildingSkill" operation="LT" value="3"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="$jz_ConcreteBuildingXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_ConcreteBuildingSkillLv" operation="LT" value="1"/>
+            <requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_ConcreteBuildingSkill" operation="LT" value="1"/>
 			<requirement name="CVarCompare" cvar="$jz_ConcreteBuildingXP" operation="Equals" value="50"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_ConcreteBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_ConcreteBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Concrete Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_ConcreteBuildingSkillLv" operation="LT" value="2"/>
+            <requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_ConcreteBuildingSkill" operation="LT" value="2"/>
 			<requirement name="CVarCompare" cvar="$jz_ConcreteBuildingXP" operation="Equals" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_ConcreteBuildingSkillLv" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_ConcreteBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Concrete Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_ConcreteBuildingSkillLv" operation="LT" value="3"/>
+            <requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_ConcreteBuildingSkill" operation="LT" value="3"/>
 			<requirement name="CVarCompare" cvar="$jz_ConcreteBuildingXP" operation="Equals" value="150"/>
-			<requirement name="HoldingItemHasTags" tags="jz_ConcreteBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_ConcreteBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_ConcreteBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Concrete Building Skill!"/>
 		</effect_group>
@@ -4622,31 +4600,31 @@
 				<requirement name="ProgressionLevel" progression_name="SP_SteelSheetMetalSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SteelBuildingSkillLv" operation="LT" value="3"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
+            <requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_SteelBuildingSkill" operation="LT" value="3"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" target="self" cvar="$jz_SteelBuildingXP" operation="add" value="1"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SteelBuildingSkillLv" operation="LT" value="1"/>
+            <requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_SteelBuildingSkill" operation="LT" value="1"/>
 			<requirement name="CVarCompare" cvar="$jz_SteelBuildingXP" operation="Equals" value="50"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_SteelBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_SteelBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Steel Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SteelBuildingSkillLv" operation="LT" value="2"/>
+            <requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_SteelBuildingSkill" operation="LT" value="2"/>
 			<requirement name="CVarCompare" cvar="$jz_SteelBuildingXP" operation="Equals" value="100"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_SteelBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_SteelBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Steel Building Skill!"/>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SteelBuildingSkillLv" operation="LT" value="3"/>
+            <requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
+			<requirement name="ProgressionLevel" progression_name="jz_SteelBuildingSkill" operation="LT" value="3"/>
 			<requirement name="CVarCompare" cvar="$jz_SteelBuildingXP" operation="Equals" value="150"/>
-			<requirement name="HoldingItemHasTags" tags="jz_SteelBuildingTag"/>
-				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifyCVar" cvar="$jz_SteelBuildingSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ModifySkillSDX, Mods" tag="jz_SteelBuildingSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="You have leveled up your Steel Building Skill!"/>
 		</effect_group>
@@ -4667,7 +4645,7 @@
 			</triggered_effect>
         </effect_group>
         <effect_group>
-            <requirement name="CVarCompare" cvar="$jz_SmallGameSkillLv" operation="LT" value="4"/>
+            <requirement name="ProgressionLevel" progression_name="jz_SmallGameHunterSkill" operation="LT" value="3"/>
             <requirement name="EntityTagCompare" target="other" tags="perkAT01"/>
 				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_SmallGameXP" operation="add" value="5"/>
                 <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_SmallGameXP" operation="add" value="2">
@@ -4676,24 +4654,16 @@
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="LTE" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SmallGameSkillLv" operation="LT" value="4"/>
+            <requirement name="EntityTagCompare" target="other" tags="perkAT01"/>
+			<requirement name="ProgressionLevel" progression_name="jz_SmallGameHunterSkill" operation="LT" value="3"/>
 			<requirement name="CVarCompare" cvar="$jz_SmallGameXP" operation="GTE" value="@$jz_SmallGameNextLvTotal"/>
-			<requirement name="EntityTagCompare" target="other" tags="perkAT01"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SmallGameLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SmallGameLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SmallGameNextLvTotal" operation="add" value="@$jz_SmallGameLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SmallGameSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_SmallGameHunterSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Small Game!"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SmallGameXP" operation="add" value="@$jz_SmallGameLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SmallGameLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SmallGameNextLvTotal" operation="add" value="@$jz_SmallGameLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SmallGameSkillLv" operation="add" value="1"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Small Game!"/>
-		</effect_group>
-        <effect_group>
 			<effect_description level="1" desc_key="jz_SmallGameHunterRank1Desc" long_desc_key="jz_SmallGameHunterRank1LongDesc"/>
 			<effect_description level="2" desc_key="jz_SmallGameHunterRank2Desc" long_desc_key="jz_SmallGameHunterRank2LongDesc"/>
 			<effect_description level="3" desc_key="jz_SmallGameHunterRank3Desc" long_desc_key="jz_SmallGameHunterRank3LongDesc"/>
@@ -4710,31 +4680,23 @@
 			</triggered_effect>
         </effect_group>
         <effect_group>
-            <requirement name="CVarCompare" cvar="$jz_LargeGameSkillLv" operation="LT" value="4"/>
             <requirement name="EntityTagCompare" target="other" tags="perkAT02"/>
-				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_LargeGameXP" operation="add" value="5"/>
+            <requirement name="ProgressionLevel" progression_name="jz_LargeGameHunterSkill" operation="LT" value="3"/>
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_LargeGameXP" operation="add" value="5"/>
                 <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_LargeGameXP" operation="add" value="2">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
                 <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_LargeGameXP" operation="add" value="1">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="LTE" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_LargeGameSkillLv" operation="LT" value="4"/>
+            <requirement name="EntityTagCompare" target="other" tags="perkAT02"/>
+			<requirement name="ProgressionLevel" progression_name="jz_LargeGameHunterSkill" operation="LT" value="3"/>
 			<requirement name="CVarCompare" cvar="$jz_LargeGameXP" operation="GTE" value="@$jz_LargeGameNextLvTotal"/>
-			<requirement name="EntityTagCompare" target="other" tags="perkAT02"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_LargeGameLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_LargeGameNextLvTotal" operation="add" value="@$jz_LargeGameLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_LargeGameSkillLv" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_LargeGameHunterSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Large Game!"/>
-		</effect_group>
-		<effect_group>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_LargeGameXP" operation="add" value="@$jz_LargeGameLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_LargeGameLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_LargeGameNextLvTotal" operation="add" value="@$jz_LargeGameLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_LargeGameSkillLv" operation="add" value="1"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Large Game!"/>
 		</effect_group>
         <effect_group>
 			<effect_description level="1" desc_key="jz_LargeGameHunterRank1Desc" long_desc_key="jz_LargeGameHunterRank1LongDesc"/>
@@ -4753,33 +4715,25 @@
 			</triggered_effect>
         </effect_group>
         <effect_group>
-            <requirement name="CVarCompare" cvar="$jz_SmallPredGameSkillLv" operation="LT" value="4"/>
             <requirement name="EntityTagCompare" target="other" tags="perkAT03"/>
-				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_SmallPredGameXP" operation="add" value="5"/>
+            <requirement name="ProgressionLevel" progression_name="jz_SmallPredGameHunterSkill" operation="LT" value="3"/>
+        		<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_SmallPredGameXP" operation="add" value="5"/>
                 <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_SmallPredGameXP" operation="add" value="2">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
                 <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_SmallPredGameXP" operation="add" value="1">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="LTE" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_SmallPredGameSkillLv" operation="LT" value="4"/>
+            <requirement name="EntityTagCompare" target="other" tags="perkAT03"/>
+			<requirement name="ProgressionLevel" progression_name="jz_SmallPredGameHunterSkill" operation="LT" value="3"/>
 			<requirement name="CVarCompare" cvar="$jz_SmallPredGameXP" operation="GTE" value="@$jz_SmallPredGameNextLvTotal"/>
-			<requirement name="EntityTagCompare" target="other" tags="perkAT03"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SmallPredGameLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SmallPredGameNextLvTotal" operation="add" value="@$jz_SmallPredGameLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_SmallPredGameSkillLv" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_SmallPredGameHunterSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Small Predators!"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SmallPredGameXP" operation="add" value="@$jz_SmallPredGameLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SmallPredGameLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SmallPredGameNextLvTotal" operation="add" value="@$jz_SmallPredGameLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_SmallPredGameSkillLv" operation="add" value="1"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Small Predators!"/>
-		</effect_group>
-        <effect_group>
 			<effect_description level="1" desc_key="jz_SmallPredGameHunterRank1Desc" long_desc_key="jz_SmallPredGameHunterRank1LongDesc"/>
 			<effect_description level="2" desc_key="jz_SmallPredGameHunterRank2Desc" long_desc_key="jz_SmallPredGameHunterRank2LongDesc"/>
 			<effect_description level="3" desc_key="jz_SmallPredGameHunterRank3Desc" long_desc_key="jz_SmallPredGameHunterRank3LongDesc"/>
@@ -4796,33 +4750,25 @@
 			</triggered_effect>
         </effect_group>
         <effect_group>
-            <requirement name="CVarCompare" cvar="$jz_LargePredGameSkillLv" operation="LT" value="4"/>
             <requirement name="EntityTagCompare" target="other" tags="perkAT04"/>
-				<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_LargePredGameXP" operation="add" value="5"/>
+            <requirement name="ProgressionLevel" progression_name="jz_LargePredGameHunterSkill" operation="LT" value="3"/>
+                <triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" target="self" cvar="$jz_LargePredGameXP" operation="add" value="5"/>
                 <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_LargePredGameXP" operation="add" value="2">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="GT" value="0"/></triggered_effect>
                 <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="self" cvar="$jz_LargePredGameXP" operation="add" value="1">
 					<requirement name="StatCompareCurrent" target="other" stat="health" operation="LTE" value="0"/></triggered_effect>
 		</effect_group>
 		<effect_group>
-			<requirement name="CVarCompare" cvar="$jz_LargePredGameSkillLv" operation="LT" value="4"/>
+            <requirement name="EntityTagCompare" target="other" tags="perkAT04"/>
+			<requirement name="ProgressionLevel" progression_name="jz_LargePredGameHunterSkill" operation="LT" value="3"/>
 			<requirement name="CVarCompare" cvar="$jz_LargePredGameXP" operation="GTE" value="@$jz_LargePredGameNextLvTotal"/>
-			<requirement name="EntityTagCompare" target="other" tags="perkAT04"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_LargePredGameLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_LargePredGameNextLvTotal" operation="add" value="@$jz_LargePredGameLvAdd"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_LargePredGameSkillLv" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_LargePredGameHunterSkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Large Predators!"/>
 		</effect_group>
 		<effect_group>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_LargePredGameXP" operation="add" value="@$jz_LargePredGameLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_LargePredGameLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_LargePredGameNextLvTotal" operation="add" value="@$jz_LargePredGameLvAdd"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ModifyCVar" cvar="$jz_LargePredGameSkillLv" operation="add" value="1"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
-			<triggered_effect trigger="onPerkLevelChanged" action="ShowToolbeltMessage" message="You have leveled up your skill hunting Large Predators!"/>
-		</effect_group>
-        <effect_group>
 			<effect_description level="1" desc_key="jz_LargePredGameHunterRank1Desc" long_desc_key="jz_LargePredGameHunterRank1LongDesc"/>
 			<effect_description level="2" desc_key="jz_LargePredGameHunterRank2Desc" long_desc_key="jz_LargePredGameHunterRank2LongDesc"/>
 			<effect_description level="3" desc_key="jz_LargePredGameHunterRank3Desc" long_desc_key="jz_LargePredGameHunterRank3LongDesc"/>

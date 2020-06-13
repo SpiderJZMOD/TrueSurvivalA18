@@ -69,7 +69,7 @@
 	</effect_group>
 	<property name="Group" value="Tools/Traps,Basics"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
-</item>-->
+</item>
 
 <item name="meleeToolStoneAxeTazas"> <!-- T1 Tools -->
 	<property name="Extends" value="meleeToolStoneAxe"/>
@@ -7960,13 +7960,6 @@ add knockdown resist to armor
 	<property name="EconomicValue" value="250"/>
 	<property name="UnlockedBy" value="armorLeatherSetSchematic"/>
 	<property name="ShowQuality" value="true"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-	</property>
 </item>
 
 <item name="armorLeatherHood">
@@ -8276,13 +8269,6 @@ add knockdown resist to armor
 	<property name="RepairExpMultiplier" value="10.8"/>
 	<property name="EconomicValue" value="250"/>
 	<property name="ShowQuality" value="true"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-	</property>
 </item>
 
 <item name="armorScrapHelmet">
@@ -8440,13 +8426,6 @@ add knockdown resist to armor
 	<property name="EconomicValue" value="500"/>
 	<property name="UnlockedBy" value="armorIronSetSchematic"/>
 	<property name="ShowQuality" value="true"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-	</property>
 </item>
 
 <item name="armorIronHelmet">
@@ -8605,13 +8584,6 @@ add knockdown resist to armor
 	<property name="EconomicValue" value="1000"/>
 	<property name="UnlockedBy" value="armorSteelSetSchematic"/>
 	<property name="ShowQuality" value="true"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-	</property>
 </item>
 
 <item name="armorSteelHelmet">
@@ -9326,14 +9298,6 @@ perkNightStalkerSilentNight
 	<property name="EquipSlot" value="Head"/>
 	<property name="DescriptionKey" value="apparelCowboyHatGroupDesc"/>
 	<property name="Group" value="Clothing"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		<requirement name="ProgressionLevel" progression_name="SP_CowboyHatSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="gear_cowboyhat"/>
 		<property name="Overlay0" value="gear_cowboyhat"/>
@@ -9351,10 +9315,6 @@ perkNightStalkerSilentNight
 		<display_value name="dStaminaChangeOT" value="0"/>
 		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
 		<passive_effect name="BuffResistance" operation="base_add" value=".092,.114" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".01" tags="buffInjuryBleeding"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CowboyHatSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -9376,14 +9336,6 @@ perkNightStalkerSilentNight
 	<property name="UnlockedBy" value="perkBatterUpGear"/>
 	<property name="DescriptionKey" value="apparelClothGroupDesc"/>
 	<property name="Group" value="Clothing"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-        <requirement name="ProgressionLevel" progression_name="SP_BallCapSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="gear_ballcap"/>
 		<property name="Overlay0" value="gear_ballcap"/>
@@ -9396,10 +9348,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BallCapSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -9421,14 +9369,6 @@ perkNightStalkerSilentNight
 	<property name="EquipSlot" value="Head"/>
 	<property name="DescriptionKey" value="apparelSkullCapDesc"/>
 	<property name="Group" value="Clothing"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_SkullCapSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="gear_skullcap"/>
 		<property name="Overlay0" value="gear_skullcap"/>
@@ -9442,17 +9382,10 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="10.5,13.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SkullCapSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelPressboyCap">
 	<property name="Extends" value="apparelBallCap" param1="UnlockedBy"/>
-	<property class="Action0">
-	 <requirement name="ProgressionLevel" progression_name="SP_PressboyCapSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="gear_pressboy_cap"/>
 		<property name="Overlay0" value="gear_ballcap"/>
@@ -9465,10 +9398,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_PressboyCapSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -9727,15 +9656,7 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelClothGroupDesc"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Face"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		<requirement name="ProgressionLevel" progression_name="SP_BandanaSchematic" operation="LT" value="1"/>
-	</property>
-	<property class="UMA">
+    <property class="UMA">
 		<property name="Mesh" value="gear_bandana"/>
 		<property name="Overlay0" value="gear_bandana"/>
 		<property name="Layer" value="1"/>
@@ -9746,10 +9667,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BandanaSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -9770,14 +9687,6 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelDenimPantsDesc"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Legs"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_DenimPantsSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_denim_pants"/>
 		<property name="Overlay0Tint" value="90,115,125"/>
@@ -9792,18 +9701,11 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="4.8,7.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_DenimPantsSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelDenimShortsPants">
 	<property name="Extends" value="apparelDenimPants" />
 	<property name="UnlockedBy" value="perkNeedleAndThreadLegwear"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_DenimShortsPantsSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="base_legs"/>
 		<property name="Overlay0" value="legs"/>
@@ -9820,18 +9722,11 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_DenimShortsPantsSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelArmyPants">
 	<property name="Extends" value="apparelDenimPants"/>
 	<property name="UnlockedBy" value="perkNeedleAndThreadComplete"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_ArmyPantsSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_army_pants"/>
 		<property name="Overlay0" value="clothes_army_pants"/>
@@ -9845,18 +9740,11 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="6.5,9.5"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="6.8,9.2"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmyPantsSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelOveralls">
 	<property name="Extends" value="apparelDenimPants"/>
 	<!-- <property name="Encumbrance" value=".001"/> -->
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_OverallsSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_overalls"/>
 		<property name="Overlay0" value="unisex_clothes_overalls"/>
@@ -9867,18 +9755,11 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="4.8,7.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_OverallsSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelSkirt">
 	<property name="Extends" value="apparelDenimPants"/>
 	<property name="DisplayType" value="clothing"/>
-	<property class="Action0">
-	 <requirement name="ProgressionLevel" progression_name="SP_SkirtSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="skirt"/>
 		<property name="Overlay0" value="skirt"/>
@@ -9893,10 +9774,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SkirtSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelGothPants"> <!-- leatherArmor -->
@@ -9908,9 +9785,6 @@ perkNightStalkerSilentNight
 	<property name="EquipSlot" value="Legs"/>
 	<property name="DescriptionKey" value="apparelLeatherClothesGroupDesc"/>
 	<property name="ShowQuality" value="false"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_GothPantsSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_goth_pants"/>
 		<property name="Overlay0" value="unisex_clothes_goth_pants"/>
@@ -9923,10 +9797,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="6.5,9.5"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="6.8,9.2"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GothPantsSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -9945,14 +9815,6 @@ perkNightStalkerSilentNight
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Feet"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_WornBootsSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="worn_boots"/>
 		<property name="Overlay0" value="worn_boots"/>
@@ -9963,10 +9825,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_WornBootsSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -9981,9 +9839,6 @@ perkNightStalkerSilentNight
 	<property name="Encumbrance" value=".02"/>
 	<property name="Stacknumber" value="1"/>
 	<property name="ShowQuality" value="false"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_RunningShoesRegularSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="running_shoes"/>
 		<property name="Overlay0" value="running_shoes"/>
@@ -9993,10 +9848,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_RunningShoesRegularSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10012,9 +9863,6 @@ perkNightStalkerSilentNight
 	<property name="Encumbrance" value=".02"/>
 	<property name="Stacknumber" value="1"/>
 	<property name="ShowQuality" value="false"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_RunningShoesHPSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="running_shoes"/>
 		<property name="Overlay0" value="running_shoes"/>
@@ -10027,10 +9875,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running"/><display_value name="dStaminaRegen" value=".2"/>
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_RunningShoesHPSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelCowboyBoots">
@@ -10042,9 +9886,6 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="20"/> <!-- weight because loot only -->
 	<property name="DescriptionKey" value="apparelLeatherClothesGroupDesc"/>
 	<property name="ShowQuality" value="false"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_CowboyBootsSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="boot02"/>
 		<property name="Overlay0" value="boot02"/>
@@ -10059,17 +9900,10 @@ perkNightStalkerSilentNight
 		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
 		<passive_effect name="BuffResistance" operation="base_add" value=".092,.114" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".01" tags="buffInjuryBleeding"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CowboyBootsSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelGothBoots">
 	<property name="Extends" value="apparelCowboyBoots" param1="UnlockedBy"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_GothBootsSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="goth_boots"/>
 		<property name="Overlay0" value="goth_boots"/>
@@ -10083,10 +9917,6 @@ perkNightStalkerSilentNight
 		<display_value name="dStaminaChangeOT" value="0"/>
 		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
 		<passive_effect name="BuffResistance" operation="base_add" value=".092,.114" tags="buffInfectionCatch,buffInjuryBleeding,buffInjuryStunned01"/><passive_effect name="BuffResistance" operation="base_add" value=".02" tags="buffInfectionCatch"/><passive_effect name="BuffResistance" operation="base_add" value=".01" tags="buffInjuryBleeding"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GothBootsSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10106,14 +9936,6 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelLongShirtGroupDesc"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Chest"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		<requirement name="ProgressionLevel" progression_name="SP_LongShirtSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="shirt"/>
 		<property name="Overlay0" value="shirt"/>
@@ -10127,18 +9949,11 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="4.8,7.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_LongShirtSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelArmyShirt">
 	<property name="Extends" value="apparelLongShirt"/>
 	<property name="UnlockedBy" value="perkNeedleAndThreadComplete"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_ArmyShirtSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_army_shirt"/>
 		<property name="Overlay0" value="clothes_army_shirt"/>
@@ -10150,10 +9965,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="6.5,9.5"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="6.8,9.2"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_ArmyShirtSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10174,14 +9985,6 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelLongShirtGroupDesc"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Chest"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_SweatshirtSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="sweatshirt"/>
 		<property name="Overlay0" value="sweatshirt"/>
@@ -10195,17 +9998,10 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="7.2,10.8"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SweatshirtSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelFlannelShirt">
 	<property name="Extends" value="apparelSweatshirt"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_FlannelShirtSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="plaid_shirt"/>
 		<property name="Overlay0" value="plaid_shirt"/>
@@ -10218,10 +10014,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="4.8,7.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_FlannelShirtSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10242,14 +10034,6 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelTShirtGroupDesc"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Chest"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_TShirtPlainSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="base_chest"/>
 		<property name="Overlay0" value="torso"/>
@@ -10265,18 +10049,11 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_TShirtPlainSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelTShirtZU"> <!-- sleevelessClothZUShirtMaster -->
 	<property name="Extends" value="apparelTShirtPlain" param1="UnlockedBy"/>
 	<property name="CustomIcon" value="apparelTShirtZU"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_TShirtZUSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Overlay2" value="unisex_football_logo"/>
 		<property name="Overlay2Tint" value="44,0,5,255"/>
@@ -10286,10 +10063,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_TShirtZUSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10309,14 +10082,6 @@ perkNightStalkerSilentNight
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Chest"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_TankTopSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="base_chest"/>
 		<property name="Overlay0" value="torso"/>
@@ -10331,10 +10096,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="7.5,10.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_TankTopSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10354,14 +10115,6 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelLongShirtGroupDesc"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Chest"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_HoodySweatshirtSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="hoody"/>
 		<property name="Overlay0" value="hoody"/>
@@ -10377,10 +10130,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_HoodySweatshirtSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10398,14 +10147,6 @@ perkNightStalkerSilentNight
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Chest"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_CoatLeatherPonchoSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_hide_poncho"/>
 		<property name="Overlay0" value="clothes_hide_poncho"/>
@@ -10417,10 +10158,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="10.5,14.3"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatLeatherPonchoSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10441,14 +10178,6 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelLeatherClothesGroupDesc"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Chest"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_CoatLeatherDusterSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_leather_duster"/>
 		<property name="Overlay0" value="clothes_leather_duster"/>
@@ -10462,10 +10191,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="13.5,17.5"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="17.5,22.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatLeatherDusterSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10486,14 +10211,6 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelCoatPufferCoatDesc"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Chest"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
- <requirement name="ProgressionLevel" progression_name="SP_CoatPufferCoatSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="coats_puffer_coat"/>
 		<property name="Overlay0" value="coat_puffer_coat"/>
@@ -10507,10 +10224,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="1"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="21.5,26.5"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatPufferCoatSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10530,14 +10243,6 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelCoatJacketGroupDesc"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Chest"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_CoatJacketGenericSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="jacket"/>
 		<property name="Overlay0" value="jacket"/>
@@ -10552,10 +10257,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 	</effect_group>
-	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatJacketGenericSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelCoatJacketLetterZU"> <!-- collegeJacket -->
@@ -10563,9 +10264,6 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="apparelCoatJacketLetterZUDesc"/>
 	<property name="DisplayType" value="clothing"/>
 	<property name="UnlockedBy" value="perkBatterUpGear"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_CoatJacketLetterZUSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="letter_jacket"/>
 		<property name="Overlay0" value="letter_jacket"/>
@@ -10583,10 +10281,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
 		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
-	</effect_group>
-	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatJacketLetterZUSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10606,14 +10300,6 @@ perkNightStalkerSilentNight
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Group" value="Clothing"/>
 	<property name="EquipSlot" value="Legs"/>
-	<property class="Action0">
-		<property name="Class" value="Eat"/>
-		<property name="Delay" value="1.0"/>
-		<property name="UseAnimation" value="false"/>
-		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="read_mod"/>
-		 <requirement name="ProgressionLevel" progression_name="SP_SuitPantsSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_suit_pants"/>
 		<property name="Overlay0Tint" value="29,29,33"/>
@@ -10631,18 +10317,11 @@ perkNightStalkerSilentNight
 			<requirement name="ProgressionLevel" progression_name="perkEnforcerApparel" operation="Equals" value="1"/>
 		</passive_effect>
 	</effect_group>
-	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SuitPantsSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelSuitJacket">
 	<property name="Extends" value="apparelCoatJacketGeneric"/>
 	<property name="CustomIconTint" value="57,57,57"/>
-	<property class="Action0">
-        <requirement name="ProgressionLevel" progression_name="SP_SuitJacketSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_suit_jacket"/>
 		<property name="Overlay0" value="unisex_clothes_suit_jacket"/>
@@ -10662,10 +10341,6 @@ perkNightStalkerSilentNight
 			<requirement name="ProgressionLevel" progression_name="perkEnforcerApparel" operation="Equals" value="1"/>
 		</passive_effect>
 	</effect_group>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SuitJacketSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
 </item>
 
 <item name="apparelSuitDressShoes">
@@ -10679,9 +10354,6 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="25"/>
 	<property name="Encumbrance" value=".02"/>
 	<property name="ShowQuality" value="false"/>
-	<property class="Action0">
-		 <requirement name="ProgressionLevel" progression_name="SP_SuitDressShoesSchematic" operation="LT" value="1"/>
-	</property>
 	<property class="UMA">
 		<property name="Mesh" value="clothes_dress_shoes"/>
 		<property name="Overlay0" value="unisex_clothes_dress_shoes"/>
@@ -10692,10 +10364,6 @@ perkNightStalkerSilentNight
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 		<passive_effect name="HypothermalResist" operation="base_add" value="2.8,5.2"/>
 		<passive_effect name="HyperthermalResist" operation="base_add" value="3.5,4.5"/>
-	</effect_group>
-	<effect_group tiered="false">
-	<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SuitDressShoesSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
 
@@ -10745,7 +10413,7 @@ perkNightStalkerSilentNight
 	</property>
 
 	<effect_group tiered="false" name="JZMOD WOUND SYSTEM">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffAloe"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMToolsSkillLvl"/><!--jz_BuffAloe -->
 		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="5"/>
 	</effect_group>
 </item>
@@ -14771,6 +14439,8 @@ perkNightStalkerSilentNight
 	<property name="Weight" value="5"/>
 	<property name="Stacknumber" value="6000"/>
 	<property name="EconomicValue" value="5"/>
+    <property name="CustomIcon" value="resourceClayLump"/>
+    <property name="CustomIconTint" value="804021"/>
 	<property name="EconomicBundleSize" value="5000"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="Group" value="Resources"/>
@@ -19388,7 +19058,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsCraftedRifleReceiver">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="CraftedGunPartsDesc" />
-	<property name="CustomIcon" value="partsHuntingRifle_receiver" />
+	<property name="CustomIcon" value="HuntingRifleBolt" />
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="10" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
@@ -19399,7 +19069,7 @@ perkNightStalkerSilentNight
 <item name="jz_PartsCraftedRifleStock">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="CraftedGunPartsDesc" />
-	<property name="CustomIcon" value="partsHuntingRifle_stock" />
+	<property name="CustomIcon" value="HuntingRifleStock" />
 	<property name="Material" value="Mwood" />
 	<property name="Weight" value="10" />
 	<property name="Group" value="Ammo/Weapons" />
@@ -30048,7 +29718,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
-<item name="jz_OldMilkJub">
+<item name="jz_OldMilkJug">
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="#Other/Items?Food/emptyJarPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>

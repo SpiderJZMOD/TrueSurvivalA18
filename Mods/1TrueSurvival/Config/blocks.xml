@@ -33807,23 +33807,23 @@ NOT the TextureNumber.
 
 <block name="jz_SateliteQuestItem">
 	<property name="Tags" value="ToolScrewdriver,jz_IronBuilding"/>
-	<property name="Material" value="Mplastics"/>
+	<property name="Material" value="Mmetal"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZSatelite.unity3d?SatelitePrefab" />
 	<property name="CreativeMode" value="Dev"/>
 	<property name="EconomicValue" value="0"/>
 	<property name="CustomIcon" value="jz_SateliteRadio"/>
-	<property name="MaxDamage" value="2000"/>
+	<property name="MaxDamage" value="500"/>
 	<property name="CanPickup" value="false" />
 	<property name="DowngradeBlock" value="jz_SateliteQuestItem"/>
 	<!--JZMOD ANY-->
 	<drop event="Destroy" count="0"/>
-	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0" stick_chance="0"/>
+	<drop event="Fall" name="jz_SateliteQuestItem" count="1" prob="1" stick_chance="1"/>
 	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 	<!--JZMOD WRENCH-->
-	<drop event="Harvest" name="jz_QISateliteRadio" count="50" prob="1" tag="ToolWrench" />
+	<drop event="Destroy" name="jz_QISateliteRadio" count="1" prob="1" tool_category="ToolWrench" />
 	<!--JZMOD SCREWDRIVER-->
-	<drop event="Harvest" name="jz_QISateliteRadio" count="50"  prob="1" tag="ToolScrewdriver"/>
+	<drop event="Destroy" name="jz_QISateliteRadio" count="1"  prob="1" tool_category="ToolScrewdriver"/>
 </block>
 
 <block name="jz_QISatRadioStation">
@@ -33904,8 +33904,22 @@ NOT the TextureNumber.
 	<property name="SellableToTrader" value="false" />
 </block>
 
-
-
+<block name="jz_QIDoctorsTissueExtractor">
+	<property name="Material" value="Mtrash"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#Entities/LootContainers?medic_loot_pile_BPrefab.prefab"/>
+    <property name="CreativeMode" value="Dev"/>
+	<property name="StabilitySupport" value="false"/> 
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="FilterTags" value="floot"/>
+    <property name="MaxDamage" value="20"/>
+	<property name="DescriptionKey" value="cntLootPileGroupDesc"/>	
+    <property name="DowngradeBlock" value="jz_QIDoctorsTissueExtractor"/>
+    <!--JZMOD ANY-->
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="cntMedicLootPileA" count="1" prob="1" stick_chance="1"/>
+	<drop event="Destroy" name="jz_QITissueExtractor" count="1"/>
+</block>
 
 
 
@@ -33976,7 +33990,7 @@ NOT the TextureNumber.
       
       <property class="AdvancedUI">
         <property name="Logging" value="false"/>
-        <property name="DisableXPIconNotification" value="true" />   <!-- Don't like the UI element for XP? Set to true to disable. -->
+        <property name="DisableXPIconNotification" value="false" />   <!-- Don't like the UI element for XP? Set to true to disable. -->
         <property name="UnlockEnemyHealthBar" value="false" /> <!-- Unlocks the enemy health bar-->
       </property>
 

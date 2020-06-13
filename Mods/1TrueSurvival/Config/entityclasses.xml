@@ -198,42 +198,7 @@
 
 		<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffStatusCheck01,buffStatusCheck02"/>
 		<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffStatusCheck01,buffStatusCheck02,buffPerkAbilityUpdate,buffNearDeathTraumaTrigger"/>
-		<!-- JZMOD ACTION SKILLS-->
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_MiningSkillLv" tags="jz_MiningSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_AxeSkillLv" tags="jz_AxeSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_ChainsawSkillLv" tags="jz_ChainsawSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_AugerSkillLv" tags="jz_AugerSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_UnarmedSkillLv" tags="jz_UnarmedSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_BluntSkillLv" tags="jz_BluntSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_SledgeSkillLv" tags="jz_SledgeSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_BladeSkillLv" tags="jz_BladeSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_ArcherySkillLv" tags="jz_ArcherySkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_SpearSkillLv" tags="jz_SpearSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_PistolSkillLv" tags="jz_PistolSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_44MagSkillLv" tags="jz_44MagSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_SMG5SkillLv" tags="jz_SMG5Skill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_BlunderbussSkillLv" tags="jz_BlunderbussSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_DBShotgunSkillLv" tags="jz_DBShotgunSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_PShotgunSkillLv" tags="jz_PShotgunSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_HuntingRifleSkillLv" tags="jz_HuntingRifleSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_MarksmanSkillLv" tags="jz_MarksmanSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_AK47SkillLv" tags="jz_AK47Skill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_M60SkillLv" tags="jz_M60Skill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_ExposivesSkillLv" tags="jz_ExposivesSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_JunkTurretSkillLv" tags="jz_JunkTurretSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_ClothArmorCraftingLv" tags="jz_ClothArmorCrafting"/>
-		<!-- JZMOD BUILDING SKILLS-->
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_WoodBuildingSkillLv" tags="jz_WoodBuildingSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_StoneBuildingSkillLv" tags="jz_StoneBuildingSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_IronBuildingSkillLv" tags="jz_IronBuildingSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_ConcreteBuildingSkillLv" tags="jz_ConcreteBuildingSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_SteelBuildingSkillLv" tags="jz_SteelBuildingSkill"/>
-        <!-- JZMOD HUNTING SKILLS-->
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_SmallGameSkillLv" tags="jz_SmallGameHunterSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_LargeGameSkillLv" tags="jz_LargeGameHunterSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_SmallPredGameSkillLv" tags="jz_SmallPredGameHunterSkill"/>
-		<passive_effect name="PerkLevel" operation="base_add" value="@$jz_LargePredGameSkillLv" tags="jz_LargePredGameHunterSkill"/>
-         
+		         
         <passive_effect name="HarvestCount" operation="base_set" value="0" tags="SmallGameButcher"/>
         <passive_effect name="HarvestCount" operation="base_set" value="0" tags="SmallGameHunter"/>
         <passive_effect name="HarvestCount" operation="base_set" value="0" tags="LargeGameButcher"/>

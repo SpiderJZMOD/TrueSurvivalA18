@@ -6591,8 +6591,55 @@ icon="ui_game_symbol_pack_mule"
 			<passive_effect name="Mobility" operation="perc_subtract" value=".99" />
         </effect_group>
 	</buff>
+    <!-- TESTING -->
+	 <buff name="jz_BuffBluntSkillXPInjure" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group name="Action Skills">
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_BluntXP" operation="add" value="1"/>
+		</effect_group>	
+	</buff>
 	
+	<buff name="jz_BuffBluntSkillXPKill" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group name="Action Skills">
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_BluntXP" operation="add" value="5"/>
+		</effect_group>	
+	</buff>
+    
+	<buff name="jz_BuffBluntSkillLvUp" hidden="true" icon="ui_game_symbol_rifle">
+        <stack_type value="ignore"/>
+        <duration value="1"/>
+        <effect_group name="Action Skills">
+			<triggered_effect trigger="onSelfBuffStart" action="ModifySkillSDX, Mods" tag="jz_BluntSkill" operation="add" value="1"/>
+        </effect_group>    
+    </buff>
+    
+     <!-- TESTING -->
+	 <buff name="jz_BuffBladeSkillXPInjure" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group name="Action Skills">
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_BladeXP" operation="add" value="1"/>
+		</effect_group>	
+	</buff>
 	
+	<buff name="jz_BuffBladeSkillXPKill" hidden="true" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<effect_group name="Action Skills">
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_BladeXP" operation="add" value="5"/>
+		</effect_group>	
+	</buff>
+    
+	<buff name="jz_BuffBladeSkillLvUp" hidden="true" icon="ui_game_symbol_rifle">
+        <stack_type value="ignore"/>
+        <duration value="1"/>
+        <effect_group name="Action Skills">
+			<triggered_effect trigger="onSelfBuffStart" action="ModifySkillSDX, Mods" tag="jz_BladeSkill" operation="add" value="1"/>
+        </effect_group>    
+    </buff>
 </set>
 </configs> 
 
