@@ -416,7 +416,7 @@
 			</rect>
 
 			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" pos="0,-150" width="153" height="195" color="[black]" type="sliced" fillcenter="false" />
-			<grid name="itemActions" rows="4" cols="1" pos="3,-153" width="148" cell_width="147" cell_height="42" controller="ItemActionList">
+			<grid name="itemActions" rows="7" cols="1" pos="3,-153" width="148" cell_width="147" cell_height="42" controller="ItemActionList">
 				<rect depth="1" name="actions" width="147" height="225">
 					<sprite color="[mediumGrey]" type="sliced" height="43" />
 					<rect name="recipeCraftCountControl" width="120" height="210" pos="27,0" controller="RecipeCraftCount">
@@ -432,7 +432,7 @@
 				<sprite depth="3" name="fillerBackground" height="22" color="[mediumGrey]" type="sliced"/>
 			</grid>
 			
-			<rect depth="2" name="searchControls" width="448" height="43" pos="152,0">
+			<rect depth="2" name="searchControls" width="448" height="47" pos="152,0"><!--43-->
 				<sprite depth="1" color="[mediumGrey]" type="sliced" globalopacity="true" />
 				<button depth="4" name="ingredientsButton" style="icon30px, press" pos="22,-22" sprite="ui_game_symbol_resource" pivot="center" tooltip_key="ingredient" sound="[paging_click]" selected="true" />
 				<button depth="4" name="descriptionButton" style="icon30px, press" pos="65,-22" sprite="ui_game_symbol_book" pivot="center" tooltip_key="lblBookDesc" sound="[paging_click]" />
@@ -451,18 +451,20 @@
 			
 			</rect>
 
-			<rect depth="1" pos="153,-45" name="ingredients" width="447" height="264" visible="{showingredients}">
-				<grid rows="6" width="447" height="231" cell_height="50" cell_width="447" controller="IngredientList" arrangement="vertical">
+			<rect depth="1" pos="153,-49" name="ingredients" width="447" height="264" visible="{showingredients}">
+				<grid rows="8" width="447" height="231" cell_height="37" cell_width="447" controller="IngredientList" arrangement="vertical">
 					<ingredient_header name="0"/>
 					<ingredient_row name="1"/> 
 					<ingredient_row name="2"/> 
 					<ingredient_row name="3"/> 
 					<ingredient_row name="4"/> 
 					<ingredient_row name="5"/>
+                    <ingredient_row name="6"/>
+                    <ingredient_row name="7"/>
 				</grid> 
 			</rect>
 			
-			<rect depth="1" pos="153,-45" name="unlockedBy" width="447" height="264" visible="{showunlockedby}">
+			<rect depth="1" pos="153,-49" name="unlockedBy" width="447" height="264" visible="{showunlockedby}">
 				<grid rows="6" width="447" height="231" cell_height="50" cell_width="447" controller="UnlockByList" arrangement="vertical">
 					<unlocked_by_header name="0"/>
 					<unlocked_by_row name="1"/> 

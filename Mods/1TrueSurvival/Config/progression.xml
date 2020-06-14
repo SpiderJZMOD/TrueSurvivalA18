@@ -2838,7 +2838,7 @@
 	
 	<perk name="SP_GunOilSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Gun Oil" desc_key="SP_jz_GunOilSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="toolForgeCrucible"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_GunOil"/>
 			<effect_description level="1" desc_key="SP_jz_GunOilSchematicDesc" long_desc_key="SP_jz_GunOilSchematicDesc"/>
 		</effect_group>
 	</perk>

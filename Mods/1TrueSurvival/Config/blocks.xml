@@ -1340,8 +1340,8 @@ group desc for stuff like metal siding
 	<property name="Extends" value="flagstoneNoUpgradeMaster"/>
 	<property name="CreativeMode" value="None"/>
 	<property class="UpgradeBlock">
-		<property name="ToBlock" value="cobblestoneMaster"/>
-		<property name="Item" value="resourceCobblestones"/>
+		<property name="ToBlock" value="brickMaster"/>
+		<property name="Item" value="jz_Bricks"/>
 		<property name="ItemCount" value="10"/>
 		<property name="UpgradeHitCount" value="4"/>
 	</property>
@@ -30441,7 +30441,7 @@ NOT the TextureNumber.
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="brickMaster"/>
 		<property name="Item" value="jz_Bricks"/>
-		<property name="ItemCount" value="4"/>
+		<property name="ItemCount" value="10"/>
 		<property name="UpgradeHitCount" value="4"/>
 	</property>
 	<property name="CustomUpgradeSound" value="place_block_wood"/>
@@ -33288,7 +33288,7 @@ NOT the TextureNumber.
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
 	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_PlantedChillis2Dry"/>
+		<property name="ToBlock" value="jz_PlantedBlueberry2Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
 		<property name="ItemCount" value="1"/>
 		<property name="UpgradeHitCount" value="1"/>
@@ -33302,7 +33302,7 @@ NOT the TextureNumber.
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/blueberry_plant_growthPrefab"/>
 	<property class="UpgradeBlock">
-		<property name="ToBlock" value="jz_PlantedChillis3HarvestPlayer"/>
+		<property name="ToBlock" value="plantedBlueberry3HarvestPlayer"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
 		<property name="ItemCount" value="3"/>
 		<property name="UpgradeHitCount" value="1"/>
@@ -33313,7 +33313,7 @@ NOT the TextureNumber.
 <block name="jz_PlantedChillis1">
 	<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
 	<property name="CreativeMode" value="Player"/>
-	<property name="UnlockedBy" value="SP_ChillisSeedSchematic,jz_SchematicChillisSeed"/>
+	<property name="UnlockedBy" value="SP_ChilliSeedSchematic,jz_SchematicChilliSeed"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 	<property name="PlantGrowing.Next" value="jz_PlantedChillisLv1Random"/>
@@ -33990,7 +33990,7 @@ NOT the TextureNumber.
       
       <property class="AdvancedUI">
         <property name="Logging" value="false"/>
-        <property name="DisableXPIconNotification" value="false" />   <!-- Don't like the UI element for XP? Set to true to disable. -->
+        <property name="DisableXPIconNotification" value="true" />   <!-- Don't like the UI element for XP? Set to true to disable. -->
         <property name="UnlockEnemyHealthBar" value="false" /> <!-- Unlocks the enemy health bar-->
       </property>
 

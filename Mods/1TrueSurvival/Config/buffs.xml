@@ -809,8 +809,7 @@
 		<effect_group>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffHarvestBonus" operation="set" value=".5"/>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffHarvestBonus" operation="add" value=".5"/>
-			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
-			<passive_effect name="HarvestCount" operation="base_add" value="@$buffHarvestBonus"/>
+		<passive_effect name="HarvestCount" operation="base_add" value="@$buffHarvestBonus"/>
 			<triggered_effect trigger="onSelfLeaveGame" action="RemoveBuff" buff="buffHarvest"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffHarvest"/>
 		</effect_group>
@@ -5790,7 +5789,6 @@ icon="ui_game_symbol_pack_mule"
         <effect_group>
             <passive_effect name="Mobility" operation="perc_subtract" value="0.05"/>
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
-            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
             
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffDeepCutStitched"/>
@@ -5814,7 +5812,6 @@ icon="ui_game_symbol_pack_mule"
 		<effect_group>
             <passive_effect name="Mobility" operation="perc_subtract" value="0.08"/>
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
-            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
             
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGashStitchedUp"/>
@@ -5859,7 +5856,6 @@ icon="ui_game_symbol_pack_mule"
 		<effect_group>
             <passive_effect name="Mobility" operation="perc_subtract" value="0.1"/>
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
-            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
             <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$jz_WellnessLv" operation="subtract" value="1"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
             
@@ -5936,7 +5932,6 @@ icon="ui_game_symbol_pack_mule"
 		<effect_group>
             <passive_effect name="Mobility" operation="perc_subtract" value="0.15"/>
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
-            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
             <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="$jz_WellnessLv" operation="subtract" value="2"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
             
@@ -6023,8 +6018,7 @@ icon="ui_game_symbol_pack_mule"
 		<effect_group>
              <passive_effect name="Mobility" operation="perc_subtract" value="0.05"/>
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleedingZombie"/>
-            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="$jz_WellnessLv" operation="subtract" value="1"/>
+        	<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="$jz_WellnessLv" operation="subtract" value="1"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
             
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffAnimalBiteCauterized"/>
@@ -6076,8 +6070,7 @@ icon="ui_game_symbol_pack_mule"
             <passive_effect name="Mobility" operation="perc_subtract" value="0.1"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="bleedCounter" operation="add" value="4"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleeding"/>
-            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
-            <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="$jz_WellnessLv" operation="subtract" value="2"/>
+           <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="$jz_WellnessLv" operation="subtract" value="2"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
 			
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffZombieBiteCauterized"/>
@@ -6154,7 +6147,6 @@ icon="ui_game_symbol_pack_mule"
             <passive_effect name="Mobility" operation="perc_subtract" value="0.15"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="bleedCounter" operation="add" value="8"/>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryBleeding"/>
-            <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="open_apache_artifact_chest"/>
             <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="$jz_WellnessLv" operation="subtract" value="3"/>
             <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStat" stat="health" operation="subtract" value="1"/>
 			

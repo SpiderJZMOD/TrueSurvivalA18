@@ -1506,7 +1506,7 @@ The overall plan for loot distribution:
 	<item name="plantedGoldenrod1Schematic"/>
 	<item name="plantedMushroom1Schematic"/>
 	<item name="plantedYucca1Schematic"/>
-	<item name="jz_SchematicdEggPlantSeed"/>
+	<item name="jz_SchematicEggPlantSeed"/>
 	<item name="jz_SchematicCarrotSeed"/>
 	<item name="jz_SchematicFarmPlot"/>
 </lootgroup>
@@ -2930,8 +2930,8 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 </lootgroup>
 
 <lootgroup name="WorkingVehiclePlaceable" >
-	<item name="vehicleMinibikePlaceable" count="50" />
-	<item name="vehicleBicyclePlaceable" count="35" />
+	<item name="vehicleMinibikePlaceable" count="35" />
+	<item name="vehicleBicyclePlaceable" count="50" />
 	<item name="vehicleMotorcyclePlaceable" count="10" />
 	<item name="vehicle4x4TruckPlaceable" count="5" />
 </lootgroup>

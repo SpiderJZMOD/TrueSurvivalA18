@@ -1514,6 +1514,12 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceElectricParts" count="14"/>
 </recipe>
 
+<recipe name="jz_WeaponRepairKit" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="5" tags="learnable,jz_WorkBenchTag">
+	<ingredient name="jz_GunOil" count="1"/>
+    <ingredient name="resourceCloth" count="1"/>
+    <ingredient name="resourceMetalPipe" count="1"/>
+</recipe>
+
 <recipe name="jz_PartsPistolGrip" count="1" craft_area="workbench" craft_tool="jz_GunTools" craft_time="4" craft_exp_gain="25" tags="learnable,jz_M60CraftingTag,jz_WorkBenchTag">
 	<ingredient name="gunPistol" count="1"/>
 </recipe>
@@ -2536,7 +2542,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceSpring" count="2"/>
 </recipe>
 
-<recipe name="vehicleBicyclePlaceable" count="1" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="50" tags="learnable,jz_WorkBenchTag,jz_MechanicTag" >
+<recipe name="vehicleBicyclePlaceable" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="50" tags="learnable,jz_WorkBenchTag,jz_MechanicTag" >
 	<ingredient name="jz_BikeWheels" count="2"/>
 	<ingredient name="vehicleBicycleChassis" count="1"/>
 	<ingredient name="vehicleBicycleHandlebars" count="1"/>
@@ -2719,6 +2725,12 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
     <ingredient name="jz_ScrapWire" count="5"/>
 </recipe>
 <!-- Chemistry Station Crafted ******************************************************************************************************************************************************* -->
+<recipe name="jz_GunOil" count="1" craft_area="chemistryStation" craft_tool="toolBeaker" craft_time="4" craft_exp_gain="5" tags="learnable,jz_ChemistTag" >
+	<ingredient name="resourceOil" count="1"/>
+    <ingredient name="resourceAnimalFat" count="1"/>
+    <ingredient name="resourceCloth" count="1"/>
+</recipe>
+
 <recipe name="ammoGasCan" count="10" craft_area="chemistryStation" craft_tool="jz_LabEquipment" craft_time="1" craft_exp_gain="0" tags="learnable,jz_ChemistTag" >
 	<ingredient name="resourceOilShale" count="1"/>
 </recipe>
