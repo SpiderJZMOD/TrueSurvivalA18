@@ -823,7 +823,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="jz_DrinkCleanOuncesOfWater" count="128" craft_area="campfire" craft_tool="toolCookingPot" craft_time="120" craft_exp_gain="0" >
-	<ingredient name="jz_GallonOfDrityRiverWater" count="1"/>
+	<ingredient name="jz_GallonOfDirtyRiverWater" count="1"/>
     <ingredient name="resourceCloth" count="1"/>
     <ingredient name="resourceCrushedSand" count="1"/>
 </recipe>
@@ -2980,7 +2980,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="drinkJarEmpty" count="15"/>
 </recipe>
 
-<recipe name="jz_DrinkMead" count="6" craft_area="fermentationBarrel" craft_time="900" craft_exp_gain="0">
+<recipe name="jz_DrinkMead" count="6" craft_area="fermentationBarrel" craft_time="900" craft_exp_gain="0" tags="learnable">
 	<ingredient name="foodHoney" count="2" />
 	<ingredient name="drinkJarRiverWater" count="128" />
 </recipe>

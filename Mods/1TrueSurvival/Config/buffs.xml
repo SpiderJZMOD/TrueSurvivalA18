@@ -6232,7 +6232,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffZombieBiteAloed">
                 <requirement name="HasBuff" buff="jz_BuffZombieBiteCauterized"/> </triggered_effect>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffZombieBiteCauterized"/>
-			<!-- ZOMBIE BITE -->
+			<!-- PARASITE BITE -->
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffParasiteBiteAloed">
                 <requirement name="HasBuff" buff="jz_BuffParasiteBiteCauterized"/> </triggered_effect>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffParasiteBiteCauterized"/>
@@ -6277,7 +6277,7 @@ icon="ui_game_symbol_pack_mule"
                 <requirement name="HasBuff" buff="jz_BuffZombieBiteDirtyBandangeA"/> </triggered_effect>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffZombieBiteDirtyBandangeA"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffZombieBiteDirtyBandangeB"/>
-			<!-- ZOMBIE BITE -->
+			<!-- PARASITE BITE -->
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffParasiteBiteBandage">
                 <requirement name="HasBuff" buff="jz_BuffParasiteBiteDirtyBandangeA"/> </triggered_effect>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffParasiteBiteDirtyBandangeA"/>
@@ -6340,7 +6340,7 @@ icon="ui_game_symbol_pack_mule"
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffZombieBiteCauterized"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffZombieBiteDirtyBandangeA"/>
 			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffZombieBiteDirtyBandangeB"/>
-			<!-- ZOMBIE BITE -->
+			<!-- PARASITE BITE -->
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffParasiteBiteAloed">
                 <requirement name="HasBuff" buff="jz_BuffParasiteBiteCauterized"/> </triggered_effect>
 			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffParasiteBiteBandage">
@@ -6539,10 +6539,10 @@ icon="ui_game_symbol_pack_mule"
             <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffZombieBiteCauterized">
                 <requirement name="HasBuff" buff="jz_BuffZombieBite"/></triggered_effect>
             <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffZombieBite"/>
-			 <!-- PARASITE BITE -->
-            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffGoredStitchedUp">
-                <requirement name="HasBuff" buff="jz_BuffGored"/></triggered_effect>
-            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffGored"/>
+			<!-- PARASITE BITE -->
+            <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="jz_BuffParasiteBiteCauterized">
+                <requirement name="HasBuff" buff="jz_BuffParasiteBite"/></triggered_effect>
+            <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="jz_BuffParasiteBite"/>
         </effect_group>
 	</buff>
     

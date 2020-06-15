@@ -26572,7 +26572,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 
 <item name="jz_ScrapSteel">
 	<property name="Extends" value="jz_MasterItem" />
-	<property name="CustomIcon" value="ui_game_symbol_scrapSteel" />
+	<property name="CustomIcon" value="ScrapSteel" />
 	<property name="Material" value="Msteel" />
 	<property name="Weight" value="1" />
 	<property name="MeltTimePerUnit" value="0.5" />
@@ -26615,8 +26615,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 <item name="jz_ScrapRubber">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="DescriptionKey" value="scrapRubberDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_scrapRubber" />
-	<property name="CustomIconTint" value="232323" />
+	<property name="CustomIcon" value="scrapRubber" />
 	<property name="Material" value="Mrubber" />
 	<property name="Weight" value="1" />
 </item>
@@ -26754,7 +26753,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Material" value="Mmetal" />
 	<property name="Weight" value="1" />
 	<property name="DescriptionKey" value="sewingNeedleDesc" />
-	<property name="CustomIcon" value="ui_game_symbol_sewingNeedle" />
+	<property name="CustomIcon" value="SewingNeedle" />
 </item>
 
 <item name="jz_LeatherNeedle">
@@ -27688,7 +27687,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
-	<property name="DescriptionKey" value="jz_SchematicChilliSeedDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_ChilliSeedSchematic" operation="LT" value="1"/>
 	</property>
@@ -27702,7 +27701,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
-	<property name="DescriptionKey" value="jz_SchematicCucumberSeedDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_CucumberSeedSchematic" operation="LT" value="1"/>
 	</property>
@@ -27716,7 +27715,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
-	<property name="DescriptionKey" value="jz_SchematicdEggPlantSeedDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_EggPlantSeedSchematic" operation="LT" value="1"/>
 	</property>
@@ -27730,7 +27729,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
-	<property name="DescriptionKey" value="jz_SchematicLeekSeedDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_LeekSeedSchematic" operation="LT" value="1"/>
 	</property>
@@ -27744,7 +27743,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
-	<property name="DescriptionKey" value="jz_SchematicCarrotSeedDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_CarrotSeedSchematic" operation="LT" value="1"/>
 	</property>
@@ -27758,7 +27757,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="jz_SteelSheetMetal"/>
-	<property name="DescriptionKey" value="jz_SchematicSteelSheetMetalDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_SteelSheetMetalSchematic" operation="LT" value="1"/>
 	</property>
@@ -27772,7 +27771,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="resourceConcreteMix"/>
-	<property name="DescriptionKey" value="jz_SchematicConcreteMixDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_ConcreteMixSchematic" operation="LT" value="1"/>
 	</property>
@@ -27786,7 +27785,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ui_game_symbol_ConcreteSledge"/>
-	<property name="DescriptionKey" value="jz_SchematicConcreteSledgeDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_ConcreteSledgeSchematic" operation="LT" value="1"/>
 	</property>
@@ -27800,7 +27799,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ui_game_symbol_stoneHammer"/>
-	<property name="DescriptionKey" value="jz_SchematicMasonHammerDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_MasonHammerSchematic" operation="LT" value="1"/>
 	</property>
@@ -27814,7 +27813,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ui_game_symbol_purificationTablets"/>
-	<property name="DescriptionKey" value="jz_SchematicPurificationTabletsDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_PurificationTabletsSchematic" operation="LT" value="1"/>
 	</property>
@@ -27828,7 +27827,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="resourceGunPowder"/>
-	<property name="DescriptionKey" value="jz_SchematicGunPowderDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_GunPowderSchematic" operation="LT" value="1"/>
 	</property>
@@ -27842,7 +27841,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="drinkJarBlackStrapCoffee"/>
-	<property name="DescriptionKey" value="jz_SchematicBlackStrapCoffeeDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_BlackStrapCoffeeSchematic" operation="LT" value="1"/>
 	</property>
@@ -27856,7 +27855,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="jz_MedicalAntiVenom"/>
-	<property name="DescriptionKey" value="jz_SchematicAntiVenomDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_AntiVenomSchematic" operation="LT" value="1"/>
 	</property>
@@ -27870,7 +27869,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="jz_IronSheetMetal"/>
-	<property name="DescriptionKey" value="jz_SchematicIronSheetMetalDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_IronSheetMetalSchematic" operation="LT" value="1"/>
 	</property>
@@ -27884,7 +27883,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ceilingLight01"/>
-	<property name="DescriptionKey" value="jz_SchematicCeilingLightDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_CeilingLightSchematic" operation="LT" value="1"/>
 	</property>
@@ -27898,7 +27897,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="electricwirerelay"/>
-	<property name="DescriptionKey" value="jz_SchematicWirerelayDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_ElectricWirerelaySchematic" operation="LT" value="1"/>
 	</property>
@@ -27912,7 +27911,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="drinkCanMegaCrush"/>
-	<property name="DescriptionKey" value="jz_SchematicMegaCrushDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_MegaCrushSchematic" operation="LT" value="1"/>
 	</property>
@@ -27926,7 +27925,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="drugVitamins"/>
-	<property name="DescriptionKey" value="jz_SchematicVitaminsDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_VitaminsSchematic" operation="LT" value="1"/>
 	</property>
@@ -27940,7 +27939,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ui_game_symbol_repairKit"/>
-	<property name="DescriptionKey" value="jz_SchematicWeaponRepairKitDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_WeaponRepairKitSchematic" operation="LT" value="1"/>
 	</property>
@@ -27954,7 +27953,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="resourceCobblestones"/>
-	<property name="DescriptionKey" value="jz_SchematicCobblestoneDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_CobblestoneSchematic" operation="LT" value="1"/>
 	</property>
@@ -27968,7 +27967,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ui_game_symbol_brick"/>
-	<property name="DescriptionKey" value="jz_SchematicBricksDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_BricksSchematic" operation="LT" value="1"/>
 	</property>
@@ -27982,7 +27981,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ui_game_symbol_plank"/>
-	<property name="DescriptionKey" value="ui_game_symbol_plank"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_PlankSchematic" operation="LT" value="1"/>
 	</property>
@@ -27996,7 +27995,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="resourceLockPick"/>
-	<property name="DescriptionKey" value="jz_SchematicGunOilDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_LockPickSchematic" operation="LT" value="1"/>
 	</property>
@@ -28010,7 +28009,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ui_game_symbol_gunOil"/>
-	<property name="DescriptionKey" value="jz_SchematicGunOilDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_GunOilSchematic" operation="LT" value="1"/>
 	</property>
@@ -28024,7 +28023,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="PoliceBaton"/>
-	<property name="DescriptionKey" value="jz_SchematicPoliceBatonDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_PoliceBatonSchematic" operation="LT" value="1"/>
 	</property>
@@ -28052,7 +28051,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="mineCandyTin"/>
-	<property name="DescriptionKey" value="jz_SchematicCandyTinMineDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_CandyTinMineSchematic" operation="LT" value="1"/>
 	</property>
@@ -28066,7 +28065,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="mineHubcap"/>
-	<property name="DescriptionKey" value="jz_SchematicHubcapMineDesc"/>
+	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_HubcapMineSchematic" operation="LT" value="1"/>
 	</property>
@@ -28081,7 +28080,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="mineAirFilter"/>
      <property name="Unlocks" value="rScrapIronPlate"/>
-    <property name="DescriptionKey" value="jz_SchematicAirFilterMineDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_AirFilterMineSchematic" operation="LT" value="1"/>
 	</property>
@@ -28096,7 +28095,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="rScrapIronPlate"/>
     <property name="Unlocks" value="rScrapIronPlate"/>
-    <property name="DescriptionKey" value="jz_SchematicScrapPlateMineDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_ScrapPlateMineSchematic" operation="LT" value="1"/>
 	</property>
@@ -28112,7 +28111,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CustomIcon" value="toolCookingPot"/>
     <property name="CustomIconTint" value="ffb0b0"/>
     <property name="Unlocks" value="mineCookingPot"/>
-    <property name="DescriptionKey" value="jz_SchematicCookingPotMineDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_CookingPotMineSchematic" operation="LT" value="1"/>
 	</property>
@@ -28127,7 +28126,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="farmPlotBlock"/>
 	<property name="Unlocks" value="meleeThrownSpearStone"/>
-    <property name="DescriptionKey" value="jz_SchematicStoneSpearDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_FarmPlotSchematic" operation="LT" value="1"/>
 	</property>
@@ -28142,7 +28141,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="vehicleBicyclePlaceable"/>
 	<property name="Unlocks" value="vehicleBicyclePlaceable"/>
-    <property name="DescriptionKey" value="jz_SchematicStoneSpearDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_BicycleSchematic" operation="LT" value="1"/>
 	</property>
@@ -28157,7 +28156,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="vehicleMinibikePlaceable"/>
 	<property name="Unlocks" value="vehicleMinibikePlaceable"/>
-    <property name="DescriptionKey" value="jz_SchematicStoneSpearDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_MinibikeSchematic" operation="LT" value="1"/>
 	</property>
@@ -28172,7 +28171,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="vehicleMotorcyclePlaceable"/>
 	<property name="Unlocks" value="vehicleMotorcyclePlaceable"/>
-    <property name="DescriptionKey" value="jz_SchematicStoneSpearDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_MotorcycleSchematic" operation="LT" value="1"/>
 	</property>
@@ -28187,7 +28186,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="vehicle4x4TruckPlaceable"/>
 	<property name="Unlocks" value="vehicle4x4TruckPlaceable"/>
-    <property name="DescriptionKey" value="jz_SchematicStoneSpearDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_4x4TruckSchematic" operation="LT" value="1"/>
 	</property>
@@ -28202,7 +28201,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="vehicleGyrocopterPlaceable"/>
 	<property name="Unlocks" value="vehicleGyrocopterPlaceable"/>
-    <property name="DescriptionKey" value="jz_SchematicStoneSpearDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_GyroCopterSchematic" operation="LT" value="1"/>
 	</property>
@@ -28217,7 +28216,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="meleeThrownSpearStone"/>
 	<property name="Unlocks" value="meleeThrownSpearStone"/>
-    <property name="DescriptionKey" value="jz_SchematicStoneSpearDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_SpearStoneSchematic" operation="LT" value="1"/>
 	</property>
@@ -28232,7 +28231,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ui_game_symbol_welder"/>
 	<property name="Unlocks" value="jz_WelderTool"/>
-    <property name="DescriptionKey" value="jz_SchematicMolotovCocktailDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 	<requirement name="ProgressionLevel" progression_name="SP_WelderSchematic" operation="LT" value="1"/>
 	</property>
@@ -28247,7 +28246,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="ui_game_symbol_screwdriver"/>
 	<property name="Unlocks" value="jz_Screwdriver"/>
-    <property name="DescriptionKey" value="jz_SchematicMolotovCocktailDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 	<requirement name="ProgressionLevel" progression_name="SP_ScrewdriverSchematic" operation="LT" value="1"/>
 	</property>
@@ -28679,7 +28678,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="LargeEngine"/>
 	<property name="Unlocks" value="jz_LargeEngine"/>
-    <property name="DescriptionKey" value="jz_SchematicLargeEngineDesc"/>
+    <property name="DescriptionKey" value="schematicNoQualityRecipeGroupDesc"/>
 	<property class="Action0">
 	<requirement name="ProgressionLevel" progression_name="SP_LargeEngineSchematic" operation="LT" value="1"/>
 	</property>
@@ -28695,7 +28694,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="medicalAloeCream"/>
 	<property name="Unlocks" value="medicalAloeCream"/>
-    <property name="DescriptionKey" value="jz_SchematicAloeCreamDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 	<requirement name="ProgressionLevel" progression_name="SP_AloeCreamSchematic" operation="LT" value="1"/>
 	</property>
@@ -28711,7 +28710,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="creamherbal"/>
 	<property name="Unlocks" value="jz_MedicalHerbalCream"/>
-    <property name="DescriptionKey" value="jz_SchematicHerbalCreamDesc"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 	<requirement name="ProgressionLevel" progression_name="SP_HerbalCreamSchematic" operation="LT" value="1"/>
 	</property>
@@ -28899,6 +28898,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Group" value="Ammo/Weapons,Basics"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZ2X4.unity3d?2X4Prefab" />
 	<property name="HoldType" value="2"/>
+    <property name="DescriptionKey" value="jz_MeleePlankDesc"/>
 	<property name="Material" value="Mwood"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
@@ -28987,6 +28987,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Group" value="Ammo/Weapons,Basics"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZ2X4Spiked.unity3d?2X4SpikedPrefab" />
 	<property name="HoldType" value="2"/>
+    <property name="DescriptionKey" value="jz_MeleePlankSpikedDesc"/>
 	<property name="Material" value="Mwood"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
@@ -29076,6 +29077,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Meshfile" value="#@modfolder:Resources/JZTableLegMeleeSpike.unity3d?TableLegMeleeSpikePrefab" />
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mwood"/>
+    <property name="DescriptionKey" value="jz_MeleeTableLegSpikedDesc"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -29163,6 +29165,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Meshfile" value="#@modfolder:Resources/JZTableLegMelee.unity3d?TableLegMeleePrefab" />
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mwood"/>
+    <property name="DescriptionKey" value="jz_MeleeTableLegDesc"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -29250,6 +29253,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Meshfile" value="#@modfolder:Resources/JZRebar2Melee.unity3d?Rebar2MeleePrefab" />
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mmetal"/>
+     <property name="DescriptionKey" value="jz_MeleeRebarDesc"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="metaldestroy1"/>
@@ -29338,6 +29342,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mmetal"/>
     <property name="Weight" value="25" />
+    <property name="DescriptionKey" value="jz_MeleePipeDesc"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="metaldestroy1"/>
@@ -29424,6 +29429,7 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Meshfile" value="#@modfolder:Resources/JZBranchSpiked.unity3d?BranchSpikedPrefab" />
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mwood"/>
+    <property name="DescriptionKey" value="jz_MeleeBranchSpikedDesc"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -29626,14 +29632,14 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Extends" value="jz_MasterItem"/>
 	<property name="Stacknumber" value="1" />
 	<property name="CustomIcon" value="SecurityCard"/>
-	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+	<property name="DescriptionKey" value="jz_QIMilitarySecurityCardDesc"/>
 </item>
 
 <item name="jz_QIMilitarySecurityCardA">
 	<property name="Extends" value="jz_MasterItem"/>
 	<property name="Stacknumber" value="1" />
 	<property name="CustomIcon" value="SecurityCard"/>
-	<property name="DescriptionKey" value="jz_QISateliteRadioDesc"/>
+	<property name="DescriptionKey" value="jz_QIMilitarySecurityCardADesc"/>
 </item>
 
 <item name="jz_Insecticide">
@@ -29649,13 +29655,12 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="HoldType" value="29"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZWateringCan.unity3d?WateringCanPrefab" />
 	<property name="Material" value="Mmetal"/>
-	<property name="RepairTools" value="resourceRepairKit"/>
-	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="metaldestroy"/>
     <property name="CustomIcon" value="WateringCan"/>
 	<property name="EconomicValue" value="0"/>
-	<property name="UnlockedBy" value="meleeToolWrenchSchematic"/>
+	<property name="DescriptionKey" value="jz_FarmingWateringCanDesc" />
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="Repair"/>
@@ -29675,7 +29680,6 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 		<property name="Allowed_upgrade_items" value="jz_DrinkDirtyOuncesOfWater"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
-	
 	<effect_group name="meleeToolWrench">
 		<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
 		<passive_effect name="BlockRange" operation="base_set" value="3"/>
@@ -29723,10 +29727,11 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Meshfile" value="#Other/Items?Food/emptyJarPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mplastics"/>
-	<property name="Stacknumber" value="1"/> <!-- STK resource -->
+	<property name="Stacknumber" value="1"/>
 	<property name="EconomicValue" value="0"/>
     <property name="CustomIcon" value="MilkJug" />
-	<property class="Action1"> <!-- UseAction -->
+    <property name="DescriptionKey" value="jz_OldMilkJugDesc" />
+	<property class="Action1"> 
 		<property name="Class" value="ExchangeItem"/>
 		<property name="Delay" value="1.0"/>
 		<property name="Change_item_to" value="jz_GallonOfDrityRiverWater"/> 
@@ -29741,10 +29746,10 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Group" value="Resources"/>
 </item>
 
-<item name="jz_GallonOfDrityRiverWater">
+<item name="jz_GallonOfDirtyRiverWater">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="ui_game_symbol_DirtyWater" />
-	<property name="DescriptionKey" value="jz_PlasticJunkDesc" />
+	<property name="DescriptionKey" value="jz_GallonOfDirtyRiverWaterDesc" />
 	<property name="Material" value="Mplastics" />
 	<property name="Stacknumber" value="1" />
 </item>
