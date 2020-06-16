@@ -20875,9 +20875,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStat" stat="Health" operation="subtract" value="20"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffTendingBiteWound">
-			<requirement name="HasBuff" buff="jz_BuffZombieBite"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffZombieBite"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffCauterize"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound"  sound="player#painlg"/>		
 	</effect_group>
 </item>
@@ -20890,9 +20888,7 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStat" stat="Health" operation="subtract" value="20"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffTendingBiteWound">
-			<requirement name="HasBuff" buff="jz_BuffZombieBite"/> </triggered_effect>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="jz_BuffZombieBite"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="jz_BuffCauterize"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound"  sound="player#painlg"/>		
 	</effect_group>
 </item>
