@@ -10469,7 +10469,6 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Science,Medical"/>
 	<property name="EconomicValue" value="200"/>
 	<property name="Stacknumber" value="5"/>
-	<property name="UnlockedBy" value="medicalFirstAidKitSchematic"/>
 	<property name="DescriptionKey" value="jz_medicalFirstAidBandageDesc"/>
 	<property class="Action0">
 		<!-- <requirement name="StatCompare" stat="health" operation="lte" value="50"/> -->
@@ -10664,6 +10663,7 @@ perkNightStalkerSilentNight
 	<property name="EconomicValue" value="80"/>
 	<property name="Stacknumber" value="10"/> <!-- STK loot -->
 	<property name="Group" value="Science,CFChemicals,Medical"/>
+    <property name="UnlockedBy" value="jz_Doctor"/>
 	<property name="DescriptionKey" value="drugPainkillersDesc"/>
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
@@ -10829,6 +10829,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="drugPainkillers"/>
 	<property name="DisplayType" value="drugSteroids"/>
 	<property name="EconomicValue" value="250"/>
+    <property name="UnlockedBy" value="jz_Doctor"/>
 	<property name="Group" value="Science,Medical"/>
 	<effect_group tiered="false">
 		<display_value name="dStrength" value="3"/>
@@ -20960,29 +20961,6 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<!--  JZMOD ADDED FOODS  -->
-<!-- ***Player Stat change calls***
-jz_PlayerFoodAdd = Add Food
-jz_PlayerFoodDrain = Drain Food
-jz_PlayerStaminaAdd = Add Stamina
-jz_PlayerStaminaDrain = Drain Stamina
-jz_PlayerAwakeAdd = Add Awakeness
-jz_PlayerAwakeDrain = Lower Awakeness 
-maxHealthAmount = Add Wellness
-jz_PlayerHealthMaxDrain = Lower Wellness
-$waterAmountAdd = Add Water
-jz_PlayerWaterDrain = Drain Water
-foodHealthAmount = Eating Add Health
-medicalHealthAmount = Medication Add Health
-jz_PlayerHealthDrain = Drain Health
-jz_PlayerProteinVitamin = Protein Vitamin
-jz_PlayerGrainVitamin = Grain Vitamin
-jz_PlayerFruitVitamin = Fruit Vitamin
-jz_PlayerVeggieVitamin = Veggie Vitamin
-
-
-
--->
 <!--JZMOD FOOD ITEMS-->
 <item name="jz_FoodServingFruit">
 	<property name="Extends" value="jz_MasterItem" />
@@ -23317,12 +23295,13 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	<property name="Material" value="Mmetal"/>
 	<property name="Stacknumber" value="1"/>
 	<property name="EconomicValue" value="84"/>
-	<property class="Action0">
+    <property name="DescriptionKey" value="bucketEmptyDesc" />
+	<!--<property class="Action0">
 		<property name="Class" value="BailLiquid"/>
 		<property name="Delay" value=".35"/>
 		<property name="Sound_start" value="bucketbail_water"/>
 	</property>
-	<!--<property class="Action1">
+	<property class="Action1">
 		<property name="Class" value="ExchangeItem"/>
 		<property name="Delay" value=".35"/>
 		<property name="Change_item_to" value="bucketRiverWater,bucketEmpty"/>
@@ -28716,6 +28695,198 @@ jz_PlayerVeggieVitamin = Veggie Vitamin
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_HerbalCreamSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicBandana">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelBandana"/>
+	<property name="Unlocks" value="apparelBandana"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_BandanaSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_BandanaSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicSuitJacket">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelSuitJacket"/>
+	<property name="Unlocks" value="apparelSuitJacket"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_SuitJacketSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SuitJacketSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicSuitPants">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelSuitPants"/>
+	<property name="Unlocks" value="apparelSuitPants"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_SuitPantsSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SuitPantsSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicPressboyCap">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelPressboyCap"/>
+	<property name="Unlocks" value="apparelPressboyCap"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_PressboyCapSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_PressboyCapSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicGothPants">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelGothPants"/>
+	<property name="Unlocks" value="apparelGothPants"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_GothPantsSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GothPantsSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicHoodySweatshirt">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelHoodySweatshirt"/>
+	<property name="Unlocks" value="apparelHoodySweatshirt"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_HoodySweatshirtSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_HoodySweatshirtSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCoatLeatherPoncho">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelCoatLeatherPoncho"/>
+	<property name="Unlocks" value="apparelCoatLeatherPoncho"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_CoatLeatherPonchoSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatLeatherPonchoSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicRunningShoesHP">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelRunningShoesHP"/>
+	<property name="Unlocks" value="apparelRunningShoesHP"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_RunningShoesHPSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_RunningShoesHPSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicCoatJacketGeneric">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelCoatJacketGeneric"/>
+	<property name="Unlocks" value="apparelCoatJacketGeneric"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_CoatJacketGenericSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_CoatJacketGenericSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicLongShirt">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelLongShirt"/>
+	<property name="Unlocks" value="apparelLongShirt"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_LongShirtSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_LongShirtSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicGothBoots">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelGothBoots"/>
+	<property name="Unlocks" value="apparelGothBoots"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_GothBootsSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GothBootsSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicTShirtZU">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="apparelTShirtZU"/>
+	<property name="Unlocks" value="apparelTShirtZU"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_TShirtZUSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_TShirtZUSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>

@@ -93,10 +93,12 @@
 	<property name="SortOrder2" value="0050"/>
 	<property name="DisplayType" value="blockTerrainFertile"/>
 	<!--JZMOD ANY-->
-	<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest" />
+    <drop event="Harvest" name="dirtFragment" count="22" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourceClayLump" count="3" tag="oreWoodHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDirt" count="1" prob="0.25" stick_chance="1"/>
-	<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
+    <drop event="Fall" name="dirtFragment" count="44" prob="0.187" stick_chance="0"/>
+	<drop event="Fall" name="resourceClayLump" count="6" prob="0.187" stick_chance="0"/>
 </block>
 
 <block name="terrForestGround">
@@ -120,11 +122,13 @@
 	<property name="DisplayType" value="blockTerrainFertile"/>
 	<property name="DescriptionKey" value="terrainBlockGroupDesc"/>	
 	<!--JZMOD ANY-->	
-	<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest" />
+    <drop event="Harvest" name="dirtFragment" count="10" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourceClayLump" count="10" tag="oreWoodHarvest" />
 	<drop event="Harvest" name="resourceYuccaFibers" count="2" tag="allHarvest"/>
 	<drop event="Destroy" count="0"/>
-	<drop event="Fall" name="terrForestGround" count="1" prob="0.25" stick_chance="1"/>
-	<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>
+    <drop event="Fall" name="terrForestGround" count="1" prob="0.25" stick_chance="1"/>
+	<drop event="Fall" name="resourceClayLump" count="22" prob="0.187" stick_chance="0"/>
+    <drop event="Fall" name="dirtFragment" count="22" prob="0.187" stick_chance="0"/>
 </block>
 
 <block name="terrBurntForestGround">
@@ -146,10 +150,12 @@
 	<property name="DisplayType" value="blockTerrainFertile"/>
 	<property name="DescriptionKey" value="terrainBlockGroupDesc"/>		
 	<!--JZMOD ANY-->	
-	<drop event="Harvest" name="resourceClayLump" count="22" tag="oreWoodHarvest" />
+    <drop event="Harvest" name="dirtFragment" count="15" tag="oreWoodHarvest" />
+	<drop event="Harvest" name="resourceClayLump" count="5" tag="oreWoodHarvest" />
 	<drop event="Destroy" name="resourceYuccaFibers" count="1" prob="0.25"/>
 	<drop event="Fall" name="terrBurntForestGround" count="1" prob="0.25" stick_chance="1"/>
-	<drop event="Fall" name="resourceClayLump" count="44" prob="0.187" stick_chance="0"/>	
+	<drop event="Fall" name="resourceClayLump" count="15" prob="0.187" stick_chance="0"/>
+    <drop event="Fall" name="dirtFragment" count="30" prob="0.187" stick_chance="0"/>	
 </block>
 
 <block name="terrDesertGround">
@@ -178,7 +184,7 @@
 	<!--JZMOD ANY-->	
 	<drop event="Destroy" count="0"/>
 	<drop event="Harvest" name="resourceCrushedSand" count="11" tag="oreWoodHarvest" />
-	<drop event="Harvest" name="resourceClayLump" count="2" tag="oreWoodHarvest" />	
+	<drop event="Harvest" name="resourceClayLump" count="1" tag="oreWoodHarvest" />	
 	<drop event="Fall" name="resourceCrushedSand" count="11" prob="0.5" stick_chance="0"/>
 </block>
 
@@ -28371,7 +28377,7 @@ NOT the TextureNumber.
 	<property name="FuelValue" value="300"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<!--<property name="BuffsWhenWalkedOn" value="trapDamageZombie"/>-->
-	<property class="RepairItems"> <property name="jz_Plank" value="1"/> </property>
+	<property class="RepairItems"> <property name="jz_Stick" value="1"/> </property>
 	<property name="DowngradeBlock" value="trapSpikesDamage1"/>
 	<property name="Group" value="Tools/Traps"/>
 	<property name="EconomicValue" value="10"/>
@@ -28390,7 +28396,7 @@ NOT the TextureNumber.
 	<property name="DowngradeBlock" value="trapSpikesDamage2"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="trapSpikesNew"/>
-		<property name="Item" value="jz_Plank"/>
+		<property name="Item" value="jz_Stick"/>
 		<property name="ItemCount" value="3"/>
 		<property name="UpgradeHitCount" value="4"/>
 	</property>

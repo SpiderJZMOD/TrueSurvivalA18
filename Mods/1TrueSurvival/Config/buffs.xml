@@ -4713,7 +4713,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>		
 	</buff>
 	
-	<buff name="jz_BuffSmallWound" remove_on_death="false" name_key="Small Wound" tooltip_key="Ouch! You've been wounded" description_key="You've gotten a small wound. Treat it with a bandage and be sure to change it when it gets dirty.\n-4 Stamina every 5 sec\n-1 Health every 25 sec\n-7% Mobility" icon="ui_game_symbol_smallWound" >
+	<buff name="jz_BuffSmallWound" remove_on_death="false" name_key="Small Wound" tooltip_key="Ouch! You've been wounded" description_key="You've gotten a small wound. Treat it with a bandage and be sure to change it when it gets dirty.\n-4 Stamina every 5 sec\n-1 Health every 25 sec\n-7% Mobility\n-1 Wellness every 2.5 min\nUntil Treated" icon="ui_game_symbol_smallWound" >
 		<stack_type value="ignore"/>
 		<update_rate value="25"/>
 		<duration value="0"/>
@@ -4812,7 +4812,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	<!-- JZMOD WOUND -->
-	<buff name="jz_BuffWound" remove_on_death="false" name_key="Wound" tooltip_key="Ouch! You've been wounded" description_key="You've gotten a wound. Treat it with a First Aid Bandage and be sure to change it when it gets dirty.\n-1 Stamina every 1 sec\n-1 Health every 15 sec\n-9% Mobility" icon="ui_game_symbol_wound" >
+	<buff name="jz_BuffWound" remove_on_death="false" name_key="Wound" tooltip_key="Ouch! You've been wounded" description_key="You've gotten a wound. Treat it with a First Aid Bandage and be sure to change it when it gets dirty.\n-1 Stamina every 1 sec\n-1 Health every 15 sec\n-9% Mobility\n-1 Wellness every 2 min\nUntil Treated" icon="ui_game_symbol_wound" >
 		<stack_type value="ignore"/>
 		<update_rate value="15"/>
 		<duration value="0"/>
@@ -4877,7 +4877,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffSevereWound" remove_on_death="false" name_key="Severe Wound" tooltip_key="You have gotten a severe wound" description_key="You've gotten a sever wound. Treat it with Sanitized Bandage and be sure to change it when it gets dirty.\n-12 Stamina every 10 sec\n-1 Health every 10sec\n-12% Mobility" icon="ui_game_symbol_severeWound" >
+	<buff name="jz_BuffSevereWound" remove_on_death="false" name_key="Severe Wound" tooltip_key="You have gotten a severe wound" description_key="You've gotten a sever wound. Treat it with Sanitized Bandage and be sure to change it when it gets dirty.\n-12 Stamina every 10 sec\n-1 Health every 10sec\n-12% Mobility\n-1 Wellness every 1.5 min\nUntil Treated" icon="ui_game_symbol_severeWound" >
 		<stack_type value="ignore"/>
 		<update_rate value="10"/>
 		<duration value="0"/>
@@ -4944,7 +4944,7 @@ icon="ui_game_symbol_pack_mule"
 		</effect_group>
 	</buff>
 	
-	<buff name="jz_BuffInfectedWound" remove_on_death="false" name_key="Infected Wound" tooltip_key="Your wound has gotten infected" description_key="Your wound has gotten infected. Treat it with First Aid Kit and be sure to change it when it gets dirty or you could die.\n-3 Stamina every 1 sec\n-1 Health every 10 sec\n-15% Mobility" icon="ui_game_symbol_infectedWound" >
+	<buff name="jz_BuffInfectedWound" remove_on_death="false" name_key="Infected Wound" tooltip_key="Your wound has gotten infected" description_key="Your wound has gotten infected. Treat it with First Aid Kit and be sure to change it when it gets dirty or you could die.\n-3 Stamina every 1 sec\n-1 Health every 10 sec\n-15% Mobility\n-1 Wellness every 1 min\nUntil Treated" icon="ui_game_symbol_infectedWound" >
 	<stack_type value="ignore"/>
 		<update_rate value="10"/>
 		<duration value="0"/>

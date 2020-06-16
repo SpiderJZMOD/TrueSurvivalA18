@@ -457,8 +457,8 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 
 <recipe name="medicalFirstAidKit" count="1" craft_time="10" craft_exp_gain="15" tags="jz_DoctorTag">
 	<ingredient name="drinkJarGrainAlcohol" count="1" />
-    <ingredient name="medicalAloeCream" count="1"/>
-    <ingredient name="medicalBandage" count="2"/>
+    <ingredient name="medicalFirstAidBandage" count="1"/>
+    <ingredient name="medicalBandage" count="1"/>
     <ingredient name="medicalBloodBag" count="1"/>
 </recipe>
 
@@ -2949,7 +2949,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourcePotassiumNitratePowder" count="2"/>
 </recipe>
 
-<recipe name="drugPainkillers" count="1" craft_area="jz_MortarAndPestle" craft_time="10" >
+<recipe name="drugPainkillers" count="1" craft_area="jz_MortarAndPestle" craft_time="10" craft_exp_gain="5" tags="learnable" >
 	<ingredient name="hangingMoss" count="1" />
 	<ingredient name="resourcePotassiumNitratePowder" count="5" />
 	<ingredient name="foodCropMushrooms" count="1" />
@@ -3883,7 +3883,128 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_Stick" count="20"/>
 	<ingredient name="jz_FiberRope" count="1"/>
 </recipe>
+<recipe name="jz_Plank" count="12" craft_area="Tablesaw" craft_time="4" craft_exp_gain="1" tags="learnable,jz_TablesawTag">
+	<ingredient name="jz_LogSmall" count="1" />
+</recipe>
+
+<recipe name="jz_Plank" count="24" craft_area="Tablesaw" craft_time="4" craft_exp_gain="1" tags="learnable,jz_TablesawTag">
+	<ingredient name="jz_LogLarge" count="1" />
+</recipe>
 <!-- Research Desk Crafted ******************************************************************************************************************************************************* -->
+<recipe name="jz_ProfessionFireFighterBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionPoliceOfficerBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionParkRangerBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionBouncerBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionChefBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionBurglarBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionCarpenterBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionMasonBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionSoldierBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionFitnessInstructorBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionElectricianBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionMetalWorkerBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionMechanicBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionDoctorBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionFarmerBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_ProfessionChemistBook" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_ProfessionPage" count="20"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+
+<recipe name="jz_SchematicBandana" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelBandana" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicSuitJacket" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelSuitJacket" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicSuitPants" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelSuitPants" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicPressboyCap" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelPressboyCap" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicGothPants" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelGothPants" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicHoodySweatshirt" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelHoodySweatshirt" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicCoatLeatherPoncho" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelCoatLeatherPoncho" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicRunningShoesHP" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelRunningShoesHP" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicCoatJacketGeneric" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelCoatJacketGeneric" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicLongShirt" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelLongShirt" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicGothBoots" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelGothBoots" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+<recipe name="jz_SchematicTShirtZU" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="apparelTShirtZU" count="2"/>
+    <ingredient name="jz_BlankSkillBook" count="1"/>
+</recipe>
+
 <recipe name="poweredDoorsSchematic" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
 	<ingredient name="garageDoorMetal_v1Powered" count="1"/>
 	<ingredient name="metalReinforcedWoodDrawBridgePowered" count="1"/>
