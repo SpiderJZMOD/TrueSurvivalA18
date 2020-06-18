@@ -301,6 +301,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_Plank" count="1"/>
 </recipe> 
 
+<recipe name="jz_FoodGrubs" count="1" craft_time="5" craft_exp_gain="0" tags="learnable">
+	<ingredient name="dirtFragment" count="1"/>
+</recipe> 
+
 <recipe name="meleeToolKnifeBone" count="1" craft_time="30" craft_exp_gain="5" tags="jz_BoneKnifeCraftingTag,jz_PrimitativeCraftingTag">
 	<ingredient name="resourceBone" count="1"/>
 </recipe>
@@ -703,6 +707,14 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="resourceRepairKit" count="1" craft_time="4" craft_exp_gain="5"  >
 	<ingredient name="resourceGlue" count="1"/>
 	<ingredient name="resourceDuctTape" count="1"/>
+</recipe>
+
+<recipe name="jz_SplashOfWater" count="1" craft_time="2" craft_exp_gain="0"  >
+	<ingredient name="jz_DrinkCleanOuncesOfWater" count="8"/>
+</recipe>
+
+<recipe name="jz_FoodGrubs" count="1" craft_time="3" craft_exp_gain="0" tags="learnable" >
+	<ingredient name="dirtFragment" count="6"/>
 </recipe>
 <!-- Campfire Crafted ******************************************************************************************************************************************************* -->
 <recipe name="drugHerbalAntibiotics" count="1" craft_area="campfire" craft_tool="jz_MortarAndPestle" craft_time="4" craft_exp_gain="20" tags="learnable">
@@ -2913,7 +2925,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="unit_veggie" count="4" />
 </recipe>
 <!-- Stone Mill Crafted ******************************************************************************************************************************************************* -->
-<recipe name="foodCornMeal" count="1" craft_area="jz_StoneMill" craft_time="4" craft_exp_gain="20" tags="learnable">
+<recipe name="foodCornMeal" count="1" craft_area="jz_StoneMill" craft_time="4" craft_exp_gain="5" >
 	<ingredient name="foodCropCorn" count="1"/>
 </recipe>
 
@@ -2921,15 +2933,15 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceRockSmall" count="1"/>
 </recipe>
 
-<recipe name="jz_FoodFlour" count="1" craft_area="jz_StoneMill" >
+<recipe name="jz_FoodFlour" count="1" craft_area="jz_StoneMill" craft_time="4" craft_exp_gain="5" >
 	<ingredient name="jz_FoodServingGrain" count="1" />
 </recipe>
 
-<recipe name="jz_BoneMeal" count="1" craft_area="jz_StoneMill" >
+<recipe name="jz_BoneMeal" count="1" craft_area="jz_StoneMill" craft_time="4" craft_exp_gain="5" >
 	<ingredient name="resourceBone" count="3" />
 </recipe>
 
-<recipe name="jz_BoneMeal" count="1" craft_area="jz_StoneMill">
+<recipe name="jz_BoneMeal" count="1" craft_area="jz_StoneMill" craft_time="4" craft_exp_gain="5" >
 	<ingredient name="meleeToolKnifeBone" count="4" />
 </recipe>
 <!-- Mortar & Pestle Crafted ******************************************************************************************************************************************************* -->

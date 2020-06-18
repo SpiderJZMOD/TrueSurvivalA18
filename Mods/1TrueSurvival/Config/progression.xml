@@ -199,7 +199,7 @@
 			<requirement name="CVarCompare" cvar="$jz_ArcheryXP" operation="GTE" value="@$jz_ArcherySkillNextLvTotal"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_ArcherySkillLvAdd" operation="multiply" value="@$jz_SkillLvMult"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="$jz_ArcherySkillNextLvTotal" operation="add" value="@$jz_ArcherySkillLvAdd"/>
-                <triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_BladeSkill" operation="add" value="1"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="ModifySkillSDX, Mods" tag="jz_ArcherySkill" operation="add" value="1"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="self" sound="levelupplayer" play_in_head="true"/>
 				<triggered_effect trigger="onSelfAttackedOther" action="ShowToolbeltMessage" message="You have leveled up your skill with Archery!"/>
 		</effect_group>
@@ -2050,7 +2050,7 @@
 				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1" value=".1"/>
 				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" level="1" value=".1"/>
 		</effect_group>
-		<effect_group>
+      	<effect_group>
 			<requirement name="ProgressionLevel" progression_name="jz_Soldier" operation="GTE" value="1"/>
 			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_BlunderbussSchematic" level="-1">
 				<requirement name="ProgressionLevel" progression_name="SP_BlunderbussSchematic" operation="LT" value="1"/></triggered_effect>
@@ -2063,6 +2063,7 @@
 			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_WeaponRepairKitSchematic" level="-1">
 				<requirement name="ProgressionLevel" progression_name="SP_WeaponRepairKitSchematic" operation="LT" value="1"/></triggered_effect>
 				
+            
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FoodGrubs"/>
 			<effect_description level="1" desc_key="jz_SoldierDesc" long_desc_key="jz_SoldierDesc"/>
 		</effect_group>

@@ -718,22 +718,24 @@ The overall plan for loot distribution:
 <lootgroup name="T2WeaponParts">
 	<item group="pistolWeaponParts" prob="20" />
 	<item group="WoodenBowParts" prob="20" />
-	<item group="CrossbowParts" prob="30" />
+	<item group="CrossbowParts" prob="25" />
 	<item group="pumpDoubleBarrelWeaponParts" prob="30" />
 	<item group="weaponsHuntingRifleParts" prob="30" />
+    <item name="jz_GunTools" prob="5" />
 </lootgroup>
 
 <lootgroup name="T3WeaponParts">
-	<item group="CompoundCrossbowParts" prob="30" />
-	<item group="CompoundBowParts" prob="30" />
-	<item group="pumpShotgunWeaponParts" prob="30" />
-	<item group="weaponsMagnumParts" prob="30" />
-	<item group="SMG5WeaponParts" prob="30" />
+	<item group="CompoundCrossbowParts" prob="29" />
+	<item group="CompoundBowParts" prob="29" />
+	<item group="pumpShotgunWeaponParts" prob="29" />
+	<item group="weaponsMagnumParts" prob="29" />
+	<item group="SMG5WeaponParts" prob="29" />
 	<item group="ARWeaponParts" prob="30" />
 	<item group="AK47WeaponParts" prob="30" />
 	<item group="sniperRifleWeaponParts" prob="30" />
 	<item group="M60WeaponParts" prob="30" />
 	<item group="rocketLauncherWeaponParts" prob="30" />
+    <item name="jz_GunTools" prob="5" />
 </lootgroup>
 
 <lootgroup name="dyes">
@@ -3942,10 +3944,9 @@ if the loot entry for mods is empty then it will use the lootgroup mods and mod_
 <!-- cntLootCrateLabEquipment Lab equipment and medical items -->
 <lootcontainer id="96" count="1,2" size="6,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate">
 	<item group="labEquipment" prob="25"/>
-	<item group="medicine" prob="26" />
-	<item name="drugHerbalAntibioticsSchematic" prob="11"/>
-	<item name="medicalPlasterCastSchematic" prob="11"/>
-	<item name="medicalFirstAidBandageSchematic" prob="11"/>
+	<item group="medicine" prob="30" />
+	<item name="drugHerbalAntibioticsSchematic" prob="20"/>
+	<item name="medicalPlasterCastSchematic" prob="20"/>
     <item group="skillBookChance" prob="5" />
 </lootcontainer>
 
@@ -4034,21 +4035,19 @@ treasureTemplate
 <lootcontainer id="106" count="1,2" size="6,2" sound_open="UseActions/open_cupboard" sound_close="UseActions/close_cupboard" loot_quality_template="qualBaseTemplate">
 	<item group="medicine" prob="85"/>
 	<item name="jz_RubberBands" count="1,6" prob="1"/>
-	<item name="jz_GlassEye" prob="1"/>
-	<item name="jz_SteelScissors" prob="1"/>
-	<item name="jz_ClothRags" count="1,3" prob="1"/>
-	<item name="jz_RubberCondom" count="1,3" prob="1"/>
+	<item name="jz_GlassEye" prob="2"/>
+	<item name="jz_SteelScissors" prob="2"/>
+	<item name="jz_ClothRags" count="1,3" prob="2"/>
+	<item name="jz_RubberCondom" count="1,3" prob="2"/>
 	<item name="drugHerbalAntibioticsSchematic" prob="1"/>
 	<item name="medicalPlasterCastSchematic" prob="3"/>
-	<item name="medicalFirstAidBandageSchematic" prob="4"/>
 </lootcontainer>
 
 <!-- cntMedicLootPile -->
 <lootcontainer id="107" count="1,2" size="6,2" sound_open="UseActions/open_pill_case" sound_close="UseActions/close_pill_case" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
 	<item group="medicine" prob="90"/>
-	<item name="drugHerbalAntibioticsSchematic" prob="1"/>
-	<item name="medicalPlasterCastSchematic" prob="3"/>
-	<item name="medicalFirstAidBandageSchematic" prob="4"/>
+	<item name="drugHerbalAntibioticsSchematic" prob="2"/>
+	<item name="medicalPlasterCastSchematic" prob="5"/>
 </lootcontainer>
 
 <!-- cntAmmoPileSmall, cntAmmoPileMedium, cntAmmoPileLarge -->
@@ -4094,34 +4093,34 @@ treasureTemplate
 
 <!-- medicalPileSmall, medicalPileMedium, medicalPileLarge -->
 <lootcontainer id="114" count="1" size="6,1" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
-	<item group="labEquipment" prob="45"/>
-	<item group="dyes" prob="5"/>
-	<item name="resourceGunPowder" count="20,50" prob="10"/>
-	<item name="resourceCropChrysanthemumPlant" count="5,12" prob="10"/>
-	<item name="resourceCropGoldenrodPlant" count="5,12" prob="10"/>
-	<item name="medicalFirstAidBandageSchematic" prob="5"/>
+	<item group="labEquipment" prob="37"/>
+    <item group="medicine" prob="40"/>
+	<item group="dyes" prob="2"/>
+	<item name="resourceGunPowder" count="20,50" prob="5"/>
+	<item name="resourceCropChrysanthemumPlant" count="5,12" prob="2.5"/>
+	<item name="resourceCropGoldenrodPlant" count="5,12" prob="2.5"/>
 	<item name="medicalPlasterCastSchematic" prob="5"/>
 	<item group="skillBookChance" prob="5"/>
 </lootcontainer>
 
 <lootcontainer id="115" count="2" size="6,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
 	<item group="labEquipment" prob="45"/>
+    <item group="medicine" prob="5"/>
 	<item group="dyes" prob="5"/>
 	<item name="resourceGunPowder" count="20,50" prob="10"/>
 	<item name="resourceCropChrysanthemumPlant" count="5,12" prob="10"/>
 	<item name="resourceCropGoldenrodPlant" count="5,12" prob="10"/>
-	<item name="medicalFirstAidBandageSchematic" prob="5"/>
 	<item name="medicalPlasterCastSchematic" prob="5"/>
 	<item group="skillBookChance" prob="5"/>
 </lootcontainer>
 
 <lootcontainer id="116" count="3,4" size="6,3" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">
 	<item group="labEquipment" prob="45"/>
+    <item group="medicine" prob="5"/>
 	<item group="dyes" prob="5"/>
 	<item name="resourceGunPowder" count="20,50" prob="10"/>
 	<item name="resourceCropChrysanthemumPlant" count="5,12" prob="10"/>
 	<item name="resourceCropGoldenrodPlant" count="5,12" prob="10"/>
-	<item name="medicalFirstAidBandageSchematic" prob="5"/>
 	<item name="medicalPlasterCastSchematic" prob="5"/>
 	<item group="skillBookChance" prob="5"/>
 </lootcontainer>

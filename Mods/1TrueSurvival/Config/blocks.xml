@@ -29147,6 +29147,9 @@ NOT the TextureNumber.
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<drop event="Destroy" name="jz_ScrapRubber" count="5,15" tag="oreWoodHarvest"/>
 	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
+    <!--JZMOD ANY-->
+	<drop event="Destroy" name="jz_BikeWheels" count="1" prob=".3" />
+	<drop event="Destroy" name="vehicleWheels" count="1" prob=".3" />
 </block>
 
 <block name="decoCarTireFlat">
@@ -29156,6 +29159,9 @@ NOT the TextureNumber.
 	<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
 	<drop event="Destroy" name="resourceScrapPolymers" count="2,5" tag="oreWoodHarvest"/>
 	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
+    <!--JZMOD ANY-->
+	<drop event="Destroy" name="jz_BikeWheels" count="1" prob=".3" />
+	<drop event="Destroy" name="vehicleWheels" count="1" prob=".3" />
 </block>
 
 <block name="decoCarTirePile">
@@ -29166,6 +29172,9 @@ NOT the TextureNumber.
 	<property name="Collide" value="sight,melee,bullet,arrow,rocket,movement"/>
 	<drop event="Destroy" name="resourceScrapPolymers" count="4,8" tag="oreWoodHarvest"/>
 	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
+    <!--JZMOD ANY-->
+	<drop event="Destroy" name="jz_BikeWheels" count="1,3" prob=".3" />
+	<drop event="Destroy" name="vehicleWheels" count="1,3" prob=".3" />
 </block>
 
 <block name="decoCarTireStack">
@@ -29181,6 +29190,9 @@ NOT the TextureNumber.
 	<drop event="Destroy" name="resourceScrapPolymers" count="2,5" tag="oreWoodHarvest"/>
 	<drop event="Destroy" name="resourceScrapIron" count="3,7" tag="oreWoodHarvest"/>
 	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
+    <!--JZMOD ANY-->
+	<drop event="Destroy" name="jz_BikeWheels" count="1" prob=".3" />
+	<drop event="Destroy" name="vehicleWheels" count="1" prob=".3" />
 </block>
 
 <block name="awningBlockVariantHelper">
@@ -29746,18 +29758,13 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="ui_game_symbol_prepTable" />
 	<property name="Collide" value="movement,melee,bullet,arrow,rocket" />
 	<property name="IsTerrainDecoration" value="true" />
-	<property name="ParticleName" value="campfire" />
-	<property name="ParticleOffset" value="0.5,0,0.5" />
-    <property name="ModelOffset" value="0,0,0" />
     <property name="Stacknumber" value="1" />
 	<property name="HeatMapStrength" value="1" />
 	<property name="HeatMapTime" value="1200" />
 	<property name="HeatMapFrequency" value="25" />
 	<property name="MaxDamage" value="100" />
-	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment" />
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)" />
-    <property class="Workstation">
-		<property name="CraftingAreaRecipes" value="prepTable" />
+	<property class="Workstation">
+		<property name="CraftingAreaRecipes" value="jz_PrepTable" />
 		<property name="Modules" value="tools,output,material_input,fuel" />
 		<property name="InputMaterials" value="fruit,grain,veggie,protein" />
 	</property>
@@ -29878,7 +29885,7 @@ NOT the TextureNumber.
 		<property name="electronicParts" value="10" />
 	</property>
 	<property class="Workstation">
-		<property name="CraftingAreaRecipes" value="blastFurnace" />
+		<property name="CraftingAreaRecipes" value="jz_SteelForge" />
 		<property name="Modules" value="tools,output,fuel,material_input" />
 		<property name="InputMaterials" value="steel,iron,coal,clay,plastic,glass" />
 	</property>
@@ -32470,6 +32477,7 @@ NOT the TextureNumber.
 	<drop event="Destroy" name="jz_LogSmall" count="1,2"/>
 	<drop event="Destroy" name="jz_HoneyComb" count="1,6" prob=".1"/>
 	<drop event="Destroy" name="jz_FoodGrubs" count="1,3" prob=".1"/>
+    <drop event="Destroy" name="foodCropMushrooms" count="1,3" prob=".2"/>
 </block>
 
 <block name="jz_DeadTreeDecor2">

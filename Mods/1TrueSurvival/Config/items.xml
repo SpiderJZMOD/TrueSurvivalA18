@@ -9281,7 +9281,7 @@ perkNightStalkerSilentNight
 </item>
 
 <item name="apparelCowboyHat"> <!-- item name directly referenced in the code -->
-	<property name="Tags" value="head,clothing,canHaveCosmetic"/>
+	<property name="Tags" value="head,canHaveCosmetic"/>
 	<property name="DisplayType" value="armor"/>
 	<property name="UnlockedBy" value="perkNeedleAndThreadDesertWear"/>
 	<property name="Stacknumber" value="1"/>
@@ -20849,6 +20849,7 @@ perkNightStalkerSilentNight
 	<property name="FuelValue" value="1" />
 	<property name="Weight" value="5" />
 	<property class="Action0">
+        <property name="Sound_start" value="UseActions/player_bandage" />
 		<property name="Create_item" value="drinkJarEmpty" />
 	</property>
 	<effect_group tiered="false" name="JZMOD WOUND SYSTEM">
@@ -21139,6 +21140,7 @@ perkNightStalkerSilentNight
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
 	</effect_group>
 </item>
+
 
 <item name="foodCanBeef">
 	<property name="Extends" value="jz_MasterFood" />
@@ -23892,6 +23894,7 @@ perkNightStalkerSilentNight
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffIllFoodPoisoning01">
 			<requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+            <requirement name="ProgressionLevel" progression_name="jz_Soldier" operation="LT" value="1"/>
 		</triggered_effect>
 	</effect_group>
 </item>
@@ -27484,7 +27487,7 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="ui_game_symbol_mechanicalKeyPad" />
 	<property name="DescriptionKey" value="jz_MechanicalJunkDesc" />
 	<property name="Material" value="MmechanicalParts" />
-	<property name="Weight" value="2" />
+	<property name="Weight" value="6" />
 </item>
 
 <item name="jz_MechanicalOldWatch">
@@ -27492,7 +27495,7 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="ui_game_symbol_mechanicalOldWatch" />
 	<property name="DescriptionKey" value="jz_MechanicalJunkDesc" />
 	<property name="Material" value="MmechanicalParts" />
-	<property name="Weight" value="1" />
+	<property name="Weight" value="6" />
 </item>
 
 <item name="jz_MechanicalTypeWriter">
@@ -27500,7 +27503,7 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="ui_game_symbol_mechanicalTypeWriter" />
 	<property name="DescriptionKey" value="jz_MechanicalJunkDesc" />
 	<property name="Material" value="MmechanicalParts" />
-	<property name="Weight" value="8" />
+	<property name="Weight" value="15" />
 </item>
 
 <item name="jz_RubberDoll">
@@ -29898,10 +29901,22 @@ perkNightStalkerSilentNight
 	<property name="EconomicValue" value="0"/>
     <property name="CustomIcon" value="MilkJug" />
     <property name="DescriptionKey" value="jz_OldMilkJugDesc" />
+    <property class="Action0"> 
+		<property name="Class" value="ExchangeItem"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Change_item_to" value="jz_GallonOfDirtyRiverWater"/> 
+		<property name="Do_block_action" value="deplete1"/>
+		<property name="Focused_blockname_1" value="water"/>
+		<property name="Focused_blockname_2" value="waterMoving"/>
+		<property name="Focused_blockname_3" value="waterStaticBucket"/>
+		<property name="Focused_blockname_4" value="waterMovingBucket"/>
+		<property name="Focused_blockname_5" value="terrWaterPOI"/>
+		<property name="Sound_start" value="bucketfill_water"/>
+	</property>
 	<property class="Action1"> 
 		<property name="Class" value="ExchangeItem"/>
 		<property name="Delay" value="1.0"/>
-		<property name="Change_item_to" value="jz_GallonOfDrityRiverWater"/> 
+		<property name="Change_item_to" value="jz_GallonOfDirtyRiverWater"/> 
 		<property name="Do_block_action" value="deplete1"/>
 		<property name="Focused_blockname_1" value="water"/>
 		<property name="Focused_blockname_2" value="waterMoving"/>
@@ -29925,6 +29940,32 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="CustomIcon" value="NoRepair" />
     <property name="RepairAmount" value="1" />
+</item>
+
+<item name="jz_SplashOfWater">
+	<property name="HoldType" value="3"/>
+	<property name="DisplayType" value="water"/>
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="Material" value="Mglass"/>
+	<property name="Stacknumber" value="1"/> 
+	<property name="EconomicValue" value="0"/>
+	<property name="CustomIcon" value="ui_game_symbol_CleanWater" />
+	<property name="DescriptionKey" value="jz_SplashOfWaterDesc" />
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="bucketbail_water"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+	<effect_group tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="jz_BuffSplashOfWater"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
 </item>
 </set>
 </configs> 
