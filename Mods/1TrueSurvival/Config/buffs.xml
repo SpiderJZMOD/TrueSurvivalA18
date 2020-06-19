@@ -3060,7 +3060,7 @@
 		
 	<buff name="jz_BuffFullnessFader" hidden="true" remove_on_death="false">
 		<stack_type value="ignore"/>
-		<update_rate value="45"/>
+		<update_rate value="50"/><!-- 45 -->
 		<duration value="0"/>
 		<effect_group name="Food Stat Fader">
 			<requirement name="CVarCompare" cvar="$jz_PlayerFoodStat" operation="GTE" value="1"/>
@@ -3360,7 +3360,7 @@
 <!-- JZMOD FOOD SYSTEM -->
 	<buff name="jz_BuffVitaminFader" hidden="true" remove_on_death="false">
 		<stack_type value="ignore"/>
-		<update_rate value="420"/><!-- 420 -->
+		<update_rate value="462"/><!-- 420 -->
 		<duration value="0"/>
 		<effect_group name="Protein Vitamin Fader ">
 			<requirement name="CVarCompare" cvar="$jz_PlayerProteinVitamin" operation="GTE" value="0.1"/>

@@ -214,10 +214,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="farmPlotBlockPlayer" count="1" craft_time="10" craft_exp_gain="50" tags="learnable,jz_FarmerTag">
-	<ingredient name="jz_Plank" count="4"/>
-	<ingredient name="jz_FoodBioMass" count="10"/>
-	<ingredient name="resourcePotassiumNitratePowder" count="25"/>
-	<ingredient name="dirtFragment" count="100"/>
+	<ingredient name="jz_Plank" count="10"/>
+	<ingredient name="jz_FoodBioMass" count="5"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="10"/>
+	<ingredient name="dirtFragment" count="10"/>
 </recipe>
 
 <recipe name="candleTableLightPlayer" count="1" craft_time="1" craft_exp_gain="0">
@@ -299,10 +299,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 
 <recipe name="jz_PartsCraftedRifleStock" count="1" craft_time="30" craft_exp_gain="50">
 	<ingredient name="jz_Plank" count="1"/>
-</recipe> 
-
-<recipe name="jz_FoodGrubs" count="1" craft_time="5" craft_exp_gain="0" tags="learnable">
-	<ingredient name="dirtFragment" count="1"/>
 </recipe> 
 
 <recipe name="meleeToolKnifeBone" count="1" craft_time="30" craft_exp_gain="5" tags="jz_BoneKnifeCraftingTag,jz_PrimitativeCraftingTag">
@@ -460,7 +456,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="medicalFirstAidKit" count="1" craft_time="10" craft_exp_gain="15" tags="jz_DoctorTag">
-	<ingredient name="drinkJarGrainAlcohol" count="1" />
+	<ingredient name="jz_MedicalSanitizingBandage" count="1" />
     <ingredient name="medicalFirstAidBandage" count="1"/>
     <ingredient name="medicalBandage" count="1"/>
     <ingredient name="medicalBloodBag" count="1"/>
@@ -714,7 +710,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 </recipe>
 
 <recipe name="jz_FoodGrubs" count="1" craft_time="3" craft_exp_gain="0" tags="learnable" >
-	<ingredient name="dirtFragment" count="6"/>
+	<ingredient name="dirtFragment" count="5"/>
 </recipe>
 <!-- Campfire Crafted ******************************************************************************************************************************************************* -->
 <recipe name="drugHerbalAntibiotics" count="1" craft_area="campfire" craft_tool="jz_MortarAndPestle" craft_time="4" craft_exp_gain="20" tags="learnable">
