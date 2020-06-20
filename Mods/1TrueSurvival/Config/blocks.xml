@@ -30096,6 +30096,7 @@ NOT the TextureNumber.
 	<property name="Model" value="#Entities/LootContainers?loot_satchelPrefab.prefab"/>
 	<property name="Place" value="TowardsPlacerInverted"/>
 	<property name="CustomIcon" value="cntFetchQuestSatchel"/>
+    <property name="DescriptionKey" value="jz_StorageSackDesc" />
 	<property name="IsTerrainDecoration" value="true" />
     <property name="Weight" value="20" />
 	<property name="LootList" value="1" />
@@ -30433,7 +30434,7 @@ NOT the TextureNumber.
 <block name="jz_BrickFrameMaster">
 	<property name="Group" value="Building,advBuilding"/>
 	<property name="Tags" value="jz_StoneBuilding"/>
-	<property name="DescriptionKey" value="FlagstoneFrameGroupDesc"/>
+	<property name="DescriptionKey" value="BrickFrameGroupDesc"/>
 	<property name="ItemTypeIcon" value="ui_game_symbol_brick"/>
 	<property name="Material" value="MwoodNoGlue"/>
 	<property name="CreativeMode" value="None"/>
@@ -30490,7 +30491,7 @@ NOT the TextureNumber.
 	<property name="CustomUpgradeSound" value="place_block_metal"/>
 	<property name="EconomicValue" value="15"/>
 	<property name="EconomicBundleSize" value="2"/>
-	<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+	<property name="DescriptionKey" value="SteelBlockGroupDesc"/>
 	<property name="FilterTags" value="fbuilding,fsteel"/>
 	<property name="SortOrder1" value="40p0"/>
 	<property name="SortOrder2" value="0002"/>

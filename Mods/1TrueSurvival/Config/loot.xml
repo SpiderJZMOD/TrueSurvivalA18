@@ -1190,16 +1190,17 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="farmCrops">
-	<item name="foodCropCorn" prob="10"/>
-	<item name="foodCropPotato" prob="10"/>
-	<item name="foodCropBlueberries" count="1,3" prob="10"/>
-	<item name="resourceCropCottonPlant" prob="10"/>
-	<item name="resourceCropCoffeeBeans" prob="10"/>
-	<item name="resourceCropGoldenrodPlant" prob="10"/>
+	<item name="foodCropCorn" prob="8"/>
+	<item name="foodCropPotato" prob="8"/>
+	<item name="foodCropBlueberries" count="1,3" prob="8"/>
+	<item name="resourceCropCottonPlant" prob="8"/>
+	<item name="resourceCropCoffeeBeans" prob="9"/>
+	<item name="resourceCropGoldenrodPlant" prob="8"/>
 	<item name="jz_FoodStrawberry" count="1,3" prob="10" />
 	<item name="jz_FoodCarrot" prob="10" />
 	<item name="jz_FoodApple" prob="10" />
-	<item name="jz_FoodEggPlant" prob="10" />
+	<item name="jz_FoodEggPlant" prob="11" />
+    <item name="jz_FoodChilli" prob="10" />
 </lootgroup>
 
 <lootgroup name="drinks">
