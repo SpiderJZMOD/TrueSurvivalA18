@@ -2183,6 +2183,10 @@
 	<perk name="jz_Farmer" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Farmer" desc_key="jz_FarmerDesc" icon="ui_game_symbol_crops">
 		<effect_group>
 			<requirement name="ProgressionLevel" progression_name="jz_Farmer" operation="GTE" value="1"/>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_InsecticideSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_InsecticideSchematic" operation="LT" value="1"/></triggered_effect>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_FarmWateringCanSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_FarmWateringCanSchematic" operation="LT" value="1"/></triggered_effect>
 			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PotatoSeedSchematic" level="-1">
 				<requirement name="ProgressionLevel" progression_name="SP_PotatoSeedSchematic" operation="LT" value="1"/></triggered_effect>
 			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_CoffeeSeedSchematic" level="-1">
@@ -2970,10 +2974,24 @@
 		</effect_group>
 	</perk>
 	<!--FARMING-->
+    <perk name="SP_FarmWateringCanSchematic" parent="jz_FarmingRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Watering Can" desc_key="SP_FarmWateringCanSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_FarmingWateringCan"/>
+			<effect_description level="1" desc_key="SP_FarmWateringCanSchematicDesc" long_desc_key="SP_FarmWateringCanSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_InsecticideSchematic" parent="jz_FarmingRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Insecticide" desc_key="SP_InsecticideSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_Insecticide"/>
+			<effect_description level="1" desc_key="SP_InsecticideSchematicDesc" long_desc_key="SP_InsecticideSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
 	<perk name="SP_FarmPlotSchematic" parent="jz_FarmingRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Farm Plot" desc_key="SP_FarmPlotSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="farmPlotBlockPlayer"/>
-			<effect_description level="1" desc_key="SP_FarmPlotSchematicDesc" long_desc_key="SP_FarmPlotSchematicDesc"/>
+			<effect_description level="1" desc_key="SP_InsecticideSchematicDescDesc" long_desc_key="SP_FarmPlotSchematicDesc"/>
 		</effect_group>
 	</perk>
 

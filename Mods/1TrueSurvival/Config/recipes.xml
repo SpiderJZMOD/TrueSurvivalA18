@@ -2733,6 +2733,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
     <ingredient name="jz_ScrapWire" count="5"/>
 </recipe>
 <!-- Chemistry Station Crafted ******************************************************************************************************************************************************* -->
+<recipe name="jz_Insecticide" count="10" craft_area="chemistryStation" craft_tool="toolBeaker" craft_time="4" craft_exp_gain="5" tags="learnable,jz_ChemistTag" >
+	<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
+    <ingredient name="resourceAcid" count="1"/>
+    <ingredient name="jz_DrinkCleanOuncesOfWater" count="8"/>
+    <ingredient name="resourcePotassiumNitratePowder" count="5"/>
+</recipe>
+
 <recipe name="jz_GunOil" count="1" craft_area="chemistryStation" craft_tool="toolBeaker" craft_time="4" craft_exp_gain="5" tags="learnable,jz_ChemistTag" >
 	<ingredient name="resourceOil" count="1"/>
     <ingredient name="resourceAnimalFat" count="1"/>
@@ -3868,15 +3875,18 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceLeather" count="1"/>
 	<ingredient name="resourceDuctTape" count="1"/>
 </recipe>
-
 <recipe name="meleeToolKnifeIron" count="1" craft_area="jz_Anvil" craft_tool="meleeToolClawHammer" craft_time="30" craft_exp_gain="20" tags="learnable,jz_HuntingKnifeCraftingTag">
 	<ingredient name="jz_SmallKnifeBlade" count="1"/>
 	<ingredient name="jz_Stick" count="3"/>
 	<ingredient name="resourceLeather" count="2"/>
 </recipe>
-
-<recipe name="scrapIronSheet" count="1" craft_area="jz_Anvil" craft_tool="meleeToolClawHammer" material_based="true" >
-	<ingredient name="resourceScrapIron" count="40"/>	
+<recipe name="jz_IronSheetMetal" count="1" craft_area="jz_Anvil" craft_tool="meleeToolClawHammer" craft_time="30" craft_exp_gain="20" tags="learnable" >
+	<ingredient name="resourceScrapIron" count="10"/>	
+</recipe>
+<recipe name="jz_FarmingWateringCan" count="1" craft_area="jz_Anvil" craft_tool="meleeToolClawHammer" craft_time="30" craft_exp_gain="20" tags="learnable,jz_ChemistTag" >
+	<ingredient name="bucketEmpty" count="1"/>
+    <ingredient name="resourceScrapIron" count="20"/>
+    <ingredient name="resourceMetalPipe" count="2"/>
 </recipe>
 <!-- Tablesaw Crafted ******************************************************************************************************************************************************* -->
 <recipe name="woodFrameBlockVariantHelper" count="1" craft_area="Tablesaw" craft_time="4" craft_exp_gain="5" tags="learnable,jz_TablesawTag">
@@ -3894,7 +3904,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="jz_Plank" count="12" craft_area="Tablesaw" craft_time="4" craft_exp_gain="1" tags="learnable,jz_TablesawTag">
 	<ingredient name="jz_LogSmall" count="1" />
 </recipe>
-
 <recipe name="jz_Plank" count="24" craft_area="Tablesaw" craft_time="4" craft_exp_gain="1" tags="learnable,jz_TablesawTag">
 	<ingredient name="jz_LogLarge" count="1" />
 </recipe>
@@ -4442,6 +4451,21 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="jz_BlankSkillBook" count="1" craft_area="jz_ResearchDesk" craft_time="150" craft_exp_gain="100" >
 	<ingredient name="jz_SkillPaper" count="5" />
 	<ingredient name="jz_InkPen" count="1" />
+</recipe>
+
+<recipe name="jz_SchematicInsecticide" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_Insecticide" count="30" />
+	<ingredient name="jz_BlankSkillBook" count="1" />
+</recipe>
+
+<recipe name="jz_SchematicFarmingWateringCan" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_FarmingWateringCan" count="3" />
+	<ingredient name="jz_BlankSkillBook" count="1" />
+</recipe>
+
+<recipe name="jz_SchematicFarmPlot" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="farmPlotBlockPlayer" count="3" />
+	<ingredient name="jz_BlankSkillBook" count="1" />
 </recipe>
 <!-- QISatRadio Crafted ******************************************************************************************************************************************************* -->
 <recipe name="jz_QI887Frequency" count="1" craft_area="jz_QISatRadioStation" craft_time="1" craft_exp_gain="0" tags="learnable" >

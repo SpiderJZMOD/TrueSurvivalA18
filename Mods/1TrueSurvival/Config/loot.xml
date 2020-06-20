@@ -1087,18 +1087,18 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="grills">
-	<item name="toolCookingGrill" prob=".5"/>
-	<item name="resourceBone" count="5,15" prob=".5"/>
-	<item name="meleeToolKnifeIron" prob=".1"/>
-	<item name="jz_Charcoal" prob=".5"/>
-	<item name="jz_FryingPan" count="1,2" prob="1"/>
-	<item name="jz_SteelSpoon" prob="14.28" />
-	<item name="jz_SteelFork" prob="14.28" />
-	<item name="jz_PlasticLighter" prob="10" />
-	<item name="jz_StonePlate" prob="20" />
-	<item name="jz_PaperMatches" prob="14.28" />
-	<item name="jz_PaperNews" prob="14.28" />
-	<item name="jz_SteakKnife" prob="14.28" />
+	<item name="toolCookingGrill" prob="9"/>
+	<item name="resourceBone" count="1,5" prob="8"/>
+	<item name="meleeToolKnifeIron" prob="8"/>
+	<item name="jz_Charcoal" prob="9"/>
+	<item name="jz_FryingPan" prob="8"/>
+	<item name="jz_SteelSpoon" prob="8" />
+	<item name="jz_SteelFork" prob="9" />
+	<item name="jz_PlasticLighter" prob="9" />
+	<item name="jz_StonePlate" prob="8" />
+	<item name="jz_PaperMatches" prob="8" />
+	<item name="jz_PaperNews" prob="8" />
+	<item name="jz_SteakKnife" prob="8" />
 </lootgroup>
 
 <lootgroup name="schematicsElectrical">
@@ -1122,20 +1122,20 @@ The overall plan for loot distribution:
 
 <lootgroup name="electricalDevices">
 	<item name="generatorbank" prob="1"/>
-	<item name="batterybank" prob="0.7"/>
-	<item name="pressureplate" count="1,5" prob="1.0"/>
-	<item name="ceilingLight01_player" count="1,6" prob="1.0"/>
-	<item name="electrictimerrelay" count="1,3" prob="1.0"/>
-	<item name="electricwirerelay" count="5,15" prob="1.0"/>
-	<item name="motionsensor" count="1,2" prob="1.0"/>
-	<item name="speaker" count="1,2" prob="1.0"/>
-	<item name="switch" count="3,9" prob="1.0"/>
-	<item group="schematicsElectrical" count="1" prob="1.0"/>
-	<item name="jz_ElectricShaver" prob="25" />
-	<item name="jz_ElectricToyMotor" prob="25" />
+	<item name="batterybank" prob="1"/>
+	<item name="pressureplate" count="1" prob="1"/>
+	<item name="ceilingLight01_player" count="1" prob="1"/>
+	<item name="electrictimerrelay" count="1" prob="1"/>
+	<item name="electricwirerelay" count="1" prob="1"/>
+	<item name="motionsensor" count="1" prob="1"/>
+	<item name="speaker" count="1" prob="1"/>
+	<item name="switch" count="1" prob="1"/>
+	<item group="schematicsElectrical" count="1" prob="1"/>
+	<item name="jz_ElectricShaver" prob="24" />
+	<item name="jz_ElectricToyMotor" prob="5" />
 	<item name="jz_ElectricToaster" prob="20" />
 	<item name="jz_ElectricBlender" prob="20" />
-	<item name="jz_TechClockRadio"  prob="3" />
+	<item name="jz_TechClockRadio"  prob="21" />
 </lootgroup>
 
 <lootgroup name="cannedfood">
@@ -1163,19 +1163,24 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="seeds">
-	<item name="plantedPotato1" prob="7.7"/>
-	<item name="plantedCoffee1" prob="7.69"/>
-	<item name="plantedCorn1" prob="7.7"/>
-	<item name="plantedBlueberry1" prob="7.69"/>
-	<item name="plantedCotton1" prob="7.7"/>
-	<item name="plantedGoldenrod1" prob="7.69"/>
-	<item name="plantedAloe1" prob="7.69"/>
-	<item name="plantedMushroom1" prob="7.69"/>
-	<item name="plantedYucca1" prob="7.69"/>
-	<item name="plantedChrysanthemum1" prob="7.69"/>
-	<item name="plantedPumpkin1" prob="7.69"/>
-	<item name="treePlantedMountainPine1m" prob="7.69"/>
-	<item name="treePlantedWinterPine1m" prob="7.69"/>
+	<item name="plantedPotato1" count="1,3" prob="5"/>
+	<item name="plantedCoffee1" count="1,3" prob="5"/>
+	<item name="plantedCorn1" count="1,3" prob="5"/>
+	<item name="plantedBlueberry1" count="1,3" prob="5"/>
+	<item name="plantedCotton1" count="1,3" prob="5"/>
+	<item name="plantedGoldenrod1" count="1,3" prob="5"/>
+	<item name="plantedAloe1" count="1,3" prob="6"/>
+	<item name="plantedMushroom1" count="1,3" prob="6"/>
+	<item name="plantedYucca1" count="1,3" prob="6"/>
+	<item name="plantedChrysanthemum1" count="1,3" prob="6"/>
+	<item name="plantedPumpkin1" count="1,3" prob="6"/>
+	<item name="treePlantedMountainPine1m" count="1,3" prob="5"/>
+	<item name="treePlantedWinterPine1m" count="1,3" prob="5"/>
+    <item name="jz_PlantedChillis1" count="1,3" prob="6"/>
+	<item name="jz_PlantedCucumber1" count="1,3" prob="6"/>
+	<item name="jz_PlantedEggPlant1" count="1,3" prob="6"/>
+	<item name="jz_PlantedLeek1" count="1,3" prob="6"/>
+	<item name="jz_PlantedCarrot1" count="1,3" prob="6"/>
 </lootgroup>
 
 <lootgroup name="coldfood">
@@ -1218,22 +1223,23 @@ The overall plan for loot distribution:
 </lootgroup>
 
 <lootgroup name="cupboard">
-	<item name="drinkCanEmpty"/>
-	<item group="cannedfood" prob="0.5"/>
-	<item group="seeds" prob="0.05"/>
-	<item name="jz_DrinkCleanOuncesOfWater" count="1,24" prob="0.5"/>
-	<item name="drinkJarEmpty" count="1,4"/>
-	<item name="resourceElectricParts" count="1,2" prob="0.05"/>
-	<item name="resourcePotassiumNitratePowder" count="2,6" prob="0.15"/>
-	<item group="dyes" prob="0.1"/>
-	<item name="jz_SteakKnife" prob="10" />
-	<item name="jz_SteelButterKnife" prob="9" />
-	<item name="jz_WoodSpoon" prob="9" />
-	<item name="jz_SteelFork" prob="9" />
-	<item name="jz_SteelSpoon" prob="9" />
-	<item name="resourcePaint" count="5,20" prob="3" />
-    <item group="itemJunk" prob="16" />
-    <item name="jz_Charcoal" count="1,4" prob="2" />
+	<item name="drinkCanEmpty" prob="5"/>
+	<item group="cannedfood" prob="10"/>
+	<item group="seeds" prob="5"/>
+	<item name="jz_DrinkCleanOuncesOfWater" count="1,24" prob="10"/>
+	<item name="drinkJarEmpty" count="1,4" prob="5"/>
+	<item group="electricalDevices" prob="5"/>
+	<item name="resourcePotassiumNitratePowder" count="1,3" prob="5"/>
+	<item group="dyes" prob="5"/>
+	<item name="jz_SteakKnife" prob="6"/>
+	<item name="jz_SteelButterKnife" prob="6"/>
+	<item name="jz_WoodSpoon" prob="6"/>
+	<item name="jz_SteelFork" prob="6"/>
+	<item name="jz_SteelSpoon" prob="6"/>
+	<item name="resourcePaint" count="5,20" prob="5"/>
+    <item group="itemJunk" prob="10"/>
+    <item name="jz_Charcoal" count="1,4" prob="5"/>
+    <item name="jz_Insecticide" count="1,24" prob="5"/>
 </lootgroup>
 
 <lootgroup name="rareOres"> <!-- 907 average -->
@@ -1502,6 +1508,8 @@ The overall plan for loot distribution:
 	<item name="plantedPumpkin1Schematic"/>
 	<item name="jz_SchematicCucumberSeed"/>
 	<item name="jz_SchematicLeekSeed"/>
+    <item name="jz_SchematicFarmPlot"/>
+    <item name="jz_SchematicFarmingWateringCan"/>
 </lootgroup>
 
 <lootgroup name="T2FarmingBooks" >
@@ -1512,6 +1520,7 @@ The overall plan for loot distribution:
 	<item name="jz_SchematicEggPlantSeed"/>
 	<item name="jz_SchematicCarrotSeed"/>
 	<item name="jz_SchematicFarmPlot"/>
+    <item name="jz_SchematicInsecticide"/>
 </lootgroup>
 
 <lootgroup name="T3FarmingBooks" >
@@ -1908,47 +1917,49 @@ The overall plan for loot distribution:
 </lootgroup>
 	
 <lootgroup name="rareTools">
-	<item name="meleeToolChainsaw"/>
-	<item name="meleeToolAuger" prob="0.35"/>
-	<item name="meleeToolPickaxeSteel"/>
-	<item name="meleeToolFireaxeSteel"/>
-	<item name="meleeToolShovelSteel"/>
-	<item name="meleeToolSledgehammerSteel"/>
-	<item name="toolBellows"/>
-	<item name="gunToolNailgun" />
-	<item group="motorToolParts" prob="9" />
-	<item group="engineParts" prob="7" />
-	<item name="jz_WelderTool" prob="10" />
-	<item name="meleeToolWireTool" prob="10" />
-	<item name="jz_MasonHammer" prob="10" />
-	<item name="jz_Screwdriver" prob="11" />
-	<item name="toolAndDieSet" prob="8" />
+	<item name="meleeToolChainsaw" prob="6"/>
+	<item name="meleeToolAuger" prob="6"/>
+	<item name="meleeToolPickaxeSteel" prob="7"/>
+	<item name="meleeToolFireaxeSteel" prob="7"/>
+	<item name="meleeToolShovelSteel" prob="7"/>
+	<item name="meleeToolSledgehammerSteel" prob="7"/>
+	<item name="toolBellows" prob="6"/>
+	<item name="gunToolNailgun"  prob="6"/>
+	<item group="motorToolParts" prob="6"/>
+	<item group="engineParts" prob="6"/>
+	<item name="jz_WelderTool" prob="7"/>
+	<item name="meleeToolWireTool" prob="7"/>
+	<item name="jz_MasonHammer" prob="7"/>
+	<item name="jz_Screwdriver" prob="7"/>
+	<item name="toolAndDieSet" prob="8"/>
 </lootgroup>
 
 <lootgroup name="tools">
-	<item name="meleeToolPickaxeIron"/>
-	<item name="meleeToolShovelIron"/>
-	<item name="meleeToolFireaxeIron"/>
-	<item name="meleeToolSledgehammerIron"/>
-	<item name="meleeToolHoeIron"/>
-	<item name="meleeToolClawHammer"/>
-	<item name="meleeToolWrench"/>
-	<item name="resourceRepairKit" count="1,4"/>
-	<item name="resourceForgedIron" count="1,4" prob="0.41"/>
-	<item name="resourceForgedSteel" count="1,4" prob="0.22"/>
-	<item name="meleeToolPaintTool" prob="0.3"/>
-	<item name="meleeToolWireTool"/>
-	<item group="rareTools"/>
-	<item name="bucketEmpty" prob="5" />
+	<item name="meleeToolPickaxeIron" prob="4"/>
+	<item name="meleeToolShovelIron" prob="4"/>
+	<item name="meleeToolFireaxeIron" prob="4"/>
+	<item name="meleeToolSledgehammerIron" prob="4"/>
+	<item name="meleeToolHoeIron" prob="4"/>
+	<item name="meleeToolClawHammer" prob="4"/>
+    <item name="jz_FarmingWateringCan" prob="4"/>
+    <item name="jz_Insecticide" count="1,4" prob="4"/>
+	<item name="meleeToolWrench" prob="4"/>
+	<item name="resourceRepairKit" count="1,4" prob="4"/>
+	<item name="resourceForgedIron" count="1,4" prob="4"/>
+	<item name="resourceForgedSteel" count="1,4" prob="4"/>
+	<item name="meleeToolPaintTool"  prob="4"/>
+	<item name="meleeToolWireTool" prob="4"/>
+	<item group="rareTools" prob="4"/>
+	<item name="bucketEmpty" prob="4" />
 	<item name="jz_HandSaw" prob="4" />
-	<item name="jz_ScavengedParts" count="1,4" prob="5" />
-	<item name="jz_MasonHammer" prob="5" />
-    <item name="jz_Screwdriver" prob="7" />
+	<item name="jz_ScavengedParts" count="1,4" prob="4" />
+	<item name="jz_MasonHammer" prob="4" />
+    <item name="jz_Screwdriver" prob="4" />
 	<item name="jz_WeaponRepairKit" count="1,2" prob="4" />
-	<item group="resources" prob="7" />
-	<item name="jz_SharpeningStone" count="1,6" prob="5" />
-	<item group="molds" prob="5" />
-	<item group="heads" prob="5" />
+	<item group="resources" prob="4" />
+	<item name="jz_SharpeningStone" count="1,6" prob="4" />
+	<item group="molds" prob="4" />
+	<item group="heads" prob="4" />
 </lootgroup>
 
 <lootgroup name="workingStiffs">

@@ -1526,7 +1526,7 @@ group desc for stuff like metal siding
 	<property name="OnlySimpleRotations" value="true"/>
 	<property name="Class" value="PlantGrowing"/>
 	<property name="PlantGrowing.Next" value="cropsHarvestableMaster"/>
-	<property name="PlantGrowing.GrowthRate" value="63.0"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
+	<property name="PlantGrowing.GrowthRate" value="2.0"/> <!-- setting 1 is erratic. Recommend 2+ for testing or use -->
 	<property name="PlantGrowing.FertileLevel" value="15"/>
 	<property name="PlantGrowing.IsRandom" value="false"/>
 	<!--
@@ -14827,6 +14827,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="farmPlotBlock"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CanMobsSpawnOn" value="false"/>
+    <property name="UnlockedBy" value="jz_SchematicFarmPlot"/>
 	<drop event="Harvest" name="resourceClayLump" count="0" tag="oreWoodHarvest" />
 	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="0" tag="oreWoodHarvest" />
 	<drop event="Destroy" name="farmPlotBlockPlayer" count="1"/>
@@ -32571,6 +32572,7 @@ NOT the TextureNumber.
 	<drop event="Fall" name="jz_QIBugOutBag" count="1" prob="1" />
 	<property name="DowngradeBlock" value="jz_QIBugOutBagLoot" />
 </block>
+<!--JZMOD PLAYER PLANTED CROPS-->
 <!--JZMOD ALOE -->
 <block name="jz_PlantedChrysanthemumLv1Random" >
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
@@ -32834,7 +32836,7 @@ NOT the TextureNumber.
 <block name="jz_PlantedCotton1Infested">
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
-	<property name="Texture" value="401"/>
+	<property name="Texture" value="392"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedCotton1Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -32846,7 +32848,7 @@ NOT the TextureNumber.
 <block name="jz_PlantedCotton1Dry">
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
-	<property name="Texture" value="401"/>
+	<property name="Texture" value="392"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="plantedCotton2"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -32863,7 +32865,7 @@ NOT the TextureNumber.
 <block name="jz_PlantedCotton2Infested">
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
-	<property name="Texture" value="402"/>
+	<property name="Texture" value="20"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedCotton2Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -32876,7 +32878,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="CustomIcon" value="plantedBlueberry1"/>
-	<property name="Texture" value="402"/>
+	<property name="Texture" value="20"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="plantedCotton3HarvestPlayer"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -33079,7 +33081,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Plants/plant_yucca_sproutPrefab"/>
+	<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedPotato1Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -33092,7 +33094,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Plants/plant_yucca_sproutPrefab"/>
+	<property name="Model" value="Entities/Plants/potato_plant_sproutPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="plantedPotato2"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -33110,7 +33112,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab"/>
+	<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedPotato2Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -33124,7 +33126,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Dev"/>
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Plants/plant_yucca_growthPrefab"/>
+	<property name="Model" value="Entities/Plants/potato_plant_growthPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="plantedPotato3HarvestPlayer"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -33346,7 +33348,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmChillisMid.unity3d?FarmChillisMidPrefab" />
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedChillis1Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -33359,7 +33361,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmChillisMid.unity3d?FarmChillisMidPrefab" />
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedChillis2"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -33418,7 +33420,6 @@ NOT the TextureNumber.
 
 <block name="jz_PlantedChillis3HarvestPlayer">
 	<property name="Extends" value="jz_PlantedChillis3Harvest"/>
-	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
 	<drop event="Harvest" name="jz_FoodChillis" count="1" tag="cropHarvest"/>
@@ -33445,7 +33446,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedCucumber1Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -33458,7 +33459,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmCucumberGrown.unity3d?FarmCucumberGrownPrefab" />
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedCucumber2"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -33517,7 +33518,6 @@ NOT the TextureNumber.
 
 <block name="jz_PlantedCucumber3HarvestPlayer">
 	<property name="Extends" value="jz_PlantedCucumber3Harvest"/>
-	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
 	<drop event="Harvest" name="jz_FoodCucumber" count="1" tag="cropHarvest"/>
@@ -33544,7 +33544,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedEggPlant1Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -33557,7 +33557,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZFarmEggPlantMid.unity3d?FarmEggPlantMidPrefab" />
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedEggPlant2"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -33616,7 +33616,6 @@ NOT the TextureNumber.
 
 <block name="jz_PlantedEggPlant3HarvestPlayer">
 	<property name="Extends" value="jz_PlantedEggPlant3Harvest"/>
-	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
 	<drop event="Harvest" name="jz_FoodEggPlant" count="1" tag="cropHarvest"/>
@@ -33643,7 +33642,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedLeek1Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -33656,7 +33655,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property name="Model" value="Entities/Plants/blueberry_plant_sproutPrefab"/>
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedLeek2"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -33683,7 +33682,7 @@ NOT the TextureNumber.
 	<property name="Extends" value="cropsHarvestableMaster" param1="MultiBlockDim"/>
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmLeekMid.unity3d?FarmLeekMidPrefab" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedLeek2Dry"/>
 		<property name="Item" value="jz_Insecticide"/>
@@ -33697,7 +33696,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Dev"/>
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="#@modfolder:Resources/JZCarrotMid.unity3d?CarrotMidPrefab" />
+	<property name="Model" value="#@modfolder:Resources/JZFarmLeekMid.unity3d?FarmLeekMidPrefab" />
 	<property class="UpgradeBlock">
 		<property name="ToBlock" value="jz_PlantedLeek3HarvestPlayer"/>
 		<property name="Item" value="jz_DrinkDirtyOuncesOfWater"/>
@@ -33715,8 +33714,8 @@ NOT the TextureNumber.
 
 <block name="jz_PlantedLeek3HarvestPlayer">
 	<property name="Extends" value="jz_PlantedLeek3Harvest"/>
-	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
 	<property name="CustomIcon" value="plantedBlueberry1"/>
+    <property name="ModelOffset" value="0,-.35,0"/> 
 	<property name="CreativeMode" value="Dev"/>
 	<drop event="Harvest" name="jz_FoodLeek" count="1" tag="cropHarvest"/>
 </block>
@@ -33814,7 +33813,6 @@ NOT the TextureNumber.
 
 <block name="jz_PlantedCarrot3HarvestPlayer">
 	<property name="Extends" value="jz_PlantedCarrot3Harvest"/>
-	<property name="DescriptionKey" value="plantedBlueberry3HarvestDesc"/>														  
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
 	<drop event="Harvest" name="jz_FoodCarrot" count="1" tag="cropHarvest"/>

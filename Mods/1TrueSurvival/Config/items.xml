@@ -18857,6 +18857,199 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="ui_game_symbol_fiberRope" />
 </item>
 <!--JZMOD GUNS-->
+<item name="jz_OldRevolver"> 
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,magazine,firingMode,selfLoading,9mmGun,jz_PistolSkillTag"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="1"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pistol/PistolPrefab.prefab"/>
+	<property name="Material" value="Mmetal"/> 
+	<property name="Weight" value="15"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property name="Sound_Sight_In" value="pistol_sight_in"/>
+	<property name="Sound_Sight_Out" value="pistol_sight_out"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="DescriptionKey" value="oldRevolverDesc" />
+    <property name="CustomIcon" value="OldRevolver" />
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Magazine_items" value="ammo9mmBulletBall"/>
+		<property name="Sound_start" value="Pistol_Fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="pistol_reload"/>
+		<property name="AutoReload" value="true"/>
+		<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_pistol_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="0,.0008,0"/>
+	</property>
+
+	<effect_group name="gunPistol">
+		<passive_effect name="MaxRange" operation="base_set" value="40"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="18"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/> <!-- random effective rng -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="200"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+
+		<passive_effect name="MagazineSize" operation="base_set" value="6"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> <!-- 2s -->
+		<passive_effect name="ModSlots" operation="base_set" value="0,0,0,0,0,0" tier="1,2,3,4,5,6"/>
+		
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> <!-- random DegMax -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/> <!-- random APM -->
+		<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>	
+		
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.5"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.5"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".8"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".8"/>
+
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.25"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".25"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.0"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".95"/> <!-- crosshair reset speed -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="250,450" tier="1,6" tags="perkGunslinger,9mmGun"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/>
+	</effect_group>
+</item>
+
+<item name="jz_OldRifle">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,jz_HuntingRifleSkillTag"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="30"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab"/>
+    <property name="CustomIcon" value="OldRifle" />
+	<property name="Material" value="Mmetal"/> 
+	<property name="Weight" value="20"/>
+	<property name="RepairTools" value="jz_CantRepair"/>
+	<property name="DegradationBreaksAfter" value="true"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="DescriptionKey" value="oldRifleDesc" />
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="ShowQuality" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".5"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammo762mmBulletBall"/>
+		<property name="Reload_time" value="2.75"/>
+		<property name="Sound_start" value="sniperrifle_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="hunting_rifle_reload"/>
+		<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_magnum_fpv"/>
+		<property name="ScopeOffset" value="-.00062,.1115,.125"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+	</property>
+
+	<effect_group name="gunHuntingRifle">
+		<passive_effect name="MaxRange" operation="base_set" value="150"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="70"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/> <!-- random effective rng -->
+		<passive_effect name="EntityDamage" operation="base_add" value="15"/>
+
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="120"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+
+		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".81"/> <!-- 2.66s -->
+
+		<passive_effect name="ModSlots" operation="base_set" value="0,0,0,0,0,0" tier="1,2,3,4,5,6"/>
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/> <!-- random APM -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>	
+		
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".048"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2"/>
+
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.35"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".35"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="50"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".65"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="100,300" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="4,12" tier="1,6"/>
+	</effect_group>
+</item>
+
 <item name="jz_CraftedRevolver">
 	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,magazine,firingMode,selfLoading,9mmGun,canHaveCosmetic,jz_PistolSkillTag"/>
 	<property name="DisplayType" value="rangedGun"/>
@@ -19554,203 +19747,9 @@ perkNightStalkerSilentNight
     <property name="CustomIcon" value="Ak47Parts" />
 	<property name="ItemTypeIcon" value="gunsmithing"/>
 </item>
-
-<item name="jz_OldRevolver"> 
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,pistol,magazine,firingMode,selfLoading,9mmGun,jz_PistolSkillTag"/>
-	<property name="DisplayType" value="rangedGun"/>
-	<property name="HoldType" value="1"/>
-	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Pistol/PistolPrefab.prefab"/>
-	<property name="Material" value="Mmetal"/> 
-	<property name="Weight" value="15"/>
-	<property name="RepairTools" value="jz_CantRepair"/>
-	<property name="DegradationBreaksAfter" value="true"/>
-	<property name="SoundJammed" value="weapon_jam"/>
-	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
-	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
-	<property name="Sound_Sight_In" value="pistol_sight_in"/>
-	<property name="Sound_Sight_Out" value="pistol_sight_out"/>
-	<property name="Group" value="Ammo/Weapons"/>
-	<property name="LightValue" value=".45"/>
-	<property name="EconomicValue" value="0"/>
-	<property name="ShowQuality" value="true"/>
-	<property name="DescriptionKey" value="oldRevolverDesc" />
-    <property name="CustomIcon" value="OldRevolver" />
-
-	<property class="Action0">
-		<property name="Class" value="Ranged"/>
-		<property name="Magazine_items" value="ammo9mmBulletBall"/>
-		<property name="Sound_start" value="Pistol_Fire"/>
-		<property name="Sound_repeat" value=""/>
-		<property name="Sound_end" value=""/>
-		<property name="Sound_empty" value="dryfire"/>
-		<property name="Sound_reload" value="pistol_reload"/>
-		<property name="AutoReload" value="true"/>
-		<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_pistol_fpv"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
-	</property>
-	<property class="Action1">
-		<property name="Class" value="Zoom"/>
-		<property name="Zoom_max_out" value="55"/>
-		<property name="Zoom_max_in" value="55"/>
-		<property name="ScopeCameraOffset" value="0,.0008,0"/>
-	</property>
-
-	<effect_group name="gunPistol">
-		<passive_effect name="MaxRange" operation="base_set" value="40"/>
-		<passive_effect name="DamageFalloffRange" operation="base_set" value="18"/>
-		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/> <!-- random effective rng -->
-
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
-
-		<passive_effect name="RoundsPerMinute" operation="base_set" value="200"/>
-		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
-
-		<passive_effect name="MagazineSize" operation="base_set" value="6"/>
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> <!-- 2s -->
-		<passive_effect name="ModSlots" operation="base_set" value="0,0,0,0,0,0" tier="1,2,3,4,5,6"/>
-		
-		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
-		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
-		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
-		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
-
-		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> <!-- random DegMax -->
-		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/> <!-- random APM -->
-		<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> <!-- random MagazineSize -->
-		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/> <!-- random WeaponHandling -->
-
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>	
-		
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.5"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.5"/>
-		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4"/>
-		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
-		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
-		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
-
-		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".8"/>
-		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".8"/>
-
-		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.25"/>
-		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".25"/>
-
-		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.0"/>
-		<passive_effect name="WeaponHandling" operation="base_set" value=".95"/> <!-- crosshair reset speed -->
-
-		<passive_effect name="DegradationMax" operation="base_set" value="250,450" tier="1,6" tags="perkGunslinger,9mmGun"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/>
-	</effect_group>
-</item>
-
-<item name="jz_OldRifle">
-	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,jz_HuntingRifleSkillTag"/>
-	<property name="DisplayType" value="rangedGun"/>
-	<property name="HoldType" value="30"/>
-	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/HuntingRifle/HuntingRiflePrefab.prefab"/>
-    <property name="CustomIcon" value="OldRifle" />
-	<property name="Material" value="Mmetal"/> 
-	<property name="Weight" value="20"/>
-	<property name="RepairTools" value="jz_CantRepair"/>
-	<property name="DegradationBreaksAfter" value="true"/>
-	<property name="SoundJammed" value="ItemNeedsRepair"/>
-	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
-	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
-	<property name="Sound_Sight_In" value="rifle_sight_in"/>
-	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
-	<property name="Group" value="Ammo/Weapons"/>
-	<property name="DescriptionKey" value="oldRifleDesc" />
-	<property name="LightValue" value=".45"/>
-	<property name="EconomicValue" value="0"/>
-	<property name="ShowQuality" value="true"/>
-
-	<property class="Action0">
-		<property name="Class" value="Ranged"/>
-		<property name="Delay" value=".5"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Magazine_items" value="ammo762mmBulletBall"/>
-		<property name="Reload_time" value="2.75"/>
-		<property name="Sound_start" value="sniperrifle_fire"/>
-		<property name="Sound_repeat" value=""/>
-		<property name="Sound_end" value=""/>
-		<property name="Sound_empty" value="dryfire"/>
-		<property name="Sound_reload" value="hunting_rifle_reload"/>
-		<property name="Particles_muzzle_fire" value="gunfire_pistol"/>
-		<property name="Particles_muzzle_fire_fpv" value="gunfire_magnum_fpv"/>
-		<property name="ScopeOffset" value="-.00062,.1115,.125"/>
-		<property name="SideOffset" value="0,0,0"/>
-		<property name="BarrelOffset" value="0,0,0"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
-	</property>
-	<property class="Action1">
-		<property name="Class" value="Zoom"/>
-		<property name="Zoom_max_out" value="55"/>
-		<property name="Zoom_max_in" value="55"/>
-	</property>
-
-	<effect_group name="gunHuntingRifle">
-		<passive_effect name="MaxRange" operation="base_set" value="150"/>
-		<passive_effect name="DamageFalloffRange" operation="base_set" value="70"/>
-		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/> <!-- random effective rng -->
-		<passive_effect name="EntityDamage" operation="base_add" value="15"/>
-
-		<passive_effect name="RoundsPerMinute" operation="base_set" value="120"/>
-		<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
-
-		<passive_effect name="MagazineSize" operation="base_set" value="1"/>
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".81"/> <!-- 2.66s -->
-
-		<passive_effect name="ModSlots" operation="base_set" value="0,0,0,0,0,0" tier="1,2,3,4,5,6"/>
-		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random rng -->
-		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
-		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
-		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
-
-		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/> <!-- random APM -->
-		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/> <!-- random WeaponHandling -->
-
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="organic"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="earth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="terrGravel"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="stone"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="cloth"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="10" tags="glass"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="metal"/>
-		<passive_effect name="DamageModifier" operation="perc_add" value="-100" tags="jzSteel"/>	
-		
-		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
-		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
-		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".048"/>
-		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
-		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
-		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2"/>
-
-		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5"/>
-		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2"/>
-
-		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.35"/>
-		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".35"/>
-
-		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="50"/>
-		<passive_effect name="WeaponHandling" operation="base_set" value=".65"/>
-
-		<passive_effect name="DegradationMax" operation="base_set" value="100,300" tier="1,6"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="4,12" tier="1,6"/>
-	</effect_group>
-</item>
-
 <!-- JZMOD MELEE WEAPONS -->
 <item name="jz_SteakKnife">
-<property name="Tags" value="knife,melee,grunting,light,weapon,meleeWeapon,"/>
+    <property name="Tags" value="knife,melee,grunting,light,weapon,meleeWeapon,"/>
 	<property name="DisplayType" value="meleeKnife"/>
 	<property name="HoldType" value="36"/>
 	<property name="Meshfile" value="#@modfolder:Resources/JZMeleeSteakKnife.unity3d?MeleeSteakKnifePrefab" />
@@ -20940,7 +20939,6 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Science" />
 	<property name="CustomIcon" value="ui_game_symbol_purificationTablets" />
 	<property name="DescriptionKey" value="purificationDesc" />
-	<property name="CraftingSkillGroup" value="engineeringCraft" />
 </item>
 
 <item name="jz_MedicalAntivirialMeds">
@@ -21140,7 +21138,6 @@ perkNightStalkerSilentNight
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
 	</effect_group>
 </item>
-
 
 <item name="foodCanBeef">
 	<property name="Extends" value="jz_MasterFood" />
@@ -22465,7 +22462,7 @@ perkNightStalkerSilentNight
 <item name="foodRottingFlesh">
 	<property name="Extends" value="jz_MasterFood" />
 	<property name="Material" value="MbioMass"/>
-	<property name="Weight" value="2"/>
+	<property name="Weight" value="5"/>
 	<property name="Tags" value="food"/>
 	<property name="DisplayType" value="jz_FoodBad"/>
 	<property name="Stacknumber" value="10"/> 
@@ -25165,7 +25162,7 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<!--JZMOD ATTACKS-->
+<!--JZMOD ENTITY ATTACKS-->
 <item name="jz_HandParasiteLongClaw">
 	<property name="Extends" value="meleeHandMaster"/>
 	<property name="CreativeMode" value="None"/>
@@ -26628,6 +26625,7 @@ perkNightStalkerSilentNight
 	<property name="DescriptionKey" value="jz_SkillPaperDesc" />
 	<property name="CustomIcon" value="ui_game_symbol_SkillPaper" />
 </item>
+
 <item name="jz_SteelPipe">
 	<property name="Extends" value="jz_MasterItem" />
 	<property name="Meshfile" value="Items/Crafting/Metal/shortMetalPipe" />
@@ -26962,14 +26960,14 @@ perkNightStalkerSilentNight
 
 <item name="jz_MoldyFruit">
 	<property name="Extends" value="foodMoldyBread" />
-	<property name="Weight" value="1" />
+	<property name="Weight" value="4" />
 	<property name="CustomIcon" value="ui_game_symbol_moldyFruit" />
     <property name="DescriptionKey" value="jz_MoldyFruitDesc" />
 </item>
 
 <item name="jz_MoldyVeggies">
 	<property name="Extends" value="foodMoldyBread" />
-	<property name="Weight" value="1" />
+	<property name="Weight" value="4" />
 	<property name="CustomIcon" value="ui_game_symbol_moldyVeggies" />
      <property name="DescriptionKey" value="jz_MoldyVeggiesDesc" />
 </item>
@@ -28103,7 +28101,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="farmPlotBlock"/>
-	<property name="Unlocks" value="meleeThrownSpearStone"/>
+	<property name="Unlocks" value="farmPlotBlockPlayer"/>
     <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_FarmPlotSchematic" operation="LT" value="1"/>
@@ -28886,6 +28884,38 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_TShirtZUSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicInsecticide">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="Insecticide"/>
+	<property name="Unlocks" value="jz_Insecticide"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_InsecticideSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_InsecticideSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicFarmingWateringCan">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="Weight" value="1"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="WateringCan"/>
+	<property name="Unlocks" value="jz_FarmingWateringCan"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_FarmWateringCanSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_FarmWateringCanSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
@@ -29817,6 +29847,7 @@ perkNightStalkerSilentNight
 	<property name="Stacknumber" value="128" />
 	<property name="CustomIcon" value="Insecticide"/>
 	<property name="DescriptionKey" value="jz_InsecticideDesc"/>
+    <property name="Group" value="Resources,Chemicals,CFChemicals"/>
 </item>
 
 <item name="jz_FarmingWateringCan">
@@ -29837,8 +29868,9 @@ perkNightStalkerSilentNight
 		<property name="Delay" value=".5"/>
 		<property name="Repair_amount" value="1"/>
 		<property name="Upgrade_hit_offset" value="0"/>
-		<property name="Sound_start" value="repair_block"/>
-		<property name="Allowed_upgrade_items" value="jz_DrinkDirtyOuncesOfWater"/>
+        <property name="Upgrade_action_sound" value="bucketplace_water"/>
+		<property name="Sound_start" value="bucketplace_water"/>
+        <property name="Allowed_upgrade_items" value="jz_DrinkDirtyOuncesOfWater,jz_Insecticide"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
 	<property class="Action1"> 
@@ -29846,8 +29878,8 @@ perkNightStalkerSilentNight
 		<property name="Delay" value=".5"/>
 		<property name="Repair_amount" value="1"/>
 		<property name="Upgrade_hit_offset" value="0"/>
-		<property name="Sound_start" value="repair_block"/>
-		<property name="Allowed_upgrade_items" value="jz_DrinkDirtyOuncesOfWater"/>
+        <property name="Upgrade_action_sound" value="bucketplace_water"/>
+		<property name="Allowed_upgrade_items" value="jz_DrinkDirtyOuncesOfWater,jz_Insecticide"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
 	<effect_group name="meleeToolWrench">
