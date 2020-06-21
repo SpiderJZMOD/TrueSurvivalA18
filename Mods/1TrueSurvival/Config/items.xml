@@ -10139,6 +10139,7 @@ perkNightStalkerSilentNight
 	<property name="Stacknumber" value="1"/>
 	<property name="Waterproof" value=".45"/>
 	<property name="Material" value="Mleather"/>
+    <property name="Weight" value="20"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="FuelValue" value="75"/>
 	<property name="EconomicValue" value="480"/>
@@ -10469,7 +10470,7 @@ perkNightStalkerSilentNight
 	<property name="Group" value="Science,Medical"/>
 	<property name="EconomicValue" value="200"/>
 	<property name="Stacknumber" value="5"/>
-	<property name="DescriptionKey" value="jz_medicalFirstAidBandageDesc"/>
+	<property name="DescriptionKey" value="jz_medicalFirstAidKitDesc"/>
 	<property class="Action0">
 		<!-- <requirement name="StatCompare" stat="health" operation="lte" value="50"/> -->
 		<property name="Sound_start" value="player_firstAidKit"/>
@@ -11664,7 +11665,7 @@ perkNightStalkerSilentNight
 	<property name="Extends" value="schematicNoQualityMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="toolAnvil"/>
-	<property name="Unlocks" value="toolAnvil"/>
+	<property name="Unlocks" value="jz_Anvil"/>
 	<property class="Action0">
 		<requirement name="ProgressionLevel" progression_name="SP_AnvilSchematic" operation="LT" value="1"/>
 	</property>
@@ -20301,7 +20302,6 @@ perkNightStalkerSilentNight
 	<property name="SellableToTrader" value="false"/>
     <property name="CustomIcon" value="ui_game_symbol_crowbar" />
 	<property name="ShowQuality" value="true"/>
-	<property name="UnlockedBy" value="jz_CrowbarSchematic"/>
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
@@ -29100,6 +29100,7 @@ perkNightStalkerSilentNight
 	<property name="HoldType" value="2"/>
     <property name="DescriptionKey" value="jz_MeleePlankDesc"/>
 	<property name="Material" value="Mwood"/>
+    <property name="Weight" value="10"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -29189,6 +29190,7 @@ perkNightStalkerSilentNight
 	<property name="HoldType" value="2"/>
     <property name="DescriptionKey" value="jz_MeleePlankSpikedDesc"/>
 	<property name="Material" value="Mwood"/>
+    <property name="Weight" value="10"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
@@ -29277,6 +29279,7 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#@modfolder:Resources/JZTableLegMeleeSpike.unity3d?TableLegMeleeSpikePrefab" />
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mwood"/>
+    <property name="Weight" value="10"/>
     <property name="DescriptionKey" value="jz_MeleeTableLegSpikedDesc"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
@@ -29365,6 +29368,7 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#@modfolder:Resources/JZTableLegMelee.unity3d?TableLegMeleePrefab" />
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mwood"/>
+    <property name="Weight" value="10"/>
     <property name="DescriptionKey" value="jz_MeleeTableLegDesc"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
@@ -29453,7 +29457,8 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#@modfolder:Resources/JZRebar2Melee.unity3d?Rebar2MeleePrefab" />
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mmetal"/>
-     <property name="DescriptionKey" value="jz_MeleeRebarDesc"/>
+    <property name="Weight" value="10"/>
+    <property name="DescriptionKey" value="jz_MeleeRebarDesc"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="SoundDestroy" value="metaldestroy1"/>
@@ -29629,6 +29634,7 @@ perkNightStalkerSilentNight
 	<property name="Meshfile" value="#@modfolder:Resources/JZBranchSpiked.unity3d?BranchSpikedPrefab" />
 	<property name="HoldType" value="2"/>
 	<property name="Material" value="Mwood"/>
+    <property name="Weight" value="10"/>
     <property name="DescriptionKey" value="jz_MeleeBranchSpikedDesc"/>
 	<property name="RepairTools" value="jz_CantRepair"/>
 	<property name="DegradationBreaksAfter" value="true"/>

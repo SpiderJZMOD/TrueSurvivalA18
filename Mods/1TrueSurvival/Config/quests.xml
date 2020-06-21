@@ -65,6 +65,8 @@
 		<reward type="Quest" id="jzquest_KnuckleWrapCraftingLv1" />
 		<reward type="Quest" id="jzquest_BrassKnucklesCraftingLv1" />
 		<reward type="Quest" id="jzquest_SteelKnucklesCraftingLv1" />
+        <reward type="Quest" id="jzquest_HandCraftedRifleCraftingLv1" />
+        <reward type="Quest" id="jzquest_HandcraftedRevolverCraftingLv1" />
 		<reward type="Quest" id="jzquest_PistolCraftingLv1" />
 		<reward type="Quest" id="jzquest_44MagCraftingLv1" />
 		<reward type="Quest" id="jzquest_SMG5CraftingLv1" />
@@ -740,7 +742,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolShovelStone" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_StoneShovelCrafting" value="1" />	
 	</quest>
@@ -840,7 +842,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolFireaxeSteel" />
-			<property name="count" value="25" /><!--25-->
+			<property name="count" value="10" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_SteelFireaxeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelFireaxeCraftingLv2" />
@@ -856,7 +858,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolFireaxeSteel" />
-			<property name="count" value="50" /><!--50-->
+			<property name="count" value="25" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_SteelFireaxeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelFireaxeCraftingLv3" />
@@ -872,7 +874,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolFireaxeSteel" />
-			<property name="count" value="100" /><!--100-->
+			<property name="count" value="50" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_SteelFireaxeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelFireaxeCraftingLv4" />
@@ -888,7 +890,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolFireaxeSteel" />
-			<property name="count" value="150" /><!--200-->
+			<property name="count" value="75" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_SteelFireaxeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelFireaxeCraftingLv5Pt1" />
@@ -904,7 +906,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolFireaxeSteel" />
-			<property name="count" value="200" /><!--250-->
+			<property name="count" value="100" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_SteelFireaxeCrafting" value="1" />		
 	</quest>
@@ -1002,7 +1004,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolPickaxeSteel" />
-			<property name="count" value="25" /><!--25-->
+			<property name="count" value="10" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_SteelPickaxeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelPickaxeCraftingLv2" />
@@ -1018,7 +1020,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolPickaxeSteel" />
-			<property name="count" value="50" /><!--50-->
+			<property name="count" value="25" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_SteelPickaxeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelPickaxeCraftingLv3" />
@@ -1034,7 +1036,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolPickaxeSteel" />
-			<property name="count" value="100" /><!--100-->
+			<property name="count" value="50" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_SteelPickaxeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelPickaxeCraftingLv4" />
@@ -1050,7 +1052,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolPickaxeSteel" />
-			<property name="count" value="150" /><!--200-->
+			<property name="count" value="75" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_SteelPickaxeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelPickaxeCraftingLv5Pt1" />
@@ -1066,7 +1068,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolPickaxeSteel" />
-			<property name="count" value="200" /><!--250-->
+			<property name="count" value="100" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_SteelPickaxeCrafting" value="1" />		
 	</quest>
@@ -1164,7 +1166,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolShovelSteel" />
-			<property name="count" value="25" /><!--25-->
+			<property name="count" value="10" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_SteelShovelCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelShovelCraftingLv2" />
@@ -1180,7 +1182,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolShovelSteel" />
-			<property name="count" value="50" /><!--50-->
+			<property name="count" value="25" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_SteelShovelCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelShovelCraftingLv3" />
@@ -1196,7 +1198,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolShovelSteel" />
-			<property name="count" value="100" /><!--100-->
+			<property name="count" value="50" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_SteelShovelCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelShovelCraftingLv4" />
@@ -1212,7 +1214,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolShovelSteel" />
-			<property name="count" value="150" /><!--200-->
+			<property name="count" value="75" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_SteelShovelCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelShovelCraftingLv5Pt1" />
@@ -1228,7 +1230,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolShovelSteel" />
-			<property name="count" value="200" /><!--250-->
+			<property name="count" value="100" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_SteelShovelCrafting" value="1" />		
 	</quest>
@@ -1245,7 +1247,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolChainsaw" />
-			<property name="count" value="10" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_ChainsawCrafting" value="1" />
 		<reward type="Quest" id="jzquest_ChainsawCraftingLv2" />
@@ -1261,7 +1263,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolChainsaw" />
-			<property name="count" value="25" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_ChainsawCrafting" value="1" />
 		<reward type="Quest" id="jzquest_ChainsawCraftingLv3" />
@@ -1277,7 +1279,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolChainsaw" />
-			<property name="count" value="50" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_ChainsawCrafting" value="1" />
 		<reward type="Quest" id="jzquest_ChainsawCraftingLv4" />
@@ -1293,7 +1295,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolChainsaw" />
-			<property name="count" value="75" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_ChainsawCrafting" value="1" />
 		<reward type="Quest" id="jzquest_ChainsawCraftingLv5Pt1" />
@@ -1309,7 +1311,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolChainsaw" />
-			<property name="count" value="100" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_ChainsawCrafting" value="1" />
 	</quest>
@@ -1326,7 +1328,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolAuger" />
-			<property name="count" value="10" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_AugerCrafting" value="1" />
 		<reward type="Quest" id="jzquest_AugerCraftingLv2" />
@@ -1342,7 +1344,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolAuger" />
-			<property name="count" value="25" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_AugerCrafting" value="1" />
 		<reward type="Quest" id="jzquest_AugerCraftingLv3" />
@@ -1358,7 +1360,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolAuger" />
-			<property name="count" value="50" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_AugerCrafting" value="1" />
 		<reward type="Quest" id="jzquest_AugerCraftingLv4" />
@@ -1374,7 +1376,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolAuger" />
-			<property name="count" value="75" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_AugerCrafting" value="1" />
 		<reward type="Quest" id="jzquest_AugerCraftingLv5Pt1" />
@@ -1390,7 +1392,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolAuger" />
-			<property name="count" value="100" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_AugerCrafting" value="1" />	
 	</quest>
@@ -1471,7 +1473,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolWrench" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_WrenchCrafting" value="1" />
 	</quest>
@@ -1552,7 +1554,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolClawHammer" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_ClawHammerCrafting" value="1" />	
 	</quest>
@@ -1718,8 +1720,7 @@
 		</objective>
 			<reward type="Skill" id="jz_CarBatteryCrafting" value="1" />
 	</quest>
-		
-<!--BoneKnifeCrafting -->
+	<!--BoneKnifeCrafting -->
 	<quest id="jzquest_BoneKnifeCraftingLv1">
 		<property name="name_key" value="jzquest_BoneKnifeCrafting" />
 		<property name="subtitle_key" value="jzquest_BoneKnifeCrafting" />
@@ -1795,7 +1796,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolKnifeBone" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_BoneKnifeCrafting" value="1" />	
 	</quest>
@@ -1893,7 +1894,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolKnifeMachete" />
-			<property name="count" value="25" /><!--25-->
+			<property name="count" value="10" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_MacheteCrafting" value="1" />
 		<reward type="Quest" id="jzquest_MacheteCraftingLv2" />
@@ -1909,7 +1910,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolKnifeMachete" />
-			<property name="count" value="50" /><!--50-->
+			<property name="count" value="25" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_MacheteCrafting" value="1" />
 		<reward type="Quest" id="jzquest_MacheteCraftingLv3" />
@@ -1925,7 +1926,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolKnifeMachete" />
-			<property name="count" value="100" /><!--100-->
+			<property name="count" value="50" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_MacheteCrafting" value="1" />
 		<reward type="Quest" id="jzquest_MacheteCraftingLv4" />
@@ -1941,7 +1942,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolKnifeMachete" />
-			<property name="count" value="150" /><!--200-->
+			<property name="count" value="75" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_MacheteCrafting" value="1" />
 		<reward type="Quest" id="jzquest_MacheteCraftingLv5Pt1" />
@@ -1957,7 +1958,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolKnifeMachete" />
-			<property name="count" value="200" /><!--250-->
+			<property name="count" value="100" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_MacheteCrafting" value="1" />		
 	</quest>
@@ -2038,7 +2039,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeClubWood" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_WoodenClubCrafting" value="1" />	
 	</quest>
@@ -2119,7 +2120,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeClubIron" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_IronClubCrafting" value="1" />
 	</quest>
@@ -2281,7 +2282,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearStone" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_StoneSpearCrafting" value="1" />	
 	</quest>
@@ -2298,7 +2299,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearIron" />
-			<property name="count" value="10" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_IronSpearCrafting" value="1" />
 		<reward type="Quest" id="jzquest_IronSpearCraftingLv2" />
@@ -2314,7 +2315,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearIron" />
-			<property name="count" value="25" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_IronSpearCrafting" value="1" />
 		<reward type="Quest" id="jzquest_IronSpearCraftingLv3" />
@@ -2330,7 +2331,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearIron" />
-			<property name="count" value="50" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_IronSpearCrafting" value="1" />
 		<reward type="Quest" id="jzquest_IronSpearCraftingLv4" />
@@ -2346,7 +2347,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearIron" />
-			<property name="count" value="75" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_IronSpearCrafting" value="1" />
 		<reward type="Quest" id="jzquest_IronSpearCraftingLv5Pt1" />
@@ -2362,7 +2363,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearIron" />
-			<property name="count" value="100" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_IronSpearCrafting" value="1" />		
 	</quest>
@@ -2379,7 +2380,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearSteel" />
-			<property name="count" value="25" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_SteelSpearCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelSpearCraftingLv2" />
@@ -2395,7 +2396,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearSteel" />
-			<property name="count" value="50" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_SteelSpearCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelSpearCraftingLv3" />
@@ -2411,7 +2412,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearSteel" />
-			<property name="count" value="100" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_SteelSpearCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelSpearCraftingLv4" />
@@ -2427,7 +2428,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearSteel" />
-			<property name="count" value="150" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_SteelSpearCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelSpearCraftingLv5Pt1" />
@@ -2443,7 +2444,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeThrownSpearSteel" />
-			<property name="count" value="200" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_SteelSpearCrafting" value="1" />
 	</quest>
@@ -2524,7 +2525,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerStone" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_StoneSledgeCrafting" value="1" />
 	</quest>
@@ -2541,7 +2542,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerIron" />
-			<property name="count" value="10" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_IronSledgeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_IronSledgeCraftingLv2" />
@@ -2557,7 +2558,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerIron" />
-			<property name="count" value="25" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_IronSledgeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_IronSledgeCraftingLv3" />
@@ -2573,7 +2574,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerIron" />
-			<property name="count" value="50" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_IronSledgeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_IronSledgeCraftingLv4" />
@@ -2589,7 +2590,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerIron" />
-			<property name="count" value="75" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_IronSledgeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_IronSledgeCraftingLv5Pt1" />
@@ -2605,7 +2606,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerIron" />
-			<property name="count" value="100" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_IronSledgeCrafting" value="1" />
 	</quest>
@@ -2622,7 +2623,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerSteel" />
-			<property name="count" value="25" /><!--25-->
+			<property name="count" value="10" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_SteelSledgeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelSledgeCraftingLv2" />
@@ -2638,7 +2639,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerSteel" />
-			<property name="count" value="50" /><!--50-->
+			<property name="count" value="25" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_SteelSledgeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelSledgeCraftingLv3" />
@@ -2654,7 +2655,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerSteel" />
-			<property name="count" value="100" /><!--100-->
+			<property name="count" value="50" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_SteelSledgeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelSledgeCraftingLv4" />
@@ -2670,7 +2671,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerSteel" />
-			<property name="count" value="250" /><!--200-->
+			<property name="count" value="75" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_SteelSledgeCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelSledgeCraftingLv5Pt1" />
@@ -2686,7 +2687,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeToolSledgehammerSteel" />
-			<property name="count" value="200" /><!--250-->
+			<property name="count" value="100" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_SteelSledgeCrafting" value="1" />	
 	</quest>
@@ -2767,7 +2768,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesLeather" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_KnuckleWrapCrafting" value="1" />	
 	</quest>
@@ -2784,7 +2785,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesIron" />
-			<property name="count" value="10" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_BrassKnucklesCrafting" value="1" />
 		<reward type="Quest" id="jzquest_BrassKnucklesCraftingLv2" />
@@ -2800,7 +2801,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesIron" />
-			<property name="count" value="25" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_BrassKnucklesCrafting" value="1" />
 		<reward type="Quest" id="jzquest_BrassKnucklesCraftingLv3" />
@@ -2816,7 +2817,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesIron" />
-			<property name="count" value="50" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_BrassKnucklesCrafting" value="1" />
 		<reward type="Quest" id="jzquest_BrassKnucklesCraftingLv4" />
@@ -2832,7 +2833,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesIron" />
-			<property name="count" value="75" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_BrassKnucklesCrafting" value="1" />
 		<reward type="Quest" id="jzquest_BrassKnucklesCraftingLv5Pt1" />
@@ -2848,7 +2849,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesIron" />
-			<property name="count" value="100" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_BrassKnucklesCrafting" value="1" />		
 	</quest>
@@ -2865,7 +2866,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesSteel" />
-			<property name="count" value="25" /><!--25-->
+			<property name="count" value="10" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_SteelKnucklesCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelKnucklesCraftingLv2" />
@@ -2881,7 +2882,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesSteel" />
-			<property name="count" value="50" /><!--50-->
+			<property name="count" value="25" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_SteelKnucklesCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelKnucklesCraftingLv3" />
@@ -2897,7 +2898,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesSteel" />
-			<property name="count" value="100" /><!--100-->
+			<property name="count" value="50" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_SteelKnucklesCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelKnucklesCraftingLv4" />
@@ -2913,7 +2914,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesSteel" />
-			<property name="count" value="150" /><!--200-->
+			<property name="count" value="75" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_SteelKnucklesCrafting" value="1" />
 		<reward type="Quest" id="jzquest_SteelKnucklesCraftingLv5Pt1" />
@@ -2929,11 +2930,90 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="meleeKnucklesSteel" />
-			<property name="count" value="200" /><!--250-->
+			<property name="count" value="100" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_SteelKnucklesCrafting" value="1" />		
 	</quest>
-		
+<!--HandcraftedRevolverCrafting -->
+	<quest id="jzquest_HandcraftedRevolverCraftingLv1">
+		<property name="name_key" value="jzquest_HandcraftedRevolverCrafting" />
+		<property name="subtitle_key" value="jzquest_HandcraftedRevolverCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_CraftedRevolver" />
+			<property name="count" value="5" />
+		</objective>
+		<reward type="Skill" id="jz_HandcraftedRevolverCrafting" value="1" />
+		<reward type="Quest" id="jzquest_HandcraftedRevolverCraftingLv2" />
+    </quest>
+	<quest id="jzquest_HandcraftedRevolverCraftingLv2">
+		<property name="name_key" value="jzquest_HandcraftedRevolverCrafting" />
+		<property name="subtitle_key" value="jzquest_HandcraftedRevolverCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_CraftedRevolver" />
+			<property name="count" value="10" />
+		</objective>
+		<reward type="Skill" id="jz_HandcraftedRevolverCrafting" value="1" />
+		<reward type="Quest" id="jzquest_HandcraftedRevolverCraftingLv3" />
+    </quest>
+	<quest id="jzquest_HandcraftedRevolverCraftingLv3">
+		<property name="name_key" value="jzquest_HandcraftedRevolverCrafting" />
+		<property name="subtitle_key" value="jzquest_HandcraftedRevolverCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_CraftedRevolver" />
+			<property name="count" value="20" />
+		</objective>
+		<reward type="Skill" id="jz_HandcraftedRevolverCrafting" value="1" />
+		<reward type="Quest" id="jzquest_HandcraftedRevolverCraftingLv4" />
+    </quest>
+	<quest id="jzquest_HandcraftedRevolverCraftingLv4">
+		<property name="name_key" value="jzquest_HandcraftedRevolverCrafting" />
+		<property name="subtitle_key" value="jzquest_HandcraftedRevolverCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_CraftedRevolver" />
+			<property name="count" value="40" />
+		</objective>
+		<reward type="Skill" id="jz_HandcraftedRevolverCrafting" value="1" />
+		<reward type="Quest" id="jzquest_HandcraftedRevolverCraftingLv5" />
+    </quest>
+	<quest id="jzquest_HandcraftedRevolverCraftingLv5">
+		<property name="name_key" value="jzquest_HandcraftedRevolverCrafting" />
+		<property name="subtitle_key" value="jzquest_HandcraftedRevolverCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_CraftedRevolver" />
+			<property name="count" value="80" />
+		</objective>
+		<reward type="Skill" id="jz_HandcraftedRevolverCrafting" value="1" />
+	</quest>		
 <!--PistolCrafting -->
 	<quest id="jzquest_PistolCraftingLv1">
 		<property name="name_key" value="jzquest_PistolCrafting" />
@@ -2946,7 +3026,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunPistol" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_PistolCrafting" value="1" />
 		<reward type="Quest" id="jzquest_PistolCraftingLv2" />
@@ -2962,7 +3042,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunPistol" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_PistolCrafting" value="1" />
 		<reward type="Quest" id="jzquest_PistolCraftingLv3" />
@@ -2978,7 +3058,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunPistol" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_PistolCrafting" value="1" />
 		<reward type="Quest" id="jzquest_PistolCraftingLv4" />
@@ -2994,7 +3074,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunPistol" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_PistolCrafting" value="1" />
 		<reward type="Quest" id="jzquest_PistolCraftingLv5Pt1" />
@@ -3010,7 +3090,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunPistol" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_PistolCrafting" value="1" />
 	</quest>
@@ -3027,7 +3107,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gun44Magnum" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_44MagCrafting" value="1" />
 		<reward type="Quest" id="jzquest_44MagCraftingLv2" />
@@ -3043,7 +3123,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gun44Magnum" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_44MagCrafting" value="1" />
 		<reward type="Quest" id="jzquest_44MagCraftingLv3" />
@@ -3059,7 +3139,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gun44Magnum" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_44MagCrafting" value="1" />
 		<reward type="Quest" id="jzquest_44MagCraftingLv4" />
@@ -3075,7 +3155,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gun44Magnum" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_44MagCrafting" value="1" />
 		<reward type="Quest" id="jzquest_44MagCraftingLv5Pt1" />
@@ -3091,7 +3171,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gun44Magnum" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_44MagCrafting" value="1" />	
 	</quest>
@@ -3108,7 +3188,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunSMG5" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_SMG5Crafting" value="1" />
 		<reward type="Quest" id="jzquest_SMG5CraftingLv2" />
@@ -3124,7 +3204,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunSMG5" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_SMG5Crafting" value="1" />
 		<reward type="Quest" id="jzquest_SMG5CraftingLv3" />
@@ -3140,7 +3220,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunSMG5" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_SMG5Crafting" value="1" />
 		<reward type="Quest" id="jzquest_SMG5CraftingLv4" />
@@ -3156,7 +3236,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunSMG5" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_SMG5Crafting" value="1" />
 		<reward type="Quest" id="jzquest_SMG5CraftingLv5Pt1" />
@@ -3172,7 +3252,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunSMG5" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_SMG5Crafting" value="1" />	
 	</quest>
@@ -3189,7 +3269,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunBlunderbuss" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_BlunderbussCrafting" value="1" />
 		<reward type="Quest" id="jzquest_BlunderbussCraftingLv2" />
@@ -3205,7 +3285,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunBlunderbuss" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_BlunderbussCrafting" value="1" />
 		<reward type="Quest" id="jzquest_BlunderbussCraftingLv3" />
@@ -3221,7 +3301,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunBlunderbuss" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_BlunderbussCrafting" value="1" />
 		<reward type="Quest" id="jzquest_BlunderbussCraftingLv4" />
@@ -3237,7 +3317,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunBlunderbuss" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_BlunderbussCrafting" value="1" />
 		<reward type="Quest" id="jzquest_BlunderbussCraftingLv5Pt1" />
@@ -3253,7 +3333,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunBlunderbuss" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_BlunderbussCrafting" value="1" />	
 	</quest>
@@ -3270,7 +3350,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunDoubleBarrelShotgun" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_DBShotgunCrafting" value="1" />
 		<reward type="Quest" id="jzquest_DBShotgunCraftingLv2" />
@@ -3286,7 +3366,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunDoubleBarrelShotgun" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_DBShotgunCrafting" value="1" />
 		<reward type="Quest" id="jzquest_DBShotgunCraftingLv3" />
@@ -3302,7 +3382,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunDoubleBarrelShotgun" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_DBShotgunCrafting" value="1" />
 		<reward type="Quest" id="jzquest_DBShotgunCraftingLv4" />
@@ -3318,7 +3398,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunDoubleBarrelShotgun" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_DBShotgunCrafting" value="1" />
 		<reward type="Quest" id="jzquest_DBShotgunCraftingLv5Pt1" />
@@ -3334,7 +3414,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunDoubleBarrelShotgun" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_DBShotgunCrafting" value="1" />	
 	</quest>
@@ -3351,7 +3431,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunPumpShotgun" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_PumpShotgunCrafting" value="1" />
 		<reward type="Quest" id="jzquest_PumpShotgunCraftingLv2" />
@@ -3367,7 +3447,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunPumpShotgun" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_PumpShotgunCrafting" value="1" />
 		<reward type="Quest" id="jzquest_PumpShotgunCraftingLv3" />
@@ -3383,7 +3463,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunPumpShotgun" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_PumpShotgunCrafting" value="1" />
 		<reward type="Quest" id="jzquest_PumpShotgunCraftingLv4" />
@@ -3399,7 +3479,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunPumpShotgun" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_PumpShotgunCrafting" value="1" />
 		<reward type="Quest" id="jzquest_PumpShotgunCraftingLv5Pt1" />
@@ -3415,11 +3495,90 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunPumpShotgun" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_PumpShotgunCrafting" value="1" />	
 	</quest>
-	
+<!--HandCraftedRifleCrafting -->
+	<quest id="jzquest_HandCraftedRifleCraftingLv1">
+		<property name="name_key" value="jzquest_HandCraftedRifleCrafting" />
+		<property name="subtitle_key" value="jzquest_HandCraftedRifleCrafting" />
+		<property name="description_key" value="jzquest_Lv1Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_CraftedRifle" />
+			<property name="count" value="5" /><!--25-->
+		</objective>
+		<reward type="Skill" id="jz_HandCraftedRifleCrafting" value="1" />
+		<reward type="Quest" id="jzquest_HandCraftedRifleCraftingLv2" />
+    </quest>
+	<quest id="jzquest_HandCraftedRifleCraftingLv2">
+		<property name="name_key" value="jzquest_HandCraftedRifleCrafting" />
+		<property name="subtitle_key" value="jzquest_HandCraftedRifleCrafting" />
+		<property name="description_key" value="jzquest_Lv2Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_CraftedRifle" />
+			<property name="count" value="10" /><!--50-->
+		</objective>
+		<reward type="Skill" id="jz_HandCraftedRifleCrafting" value="1" />
+		<reward type="Quest" id="jzquest_HandCraftedRifleCraftingLv3" />
+    </quest>
+	<quest id="jzquest_HandCraftedRifleCraftingLv3">
+		<property name="name_key" value="jzquest_HandCraftedRifleCrafting" />
+		<property name="subtitle_key" value="jzquest_HandCraftedRifleCrafting" />
+		<property name="description_key" value="jzquest_Lv3Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_CraftedRifle" />
+			<property name="count" value="20" /><!--100-->
+		</objective>
+		<reward type="Skill" id="jz_HandCraftedRifleCrafting" value="1" />
+		<reward type="Quest" id="jzquest_HandCraftedRifleCraftingLv4" />
+    </quest>
+	<quest id="jzquest_HandCraftedRifleCraftingLv4">
+		<property name="name_key" value="jzquest_HandCraftedRifleCrafting" />
+		<property name="subtitle_key" value="jzquest_HandCraftedRifleCrafting" />
+		<property name="description_key" value="jzquest_Lv4Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_CraftedRifle" />
+			<property name="count" value="40" /><!--200-->
+		</objective>
+		<reward type="Skill" id="jz_HandCraftedRifleCrafting" value="1" />
+		<reward type="Quest" id="jzquest_HandCraftedRifleCrafting5Pt1" />
+    </quest>
+	<quest id="jzquest_HandCraftedRifleCrafting5Pt1">
+		<property name="name_key" value="jzquest_HandCraftedRifleCrafting" />
+		<property name="subtitle_key" value="jzquest_HandCraftedRifleCrafting" />
+		<property name="description_key" value="jzquest_Lv5Crafting_description" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false" />
+		<objective type="Craft">
+			<property name="phase" value="1" />
+			<property name="item" value="jz_CraftedRifle" />
+			<property name="count" value="80" /><!--250-->
+		</objective>
+		<reward type="Skill" id="jz_HandCraftedRifleCrafting" value="1" />
+	</quest>	
 <!--HuntingRifleCrafting -->
 	<quest id="jzquest_HuntingRifleCraftingLv1">
 		<property name="name_key" value="jzquest_HuntingRifleCrafting" />
@@ -3432,7 +3591,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunHuntingRifle" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_HuntingRifleCrafting" value="1" />
 		<reward type="Quest" id="jzquest_HuntingRifleCraftingLv2" />
@@ -3448,7 +3607,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunHuntingRifle" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_HuntingRifleCrafting" value="1" />
 		<reward type="Quest" id="jzquest_HuntingRifleCraftingLv3" />
@@ -3464,7 +3623,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunHuntingRifle" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_HuntingRifleCrafting" value="1" />
 		<reward type="Quest" id="jzquest_HuntingRifleCraftingLv4" />
@@ -3480,7 +3639,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunHuntingRifle" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_HuntingRifleCrafting" value="1" />
 		<reward type="Quest" id="jzquest_HuntingRifleCraftingLv5Pt1" />
@@ -3496,7 +3655,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunHuntingRifle" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_HuntingRifleCrafting" value="1" />
 	</quest>
@@ -3513,7 +3672,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunMR10" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_MarksmanCrafting" value="1" />
 		<reward type="Quest" id="jzquest_MarksmanCraftingLv2" />
@@ -3529,7 +3688,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunMR10" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_MarksmanCrafting" value="1" />
 		<reward type="Quest" id="jzquest_MarksmanCraftingLv3" />
@@ -3545,7 +3704,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunMR10" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_MarksmanCrafting" value="1" />
 		<reward type="Quest" id="jzquest_MarksmanCraftingLv4" />
@@ -3561,7 +3720,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunMR10" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_MarksmanCrafting" value="1" />
 		<reward type="Quest" id="jzquest_MarksmanCraftingLv5Pt1" />
@@ -3577,7 +3736,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunMR10" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_MarksmanCrafting" value="1" />	
 	</quest>
@@ -3594,7 +3753,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunAK47" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_AK47Crafting" value="1" />
 		<reward type="Quest" id="jzquest_AK47CraftingLv2" />
@@ -3610,7 +3769,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunAK47" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_AK47Crafting" value="1" />
 		<reward type="Quest" id="jzquest_AK47CraftingLv3" />
@@ -3626,7 +3785,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunAK47" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_AK47Crafting" value="1" />
 		<reward type="Quest" id="jzquest_AK47CraftingLv4" />
@@ -3642,7 +3801,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunAK47" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_AK47Crafting" value="1" />
 		<reward type="Quest" id="jzquest_AK47CraftingLv5Pt1" />
@@ -3658,7 +3817,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunAK47" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_AK47Crafting" value="1" />		
 	</quest>
@@ -3675,7 +3834,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunM60" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_M60Crafting" value="1" />
 		<reward type="Quest" id="jzquest_M60CraftingLv2" />
@@ -3691,7 +3850,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunM60" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_M60Crafting" value="1" />
 		<reward type="Quest" id="jzquest_M60CraftingLv3" />
@@ -3707,7 +3866,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunM60" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_M60Crafting" value="1" />
 		<reward type="Quest" id="jzquest_M60CraftingLv4" />
@@ -3723,7 +3882,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunM60" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_M60Crafting" value="1" />
 		<reward type="Quest" id="jzquest_M60CraftingLv5Pt1" />
@@ -3739,7 +3898,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunM60" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_M60Crafting" value="1" />	
 	</quest>
@@ -3756,7 +3915,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunRocketLauncher" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="5" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_RocketLauncherCrafting" value="1" />
 		<reward type="Quest" id="jzquest_RocketLauncherCraftingLv2" />
@@ -3772,7 +3931,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunRocketLauncher" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="10" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_RocketLauncherCrafting" value="1" />
 		<reward type="Quest" id="jzquest_RocketLauncherCraftingLv3" />
@@ -3788,7 +3947,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunRocketLauncher" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="20" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_RocketLauncherCrafting" value="1" />
 		<reward type="Quest" id="jzquest_RocketLauncherCraftingLv4" />
@@ -3804,7 +3963,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunRocketLauncher" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="40" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_RocketLauncherCrafting" value="1" />
 		<reward type="Quest" id="jzquest_RocketLauncherCraftingLv5Pt1" />
@@ -3820,7 +3979,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunRocketLauncher" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_RocketLauncherCrafting" value="1" />
 	</quest>
@@ -3901,7 +4060,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunBowPrimitive" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_PrimitiveBowCrafting" value="1" />	
 	</quest>
@@ -3982,7 +4141,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunBowWooden" />
-			<property name="count" value="50" /><!--250-->
+			<property name="count" value="80" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_WoodenBowCrafting" value="1" />
 	</quest>
@@ -4242,7 +4401,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunJunkTurret" />
-			<property name="count" value="50" /><!--25-->
+			<property name="count" value="10" /><!--25-->
 		</objective>
 		<reward type="Skill" id="jz_JunkTurretCrafting" value="1" />
 		<reward type="Quest" id="jzquest_JunkTurretCraftingLv2" />
@@ -4258,7 +4417,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunJunkTurret" />
-			<property name="count" value="100" /><!--50-->
+			<property name="count" value="25" /><!--50-->
 		</objective>
 		<reward type="Skill" id="jz_JunkTurretCrafting" value="1" />
 		<reward type="Quest" id="jzquest_JunkTurretCraftingLv3" />
@@ -4274,7 +4433,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunJunkTurret" />
-			<property name="count" value="150" /><!--100-->
+			<property name="count" value="50" /><!--100-->
 		</objective>
 		<reward type="Skill" id="jz_JunkTurretCrafting" value="1" />
 		<reward type="Quest" id="jzquest_JunkTurretCraftingLv4" />
@@ -4290,7 +4449,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunJunkTurret" />
-			<property name="count" value="200" /><!--200-->
+			<property name="count" value="75" /><!--200-->
 		</objective>
 		<reward type="Skill" id="jz_JunkTurretCrafting" value="1" />
 		<reward type="Quest" id="jzquest_JunkTurretCraftingLv5Pt1" />
@@ -4306,7 +4465,7 @@
 		<objective type="Craft">
 			<property name="phase" value="1" />
 			<property name="item" value="gunJunkTurret" />
-			<property name="count" value="250" /><!--250-->
+			<property name="count" value="100" /><!--250-->
 		</objective>
 		<reward type="Skill" id="jz_JunkTurretCrafting" value="1" />
 	</quest>

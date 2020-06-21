@@ -1354,6 +1354,19 @@
 			<effect_description level="5" desc_key="jz_CarBatteryCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
+    <!-- HandcraftedRevolverCrafting-->
+	<perk name="jz_HandcraftedRevolverCrafting" parent="jz_FirearmCrafting" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Handcrafted Revolver Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_gunsmithing">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_jz_HandcraftedRevolverCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_HandcraftedRevolverCraftingRank1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_HandcraftedRevolverCraftingRank2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_HandcraftedRevolverCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_HandcraftedRevolverCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_HandcraftedRevolverCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
+		</effect_group>
+	</perk>
 	<!-- PistolCrafting-->
 	<perk name="jz_PistolCrafting" parent="jz_FirearmCrafting" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Pistol Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_gunsmithing">
 		<effect_group>
@@ -1430,6 +1443,19 @@
 			<effect_description level="3" desc_key="jz_PumpShotgunCraftingRank3Desc" long_desc_key="jz_CraftingDesc"/>
 			<effect_description level="4" desc_key="jz_PumpShotgunCraftingRank4Desc" long_desc_key="jz_CraftingDesc"/>
 			<effect_description level="5" desc_key="jz_PumpShotgunCraftingRank5Desc" long_desc_key="jz_CraftingDesc"/>
+		</effect_group>
+	</perk>
+    <!-- HandCraftedRifleCrafting-->
+	<perk name="jz_HandCraftedRifleCrafting" parent="jz_FirearmCrafting" min_level="0" max_level="5" base_skill_point_cost="0" name_key="Handcrafted Rifle Crafting" desc_key="jz_CraftingDesc" icon="ui_game_symbol_gunsmithing">
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="jz_HandCraftedRifleCraftingTag"/>
+		</effect_group>
+		<effect_group>
+			<effect_description level="1" desc_key="jz_HandCraftedRifleCrafting1Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="2" desc_key="jz_HandCraftedRifleCrafting2Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="3" desc_key="jz_HandCraftedRifleCrafting3Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="4" desc_key="jz_HandCraftedRifleCrafting4Desc" long_desc_key="jz_CraftingDesc"/>
+			<effect_description level="5" desc_key="jz_HandCraftedRifleCrafting5Desc" long_desc_key="jz_CraftingDesc"/>
 		</effect_group>
 	</perk>
 	<!-- HuntingRifleCrafting-->

@@ -1623,7 +1623,7 @@ The overall plan for loot distribution:
 
 <lootgroup name="T2Schematics" >
 	<item name="meleeToolSledgehammerIronSchematic"/>
-	<item name="jz_SchematicIronPickaxe"/>
+    <item name="jz_SchematicIronPickaxe"/>
 	<item name="jz_SchematicIronFireaxe"/>
 	<item name="jz_SchematicIronShovel"/>
 	<item name="jz_SchematicClawHammer"/>
@@ -1919,26 +1919,27 @@ The overall plan for loot distribution:
 <lootgroup name="rareTools">
 	<item name="meleeToolChainsaw" prob="6"/>
 	<item name="meleeToolAuger" prob="6"/>
-	<item name="meleeToolPickaxeSteel" prob="7"/>
-	<item name="meleeToolFireaxeSteel" prob="7"/>
-	<item name="meleeToolShovelSteel" prob="7"/>
-	<item name="meleeToolSledgehammerSteel" prob="7"/>
+	<item name="meleeToolPickaxeSteel" prob="6"/>
+	<item name="meleeToolFireaxeSteel" prob="6"/>
+	<item name="meleeToolShovelSteel" prob="6"/>
+	<item name="meleeToolSledgehammerSteel" prob="6"/>
 	<item name="toolBellows" prob="6"/>
 	<item name="gunToolNailgun"  prob="6"/>
-	<item group="motorToolParts" prob="6"/>
-	<item group="engineParts" prob="6"/>
-	<item name="jz_WelderTool" prob="7"/>
-	<item name="meleeToolWireTool" prob="7"/>
-	<item name="jz_MasonHammer" prob="7"/>
+	<item group="motorToolParts" prob="7"/>
+	<item group="engineParts" prob="7"/>
+	<item name="jz_WelderTool" prob="6"/>
+	<item name="meleeToolWireTool" prob="6"/>
+	<item name="jz_MasonHammer" prob="6"/>
 	<item name="jz_Screwdriver" prob="7"/>
-	<item name="toolAndDieSet" prob="8"/>
+	<item name="toolAndDieSet" prob="6"/>
+    <item name="jz_Crowbar" prob="7"/>
 </lootgroup>
 
 <lootgroup name="tools">
-	<item name="meleeToolPickaxeIron" prob="4"/>
-	<item name="meleeToolShovelIron" prob="4"/>
-	<item name="meleeToolFireaxeIron" prob="4"/>
-	<item name="meleeToolSledgehammerIron" prob="4"/>
+	<item name="meleeToolPickaxeIron" prob="3"/>
+	<item name="meleeToolShovelIron" prob="3"/>
+	<item name="meleeToolFireaxeIron" prob="3"/>
+	<item name="meleeToolSledgehammerIron" prob="3"/>
 	<item name="meleeToolHoeIron" prob="4"/>
 	<item name="meleeToolClawHammer" prob="4"/>
     <item name="jz_FarmingWateringCan" prob="4"/>
@@ -1960,6 +1961,7 @@ The overall plan for loot distribution:
 	<item name="jz_SharpeningStone" count="1,6" prob="4" />
 	<item group="molds" prob="4" />
 	<item group="heads" prob="4" />
+    <item name="jz_Crowbar" prob="4"/>
 </lootgroup>
 
 <lootgroup name="workingStiffs">

@@ -1543,9 +1543,9 @@ group desc for stuff like metal siding
 	<property name="EconomicValue" value="12"/>
 	<property name="EconomicBundleSize" value="5"/>
 	<property name="PickupJournalEntry" value="farmingTip"/>
-	<property name="FilterTags" value="foutdoor,fcrops"/>
 	<property name="SortOrder1" value="a090"/>
 	<property name="SortOrder2" value="0002"/>
+    <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="cropsHarvestableMaster">
@@ -14147,6 +14147,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="foodCropMushrooms" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedMushroom1"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedYucca1">
@@ -14194,6 +14195,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="foodCropYuccaFruit" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedYucca1"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedCotton1">
@@ -14238,6 +14240,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="resourceCropCottonPlant" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedCotton1"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedCoffee1">
@@ -14282,6 +14285,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="resourceCropCoffeeBeans" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedCoffee1"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedGoldenrod1">
@@ -14326,6 +14330,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="resourceCropGoldenrodPlant" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedGoldenrod1"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedAloe1">
@@ -14374,6 +14379,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="resourceCropAloeLeaf" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedAloe1"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedBlueberry1">
@@ -14420,6 +14426,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="foodCropBlueberries" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedBlueberry1"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedPotato1">
@@ -14466,6 +14473,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="foodCropPotato" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedPotato1"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedChrysanthemum1">
@@ -14509,6 +14517,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="resourceCropChrysanthemumPlant" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedChrysanthemum1"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedCorn1"> <!-- growing, stage 1, seed -->
@@ -14566,6 +14575,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="foodCropCorn" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedCorn1"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedCorn2Deco"> <!-- stage 2, non-growing deco block for POI -->
@@ -14699,6 +14709,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="resourceCropHopsFlower" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedHop1"/>
+    <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedSnowberry1">
@@ -14734,6 +14745,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="resourceCropSnowberryPlant" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedSnowberry1"/>
+    <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="plantedPumpkin1">
@@ -14781,6 +14793,7 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="None"/>
 	<drop event="Harvest" name="foodCropPumpkin" count="1" tag="cropHarvest"/>
 	<property name="DowngradeBlock" value="plantedPumpkin1"/>
+    <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="decoPumpkinJackOLantern">
@@ -21839,7 +21852,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="creativeMenuBlockGroupDesc"/>
 	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
 	<!--JZMOD ANY-->
-	<drop event="Harvest" name="jz_Plank" count="30" tag="allHarvest" />
+	<drop event="Harvest" name="jz_FireWood" count="2,5" tag="allHarvest" />
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.3" stick_chance="1"/>
 	<!--JZMOD CROWBAR-->
@@ -21857,7 +21870,6 @@ NOT the TextureNumber.
 <block name="modularFireWoodStackC">
 	<property name="Extends" value="modularFireWoodStackA"/>
 	<property name="MaxDamage" value="50"/>
-	<drop event="Harvest" name="jz_Plank" count="10" tag="allHarvest" />
 	<property name="Model" value="Entities/OutdoorDecor/modularFireWoodStackCPrefab"/>
 	<property name="ImposterExchange" value="imposterPyramid" param1="32"/>
 	<!--JZMOD CROWBAR-->
@@ -24636,11 +24648,12 @@ NOT the TextureNumber.
 	<property name="Model" value="Entities/Lighting/player_ceilingLight07Prefab"/> <property name="HandleFace" value="Top"/>
 </block>
 
+<!--JZMOD REPLACED
 <block name="wallTorchLight">
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Material" value="Mpaper"/>
 	<property name="MaxDamage" value="1"/>
-	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="StabilitySupport" value="false"/> 
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
@@ -24658,7 +24671,7 @@ NOT the TextureNumber.
 
 <block name="torchWallHolder">
 	<property name="Material" value="Mmetal_weak"/>
-	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="StabilitySupport" value="false"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Mesh" value="models"/>
 	<property name="Model" value="Entities/Lighting/torch_wallPrefab"/>
@@ -24674,7 +24687,7 @@ NOT the TextureNumber.
 	<property name="FilterTags" value="fdecor,felectrical"/>
 	<property name="SortOrder1" value="70a0"/>
 </block>
-
+-->
 <block name="candleWallLight">
 	<property name="CreativeMode" value="Dev"/>
 	<property name="IsTerrainDecoration" value="true"/>
@@ -24711,7 +24724,7 @@ NOT the TextureNumber.
 <block name="flashlightDecor">
 	<property name="Extends" value="candleTableLight"/>
 </block>
-
+<!--JZMOD REPLACED
 <block name="wallTorchLightPlayer">
 	<property name="Extends" value="wallTorchLight"/>
 	<property name="Shape" value="ModelEntity"/>
@@ -24723,7 +24736,7 @@ NOT the TextureNumber.
 	<property name="Stacknumber" value="50"/>
 <property name="DescriptionKey" value="torchPlayerGroupDesc"/>
 </block>
-
+-->
 
 <block name="candleWallLightPlayer">
 	<property name="Extends" value="candleWallLight"/>
@@ -29693,15 +29706,34 @@ NOT the TextureNumber.
 -->
 <!-- **************************************************************** TRUE SURVIVAL BLOCKS ********************************************************* -->
 <!-- JZMOD WORKSTATIONS -->
+<block name="wallTorchLight">
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Material" value="Mpaper"/>
+	<property name="MaxDamage" value="1"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="Entities/Lighting/torch_wallPrefab"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="CanPickup" value="true" param1="meleeToolTorch"/>
+	<drop event="Destroy" name="meleeToolTorch" count="1"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="DescriptionKey" value="torchGroupDesc"/>
+	<property name="FilterTags" value="fdecor,felectrical"/>
+	<property name="SortOrder1" value="70a0"/>
+</block>
+
 <block name="wallTorchPlayer">
 	<property name="Extends" value="wallTorchLight"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="CanPickup" value="false"/>
 	<property name="CustomIcon" value="wallTorchLight"/>
 	<property name="Stacknumber" value="50"/>
-	
+	<property name="Place" value="Torch"/>
 	<property name="HeatMapStrength" value="1"/>
-	<property name="HeatMapTime" value="4000"/> <!-- 1000 per world hour. str1, t6000, f5 = 2.5; str1, t9000, f5 = 4; str4.05, t12000, f15 = 4.05-8.1; -->
+	<property name="HeatMapTime" value="4000"/>
 	<property name="ParticleName" value="torch_wall" />
 	<property name="ParticleOffset" value="0.5,0.8,0.1" />
 	<property name="ActiveRadiusEffects" value="+heatSource(2)" />
@@ -29957,7 +29989,8 @@ NOT the TextureNumber.
 
 <block name="jz_Anvil">
 	<property name="DescriptionKey" value="MortarAndPestle1Desc" />
-	<property name="Material" value="Mstone" />
+	<property name="Material" value="Mmetal" />
+    <property name="Weight" value="200"/>
 	<property name="Tags" value="jz_IronBuilding"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="Model" value="#@modfolder:Resources/JZAnvil.unity3d?AnvilPrefab" />
@@ -33423,6 +33456,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
 	<drop event="Harvest" name="jz_FoodChillis" count="1" tag="cropHarvest"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 <!--JZMOD CUCUMBER-->
 <block name="jz_PlantedCucumber1">
@@ -33521,6 +33555,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
 	<drop event="Harvest" name="jz_FoodCucumber" count="1" tag="cropHarvest"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 <!--JZMOD EGG PLANT-->
 <block name="jz_PlantedEggPlant1">
@@ -33619,6 +33654,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
 	<drop event="Harvest" name="jz_FoodEggPlant" count="1" tag="cropHarvest"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 <!--JZMOD LEEK-->
 <block name="jz_PlantedLeek1">
@@ -33718,6 +33754,7 @@ NOT the TextureNumber.
     <property name="ModelOffset" value="0,-.35,0"/> 
 	<property name="CreativeMode" value="Dev"/>
 	<drop event="Harvest" name="jz_FoodLeek" count="1" tag="cropHarvest"/>
+     <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 <!--JZMOD CARROT-->
 <block name="jz_PlantedCarrot1">
@@ -33816,6 +33853,7 @@ NOT the TextureNumber.
 	<property name="CustomIcon" value="plantedBlueberry1"/>
 	<property name="CreativeMode" value="Dev"/>
 	<drop event="Harvest" name="jz_FoodCarrot" count="1" tag="cropHarvest"/>
+    <property name="FilterTags" value="foutdoor,fcrops,fcropsDestroy"/> 
 </block>
 
 <block name="jz_SateliteQuestItem">
