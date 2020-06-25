@@ -183,8 +183,25 @@ ParasiteSlug
 		<entity name="zombieFemaleFat" prob="3"/>
 		<entity name="zombieFatHawaiian" prob="3"/>
 	</entitygroup>
+    
 
-	<entitygroup name="ZombiesNight">
+    <entitygroup name="ZombiesNight">
+        <entity name="animalZombieDog" prob="4.75"/>
+		<entity name="zombieSpiderFeral" prob="4.75"/>
+		<entity name="zombieBoeFeral" prob="4.75"/>
+		<entity name="zombieJoeFeral" prob="4.75"/>
+		<entity name="zombieSteveFeral" prob="4.75"/>
+		<entity name="zombieMoeFeral" prob="4.75"/>
+		<entity name="zombieYoFeral" prob="4.75"/>
+		<entity name="zombieBusinessManFeral" prob="4.75"/>
+		<entity name="zombieArleneFeral" prob="4.75"/>
+		<entity name="zombieDarleneFeral" prob="4.75"/>
+		<entity name="zombieMarleneFeral" prob="4.80"/>
+		<entity name="zombieNurseFeral" prob="4.85"/>
+		<entity name="zombieFatHawaiianFeral" prob="4.85"/>
+	</entitygroup>
+    
+	<entitygroup name="ZombiesRoamingNight">
 		<entity name="Parasite" prob="4.75"/>
 		<entity name="ParasiteFat" prob="4.75"/>
 		<entity name="ParasiteInsect" prob="4.75"/>
@@ -519,6 +536,10 @@ ParasiteSlug
 	<entitygroup name="ZombieDogGroup">
 		<entity name="animalZombieDog" prob="60"/>
 		<entity name="ParasiteRipper" prob="40"/>
+	</entitygroup>
+    
+    <entitygroup name="ZombieDogRoamingGroup">
+		<entity name="animalZombieDog" />
 	</entitygroup>
 
 	<entitygroup name="WolfGroup">

@@ -2041,11 +2041,17 @@
 	<!-- Carpenter -->
 	<perk name="jz_Carpenter" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Carpenter" desc_key="jz_CarpenterDesc" icon="ui_game_symbol_hammer">
 		<effect_group>
-			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PlankSchematic" level="-1">
-				<requirement name="ProgressionLevel" progression_name="jz_Carpenter" operation="GTE" value="1"/>
-				<requirement name="ProgressionLevel" progression_name="SP_PlankSchematic" operation="LT" value="1"/></triggered_effect>
-						
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="woodFrameBlockVariantHelper"/>
+            <requirement name="ProgressionLevel" progression_name="jz_Carpenter" operation="GTE" value="1"/>
+                <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PlankSchematic" level="-1">
+					<requirement name="ProgressionLevel" progression_name="SP_PlankSchematic" operation="LT" value="1"/></triggered_effect>
+				<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_NailSchematic" level="-1">
+					<requirement name="ProgressionLevel" progression_name="SP_NailSchematic" operation="LT" value="1"/></triggered_effect>
+                 <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_WoodenDoorsSchematic" level="-1">
+					<requirement name="ProgressionLevel" progression_name="SP_WoodenDoorsSchematic" operation="LT" value="1"/></triggered_effect>
+                  <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_WoodenChestSchematic" level="-1">
+					<requirement name="ProgressionLevel" progression_name="SP_WoodenChestSchematic" operation="LT" value="1"/></triggered_effect>
+		
+        <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="woodFrameBlockVariantHelper"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_WorkBenchTag,jz_TablesawTag"/>
 			<effect_description level="1" desc_key="jz_CarpenterRank1Desc" long_desc_key="jz_CarpenterLongDesc"/>
 		</effect_group>
@@ -2152,11 +2158,16 @@
 	<perk name="jz_MetalWorker" parent="Professions" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Metal Worker" desc_key="jz_MetalWorkerDesc" icon="ui_game_symbol_wrench">
 		<effect_group>
 			<requirement name="ProgressionLevel" progression_name="jz_MetalWorker" operation="GTE" value="1"/>
-			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_IronSheetMetalSchematic" level="-1">
-				<requirement name="ProgressionLevel" progression_name="SP_IronSheetMetalSchematic" operation="LT" value="1"/></triggered_effect>
-
+                <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_IronSheetMetalSchematic" level="-1">
+                    <requirement name="ProgressionLevel" progression_name="SP_IronSheetMetalSchematic" operation="LT" value="1"/></triggered_effect>
+                <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_IronDoorsSchematic" level="-1">
+					<requirement name="ProgressionLevel" progression_name="SP_IronDoorsSchematic" operation="LT" value="1"/></triggered_effect>
+                <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SteelDoorsSchematic" level="-1">
+					<requirement name="ProgressionLevel" progression_name="SP_SteelDoorsSchematic" operation="LT" value="1"/></triggered_effect>
+                <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_SteelSafeSchematic" level="-1">
+					<requirement name="ProgressionLevel" progression_name="SP_SteelSafeSchematic" operation="LT" value="1"/></triggered_effect>
 			
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="scrapIronFrameBlockVariantHelper"/>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="scrapIronFrameBlockVariantHelper"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ForgeTag"/>
 			<effect_description level="1" desc_key="jz_MetalWorkerDesc" long_desc_key="jz_MetalWorkerDesc"/>
 		</effect_group>
@@ -2262,6 +2273,8 @@
 				<requirement name="ProgressionLevel" progression_name="SP_GunPowderSchematic" operation="LT" value="1"/></triggered_effect>
 			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PurificationTabletsSchematic" level="-1">
 				<requirement name="ProgressionLevel" progression_name="SP_PurificationTabletsSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_GlueSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="SP_GlueSchematic" operation="LT" value="1"/></triggered_effect>
 				
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MedicalStimulant,resourceAcid"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1" value="-0.2" tags="jz_ChemistTag"/>
@@ -2755,6 +2768,48 @@
 		</effect_group>
 	</perk>
 	<!--CRAFTING-->
+    <perk name="SP_GlueSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Glue" desc_key="SP_GlueSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceGlue"/>
+			<effect_description level="1" desc_key="SP_GlueSchematicDesc" long_desc_key="SP_GlueSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_WoodenDoorsSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Wooden Doors" desc_key="SP_WoodenDoorsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="woodHatch1_v1,secureDoorWooden"/>
+			<effect_description level="1" desc_key="SP_WoodenDoorsSchematicDesc" long_desc_key="SP_WoodenDoorsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_IronDoorsSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Doors" desc_key="SP_IronDoorsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="scrapHatch_v1,ironDoor1_v1"/>
+			<effect_description level="1" desc_key="SP_IronDoorsSchematicDesc" long_desc_key="SP_IronDoorsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_SteelDoorsSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Doors" desc_key="SP_SteelDoorsSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="vaultHatch_v1,vaultDoor01"/>
+			<effect_description level="1" desc_key="SP_SteelDoorsSchematicDesc" long_desc_key="SP_SteelDoorsSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_WoodenChestSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Wooden Chest" desc_key="SP_WoodenChestSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="cntSecureStorageChest"/>
+			<effect_description level="1" desc_key="SP_WoodenChestSchematicDesc" long_desc_key="SP_WoodenChestSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_SteelSafeSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Safe" desc_key="SP_SteelSafeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="cntGunSafe"/>
+			<effect_description level="1" desc_key="SP_SteelSafeSchematicDesc" long_desc_key="SP_SteelSafeSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
 	<perk name="SP_PurificationTabletsSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Purification Tablets" desc_key="SP_PurificationTabletsSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_PurificationTablets"/>
@@ -2815,6 +2870,27 @@
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_Plank"/>
 			<effect_description level="1" desc_key="SP_PlankSchematicDesc" long_desc_key="SP_PlankSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_NailSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Nails" desc_key="SP_NailSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceNail"/>
+			<effect_description level="1" desc_key="SP_NailSchematicDesc" long_desc_key="SP_NailSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_IronShapingSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Iron Shaping" desc_key="SP_IronShapingSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceForgedIron,resourceMetalPipe"/>
+			<effect_description level="1" desc_key="SP_IronShapingSchematicDesc" long_desc_key="SP_IronShapingSchematicDesc"/>
+		</effect_group>
+	</perk>
+    
+    <perk name="SP_SteelShapingSchematic" parent="jz_CraftingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Shaping" desc_key="SP_SteelShapingSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceForgedSteel,jz_SteelPipe"/>
+			<effect_description level="1" desc_key="SP_SteelShapingSchematicDesc" long_desc_key="SP_SteelShapingSchematicDesc"/>
 		</effect_group>
 	</perk>
 	
@@ -3385,20 +3461,6 @@
 		</effect_group>
 	</perk>
 	<!--MEDICAL-->
-	<perk name="SP_CigarSchematic" parent="jz_MedicalRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Cigar" desc_key="SP_CigarSchematicDesc" icon="ui_game_symbol_fire">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCigar"/>
-			<effect_description level="1" desc_key="SP_CigarSchematicDesc" long_desc_key="SP_CigarSchematicDesc"/>
-		</effect_group>
-	</perk>
-	
-	<perk name="SP_AntiVenomSchematic" parent="jz_MedicalRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Anti Venom" desc_key="SP_AntiVenomSchematicDesc" icon="ui_game_symbol_fire">
-		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="jz_MedicalAntiVenom"/>
-			<effect_description level="1" desc_key="SP_AntiVenomSchematicDesc" long_desc_key="SP_AntiVenomSchematicDesc"/>
-		</effect_group>
-	</perk>
-	
 	<perk name="SP_VitaminsSchematic" parent="jz_MedicalRecipes" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Vitamins" desc_key="SP_VitaminsSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugVitamins"/>
@@ -4196,6 +4258,13 @@
 			<effect_description level="1" desc_key="SP_ChemistryStationSchematicDesc" long_desc_key="SP_ChemistryStationSchematicDesc"/>
 		</effect_group>
 	</perk>
+    
+    <perk name="SP_SteelForgeSchematic" parent="jz_WorkstationSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Steel Forge" desc_key="SP_SteelForgeSchematicDesc" icon="ui_game_symbol_fire">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="chemistryStation"/>
+			<effect_description level="1" desc_key="SP_SteelForgeSchematicDesc" long_desc_key="SP_SteelForgeSchematicDesc"/>
+		</effect_group>
+	</perk>
        
     <perk name="SP_BandanaSchematic" parent="jz_ClothingSchematics" min_level="0" max_level="1" base_skill_point_cost="0" name_key="Bandana" desc_key="SP_BandanaSchematicDesc" icon="ui_game_symbol_fire">
 		<effect_group>
@@ -4446,6 +4515,9 @@
 			<triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_PlankSchematic" level="-1">
 				<requirement name="ProgressionLevel" progression_name="jz_WoodBuildingSkill" operation="GTE" value="3"/>
 				<requirement name="ProgressionLevel" progression_name="SP_PlankSchematic" operation="LT" value="1"/></triggered_effect>
+            <triggered_effect trigger="onSelfProgressionUpdate" action="SetProgressionLevel" progression_name="SP_NailSchematic" level="-1">
+				<requirement name="ProgressionLevel" progression_name="jz_WoodBuildingSkill" operation="GTE" value="3"/>
+				<requirement name="ProgressionLevel" progression_name="SP_NailSchematic" operation="LT" value="1"/></triggered_effect>
 		</effect_group>
 		<effect_group>
             <requirement name="HoldingItemHasTags" tags="jz_WoodBuildingTag"/>

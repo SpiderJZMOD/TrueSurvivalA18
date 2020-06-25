@@ -73,8 +73,8 @@ jz_VehiclesCrashedApache,Apache
 jz_VehiclesApache,Apache
 jz_VehiclesHeli,Heli
 jz_VehiclesCrashedHeli,Heli
-
-
+jz_RestingSpot,Resting Spot
+jz_RestingSpotDesc,"A basic spot to rest and heal that will not change your respawn location. Does not stop zombie spawns.
 jz_PlantedChrysanthemum1InfestedDesc,"Chrysanthemum Sprout(Infested)"
 jz_PlantedChrysanthemum1DryDesc,"Chrysanthemum Sprout(Dry)"
 jz_PlantedChrysanthemum2InfestedDesc,"Chrysanthemum(Infested)"
@@ -809,6 +809,19 @@ jz_MedicalRedHotSteelPipe,Red Hot Pipe
 jz_MedicalRedHotPipe,Red Hot Pipe
 antiVenomDesc,"Anti venom used to treat venomous stings and bites"
 jz_MedicalAntiVenom,Anti Venom
+jz_MedicalStimulant,Stimulant
+stimulantDesc,"To be filled in"
+jz_PurificationTablets,Purification
+purificationDesc,"A crudely made tablet used for sanitizing water to remove the chance to get Dysentery from it"
+jz_MedicalAntivirialMeds,"Anti-Viral Meds"
+AntivirialDesc,"To be filled in"
+jz_FoodServingFruit,Fruit Serving
+jz_FoodServingGrain,Grain Serving 
+jz_FoodServingVeggie,Veggie Serving
+jz_FoodServingProtein,Protein Serving
+ServingDesc,"A raw serving of food that can be used to prepare Nutritious snacks and meals. Can be placed in a Prep Table to cook filling meals."
+jz_FoodBioMass,Bio Mass
+bioMassDesc,"Rotting food and scraps that can be used in farming"
 jz_drugPainkillersDesc,"Commercially made painkillers good for [f21b10]Pain[-] and [f21b10]Swelling[-]"
 sutureKitDesc,"A clean needle and organic thread can be used to stitch up [f21b10]Gashes[-]"
 jz_MedicalSutureKit,Suture Kit
@@ -970,7 +983,7 @@ jz_ChefDesc,"All the knowledge needed to become a Chef.\n20% Faster Cooking\nRec
 jz_BurglarDesc,"All the knowledge needed to become a Burglar.\n10% Faster Movement & Less Noise while Crouching\n20% Faster Looting & Pinpoint Treasure location\nRecipes- Lock Picks"
 jz_CarpenterDesc,"All the knowledge needed to become a Carpenter.\n20% Faster Crafting on the Workbench and Tablesaw\nRecipes- All Wooden Frame Shapes, Planks"
 jz_MasonDesc,"All the knowledge needed to become a Mason.\n20% Faster Crafting on the Cementmixer\nRecipes- All Brick and Flagstone Frame Shapes, Bricks, Cobblestone"
-jz_SoldierDesc,"All the knowledge needed to become a Soldier.\n10% Faster Reload & better Aim w/M60 & AK47\nRecipes- Grubs, Weapon Repair Kit, Blunderbuss, Blunderbuss, AK47, Pipe Bomb, Cooking Pot Mine"
+jz_SoldierDesc,"All the knowledge needed to become a Soldier.\n10% Faster Reload & better Aim w/M60 & AK47\n100% Resistance to Food Poisoning from Grubs\nRecipes- Grubs, Weapon Repair Kit, Blunderbuss, Blunderbuss, AK47, Pipe Bomb, Cooking Pot Mine"
 jz_FitnessInstructorDesc,"All the knowledge needed to become a Fitness Instructor.\n10% Faster Movment\n5% Less Stamina used while running\nRecipes- Golden Rod Tea, Red Tea, Mega Crush, Wellness Juice, Vitamins"
 jz_ElectricianDesc,"All the knowledge needed to become a Electrician.\n10% Faster Electrical Crafting\nRecipes- Generator Bank, Pressure Plate, Battery Bank, Ceiling Light, Timer Relay, Wire Relay, Motion Sensor, Speaker, Switch, Electric Fencepost, Spotlight, Stun Baton"
 jz_MetalWorkerDesc,"All the knowledge needed to become a Metal Worker.\nStart with a Wrench\n10% Faster Crafting on the Forge\nRecipes- All Scrap Iron Frame Shapes, Sheet Metal"

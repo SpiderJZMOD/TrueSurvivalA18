@@ -29859,7 +29859,7 @@ NOT the TextureNumber.
 	<property name="HeatMapTime" value="1200" />
 	<property name="MaxDamage" value="100" />
 	<property class="Workstation">
-		<property name="Modules" value="output,input,fuel" />
+		<property name="Modules" value="output,input" />
 	</property>
 	<property class="RepairItems">
 		<property name="resourceRockSmall" value="100" />
@@ -29981,7 +29981,7 @@ NOT the TextureNumber.
 		<property name="resourceRockSmall" value="50" />
 	</property>
 	<property class="Workstation">
-		<property name="Modules" value="output,fuel" />
+		<property name="Modules" value="output" />
 	</property>
 	<drop event="Destroy" count="0" />
 	<property name="Group" value="Basics" />
@@ -30005,7 +30005,7 @@ NOT the TextureNumber.
 		<property name="resourceScrapIron" value="50" />
 	</property>
 	<property class="Workstation">
-		<property name="Modules" value="output,fuel" />
+		<property name="Modules" value="output" />
 	</property>
 	<drop event="Destroy" count="0" />
 	<property name="Group" value="Basics" />
@@ -30426,7 +30426,7 @@ NOT the TextureNumber.
 
 <block name="jz_SuppliesMason">
 	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="227" />
+	<property name="LootList" value="218" />
 	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
 	<drop event="Fall" name="jz_SuppliesMason" count="1" prob="1" />
 </block>
@@ -33973,7 +33973,33 @@ NOT the TextureNumber.
 </block>
 
 
-
+<block name="jz_RestingSpot">
+	<property name="DescriptionKey" value="jz_RestingSpotDesc"/>
+	<property name="IndexName" value="brBlock"/> <!-- need this to show the bigger covering area -->
+	<property name="Material" value="Mplants"/>
+	<property name="MaxDamage" value="100"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/RespawnPoints/sleeping_bagPrefab"/>
+	<property name="ModelOffset" value=".5,.5,0"/>										   
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="FuelValue" value="20"/>
+	<property name="CanPickup" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="Group" value="Basics,Building,advBuilding"/>
+	<property class="RepairItems"> <property name="resourceYuccaFibers" value="20"/> </property>
+	<drop event="Harvest" name="resourceYuccaFibers" count="12" tag="allHarvest"/>
+	<drop event="Destroy" name="resourceYuccaFibers" count="1,3"/>
+	<drop event="Fall" name="resourceYuccaFibers" count="5" prob="1" stick_chance="0"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="EconomicValue" value="0"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="BuffsWhenWalkedOn" value="jz_BuffBedSmRecover" />
+</block>
 
 
 

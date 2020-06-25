@@ -175,6 +175,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceYuccaFibers" count="10"/>
 </recipe>
 
+<recipe name="jz_RestingSpot" count="1" craft_time="10" craft_exp_gain="5" tags="jz_PrimitativeCraftingTag" >
+	<ingredient name="resourceYuccaFibers" count="10"/>
+</recipe>
+
 <recipe name="jz_BasicGunParts" count="1" craft_time="5" craft_exp_gain="1" >
 	<ingredient name="jz_NutAndBolt" count="6"/>
 	<ingredient name="resourceSpring" count="2"/>
@@ -378,7 +382,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_WoodBranch" count="2"/>
 </recipe>
 
-<recipe name="meleeToolSledgehammerStone" count="1" craft_time="30" craft_exp_gain="5" tags="learnable,jz_StoneSledgeCraftingTag">
+<recipe name="meleeToolSledgehammerStone" count="1" craft_time="30" craft_exp_gain="5" tags="jz_StoneSledgeCraftingTag">
 	<ingredient name="resourceRockSmall" count="10"/>
 	<ingredient name="jz_FiberRope" count="5"/>
 	<ingredient name="jz_Plank" count="1"/>
@@ -647,11 +651,11 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_DrinkDirtyOuncesOfWater" count="16"/>
 </recipe>
 
-<recipe name="jz_DrinkVeggieJuice" count="1" craft_time="20" craft_exp_gain="10">
+<recipe name="jz_DrinkVeggieJuice" count="1" craft_time="20" craft_exp_gain="30">
 	<ingredient name="jz_FoodServingVeggie" count="15" />
 </recipe>
 
-<recipe name="jz_DrinkFruitJuice" count="1" craft_time="20" craft_exp_gain="10" >
+<recipe name="jz_DrinkFruitJuice" count="1" craft_time="20" craft_exp_gain="30" >
 	<ingredient name="jz_FoodServingFruit" count="15" />
 </recipe>
 
@@ -712,6 +716,10 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 
 <recipe name="jz_FoodGrubs" count="1" craft_time="3" craft_exp_gain="0" tags="learnable" >
 	<ingredient name="dirtFragment" count="5"/>
+</recipe>
+
+<recipe name="jz_DrinkDirtyOuncesOfWater" count="128" craft_time="1" craft_exp_gain="0" >
+	<ingredient name="jz_GallonOfDirtyRiverWater" count="1"/>
 </recipe>
 <!-- Campfire Crafted ******************************************************************************************************************************************************* -->
 <recipe name="drugHerbalAntibiotics" count="1" craft_area="campfire" craft_tool="jz_MortarAndPestle" craft_time="4" craft_exp_gain="20" tags="learnable">
@@ -835,6 +843,14 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_GallonOfDirtyRiverWater" count="1"/>
     <ingredient name="resourceCloth" count="1"/>
     <ingredient name="resourceCrushedSand" count="1"/>
+</recipe>
+
+<recipe name="jz_DrinkFruitJuice" count="1" craft_area="campfire" craft_tool="jz_ElectricBlender" craft_time="10" tags="jz_ChefTag">
+	<ingredient name="unit_fruit" count="10" />
+</recipe>
+
+<recipe name="jz_DrinkVeggieJuice" count="1" craft_area="campfire" craft_tool="jz_ElectricBlender" craft_time="10" tags="jz_ChefTag">
+	<ingredient name="unit_veggie" count="10" />
 </recipe>
 
 <recipe name="jz_Bricks" craft_area="campfire" count="1" craft_time="5" craft_exp_gain="5" tags="learnable">
@@ -1794,16 +1810,16 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceRockSmall" count="5"/>
 </recipe>
 
-<recipe name="ladderMetal" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="5" tags="learnable,jz_WorkBenchTag">
+<recipe name="ladderMetal" count="1" craft_area="workbench" craft_tool="meleeToolWrench" craft_time="4" craft_exp_gain="5" tags="jz_WorkBenchTag">
 	<ingredient name="resourceMetalPipe" count="15"/>
 	<ingredient name="jz_NutAndBolt" count="6"/>
 </recipe>
 
-<recipe name="ladderSteel" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="5" tags="learnable,jz_WorkBenchTag">
+<recipe name="ladderSteel" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="5" tags="jz_WorkBenchTag">
 	<ingredient name="jz_SteelPipe" count="15"/>
 </recipe>
 
-<recipe name="ladderWood" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" craft_time="4" craft_exp_gain="5" tags="learnable,jz_WorkBenchTag">
+<recipe name="ladderWood" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" craft_time="4" craft_exp_gain="5" tags="jz_WorkBenchTag">
 	<ingredient name="jz_Stick" count="15"/>
 	<ingredient name="resourceNail" count="6"/>
 </recipe>
@@ -2383,7 +2399,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="jz_NutAndBolt" count="5"/>
 </recipe>
 
-<recipe name="secureDoorWooden" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" craft_time="4" craft_exp_gain="5" tags="jz_WorkBenchTag">
+<recipe name="secureDoorWooden" count="1" craft_area="workbench" craft_tool="meleeToolClawHammer" craft_time="4" craft_exp_gain="5" tags="learnable,jz_WorkBenchTag">
 	<ingredient name="jz_Plank" count="10" />
 	<ingredient name="resourceDoorKnob" count="1" />
 	<ingredient name="resourceSpring" count="3" />
@@ -2408,6 +2424,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceElectricParts" count="8"/>
 	<ingredient name="resourceDuctTape" count="2"/>
 	<ingredient name="resourceScrapIron" count="50"/>
+</recipe>
+
+<recipe name="jz_SteelForge" count="1" craft_area="workbench" craft_time="4" craft_exp_gain="25" tags="learnable,jz_WorkBenchTag">
+	<ingredient name="jz_Plank" count="20"/>
+	<ingredient name="resourceNail" count="10" />
+	<ingredient name="resourceSpring" count="2" />
+	<ingredient name="resourceDoorKnob" count="1" />
 </recipe>
 
 <recipe name="switch" count="1" craft_area="workbench"  tags="jz_WorkBenchTag,jz_ElectricianTag">
@@ -2481,13 +2504,13 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="resourceElectricParts" count="1"/>
 </recipe>
 
-<recipe name="vaultDoor01" count="1" craft_area="workbench" tags="jz_WorkBenchTag">
+<recipe name="vaultDoor01" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="50" tags="learnable,jz_WorkBenchTag" >
 	<ingredient name="resourceForgedSteel" count="12"/>
 	<ingredient name="resourceSpring" count="2"/>
 	<ingredient name="resourceMechanicalParts" count="4"/>
 </recipe>
 
-<recipe name="vaultHatch_v1" count="1" craft_area="workbench" tags="jz_WorkBenchTag">
+<recipe name="vaultHatch_v1" count="1" craft_area="workbench" craft_tool="jz_WelderTool" craft_time="4" craft_exp_gain="50" tags="learnable,jz_WorkBenchTag" >
 	<ingredient name="resourceForgedSteel" count="12"/>
 	<ingredient name="resourceSpring" count="2"/>
 	<ingredient name="resourceMechanicalParts" count="4"/>
@@ -2881,10 +2904,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 	<ingredient name="unit_fruit" count="3" />
 </recipe>
 
-<recipe name="jz_DrinkFruitJuice" count="1" craft_area="jz_PrepTable" craft_tool="jz_ElectricBlender" material_based="true" craft_time="30" tags="jz_ChefTag">
-	<ingredient name="unit_fruit" count="10" />
-</recipe>
-
 <recipe name="jz_FoodFruitSaladSmall" count="1" craft_area="jz_PrepTable" material_based="true" tags="jz_ChefTag">
 	<ingredient name="unit_fruit" count="2" />
 </recipe>
@@ -2926,10 +2945,6 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="jz_FoodMeatPieLarge" count="1" craft_area="jz_PrepTable" craft_tool="jz_FryingPan" material_based="true" tags="learnable,jz_ChefTag">
 	<ingredient name="unit_protein" count="3" />
 	<ingredient name="unit_grain" count="3" />
-</recipe>
-
-<recipe name="jz_DrinkVeggieJuice" count="1" craft_area="jz_PrepTable" craft_tool="jz_ElectricBlender" material_based="true" tags="jz_ChefTag">
-	<ingredient name="unit_veggie" count="10" />
 </recipe>
 
 <recipe name="jz_FoodVeggieSaladSmall" count="1" craft_area="jz_PrepTable" material_based="true"  tags="jz_ChefTag">
@@ -3903,7 +3918,7 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 <recipe name="jz_IronSheetMetal" count="1" craft_area="jz_Anvil" craft_tool="meleeToolClawHammer" craft_time="30" craft_exp_gain="20" tags="learnable" >
 	<ingredient name="resourceScrapIron" count="10"/>	
 </recipe>
-<recipe name="jz_FarmingWateringCan" count="1" craft_area="jz_Anvil" craft_tool="meleeToolClawHammer" craft_time="30" craft_exp_gain="20" tags="learnable,jz_ChemistTag" >
+<recipe name="jz_FarmingWateringCan" count="1" craft_area="jz_Anvil" craft_tool="meleeToolClawHammer" craft_time="30" craft_exp_gain="20" tags="learnable" >
 	<ingredient name="bucketEmpty" count="1"/>
     <ingredient name="resourceScrapIron" count="20"/>
     <ingredient name="resourceMetalPipe" count="2"/>
@@ -4485,6 +4500,39 @@ either via a direct cvar change or via RecipeTagUnlock passive effect. cvar is n
 
 <recipe name="jz_SchematicFarmPlot" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
 	<ingredient name="farmPlotBlockPlayer" count="3" />
+	<ingredient name="jz_BlankSkillBook" count="1" />
+</recipe>
+
+<recipe name="jz_SchematicWoodenDoors" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="woodHatch1_v1" count="2" />
+    <ingredient name="secureDoorWooden" count="2" />
+	<ingredient name="jz_BlankSkillBook" count="1" />
+</recipe>
+
+<recipe name="jz_SchematicIronDoors" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="scrapHatch_v1" count="2" />
+    <ingredient name="ironDoor1_v1" count="2" />
+	<ingredient name="jz_BlankSkillBook" count="1" />
+</recipe>
+
+<recipe name="jz_SchematicSteelDoors" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="vaultHatch_v1" count="2" />
+    <ingredient name="vaultDoor01" count="2" />
+	<ingredient name="jz_BlankSkillBook" count="1" />
+</recipe>
+
+<recipe name="jz_SchematicWoodenChest" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="cntSecureStorageChest" count="3" />
+	<ingredient name="jz_BlankSkillBook" count="1" />
+</recipe>
+
+<recipe name="jz_SchematicSteelSafe" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="cntGunSafe" count="3" />
+	<ingredient name="jz_BlankSkillBook" count="1" />
+</recipe>
+
+<recipe name="jz_SchematicSteelForge" count="1" craft_area="jz_ResearchDesk" craft_time="300" craft_exp_gain="100" >
+	<ingredient name="jz_SteelForge" count="2" />
 	<ingredient name="jz_BlankSkillBook" count="1" />
 </recipe>
 <!-- QISatRadio Crafted ******************************************************************************************************************************************************* -->

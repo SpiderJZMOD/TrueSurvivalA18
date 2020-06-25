@@ -13795,7 +13795,7 @@ perkNightStalkerSilentNight
 <item name="qc_nailsomechicks">
 	<property name="Extends" value="challengeQuestMaster"/>
 	<property name="DescriptionKey" value="qc_AnimalGroupDesc"/>
-	<property class="Action0">
+    <property class="Action0">
 		<property name="QuestGiven" value="challenge_nailsomechicks"/>
 	</property>
 </item>
@@ -20962,6 +20962,7 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="ui_game_symbol_unit_fruit" />
 	<property name="Material" value="Mfruit" />
 	<property name="Weight" value="5" />
+    <property name="DescriptionKey" value="ServingDesc" />
 	<property name="Stacknumber" value="5000" />
     <property name="Group" value="Food/Cooking" />
 	<property name="Spoilable" value="true" />
@@ -20977,6 +20978,7 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="ui_game_symbol_unit_grain" />
 	<property name="Material" value="Mgrain" />
     <property name="Weight" value="3" />
+    <property name="DescriptionKey" value="ServingDesc" />
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
     <property name="SpoiledItem" value="foodMoldyBread" />
@@ -20990,6 +20992,7 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="ui_game_symbol_unit_veggie" />
 	<property name="Material" value="Mveggie" />
     <property name="Weight" value="1" />
+    <property name="DescriptionKey" value="ServingDesc" />
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
     <property name="SpoiledItem" value="jz_MoldyVeggies" />
@@ -21003,6 +21006,7 @@ perkNightStalkerSilentNight
 	<property name="CustomIcon" value="ui_game_symbol_unit_protein" />
 	<property name="Material" value="Mprotein" />
     <property name="Weight" value="5" />
+    <property name="DescriptionKey" value="ServingDesc" />
 	<property name="Spoilable" value="true" />
     <property name="ShowQuality" value="false"/>
     <property name="SpoiledItem" value="foodRottingFlesh" />
@@ -21041,6 +21045,10 @@ perkNightStalkerSilentNight
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="0"/>
 		<property name="Sound_start" value="player_drinking"/>
+        <!--<requirements compare_type="or">
+			<requirement name="!IsStatAtMax" stat="water"/>
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+		</requirements>	-->
 	</property>
 	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
 
@@ -21104,6 +21112,10 @@ perkNightStalkerSilentNight
 		<property name="Delay" value="1"/>
 		<property name="Use_time" value="..."/>
 		<property name="Sound_start" value="player_drinking"/>
+        <!--<requirements compare_type="or">
+			<requirement name="!IsStatAtMax" stat="water"/>
+			<requirement name="HasBuff" buff="buffIsOnFire"/>
+		</requirements>	-->
 	</property>
 	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
 	<effect_group tiered="false">
@@ -27827,20 +27839,6 @@ perkNightStalkerSilentNight
 	</effect_group>
 </item>
 
-<item name="jz_SchematicAntiVenom"><!--JZMOD REMOVE-->
-	<property name="Extends" value="schematicMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="CustomIcon" value="jz_MedicalAntiVenom"/>
-	<property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
-	<property class="Action0">
-		<requirement name="ProgressionLevel" progression_name="SP_AntiVenomSchematic" operation="LT" value="1"/>
-	</property>
-	<effect_group tiered="false">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_AntiVenomSchematic" level="-1"/>
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
-	</effect_group>
-</item>
-
 <item name="jz_SchematicIronSheetMetal">
 	<property name="Extends" value="schematicMaster"/>
 	<property name="CreativeMode" value="Player"/>
@@ -28916,6 +28914,166 @@ perkNightStalkerSilentNight
 	</property>
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_FarmWateringCanSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicWoodenDoors">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+    <property name="Weight" value="1"/>
+	<property name="CustomIcon" value="secureDoorWooden"/>
+	<property name="Unlocks" value="woodHatch1_v1,secureDoorWooden"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_WoodenDoorsSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_WoodenDoorsSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicIronDoors">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+    <property name="Weight" value="2"/>
+	<property name="CustomIcon" value="ironDoor1_v1"/>
+	<property name="Unlocks" value="scrapHatch_v1,ironDoor1_v1"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_IronDoorsSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_IronDoorsSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicSteelDoors">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+    <property name="Weight" value="3"/>
+	<property name="CustomIcon" value="vaultDoor01"/>
+	<property name="Unlocks" value="vaultHatch_v1,vaultDoor01"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_SteelDoorsSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SteelDoorsSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicWoodenChest">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+    <property name="Weight" value="1"/>
+	<property name="CustomIcon" value="cntChest01"/>
+	<property name="Unlocks" value="cntSecureStorageChest"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_WoodenChestSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_WoodenChestSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicSteelSafe">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+    <property name="Weight" value="5"/>
+	<property name="CustomIcon" value="cntGunSafe"/>
+	<property name="Unlocks" value="cntGunSafe"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_SteelSafeSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SteelSafeSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicSteelForge">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+    <property name="Weight" value="5"/>
+	<property name="CustomIcon" value="ui_game_symbol_blastFurnace"/>
+	<property name="Unlocks" value="jz_SteelForge"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_SteelForgeSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SteelForgeSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicNails">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+    <property name="Weight" value="1"/>
+	<property name="CustomIcon" value="resourceNail"/>
+	<property name="Unlocks" value="resourceNail"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_NailSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_NailSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicIronShaping">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+    <property name="Weight" value="2"/>
+	<property name="CustomIcon" value="resourceForgedIron"/>
+	<property name="Unlocks" value="resourceForgedIron,resourceMetalPipe"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_IronShapingSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_IronShapingSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicSteelShaping">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+    <property name="Weight" value="3"/>
+	<property name="CustomIcon" value="resourceForgedSteel"/>
+	<property name="Unlocks" value="resourceForgedSteel,jz_SteelPipe"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_SteelShapingSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_SteelShapingSchematic" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="jz_SchematicGlue">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+    <property name="Weight" value="3"/>
+	<property name="CustomIcon" value="resourceGlue"/>
+	<property name="Unlocks" value="resourceGlue"/>
+    <property name="DescriptionKey" value="jz_ItemSchematicDesc"/>
+	<property class="Action0">
+	<requirement name="ProgressionLevel" progression_name="SP_GlueSchematic" operation="LT" value="1"/>
+	</property>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="SP_GlueSchematic" level="-1"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 	</effect_group>
 </item>
