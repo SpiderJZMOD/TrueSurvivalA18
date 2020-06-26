@@ -30163,5 +30163,215 @@ perkNightStalkerSilentNight
 			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
 	</effect_group>
 </item>
+
+<item name="jz_ProfessionSoldier">
+	<property name="CustomIcon" value="ammo9mmBulletBall"/><property name="ItemTypeIcon" value="bundle"/>
+	<property name="DescriptionKey" value="jz_ProfessionSoldierKitDesc"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="1"/> 
+    <property name="EconomicValue" value="0"/>
+	<property class="Action0">
+		<property name="Class" value="OpenBundle"/>
+		<property name="Delay" value="0"/>
+		<property name="Use_time" value="0"/>
+		<property name="Sound_start" value="close_garbage"/>
+		<property name="Create_item" value="ammo762mmBulletBall,qc_Soldier,jz_ProfessionSoldierBook"/>
+		<property name="Create_item_count" value="19,1,1"/>
+		<!--
+		This can spawn multiple item types and quantities. No randomness.
+		<property name="Create_item" value="ammo9mmBulletBall,drinkCanRiverWater"/>
+		<property name="Create_item_count" value="50,5"/>
+		-->
+	</property>
+</item>
+
+<item name="jz_ProfessionDoctor">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionDoctorKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_MedicalSutureKit,jz_MedicalStimulant,drugPainkillers,medicalAloeCream,jz_ProfessionDoctorBook"/>
+		<property name="Create_item_count" value="1,6,6,6,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionBouncer">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionBouncerKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_ProfessionBouncerBook,qc_Bouncer"/>
+		<property name="Create_item_count" value="1,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionChemist">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionChemistKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="drugPainkillers,jz_MedicalStimulant,jz_ProfessionChemistBook"/>
+		<property name="Create_item_count" value="6,6,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionCarpenter">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionCarpenterKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceNail,jz_ProfessionCarpenterBook,qc_Carpenter"/>
+		<property name="Create_item_count" value="50,1,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionCop">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionCopKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_ProfessionPoliceOfficerBook,ammo9mmBulletBall,qc_Cop"/>
+		<property name="Create_item_count" value="1,16,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionChef">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionChefKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_ProfessionChefBook,qc_Chef"/>
+		<property name="Create_item_count" value="1,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionFitnessInstructor">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionFitnessInstructorKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_ProfessionFitnessInstructorBook,qc_FitnessInstructor"/>
+		<property name="Create_item_count" value="1,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionFireman">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionFiremanKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_ProfessionFireFighterBook,bookFiremansAlmanacAxes,bookFiremansAlmanacEquipment,qc_Fireman"/>
+		<property name="Create_item_count" value="1,1,1,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionMetalWorker">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionMetalWorkerKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_ProfessionMetalWorkerBook,qc_IronWorker"/>
+		<property name="Create_item_count" value="1,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionElectrician">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionElectricianKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_ProfessionElectricianBook,qc_Electrician"/>
+		<property name="Create_item_count" value="1,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionFarmer">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionFarmerKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_ProfessionFarmerBook"/>
+		<property name="Create_item_count" value="1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionThief">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionThiefKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="resourceLockPick,jz_ProfessionBurglarBook,qc_Thief"/>
+		<property name="Create_item_count" value="20,1,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionParkRanger">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionParkRangerKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="ammo762mmBulletBall,jz_ProfessionParkRangerBook,qc_ParkRanger"/>
+		<property name="Create_item_count" value="19,1,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionMechanic">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionMechanicKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_ProfessionMechanicBook,qc_Mechanic"/>
+		<property name="Create_item_count" value="1,1"/>
+	</property>
+</item>
+
+<item name="jz_ProfessionMason">
+	<property name="Extends" value="jz_ProfessionSoldier"/>
+	<property name="CustomIcon" value="cntSuitcase"/>
+    <property name="DescriptionKey" value="jz_ProfessionMasonKitDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="jz_ProfessionMasonBook,qc_Mason"/>
+		<property name="Create_item_count" value="1,1"/>
+	</property>
+</item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </set>
 </configs> 

@@ -21641,7 +21641,7 @@ NOT the TextureNumber.
 	<property name="DescriptionKey" value="furnitureGroupDesc"/>
 	<property name="FilterTags" value="floot,fdecor,ffurniture"/>
 	<!--JZMOD ANY-->
-	<drop event="Destroy" name="cntLuggageMediumOpen" count="1"/>
+	<drop event="Destroy" name="cntLuggageMediumClosed" count="1"/>
 </block>
 <block name="cntLuggageMediumClosed">
 	<property name="Extends" value="cntLuggageMediumOpen"/>
@@ -21650,7 +21650,6 @@ NOT the TextureNumber.
 	<property name="LootList" value="36"/>
 	<property name="Model" value="#Entities/LootContainers?luggageMediumClosedPrefab.prefab"/>
 	<!--JZMOD ANY-->
-	<drop event="Destroy" name="cntLuggageMediumOpen" count="0"/>
 	<drop event="Destroy" name="cntLuggageMediumClosed" count="1"/>
 </block>
 <block name="cntLuggageMediumRandomLootHelper">
@@ -21667,16 +21666,14 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="#Entities/LootContainers?luggageBigEmptyPrefab.prefab"/>
 	<!--JZMOD ANY-->
-	<drop event="Destroy" name="cntLuggageMediumOpen" count="0"/>
-	<drop event="Destroy" name="cntLuggageBigOpen" count="1"/>
+	<drop event="Destroy" name="cntLuggageMediumClosed" count="1"/>
 </block>
 <block name="cntLuggageBigClosed">
 	<property name="Extends" value="cntLuggageMediumClosed"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="#Entities/LootContainers?luggageBigClosedPrefab.prefab"/>
 	<!--JZMOD ANY-->
-	<drop event="Destroy" name="cntLuggageMediumClosed" count="0"/>
-	<drop event="Destroy" name="cntLuggageBigClosed" count="1"/>
+	<drop event="Destroy" name="cntLuggageMediumClosed" count="1"/>
 </block>
 <block name="cntLuggageBigRandomLootHelper">
 	<property name="Extends" value="cntLuggageMediumRandomLootHelper"/>
@@ -21690,16 +21687,14 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="#Entities/LootContainers?luggagePileEmptyAPrefab.prefab"/>
 	<!--JZMOD ANY-->
-	<drop event="Destroy" name="cntLuggageMediumOpen" count="0"/>
-	<drop event="Destroy" name="cntLuggagePileAOpen" count="1"/>
+	<drop event="Destroy" name="cntLuggageMediumClosed" count="1"/>
 </block>
 <block name="cntLuggagePileAClosed">
 	<property name="Extends" value="cntLuggageMediumClosed"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="#Entities/LootContainers?luggagePileClosedAPrefab.prefab"/>
 	<!--JZMOD ANY-->
-	<drop event="Destroy" name="cntLuggageMediumClosed" count="0"/>
-	<drop event="Destroy" name="cntLuggagePileAClosed" count="1"/>
+	<drop event="Destroy" name="cntLuggageMediumClosed" count="1"/>
 </block>
 <block name="cntLuggagePileARandomLootHelper">
 	<property name="Extends" value="cntLuggageMediumRandomLootHelper"/>
@@ -21713,16 +21708,14 @@ NOT the TextureNumber.
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="#Entities/LootContainers?luggagePileEmptyBPrefab.prefab"/>
 	<!--JZMOD ANY-->
-	<drop event="Destroy" name="cntLuggageMediumOpen" count="0"/>
-	<drop event="Destroy" name="cntLuggagePileBOpen" count="1"/>
+	<drop event="Destroy" name="cntLuggageMediumClosed" count="1"/>
 </block>
 <block name="cntLuggagePileBClosed">
 	<property name="Extends" value="cntLuggageMediumClosed"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="Model" value="#Entities/LootContainers?luggagePileClosedBPrefab.prefab"/>
 	<!--JZMOD ANY-->
-	<drop event="Destroy" name="cntLuggageMediumClosed" count="0"/>
-	<drop event="Destroy" name="cntLuggagePileBClosed" count="1"/>
+	<drop event="Destroy" name="cntLuggageMediumClosed" count="1"/>
 </block>
 <block name="cntLuggagePileBRandomLootHelper">
 	<property name="Extends" value="cntLuggageMediumRandomLootHelper"/>
@@ -30174,261 +30167,6 @@ NOT the TextureNumber.
 	<!--JZMOD ANY-->
 	<drop event="Destroy" count="0" />
 	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1" />
-</block>
-
-<!--JZMOD PROFESSION KITS-->
-<block name="jz_SuppliesSoldier">
-	<property name="Class" value="Loot" />
-	<property name="Material" value="MdroppedBackpack" />
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Mesh" value="models"/>
-	<property name="Model" value="#Entities/LootContainers?luggageMediumClosedPrefab.prefab"/>
-	<property name="IsTerrainDecoration" value="true" />
-	<property name="LootList" value="212" />
-	<property name="CanPickup" value="false" />
-	<drop event="Destroy" count="0" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="1" prob="1" />
-	<property name="CustomIcon" value="cntSuitcase" />
-</block>
-
-<block name="jz_ProfessionSoldier">
-	<property name="Material" value="Mglass" />
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Mesh" value="models"/>
-	<property name="Model" value="#Entities/LootContainers?luggageMediumClosedPrefab.prefab"/>
-	<property name="IsTerrainDecoration" value="true" />
-	<property name="CanPickup" value="true" />
-	<property name="CustomIcon" value="cntSuitcase" />
-	<property name="DescriptionKey" value="jz_ProfessionSoldierKitDesc" />
-	<property name="Group" value="Basics" />
-	<drop event="Destroy" count="0" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesSoldier" />
-</block>
-
-<block name="jz_ProfessionDoctor">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionDoctorKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionDoctor" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesDoctor" />
-</block>
-
-<block name="jz_SuppliesDoctor">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="213" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesDoctor" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionBouncer">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionBouncerKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionBouncer" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesBouncer" />
-</block>
-
-<block name="jz_SuppliesBouncer">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="214" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesBouncer" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionChemist">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionChemistKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionChemist" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesChemist" />
-</block>
-
-<block name="jz_SuppliesChemist">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="215" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesChemist" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionCarpenter">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionCarpenterKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionCarpenter" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesCarpenter" />
-</block>
-
-<block name="jz_SuppliesCarpenter">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="216" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesCarpenter" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionCop">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionCopKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionCop" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesCop" />
-</block>
-
-<block name="jz_SuppliesCop">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="217" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesCop" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionChef">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionChefKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionChef" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesChef" />
-</block>
-
-<block name="jz_SuppliesChef">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="219" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesChef" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionFitnessInstructor">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionFitnessInstructorKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionFitnessInstructor" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesFitnessInstructor" />
-</block>
-
-<block name="jz_SuppliesFitnessInstructor">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="220" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesFitnessInstructor" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionFireman">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionFiremanKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionFireman" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesFireman" />
-</block>
-
-<block name="jz_SuppliesFireman">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="221" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesFireman" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionMetalWorker">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionMetalWorkerKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionIronWorker" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesMetalWorker" />
-</block>
-
-<block name="jz_SuppliesMetalWorker">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="222" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesMetalWorker" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionElectrician">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionElectricianKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionElectrician" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesElectrician" />
-</block>
-
-<block name="jz_SuppliesElectrician">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="223" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesElectrician" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionFarmer">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionFarmerKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionFarmer" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesFarmer" />
-</block>
-
-<block name="jz_SuppliesFarmer">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="224" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesFarmer" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionThief">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionThiefKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionThief" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesThief" />
-</block>
-
-<block name="jz_SuppliesThief">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="225" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesThief" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionParkRanger">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionParkRangerKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionParkRanger" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesParkRanger" />
-</block>
-
-<block name="jz_SuppliesParkRanger">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="226" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesParkRanger" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionMechanic">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionMechanicKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionMechanic" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesMechanic" />
-</block>
-
-<block name="jz_SuppliesMechanic">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="227" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesMechanic" count="1" prob="1" />
-</block>
-
-<block name="jz_ProfessionMason">
-	<property name="Extends" value="jz_ProfessionSoldier" />
-	<property name="DescriptionKey" value="jz_ProfessionMasonKitDesc" />
-	<drop event="Fall" name="jz_ProfessionSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_ProfessionMason" count="1" prob="1" />
-	<property name="DowngradeBlock" value="jz_SuppliesMason" />
-</block>
-
-<block name="jz_SuppliesMason">
-	<property name="Extends" value="jz_SuppliesSoldier" />
-	<property name="LootList" value="218" />
-	<drop event="Fall" name="jz_SuppliesSoldier" count="0" prob="1" />
-	<drop event="Fall" name="jz_SuppliesMason" count="1" prob="1" />
 </block>
 
 <block name="jz_FlagstoneFrameMaster">
